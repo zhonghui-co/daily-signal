@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mimo 每日信号追踪</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+    .container { max-width: 800px; margin: 0 auto; padding: 24px 16px; }
+    header { border-bottom: 1px solid #334155; padding-bottom: 16px; margin-bottom: 24px; }
+    header h1 { font-size: 1.5rem; color: #f8fafc; }
+    header .sub { font-size: 0.85rem; color: #94a3b8; margin-top: 4px; }
+    .date-tag { display: inline-block; background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 4px 12px; font-size: 0.8rem; margin: 8px 0 16px; color: #94a3b8; }
+    .section { margin-bottom: 32px; }
+    .section h2 { font-size: 1.15rem; color: #f8fafc; border-left: 3px solid #38bdf8; padding-left: 10px; margin-bottom: 12px; }
+    .signal-card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+    .signal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+    .signal-title { font-weight: 600; color: #f1f5f9; }
+    .badge { font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+    .badge-watch { background: rgba(251,191,36,0.2); color: #fbbf24; }  /* 🟢→🟡 */
+    .badge-alert { background: rgba(239,68,68,0.2); color: #ef4444; }     /* 🔴 */
+    .badge-month { background: rgba(56,189,248,0.2); color: #38bdf8; }     /* 🗓️ */
+    .muted { color: #94a3b8; font-size: 0.8rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th { text-align: left; color: #94a3b8; font-weight: 500; padding: 8px 6px; border-bottom: 1px solid #334155; }
+    td { padding: 8px 6px; border-bottom: 1px solid #1e293b; }
+    .chain-step { padding-left: 16px; border-left: 2px solid #334155; margin: 6px 0; font-size: 0.85rem; }
+    .chain-step::before { content: '↳ '; color: #64748b; }
+    .footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #334155; font-size: 0.75rem; color: #475569; }
+    .footer a { color: #64748b; }
+    nav a { color: #38bdf8; text-decoration: none; font-size: 0.85rem; margin-right: 12px; }
+    nav a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🦉 Mimo 每日信号追踪</h1>
+    <div class="sub">十五五规划 · 半导体方向</div>
+    <div class="date-tag">2026-05-02</div>
+  </header>
+
+  <nav>
+    <a href="/daily-signals/">今日</a>
+    <a href="2026-05-02.html">2026-05-02</a>
+  </nav>
+
+  <div class="section" style="margin-top:20px">
+    <h2>📡 Scanner 扫描结果</h2>
+    <table>
+      <tr><th>条目</th><th>变量变化</th><th>过筛</th></tr>
+      <tr><td>十五五纲要将集成电路列为"战略必争"</td><td>政策级别跳升</td><td>✅</td></tr>
+      <tr><td>美国 MATCH 法案叠加封锁</td><td>外部封锁强度↑</td><td>✅</td></tr>
+      <tr><td>中芯测试国产光刻机良率达 90%</td><td>国产设备可用性质变</td><td>✅</td></tr>
+      <tr><td>全产业链涨价+国产定价权</td><td>全球竞争格局变化</td><td>✅</td></tr>
+    </table>
+    <p class="muted" style="margin-top:8px">初筛 8 条 → 4 条进入深度分析</p>
+  </div>
+
+  <div class="section">
+    <h2>🔬 深度分析</h2>
+
+    <div class="signal-card">
+      <div class="signal-header">
+        <span class="signal-title">信号一：十五五规划 + MATCH 法案双轮驱动</span>
+        <span class="badge badge-month">🗓️ 结构性</span>
+      </div>
+      <p class="muted">信源：🟢 官方一手 | 置信度：🟡</p>
+      <p>十五五规划纲要将集成电路列为"战略必争"领域，提出采取超常规措施全链条攻关。同期美国提交 MATCH 法案构建全球芯片管制网。</p>
+      <div style="margin-top:8px">
+        <div class="chain-step">政策升格 → 财政投入↑ → 半导体设备/材料受益</div>
+        <div class="chain-step">MATCH法案 → 封锁加码 → 国产替代窗口加速 → 设备/EDA/制造受益</div>
+        <div class="chain-step">双重挤压 → 国产设备渗透率从~22%向50%+跃进</div>
+      </div>
+    </div>
+
+    <div class="signal-card">
+      <div class="signal-header">
+        <span class="signal-title">信号二：国产光刻机良率 90%</span>
+        <span class="badge badge-alert">🔴 待验证</span>
+      </div>
+      <p class="muted">信源：⚠️ B站视频 | 置信度：🔴</p>
+      <p>传闻中芯国际测试上海微电子光刻机良率达90%。⚠️ 单信源，工艺节点和测试条件未知，需官方验证。</p>
+      <div style="margin-top:8px">
+        <div class="chain-step">光刻机可用 → 先进制程产能独立 → 中芯国际扩产加速</div>
+        <div class="chain-step">上游零部件/材料国产化需求↑</div>
+      </div>
+    </div>
+
+    <div class="signal-card">
+      <div class="signal-header">
+        <span class="signal-title">信号三：半导体全产业链涨价</span>
+        <span class="badge badge-watch">📅 数周</span>
+      </div>
+      <p class="muted">信源：🟡 行业分析 | 置信度：🟡</p>
+      <p>2026年Q1国产存储、晶圆代工、功率半导体跟随国际同步调价。</p>
+      <div style="margin-top:8px">
+        <div class="chain-step">晶圆代工涨价 → 中芯/华虹利润率提升</div>
+        <div class="chain-step">定价权提升 → 板块估值从"替代折价"→"竞争力溢价"</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📊 因子监控</h2>
+    <table>
+      <tr><th>因子</th><th>方向</th><th>受益行业</th><th>置信度</th></tr>
+      <tr><td>半导体制程政策强度</td><td>↑</td><td>设备、材料、制造</td><td>🟢</td></tr>
+      <tr><td>半导体外部封锁</td><td>↑</td><td>国产设备、EDA</td><td>🟡</td></tr>
+      <tr><td>半导体国产设备突破</td><td>↑</td><td>制造、零部件</td><td>🔴</td></tr>
+      <tr><td>半导体定价权</td><td>↑</td><td>晶圆代工、存储</td><td>🟡</td></tr>
+      <tr><td>半导体周期景气</td><td>↑</td><td>全产业</td><td>🟡</td></tr>
+    </table>
+  </div>
+
+  <div class="footer">
+    <p>🦉 Mimo · AI 管家 + 投研顾问 | 自动生成于 2026-05-02</p>
+    <p>仅供研究参考，不构成投资建议。信源分类：🟢=已确认 🟡=合理推断 🔴=待验证</p>
+    <p><a href="https://github.com/zhonghui-co/daily-signals">GitHub Repo</a></p>
+  </div>
+</div>
+</body>
+</html>
