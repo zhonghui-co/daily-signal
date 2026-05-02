@@ -7,13 +7,14 @@
   <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
-.container { max-width: 800px; margin: 0 auto; padding: 24px 16px; }
+.container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
 header { border-bottom: 1px solid #334155; padding-bottom: 16px; margin-bottom: 24px; }
 header h1 { font-size: 1.5rem; color: #f8fafc; }
 header .sub { font-size: 0.85rem; color: #94a3b8; margin-top: 4px; }
 .date-tag { display: inline-block; background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 4px 12px; font-size: 0.8rem; margin: 8px 0 16px; color: #94a3b8; }
 .section { margin-bottom: 32px; }
 .section h2 { font-size: 1.15rem; color: #f8fafc; border-left: 3px solid #38bdf8; padding-left: 10px; margin-bottom: 12px; }
+.section h3 { font-size: 1rem; color: #cbd5e1; margin: 16px 0 8px; }
 .signal-card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
 .signal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
 .signal-title { font-weight: 600; color: #f1f5f9; }
@@ -23,101 +24,82 @@ header .sub { font-size: 0.85rem; color: #94a3b8; margin-top: 4px; }
 .badge-month { background: rgba(56,189,248,0.2); color: #38bdf8; }
 .badge-info { background: rgba(34,197,94,0.2); color: #22c55e; }
 .muted { color: #94a3b8; font-size: 0.8rem; }
-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-th { text-align: left; color: #94a3b8; font-weight: 500; padding: 8px 6px; border-bottom: 1px solid #334155; }
-td { padding: 8px 6px; border-bottom: 1px solid #1e293b; }
+.pct-up { color: #ef4444; }
+.pct-down { color: #22c55e; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 8px 0; }
+th { text-align: left; color: #94a3b8; font-weight: 500; padding: 6px 6px; border-bottom: 1px solid #334155; }
+td { padding: 6px 6px; border-bottom: 1px solid #1e293b; }
 .chain-step { padding-left: 16px; border-left: 2px solid #334155; margin: 6px 0; font-size: 0.85rem; }
 .chain-step::before { content: '↳ '; color: #64748b; }
 .footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #334155; font-size: 0.75rem; color: #475569; }
 .footer a { color: #64748b; }
 nav a { color: #38bdf8; text-decoration: none; font-size: 0.85rem; margin-right: 12px; }
 nav a:hover { text-decoration: underline; }
-.no-signals { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 24px; text-align: center; color: #94a3b8; }
-.no-signals .emoji { font-size: 2rem; margin-bottom: 8px; }
+.critical { border-color: #ef4444; background: rgba(239,68,68,0.08); }
+.high { border-color: #fbbf24; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media(max-width:600px){ .grid-2 { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 <div class="container">
   <header>
     <h1>🦉 Mimo 每日信号追踪</h1>
-    <div class="sub">十五五规划 · 半导体方向</div>
+    <div class="sub">两条需求链：国产替代 / AI算力 | 池子+逻辑+归因</div>
     <div class="date-tag">2026-05-02</div>
   </header>
+  <nav><a href="/daily-signals/">今日</a> <a href="2026-05-02.html">05-02</a> <a href="2026-05-01.html">05-01</a> <a href="2026-04-30.html">04-30</a> <a href="2026-04-29.html">04-29</a> <a href="2026-04-28.html">04-28</a> <a href="2026-04-27.html">04-27</a> <a href="2026-04-26.html">04-26</a></nav>
 
-  <nav><a href="/daily-signals/">今日</a> <a href="2026-05-02.html">2026-05-02</a> <a href="2026-05-01.html">2026-05-01</a> <a href="2026-04-30.html">2026-04-30</a> <a href="2026-04-29.html">2026-04-29</a> <a href="2026-04-28.html">2026-04-28</a> <a href="2026-04-27.html">2026-04-27</a> <a href="2026-04-26.html">2026-04-26</a></nav>
-
-  <div class="section" style="margin-top:20px">
-    <h2>📡 Scanner 扫描结果</h2>
-    <table>
-      <tr><th>条目</th><th>变量变化</th><th>过筛</th></tr>
-      <tr><td>十五五纲要将集成电路列为"战略必争"</td><td>政策级别跳升</td><td>✅</td></tr>
-<tr><td>美国 MATCH 法案叠加封锁</td><td>外部封锁强度↑</td><td>✅</td></tr>
-<tr><td>中芯测试国产光刻机良率达 90%</td><td>国产设备可用性质变</td><td>✅</td></tr>
-<tr><td>全产业链涨价+国产定价权</td><td>全球竞争格局变化</td><td>✅</td></tr>
-<tr><td>IC China 2026 博览会</td><td>无新变量</td><td>❌</td></tr>
-<tr><td>工信部编制电子信息十五五规划</td><td>政策细节落地</td><td>❌</td></tr>
-<tr><td>电子板块业绩喜报</td><td>市场已反应</td><td>❌</td></tr>
-<tr><td>IC China 2026（重复转载）</td><td>同 #5</td><td>❌</td></tr>
-
-    </table>
-  </div>
-
+  
   <div class="section">
-    <h2>🔬 深度分析</h2>
+    <h2>🏊 池子归因 (150只 | 20260430)</h2>
     
-    <div class="signal-card">
-      <div class="signal-header">
-        <span class="signal-title">信号一：十五五规划 + MATCH 法案双轮驱动</span>
-        <span class="badge badge-month">**时效：🗓️ 结构性**</span>
+    <div class="grid-2">
+      <div>
+        <h3>🔗 逻辑链表现</h3>
+        <table><tr><th>链条</th><th>标的</th><th>均涨跌</th></tr><tr><td>国产替代</td><td>11只</td><td>+2.63%</td></tr><tr><td>AI算力</td><td>5只</td><td>+1.21%</td></tr></table>
+        
+        <h3>📈 分组表现</h3>
+        <table><tr><th>分组</th><th>均涨跌</th></tr><tr><td>数字设计</td><td>+3.92%</td></tr><tr><td>模拟设计</td><td>+2.61%</td></tr><tr><td>材料</td><td>+2.59%</td></tr><tr><td>设备</td><td>+1.98%</td></tr><tr><td>光刻胶概念</td><td>+0.35%</td></tr><tr><td>AI算力</td><td>-0.42%</td></tr><tr><td>电子化学品</td><td>-0.49%</td></tr></table>
       </div>
-      <p class="muted">**置信度：🟡** — 政策方向确认，执行力度和市场定价进度待观察</p>
-      <p>**事件：** 十五五规划纲要将集成电路列为"战略必争"领域，提出"采取超常规措施，全链条推动关键核心技术攻关取得决定性突破"。同期美国提交 MATCH 法案，联合日荷韩构建全球芯片管制网。<br>**三问：**<br>**传导链：**<br>---</p>
-      <div style="margin-top:8px"><div class="chain-step">1. 🟢 十五五规划 ↑半导体优先级 → 财政投入↑ + 税收优惠加码 → [[半导体设备]] [[半导体材料]] 受益</div>
-<div class="chain-step">2. 🟡 MATCH法案 ⊗ 外部封锁 → 国产替代窗口加速 → [[半导体设备]] [[EDA]] [[晶圆制造]] 受益</div>
-<div class="chain-step">3. 🟡 双重挤压 → 国产设备渗透率从 ~22% 可能向 50%+ 跃进</div>
-<div class="chain-step">4. 🔴 具体受益标的：设备（北方华创/中微）、材料（沪硅/安集）、制造（中芯/华虹）</div>
-</div>
+      <div>
+        <h3>⚡ 异动归因 (62只)
+          <span class="badge badge-alert">52未归因</span>
+        </h3>
+        <table><tr><th>标的</th><th>涨跌</th><th>量比</th><th>分组</th><th>归因</th></tr><tr><td>盛合晶微</td><td class="pct-up">+11.4%</td><td>0.8x</td><td>数字设计</td><td>🚨未归因</td></tr><tr><td>彩虹股份</td><td class="pct-down">-8.1%</td><td>3.8x</td><td>电子化学品</td><td>🚨未归因</td></tr><tr><td>锴威特</td><td class="pct-up">+7.5%</td><td>3.6x</td><td>设备</td><td>🚨未归因</td></tr><tr><td>欧莱新材</td><td class="pct-up">+7.0%</td><td>5.6x</td><td>材料</td><td>🚨未归因</td></tr><tr><td>深天马Ａ</td><td class="pct-down">-6.8%</td><td>2.7x</td><td>电子化学品</td><td>🚨未归因</td></tr><tr><td>燕东微</td><td class="pct-up">+6.5%</td><td>2.8x</td><td>设备</td><td>🚨未归因</td></tr><tr><td>气派科技</td><td class="pct-up">+6.4%</td><td>2.9x</td><td>数字设计</td><td>🚨未归因</td></tr><tr><td>合力泰</td><td class="pct-down">-5.9%</td><td>8.7x</td><td>电子化学品</td><td>🚨未归因</td></tr><tr><td>西安奕材-U</td><td class="pct-up">+5.9%</td><td>1.3x</td><td>材料</td><td>🚨未归因</td></tr><tr><td>有研硅</td><td class="pct-up">+5.8%</td><td>2.5x</td><td>材料</td><td>🚨未归因</td></tr><tr><td>天禄科技</td><td class="pct-up">+5.7%</td><td>2.7x</td><td>电子化学品</td><td>🚨未归因</td></tr><tr><td>奥瑞德</td><td class="pct-down">-5.6%</td><td>5.9x</td><td>电子化学品</td><td>🚨未归因</td></tr><tr><td>中船特气</td><td class="pct-up">+5.6%</td><td>5.7x</td><td>材料</td><td>🚨未归因</td></tr><tr><td>斯达半导</td><td class="pct-down">-5.4%</td><td>4.0x</td><td>设备</td><td>🚨未归因</td></tr><tr><td>中晶科技</td><td class="pct-up">+5.4%</td><td>7.3x</td><td>材料</td><td>🚨未归因</td></tr><tr><td>联动科技</td><td class="pct-up">+5.4%</td><td>0.8x</td><td>模拟设计</td><td>🚨未归因</td></tr><tr><td>甬矽电子</td><td class="pct-up">+5.3%</td><td>1.8x</td><td>数字设计</td><td>🚨未归因</td></tr><tr><td>立昂微</td><td class="pct-up">+5.2%</td><td>3.1x</td><td>材料</td><td>🚨未归因</td></tr><tr><td>拓荆科技</td><td class="pct-up">+5.0%</td><td>2.1x</td><td>模拟设计</td><td>🚨未归因</td></tr><tr><td>富创精密</td><td class="pct-up">+4.9%</td><td>2.5x</td><td>模拟设计</td><td>🚨未归因</td></tr></table>
+      </div>
     </div>
-    <div class="signal-card">
-      <div class="signal-header">
-        <span class="signal-title">信号二：国产光刻机良率 90%</span>
-        <span class="badge badge-alert">**时效：🗓️ 结构性（如证实）**</span>
+  </div>
+  
+  <div class="section" style="margin-top:20px">
+    <h2>📡 Scanner 催化扫描</h2>
+    <div class="grid-2">
+      <div>
+        <h3>链一：国产替代</h3>
+        <table><tr><th>条目</th><th>变量变化</th><th>过筛</th></tr><tr><td colspan="3" class="muted">等待扫描...</td></tr></table>
       </div>
-      <p class="muted">**置信度：🔴** — 信源不可靠，标记待验证</p>
-      <p>**事件：** 传闻中芯国际测试上海微电子光刻机，良率已达 90%<br>**三问：**<br>**传导链：**<br>**⚠️ 风险提示：** 单一信源（B站），且"良率90%"未说明工艺节点、测试条件。需官方验证。<br>---</p>
-      <div style="margin-top:8px"><div class="chain-step">1. 🔴 国产光刻机达到可用门槛 → 先进制程产能不再受制于 ASML → [[中芯国际]] 扩产加速</div>
-<div class="chain-step">2. 🟡 光刻机突破 → 上游零部件/材料国产化需求 ↑</div>
-<div class="chain-step">3. 🟡 产能扩张 → Fabless设计公司供应保障 ↑ → [[寒武纪]] [[海光信息]] 等受益</div>
-</div>
-    </div>
-    <div class="signal-card">
-      <div class="signal-header">
-        <span class="signal-title">信号三：半导体全产业链涨价</span>
-        <span class="badge badge-watch">**时效：📅 数周**</span>
+      <div>
+        <h3>链二：AI算力</h3>
+        <table><tr><th>条目</th><th>变量变化</th><th>过筛</th></tr><tr><td colspan="3" class="muted">等待扫描...</td></tr></table>
       </div>
-      <p class="muted">**置信度：🟡** — 逻辑成立，需 Tushare 量价数据验证</p>
-      <p>**事件：** 2026年一季度国产存储、晶圆代工、功率半导体跟随国际厂商同步调价<br>**三问：**<br>**传导链：**<br>---</p>
-      <div style="margin-top:8px"><div class="chain-step">1. 🟡 晶圆代工涨价 → [[中芯国际]] [[华虹半导体]] 利润率提升</div>
-<div class="chain-step">2. 🟡 存储涨价 → 长江存储/合肥长鑫受益</div>
-<div class="chain-step">3. 🟡 定价权提升 → 板块估值体系从"国产替代折价"向"全球竞争力溢价"转移</div>
-</div>
     </div>
   </div>
 
   <div class="section">
-    <h2>📊 因子监控</h2>
-    <table>
-      <tr><th>因子</th><th>方向</th><th>受益行业</th><th>置信度</th></tr>
-      <tr><td>[[半导体-政策强度]]</td><td>↑</td><td>半导体设备、半导体材料、晶圆制造</td><td>🟢</td></tr>
-<tr><td>[[半导体-外部封锁]]</td><td>↑</td><td>国产设备、EDA、先进材料</td><td>🟡</td></tr>
-<tr><td>[[半导体-国产设备]]</td><td>↑突破</td><td>晶圆制造、设备零部件</td><td>🔴</td></tr>
-<tr><td>[[半导体-定价权]]</td><td>↑</td><td>晶圆代工、存储芯片</td><td>🟡</td></tr>
-<tr><td>[[半导体-周期]]</td><td>↑景气</td><td>全产业链</td><td>🟡</td></tr>
-<tr><td>[[光刻胶-日本供应风险]]</td><td>↑断供风险</td><td>国产光刻胶、上游树脂单体</td><td>🟡</td></tr>
-<tr><td>[[光刻胶-国产验证加速]]</td><td>↑国产渗透</td><td>南大光电、上海新阳、晶瑞电材</td><td>🟡</td></tr>
-<tr><td>[[半导体-晶圆厂扩产]]</td><td>↑产能</td><td>设备、材料（含光刻胶）、制造</td><td>🟢</td></tr>
-
-    </table>
+    <h2>🔬 Analyst 深度分析</h2>
+    <div class="signal-card">
+      <div class="signal-header"><span class="signal-title">信号一：十五五规划 + MATCH 法案双轮驱动</span></div>
+      <p class="muted"> 🟢 官方一手信源 + 多方交叉验证 **时效：🗓️ 结构性** **映射因子：** [[半导体-政策强度]] [[半导体-外部封锁]] **置信度：🟡** — 政策方向确认，执行力度和市场定价进度待观察</p>
+      <p>**事件：** 十五五规划纲要将集成电路列为"战略必争"领域，提出"采取超常规措施，全链条推动关键核心技术攻关取得决定性突破"。同期美国提交 MATCH 法案，联合日荷韩构建全球芯片管制网。<br>**三问：**<br>**传导链：**<br>1. 🟢 十五五规划 ↑半导体优先级 → 财政投入↑ + 税收优惠加码 → [[半导体设备]] [[半导体材料]] 受益<br>2. 🟡 MATCH法案 ⊗ 外部封锁 → 国产替代窗口加速 → [[半导体设备]] [[EDA]] [[晶圆制造]] 受益<br>3. 🟡 双重挤压 → 国产设备渗透率从 ~22% 可能向 50%+ 跃进<br>4. 🔴 具体受益标的：设备（北方华创/中微）、材料（沪硅/安集）、制造（中芯/华虹）<br>---</p>
+    </div><div class="signal-card">
+      <div class="signal-header"><span class="signal-title">信号二：国产光刻机良率 90%</span></div>
+      <p class="muted"> ⚠️ B站视频，未经官方/产业方验证 **时效：🗓️ 结构性（如证实）** **映射因子：** [[半导体-国产设备]] [[半导体-先进制程]] **置信度：🔴** — 信源不可靠，标记待验证</p>
+      <p>**事件：** 传闻中芯国际测试上海微电子光刻机，良率已达 90%<br>**三问：**<br>**传导链：**<br>1. 🔴 国产光刻机达到可用门槛 → 先进制程产能不再受制于 ASML → [[中芯国际]] 扩产加速<br>2. 🟡 光刻机突破 → 上游零部件/材料国产化需求 ↑<br>3. 🟡 产能扩张 → Fabless设计公司供应保障 ↑ → [[寒武纪]] [[海光信息]] 等受益<br>**⚠️ 风险提示：** 单一信源（B站），且"良率90%"未说明工艺节点、测试条件。需官方验证。<br>---</p>
+    </div><div class="signal-card">
+      <div class="signal-header"><span class="signal-title">信号三：半导体全产业链涨价</span></div>
+      <p class="muted"> 🟡 行业分析，部分数据可查 **时效：📅 数周** **映射因子：** [[半导体-定价权]] [[半导体-周期]] **置信度：🟡** — 逻辑成立，需 Tushare 量价数据验证</p>
+      <p>**事件：** 2026年一季度国产存储、晶圆代工、功率半导体跟随国际厂商同步调价<br>**三问：**<br>**传导链：**<br>1. 🟡 晶圆代工涨价 → [[中芯国际]] [[华虹半导体]] 利润率提升<br>2. 🟡 存储涨价 → 长江存储/合肥长鑫受益<br>3. 🟡 定价权提升 → 板块估值体系从"国产替代折价"向"全球竞争力溢价"转移<br>---</p>
+    </div>
   </div>
 
   <div class="footer">
