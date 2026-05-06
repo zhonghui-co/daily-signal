@@ -55,8 +55,8 @@ hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 
 
 .chain-block { background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 4px; padding: 8px 14px; margin: 8px 0; }
 .chain-step { padding: 2px 0; font-size: 0.82rem; position: relative; padding-left: 18px; }
-.chain-step::before { content: '93'; color: var(--accent); position: absolute; left: 4px; top: 2px; font-size: 0.65rem; }
-.chain-step:first-child::before { content: 'b6'; color: var(--accent2); font-size: 0.55rem; }
+.chain-step::before { content: '\2193'; color: var(--accent); position: absolute; left: 4px; top: 2px; font-size: 0.65rem; }
+.chain-step:first-child::before { content: '\25b6'; color: var(--accent2); font-size: 0.55rem; }
 .chain-step strong { color: var(--text-heading); }
 
 .badge { font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; font-weight: 600; display: inline-flex; align-items: center; gap: 2px; }
@@ -185,8 +185,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
   </div>
 </div>
 <div class="card" id="scanner"><div class="card-header"><h2>Scanner</h2><span class="stats">ReadHub + Brave Search</span></div><h2>Scanner 输出 — 2026-05-06</h2>
-<p><strong>信源：</strong> readhub + Brave Search <strong>框架：</strong> 国产替代链 / AI算力链 <strong>时点：</strong> 周三 18:30 CST</p>
-<hr class="section-divider">
+<p><strong>信源：</strong> readhub (无历史文件，首次运行) + Brave Search (6路×5条) <strong>时点：</strong> 22:30 CST <strong>框架：</strong> 国产替代链 / AI算力链</p>
 <h3 class="h2">链一催化（国产替代）</h3>
 <div class="table-wrap"><table><thead><tr>
 <th>#</th>
@@ -196,27 +195,45 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr></thead><tbody>
 <tr>
 <td>1</td>
-<td><strong>美国商务部 4/28 命令泛林、应用材料、科磊暂停对华虹半导体部分工厂发货</strong> — 制裁从 SMIC（中芯国际）扩展到中国第二大晶圆代工厂，理由是华虹可能已开发出可用于 AI 芯片的先进技术</td>
-<td>🔴 制裁范围变量扩大：此前制裁聚焦 SMIC/先进制程，现在延烧至华虹，覆盖中国代工产能更广</td>
-<td>✅ 通过</td>
+<td>🔥 美国商务部4/28命令Lam/AMAT/KLA暂停对华虹半导体发货</td>
+<td>制裁范围从SMIC扩至第2大代工厂华虹，制造环节封锁全面升级。华虹2025年营收约$2.3B，涉及功率器件、CIS、BCD工艺，设备断供波及面远超SMIC单点</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>2</td>
-<td><strong>荷兰 3 月将光刻机管制从 7nm→14nm 进一步扩展到 28nm、45nm 甚至部分 65nm 机型</strong> — ASML 可售范围被压缩至更落后设备，中国囤积的 DUV 光刻机成为关键缓冲</td>
-<td>🔴 管制深度变量加剧：从先进制程封锁蔓延至成熟制程，倒逼国产光刻设备替代时间线前移</td>
-<td>✅ 通过</td>
+<td>🔥 荷兰光刻机管制3月扩至28-65nm，维修断供已生效</td>
+<td>存量DUV维护风险从先进制程蔓延至成熟制程。28nm/45nm/65nm产线面临备件断供和工程师撤离，国产光刻机/零部件替代时间窗口被强制压缩</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>3</td>
-<td><strong>半导体材料国产替代加速：彤程新材 ArF 光刻胶增长超 800%、靶材 Q1 涨价 60%-70%、硅片 Q2 涨价兑现</strong> — "十五五"目标 2030 自给率 ≥80%，当前整体国产化率仅 15%</td>
-<td>📊 材料端国产替代进入"量价齐升"阶段，商业验证信号增强</td>
-<td>✅ 通过</td>
+<td>江丰电子靶材出货量全球第一，Q1靶材涨价60-70%</td>
+<td>国产材料从"能用"到"全球领先"，靶材品类率先突破。配合钨出口管制，国产靶材份额窗口打开</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>4</td>
-<td>SpaceX 计划向德州 Terafab 投资 $550 亿建半导体工厂（可能升至 $1190 亿）</td>
-<td>🟡 全球新增产能变量：非中国但影响全球半导体供给格局，间接关联</td>
-<td>❌ 未通过（相关性弱，远期间接影响）</td>
+<td>上海新阳光刻胶销售同比增30%+，多款产品批量化</td>
+<td>国内光刻胶厂商从验证走向批量供货。Q1业绩超预期，KrF/ArF导入提速。但对标JSR在台积电门口建厂共研EUV胶，差距仍在拉大</td>
+<td>❌ (增量确认，未改方向)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>北方华创成全球第7大芯片设备商，美三大设备商中国收入持续下滑</td>
+<td>结构性替代正在进行。北方华创2025年营收破300亿RMB，超越KLA的中国收入规模。国产设备在成熟制程替代已成事实</td>
+<td>❌ (延续趋势，无新变量)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>半导体材料"十五五"目标自给率≥80%，当前15%，靶材/Si片涨价Q2兑现</td>
+<td>政策目标激进但落地路径清晰。CMP/光刻胶/硅片各环节国产化加速，但"80%"目标意味着未来5年需年均+13pct，挑战极大</td>
+<td>❌ (政策性综述，非新催化)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>黄仁勋公开表态"中国不应获得英伟达最先进芯片"，与美媒激辩</td>
+<td>政治表态强化管制预期，但已是持续趋势。黄同时承认"中国不需要H20"，暗示国产替代已取得实质进展</td>
+<td>❌ (政治表态，未改实质)</td>
 </tr>
 </tbody></table></div>
 <h3 class="h2">链二催化（AI算力）</h3>
@@ -228,77 +245,80 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr></thead><tbody>
 <tr>
 <td>1</td>
-<td><strong>国产 AI 芯片"六姐妹"Q1 业绩集体爆发：寒武纪 Q1 营收 28.85 亿（+150% YoY）、海光信息 Q1 营收突破 40 亿</strong> — 海光计划 2026 交付 25 万片 DCU（+150%），目标国产 AI 加速芯片 30%+ 份额。寒武纪市值 7168 亿、海光 6886 亿</td>
-<td>🔥 商业化验证变量重大转折：从"技术突破"跨入"规模化商业落地"，业绩不再是概念而进入兑现期</td>
-<td>✅ 通过</td>
+<td>🔥 国产AI芯片Q1业绩集体验证：寒武纪28.85亿(+159%)、海光40.34亿(+68%)、摩尔线程扭亏</td>
+<td>营收量级从"概念验证"进入"规模化商业落地"。六大AI芯片企业总市值突破1.6万亿。Q1合计营收~80亿，年化300亿+，国产算力芯片市场正式成立</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>2</td>
-<td><strong>Samsung 推动 2026 年 HBM 合约涨价 15%-22%；Micron DRAM 毛利率从 FY2024 的 22% 结构性升至 50%+</strong> — Supplyframe 价格指数同比 +146%，HBM3e 供应持续紧张</td>
-<td>📊 HBM 供需缺口持续扩大，AI 算力硬件成本上行趋势确认</td>
-<td>✅ 通过</td>
+<td>🔥 国产AI芯片从"推理"走向"训练"（36氪深度）</td>
+<td>技术路线里程碑。此前国产GPU仅能做推理，训练场景是NVIDIA独占。DeepSeek已采用国产芯片优化技术，训练能力突破打开TAM上限</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>3</td>
-<td><strong>Onto Innovation Q1 2026 财报：先进封装业务 50%+ 增长，HBM 与 2.5D Logic 双双强劲</strong> — 设备商确认 AI 驱动的先进封装 Capex 周期加速</td>
-<td>📊 设备侧数据交叉验证：先进封装/HBM 扩产周期真实且加速中</td>
-<td>✅ 通过</td>
+<td>🔥 HBM 2026产能全锁定：美光确认满产、SK海力士已提前锁定全年订单</td>
+<td>HBM供给极度紧张，DRAM价格指数同比+146%。国内先进封装（通富微电/长电科技）受益于HBM替代需求溢出</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>4</td>
-<td><strong>NVIDIA 亚洲供应链成本占比从 65% 飙升至 90%</strong> — 台积电、SK 海力士、三星等集中度极高，T5000/T4000 模块依赖亚洲封装</td>
-<td>🟡 供应链集中度风险上升，但不直接改变算力需求方向或规模</td>
-<td>❌ 通过 → 合并入 #2 分析</td>
+<td>海南硅光AI超级算力中心项目启动，同时评估NVIDIA和寒武纪方案</td>
+<td>1.6T CPO硅光接口+浸没式液冷，单机柜400kW+。新算力中心从设计阶段兼容国产芯片，订单示范效应</td>
+<td>❌ (项目早期，无明确订单)</td>
 </tr>
 <tr>
 <td>5</td>
-<td><strong>2026 国产 AI 芯片从"推理"走向"训练"</strong> — 核心矛盾从单卡参数转向万卡集群互联瓶颈，国产在集群协同仍落后海外</td>
-<td>📊 方向确认但未改变量级：属于阶段判断，无新增边际信息</td>
-<td>❌ 未通过（已有共识）</td>
+<td>Anthropic承诺5年200亿美元买Google算力，OpenAI运维成本年化450亿</td>
+<td>全球AI Capex持续膨胀，算力军备竞赛未减速。间接拉动HBM/先进封装/光模块需求</td>
+<td>❌ (宏观趋势确认，非边际变化)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>先进封装Q1增长超50%（Onto Innovation财报确认）</td>
+<td>2.5D逻辑+HBM先进封装同步放量，G5工具每季度翻倍。验证先进封装正处于爆发拐点</td>
+<td>❌ (海外数据，对国内有间接映射)</td>
 </tr>
 </tbody></table></div>
-<hr class="section-divider">
 <h3 class="h2">进入深度分析</h3>
-<p><strong>5 条</strong> → 待分派至 [[analyst-2026-05-06]]</p>
+<p>5 条 → [[analyst-2026-05-06]]</p>
 <div class="table-wrap"><table><thead><tr>
 <th>#</th>
 <th>链</th>
 <th>条目</th>
-<th>为什么值得深挖</th>
+<th>优先级</th>
 </tr></thead><tbody>
 <tr>
 <td>1</td>
 <td>链一</td>
-<td>🇺🇸 美国制裁升级至华虹半导体</td>
-<td>制裁从 SMIC 扩至华虹，意味着美国对中国晶圆代工能力的遏制全面化。需要评估：华虹的 AI 芯片技术进展真实水平？断供对华虹产能的具体影响？哪些国产设备/材料替代标的受益最大？</td>
+<td>制裁扩至华虹：Lam/AMAT/KLA暂停发货，从SMIC单点封锁升级为全面制造封锁</td>
+<td>🔥🔥🔥</td>
 </tr>
 <tr>
 <td>2</td>
 <td>链一</td>
-<td>🇳🇱 荷兰光刻机管制扩大至成熟制程（28nm-65nm）</td>
-<td>管制从"卡先进制程"转向"卡基础产能"，中国囤积 DUV 的缓冲还能撑多久？国产光刻机/光刻胶替代时间线是否需要重新评估？</td>
+<td>光刻机维修断供覆盖28-65nm成熟制程，存量设备维护风险暴露</td>
+<td>🔥🔥🔥</td>
 </tr>
 <tr>
 <td>3</td>
 <td>链二</td>
-<td>🔥 国产 AI 芯片 Q1 业绩集体验证：寒武纪 + 海光</td>
-<td>最关键的拐点信号。需要深挖：Q1 营收的客户结构（信创/互联网/运营商占比）？25 万片 DCU 的产能保障？与 NVIDIA 产品的性能差距和替代场景边界？</td>
+<td>国产AI芯片Q1业绩集体突破，6家公司总市值1.6万亿，年化营收300亿+</td>
+<td>🔥🔥🔥</td>
 </tr>
 <tr>
 <td>4</td>
 <td>链二</td>
-<td>💾 HBM 合约涨价 + 先进封装 Capex 加速</td>
-<td>HBM 结构性紧缺对国产替代是利好（国产 HBM 加速导入）还是利空（算力成本上升抑制需求）？Onto Innovation 财报中 HBM/封装增长是否映射到国内通富微电、长电科技？</td>
+<td>国产AI芯片从推理到训练的跨越，技术路线质变打开TAM上限</td>
+<td>🔥🔥</td>
 </tr>
 <tr>
 <td>5</td>
 <td>链二</td>
-<td>🌐 NVIDIA 亚洲供应链集中度 90%（合并）</td>
-<td>地缘风险下 GPU 供应链的脆弱性——如果台海/韩国有变，全球 AI 算力供应会受多大冲击？国产 AI 芯片的"备胎"价值是否被重新定价？</td>
+<td>HBM 2026产能全锁定+DRAM价格指数涨146%，先进封装需求溢出至国内</td>
+<td>🔥🔥</td>
 </tr>
-</tbody></table></div>
-<hr class="section-divider">
-<p><em>初筛完成。以上 5 条标注了变量变化方向与量级，待 Analyst 做深度拆解。</em></p></div>
+</tbody></table></div></div>
 <div class="card" id="analyst"><div class="card-header"><h2>Analyst</h2></div><h2>Analyst 深度分析 — 2026-05-06</h2>
 <p><strong>时点：</strong> 周三 19:00 CST | <strong>输入：</strong> scanner-2026-05-06 | <strong>状态：</strong> 完成 <strong>框架：</strong> 链一（国产替代） / 链二（AI算力） | 双链交叉标的优先级最高</p>
 <hr class="section-divider">
