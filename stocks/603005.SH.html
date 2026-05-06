@@ -51,11 +51,16 @@ pre { background: #0a1628; border: 1px solid var(--border); border-radius: 4px; 
 pre code { background: none; padding: 0; color: var(--text); }
 hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
 
-.chain-block { background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 4px; padding: 8px 14px; margin: 8px 0; }
-.chain-step { padding: 2px 0; font-size: 0.82rem; position: relative; padding-left: 18px; }
-.chain-step::before { content: '\2193'; color: var(--accent); position: absolute; left: 4px; top: 2px; font-size: 0.65rem; }
-.chain-step:first-child::before { content: '\25b6'; color: var(--accent2); font-size: 0.55rem; }
-.chain-step strong { color: var(--text-heading); }
+/* Three Questions card */
+.tq-card { background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; margin: 12px 0; }
+.tq-card h4 { color: var(--accent); font-size: 0.85rem; margin: 8px 0 4px; padding: 0; border: none; }
+.tq-card h4:first-child { margin-top: 0; }
+.tq-card p { font-size: 0.84rem; margin: 2px 0 4px 8px; }
+.tq-card .tq-label { display: inline-block; font-size: 0.72rem; background: rgba(56,189,248,0.15); color: var(--accent); padding: 1px 6px; border-radius: 3px; margin-right: 6px; font-weight: 600; }
+
+/* Mermaid */
+.mermaid-wrap { background: rgba(10,22,40,0.5); border: 1px solid var(--border); border-radius: 6px; padding: 12px; margin: 10px 0; overflow-x: auto; }
+.mermaid-wrap .mermaid { display: flex; justify-content: center; }
 
 .badge { font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; font-weight: 600; display: inline-flex; align-items: center; gap: 2px; }
 .badge-alert { background: rgba(239,68,68,0.15); color: #f87171; }
@@ -96,28 +101,29 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
     <h1>晶方科技</h1>
     <div class="sub">603005.SH | 数字设计 | </div>
     <div class="meta-row">
-      <a href="/daily-signal/" class="date-tag">&larr; Home</a>
-      <a href="/daily-signal/stocks/" class="date-tag">Directory</a>
+      <a href="/daily-signal/" class="date-tag">&larr; 主页</a>
+      <a href="/daily-signal/stocks/" class="date-tag">标的目录</a>
       <span class="date-tag">2026-05-06</span>
     </div>
   </header>
   <div class="summary-grid">
-    <div class="summary-item"><div class="value">31.57</div><div class="label">Close</div></div>
-    <div class="summary-item"><div class="value pct-up">+1.51%</div><div class="label">Chg%</div></div>
-    <div class="summary-item"><div class="value">53.5M</div><div class="label">Volume</div></div>
-    <div class="summary-item"><div class="value">数字设计</div><div class="label">Group</div></div>
+    <div class="summary-item"><div class="value">31.57</div><div class="label">收盘价</div></div>
+    <div class="summary-item"><div class="value pct-up">+1.51%</div><div class="label">涨跌幅</div></div>
+    <div class="summary-item"><div class="value">53.5万手</div><div class="label">成交量</div></div>
+    <div class="summary-item"><div class="value">数字设计</div><div class="label">分组</div></div>
   </div>
-  <h3>Recent 5 Days</h3>
-  <div class="table-wrap"><table><tr><th>Date</th><th>Open</th><th>High</th><th>Low</th><th>Close</th><th>Chg%</th></tr>
+  <h3>近5日走势</h3>
+  <div class="table-wrap"><table><tr><th>日期</th><th>开盘</th><th>最高</th><th>最低</th><th>收盘</th><th>涨跌</th></tr>
     <tr><td>20260506</td><td>31.80</td><td>32.50</td><td>31.51</td><td>31.57</td><td class="pct-up">+1.51%</td></tr>
     <tr><td>20260430</td><td>30.90</td><td>31.35</td><td>30.27</td><td>31.10</td><td class="pct-up">+1.47%</td></tr>
     <tr><td>20260429</td><td>30.01</td><td>30.98</td><td>30.01</td><td>30.65</td><td class="pct-down">-1.76%</td></tr>
     <tr><td>20260428</td><td>31.78</td><td>31.92</td><td>30.92</td><td>31.20</td><td class="pct-down">-2.29%</td></tr>
     <tr><td>20260427</td><td>31.79</td><td>32.84</td><td>31.78</td><td>31.93</td><td class="pct-up">+1.69%</td></tr>
   </table></div>
-  <h3>Recent Anomalies (1)</h3>
-  <div class="table-wrap"><table><tr><th>Date</th><th>Chg%</th><th>Vol</th><th>Attribution</th></tr>
+  <h3>近期异动 (1 次)</h3>
+  <div class="table-wrap"><table><tr><th>日期</th><th>涨跌</th><th>量比</th><th>归因</th></tr>
     <tr><td>20260506</td><td class="pct-up">+1.51%</td><td>2.0x</td><td><span class="badge badge-warn">数字设计板块联动</span></td></tr>
   </table></div>
-  <div class="footer"><p>Mimo &middot; AI Research Assistant | 2026-05-06</p><p><a href="/daily-signal/">Home</a> | <a href="/daily-signal/stocks/">Directory</a></p></div>
+  <div class="footer"><p>Mimo &middot; AI 投研助手 | 2026-05-06</p><p><a href="/daily-signal/">主页</a> | <a href="/daily-signal/stocks/">标的目录</a></p></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
 </div></body></html>
