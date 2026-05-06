@@ -3,68 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mimo 每日信号追踪 — 2026-05-06</title>
+  <title>Mimo Daily Signals - 2026-05-06</title>
   <style>
 :root {
   --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
   --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
   --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
-  --green: #22c55e; --amber: #f59e0b; --radius: 8px;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
-.container { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
-header { padding: 8px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
-header h1 { font-size: 1.5rem; color: var(--text-heading); display: flex; align-items: center; gap: 8px; }
-header .sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
-header .meta-row { display: flex; gap: 16px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
-.date-tag { display: inline-flex; align-items: center; gap: 4px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; font-size: 0.8rem; color: var(--text-muted); text-decoration: none; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+header .meta-row { display: flex; gap: 10px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); text-decoration: none; }
 .date-tag:hover { border-color: var(--accent); }
 
-nav { margin-bottom: 20px; display: flex; gap: 6px; flex-wrap: wrap; }
-nav a { color: var(--accent); text-decoration: none; font-size: 0.8rem; padding: 3px 10px; border-radius: 4px; transition: background .15s; }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
 nav a:hover, nav a.active { background: rgba(56,189,248,0.15); color: #7dd3fc; }
 
-.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
-.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
-.card-header h2, .card-header h3 { color: var(--text-heading); margin: 0; }
-.card-header .stats { font-size: 0.8rem; color: var(--text-muted); }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); margin: 0; font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
 
-.section-heading { color: var(--text-heading); margin: 24px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); font-size: 1.05rem; }
-.sub-heading { color: var(--text-heading); margin: 16px 0 8px; font-size: 0.95rem; }
-.h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h4 { font-size: 0.85rem; color: var(--text-muted); margin: 8px 0 4px; }
+h2.h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
 
-.table-wrap { overflow-x: auto; margin: 12px 0; border: 1px solid var(--border); border-radius: 6px; }
-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
-th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 8px 10px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
-td { padding: 7px 10px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: rgba(56,189,248,0.03); }
 
-p { margin: 6px 0; font-size: 0.88rem; }
-p.subtitle-p { font-weight: 600; color: var(--text-heading); font-size: 0.92rem; margin: 12px 0 6px; }
-blockquote { border-left: 3px solid var(--accent2); padding: 8px 14px; margin: 10px 0; background: rgba(129,140,248,0.05); border-radius: 0 6px 6px 0; font-size: 0.85rem; color: #a5b4fc; }
+p { margin: 4px 0; font-size: 0.86rem; }
+p.subtitle-p { font-weight: 600; color: var(--text-heading); font-size: 0.9rem; margin: 8px 0 4px; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
 blockquote strong { color: #c7d2fe; }
-ul { margin: 8px 0 8px 20px; font-size: 0.87rem; }
-li { margin: 3px 0; }
-code { background: rgba(56,189,248,0.1); color: #7dd3fc; padding: 1px 5px; border-radius: 3px; font-size: 0.82em; }
-pre { background: #0a1628; border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; overflow-x: auto; margin: 10px 0; font-size: 0.8rem; line-height: 1.5; }
+ul { margin: 6px 0 6px 18px; font-size: 0.85rem; }
+li { margin: 2px 0; }
+code { background: rgba(56,189,248,0.1); color: #7dd3fc; padding: 1px 4px; border-radius: 2px; font-size: 0.85em; }
+pre { background: #0a1628; border: 1px solid var(--border); border-radius: 4px; padding: 10px 14px; overflow-x: auto; margin: 8px 0; font-size: 0.78rem; line-height: 1.45; }
 pre code { background: none; padding: 0; color: var(--text); }
-hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
 
-.chain-block { background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 10px 16px; margin: 12px 0; }
-.chain-step { padding: 4px 0; font-size: 0.84rem; position: relative; padding-left: 20px; }
-.chain-step::before { content: '\2193'; color: var(--accent); position: absolute; left: 4px; top: 4px; font-size: 0.7rem; }
-.chain-step:first-child::before { content: '\25b6'; color: var(--accent2); font-size: 0.6rem; }
+.chain-block { background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 4px; padding: 8px 14px; margin: 8px 0; }
+.chain-step { padding: 2px 0; font-size: 0.82rem; position: relative; padding-left: 18px; }
+.chain-step::before { content: '93'; color: var(--accent); position: absolute; left: 4px; top: 2px; font-size: 0.65rem; }
+.chain-step:first-child::before { content: 'b6'; color: var(--accent2); font-size: 0.55rem; }
 .chain-step strong { color: var(--text-heading); }
 
-.badge { font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 600; display: inline-flex; align-items: center; gap: 3px; }
+.badge { font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; font-weight: 600; display: inline-flex; align-items: center; gap: 2px; }
 .badge-alert { background: rgba(239,68,68,0.15); color: #f87171; }
 .badge-warn { background: rgba(245,158,11,0.15); color: #fbbf24; }
 .badge-info { background: rgba(56,189,248,0.15); color: #7dd3fc; }
 .badge-ok { background: rgba(34,197,94,0.15); color: #4ade80; }
 
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 @media(max-width:700px) { .grid-2 { grid-template-columns: 1fr; } }
 
 .pct-up { color: var(--red); font-weight: 600; }
@@ -74,19 +75,19 @@ hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 
 tr.critical-row td { background: rgba(239,68,68,0.05); }
 tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 
-.toc { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; padding: 10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
-.toc a { font-size: 0.78rem; color: var(--accent); text-decoration: none; padding: 2px 8px; border-radius: 3px; }
+.toc { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; padding: 8px 12px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+.toc a { font-size: 0.76rem; color: var(--accent); text-decoration: none; padding: 2px 6px; border-radius: 3px; }
 .toc a:hover { background: rgba(56,189,248,0.1); }
 
-.footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; }
-.footer p { font-size: 0.75rem; color: var(--text-muted); }
-.footer a { color: var(--accent); opacity: 0.7; }
+.footer { margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--border); text-align: center; }
+.footer p { font-size: 0.72rem; color: var(--text-muted); }
+.footer a { color: var(--accent); opacity: 0.6; }
 .footer a:hover { opacity: 1; }
 
-.summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
-.summary-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 12px; text-align: center; }
-.summary-item .value { font-size: 1.4rem; font-weight: 700; color: var(--text-heading); }
-.summary-item .label { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
+.summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+.summary-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 10px; text-align: center; }
+.summary-item .value { font-size: 1.25rem; font-weight: 700; color: var(--text-heading); }
+.summary-item .label { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
 .summary-item.alert { border-color: var(--red); }
 .summary-item.alert .value { color: var(--red); }
 
@@ -97,21 +98,20 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <body>
 <div class="container">
   <header>
-    <h1>🦉 Mimo 每日信号追踪</h1>
-    <div class="sub">两条需求链：国产替代 / AI算力 | 池子+逻辑+归因</div>
+    <h1>Mimo Daily Signals</h1>
+    <div class="sub">Two chains: Domestic Substitution / AI Compute | Pool + Logic + Attribution</div>
     <div class="meta-row">
-      <span class="date-tag">📅 2026-05-06</span>
-      <span class="date-tag">🇨🇳 CST</span>
-      <span class="date-tag">池子: 117只</span>
+      <span class="date-tag">2026-05-06 CST</span>
+      <span class="date-tag">Pool: 117</span>
     </div>
   </header>
 
-  <div class="toc"><span style="color:var(--text-muted);font-size:0.78rem">速览:</span>
-  <a href="#pool">池子归因</a>
+  <div class="toc"><span style="color:var(--text-muted);font-size:0.76rem">Jump:</span>
+  <a href="#pool">Pool</a>
   <a href="#scanner">Scanner</a>
   <a href="#analyst">Analyst</a>
-  <a href="stocks/">📋 标的目录</a></div>
-  <nav><a href="/daily-signal/" class="active">今日</a>
+  <a href="stocks/">Stocks</a></div>
+  <nav><a href="/daily-signal/" class="active">Today</a>
   <a href="2026-05-05.html">05-05</a>
   <a href="2026-05-04.html">05-04</a>
   <a href="2026-05-03.html">05-03</a>
@@ -121,23 +121,23 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
   <a href="2026-04-29.html">04-29</a></nav>
 
 <div class="card" id="pool">
-  <div class="card-header"><h2>🏊 池子归因</h2><span class="stats">20260506 | 117只</span></div>
+  <div class="card-header"><h2>Pool Attribution</h2><span class="stats">20260506 | 117 stocks</span></div>
   <div class="summary-grid">
-    <div class="summary-item"><div class="value">117</div><div class="label">池子标的</div></div>
-    <div class="summary-item"><div class="value">67</div><div class="label">异动</div></div>
-    <div class="summary-item"><div class="value">0</div><div class="label">未归因</div></div>
-    <div class="summary-item"><div class="value pct-up">+2.59%</div><div class="label">国产替代链</div></div>
-    <div class="summary-item"><div class="value pct-up">+3.40%</div><div class="label">AI算力链</div></div>
+    <div class="summary-item"><div class="value">117</div><div class="label">Pool Size</div></div>
+    <div class="summary-item"><div class="value">67</div><div class="label">Anomalies</div></div>
+    <div class="summary-item"><div class="value">0</div><div class="label">Unexplained</div></div>
+    <div class="summary-item"><div class="value pct-up">+2.59%</div><div class="label">Domestic Sub</div></div>
+    <div class="summary-item"><div class="value pct-up">+3.40%</div><div class="label">AI Compute</div></div>
   </div>
-  <div class="grid-2" style="margin-top:20px">
+  <div class="grid-2" style="margin-top:14px">
     <div>
-      <h3 class="sub-heading">🔗 逻辑链表现</h3>
-      <div class="table-wrap"><table><tr><th>链条</th><th>标的数</th><th>均涨跌</th></tr>
+      <h3>Logic Chains</h3>
+      <div class="table-wrap"><table><tr><th>Chain</th><th>Count</th><th>Avg %</th></tr>
         <tr><td>国产替代</td><td>11</td><td class="pct-up">+2.59%</td></tr>
         <tr><td>AI算力</td><td>5</td><td class="pct-up">+3.40%</td></tr>
       </table></div>
-      <h3 class="sub-heading">📈 分组表现</h3>
-      <div class="table-wrap"><table><tr><th>分组</th><th>标的</th><th>均涨跌</th></tr>
+      <h3>Groups</h3>
+      <div class="table-wrap"><table><tr><th>Group</th><th>Count</th><th>Avg %</th></tr>
         <tr><td>材料</td><td>23</td><td class="pct-up">+4.78%</td></tr>
         <tr><td>数字设计</td><td>13</td><td class="pct-up">+3.16%</td></tr>
         <tr><td>光刻胶概念</td><td>34</td><td class="pct-up">+2.67%</td></tr>
@@ -147,8 +147,8 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
       </table></div>
     </div>
     <div>
-      <h3 class="sub-heading">⚡ 异动归因 <span class="badge badge-alert" style="margin-left:8px">0未归因</span></h3>
-      <div class="table-wrap"><table><tr><th>标的</th><th>涨跌</th><th>量比</th><th>分组</th><th>归因</th></tr>
+      <h3>Anomalies <span class="badge badge-alert" style="margin-left:6px">0 unexplained</span></h3>
+      <div class="table-wrap"><table><tr><th>Stock</th><th>Chg%</th><th>Vol</th><th>Group</th><th>Attribution</th></tr>
         <tr class=""><td><a href="stocks/688584.SH.html" class="stock-link"><strong>上海合晶</strong></a> <span class="muted">688584.SH</span></td><td class="pct-up">+20.0%</td><td class="vol-high">6.7x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
         <tr class=""><td><a href="stocks/688233.SH.html" class="stock-link"><strong>神工股份</strong></a> <span class="muted">688233.SH</span></td><td class="pct-up">+14.2%</td><td class="vol-high">4.2x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
         <tr class=""><td><a href="stocks/300456.SZ.html" class="stock-link"><strong>赛微电子</strong></a> <span class="muted">300456.SZ</span></td><td class="pct-up">+13.6%</td><td class="vol-high">4.5x</td><td>光刻胶概念</td><td><span class="badge badge-warn">光刻胶概念板块联动</span></td></tr>
@@ -180,14 +180,14 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
         <tr class=""><td><a href="stocks/002326.SZ.html" class="stock-link"><strong>永太科技</strong></a> <span class="muted">002326.SZ</span></td><td class="pct-up">+3.8%</td><td class="vol-high">2.2x</td><td>光刻胶概念</td><td><span class="badge badge-warn">光刻胶概念板块联动</span></td></tr>
         <tr class=""><td><a href="stocks/300398.SZ.html" class="stock-link"><strong>飞凯材料</strong></a> <span class="muted">300398.SZ</span></td><td class="pct-up">+3.8%</td><td class="vol-high">2.2x</td><td>光刻胶概念</td><td><span class="badge badge-warn">光刻胶概念板块联动</span></td></tr>
       </table></div>
-      <p class="muted" style="margin-top:6px">共67只异动，仅显示前30</p>
+      <p class="muted" style="margin-top:4px">Showing 30 of 67 anomalies</p>
     </div>
   </div>
 </div>
-<div class="card" id="scanner"><div class="card-header"><h2>📡 Scanner 催化扫描</h2><span class="stats">信源: ReadHub + Brave Search</span></div><h2 class="sub-heading">Scanner 输出 — 2026-05-06</h2>
+<div class="card" id="scanner"><div class="card-header"><h2>Scanner</h2><span class="stats">ReadHub + Brave Search</span></div><h2>Scanner 输出 — 2026-05-06</h2>
 <p><strong>信源：</strong> readhub + Brave Search <strong>框架：</strong> 国产替代链 / AI算力链 <strong>时点：</strong> 周三 18:30 CST</p>
 <hr class="section-divider">
-<h3 class="section-heading h2">链一催化（国产替代）</h3>
+<h3 class="h2">链一催化（国产替代）</h3>
 <div class="table-wrap"><table><thead><tr>
 <th>#</th>
 <th>条目</th>
@@ -219,7 +219,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <td>❌ 未通过（相关性弱，远期间接影响）</td>
 </tr>
 </tbody></table></div>
-<h3 class="section-heading h2">链二催化（AI算力）</h3>
+<h3 class="h2">链二催化（AI算力）</h3>
 <div class="table-wrap"><table><thead><tr>
 <th>#</th>
 <th>条目</th>
@@ -258,7 +258,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr>
 </tbody></table></div>
 <hr class="section-divider">
-<h3 class="section-heading h2">进入深度分析</h3>
+<h3 class="h2">进入深度分析</h3>
 <p><strong>5 条</strong> → 待分派至 [[analyst-2026-05-06]]</p>
 <div class="table-wrap"><table><thead><tr>
 <th>#</th>
@@ -299,10 +299,10 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tbody></table></div>
 <hr class="section-divider">
 <p><em>初筛完成。以上 5 条标注了变量变化方向与量级，待 Analyst 做深度拆解。</em></p></div>
-<div class="card" id="analyst"><div class="card-header"><h2>🔬 Analyst 深度分析</h2></div><h2 class="sub-heading">Analyst 深度分析 — 2026-05-06</h2>
+<div class="card" id="analyst"><div class="card-header"><h2>Analyst</h2></div><h2>Analyst 深度分析 — 2026-05-06</h2>
 <p><strong>时点：</strong> 周三 19:00 CST | <strong>输入：</strong> scanner-2026-05-06 | <strong>状态：</strong> 完成 <strong>框架：</strong> 链一（国产替代） / 链二（AI算力） | 双链交叉标的优先级最高</p>
 <hr class="section-divider">
-<h3 class="section-heading h2">溯源摘要</h3>
+<h3 class="h2">溯源摘要</h3>
 <div class="table-wrap"><table><thead><tr>
 <th>#</th>
 <th>链</th>
@@ -353,8 +353,8 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr>
 </tbody></table></div>
 <hr class="section-divider">
-<h3 class="section-heading h2">链一：国产替代进程 深度分析</h3>
-<h4 class="sub-heading">催化 1：美国制裁从 SMIC 扩至华虹 🌶️🌶️🌶️</h4>
+<h3 class="h2">链一：国产替代进程 深度分析</h3>
+<h4>催化 1：美国制裁从 SMIC 扩至华虹 🌶️🌶️🌶️</h4>
 <p><strong>事件：</strong> 4月28日，美国商务部致函 Lam Research、Applied Materials、KLA 等多家设备商，要求暂停向华虹集团部分工厂发货。</p>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
 <ul><li><strong>变量是什么？</strong> 制裁目标变量 — 从单一 SMIC 扩展至中国第二大代工厂。此前制裁逻辑是「卡先进制程」，华虹传统上被理解为成熟制程代工厂（90nm+ 特色工艺），本次理由是华虹旗下力微电子正与华为合作开发 7nm 制程，且「可能已开发出可用于 AI 芯片的先进技术」。📊 事实</li></ul>
@@ -377,7 +377,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </div>
 <p><strong>时效：</strong> ⚡（立即 — 制裁本月已生效，设备商已收到信函）</p>
 <hr class="section-divider">
-<h4 class="sub-heading">催化 2：荷兰光刻机管制扩大至成熟制程（28nm-65nm）🌶️🌶️🌶️🌶️</h4>
+<h4>催化 2：荷兰光刻机管制扩大至成熟制程（28nm-65nm）🌶️🌶️🌶️🌶️</h4>
 <p><strong>事件：</strong> 3月11日荷兰外交大臣在议会宣布，将 28nm、45nm、部分 65nm DUV 光刻机纳入对华禁运，即日生效。且已售设备的维修和备件供应切断。</p>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
 <ul><li><strong>变量是什么？</strong> 管制深度变量 — 从「卡先进」变为「卡基础产能」。这是质变：此前 ASML 可向非实体清单中国客户出售成熟制程 DUV，现在连 65nm 的成熟设备都受限。📊 事实</li></ul>
@@ -403,7 +403,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </div>
 <p><strong>时效：</strong> ⚡（已生效 — 3/11 即日生效，维修断供将逐月体现影响）</p>
 <hr class="section-divider">
-<h4 class="sub-heading">催化 3：半导体材料「量价齐升」🌶️🌶️</h4>
+<h4>催化 3：半导体材料「量价齐升」🌶️🌶️</h4>
 <p><strong>事件：</strong> 彤程新材 ArF光刻胶 2025 年营收增长 800%+；靶材 Q1 涨价 60-70%；硅片 Q2 涨价兑现；「十五五」目标 2030 年自给率 ≥80%（当前 ~15%）。</p>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
 <ul><li><strong>变量是什么？</strong> 商业验证变量 — 材料国产替代从「实验室/验证阶段」正式进入「规模放量+涨价周期」。这是国内半导体材料行业首次出现「量价齐升」的双击格局。📊 事实</li></ul>
@@ -432,7 +432,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </div>
 <p><strong>时效：</strong> 📅（持续演进中 — 材料数据来自 2025 年报和 Q1 2026 趋势）</p>
 <hr class="section-divider">
-<h3 class="section-heading h2">🔥 双链共振信号（链一 × 链二交叉）</h3>
+<h3 class="h2">🔥 双链共振信号（链一 × 链二交叉）</h3>
 <p>以下三条催化在链一和链二之间形成共振传导：</p>
 <div class="table-wrap"><table><thead><tr>
 <th>共振点</th>
@@ -464,8 +464,8 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <li>但同样：制裁越严 → 代工产能越受限 → 国产 AI 芯片物理上限受限 → 远期天花板被压低</li></ul>
 <p>这是 2026 年国产替代投资最核心的矛盾，需要持续跟踪。</p>
 <hr class="section-divider">
-<h3 class="section-heading h2">链二：AI 算力需求 深度分析</h3>
-<h4 class="sub-heading">催化 4：国产 AI 芯片 Q1 业绩集体验证 🌶️🌶️🌶️🌶️🌶️</h4>
+<h3 class="h2">链二：AI 算力需求 深度分析</h3>
+<h4>催化 4：国产 AI 芯片 Q1 业绩集体验证 🌶️🌶️🌶️🌶️🌶️</h4>
 <p class="subtitle-p"><strong>这是今日所有催化中信号强度最高的一条。</strong></p>
 <p><strong>事件：</strong> </p>
 <ul><li>寒武纪 Q1 营收 28.85 亿（+159.56% YoY），归母净利 10.13 亿（+185.04%），扣非 9.34 亿（+238.56%），经营现金流首次转正（+8.34 亿）。市值 7168 亿。</li>
@@ -499,7 +499,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </div>
 <p><strong>时效：</strong> ⚡（2026Q1 财报季 4/30 刚刚完成披露，「新鲜度」极高）</p>
 <hr class="section-divider">
-<h4 class="sub-heading">催化 5：HBM 涨价 + 先进封装 Capex 加速 🌶️🌶️🌶️</h4>
+<h4>催化 5：HBM 涨价 + 先进封装 Capex 加速 🌶️🌶️🌶️</h4>
 <p class="subtitle-p"><strong>事件：</strong></p>
 <ul><li>Samsung 2026 年推动 HBM 合约涨价 15-22%，DRAM ASP QoQ +mid-60%</li>
 <li>Onto Innovation Q1 营收 $292M（+9.5% YoY），先进封装/特种设备收入 $160M（约 2/3 来自先进封装），Dragonfly G5 已在领先 2.5D 逻辑和 HBM 客户通过验证</li>
@@ -532,7 +532,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </div>
 <p><strong>时效：</strong> 📅（行业趋势持续演进，HBM 涨价是连续变量，Onto Q1 最新数据点确认趋势）</p>
 <hr class="section-divider">
-<h4 class="sub-heading">催化 6：NVIDIA 亚洲供应链集中度从 65% 飙升到 90%（合并项）</h4>
+<h4>催化 6：NVIDIA 亚洲供应链集中度从 65% 飙升到 90%（合并项）</h4>
 <p><strong>事件：</strong> Bloomberg 测算 NVIDIA 生产成本中亚洲供应商占比从 65% 飙升至 90%。同时 NVIDIA 中国市场收入从 >90% 降至接近零（天下杂志 5/6 报道），中国正以国产芯片替代。</p>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
 <ul><li><strong>变量是什么？</strong> 供应链集中度风险变量 — 台积电（CoWoS封装+晶圆）、SK海力士（HBM）、三星（HBM）三家占 N 卡成本绝对大头。亚洲集中度越高 → 地缘风险下的供应脆弱性越大。📊 事实</li></ul>
@@ -553,9 +553,9 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </div>
 <p><strong>时效：</strong> 🗓️（慢变量 — 供应链重构需要数年，无即时交易信号）</p>
 <hr class="section-divider">
-<h3 class="section-heading h2">归因对照：今日催化 → 双链标的池预测映射</h3>
+<h3 class="h2">归因对照：今日催化 → 双链标的池预测映射</h3>
 <p>以下对照预测：基于今日催化，哪些标的应出现价格/基本面反应（供明日市场验证）。</p>
-<h4 class="sub-heading">双链交叉标的（优先级最高）</h4>
+<h4>双链交叉标的（优先级最高）</h4>
 <div class="table-wrap"><table><thead><tr>
 <th>标的</th>
 <th>催化编号</th>
@@ -613,7 +613,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <td>Q1营收40亿+68%，今日涨停市值8200亿验证市场认可；DCU 25万片目标+150%</td>
 </tr>
 </tbody></table></div>
-<h4 class="sub-heading">链一专属标的（今日归因）</h4>
+<h4>链一专属标的（今日归因）</h4>
 <div class="table-wrap"><table><thead><tr>
 <th>标的</th>
 <th>催化编号</th>
@@ -657,7 +657,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <td>靶材涨价弹性已部分释放，全球份额第一，边际催化减弱</td>
 </tr>
 </tbody></table></div>
-<h4 class="sub-heading">链二专属标的（今日归因）</h4>
+<h4>链二专属标的（今日归因）</h4>
 <div class="table-wrap"><table><thead><tr>
 <th>标的</th>
 <th>催化编号</th>
@@ -688,8 +688,8 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr>
 </tbody></table></div>
 <hr class="section-divider">
-<h3 class="section-heading h2">风险提示与置信度校准</h3>
-<h4 class="sub-heading">宏观风险（影响所有标的）</h4>
+<h3 class="h2">风险提示与置信度校准</h3>
+<h4>宏观风险（影响所有标的）</h4>
 <div class="table-wrap"><table><thead><tr>
 <th>风险</th>
 <th>当前状态</th>
@@ -716,7 +716,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <td>寒武纪7000亿+/海光8000亿+，P/E缺失或极高，任何业绩miss都会引发剧烈回调</td>
 </tr>
 </tbody></table></div>
-<h4 class="sub-heading">催化剂置信度总结</h4>
+<h4>催化剂置信度总结</h4>
 <div class="table-wrap"><table><thead><tr>
 <th>催化</th>
 <th>判断置信度</th>
@@ -754,11 +754,11 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr>
 </tbody></table></div>
 <hr class="section-divider">
-<h3 class="section-heading h2">今日核心判断</h3>
+<h3 class="h2">今日核心判断</h3>
 <p class="subtitle-p"><strong>一句话：2026年5月6日，国产AI芯片正式跨入商业验证拐点，叠加制裁从SMIC扩至华虹+光刻机管制扩至成熟制程，链一（设备/材料）和链二（国产AI芯片/先进封装）形成罕见的「双链共振」。通富微电和北方华创是双链交叉受益最明确的标的；寒武纪和海光信息的Q1业绩是今日最重要的边际信息。</strong></p>
 <hr class="section-divider">
 <p><em>分析师：Mimo 🦉 | 下一个交易日（5月7日）可验证归因对照中的价格反应</em> <em>免责声明：本报告为投研框架分析，不构成投资建议。所有「🔮 推演」和「⚠️ 风险提示」标注的结论具有不确定性。</em></p></div>
-<div class="footer"><p>🦉 Mimo · AI 管家 + 投研顾问 | 2026-05-06</p><p>仅供研究参考，不构成投资建议 | 🟢=已确认 🟡=合理推断 🔴=猜测</p><p><a href="https://github.com/zhonghui-co/daily-signal">GitHub Repo</a> · <a href="stocks/">标的目录</a></p></div>
+<div class="footer"><p>Mimo &middot; AI Research Assistant | 2026-05-06</p><p>For research only. Not investment advice. | <a href="stocks/">Stock Directory</a></p></div>
 </div>
 </body>
 </html>
