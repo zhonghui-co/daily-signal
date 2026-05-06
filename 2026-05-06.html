@@ -6,39 +6,28 @@
   <title>Mimo 每日信号追踪 — 2026-05-06</title>
   <style>
 :root {
-  --bg: #0b1120;
-  --bg-card: #111827;
-  --bg-card-hover: #1a2332;
-  --border: #1e3a5f;
-  --text: #cbd5e1;
-  --text-muted: #64748b;
-  --text-heading: #f1f5f9;
-  --accent: #38bdf8;
-  --accent2: #818cf8;
-  --red: #ef4444;
-  --green: #22c55e;
-  --amber: #f59e0b;
-  --radius: 8px;
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 8px;
 }
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
 .container { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
-
 header { padding: 8px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
 header h1 { font-size: 1.5rem; color: var(--text-heading); display: flex; align-items: center; gap: 8px; }
 header .sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
 header .meta-row { display: flex; gap: 16px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
-.date-tag { display: inline-flex; align-items: center; gap: 4px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; font-size: 0.8rem; color: var(--text-muted); }
+.date-tag { display: inline-flex; align-items: center; gap: 4px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; font-size: 0.8rem; color: var(--text-muted); text-decoration: none; }
+.date-tag:hover { border-color: var(--accent); }
 
 nav { margin-bottom: 20px; display: flex; gap: 6px; flex-wrap: wrap; }
 nav a { color: var(--accent); text-decoration: none; font-size: 0.8rem; padding: 3px 10px; border-radius: 4px; transition: background .15s; }
-nav a:hover { background: rgba(56,189,248,0.1); }
-nav a.active { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+nav a:hover, nav a.active { background: rgba(56,189,248,0.15); color: #7dd3fc; }
 
 .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
-.card-header h2 { font-size: 1.1rem; color: var(--text-heading); margin: 0; }
+.card-header h2, .card-header h3 { color: var(--text-heading); margin: 0; }
 .card-header .stats { font-size: 0.8rem; color: var(--text-muted); }
 
 .section-heading { color: var(--text-heading); margin: 24px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); font-size: 1.05rem; }
@@ -65,8 +54,8 @@ hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 
 
 .chain-block { background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 10px 16px; margin: 12px 0; }
 .chain-step { padding: 4px 0; font-size: 0.84rem; position: relative; padding-left: 20px; }
-.chain-step::before { content: '↓'; color: var(--accent); position: absolute; left: 4px; top: 4px; font-size: 0.7rem; }
-.chain-step:first-child::before { content: '▶'; color: var(--accent2); font-size: 0.6rem; }
+.chain-step::before { content: '\2193'; color: var(--accent); position: absolute; left: 4px; top: 4px; font-size: 0.7rem; }
+.chain-step:first-child::before { content: '\25b6'; color: var(--accent2); font-size: 0.6rem; }
 .chain-step strong { color: var(--text-heading); }
 
 .badge { font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 600; display: inline-flex; align-items: center; gap: 3px; }
@@ -81,8 +70,6 @@ hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 
 .pct-up { color: var(--red); font-weight: 600; }
 .pct-down { color: var(--green); font-weight: 600; }
 .vol-high { color: var(--amber); }
-.conf { font-size: 1rem; }
-.spice { margin-right: 1px; }
 
 tr.critical-row td { background: rgba(239,68,68,0.05); }
 tr.critical-row td:first-child { border-left: 2px solid var(--red); }
@@ -102,11 +89,13 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 .summary-item .label { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
 .summary-item.alert { border-color: var(--red); }
 .summary-item.alert .value { color: var(--red); }
+
+.stock-link { color: var(--text-heading); text-decoration: none; }
+.stock-link:hover { color: var(--accent); text-decoration: underline; }
 </style>
 </head>
 <body>
 <div class="container">
-
   <header>
     <h1>🦉 Mimo 每日信号追踪</h1>
     <div class="sub">两条需求链：国产替代 / AI算力 | 池子+逻辑+归因</div>
@@ -116,11 +105,12 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
       <span class="date-tag">池子: 150只</span>
     </div>
   </header>
-  
+
   <div class="toc"><span style="color:var(--text-muted);font-size:0.78rem">速览:</span>
   <a href="#pool">池子归因</a>
   <a href="#scanner">Scanner</a>
-  <a href="#analyst">Analyst</a></div>
+  <a href="#analyst">Analyst</a>
+  <a href="stocks/">📋 标的目录</a></div>
   <nav><a href="/daily-signal/" class="active">今日</a>
   <a href="2026-05-05.html">05-05</a>
   <a href="2026-05-04.html">05-04</a>
@@ -130,320 +120,72 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
   <a href="2026-04-30.html">04-30</a>
   <a href="2026-04-29.html">04-29</a></nav>
 
-
 <div class="card" id="pool">
-  <div class="card-header">
-    <h2>🏊 池子归因</h2>
-    <span class="stats">20260506 | 150只</span>
+  <div class="card-header"><h2>🏊 池子归因</h2><span class="stats">20260506 | 150只</span></div>
+  <div class="summary-grid">
+    <div class="summary-item"><div class="value">150</div><div class="label">池子标的</div></div>
+    <div class="summary-item"><div class="value">166</div><div class="label">异动</div></div>
+    <div class="summary-item"><div class="value">0</div><div class="label">未归因</div></div>
+    <div class="summary-item"><div class="value pct-up">+2.59%</div><div class="label">国产替代链</div></div>
+    <div class="summary-item"><div class="value pct-up">+3.40%</div><div class="label">AI算力链</div></div>
   </div>
-    <div class="summary-grid">
-      <div class="summary-item">
-        <div class="value">150</div>
-        <div class="label">池子标的</div>
-      </div>
-      <div class="summary-item">
-        <div class="value">166</div>
-        <div class="label">异动</div>
-      </div>
-      <div class="summary-item">
-        <div class="value">0</div>
-        <div class="label">未归因</div>
-      </div>
-      <div class="summary-item">
-        <div class="value pct-up">+2.59%</div>
-        <div class="label">国产替代链</div>
-      </div>
-      <div class="summary-item">
-        <div class="value pct-up">+3.40%</div>
-        <div class="label">AI算力链</div>
-      </div>
-    </div>
-  
   <div class="grid-2" style="margin-top:20px">
     <div>
       <h3 class="sub-heading">🔗 逻辑链表现</h3>
-      <div class="table-wrap">
-        <table>
-          <tr><th>链条</th><th>标的数</th><th>均涨跌</th></tr>
-<tr><td>国产替代</td><td>11</td><td class="pct-up">+2.59%</td></tr>
-<tr><td>AI算力</td><td>5</td><td class="pct-up">+3.40%</td></tr>
-        </table>
-      </div>
-      
+      <div class="table-wrap"><table><tr><th>链条</th><th>标的数</th><th>均涨跌</th></tr>
+        <tr><td>国产替代</td><td>11</td><td class="pct-up">+2.59%</td></tr>
+        <tr><td>AI算力</td><td>5</td><td class="pct-up">+3.40%</td></tr>
+      </table></div>
       <h3 class="sub-heading">📈 分组表现</h3>
-      <div class="table-wrap">
-        <table>
-          <tr><th>分组</th><th>标的</th><th>均涨跌</th></tr>
-<tr><td>材料</td><td>23</td><td class="pct-up">+4.78%</td></tr>
-<tr><td>数字设计</td><td>13</td><td class="pct-up">+3.16%</td></tr>
-<tr><td>光刻胶概念</td><td>34</td><td class="pct-up">+2.67%</td></tr>
-<tr><td>电子化学品</td><td>37</td><td class="pct-up">+1.73%</td></tr>
-<tr><td>模拟设计</td><td>23</td><td class="pct-up">+1.26%</td></tr>
-<tr><td>设备</td><td>17</td><td class="pct-up">+0.99%</td></tr>
-<tr><td>AI算力</td><td>3</td><td class="pct-up">+0.40%</td></tr>
-        </table>
-      </div>
+      <div class="table-wrap"><table><tr><th>分组</th><th>标的</th><th>均涨跌</th></tr>
+        <tr><td>材料</td><td>23</td><td class="pct-up">+4.78%</td></tr>
+        <tr><td>数字设计</td><td>13</td><td class="pct-up">+3.16%</td></tr>
+        <tr><td>光刻胶概念</td><td>34</td><td class="pct-up">+2.67%</td></tr>
+        <tr><td>电子化学品</td><td>37</td><td class="pct-up">+1.73%</td></tr>
+        <tr><td>模拟设计</td><td>23</td><td class="pct-up">+1.26%</td></tr>
+        <tr><td>设备</td><td>17</td><td class="pct-up">+0.99%</td></tr>
+        <tr><td>AI算力</td><td>3</td><td class="pct-up">+0.40%</td></tr>
+      </table></div>
     </div>
     <div>
-      <h3 class="sub-heading">⚡ 异动归因
-        <span class="badge badge-alert" style="margin-left:8px">0未归因</span>
-      </h3>
-      <div class="table-wrap">
-        <table>
-          <tr><th>标的</th><th>涨跌</th><th>量比</th><th>分组</th><th>归因</th></tr>
-
-          <tr class="">
-            <td><strong>上海合晶</strong> <span class="muted">688584.SH</span></td>
-            <td class="pct-up">+20.0%</td>
-            <td class="vol-high">6.7x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>上海合晶</strong> <span class="muted">688584.SH</span></td>
-            <td class="pct-up">+20.0%</td>
-            <td class="vol-high">6.7x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>神工股份</strong> <span class="muted">688233.SH</span></td>
-            <td class="pct-up">+14.2%</td>
-            <td class="vol-high">4.2x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>神工股份</strong> <span class="muted">688233.SH</span></td>
-            <td class="pct-up">+14.2%</td>
-            <td class="vol-high">4.2x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>赛微电子</strong> <span class="muted">300456.SZ</span></td>
-            <td class="pct-up">+13.6%</td>
-            <td class="vol-high">4.5x</td>
-            <td>光刻胶概念</td>
-            <td><span class="badge badge-warn">光刻胶概念板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>赛微电子</strong> <span class="muted">300456.SZ</span></td>
-            <td class="pct-up">+13.6%</td>
-            <td class="vol-high">4.5x</td>
-            <td>光刻胶概念</td>
-            <td><span class="badge badge-warn">光刻胶概念板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>西安奕材-U</strong> <span class="muted">688783.SH</span></td>
-            <td class="pct-up">+12.7%</td>
-            <td class="vol-high">2.9x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>西安奕材-U</strong> <span class="muted">688783.SH</span></td>
-            <td class="pct-up">+12.7%</td>
-            <td class="vol-high">2.9x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>合力泰</strong> <span class="muted">002217.SZ</span></td>
-            <td class="pct-up">+10.0%</td>
-            <td class="vol-high">6.7x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>合力泰</strong> <span class="muted">002217.SZ</span></td>
-            <td class="pct-up">+10.0%</td>
-            <td class="vol-high">6.7x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>通富微电</strong> <span class="muted">002156.SZ</span></td>
-            <td class="pct-up">+10.0%</td>
-            <td class="">0.8x</td>
-            <td>数字设计</td>
-            <td><span class="badge badge-info">AI算力链</span> <span class="badge badge-warn">数字设计板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>通富微电</strong> <span class="muted">002156.SZ</span></td>
-            <td class="pct-up">+10.0%</td>
-            <td class="">0.8x</td>
-            <td>数字设计</td>
-            <td><span class="badge badge-info">AI算力链</span> <span class="badge badge-warn">数字设计板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>奥瑞德</strong> <span class="muted">600666.SH</span></td>
-            <td class="pct-up">+9.9%</td>
-            <td class="vol-high">6.9x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>奥瑞德</strong> <span class="muted">600666.SH</span></td>
-            <td class="pct-up">+9.9%</td>
-            <td class="vol-high">6.9x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>阿石创</strong> <span class="muted">300706.SZ</span></td>
-            <td class="pct-up">+8.9%</td>
-            <td class="vol-high">4.7x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>阿石创</strong> <span class="muted">300706.SZ</span></td>
-            <td class="pct-up">+8.9%</td>
-            <td class="vol-high">4.7x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>GQY视讯</strong> <span class="muted">300076.SZ</span></td>
-            <td class="pct-down">-8.8%</td>
-            <td class="vol-high">3.4x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>GQY视讯</strong> <span class="muted">300076.SZ</span></td>
-            <td class="pct-down">-8.8%</td>
-            <td class="vol-high">3.4x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>天岳先进</strong> <span class="muted">688234.SH</span></td>
-            <td class="pct-up">+8.6%</td>
-            <td class="vol-high">3.5x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>天岳先进</strong> <span class="muted">688234.SH</span></td>
-            <td class="pct-up">+8.6%</td>
-            <td class="vol-high">3.5x</td>
-            <td>材料</td>
-            <td><span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>沪硅产业</strong> <span class="muted">688126.SH</span></td>
-            <td class="pct-up">+8.3%</td>
-            <td class="vol-high">5.2x</td>
-            <td>材料</td>
-            <td><span class="badge badge-info">国产替代链</span> <span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>沪硅产业</strong> <span class="muted">688126.SH</span></td>
-            <td class="pct-up">+8.3%</td>
-            <td class="vol-high">5.2x</td>
-            <td>材料</td>
-            <td><span class="badge badge-info">国产替代链</span> <span class="badge badge-warn">材料板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>晶升股份</strong> <span class="muted">688478.SH</span></td>
-            <td class="pct-up">+7.8%</td>
-            <td class="vol-high">3.3x</td>
-            <td>模拟设计</td>
-            <td><span class="badge badge-warn">模拟设计板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>晶升股份</strong> <span class="muted">688478.SH</span></td>
-            <td class="pct-up">+7.8%</td>
-            <td class="vol-high">3.3x</td>
-            <td>模拟设计</td>
-            <td><span class="badge badge-warn">模拟设计板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>雅克科技</strong> <span class="muted">002409.SZ</span></td>
-            <td class="pct-up">+6.5%</td>
-            <td class="vol-high">2.2x</td>
-            <td>光刻胶概念</td>
-            <td><span class="badge badge-warn">光刻胶概念板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>雅克科技</strong> <span class="muted">002409.SZ</span></td>
-            <td class="pct-up">+6.5%</td>
-            <td class="vol-high">2.2x</td>
-            <td>光刻胶概念</td>
-            <td><span class="badge badge-warn">光刻胶概念板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>同兴达</strong> <span class="muted">002845.SZ</span></td>
-            <td class="pct-up">+6.3%</td>
-            <td class="">1.7x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>同兴达</strong> <span class="muted">002845.SZ</span></td>
-            <td class="pct-up">+6.3%</td>
-            <td class="">1.7x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>长信科技</strong> <span class="muted">300088.SZ</span></td>
-            <td class="pct-up">+6.0%</td>
-            <td class="vol-high">2.6x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-
-          <tr class="">
-            <td><strong>长信科技</strong> <span class="muted">300088.SZ</span></td>
-            <td class="pct-up">+6.0%</td>
-            <td class="vol-high">2.6x</td>
-            <td>电子化学品</td>
-            <td><span class="badge badge-warn">电子化学品板块联动</span></td>
-          </tr>
-        </table>
-      </div>
-<p class="muted" style="margin-top:6px">共166只异动，仅显示前30</p>
+      <h3 class="sub-heading">⚡ 异动归因 <span class="badge badge-alert" style="margin-left:8px">0未归因</span></h3>
+      <div class="table-wrap"><table><tr><th>标的</th><th>涨跌</th><th>量比</th><th>分组</th><th>归因</th></tr>
+        <tr class=""><td><a href="stocks/688584.SH.html" class="stock-link"><strong>上海合晶</strong></a> <span class="muted">688584.SH</span></td><td class="pct-up">+20.0%</td><td class="vol-high">6.7x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688584.SH.html" class="stock-link"><strong>上海合晶</strong></a> <span class="muted">688584.SH</span></td><td class="pct-up">+20.0%</td><td class="vol-high">6.7x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688233.SH.html" class="stock-link"><strong>神工股份</strong></a> <span class="muted">688233.SH</span></td><td class="pct-up">+14.2%</td><td class="vol-high">4.2x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688233.SH.html" class="stock-link"><strong>神工股份</strong></a> <span class="muted">688233.SH</span></td><td class="pct-up">+14.2%</td><td class="vol-high">4.2x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/300456.SZ.html" class="stock-link"><strong>赛微电子</strong></a> <span class="muted">300456.SZ</span></td><td class="pct-up">+13.6%</td><td class="vol-high">4.5x</td><td>光刻胶概念</td><td><span class="badge badge-warn">光刻胶概念板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/300456.SZ.html" class="stock-link"><strong>赛微电子</strong></a> <span class="muted">300456.SZ</span></td><td class="pct-up">+13.6%</td><td class="vol-high">4.5x</td><td>光刻胶概念</td><td><span class="badge badge-warn">光刻胶概念板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688783.SH.html" class="stock-link"><strong>西安奕材-U</strong></a> <span class="muted">688783.SH</span></td><td class="pct-up">+12.7%</td><td class="vol-high">2.9x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688783.SH.html" class="stock-link"><strong>西安奕材-U</strong></a> <span class="muted">688783.SH</span></td><td class="pct-up">+12.7%</td><td class="vol-high">2.9x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/002217.SZ.html" class="stock-link"><strong>合力泰</strong></a> <span class="muted">002217.SZ</span></td><td class="pct-up">+10.0%</td><td class="vol-high">6.7x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/002217.SZ.html" class="stock-link"><strong>合力泰</strong></a> <span class="muted">002217.SZ</span></td><td class="pct-up">+10.0%</td><td class="vol-high">6.7x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/002156.SZ.html" class="stock-link"><strong>通富微电</strong></a> <span class="muted">002156.SZ</span></td><td class="pct-up">+10.0%</td><td class="">0.8x</td><td>数字设计</td><td><span class="badge badge-info">AI算力链</span> <span class="badge badge-warn">数字设计板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/002156.SZ.html" class="stock-link"><strong>通富微电</strong></a> <span class="muted">002156.SZ</span></td><td class="pct-up">+10.0%</td><td class="">0.8x</td><td>数字设计</td><td><span class="badge badge-info">AI算力链</span> <span class="badge badge-warn">数字设计板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/600666.SH.html" class="stock-link"><strong>奥瑞德</strong></a> <span class="muted">600666.SH</span></td><td class="pct-up">+9.9%</td><td class="vol-high">6.9x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/600666.SH.html" class="stock-link"><strong>奥瑞德</strong></a> <span class="muted">600666.SH</span></td><td class="pct-up">+9.9%</td><td class="vol-high">6.9x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/300706.SZ.html" class="stock-link"><strong>阿石创</strong></a> <span class="muted">300706.SZ</span></td><td class="pct-up">+8.9%</td><td class="vol-high">4.7x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/300706.SZ.html" class="stock-link"><strong>阿石创</strong></a> <span class="muted">300706.SZ</span></td><td class="pct-up">+8.9%</td><td class="vol-high">4.7x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/300076.SZ.html" class="stock-link"><strong>GQY视讯</strong></a> <span class="muted">300076.SZ</span></td><td class="pct-down">-8.8%</td><td class="vol-high">3.4x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/300076.SZ.html" class="stock-link"><strong>GQY视讯</strong></a> <span class="muted">300076.SZ</span></td><td class="pct-down">-8.8%</td><td class="vol-high">3.4x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688234.SH.html" class="stock-link"><strong>天岳先进</strong></a> <span class="muted">688234.SH</span></td><td class="pct-up">+8.6%</td><td class="vol-high">3.5x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688234.SH.html" class="stock-link"><strong>天岳先进</strong></a> <span class="muted">688234.SH</span></td><td class="pct-up">+8.6%</td><td class="vol-high">3.5x</td><td>材料</td><td><span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688126.SH.html" class="stock-link"><strong>沪硅产业</strong></a> <span class="muted">688126.SH</span></td><td class="pct-up">+8.3%</td><td class="vol-high">5.2x</td><td>材料</td><td><span class="badge badge-info">国产替代链</span> <span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688126.SH.html" class="stock-link"><strong>沪硅产业</strong></a> <span class="muted">688126.SH</span></td><td class="pct-up">+8.3%</td><td class="vol-high">5.2x</td><td>材料</td><td><span class="badge badge-info">国产替代链</span> <span class="badge badge-warn">材料板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688478.SH.html" class="stock-link"><strong>晶升股份</strong></a> <span class="muted">688478.SH</span></td><td class="pct-up">+7.8%</td><td class="vol-high">3.3x</td><td>模拟设计</td><td><span class="badge badge-warn">模拟设计板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/688478.SH.html" class="stock-link"><strong>晶升股份</strong></a> <span class="muted">688478.SH</span></td><td class="pct-up">+7.8%</td><td class="vol-high">3.3x</td><td>模拟设计</td><td><span class="badge badge-warn">模拟设计板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/002409.SZ.html" class="stock-link"><strong>雅克科技</strong></a> <span class="muted">002409.SZ</span></td><td class="pct-up">+6.5%</td><td class="vol-high">2.2x</td><td>光刻胶概念</td><td><span class="badge badge-warn">光刻胶概念板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/002409.SZ.html" class="stock-link"><strong>雅克科技</strong></a> <span class="muted">002409.SZ</span></td><td class="pct-up">+6.5%</td><td class="vol-high">2.2x</td><td>光刻胶概念</td><td><span class="badge badge-warn">光刻胶概念板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/002845.SZ.html" class="stock-link"><strong>同兴达</strong></a> <span class="muted">002845.SZ</span></td><td class="pct-up">+6.3%</td><td class="">1.7x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/002845.SZ.html" class="stock-link"><strong>同兴达</strong></a> <span class="muted">002845.SZ</span></td><td class="pct-up">+6.3%</td><td class="">1.7x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/300088.SZ.html" class="stock-link"><strong>长信科技</strong></a> <span class="muted">300088.SZ</span></td><td class="pct-up">+6.0%</td><td class="vol-high">2.6x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+        <tr class=""><td><a href="stocks/300088.SZ.html" class="stock-link"><strong>长信科技</strong></a> <span class="muted">300088.SZ</span></td><td class="pct-up">+6.0%</td><td class="vol-high">2.6x</td><td>电子化学品</td><td><span class="badge badge-warn">电子化学品板块联动</span></td></tr>
+      </table></div>
+      <p class="muted" style="margin-top:6px">共166只异动，仅显示前30</p>
     </div>
   </div>
 </div>
-
-<div class="card" id="scanner">
-  <div class="card-header">
-    <h2>📡 Scanner 催化扫描</h2>
-    <span class="stats">信源: ReadHub + Brave Search</span>
-  </div>
-<h2 class="sub-heading">Scanner 输出 — 2026-05-06</h2>
+<div class="card" id="scanner"><div class="card-header"><h2>📡 Scanner 催化扫描</h2><span class="stats">信源: ReadHub + Brave Search</span></div><h2 class="sub-heading">Scanner 输出 — 2026-05-06</h2>
 <p><strong>信源：</strong> readhub + Brave Search <strong>框架：</strong> 国产替代链 / AI算力链 <strong>时点：</strong> 周三 18:30 CST</p>
 <hr class="section-divider">
 <h3 class="section-heading h2">链一催化（国产替代）</h3>
@@ -456,13 +198,13 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <tr>
 <td>1</td>
 <td><strong>美国商务部 4/28 命令泛林、应用材料、科磊暂停对华虹半导体部分工厂发货</strong> — 制裁从 SMIC（中芯国际）扩展到中国第二大晶圆代工厂，理由是华虹可能已开发出可用于 AI 芯片的先进技术</td>
-<td><span class="conf" title="猜测">🔴</span> 制裁范围变量扩大：此前制裁聚焦 SMIC/先进制程，现在延烧至华虹，覆盖中国代工产能更广</td>
+<td>🔴 制裁范围变量扩大：此前制裁聚焦 SMIC/先进制程，现在延烧至华虹，覆盖中国代工产能更广</td>
 <td>✅ 通过</td>
 </tr>
 <tr>
 <td>2</td>
 <td><strong>荷兰 3 月将光刻机管制从 7nm→14nm 进一步扩展到 28nm、45nm 甚至部分 65nm 机型</strong> — ASML 可售范围被压缩至更落后设备，中国囤积的 DUV 光刻机成为关键缓冲</td>
-<td><span class="conf" title="猜测">🔴</span> 管制深度变量加剧：从先进制程封锁蔓延至成熟制程，倒逼国产光刻设备替代时间线前移</td>
+<td>🔴 管制深度变量加剧：从先进制程封锁蔓延至成熟制程，倒逼国产光刻设备替代时间线前移</td>
 <td>✅ 通过</td>
 </tr>
 <tr>
@@ -474,7 +216,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <tr>
 <td>4</td>
 <td>SpaceX 计划向德州 Terafab 投资 $550 亿建半导体工厂（可能升至 $1190 亿）</td>
-<td><span class="conf" title="合理推断">🟡</span> 全球新增产能变量：非中国但影响全球半导体供给格局，间接关联</td>
+<td>🟡 全球新增产能变量：非中国但影响全球半导体供给格局，间接关联</td>
 <td>❌ 未通过（相关性弱，远期间接影响）</td>
 </tr>
 </tbody></table></div>
@@ -506,7 +248,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <tr>
 <td>4</td>
 <td><strong>NVIDIA 亚洲供应链成本占比从 65% 飙升至 90%</strong> — 台积电、SK 海力士、三星等集中度极高，T5000/T4000 模块依赖亚洲封装</td>
-<td><span class="conf" title="合理推断">🟡</span> 供应链集中度风险上升，但不直接改变算力需求方向或规模</td>
+<td>🟡 供应链集中度风险上升，但不直接改变算力需求方向或规模</td>
 <td>❌ 通过 → 合并入 #2 分析</td>
 </tr>
 <tr>
@@ -557,14 +299,8 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr>
 </tbody></table></div>
 <hr class="section-divider">
-<p><em>初筛完成。以上 5 条标注了变量变化方向与量级，待 Analyst 做深度拆解。</em></p>
-</div>
-
-<div class="card" id="analyst">
-  <div class="card-header">
-    <h2>🔬 Analyst 深度分析</h2>
-  </div>
-<h2 class="sub-heading">Analyst 深度分析 — 2026-05-06</h2>
+<p><em>初筛完成。以上 5 条标注了变量变化方向与量级，待 Analyst 做深度拆解。</em></p></div>
+<div class="card" id="analyst"><div class="card-header"><h2>🔬 Analyst 深度分析</h2></div><h2 class="sub-heading">Analyst 深度分析 — 2026-05-06</h2>
 <p><strong>时点：</strong> 周三 19:00 CST | <strong>输入：</strong> scanner-2026-05-06 | <strong>状态：</strong> 完成 <strong>框架：</strong> 链一（国产替代） / 链二（AI算力） | 双链交叉标的优先级最高</p>
 <hr class="section-divider">
 <h3 class="section-heading h2">溯源摘要</h3>
@@ -582,7 +318,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <td>美国制裁升级至华虹半导体</td>
 <td>Reuters 4/28 独家：美国商务部下令 Lam/AMAT/KLA 暂停对华虹部分工厂发货</td>
 <td>✅ 确认</td>
-<td><span class="conf" title="已确认">🟢</span> Reuters + Tom's Hardware + Electronics Weekly 三源交叉验证</td>
+<td>🟢 Reuters + Tom's Hardware + Electronics Weekly 三源交叉验证</td>
 </tr>
 <tr>
 <td>2</td>
@@ -590,7 +326,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <td>荷兰光刻机管制扩至 28-65nm</td>
 <td>荷兰外交大臣 3/11 议会声明；新浪/163/搜狐三源交叉</td>
 <td>✅ 确认</td>
-<td><span class="conf" title="合理推断">🟡</span> 中文媒体交叉确认，缺荷兰政府公告原文</td>
+<td>🟡 中文媒体交叉确认，缺荷兰政府公告原文</td>
 </tr>
 <tr>
 <td>3</td>
@@ -598,7 +334,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <td>半导体材料国产替代加速（ArF光刻胶+800%、靶材涨价）</td>
 <td>彤程新材 2025 年报（证券时报 4月初原文）、新浪财经 5/3 材料专题</td>
 <td>✅ 确认</td>
-<td><span class="conf" title="已确认">🟢</span> 上市公司年报+权威财经媒体</td>
+<td>🟢 上市公司年报+权威财经媒体</td>
 </tr>
 <tr>
 <td>4</td>
@@ -606,7 +342,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <td>国产AI芯片Q1业绩爆发</td>
 <td>寒武纪Q1财报（经济观察网 4/30）、海光信息Q1财报（新浪财经 4/29）、海光今日涨停触8200亿市值（新浪 5/6）</td>
 <td>✅ 确认</td>
-<td><span class="conf" title="已确认">🟢</span> 上市公司官方财报</td>
+<td>🟢 上市公司官方财报</td>
 </tr>
 <tr>
 <td>5</td>
@@ -614,7 +350,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <td>HBM涨价+先进封装Capex加速</td>
 <td>TrendForce 5/4、Onto Innovation Q1 Earnings Call（Motley Fool 5/5 Transcript）、Samsung Q1 2026 Earnings</td>
 <td>✅ 确认</td>
-<td><span class="conf" title="已确认">🟢</span> 官方财报+Motley Fool Transcript+TrendForce</td>
+<td>🟢 官方财报+Motley Fool Transcript+TrendForce</td>
 </tr>
 </tbody></table></div>
 <hr class="section-divider">
@@ -622,15 +358,9 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <h4 class="sub-heading">催化 1：美国制裁从 SMIC 扩至华虹 🌶️🌶️🌶️</h4>
 <p><strong>事件：</strong> 4月28日，美国商务部致函 Lam Research、Applied Materials、KLA 等多家设备商，要求暂停向华虹集团部分工厂发货。</p>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
-<ul>
-<li><strong>变量是什么？</strong> 制裁目标变量 — 从单一 SMIC 扩展至中国第二大代工厂。此前制裁逻辑是「卡先进制程」，华虹传统上被理解为成熟制程代工厂（90nm+ 特色工艺），本次理由是华虹旗下力微电子正与华为合作开发 7nm 制程，且「可能已开发出可用于 AI 芯片的先进技术」。📊 事实</li>
-</ul>
-<ul>
-<li><strong>量级多大？</strong> 华虹 2025 年营收约 20 亿美元级别，中国晶圆代工市场份额约 12-15%。SMIC（约 25-30% 份额）+ 华虹合计覆盖中国代工产能的 40-45%。制裁覆盖范围从 ~25% 扩至 ~40%，影响面增加约 60%。⚠️ 但注意：华虹主力仍在成熟制程特色工艺，直接出货影响可能小于 SMIC 先进制程断供。🔮 推演</li>
-</ul>
-<ul>
-<li><strong>持续性？</strong> 高。MATCH Act（McCarthy 提案）已点名 SMIC/华虹/长存/长鑫/华为五家「受管制设施」，立法层面的限制只会收紧不会放松。此外荷兰 3/11 管制同步扩展至 28-65nm，形成美-日-荷三边协同。📊 事实 — 政策趋势不可逆</li>
-</ul>
+<ul><li><strong>变量是什么？</strong> 制裁目标变量 — 从单一 SMIC 扩展至中国第二大代工厂。此前制裁逻辑是「卡先进制程」，华虹传统上被理解为成熟制程代工厂（90nm+ 特色工艺），本次理由是华虹旗下力微电子正与华为合作开发 7nm 制程，且「可能已开发出可用于 AI 芯片的先进技术」。📊 事实</li></ul>
+<ul><li><strong>量级多大？</strong> 华虹 2025 年营收约 20 亿美元级别，中国晶圆代工市场份额约 12-15%。SMIC（约 25-30% 份额）+ 华虹合计覆盖中国代工产能的 40-45%。制裁覆盖范围从 ~25% 扩至 ~40%，影响面增加约 60%。⚠️ 但注意：华虹主力仍在成熟制程特色工艺，直接出货影响可能小于 SMIC 先进制程断供。🔮 推演</li></ul>
+<ul><li><strong>持续性？</strong> 高。MATCH Act（McCarthy 提案）已点名 SMIC/华虹/长存/长鑫/华为五家「受管制设施」，立法层面的限制只会收紧不会放松。此外荷兰 3/11 管制同步扩展至 28-65nm，形成美-日-荷三边协同。📊 事实 — 政策趋势不可逆</li></ul>
 <p class="subtitle-p"><strong>传导链：</strong></p>
 <div class="chain-block">
 <div class="chain-step">事件: 华虹被列入设备出口限制</div>
@@ -640,29 +370,23 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <div class="chain-step">[行业层] 华虹被迫加速国产设备导入（刻蚀/清洗/CMP/去胶/量测）→ 设备商订单确定性 ↑</div>
 <div class="chain-step">↓</div>
 <div class="chain-step">[标的层]</div>
-<div class="chain-step">北方华创 (<span class="conf" title="已确认">🟢</span> 置信度：高 — 刻蚀/薄膜/清洗/炉管全品类平台，华虹是其核心客户)</div>
-<div class="chain-step">中微公司 (<span class="conf" title="已确认">🟢</span> 置信度：高 — 刻蚀设备国产替代主力，华虹特色工艺对刻蚀需求大)</div>
-<div class="chain-step">中芯国际 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 华虹被限=竞争格局改善？不。制裁扩大意味着中芯自身风险也上升。但「唯一先进制程国产代工」的稀缺性溢价增强)</div>
-<div class="chain-step">盛美上海 (<span class="conf" title="已确认">🟢</span> 置信度：高 — 清洗设备在华虹份额较高)</div>
-<div class="chain-step">华峰测控 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 测试设备国产化受益，但短期直接关联较弱)</div>
+<div class="chain-step">北方华创 (🟢 置信度：高 — 刻蚀/薄膜/清洗/炉管全品类平台，华虹是其核心客户)</div>
+<div class="chain-step">中微公司 (🟢 置信度：高 — 刻蚀设备国产替代主力，华虹特色工艺对刻蚀需求大)</div>
+<div class="chain-step">中芯国际 (🟡 置信度：中 — 华虹被限=竞争格局改善？不。制裁扩大意味着中芯自身风险也上升。但「唯一先进制程国产代工」的稀缺性溢价增强)</div>
+<div class="chain-step">盛美上海 (🟢 置信度：高 — 清洗设备在华虹份额较高)</div>
+<div class="chain-step">华峰测控 (🟡 置信度：中 — 测试设备国产化受益，但短期直接关联较弱)</div>
 </div>
 <p><strong>时效：</strong> ⚡（立即 — 制裁本月已生效，设备商已收到信函）</p>
 <hr class="section-divider">
 <h4 class="sub-heading">催化 2：荷兰光刻机管制扩大至成熟制程（28nm-65nm）🌶️🌶️🌶️🌶️</h4>
 <p><strong>事件：</strong> 3月11日荷兰外交大臣在议会宣布，将 28nm、45nm、部分 65nm DUV 光刻机纳入对华禁运，即日生效。且已售设备的维修和备件供应切断。</p>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
-<ul>
-<li><strong>变量是什么？</strong> 管制深度变量 — 从「卡先进」变为「卡基础产能」。这是质变：此前 ASML 可向非实体清单中国客户出售成熟制程 DUV，现在连 65nm 的成熟设备都受限。📊 事实</li>
-</ul>
-<ul>
-<li><strong>量级多大？</strong> 🔮 推演：中国已囤积的 DUV 光刻机数量估算不一，荷兰媒体称「用 5-10 年没问题」，但断供维修意味着机器坏了无法修复。关键不确定性：</li>
+<ul><li><strong>变量是什么？</strong> 管制深度变量 — 从「卡先进」变为「卡基础产能」。这是质变：此前 ASML 可向非实体清单中国客户出售成熟制程 DUV，现在连 65nm 的成熟设备都受限。📊 事实</li></ul>
+<ul><li><strong>量级多大？</strong> 🔮 推演：中国已囤积的 DUV 光刻机数量估算不一，荷兰媒体称「用 5-10 年没问题」，但断供维修意味着机器坏了无法修复。关键不确定性：</li>
 <li>中国囤积了多少台？估计约 200-300 台各类 DUV（含二手翻新）</li>
 <li>维修断供后年均可用率下降多少？保守估计高负荷运转 3 年后可用率下降 15-20%</li>
-<li>国产光刻机（上海微电子 SSX600 系列）目前最高 90nm，向 28nm 的进展时间线存在重大争议（乐观 2-3 年，悲观 5-7 年）⚠️ 风险提示</li>
-</ul>
-<ul>
-<li><strong>持续性？</strong> 极高且最危险。光刻机是半导体制造的「单点故障」环节 — 所有其他设备国产化成功，没有光刻机仍然无法制造芯片。管制从先进制程蔓延到成熟制程后，中国大量扩张的成熟制程晶圆厂（55nm/90nm 产能）也面临设备瓶颈。📊 事实</li>
-</ul>
+<li>国产光刻机（上海微电子 SSX600 系列）目前最高 90nm，向 28nm 的进展时间线存在重大争议（乐观 2-3 年，悲观 5-7 年）⚠️ 风险提示</li></ul>
+<ul><li><strong>持续性？</strong> 极高且最危险。光刻机是半导体制造的「单点故障」环节 — 所有其他设备国产化成功，没有光刻机仍然无法制造芯片。管制从先进制程蔓延到成熟制程后，中国大量扩张的成熟制程晶圆厂（55nm/90nm 产能）也面临设备瓶颈。📊 事实</li></ul>
 <p class="subtitle-p"><strong>传导链：</strong></p>
 <div class="chain-block">
 <div class="chain-step">事件: 荷兰禁运 28-65nm DUV + 断维修</div>
@@ -673,31 +397,25 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <div class="chain-step">↓</div>
 <div class="chain-step">[标的层]</div>
 <div class="chain-step">上海微电子 (未上市，但产业链受益)</div>
-<div class="chain-step">彤程新材 (<span class="conf" title="已确认">🟢</span> 置信度：高 — ArF光刻胶 2025 年营收 +800%，已通过头部晶圆厂验证量产。DUV受限倒逼光刻胶国产化加速)</div>
-<div class="chain-step">南大光电 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — ArF光刻胶验证中，进度落后彤程但弹性空间大)</div>
-<div class="chain-step">北方华创 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 光刻机非其主业，但国产替代全链受益)</div>
-<div class="chain-step">沪硅产业 (<span class="conf" title="已确认">🟢</span> 置信度：高 — 大硅片涨价 Q2 兑现，成熟制程仍有需求，但 DUV 管制限制产能扩张是长期隐忧)</div>
+<div class="chain-step">彤程新材 (🟢 置信度：高 — ArF光刻胶 2025 年营收 +800%，已通过头部晶圆厂验证量产。DUV受限倒逼光刻胶国产化加速)</div>
+<div class="chain-step">南大光电 (🟡 置信度：中 — ArF光刻胶验证中，进度落后彤程但弹性空间大)</div>
+<div class="chain-step">北方华创 (🟡 置信度：中 — 光刻机非其主业，但国产替代全链受益)</div>
+<div class="chain-step">沪硅产业 (🟢 置信度：高 — 大硅片涨价 Q2 兑现，成熟制程仍有需求，但 DUV 管制限制产能扩张是长期隐忧)</div>
 </div>
 <p><strong>时效：</strong> ⚡（已生效 — 3/11 即日生效，维修断供将逐月体现影响）</p>
 <hr class="section-divider">
 <h4 class="sub-heading">催化 3：半导体材料「量价齐升」🌶️🌶️</h4>
 <p><strong>事件：</strong> 彤程新材 ArF光刻胶 2025 年营收增长 800%+；靶材 Q1 涨价 60-70%；硅片 Q2 涨价兑现；「十五五」目标 2030 年自给率 ≥80%（当前 ~15%）。</p>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
-<ul>
-<li><strong>变量是什么？</strong> 商业验证变量 — 材料国产替代从「实验室/验证阶段」正式进入「规模放量+涨价周期」。这是国内半导体材料行业首次出现「量价齐升」的双击格局。📊 事实</li>
-</ul>
-<ul>
-<li><strong>量级？</strong> 🔮 推演：</li>
+<ul><li><strong>变量是什么？</strong> 商业验证变量 — 材料国产替代从「实验室/验证阶段」正式进入「规模放量+涨价周期」。这是国内半导体材料行业首次出现「量价齐升」的双击格局。📊 事实</li></ul>
+<ul><li><strong>量级？</strong> 🔮 推演：</li>
 <li>ArF光刻胶国产化率当前约 2%（非 scanner 标注的 10%，Scanner 数据有偏差），彤程 +800% 是低基数效应，绝对值仍小</li>
 <li>KrF 国产化率约 10%</li>
 <li>靶材国产化率较高（江丰电子全球出货量第一）</li>
 <li>硅片 12 英寸国产化率约 15%</li>
 <li>整体材料国产化率约 15%，「十五五」目标 80% 意味着 5 年内 5 倍空间，年化复合增速约 40%</li>
-<li>但这属于政策目标，不是市场预测。⚠️ 风险提示：2030 年 80% 目标在光刻机受限前提下可能不可行</li>
-</ul>
-<ul>
-<li><strong>持续性？</strong> <span class="conf" title="合理推断">🟡</span> 材料放量的可持续性取决于两点：① 下游晶圆厂产能扩张能否持续（受 DUV 管制制约）；② 国产材料良率能否在规模放量后保持稳定。2026 年大概率是材料国产替代的「beta 大年」，但 2027-2028 的持续性取决于光刻机瓶颈能否缓解。</li>
-</ul>
+<li>但这属于政策目标，不是市场预测。⚠️ 风险提示：2030 年 80% 目标在光刻机受限前提下可能不可行</li></ul>
+<ul><li><strong>持续性？</strong> 🟡 材料放量的可持续性取决于两点：① 下游晶圆厂产能扩张能否持续（受 DUV 管制制约）；② 国产材料良率能否在规模放量后保持稳定。2026 年大概率是材料国产替代的「beta 大年」，但 2027-2028 的持续性取决于光刻机瓶颈能否缓解。</li></ul>
 <p class="subtitle-p"><strong>传导链：</strong></p>
 <div class="chain-block">
 <div class="chain-step">事件: 材料国产替代商业验证 + 涨价周期</div>
@@ -707,11 +425,11 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <div class="chain-step">[行业层] ArF光刻胶（国产化率 2%）替代空间最大 → 靶材（已较高）弹性递减 → 硅片涨价直接贡献利润</div>
 <div class="chain-step">↓</div>
 <div class="chain-step">[标的层]</div>
-<div class="chain-step">彤程新材 (<span class="conf" title="已确认">🟢</span> 置信度：高 — ArF光刻胶唯一规模放量标的，+800% 增长有数据支撑)</div>
-<div class="chain-step">安集科技 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — CMP抛光液国产龙头，CMP国产化率35%有提升空间)</div>
-<div class="chain-step">沪硅产业 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 涨价周期中确定性受益，但 12英寸硅片盈利拐点不确定)</div>
-<div class="chain-step">江丰电子 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 靶材全球份额领先，涨价弹性已部分释放)</div>
-<div class="chain-step">晶瑞电材 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 光刻胶配套/湿电子化学品)</div>
+<div class="chain-step">彤程新材 (🟢 置信度：高 — ArF光刻胶唯一规模放量标的，+800% 增长有数据支撑)</div>
+<div class="chain-step">安集科技 (🟡 置信度：中 — CMP抛光液国产龙头，CMP国产化率35%有提升空间)</div>
+<div class="chain-step">沪硅产业 (🟡 置信度：中 — 涨价周期中确定性受益，但 12英寸硅片盈利拐点不确定)</div>
+<div class="chain-step">江丰电子 (🟡 置信度：中 — 靶材全球份额领先，涨价弹性已部分释放)</div>
+<div class="chain-step">晶瑞电材 (🟡 置信度：中 — 光刻胶配套/湿电子化学品)</div>
 </div>
 <p><strong>时效：</strong> 📅（持续演进中 — 材料数据来自 2025 年报和 Q1 2026 趋势）</p>
 <hr class="section-divider">
@@ -743,36 +461,26 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr>
 </tbody></table></div>
 <p><strong>最核心的双链共振：制裁扩大 + 国产AI芯片Q1业绩拐点</strong> — 这是 2026 年最值得关注的逻辑闭环：</p>
-<ul>
-<li>美国制裁越严 → 国产 AI 芯片替代紧迫性越高 → 出货量越大 → 商业验证数据越强 → 股价重估空间越大</li>
-<li>但同样：制裁越严 → 代工产能越受限 → 国产 AI 芯片物理上限受限 → 远期天花板被压低</li>
-</ul>
+<ul><li>美国制裁越严 → 国产 AI 芯片替代紧迫性越高 → 出货量越大 → 商业验证数据越强 → 股价重估空间越大</li>
+<li>但同样：制裁越严 → 代工产能越受限 → 国产 AI 芯片物理上限受限 → 远期天花板被压低</li></ul>
 <p>这是 2026 年国产替代投资最核心的矛盾，需要持续跟踪。</p>
 <hr class="section-divider">
 <h3 class="section-heading h2">链二：AI 算力需求 深度分析</h3>
 <h4 class="sub-heading">催化 4：国产 AI 芯片 Q1 业绩集体验证 🌶️🌶️🌶️🌶️🌶️</h4>
 <p class="subtitle-p"><strong>这是今日所有催化中信号强度最高的一条。</strong></p>
 <p><strong>事件：</strong> </p>
-<ul>
-<li>寒武纪 Q1 营收 28.85 亿（+159.56% YoY），归母净利 10.13 亿（+185.04%），扣非 9.34 亿（+238.56%），经营现金流首次转正（+8.34 亿）。市值 7168 亿。</li>
+<ul><li>寒武纪 Q1 营收 28.85 亿（+159.56% YoY），归母净利 10.13 亿（+185.04%），扣非 9.34 亿（+238.56%），经营现金流首次转正（+8.34 亿）。市值 7168 亿。</li>
 <li>海光信息 Q1 营收 40.34 亿（+68.06%），归母净利 6.87 亿（+35.82%）。2026 计划交付 25 万片 DCU（+150% YoY）。5月6日今日涨停，市值突破 8200 亿。</li>
-<li>「国产 AI 六姐妹」集体高增，行业从「烧钱研发」转向「利润兑现」。</li>
-</ul>
+<li>「国产 AI 六姐妹」集体高增，行业从「烧钱研发」转向「利润兑现」。</li></ul>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
-<ul>
-<li><strong>变量是什么？</strong> 🔥 商业化验证变量 — 这是标志性拐点：国产 AI 芯片从「需要政府补贴才能生存」变成「自主盈利+现金流为正」。此前市场对国产 AI 芯片的核心质疑是「到底有没有人用？」，Q1 财报给出了正面回答。📊 事实</li>
-</ul>
-<ul>
-<li><strong>量级多大？</strong> 🔮 推演：</li>
+<ul><li><strong>变量是什么？</strong> 🔥 商业化验证变量 — 这是标志性拐点：国产 AI 芯片从「需要政府补贴才能生存」变成「自主盈利+现金流为正」。此前市场对国产 AI 芯片的核心质疑是「到底有没有人用？」，Q1 财报给出了正面回答。📊 事实</li></ul>
+<ul><li><strong>量级多大？</strong> 🔮 推演：</li>
 <li>寒武纪 Q1 营收 28.85 亿 → 年化 ~115 亿，对比 NVIDIA 中国区收入（此前 ~$10B/年）仍有数量级差距</li>
 <li>海光 25 万片 DCU → 单卡 FP16 算力 380 TFLOPS，25 万片总算力约 95 EFLOPS（FP16），对比 NVIDIA H100 单卡 ~1000 TFLOPS，性能差距约 2.5x</li>
 <li>但注意：25 万片是「计划」，实际交付取决于台积电代工产能。海光目前晶圆制造仍依赖台积电等境外代工厂（来自海光投资者关系文件原文），这是最大风险点 ⚠️</li>
 <li>海光存货 73.33 亿（Q1 末），存货跌价准备仅 2.28 亿，如果市场需求不及预期，减值风险较大 ⚠️</li>
-<li>寒武纪 P/E 难以计算（此前多年亏损），海光动态 P/E 约 300x（Q1 年化），估值已不便宜</li>
-</ul>
-<ul>
-<li><strong>持续性？</strong> <span class="conf" title="合理推断">🟡</span> 高增速能否持续取决于三个核心变量：</li>
-</ul>
+<li>寒武纪 P/E 难以计算（此前多年亏损），海光动态 P/E 约 300x（Q1 年化），估值已不便宜</li></ul>
+<ul><li><strong>持续性？</strong> 🟡 高增速能否持续取决于三个核心变量：</li></ul>
 <p>  1. <strong>代工产能保障</strong> — 海光/寒武纪芯片在哪儿制造？台积电？SMIC？产能能否支撑 25 万片 DCU 目标？   2. <strong>客户结构</strong> — Q1 营收中信创/政府占比多少？互联网/运营商占比多少？信创订单有周期性（年底集中确认），Q1 高增可能部分来自 2025 年度信创延迟确认   3. <strong>技术迭代</strong> — 海光 SG2040（第三代 DCU）性能较上一代提升 40%，支持 FP8，但 NVIDIA Rubin 架构 2026H2 即将量产，性能差距可能再次拉开</p>
 <p class="subtitle-p"><strong>传导链：</strong></p>
 <div class="chain-block">
@@ -783,38 +491,30 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <div class="chain-step">[行业层] 国产 GPU/DCU 出货量 ↑ → 先进封装需求 ↑ → 算力基础设施（服务器/光模块/PCB）需求 ↑</div>
 <div class="chain-step">↓</div>
 <div class="chain-step">[标的层]</div>
-<div class="chain-step">寒武纪 (<span class="conf" title="已确认">🟢</span> 置信度：高 — 营收+159%，经营现金流转正，信号最强)</div>
-<div class="chain-step">海光信息 (<span class="conf" title="已确认">🟢</span> 置信度：高 — 营收+68%，DCU+CPU双线放量，今日涨停验证市场认可)</div>
-<div class="chain-step">通富微电 (<span class="conf" title="已确认">🟢</span> 置信度：高 — 先进封装直接受益于国产GPU出货量增长，Q1 净利+45.5%)</div>
-<div class="chain-step">长电科技 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 先进封装受益，但弹性低于通富（通富与AMD/国产GPU绑定更深）)</div>
-<div class="chain-step">中际旭创 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 光模块受益于算力基础设施扩容，但海外收入占比高，贸易风险独立于国产替代逻辑)</div>
-<div class="chain-step">澜起科技 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 内存接口芯片，AI服务器DDR5/LPDDR5升级周期受益)</div>
+<div class="chain-step">寒武纪 (🟢 置信度：高 — 营收+159%，经营现金流转正，信号最强)</div>
+<div class="chain-step">海光信息 (🟢 置信度：高 — 营收+68%，DCU+CPU双线放量，今日涨停验证市场认可)</div>
+<div class="chain-step">通富微电 (🟢 置信度：高 — 先进封装直接受益于国产GPU出货量增长，Q1 净利+45.5%)</div>
+<div class="chain-step">长电科技 (🟡 置信度：中 — 先进封装受益，但弹性低于通富（通富与AMD/国产GPU绑定更深）)</div>
+<div class="chain-step">中际旭创 (🟡 置信度：中 — 光模块受益于算力基础设施扩容，但海外收入占比高，贸易风险独立于国产替代逻辑)</div>
+<div class="chain-step">澜起科技 (🟡 置信度：中 — 内存接口芯片，AI服务器DDR5/LPDDR5升级周期受益)</div>
 </div>
 <p><strong>时效：</strong> ⚡（2026Q1 财报季 4/30 刚刚完成披露，「新鲜度」极高）</p>
 <hr class="section-divider">
 <h4 class="sub-heading">催化 5：HBM 涨价 + 先进封装 Capex 加速 🌶️🌶️🌶️</h4>
 <p class="subtitle-p"><strong>事件：</strong></p>
-<ul>
-<li>Samsung 2026 年推动 HBM 合约涨价 15-22%，DRAM ASP QoQ +mid-60%</li>
+<ul><li>Samsung 2026 年推动 HBM 合约涨价 15-22%，DRAM ASP QoQ +mid-60%</li>
 <li>Onto Innovation Q1 营收 $292M（+9.5% YoY），先进封装/特种设备收入 $160M（约 2/3 来自先进封装），Dragonfly G5 已在领先 2.5D 逻辑和 HBM 客户通过验证</li>
 <li>TrendForce 5/4：存储器厂商加速推进长期合约，采购方为保供应支付溢价</li>
-<li>通富微电 Q1 净利 +45.5%，2026 全年营收目标 323 亿（+15.7%），先进封装占比提升</li>
-</ul>
+<li>通富微电 Q1 净利 +45.5%，2026 全年营收目标 323 亿（+15.7%），先进封装占比提升</li></ul>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
-<ul>
-<li><strong>变量是什么？</strong> HBM/先进封装的「供需缺口+涨价+扩产」三变量同时触发。此前市场关注 AI 芯片本身，但 HBM 作为 GPU 的「贴身搭档」才是真正的物理瓶颈。📊 事实</li>
-</ul>
-<ul>
-<li><strong>量级多大？</strong></li>
+<ul><li><strong>变量是什么？</strong> HBM/先进封装的「供需缺口+涨价+扩产」三变量同时触发。此前市场关注 AI 芯片本身，但 HBM 作为 GPU 的「贴身搭档」才是真正的物理瓶颈。📊 事实</li></ul>
+<ul><li><strong>量级多大？</strong></li>
 <li>HBM 占 DRAM 晶圆产能 23%（tech-insider 数据），且在持续挤压普通 DRAM 产能</li>
 <li>LPDDR5 合约价 ~$10/GB，从 2025Q1 以来涨 3 倍（SemiAnalysis）</li>
 <li>Onto Innovation Q2 展望 >$300M，核心业务加速 12-14%</li>
 <li>通富微电全年营收目标 323 亿，先进封装占比提升意味着毛利率改善</li>
-<li>🔮 推演：HBM 供需缺口至少持续到 2027H1，三星/SK 海力士的 HBM4 扩产需要 18-24 个月周期</li>
-</ul>
-<ul>
-<li><strong>持续性？</strong> <span class="conf" title="已确认">🟢</span> 高持续性。HBM 结构性紧缺不是短期扰动，根源在于：</li>
-</ul>
+<li>🔮 推演：HBM 供需缺口至少持续到 2027H1，三星/SK 海力士的 HBM4 扩产需要 18-24 个月周期</li></ul>
+<ul><li><strong>持续性？</strong> 🟢 高持续性。HBM 结构性紧缺不是短期扰动，根源在于：</li></ul>
 <p>  1. AI 训练/推理对显存带宽的需求增速 > HBM 产能扩张速度   2. HBM 制造良率低（HBM3e 约 60-70%），晶圆消耗是普通 DRAM 的 3 倍   3. 先进封装（CoWoS-S/CoWoS-L）产能与 HBM 产能形成「双重瓶颈」</p>
 <p class="subtitle-p"><strong>传导链：</strong></p>
 <div class="chain-block">
@@ -825,26 +525,20 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <div class="chain-step">[行业层] HBM国产替代（长鑫/长存 HBM 研发）+ 先进封装产能扩张 → 通富微电/长电科技进入「量价齐升」</div>
 <div class="chain-step">↓</div>
 <div class="chain-step">[标的层]</div>
-<div class="chain-step">通富微电 (<span class="conf" title="已确认">🟢</span> 置信度：高 — 与AMD深度绑定+国产GPU封装需求，Q1 业绩已验证)</div>
-<div class="chain-step">长电科技 (<span class="conf" title="已确认">🟢</span> 置信度：高 — 国内最大封测厂，先进封装占比提升直接受益)</div>
-<div class="chain-step">华天科技 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 封测厂商，但先进封装布局弱于通富/长电)</div>
-<div class="chain-step">北方华创 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 其封装设备（TSV刻蚀/PVD）间接受益于先进封装Capex)</div>
-<div class="chain-step">中微公司 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — TSV 刻蚀设备在先进封装中有应用)</div>
+<div class="chain-step">通富微电 (🟢 置信度：高 — 与AMD深度绑定+国产GPU封装需求，Q1 业绩已验证)</div>
+<div class="chain-step">长电科技 (🟢 置信度：高 — 国内最大封测厂，先进封装占比提升直接受益)</div>
+<div class="chain-step">华天科技 (🟡 置信度：中 — 封测厂商，但先进封装布局弱于通富/长电)</div>
+<div class="chain-step">北方华创 (🟡 置信度：中 — 其封装设备（TSV刻蚀/PVD）间接受益于先进封装Capex)</div>
+<div class="chain-step">中微公司 (🟡 置信度：中 — TSV 刻蚀设备在先进封装中有应用)</div>
 </div>
 <p><strong>时效：</strong> 📅（行业趋势持续演进，HBM 涨价是连续变量，Onto Q1 最新数据点确认趋势）</p>
 <hr class="section-divider">
 <h4 class="sub-heading">催化 6：NVIDIA 亚洲供应链集中度从 65% 飙升到 90%（合并项）</h4>
 <p><strong>事件：</strong> Bloomberg 测算 NVIDIA 生产成本中亚洲供应商占比从 65% 飙升至 90%。同时 NVIDIA 中国市场收入从 >90% 降至接近零（天下杂志 5/6 报道），中国正以国产芯片替代。</p>
 <p class="subtitle-p"><strong>三问拆解：</strong></p>
-<ul>
-<li><strong>变量是什么？</strong> 供应链集中度风险变量 — 台积电（CoWoS封装+晶圆）、SK海力士（HBM）、三星（HBM）三家占 N 卡成本绝对大头。亚洲集中度越高 → 地缘风险下的供应脆弱性越大。📊 事实</li>
-</ul>
-<ul>
-<li><strong>量级？</strong> 🔮 推演：如果台海或朝鲜半岛发生地缘事件，NVIDIA 90% 成本来源瞬间承压。但概率极低。更现实的传导是：供应链集中度推高 N 卡成本 → N 卡售价继续上行 → 国产 AI 芯片「性价比」优势凸显。⚠️ 这是渐进而非突变变量。</li>
-</ul>
-<ul>
-<li><strong>持续性？</strong> <span class="conf" title="合理推断">🟡</span> 中期持续。台积电在美的 Fab 投产后集中度可能边际下降，但 2026-2028 年亚洲仍是绝对主力。</li>
-</ul>
+<ul><li><strong>变量是什么？</strong> 供应链集中度风险变量 — 台积电（CoWoS封装+晶圆）、SK海力士（HBM）、三星（HBM）三家占 N 卡成本绝对大头。亚洲集中度越高 → 地缘风险下的供应脆弱性越大。📊 事实</li></ul>
+<ul><li><strong>量级？</strong> 🔮 推演：如果台海或朝鲜半岛发生地缘事件，NVIDIA 90% 成本来源瞬间承压。但概率极低。更现实的传导是：供应链集中度推高 N 卡成本 → N 卡售价继续上行 → 国产 AI 芯片「性价比」优势凸显。⚠️ 这是渐进而非突变变量。</li></ul>
+<ul><li><strong>持续性？</strong> 🟡 中期持续。台积电在美的 Fab 投产后集中度可能边际下降，但 2026-2028 年亚洲仍是绝对主力。</li></ul>
 <p class="subtitle-p"><strong>传导链：</strong></p>
 <div class="chain-block">
 <div class="chain-step">事件: NVIDIA 供应链亚洲集中度 90%</div>
@@ -854,9 +548,9 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <div class="chain-step">[行业层] 中国企业加速国产 AI 芯片采购（不仅是性价比，更是供应安全驱动）</div>
 <div class="chain-step">↓</div>
 <div class="chain-step">[标的层]</div>
-<div class="chain-step">寒武纪 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — GPU 供给风险提升国产替代必要性，属间接催化)</div>
-<div class="chain-step">海光信息 (<span class="conf" title="合理推断">🟡</span> 置信度：中 — 同上)</div>
-<div class="chain-step">中芯国际 (<span class="conf" title="合理推断">🟡</span> 置信度：中低 — 地缘风险下「自主可控代工」价值凸显，但自身也在制裁名单)</div>
+<div class="chain-step">寒武纪 (🟡 置信度：中 — GPU 供给风险提升国产替代必要性，属间接催化)</div>
+<div class="chain-step">海光信息 (🟡 置信度：中 — 同上)</div>
+<div class="chain-step">中芯国际 (🟡 置信度：中低 — 地缘风险下「自主可控代工」价值凸显，但自身也在制裁名单)</div>
 </div>
 <p><strong>时效：</strong> 🗓️（慢变量 — 供应链重构需要数年，无即时交易信号）</p>
 <hr class="section-divider">
@@ -1019,7 +713,7 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr>
 <tr>
 <td><strong>估值泡沫</strong></td>
-<td><span class="conf" title="猜测">🔴</span> 值得警惕</td>
+<td>🔴 值得警惕</td>
 <td>寒武纪7000亿+/海光8000亿+，P/E缺失或极高，任何业绩miss都会引发剧烈回调</td>
 </tr>
 </tbody></table></div>
@@ -1031,32 +725,32 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 </tr></thead><tbody>
 <tr>
 <td>#1 华虹制裁</td>
-<td><span class="conf" title="已确认">🟢</span> 高</td>
+<td>🟢 高</td>
 <td>实际出货影响量级？华虹是否真能做出 7nm？</td>
 </tr>
 <tr>
 <td>#2 光刻机管制</td>
-<td><span class="conf" title="已确认">🟢</span> 高</td>
+<td>🟢 高</td>
 <td>中国DUV库存到底能撑多久？国产光刻机进度？</td>
 </tr>
 <tr>
 <td>#3 材料放量</td>
-<td><span class="conf" title="合理推断">🟡</span> 中高</td>
+<td>🟡 中高</td>
 <td>材料国产化是「真增长」还是「低基数幻觉」？ArF光刻胶绝对值仍小</td>
 </tr>
 <tr>
 <td>#4 AI芯片业绩</td>
-<td><span class="conf" title="已确认">🟢</span> 高</td>
+<td>🟢 高</td>
 <td>营收增速能否持续？客户结构中信创占比？代工产能保障？</td>
 </tr>
 <tr>
 <td>#5 HBM/封装</td>
-<td><span class="conf" title="已确认">🟢</span> 高</td>
+<td>🟢 高</td>
 <td>涨价周期可持续，但节奏可能放缓</td>
 </tr>
 <tr>
 <td>#6 供应链集中度</td>
-<td><span class="conf" title="合理推断">🟡</span> 中</td>
+<td>🟡 中</td>
 <td>慢变量，无直接交易信号</td>
 </tr>
 </tbody></table></div>
@@ -1064,14 +758,8 @@ tr.critical-row td:first-child { border-left: 2px solid var(--red); }
 <h3 class="section-heading h2">今日核心判断</h3>
 <p class="subtitle-p"><strong>一句话：2026年5月6日，国产AI芯片正式跨入商业验证拐点，叠加制裁从SMIC扩至华虹+光刻机管制扩至成熟制程，链一（设备/材料）和链二（国产AI芯片/先进封装）形成罕见的「双链共振」。通富微电和北方华创是双链交叉受益最明确的标的；寒武纪和海光信息的Q1业绩是今日最重要的边际信息。</strong></p>
 <hr class="section-divider">
-<p><em>分析师：Mimo 🦉 | 下一个交易日（5月7日）可验证归因对照中的价格反应</em> <em>免责声明：本报告为投研框架分析，不构成投资建议。所有「🔮 推演」和「⚠️ 风险提示」标注的结论具有不确定性。</em></p>
-</div>
-
-<div class="footer">
-  <p>🦉 Mimo · AI 管家 + 投研顾问 | 自动生成于 2026-05-06</p>
-  <p>仅供研究参考，不构成投资建议 | 🟢=已确认 🟡=合理推断 🔴=猜测</p>
-  <p><a href="https://github.com/zhonghui-co/daily-signal">GitHub Repo</a> · 两条需求链：国产替代 / AI算力</p>
-</div>
+<p><em>分析师：Mimo 🦉 | 下一个交易日（5月7日）可验证归因对照中的价格反应</em> <em>免责声明：本报告为投研框架分析，不构成投资建议。所有「🔮 推演」和「⚠️ 风险提示」标注的结论具有不确定性。</em></p></div>
+<div class="footer"><p>🦉 Mimo · AI 管家 + 投研顾问 | 2026-05-06</p><p>仅供研究参考，不构成投资建议 | 🟢=已确认 🟡=合理推断 🔴=猜测</p><p><a href="https://github.com/zhonghui-co/daily-signal">GitHub Repo</a> · <a href="stocks/">标的目录</a></p></div>
 </div>
 </body>
 </html>
