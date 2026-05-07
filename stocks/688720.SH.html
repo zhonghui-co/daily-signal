@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>艾森股份 - Mimo</title>
-  <style>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>艾森股份 (688720.SH) — Daily Signals</title>
+<style>
 :root {
   --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
   --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
@@ -15,20 +17,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
 header h1 { font-size: 1.35rem; color: var(--text-heading); }
 header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
-header .meta-row { display: flex; gap: 10px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
-.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); text-decoration: none; }
-.date-tag:hover { border-color: var(--accent); }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
 nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
 nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
-nav a:hover, nav a.active { background: rgba(56,189,248,0.15); color: #7dd3fc; }
-.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; margin-bottom: 12px; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-.card-header h2, .card-header h3 { color: var(--text-heading); margin: 0; font-size: 1rem; }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
 .card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
 h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
 h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
-h4 { font-size: 0.85rem; color: var(--text-muted); margin: 8px 0 4px; }
-h2.h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
 .table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
 table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
 th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
@@ -36,68 +35,43 @@ td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-ali
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: rgba(56,189,248,0.03); }
 p { margin: 4px 0; font-size: 0.86rem; }
-p.subtitle-p { font-weight: 600; color: var(--text-heading); font-size: 0.9rem; margin: 8px 0 4px; }
 blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
-blockquote strong { color: #c7d2fe; }
-ul { margin: 6px 0 6px 18px; font-size: 0.85rem; } li { margin: 2px 0; }
-code { background: rgba(56,189,248,0.1); color: #7dd3fc; padding: 1px 4px; border-radius: 2px; font-size: 0.85em; }
-pre { background: #0a1628; border: 1px solid var(--border); border-radius: 4px; padding: 10px 14px; overflow-x: auto; margin: 8px 0; font-size: 0.78rem; line-height: 1.45; }
-pre code { background: none; padding: 0; color: var(--text); }
-hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
-.tq-card { background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; margin: 8px 0; }
-.tq-card h4 { color: var(--accent); font-size: 0.85rem; margin: 0 0 4px 0; padding: 0; border: none; }
-.tq-card p { font-size: 0.84rem; margin: 0; }
-.mermaid-wrap { background: rgba(10,22,40,0.5); border: 1px solid var(--border); border-radius: 6px; padding: 12px; margin: 10px 0; overflow-x: auto; }
-.mermaid-wrap .mermaid { display: flex; justify-content: center; }
-.badge { font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; font-weight: 600; display: inline-flex; align-items: center; gap: 2px; }
-.badge-alert { background: rgba(239,68,68,0.15); color: #f87171; }
-.badge-warn { background: rgba(245,158,11,0.15); color: #fbbf24; }
-.badge-info { background: rgba(56,189,248,0.15); color: #7dd3fc; }
-.badge-ok { background: rgba(34,197,94,0.15); color: #4ade80; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media(max-width:700px) { .grid-2 { grid-template-columns: 1fr; } }
-.pct-up { color: var(--red); font-weight: 600; } .pct-down { color: var(--green); font-weight: 600; } .vol-high { color: var(--amber); }
-tr.critical-row td { background: rgba(239,68,68,0.05); }
-tr.critical-row td:first-child { border-left: 2px solid var(--red); }
-.toc { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; padding: 8px 12px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
-.toc a { font-size: 0.76rem; color: var(--accent); text-decoration: none; padding: 2px 6px; border-radius: 3px; }
-.toc a:hover { background: rgba(56,189,248,0.1); }
-.footer { margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--border); text-align: center; }
-.footer p { font-size: 0.72rem; color: var(--text-muted); } .footer a { color: var(--accent); opacity: 0.6; } .footer a:hover { opacity: 1; }
-.summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
-.summary-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 10px; text-align: center; }
-.summary-item .value { font-size: 1.25rem; font-weight: 700; color: var(--text-heading); }
-.summary-item .label { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
-.summary-item.alert { border-color: var(--red); } .summary-item.alert .value { color: var(--red); }
-.stock-link { color: var(--text-heading); text-decoration: none; } .stock-link:hover { color: var(--accent); text-decoration: underline; }
-.biz-desc { font-size: 0.8rem; color: var(--text-muted); margin: 8px 0; padding: 8px 12px; background: rgba(56,189,248,0.03); border-left: 2px solid var(--accent); border-radius: 0 4px 4px 0; }
-</style></head><body><div class="container">
-  <header>
-    <h1>艾森股份</h1>
-    <div class="sub">688720.SH | 材料 | </div>
-    <div class="meta-row">
-      <a href="/daily-signal/" class="date-tag">&larr; 主页</a>
-      <a href="/daily-signal/stocks/" class="date-tag">标的目录</a>
-      <span class="date-tag">2026-05-07</span>
-    </div>
-  </header>
-  <div class="biz-desc">半导体材料企业</div>
-  <div class="summary-grid">
-    <div class="summary-item"><div class="value">83.04</div><div class="label">收盘价</div></div>
-    <div class="summary-item"><div class="value pct-up">+3.01%</div><div class="label">涨跌幅</div></div>
-    <div class="summary-item"><div class="value">3.8万手</div><div class="label">成交量</div></div>
-    <div class="summary-item"><div class="value">材料</div><div class="label">分组</div></div>
-    <div class="summary-item"><div class="value"><span class="pct-up">+7.50%</span></div><div class="label">5日累计</div></div>
-    <div class="summary-item"><div class="value"><span class="pct-up">+23.52%</span></div><div class="label">20日累计</div></div>
-  </div>
-  <h3>近5日走势</h3>
-  <div class="table-wrap"><table><tr><th>日期</th><th>开盘</th><th>最高</th><th>最低</th><th>收盘</th><th>涨跌</th></tr>
-    <tr><td>20260507</td><td>81.50</td><td>83.24</td><td>79.28</td><td>83.04</td><td class="pct-up">+3.01%</td></tr>
-    <tr><td>20260506</td><td>84.00</td><td>84.88</td><td>80.01</td><td>80.61</td><td class="pct-up">+0.60%</td></tr>
-    <tr><td>20260430</td><td>76.70</td><td>81.20</td><td>76.69</td><td>80.13</td><td class="pct-up">+3.69%</td></tr>
-    <tr><td>20260429</td><td>76.65</td><td>78.23</td><td>74.23</td><td>77.28</td><td class="pct-up">+0.04%</td></tr>
-    <tr><td>20260428</td><td>79.33</td><td>79.96</td><td>76.31</td><td>77.25</td><td class="pct-down">-3.20%</td></tr>
-  </table></div>
-  <div class="footer"><p>Mimo &middot; AI 投研助手 | 2026-05-07</p><p><a href="/daily-signal/">主页</a> | <a href="/daily-signal/stocks/">标的目录</a></p></div>
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.06); font-size: 0.82rem; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.06); font-size: 0.82rem; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.06); font-size: 0.82rem; }
+.positive { color: #22c55e; }
+.negative { color: #ef4444; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>艾森股份 <code style="font-size:0.8rem;color:var(--text-muted)">688720.SH</code></h1>
+    <div class="sub">材料 · 最新价 83.04 · 20260507</div>
+</header>
+<div class="card"><p>半导体材料企业</p></div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260507</td><td>83.04</td><td class="positive">+3.01%</td><td>38387</td></tr><tr><td>20260506</td><td>80.61</td><td class="positive">+0.60%</td><td>51568</td></tr><tr><td>20260430</td><td>80.13</td><td class="positive">+3.69%</td><td>46483</td></tr><tr><td>20260429</td><td>77.28</td><td class="positive">+0.04%</td><td>35868</td></tr><tr><td>20260428</td><td>77.25</td><td class="negative">-3.20%</td><td>35494</td></tr><tr><td>20260427</td><td>79.80</td><td class="positive">+3.50%</td><td>52447</td></tr><tr><td>20260424</td><td>77.10</td><td class="negative">-0.26%</td><td>28821</td></tr><tr><td>20260423</td><td>77.30</td><td class="negative">-4.70%</td><td>42568</td></tr><tr><td>20260422</td><td>81.11</td><td class="positive">+3.38%</td><td>48405</td></tr><tr><td>20260421</td><td>78.46</td><td class="positive">+1.76%</td><td>46819</td></tr><tr><td>20260420</td><td>77.10</td><td class="negative">-0.66%</td><td>31218</td></tr><tr><td>20260417</td><td>77.61</td><td class="positive">+1.38%</td><td>29053</td></tr><tr><td>20260416</td><td>76.55</td><td class="positive">+0.99%</td><td>21907</td></tr><tr><td>20260415</td><td>75.80</td><td class="negative">-2.19%</td><td>33577</td></tr><tr><td>20260414</td><td>77.50</td><td class="positive">+2.61%</td><td>38127</td></tr><tr><td>20260413</td><td>75.53</td><td class="positive">+0.98%</td><td>32303</td></tr><tr><td>20260410</td><td>74.80</td><td class="negative">-1.71%</td><td>40009</td></tr><tr><td>20260409</td><td>76.10</td><td class="negative">-1.81%</td><td>60885</td></tr><tr><td>20260408</td><td>77.50</td><td class="positive">+15.28%</td><td>78429</td></tr><tr><td>20260407</td><td>67.23</td><td class="negative">-0.62%</td><td>15041</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
 </div></body></html>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>彤程新材 - Mimo</title>
-  <style>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>彤程新材 (603650.SH) — Daily Signals</title>
+<style>
 :root {
   --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
   --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
@@ -15,20 +17,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
 header h1 { font-size: 1.35rem; color: var(--text-heading); }
 header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
-header .meta-row { display: flex; gap: 10px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
-.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); text-decoration: none; }
-.date-tag:hover { border-color: var(--accent); }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
 nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
 nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
-nav a:hover, nav a.active { background: rgba(56,189,248,0.15); color: #7dd3fc; }
-.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; margin-bottom: 12px; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-.card-header h2, .card-header h3 { color: var(--text-heading); margin: 0; font-size: 1rem; }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
 .card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
 h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
 h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
-h4 { font-size: 0.85rem; color: var(--text-muted); margin: 8px 0 4px; }
-h2.h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
 .table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
 table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
 th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
@@ -36,84 +35,43 @@ td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-ali
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: rgba(56,189,248,0.03); }
 p { margin: 4px 0; font-size: 0.86rem; }
-p.subtitle-p { font-weight: 600; color: var(--text-heading); font-size: 0.9rem; margin: 8px 0 4px; }
 blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
-blockquote strong { color: #c7d2fe; }
-ul { margin: 6px 0 6px 18px; font-size: 0.85rem; } li { margin: 2px 0; }
-code { background: rgba(56,189,248,0.1); color: #7dd3fc; padding: 1px 4px; border-radius: 2px; font-size: 0.85em; }
-pre { background: #0a1628; border: 1px solid var(--border); border-radius: 4px; padding: 10px 14px; overflow-x: auto; margin: 8px 0; font-size: 0.78rem; line-height: 1.45; }
-pre code { background: none; padding: 0; color: var(--text); }
-hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
-.tq-card { background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; margin: 8px 0; }
-.tq-card h4 { color: var(--accent); font-size: 0.85rem; margin: 0 0 4px 0; padding: 0; border: none; }
-.tq-card p { font-size: 0.84rem; margin: 0; }
-.mermaid-wrap { background: rgba(10,22,40,0.5); border: 1px solid var(--border); border-radius: 6px; padding: 12px; margin: 10px 0; overflow-x: auto; }
-.mermaid-wrap .mermaid { display: flex; justify-content: center; }
-.badge { font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; font-weight: 600; display: inline-flex; align-items: center; gap: 2px; }
-.badge-alert { background: rgba(239,68,68,0.15); color: #f87171; }
-.badge-warn { background: rgba(245,158,11,0.15); color: #fbbf24; }
-.badge-info { background: rgba(56,189,248,0.15); color: #7dd3fc; }
-.badge-ok { background: rgba(34,197,94,0.15); color: #4ade80; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media(max-width:700px) { .grid-2 { grid-template-columns: 1fr; } }
-.pct-up { color: var(--red); font-weight: 600; } .pct-down { color: var(--green); font-weight: 600; } .vol-high { color: var(--amber); }
-tr.critical-row td { background: rgba(239,68,68,0.05); }
-tr.critical-row td:first-child { border-left: 2px solid var(--red); }
-.toc { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; padding: 8px 12px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
-.toc a { font-size: 0.76rem; color: var(--accent); text-decoration: none; padding: 2px 6px; border-radius: 3px; }
-.toc a:hover { background: rgba(56,189,248,0.1); }
-.footer { margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--border); text-align: center; }
-.footer p { font-size: 0.72rem; color: var(--text-muted); } .footer a { color: var(--accent); opacity: 0.6; } .footer a:hover { opacity: 1; }
-.summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
-.summary-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 10px; text-align: center; }
-.summary-item .value { font-size: 1.25rem; font-weight: 700; color: var(--text-heading); }
-.summary-item .label { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
-.summary-item.alert { border-color: var(--red); } .summary-item.alert .value { color: var(--red); }
-.stock-link { color: var(--text-heading); text-decoration: none; } .stock-link:hover { color: var(--accent); text-decoration: underline; }
-.biz-desc { font-size: 0.8rem; color: var(--text-muted); margin: 8px 0; padding: 8px 12px; background: rgba(56,189,248,0.03); border-left: 2px solid var(--accent); border-radius: 0 4px 4px 0; }
-</style></head><body><div class="container">
-  <header>
-    <h1>彤程新材</h1>
-    <div class="sub">603650.SH | 光刻胶概念 | </div>
-    <div class="meta-row">
-      <a href="/daily-signal/" class="date-tag">&larr; 主页</a>
-      <a href="/daily-signal/stocks/" class="date-tag">标的目录</a>
-      <span class="date-tag">2026-05-07</span>
-    </div>
-  </header>
-  <div class="biz-desc">国内ArF/KrF光刻胶龙头，半导体光刻胶已通过中芯国际等头部晶圆厂验证量产。</div>
-  <div class="summary-grid">
-    <div class="summary-item"><div class="value">57.02</div><div class="label">收盘价</div></div>
-    <div class="summary-item"><div class="value pct-up">+1.57%</div><div class="label">涨跌幅</div></div>
-    <div class="summary-item"><div class="value">15.0万手</div><div class="label">成交量</div></div>
-    <div class="summary-item"><div class="value">光刻胶概念</div><div class="label">分组</div></div>
-    <div class="summary-item"><div class="value"><span class="pct-up">+3.71%</span></div><div class="label">5日累计</div></div>
-    <div class="summary-item"><div class="value"><span class="pct-up">+15.99%</span></div><div class="label">20日累计</div></div>
-  </div>
-  <h3>近5日走势</h3>
-  <div class="table-wrap"><table><tr><th>日期</th><th>开盘</th><th>最高</th><th>最低</th><th>收盘</th><th>涨跌</th></tr>
-    <tr><td>20260507</td><td>56.60</td><td>57.40</td><td>55.68</td><td>57.02</td><td class="pct-up">+1.57%</td></tr>
-    <tr><td>20260506</td><td>54.93</td><td>56.88</td><td>54.93</td><td>56.14</td><td class="pct-up">+4.04%</td></tr>
-    <tr><td>20260430</td><td>53.48</td><td>54.38</td><td>52.84</td><td>53.96</td><td class="pct-down">-1.53%</td></tr>
-    <tr><td>20260429</td><td>54.08</td><td>55.10</td><td>53.40</td><td>54.80</td><td class="pct-down">-0.33%</td></tr>
-    <tr><td>20260428</td><td>55.46</td><td>56.38</td><td>54.60</td><td>54.98</td><td class="pct-down">-2.12%</td></tr>
-  </table></div>
-  <h3>投资逻辑追踪 (1 条)</h3>
-  <div class="card" style="margin-bottom:8px">
-    <div class="card-header"><h3 style="margin:0;font-size:0.9rem">ArF光刻胶唯一规模放量标的，2025年营收增长800%+，已通过头部晶圆厂验证量产。光刻机管制扩大倒逼光刻胶国产化加速。...</h3>
-      <span class="badge badge-ok">活跃</span></div>
-    <p style="font-size:0.83rem">ArF光刻胶唯一规模放量标的，2025年营收增长800%+，已通过头部晶圆厂验证量产。光刻机管制扩大倒逼光刻胶国产化加速。</p>
-    <div style="margin-top:6px;font-size:0.78rem;color:var(--text-muted)">
-      <strong>关键变量：</strong>季度营收增速, ArF光刻胶新客户导入进度, 光刻胶国产化率<br>
-      <strong>失效条件：</strong>连续两季营收增速<50% YoY 或 失去头部晶圆厂认证<br>
-      <strong>关联催化：</strong>光刻机管制扩大至28-65nm, 半导体材料国产替代加速</div>
-    <div style="margin-top:6px"><strong style="font-size:0.78rem;color:var(--text-muted)">体检记录：</strong>
-      <div style="margin:4px 0;font-size:0.78rem">2026-05-06: 2025年报+800%收入增长确认，Q1材料涨价趋势延续，光刻机管制→替代紧迫性↑</div>
-    </div></div>
-  <h3>近期异动 (1 次)</h3>
-  <div class="table-wrap"><table><tr><th>日期</th><th>涨跌</th><th>量比</th><th>归因</th></tr>
-    <tr><td>20260506</td><td class="pct-up">+4.04%</td><td>2.1x</td><td><span class="badge badge-warn">光刻胶概念板块联动</span></td></tr>
-  </table></div>
-  <div class="footer"><p>Mimo &middot; AI 投研助手 | 2026-05-07</p><p><a href="/daily-signal/">主页</a> | <a href="/daily-signal/stocks/">标的目录</a></p></div>
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.06); font-size: 0.82rem; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.06); font-size: 0.82rem; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.06); font-size: 0.82rem; }
+.positive { color: #22c55e; }
+.negative { color: #ef4444; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>彤程新材 <code style="font-size:0.8rem;color:var(--text-muted)">603650.SH</code></h1>
+    <div class="sub">光刻胶概念 · 最新价 57.02 · 20260507</div>
+</header>
+<div class="card"><p>国内ArF/KrF光刻胶龙头，半导体光刻胶已通过中芯国际等头部晶圆厂验证量产。</p></div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260507</td><td>57.02</td><td class="positive">+1.57%</td><td>150441</td></tr><tr><td>20260506</td><td>56.14</td><td class="positive">+4.04%</td><td>179208</td></tr><tr><td>20260430</td><td>53.96</td><td class="negative">-1.53%</td><td>152478</td></tr><tr><td>20260429</td><td>54.80</td><td class="negative">-0.33%</td><td>114560</td></tr><tr><td>20260428</td><td>54.98</td><td class="negative">-2.12%</td><td>118446</td></tr><tr><td>20260427</td><td>56.17</td><td class="positive">+1.37%</td><td>170652</td></tr><tr><td>20260424</td><td>55.41</td><td class="negative">-0.47%</td><td>138832</td></tr><tr><td>20260423</td><td>55.67</td><td class="positive">+0.51%</td><td>210199</td></tr><tr><td>20260422</td><td>55.39</td><td class="positive">+2.06%</td><td>161821</td></tr><tr><td>20260421</td><td>54.27</td><td class="positive">+0.74%</td><td>125563</td></tr><tr><td>20260420</td><td>53.87</td><td class="negative">-0.26%</td><td>146511</td></tr><tr><td>20260417</td><td>54.01</td><td class="positive">+2.35%</td><td>140281</td></tr><tr><td>20260416</td><td>52.77</td><td class="positive">+0.71%</td><td>73843</td></tr><tr><td>20260415</td><td>52.40</td><td class="negative">-0.91%</td><td>86572</td></tr><tr><td>20260414</td><td>52.88</td><td class="positive">+2.60%</td><td>122860</td></tr><tr><td>20260413</td><td>51.54</td><td class="positive">+0.02%</td><td>66524</td></tr><tr><td>20260410</td><td>51.53</td><td class="negative">-0.25%</td><td>81980</td></tr><tr><td>20260409</td><td>51.66</td><td class="negative">-0.90%</td><td>87086</td></tr><tr><td>20260408</td><td>52.13</td><td class="positive">+6.04%</td><td>105027</td></tr><tr><td>20260407</td><td>49.16</td><td class="positive">+0.63%</td><td>42917</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
 </div></body></html>
