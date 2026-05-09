@@ -1,139 +1,169 @@
 {
   "date": "2026-05-09",
-  "run_at": "2026-05-09T10:30:00+08:00",
+  "run_at": "2026-05-09T16:30:00+08:00",
   "source": "readhub+brave",
   "signals": [
     {
       "id": "s1",
-      "chain": "chain2",
-      "title": "海光DCU完成混元Hy3 295B大模型深度适配",
-      "summary": "海光信息深算3号DCU完成与腾讯混元Hy3 preview大模型深度适配，混元Hy3为295B总参数、256K超长上下文的最新版本。这是继DeepSeek V4后第二个主流大模型生态验证，国产AI芯片从'可适配'走向'深度适配主流大模型'，生态壁垒进一步巩固。",
-      "variable_change": "海光DCU生态适配广度↑，从DeepSeek V4单一家扩展至腾讯混元，大模型生态覆盖从边缘验证升级为主流认可，对海光2026年25万片DCU出货目标提供需求端背书，量级：中等偏强",
-      "source_urls": [
-        "https://36kr.com"
-      ],
-      "priority": "fire",
-      "lifecycle": "emerging",
-      "lifecycle_rationale": "新闻今日(5/9)10点发布，<1小时，仅36Kr一家来源，标的价格/量尚未反应(周末休市)",
-      "related_tickers": [
-        "688041.SH"
-      ],
-      "tags": [
-        "海光信息",
-        "DCU",
-        "混元大模型",
-        "生态适配",
-        "国产GPU"
-      ]
-    },
-    {
-      "id": "s2",
-      "chain": "chain1+chain2",
-      "title": "半导体下行周期预警：IFS 2026首现反向信号",
-      "summary": "Future Horizons CEO Malcolm Penn在IFS 2026上率先预警半导体行业将迎来下行行情。此前台积电4月营收增速已从3月+45.2%收窄至+17.5%，为近半年最低。若此预警被后续数据验证，全球半导体景气度叙事将从'加速扩张'切换为'高位震荡'，A股半导体板块整体估值有回调风险。需区分AI结构性增长与非AI周期性疲弱。",
-      "variable_change": "全球半导体周期方向：从'加速扩张'出现高位拐点预警，方向可能从↑转为→或↓，量级：若被验证则中等偏强（板块估值整体回调），当前为预警级信号",
-      "source_urls": [
-        "https://finance.sina.com.cn/tech/roll/2026-05-08/doc-inhxcyyr4323662.shtml"
-      ],
-      "priority": "fire",
-      "lifecycle": "emerging",
-      "lifecycle_rationale": "IFS 2026上5/8发布，<24h，仅新浪科技一家中文报道，尚未形成广泛共识，市场未反应",
-      "related_tickers": [
-        "688981.SH",
-        "002371.SZ",
-        "688012.SH",
-        "002185.SZ"
-      ],
-      "tags": [
-        "半导体周期",
-        "下行预警",
-        "IFS2026",
-        "台积电",
-        "估值风险"
-      ]
-    },
-    {
-      "id": "s3",
-      "chain": "chain2",
-      "title": "AI算力新瓶颈：CPU紧缺、涨价、抢不到货",
-      "summary": "21世纪经济报道指出CPU已成为AI算力下一个瓶颈：英特尔LGA1700价格从$130涨至$160(+23%)，2-3nm先进制程产能优先分配给GPU挤占CPU供给。此前CPU:GPU配比从1:8向1:1演进的叙事获实物量验证。CPU紧缺从'叙事'升级为'实物短缺'。",
-      "variable_change": "CPU紧缺从定性叙事升级为定量验证（价格上涨23%+产能挤占），对海光CPU产品线(海光3号/4号)形成需求端超预期利好，量级：中等偏强",
-      "source_urls": [
-        "https://www.21jingji.com/article/20260509/6d5d51251ad266f9bb85d43201660af8.html"
-      ],
-      "priority": "fire",
-      "lifecycle": "emerging",
-      "lifecycle_rationale": "21经济网5/9报道，CPU涨价数据为新披露（此前只有配比1:8→1:1叙事），'AI瓶颈'定性未广泛传播",
-      "related_tickers": [
-        "688041.SH"
-      ],
-      "tags": [
-        "CPU紧缺",
-        "AI算力",
-        "海光信息",
-        "涨价",
-        "先进制程挤占"
-      ]
-    },
-    {
-      "id": "s4",
       "chain": "chain1",
-      "title": "中国下令企业不听从美国制裁，对抗升级",
-      "summary": "彭博社采访USTR贸易代表格里尔，讨论中国下令企业不听从美国制裁的议题。这标志着中美制裁对抗从'规则制定'阶段进入'执法对抗'阶段。中方反制裁工具箱（阻断禁令）已从法条走向实操，但当前阻断令仅限石化领域，半导体领域尚未触发。",
-      "variable_change": "制裁对抗烈度↑：从美方单边制裁升级为双边执法对抗，中国官方层面首次被外媒报道系统性指示企业违抗制裁。对链一国产替代政策强制力形成强化，但短期炒作风险高（半导体阻断令尚未触发）",
+      "title": "🔥 制裁质变：5家中企被列入美国SDN名单，从实体清单升级为全面金融封锁",
+      "summary": "5月8日深圳新闻网/法律专家解读：美国将5家中国企业列入SDN（特别指定国民）名单。SDN不同于实体清单（限制供应链/芯片出口），SDN意味着全球任何使用美元结算、经过美国银行系统或含美国技术/零件的实体，与这5家企业往来都可能被连带制裁。制裁从'芯片禁运'升级为'全面金融脱钩+二级制裁'。同时5/8商务部首次启用阻断禁令（针对伊朗石油制裁，半导体尚未触发），中美制裁进入'清单升级→反制触发→再升级'螺旋。",
+      "variable_change": "制裁维度从技术供应链（实体清单）升级为金融系统全面封杀（SDN+二级制裁威慑），链一政策强制力质变。若SDN覆盖范围扩大至半导体企业，国产替代将从'有利可图'变为'生存必需'。",
       "source_urls": [
+        "https://www.sznews.com/news/content/2026-05/08/content_32036747.htm",
         "https://www.bilibili.com/video/BV1iKRbBVEJ2/"
       ],
       "priority": "fire",
       "lifecycle": "emerging",
-      "lifecycle_rationale": "彭博社采访5/8，<48h，bilibili二创传播但主流财经媒体未报道，市场未price in",
-      "related_tickers": [
-        "688981.SH",
-        "002371.SZ",
-        "688012.SH"
+      "lifecycle_rationale": "5/8晚间发布（<24h），仅在深圳新闻网和B站自媒体传播，主流财经媒体尚未大规模报道。SDN清单对半导体行业的具体企业尚未明确，市场尚未定价。",
+      "related_tickers": ["688981.SH", "688347.SH", "688041.SH"],
+      "tags": ["制裁升级", "SDN制裁", "金融脱钩", "二级制裁", "阻断禁令"],
+      "capital_flow_tags": ["none"]
+    },
+    {
+      "id": "s2",
+      "chain": "chain2",
+      "title": "🔥 国家发改委主任郑栅洁赴上海人工智能实验室调研，AI国家战略地位再确认",
+      "summary": "5月9日国家发改委主任郑栅洁赴上海人工智能实验室专题调研，现场察看平台建设、了解技术创新进展，并与专家深入交流。郑栅洁强调：加强统筹谋划和顶层设计、落实'人工智能+'行动、统筹发展和安全，保障AI健康有序发展。这是发改委主任级别最高调研，信号意义明确。",
+      "variable_change": "AI政策支持从'部门级'（工信部/科技部）升级为'发改委主任级'顶层推动。发改委掌握项目审批和资金分配权，调研后通常跟进具体政策。结合此前DeepSeek 500亿融资（国家大基金领投），政策→资金→需求传导链条完整。",
+      "source_urls": [
+        "https://readhub.cn/topic/8syuy0Ltgmn",
+        "https://www.jiemian.com/"
       ],
-      "tags": [
-        "中美制裁",
-        "阻断禁令",
-        "USTR",
-        "执法对抗",
-        "国产替代"
-      ]
+      "priority": "fire",
+      "lifecycle": "emerging",
+      "lifecycle_rationale": "5/9当日发布（<12h），仅界面新闻等少数媒体报道，市场完全未定价。周末发布，周一开盘为首次定价窗口。需关注后续是否出台具体政策。",
+      "related_tickers": ["688256.SH", "688041.SH", "688981.SH"],
+      "tags": ["发改委调研", "AI国家战略", "人工智能+", "顶层设计", "政策催化"],
+      "capital_flow_tags": ["national_team"]
+    },
+    {
+      "id": "s3",
+      "chain": "chain2",
+      "title": "🔥 普惠算力实质性落地：中国算力平台'算力超市·中小企业专区'雄安上线",
+      "summary": "5月9日雄安新区'算力惠企 智启中小'2026普惠算力赋能中小企业发展大会发布多项成果：国内首次发布中国算力平台'算力超市·中小企业专区'上线运营，提供多元化计费模式算力产品；'算力惠企'中国行活动首次启动，推动算力服务向'需求牵引'转变。",
+      "variable_change": "算力需求从'大厂采购GPU/AI芯片'单一叙事升级为'千行百业中小企业算力需求全面启动'。中小企业算力需求体量虽小于大厂但覆盖面广、粘性强，长期算力总需求可能超预期。需求端结构从集中式→分布式，对国产AI芯片性价比和生态要求更高。",
+      "source_urls": [
+        "https://readhub.cn/topic/8syuzvgWI8p",
+        "https://www.cls.cn/"
+      ],
+      "priority": "fire",
+      "lifecycle": "emerging",
+      "lifecycle_rationale": "5/9当日发布（<12h），财联社单一来源报道，其他媒体尚未跟进。普惠算力从'政策文件'进入'平台运营'是质变节点，市场远未定价。",
+      "related_tickers": ["688256.SH", "688041.SH", "688008.SH"],
+      "tags": ["普惠算力", "算力超市", "中小企业", "算力需求", "政策落地"],
+      "capital_flow_tags": ["national_team"]
+    },
+    {
+      "id": "s4",
+      "chain": "chain1",
+      "title": "🔥 第四代自主超导量子计算机'本源悟空-180'上线：180量子比特全栈自主可控",
+      "summary": "5月9日搭载单核180个计算比特自主超导量子芯片的'本源悟空-180'量子计算机上线运行，开始接收全球量子计算任务。4个关键核心体系（芯片/测控系统/操作系统/云平台）均由本源量子全栈自主研制。这是继汉原2号双核200量子比特后，中国自主量子计算又一里程碑。",
+      "variable_change": "自主可控算力从'硅基芯片→替代英伟达'单一路径拓展至'量子计算→换道超车'第二路径。180量子比特虽距商业化尚远（10-15年），但'全栈自主'在制裁升级背景下有战略意义。短期对半导体链无量化影响但强化自主可控叙事。",
+      "source_urls": [
+        "https://readhub.cn/topic/8syvgPouyL6",
+        "https://www.jiemian.com/"
+      ],
+      "priority": "fire",
+      "lifecycle": "emerging",
+      "lifecycle_rationale": "5/9当日发布（<12h），界面新闻单一来源，无券商覆盖。量子计算产业化极远（10-15年），仅为叙事级催化，无短期股价驱动力。",
+      "related_tickers": [],
+      "tags": ["量子计算机", "本源悟空", "自主可控", "全栈自主", "超导量子"],
+      "capital_flow_tags": ["national_team"]
     },
     {
       "id": "s5",
       "chain": "chain2",
-      "title": "H100 GPU租赁单价半年内上涨近40%",
-      "summary": "界面新闻报道国内大模型推理需求成为主流，阿里云/腾讯云/百度云密集上调AI算力价格，H100 GPU租赁单价半年内上涨近40%。算力通胀从芯片端向下游云服务蔓延，算力涨价向全产业链传导（芯片→光模块→液冷）。",
-      "variable_change": "算力通胀从GPU芯片→云租赁蔓延，涨幅40%量化确认需求缺口。对国产GPU（寒武纪/海光）替代经济性形成正向催化，量级：中等（趋势延续而非新变量）",
+      "title": "海光DCU完成与腾讯混元Hy3 preview大模型深度适配（早晨信号持续跟踪）",
+      "summary": "海光信息深算3号DCU完成与腾讯混元Hy3 preview（295B参数/256K上下文）深度适配。此前DeepSeek V4已适配国产GPU，此次腾讯混元跟进标志国产GPU生态从'一家适配'升级为'多家主流大模型全面适配'。海光DCU生态壁垒加固。",
+      "variable_change": "国产GPU生态从DeepSeek V4单点突破→腾讯混元Hy3多点验证。适配模型数量和质量直接影响企业采购决策，生态壁垒从'有'升级为'强'。海光DCU+CPU双产品线在CPU紧缺背景下形成叠加催化。",
       "source_urls": [
-        "https://www.jiemian.com/article/14401501.html"
+        "https://readhub.cn/topic/8sxmxRHSDMS",
+        "https://36kr.com/"
+      ],
+      "priority": "fire",
+      "lifecycle": "emerging",
+      "lifecycle_rationale": "5/9凌晨发布（<24h），36Kr单一来源。今早scanner首次识别，目前无其他媒体展开、无券商报告跟进。周末发布待周一验证。海光连续两日背离利好（5/8 -5.36%），若周一未能反转需警惕。",
+      "related_tickers": ["688041.SH", "688256.SH"],
+      "tags": ["海光DCU", "腾讯混元", "大模型适配", "国产GPU生态", "深算3号"],
+      "capital_flow_tags": ["big_fund", "national_team"]
+    },
+    {
+      "id": "s6",
+      "chain": "chain2",
+      "title": "SOCAMM2新内存规格：英伟达下一代AI内存方案曝光，HBM面临替代竞争？",
+      "summary": "钛媒体5月7日报道：英伟达推进SOCAMM（小型定制AI内存模组）路线图，SOCAMM2预计2026年规模扩大。首批搭载SOCAMM的产品是GB300 Blackwell平台。SOCAMM定位介于传统DRAM和HBM之间，可能分流部分低端AI推理场景的HBM需求。80万片产量目标远低于HBM但增长路径明确。",
+      "variable_change": "AI内存竞争从HBM一家独大→HBM+SOCAMM双轨。SOCAMM可能降低中低端AI芯片对HBM的绝对依赖，间接影响HBM供给紧张格局。对封装链：SOCAMM可能采用不同于HBM的封装方案（更接近传统MCP），对CoWoS/TCB需求弹性可能低于HBM。",
+      "source_urls": [
+        "https://www.tmtpost.com/7978295.html"
       ],
       "priority": "normal",
       "lifecycle": "positioning",
-      "lifecycle_rationale": "算力涨价趋势已持续半年以上，界面新闻等主流媒体已报道，市场部分price in，属于趋势确认而非新催化",
-      "related_tickers": [
-        "688256.SH",
-        "688041.SH"
+      "lifecycle_rationale": "5/7首次报道（2-3天），钛媒体/36Kr等科技媒体已有覆盖，但资本市场上关注度低（无券商研报、无股价反应）。SOCAMM路线尚未进入量产验证，市场未定价。技术路线不确定性高。",
+      "related_tickers": ["688008.SH", "600584.SH", "002156.SZ"],
+      "tags": ["SOCAMM", "AI内存", "英伟达", "GB300", "内存路线"],
+      "capital_flow_tags": ["none"]
+    },
+    {
+      "id": "s7",
+      "chain": "chain2",
+      "title": "百度文心5.1发布：预训练成本仅为业界6%，搜索能力登顶国内",
+      "summary": "百度发布文心大模型5.1，采用'多维弹性预训练'技术，以约6%的预训练成本达到基础效果领先水平。登上LMArena搜索榜国内第一，Agent能力明显提升。成本仅为业界6%的训练效率突破，对国产AI芯片推理需求有正向拉动。",
+      "variable_change": "训练成本大幅压缩可能改变算力需求结构——从'训练驱动'向'推理驱动'加速转型。推理场景对芯片要求低于训练，更有利于国产AI芯片（寒武纪/海光）渗透。成本效率本身非直接链变量变化，但间接影响算力需求量和芯片选型。",
+      "source_urls": [
+        "https://readhub.cn/topic/8syx69iVFlx"
       ],
-      "tags": [
-        "H100",
-        "GPU租赁",
-        "算力涨价",
-        "云服务",
-        "推理需求"
-      ]
+      "priority": "normal",
+      "lifecycle": "emerging",
+      "lifecycle_rationale": "5/9刚刚发布（<12h），快科技单一来源。百度模型发布有定期节奏，市场对'百度发新模型'已不敏感，但'训练成本6%'的效率突破是值得关注的增量信息。",
+      "related_tickers": ["688256.SH", "688041.SH"],
+      "tags": ["百度文心", "训练效率", "推理需求", "国产模型"],
+      "capital_flow_tags": ["none"]
+    },
+    {
+      "id": "s8",
+      "chain": "chain1",
+      "title": "半导体材料国产替代深度分析：十五五目标自给率80%，光刻胶国产化率仅3%",
+      "summary": "新浪财经5月3日深度分析：十五五目标2030年关键材料自给率≥80%，当前整体国产化率仅15%，光刻胶国产化率仅3%-1%。靶材Q1涨价60%-70%，硅片涨价有望Q2兑现。彤程新材ArF光刻胶增长超800%，江丰电子靶材出货量全球第一。半导体材料处于'政策+景气+涨价'三重共振窗口。",
+      "variable_change": "材料国产替代从'方向'升级为'价格信号验证'：靶材Q1已涨60-70%，硅片涨价Q2待兑现。涨价意味着供需缺口正在从预期→现实。'工艺通胀'效应（先进制程材料消耗量指数增长）为材料板块提供量价双击逻辑。",
+      "source_urls": [
+        "https://finance.sina.com.cn/wm/2026-05-03/doc-inhwpucu9359247.shtml",
+        "https://www.36kr.com/p/3798834887914248"
+      ],
+      "priority": "normal",
+      "lifecycle": "consensus",
+      "lifecycle_rationale": "材料国产替代为持续性主题（5/3文章+5/9 36Kr文章持续覆盖），多家券商/媒体广泛覆盖。但具体'靶材涨价60-70%'为近期新数据，尚未被充分定价。整体板块在consensus阶段，涨价数据提供增量催化。",
+      "related_tickers": ["688126.SH", "603650.SH", "300666.SZ", "688019.SH"],
+      "tags": ["半导体材料", "光刻胶", "靶材涨价", "硅片涨价", "十五五目标"],
+      "capital_flow_tags": ["big_fund"]
+    },
+    {
+      "id": "s9",
+      "chain": "chain2",
+      "title": "AMD财报揭示新趋势：CPU重回AI数据中心核心，2030年市场目标1200亿美元",
+      "summary": "AMD最新财报上调服务器CPU同比增长预期，将2030年市场规模目标提高到1200亿美元以上。英伟达与Arm也在2026年3月推出自有CPU方案。AI从训练→推理→Agentic AI演进中，CPU:GPU配比从1:8向1:1转变得到产业端验证。",
+      "variable_change": "CPU:GPU配比从'分析师推演'升级为'AMD财报+英伟达/Arm产品布局'产业端验证。海光CPU产品线（国内唯一高端CPU+DCU双线）结构性受益。此前1:8→1:1叙事已在5/7被首次标记，AMD财报提供增量确认。",
+      "source_urls": [
+        "https://unwire.pro/2026/05/07/amd-ai-cpu-data-center-growth/news/"
+      ],
+      "priority": "normal",
+      "lifecycle": "positioning",
+      "lifecycle_rationale": "AMD财报5/6发布（3天），CPU回核心叙事5/7首次进入scanner。目前多家科技媒体覆盖，但A股尚未充分定价（海光5/7-5/8连续背离）。处于positioning→consensus过渡阶段。",
+      "related_tickers": ["688041.SH"],
+      "tags": ["CPU需求", "AMD财报", "CPU:GPU配比", "AgenticAI", "海光"],
+      "capital_flow_tags": ["national_team"]
     }
   ],
   "stats": {
-    "chain1_count": 2,
-    "chain2_count": 4,
-    "fire_count": 4,
+    "chain1_count": 3,
+    "chain2_count": 6,
+    "fire_count": 5,
     "by_lifecycle": {
-      "emerging": 4,
-      "positioning": 1,
-      "consensus": 0,
+      "emerging": 6,
+      "positioning": 2,
+      "consensus": 1,
       "exhausted": 0
-    }
+    },
+    "with_capital_backing": 5
   }
 }

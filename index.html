@@ -175,6 +175,22 @@ footer { text-align: center; padding: 24px; color: var(--text-muted); font-size:
         <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.6">{{ capitalSummary }}</div>
       </div>
 
+      <!-- IPO Calendar -->
+      <div class="card" style="border-left:3px solid var(--green)" v-if="ipos.length">
+        <div class="card-header"><h3>🆕 近期上市</h3></div>
+        <div class="table-wrap"><table>
+          <tr><th>日期</th><th>代码</th><th>名称</th><th>发行价</th><th>PE</th><th>发行量(万股)</th></tr>
+          <tr v-for="ipo in ipos" :key="ipo.code">
+            <td>{{ ipo.ipo_date }}</td>
+            <td><code style="font-size:0.72rem">{{ ipo.code }}</code></td>
+            <td><strong>{{ ipo.name }}</strong></td>
+            <td>{{ ipo.price > 0 ? ipo.price.toFixed(2) : '--' }}</td>
+            <td>{{ ipo.pe > 0 ? ipo.pe.toFixed(1) : '--' }}</td>
+            <td>{{ ipo.amount > 0 ? ipo.amount : '--' }}</td>
+          </tr>
+        </table></div>
+      </div>
+
       <!-- Scanner -->
       <h2 class="chain-h2">📡 Scanner 催化扫描</h2>
 
@@ -313,6 +329,7 @@ createApp({
       scanner: {},
       analyst: {},
       theses: [],
+      ipos: [],
       tickerNames: {}
     }
   },
@@ -396,6 +413,16 @@ createApp({
       (this.pool.stocks || []).forEach(s => { this.tickerNames[s.code] = s.name; });
     } catch(e) {
       console.error('数据加载失败:', e);
+    }
+    // IPO calendar (non-critical, separate fetch)
+    try {
+      const ipoRes = await fetch('data/ipo_calendar.json');
+      if (ipoRes.ok) {
+        const ipoData = await ipoRes.json();
+        this.ipos = ipoData.ipos || [];
+      }
+    } catch(e) {
+      // 静默失败
     }
   }
 }).mount('#app');
