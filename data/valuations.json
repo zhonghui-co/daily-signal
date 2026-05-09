@@ -1,0 +1,420 @@
+{
+  "generated": "2026-05-09T10:36:44.548573+08:00",
+  "total": 10,
+  "valuations": [
+    {
+      "code": "688082.SH",
+      "date": "20260508",
+      "close": 160.21,
+      "pe": 55.3873,
+      "pb": 5.6673,
+      "pe_ttm": 61.6618,
+      "total_mv_million": 773.0,
+      "eps": 3.1,
+      "roe": 13.2095,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "半导体设备",
+      "industry_pe": 65,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 3.1,
+          "industry_pe": 65,
+          "conservative": 141.05,
+          "neutral": 201.5,
+          "optimistic": 261.95,
+          "upside_conservative": -12.0,
+          "upside_neutral": 25.8,
+          "upside_optimistic": 63.5
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 61.7,
+          "industry_pe": 65,
+          "discount_to_industry": 5.1,
+          "assessment": "合理"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 5.67,
+          "roe": 13.21,
+          "implied_return_pct": 233.1,
+          "quality": "优质"
+        }
+      },
+      "name": "盛美上海",
+      "thesis_summary": "清洗设备在成熟制程国产替代率高，华虹被断供→加速成熟制程国产清洗设备导入。"
+    },
+    {
+      "code": "688126.SH",
+      "date": "20260508",
+      "close": 22.99,
+      "pe": null,
+      "pb": 4.5139,
+      "pe_ttm": null,
+      "total_mv_million": 760.0,
+      "eps": -0.539,
+      "roe": -10.3169,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "半导体材料",
+      "industry_pe": 45,
+      "targets": {},
+      "name": "沪硅产业",
+      "thesis_summary": "大硅片涨价Q2兑现，12英寸硅片国产化率仅15%。'十五五'目标80%➔5年5倍空间。但DUV管制限制远期产能扩张。"
+    },
+    {
+      "code": "603650.SH",
+      "date": "20260508",
+      "close": 55.58,
+      "pe": 60.8691,
+      "pb": 7.9252,
+      "pe_ttm": 58.5629,
+      "total_mv_million": 342.0,
+      "eps": 0.94,
+      "roe": 14.9212,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "光刻胶",
+      "industry_pe": 55,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 0.94,
+          "industry_pe": 55,
+          "conservative": 36.19,
+          "neutral": 51.7,
+          "optimistic": 67.21,
+          "upside_conservative": -34.9,
+          "upside_neutral": -7.0,
+          "upside_optimistic": 20.9
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 58.6,
+          "industry_pe": 55,
+          "discount_to_industry": -6.5,
+          "assessment": "合理"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 7.93,
+          "roe": 14.92,
+          "implied_return_pct": 188.3,
+          "quality": "优质"
+        }
+      },
+      "name": "彤程新材",
+      "thesis_summary": "ArF光刻胶唯一规模放量标的，2025年营收增长800%+，已通过头部晶圆厂验证量产。光刻机管制扩大倒逼光刻胶国产化加速。"
+    },
+    {
+      "code": "002371.SZ",
+      "date": "20260508",
+      "close": 540.79,
+      "pe": 70.9856,
+      "pb": 9.9755,
+      "pe_ttm": 70.2978,
+      "total_mv_million": 3920.0,
+      "eps": 7.6446,
+      "roe": 16.0506,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "半导体设备",
+      "industry_pe": 65,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 7.64,
+          "industry_pe": 65,
+          "conservative": 347.83,
+          "neutral": 496.9,
+          "optimistic": 645.97,
+          "upside_conservative": -35.7,
+          "upside_neutral": -8.1,
+          "upside_optimistic": 19.4
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 70.3,
+          "industry_pe": 65,
+          "discount_to_industry": -8.2,
+          "assessment": "合理"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 9.98,
+          "roe": 16.05,
+          "implied_return_pct": 160.9,
+          "quality": "优质"
+        }
+      },
+      "name": "北方华创",
+      "thesis_summary": "制裁扩大+光刻机管制→设备国产替代紧迫性全面升级。全品类平台(刻蚀/薄膜/清洗/炉管)，华虹+中芯均为核心客户。"
+    },
+    {
+      "code": "688012.SH",
+      "date": "20260508",
+      "close": 370.0,
+      "pe": 109.8568,
+      "pb": 9.542,
+      "pe_ttm": 85.0018,
+      "total_mv_million": 2320.0,
+      "eps": 3.4,
+      "roe": 9.9524,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "半导体设备",
+      "industry_pe": 65,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 3.4,
+          "industry_pe": 65,
+          "conservative": 154.7,
+          "neutral": 221.0,
+          "optimistic": 287.3,
+          "upside_conservative": -58.2,
+          "upside_neutral": -40.3,
+          "upside_optimistic": -22.4
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 85.0,
+          "industry_pe": 65,
+          "discount_to_industry": -30.8,
+          "assessment": "高估"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 9.54,
+          "roe": 9.95,
+          "implied_return_pct": 104.3,
+          "quality": "优质"
+        }
+      },
+      "name": "中微公司",
+      "thesis_summary": "刻蚀设备国产替代主力，CCP/ICP刻蚀在3D NAND和逻辑制程均为必需品。制裁扩大加速国产设备导入。"
+    },
+    {
+      "code": "600584.SH",
+      "date": "20260508",
+      "close": 50.75,
+      "pe": 58.0185,
+      "pb": 3.1569,
+      "pe_ttm": 54.9665,
+      "total_mv_million": 908.0,
+      "eps": 0.87,
+      "roe": 5.5614,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "封装测试",
+      "industry_pe": 30,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 0.87,
+          "industry_pe": 30,
+          "conservative": 18.27,
+          "neutral": 26.1,
+          "optimistic": 33.93,
+          "upside_conservative": -64.0,
+          "upside_neutral": -48.6,
+          "upside_optimistic": -33.1
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 55.0,
+          "industry_pe": 30,
+          "discount_to_industry": -83.2,
+          "assessment": "高估"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 3.16,
+          "roe": 5.56,
+          "implied_return_pct": 176.2,
+          "quality": "优质"
+        }
+      },
+      "name": "长电科技",
+      "thesis_summary": "国内最大封测厂，先进封装占比提升直接受益于国产GPU出货量增长+HBM封装产能扩张。"
+    },
+    {
+      "code": "688256.SH",
+      "date": "20260508",
+      "close": 1182.53,
+      "pe": 360.8027,
+      "pb": 60.7064,
+      "pe_ttm": 273.4566,
+      "total_mv_million": 7430.0,
+      "eps": 4.93,
+      "roe": 23.8629,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "AI芯片",
+      "industry_pe": 120,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 4.93,
+          "industry_pe": 120,
+          "conservative": 414.12,
+          "neutral": 591.6,
+          "optimistic": 769.08,
+          "upside_conservative": -65.0,
+          "upside_neutral": -50.0,
+          "upside_optimistic": -35.0
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 273.5,
+          "industry_pe": 120,
+          "discount_to_industry": -127.9,
+          "assessment": "高估"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 60.71,
+          "roe": 23.86,
+          "implied_return_pct": 39.3,
+          "quality": "优质"
+        }
+      },
+      "name": "寒武纪",
+      "thesis_summary": "Q1营收28.85亿+159% YoY，经营现金流首次转正(+8.34亿)。国产AI芯片商业验证拐点，从概念切换为成长。"
+    },
+    {
+      "code": "002156.SZ",
+      "date": "20260508",
+      "close": 57.16,
+      "pe": 71.1785,
+      "pb": 5.5399,
+      "pe_ttm": 59.9746,
+      "total_mv_million": 867.0,
+      "eps": 0.8,
+      "roe": 8.075,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "封装测试",
+      "industry_pe": 30,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 0.8,
+          "industry_pe": 30,
+          "conservative": 16.8,
+          "neutral": 24.0,
+          "optimistic": 31.2,
+          "upside_conservative": -70.6,
+          "upside_neutral": -58.0,
+          "upside_optimistic": -45.4
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 60.0,
+          "industry_pe": 30,
+          "discount_to_industry": -99.9,
+          "assessment": "高估"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 5.54,
+          "roe": 8.07,
+          "implied_return_pct": 145.8,
+          "quality": "优质"
+        }
+      },
+      "name": "通富微电",
+      "thesis_summary": "先进封装双驱动：AMD深度绑定+国产GPU出货量增长。Q1净利+45.5%，2026全年营收目标323亿(+15.7%)。"
+    },
+    {
+      "code": "688041.SH",
+      "date": "20260508",
+      "close": 323.28,
+      "pe": 295.263,
+      "pb": 31.9785,
+      "pe_ttm": 275.6372,
+      "total_mv_million": 7514.0,
+      "eps": 1.1,
+      "roe": 11.9075,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "AI芯片",
+      "industry_pe": 120,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 1.1,
+          "industry_pe": 120,
+          "conservative": 92.4,
+          "neutral": 132.0,
+          "optimistic": 171.6,
+          "upside_conservative": -71.4,
+          "upside_neutral": -59.2,
+          "upside_optimistic": -46.9
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 275.6,
+          "industry_pe": 120,
+          "discount_to_industry": -129.7,
+          "assessment": "高估"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 31.98,
+          "roe": 11.91,
+          "implied_return_pct": 37.2,
+          "quality": "优质"
+        }
+      },
+      "name": "海光信息",
+      "thesis_summary": "Q1营收40亿+68% YoY，2026计划交付25万片DCU(+150%)。国产AI芯片从'烧钱研发'进入'利润兑现'拐点。"
+    },
+    {
+      "code": "688981.SH",
+      "date": "20260508",
+      "close": 120.31,
+      "pe": 191.2548,
+      "pb": 6.392,
+      "pe_ttm": 191.2548,
+      "total_mv_million": 9641.0,
+      "eps": 0.63,
+      "roe": 3.3716,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "晶圆制造",
+      "industry_pe": 40,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 0.63,
+          "industry_pe": 40,
+          "conservative": 17.64,
+          "neutral": 25.2,
+          "optimistic": 32.76,
+          "upside_conservative": -85.3,
+          "upside_neutral": -79.1,
+          "upside_optimistic": -72.8
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 191.3,
+          "industry_pe": 40,
+          "discount_to_industry": -378.1,
+          "assessment": "高估"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 6.39,
+          "roe": 3.37,
+          "implied_return_pct": 52.7,
+          "quality": "优质"
+        }
+      },
+      "name": "中芯国际",
+      "thesis_summary": "制裁扩大下'唯一先进制程国产代工'稀缺性增强。国产AI芯片出货增长→晶圆需求↑。但自身制裁风险未消除。"
+    }
+  ]
+}
