@@ -1,0 +1,120 @@
+{
+  "date": "2026-05-08",
+  "run_at": "2026-05-08T22:30:00+08:00",
+  "source": "readhub+brave",
+  "signals": [
+    {
+      "id": "s1",
+      "chain": "chain2",
+      "title": "美光HBM sold out至2026年底",
+      "summary": "美光确认HBM产能已售罄至2026年底，HBM供给从'涨价紧张'升级为'无货可供'。全球HBM总供给缺口量级上修，对国产HBM替代和先进封装需求的紧迫性加剧。",
+      "variable_change": "HBM供给缺口：方向↑，量级从'价格暴涨80-90%'升级为'产能售罄至年底'，供给约束进一步收紧",
+      "source_urls": [
+        "https://www.tradingkey.com/analysis/stocks/us-stocks/261867618-us-micron-stock-forecast-ai-memory-semiconductor-hbm-nvda-tradingkey"
+      ],
+      "priority": "fire",
+      "tags": ["HBM", "先进封装", "存储"]
+    },
+    {
+      "id": "s2",
+      "chain": "chain2",
+      "title": "长电科技产能>80%+主动提价",
+      "summary": "长电科技业绩说明会透露Q1产能利用率超80%，2.5D产品加速量产导入，因供不应求主动提升单位价格。先进封装供需缺口从定性判断升级为定量确认。",
+      "variable_change": "先进封装供需：方向↑紧张，量级从'需求旺盛'升级为'产能利用率>80%+主动提价'，为封装链利润率提供量化参考",
+      "source_urls": [
+        "https://finance.sina.com.cn/roll/2026-05-08/doc-inhwnnkm5858314.shtml"
+      ],
+      "priority": "fire",
+      "tags": ["先进封装", "长电科技", "2.5D"]
+    },
+    {
+      "id": "s3",
+      "chain": "chain2",
+      "title": "三星HBM4E首批样品5月完成",
+      "summary": "三星计划5月完成HBM4E首批样品生产，采用4nm逻辑工艺+1c DRAM制程，目标2027年量产。HBM技术迭代从HBM4加速向HBM4E推进，国产HBM技术差距面临进一步拉大风险。",
+      "variable_change": "HBM技术迭代速度：方向↑加速，量级从HBM4(2025-2026)推进至HBM4E(2027)，国产追赶窗口收窄",
+      "source_urls": [
+        "https://www.caiwennews.com/article/1438603.shtml"
+      ],
+      "priority": "fire",
+      "tags": ["HBM", "三星", "制程迭代"]
+    },
+    {
+      "id": "s4",
+      "chain": "chain1",
+      "title": "美国参议院AI监管法案推出",
+      "summary": "美两党参议员联合推出AI监管法案，旨在确保美国先进AI芯片不会落入中国之手。如果通过，管制逻辑将从'芯片品类清单'升级为'AI用途全面管控'，制裁框架进一步收紧。",
+      "variable_change": "美国芯片制裁范围：方向↑扩大，量级可能从当前'H20逐笔审批'升级为'AI芯片用途全面管控'",
+      "source_urls": [
+        "https://www.bannedbook.org/bnews/headline/20260505/2313979.html"
+      ],
+      "priority": "fire",
+      "tags": ["制裁", "AI监管", "立法"]
+    },
+    {
+      "id": "s5",
+      "chain": "chain2",
+      "title": "天阳科技35亿算力设备采购",
+      "summary": "天阳科技签订35-40亿元算力服务项目合作协议，为AI算力服务提供设备采购资金。AI算力需求从云巨头向中游基建/应用层扩散，体现产业纵深。",
+      "variable_change": "AI算力需求扩散：方向→，量级中等（35亿级项目），验证需求向中游渗透",
+      "source_urls": [
+        "https://finance.sina.com.cn/roll/2026-05-08/doc-inhwnnkm5858314.shtml"
+      ],
+      "priority": "normal",
+      "tags": ["算力租赁", "AI基建"]
+    },
+    {
+      "id": "s6",
+      "chain": "chain1+chain2",
+      "title": "台积电4月营收+17.5%",
+      "summary": "台积电4月营收4107亿新台币(+17.5%)，AI建设热潮持续推动先进制程需求。作为全球半导体景气度晴雨表，确认AI芯片+先进制程需求未减速。",
+      "variable_change": "全球半导体景气度：方向→持续，量级确认AI建设驱动晶圆代工增长",
+      "source_urls": [
+        "https://finance.sina.com.cn/roll/2026-05-08/doc-inhwnnkm5858314.shtml"
+      ],
+      "priority": "normal",
+      "tags": ["台积电", "景气度", "先进制程"]
+    },
+    {
+      "id": "s7",
+      "chain": "chain1+chain2",
+      "title": "英伟达市值5.26万亿创新高",
+      "summary": "英伟达上涨2.43%报$216.63，总市值$5.26万亿刷新纪录。市场用真金白银确认：制裁框架下的AI算力军备竞赛不仅未减速，反而在加速。",
+      "variable_change": "AI算力军备竞赛强度：方向→持续，量级确认GPU龙头市值继续新高",
+      "source_urls": [
+        "https://finance.sina.com.cn/roll/2026-05-08/doc-inhwnnkm5858314.shtml"
+      ],
+      "priority": "normal",
+      "tags": ["英伟达", "GPU", "市值"]
+    },
+    {
+      "id": "s8",
+      "chain": "chain2",
+      "title": "汉原2号双核量子计算机发布",
+      "summary": "中科院牵头发布国内首台双核原子量子计算机'汉原2号'，将量子处理器从单核升级为双核，为中国高端算力自主化提供关键支撑，属长期战略信号。",
+      "variable_change": "自主算力路径：方向→新增量子路线，量级远期战略信号，短期无直接市场影响",
+      "source_urls": [
+        "https://finance.sina.com.cn/roll/2026-05-08/doc-inhwnnkm5858314.shtml"
+      ],
+      "priority": "normal",
+      "tags": ["量子计算", "自主算力"]
+    },
+    {
+      "id": "s9",
+      "chain": "chain1",
+      "title": "*ST闻泰：安世半导体控制权受限",
+      "summary": "*ST闻泰公告对安世半导体的控制权因荷兰法院裁决仍受限，制裁在执行层面持续蚕食中国半导体海外资产控制力。",
+      "variable_change": "制裁执行效果：方向→持续，量级确认荷兰执法层面仍在卡控中国半导体海外资产",
+      "source_urls": [
+        "https://finance.sina.com.cn/roll/2026-05-08/doc-inhwnnkm5858314.shtml"
+      ],
+      "priority": "normal",
+      "tags": ["制裁", "安世半导体", "荷兰"]
+    }
+  ],
+  "stats": {
+    "chain1_count": 3,
+    "chain2_count": 7,
+    "fire_count": 4
+  }
+}
