@@ -25,21 +25,31 @@
           "step": 1,
           "factor": "HBM供给售罄→先进封装产能需求刚性↑",
           "sector": "先进封装",
-          "tickers": ["600584.SH", "002156.SZ"],
+          "tickers": [
+            "600584.SH",
+            "002156.SZ"
+          ],
           "rationale": "HBM必须使用2.5D/3D先进封装(CoWoS/TCB/HBM堆叠)。三星+美光+SK海力士HBM出货量翻倍→封装厂产能需求同步放大。长电/通富作为国内唯二具备2.5D量产能力的封装厂，HBM封装需求溢出将直接传导至产能利用率和ASP"
         },
         {
           "step": 2,
           "factor": "HBM供给售罄→国产HBM替代紧迫性↑",
           "sector": "存储/设备",
-          "tickers": ["688256.SH", "688041.SH", "688981.SH"],
+          "tickers": [
+            "688256.SH",
+            "688041.SH",
+            "688981.SH"
+          ],
           "rationale": "全球HBM买不到→国内AI芯片厂商被迫寻求国产HBM方案→利好国产存储制造(中芯)和AI芯片设计(寒武纪/海光)的国产化推进。但国产HBM目前处于起步阶段，短期无法直接受益"
         },
         {
           "step": 3,
           "factor": "HBM供给售罄→AI算力建设成本中枢上移",
           "sector": "算力基建",
-          "tickers": ["688256.SH", "688041.SH"],
+          "tickers": [
+            "688256.SH",
+            "688041.SH"
+          ],
           "rationale": "HBM占GPU BOM约30-40%，售罄意味着GPU交付周期同步延长。英伟达/AMD GPU交付不确定性→国产GPU替代窗口打开，寒武纪/海光出货量预期上修"
         }
       ],
@@ -57,7 +67,14 @@
           "impact": "三星HBM销售额翻三倍(2026)意味着其HBM市场占比可能从35%提升至50%+。国产HBM若以三星为合作标杆，技术授权/合作风险需评估"
         }
       ],
-      "cross_chain": true
+      "cross_chain": true,
+      "capital_backing": {
+        "level": "strong",
+        "big_fund": true,
+        "national_team_etf": true,
+        "recent_bidding": false,
+        "note": "大基金三期投向先进封装/HBM，半导体ETF覆盖封测龙头"
+      }
     },
     {
       "id": "a2",
@@ -81,14 +98,22 @@
           "step": 1,
           "factor": "长电科技产能利用率>80%+提价→封装链景气度从方向信号升级为定量确认",
           "sector": "先进封装",
-          "tickers": ["600584.SH", "002156.SZ", "688403.SH"],
+          "tickers": [
+            "600584.SH",
+            "002156.SZ",
+            "688403.SH"
+          ],
           "rationale": "长电是国内封装绝对龙头，其产能利用率和提价行为是封装行业风向标。通富微电(AMD核心封装商)、汇成股份跟随景气度上行概率大。先进封装整体产能紧张→封装ASP和毛利率中枢上行"
         },
         {
           "step": 2,
           "factor": "2.5D量产导入+100亿CAPEX→先进封装国产化率从<15%向30%+跃升",
           "sector": "设备/材料",
-          "tickers": ["002371.SZ", "688012.SH", "688037.SH"],
+          "tickers": [
+            "002371.SZ",
+            "688012.SH",
+            "688037.SH"
+          ],
           "rationale": "2.5D封装需要刻蚀(CMP/TSV)、薄膜沉积、电镀等设备配套。长电100亿CAPEX中设备采购占比约60-70%，国产设备商(北方华创刻蚀/薄膜、中微刻蚀、芯源微涂胶显影)将直接受益于封装扩产采购"
         }
       ],
@@ -101,7 +126,14 @@
           "impact": "通富微电今日-3.25%与长电背离，说明市场在区分'业绩兑现度'而非简单封装链联动。通富需自有业绩验证才能跟随，否则估值可能继续承压"
         }
       ],
-      "cross_chain": true
+      "cross_chain": true,
+      "capital_backing": {
+        "level": "strong",
+        "big_fund": true,
+        "national_team_etf": true,
+        "recent_bidding": false,
+        "note": "大基金一期直投长电，半导体芯片ETF重仓"
+      }
     },
     {
       "id": "a3",
@@ -125,14 +157,21 @@
           "step": 1,
           "factor": "HBM技术差距拉大→国产替代紧迫性↑→政策+资本加速注入",
           "sector": "存储制造/设备",
-          "tickers": ["688981.SH", "002371.SZ", "688012.SH"],
+          "tickers": [
+            "688981.SH",
+            "002371.SZ",
+            "688012.SH"
+          ],
           "rationale": "技术差距拉大反逼政策加码。中芯国际(40nm HBM逻辑die代工)、北方华创(TSV刻蚀/薄膜)、中微公司(深硅刻蚀)将承接更多HBM国产化研发订单和政策支持"
         },
         {
           "step": 2,
           "factor": "HBM4E样品→先进封装技术路线升级→TCB/HBM堆叠需求从HBM4向HBM4E升级",
           "sector": "先进封装",
-          "tickers": ["600584.SH", "002156.SZ"],
+          "tickers": [
+            "600584.SH",
+            "002156.SZ"
+          ],
           "rationale": "HBM4E的1c DRAM+4nm逻辑集成对封装精度要求更高(从5μm向3μm演进)，封装价值量/颗HBM提升约20-30%。长电/通富若切入HBM4E封装，ASP弹性显著"
         }
       ],
@@ -150,7 +189,14 @@
           "impact": "三星4nm产线排满至2027年→国产AI芯片(寒武纪/海光)的代工产能可能被进一步挤出，需关注台积电/中芯产线分配情况"
         }
       ],
-      "cross_chain": true
+      "cross_chain": true,
+      "capital_backing": {
+        "level": "moderate",
+        "big_fund": true,
+        "national_team_etf": false,
+        "recent_bidding": false,
+        "note": "大基金三期投向HBM，间接利好国产存储替代"
+      }
     },
     {
       "id": "a4",
@@ -173,21 +219,31 @@
           "step": 1,
           "factor": "制裁范围从芯片扩至AI用途→国产GPU替代确定性↑↑",
           "sector": "AI芯片",
-          "tickers": ["688256.SH", "688041.SH"],
+          "tickers": [
+            "688256.SH",
+            "688041.SH"
+          ],
           "rationale": "若法案通过，英伟达/AMD全部AI芯片出口中国均须审批，实质上禁令化。寒武纪思元590(2026E出货30万颗)/海光DCU(2026目标25万片)将成唯一可规模出货的国产替代选择，出货量和ASP双重上修"
         },
         {
           "step": 2,
           "factor": "制裁框架扩大→制造端封锁同步升级→国产设备/材料需求刚性↑",
           "sector": "半导体设备/材料",
-          "tickers": ["002371.SZ", "688012.SH", "688981.SH"],
+          "tickers": [
+            "002371.SZ",
+            "688012.SH",
+            "688981.SH"
+          ],
           "rationale": "AI用法管控通常伴生制造设备管控升级。中芯国际(国产AI芯片唯一代工方)/北方华创(刻蚀+薄膜)/中微公司(刻蚀)的国产替代需求随之放大。每一轮制裁升级都是一次国产替代催化剂"
         },
         {
           "step": 3,
           "factor": "AI芯片全面管控→先进封装国产化需求同步↑",
           "sector": "先进封装",
-          "tickers": ["600584.SH", "002156.SZ"],
+          "tickers": [
+            "600584.SH",
+            "002156.SZ"
+          ],
           "rationale": "国产GPU产量放大→先进封装需求同步放大。寒武纪/海光DCU均需2.5D封装，长电/通富为国内唯二可选供应商"
         }
       ],
@@ -205,7 +261,14 @@
           "impact": "AI监管法案提案本身(而非通过)即足以为国产替代叙事提供新一轮政策催化剂。但若后续审议受阻，预期修正风险需警惕"
         }
       ],
-      "cross_chain": true
+      "cross_chain": true,
+      "capital_backing": {
+        "level": "strong",
+        "big_fund": true,
+        "national_team_etf": true,
+        "recent_bidding": false,
+        "note": "大基金三期投向设备材料+AI算力，科创50ETF重仓受益标的"
+      }
     },
     {
       "id": "a5",
@@ -225,7 +288,10 @@
           "step": 1,
           "factor": "中游AI算力采购→算力设备需求扩散至更多行业/公司",
           "sector": "算力基建/GPU",
-          "tickers": ["688256.SH", "688041.SH"],
+          "tickers": [
+            "688256.SH",
+            "688041.SH"
+          ],
           "rationale": "算力采购最终转化为GPU/服务器订单。若中游服务商转向国产GPU(受制裁限制)，寒武纪/海光将获得云巨头之外的第二批客户验证"
         }
       ],
@@ -238,7 +304,14 @@
           "impact": "若天阳科技实际公告金额或条款与Scanner描述有偏差，传导逻辑需修正"
         }
       ],
-      "cross_chain": false
+      "cross_chain": false,
+      "capital_backing": {
+        "level": "weak",
+        "big_fund": false,
+        "national_team_etf": false,
+        "recent_bidding": false,
+        "note": "非核心半导体标的，无大基金/国家队直接背书"
+      }
     },
     {
       "id": "a6",
@@ -262,14 +335,24 @@
           "step": 1,
           "factor": "台积电营收+17.5%→全球半导体景气度确认→A股半导体板块信心支撑",
           "sector": "全产业链",
-          "tickers": ["688981.SH", "002371.SZ", "688012.SH", "600584.SH", "002156.SZ"],
+          "tickers": [
+            "688981.SH",
+            "002371.SZ",
+            "688012.SH",
+            "600584.SH",
+            "002156.SZ"
+          ],
           "rationale": "台积电作为全球半导体晴雨表，4月营收同比增长确认行业未进入下行周期。但增速收窄(17.5% vs 3月45.2%)提示不要过度线性外推增长"
         },
         {
           "step": 2,
           "factor": "增速收窄→需区分AI结构性增长与非AI周期性疲弱",
           "sector": "AI芯片/先进封装",
-          "tickers": ["688256.SH", "688041.SH", "600584.SH"],
+          "tickers": [
+            "688256.SH",
+            "688041.SH",
+            "600584.SH"
+          ],
           "rationale": "AI相关营收(先进制程+HBM封装)仍强劲增长，非AI消费电子/传统制程疲弱拖累整体增速。AI芯片和先进封装(长电/寒武纪/海光)受益于结构性增长，不受非AI拖累"
         }
       ],
@@ -282,7 +365,14 @@
           "impact": "当前A股半导体板块估值部分基于'AI需求无限增长'预期。若台积电增速继续收窄，全球半导体景气度可能从'加速扩张'转为'高位震荡'，估值中枢有回调风险"
         }
       ],
-      "cross_chain": true
+      "cross_chain": true,
+      "capital_backing": {
+        "level": "weak",
+        "big_fund": false,
+        "national_team_etf": false,
+        "recent_bidding": false,
+        "note": "全球景气度指标，非A股直接资金面"
+      }
     },
     {
       "id": "a7",
@@ -306,14 +396,20 @@
           "step": 1,
           "factor": "英伟达市值新高+数据中心投资→AI算力需求确认→国产GPU替代空间进一步扩大",
           "sector": "AI芯片",
-          "tickers": ["688256.SH", "688041.SH"],
+          "tickers": [
+            "688256.SH",
+            "688041.SH"
+          ],
           "rationale": "英伟达越强→中国AI算力缺口越大→寒武纪/海光替代空间越大。制裁框架下英伟达无法满足中国需求，市值新高反向映射国产替代的潜在市场规模"
         },
         {
           "step": 2,
           "factor": "AI数据中心大规模建设→HBM/先进封装/光模块需求脉冲",
           "sector": "先进封装/光模块",
-          "tickers": ["600584.SH", "002156.SZ"],
+          "tickers": [
+            "600584.SH",
+            "002156.SZ"
+          ],
           "rationale": "每新建一个AI数据中心(GPU集群)需配套大量HBM和先进封装。长电/通富作为封装环节直接受益于数据中心建设周期"
         }
       ],
@@ -331,7 +427,14 @@
           "impact": "若英伟达+IREN模式复制，GPU供应可能被数据中心的长期合同(LTA)锁定更多产能→现货GPU供给进一步收紧→国产GPU短期可获取的制造产能也受挤压"
         }
       ],
-      "cross_chain": true
+      "cross_chain": true,
+      "capital_backing": {
+        "level": "moderate",
+        "big_fund": true,
+        "national_team_etf": false,
+        "recent_bidding": false,
+        "note": "链一设备/材料标的获大基金二/三期政策背书"
+      }
     },
     {
       "id": "a8",
@@ -368,7 +471,14 @@
           "impact": "量子计算机用于特定计算任务(因子分解/优化/模拟)，不适合深度学习训练/推理。汉原2号对中国AI芯片/先进封装产业无直接利好，警惕概念炒作"
         }
       ],
-      "cross_chain": false
+      "cross_chain": false,
+      "capital_backing": {
+        "level": "moderate",
+        "big_fund": false,
+        "national_team_etf": false,
+        "recent_bidding": false,
+        "note": "链一设备/材料标的获大基金二/三期政策背书"
+      }
     },
     {
       "id": "a9",
@@ -398,7 +508,9 @@
           "step": 2,
           "factor": "安世控制权丧失→中国功率半导体全球布局受损→国产替代填补缺口",
           "sector": "功率半导体",
-          "tickers": ["688981.SH"],
+          "tickers": [
+            "688981.SH"
+          ],
           "rationale": "安世半导体是全球汽车功率半导体前5大供应商。控制权丧失后中国在汽车芯片领域的全球存在大幅削弱。中芯国际(代工功率器件)和国内功率IDM(华润微/士兰微)有填补机会"
         }
       ],
@@ -416,7 +528,14 @@
           "impact": "闻泰据中荷BIT发起仲裁索赔>100亿。若胜诉，将为中国企业在欧投资提供法律保护先例。但仲裁周期3-5年，短期无催化"
         }
       ],
-      "cross_chain": false
+      "cross_chain": false,
+      "capital_backing": {
+        "level": "moderate",
+        "big_fund": true,
+        "national_team_etf": false,
+        "recent_bidding": false,
+        "note": "链一设备/材料标的获大基金二/三期政策背书"
+      }
     }
   ],
   "attributions": [
@@ -493,7 +612,10 @@
     "total_signals": 9,
     "chain1": 2,
     "chain2": 4,
-    "cross_chain": 3
+    "cross_chain": 3,
+    "strong_backing": 3,
+    "moderate_backing": 4,
+    "weak_backing": 2
   },
   "context_update": {
     "key_findings": [
