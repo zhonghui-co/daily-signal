@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mimo 周度复盘 — 2026-W19 (05/03-05/09)</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; font-size: 0.9rem; }
+.container { max-width: 1100px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 14px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+nav { margin-bottom: 16px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 14px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+h2 { font-size: 1.1rem; color: var(--text-heading); margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 14px 0 6px; }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+p, li { margin: 4px 0; font-size: 0.86rem; }
+ul { padding-left: 18px; margin: 6px 0; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 8px 0; }
+.stat-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; text-align: center; }
+.stat-box .num { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+.stat-box .label { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
+.verified { color: var(--green); }
+.rejected { color: var(--red); }
+.pending { color: var(--amber); }
+.learn-list li { margin: 6px 0; padding: 4px 0; border-bottom: 1px solid rgba(30,58,95,0.2); }
+.learn-list li:last-child { border-bottom: none; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🦉 周度复盘 · W19</h1>
+  <div class="sub">2026-05-03 ~ 2026-05-09 &nbsp;|&nbsp; Reviewed: 2026-05-09 00:00 CST &nbsp;|&nbsp; 审查者: Archivist</div>
+</header>
+
+<nav>
+  <a href="index.html">← 每日信号</a>
+  <a href="directory.html">📂 目录</a>
+  <a href="meta/chain-log.html">🔗 传导链日志</a>
+  <a href="meta/factor-map.html">🧩 因子映射</a>
+</nav>
+
+<!-- Stats Overview -->
+<div class="stat-grid">
+  <div class="stat-box"><div class="num">14</div><div class="label">审查信号</div></div>
+  <div class="stat-box"><div class="num verified">8</div><div class="label">✅ 验证正确</div></div>
+  <div class="stat-box"><div class="num rejected">1</div><div class="label">❌ 验证错误</div></div>
+  <div class="stat-box"><div class="num pending">5</div><div class="label">⏳ 待验证</div></div>
+  <div class="stat-box"><div class="num">11</div><div class="label">链条更新</div></div>
+  <div class="stat-box"><div class="num">4</div><div class="label">新增因子</div></div>
+  <div class="stat-box"><div class="num">2</div><div class="label">置信度调整</div></div>
+</div>
+
+<!-- 传导链逐条审查 -->
+<h2>📋 传导链审查结果</h2>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>ID</th><th>链条</th><th>结果</th><th>审查记录</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0502-01</td>
+  <td>十五五 + MATCH法案 → 设备/材料受益</td>
+  <td><span class="tag tag-green">✅ 确认</span></td>
+  <td>制裁升级（华虹断供+AI法案）确认外部封锁方向。但板块上涨由制裁驱动非十五五政策细则。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0502-02</td>
+  <td>国产光刻机良率90%</td>
+  <td><span class="tag tag-red">⚠️ 零验证</span></td>
+  <td>本周全信源无确认。维修断供新闻反证存量DUV依赖ASML。建议降置信度或移入观察池。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0502-03</td>
+  <td>全产业链涨价 → 国产利润率改善</td>
+  <td><span class="tag tag-yellow">⚠️ 部分确认</span></td>
+  <td>HBM/DRAM暴涨80-90%+三巨头售罄确认前半段。国产端未量化确认，封装链分化（长电+4% vs 通富-3%）。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0506-01</td>
+  <td>华虹断供 → 设备替代</td>
+  <td><span class="tag tag-green">✅ 确认</span></td>
+  <td>5/7设备板块全面上涨（长川+5.45%/华海+3.78%）。方向正确。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0506-02</td>
+  <td>光刻机维修断供28-65nm → 光刻胶受益</td>
+  <td><span class="tag tag-green">✅ 确认</span></td>
+  <td>5/7光刻胶11/33上涨+4.2%（飞凯+13.46%/格林达+10.01%）。华特-13.63%为归因错误。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0506-03</td>
+  <td>HBM产能全锁定 → 先进封装需求溢出</td>
+  <td><span class="tag tag-green">✅ 确认</span></td>
+  <td>通富+3.74%→长电Q1>80%+提价，全段验证。但5/8通富-3.25%暴露分化风险。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0507-01</td>
+  <td>HBM/DRAM暴涨 → 封装链量价双击</td>
+  <td><span class="tag tag-green">✅ 确认</span></td>
+  <td>TrendForce+Samsung+SK三方确认。长电净利+42.7%验证提价覆盖成本。修正：成本承压假设错误。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0507-02</td>
+  <td>寒武纪30万颗放量 → AI芯片规模化</td>
+  <td><span class="tag tag-red">❌ 时点错配</span></td>
+  <td>方向对但时点错。涨停后5/8-5.6%回调，海光连续两日背离（-6.18%）。中期逻辑未破但短期被证伪。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0508-01</td>
+  <td>HBM售罄至2026底</td>
+  <td><span class="tag tag-yellow">⏳ 待验证</span></td>
+  <td>当日信号。⚠️标记反向风险：HBM售罄可传导至国产GPU出货受限。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0508-02</td>
+  <td>长电业绩会 → 封装景气度定量确认</td>
+  <td><span class="tag tag-green">✅ 确认</span></td>
+  <td>长电+4.08%即时正向反馈。但通富-3.25%说明"同行业≠同节奏"。</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">0508-03</td>
+  <td>美国AI监管法案 → 制裁升级</td>
+  <td><span class="tag tag-yellow">⏳ 待验证</span></td>
+  <td>提案初期。寒武纪/海光逆跌说明政策故事定价钝化。需2-3月审议进展。</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- 因子变动 -->
+<h2>🧩 因子变动</h2>
+
+<div class="card">
+<h3 style="color:var(--green);margin-top:0">新增因子 (4)</h3>
+<table>
+<thead><tr><th>因子</th><th>方向</th><th>受益</th><th>置信度</th><th>说明</th></tr></thead>
+<tbody>
+<tr>
+  <td><strong>HBM供给约束</strong></td>
+  <td>↑↑短缺</td>
+  <td>先进封装、存储制造</td>
+  <td><span class="tag tag-green">🟢</span></td>
+  <td>三巨头售罄至2026底+2027订单锁定。本周最强变量。</td>
+</tr>
+<tr>
+  <td><strong>先进封装-景气度</strong></td>
+  <td>↑↑紧张</td>
+  <td>封测、封装设备/材料</td>
+  <td><span class="tag tag-green">🟢</span></td>
+  <td>长电Q1>80%+提价+净利+42.7%定量确认。上游设备交叉验证。</td>
+</tr>
+<tr>
+  <td><strong>AI芯片-制裁升级</strong></td>
+  <td>↑扩大</td>
+  <td>国产GPU、设备、封装</td>
+  <td><span class="tag tag-yellow">🟡</span></td>
+  <td>AI监管法案提案升级管制逻辑。通过概率&lt;50%。</td>
+</tr>
+<tr>
+  <td><strong>AI芯片-国产替代</strong></td>
+  <td>↑放量</td>
+  <td>AI芯片设计、代工、封装</td>
+  <td><span class="tag tag-green">🟢</span></td>
+  <td>寒武纪Q1+159%/海光+68%，寒武纪30万颗年目标。</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<h3 style="color:var(--amber);margin-top:0">置信度调整 (2)</h3>
+<table>
+<thead><tr><th>因子</th><th>调整</th><th>原因</th></tr></thead>
+<tbody>
+<tr><td><strong>半导体-外部封锁</strong></td><td>🟡 → <span class="tag tag-green">🟢</span></td><td>华虹断供+光刻机维修+AI法案三线并进确认</td></tr>
+<tr><td><strong>半导体-周期</strong></td><td>🟡 → <span class="tag tag-green">🟢</span></td><td>SIA Q1 +25%历史极值+高盛WFE至2028年2080亿美元</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- 错误分析 -->
+<h2>🔍 错误模式分析</h2>
+
+<div class="card">
+<h3 style="color:var(--red);margin-top:0">1. 交易时点 vs 基本面方向错配（最显著）</h3>
+<p>寒武纪/海光案例：国产AI芯片放量的基本面判断完全正确（Q1+159%/+68%、30万颗目标），但低估了连续涨停后获利回吐力度。传导链在<strong>1周</strong>尺度被证伪，在<strong>1-3月</strong>尺度逻辑未破。</p>
+<blockquote>教训：高波动标的需要在链条中显式标注"短期过热风险"，区分方向判断和时点判断。</blockquote>
+</div>
+
+<div class="card">
+<h3 style="color:var(--amber);margin-top:0">2. 板块内部分化 — "行业受益"≠"个股等权受益"（新发现）</h3>
+<p>封装链统一预测"通富+长电"受益，但市场严格区分"业绩已验证"（长电+4.08%）和"预期待验证"（通富-3.25%）。链条缺少个股验证门槛检查。</p>
+<blockquote>教训：未公告业绩的标的不能直接继承板块逻辑。需增加个股验证门槛前置检查。</blockquote>
+</div>
+
+<div class="card">
+<h3 style="color:var(--amber);margin-top:0">3. 政策催化时滞低估（持续错误）</h3>
+<p>AI监管法案、MATCH法案等立法催化以"数周"为时效，实际立法周期6-12月。市场对提案阶段已出现定价钝化（寒武纪/海光在法案利好下逆跌）。</p>
+<blockquote>教训：立法类催化时效应为"📅 中长期(6-12月)"，短期仅限情绪脉冲且需标注通过概率。</blockquote>
+</div>
+
+<div class="card">
+<h3 style="color:var(--amber);margin-top:0">4. 信源半验证 → 传导链污染（新发现）</h3>
+<p>天阳科技35亿算力信号：Scanner URL 404，Analyst标记partial但仍在传导链中。半验证信号降低链条整体信噪比。</p>
+<blockquote>教训：partial验证信号不应进入传导链，应入"观察池"待独立确认后再链条化。</blockquote>
+</div>
+
+<!-- 关键洞见 -->
+<h2>💡 本周关键洞见 (7条)</h2>
+
+<ol class="learn-list">
+  <li><strong>高波动标的短期过热风险</strong> — 单周20%+涨幅后的链条不能期待同向持续，需在链条中显式标注。</li>
+  <li><strong>板块逻辑→个股传导的分化风险</strong> — 传导链涉及的多只股票需前置检查：哪些有已公告的业绩验证？哪些只有预期？</li>
+  <li><strong>立法政策催化时效校正</strong> — 标为"📅 中长期(6-12月)"，短期仅限情绪脉冲且需标注通过概率。</li>
+  <li><strong>partial验证信号隔离</strong> — 不应进入传导链，应入"观察池"待独立信源交叉验证后再链条化。</li>
+  <li><strong>HBM双向传导风险框架</strong> — 同一个供给侧变量对产业链不同环节的传导方向可能相反（封装受益 vs GPU受限）。需在因子映射中标注"双向传导"属性。</li>
+  <li><strong>pool背离检测缺失</strong> — 华特气体-13.63%被标记为板块联动但板块+4.2%。需在pool.py增加'背离检测'逻辑。</li>
+  <li><strong>最强确认因子：HBM供给约束+先进封装景气度</strong>（多信源交叉验证，置信度最高）。<strong>最弱因子：国产设备突破</strong>（光刻机良率90%，2周零验证）。</li>
+</ol>
+
+<!-- 本周最强/最弱 -->
+<div class="stat-grid" style="margin-top:18px">
+  <div class="stat-box" style="text-align:left;padding:14px">
+    <div class="label" style="color:var(--green);font-size:0.76rem;font-weight:600">🟢 本周最强确认因子</div>
+    <p style="font-size:0.82rem;margin-top:4px">HBM供给约束 + 先进封装景气度<br><span style="color:var(--text-muted);font-size:0.72rem">获三巨头数据、长电业绩、设备商指引多方交叉验证</span></p>
+  </div>
+  <div class="stat-box" style="text-align:left;padding:14px">
+    <div class="label" style="color:var(--red);font-size:0.76rem;font-weight:600">🔴 本周最弱因子</div>
+    <p style="font-size:0.82rem;margin-top:4px">国产光刻机良率90%<br><span style="color:var(--text-muted);font-size:0.72rem">2周零验证信息，维修断供新闻反证国产机未大规模替代</span></p>
+  </div>
+  <div class="stat-box" style="text-align:left;padding:14px">
+    <div class="label" style="color:var(--amber);font-size:0.76rem;font-weight:600">⚠️ 本周最被忽视风险</div>
+    <p style="font-size:0.82rem;margin-top:4px">HBM售罄 → 国产GPU交付受限<br><span style="color:var(--text-muted);font-size:0.72rem">寒武纪30万颗/海光25万片目标高度依赖HBM供应</span></p>
+  </div>
+</div>
+
+<footer style="margin-top:28px;padding-top:12px;border-top:1px solid var(--border);font-size:0.72rem;color:var(--text-muted)">
+  Archivist v1.0 · Generated 2026-05-09 00:00 CST · <a href="https://zhonghui-co.github.io/daily-signal/" style="color:var(--accent)">daily-signal</a>
+</footer>
+</div>
+</body>
+</html>

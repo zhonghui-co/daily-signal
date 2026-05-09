@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mimo 传导链日志</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; font-size: 0.88rem; }
+.container { max-width: 1000px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 14px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+nav { margin-bottom: 16px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 14px; }
+h2 { font-size: 1.05rem; color: var(--accent); margin: 20px 0 8px; padding-bottom: 4px; border-bottom: 1px solid rgba(56,189,248,0.2); }
+h3 { font-size: 0.9rem; color: var(--text-heading); margin: 12px 0 6px; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+p, li { margin: 3px 0; font-size: 0.84rem; }
+ul { padding-left: 18px; margin: 4px 0; }
+blockquote { border-left: 3px solid var(--accent2); padding: 4px 10px; margin: 6px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.8rem; color: #a5b4fc; }
+.chain-meta { font-size: 0.74rem; color: var(--text-muted); margin: 2px 0 4px; }
+.verify { background: rgba(30,58,95,0.3); border-radius: 4px; padding: 8px 10px; margin: 6px 0; font-size: 0.82rem; }
+.verify strong { color: var(--amber); }
+.error-summary { border-left: 3px solid var(--red); padding: 8px 14px; margin: 12px 0; background: rgba(239,68,68,0.04); border-radius: 0 4px 4px 0; }
+.learn-box { border-left: 3px solid var(--amber); padding: 6px 12px; margin: 8px 0; background: rgba(245,158,11,0.04); border-radius: 0 4px 4px 0; font-size: 0.83rem; }
+footer { margin-top: 28px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--text-muted); }
+footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🔗 传导链日志</h1>
+  <div class="sub">每条推理的完整记录，用于周/月复盘验证 &nbsp;|&nbsp; 更新: 2026-05-09 Archivist周度复盘</div>
+</header>
+
+<nav>
+  <a href="index.html">← 每日信号</a>
+  <a href="weekly/review-2026-05-09.html">📊 周度复盘</a>
+  <a href="meta/factor-map.html">🧩 因子映射</a>
+  <a href="directory.html">📂 目录</a>
+</nav>
+
+<!-- 0502-01 -->
+<h2>2026-05-02-01：十五五+MATCH 双轮驱动</h2>
+<p class="chain-meta">因子：半导体-政策强度 ↑ + 半导体-外部封锁 ↑ | 置信度：🟡 | 时效：🗓️ 结构性</p>
+<p>政策升格→财政投入↑→国产设备/材料受益；外部封锁→替代窗口→设备/EDA/制造受益</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-green">✅ 确认</span>
+  本周制裁升级（华虹断供+AI监管法案提案）确认外部封锁方向正确。设备板块5/7全面上涨。但板块上涨由制裁驱动而非十五五政策细则。方向对，主驱动因子不同。
+</div>
+
+<!-- 0502-02 -->
+<h2>2026-05-02-02：国产光刻机良率 90%</h2>
+<p class="chain-meta">因子：半导体-国产设备 ↑突破 | 置信度：🔴 | 时效：🗓️ 结构性（如证实）</p>
+<p>光刻机可用→先进制程产能独立→制造/上游受益</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-red">⚠️ 零验证</span>
+  本周全部信源未发现任何官方确认或行业媒体报道。光刻机维修断供新闻反证存量DUV仍高度依赖ASML。建议降置信度或移入观察池。
+</div>
+
+<!-- 0502-03 -->
+<h2>2026-05-02-03：全产业链涨价</h2>
+<p class="chain-meta">因子：半导体-定价权 ↑ + 半导体-周期 ↑景气 | 置信度：🟡 | 时效：📅 数周</p>
+<p>国产跟随涨价→利润率改善→估值重估</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-yellow">⚠️ 部分确认</span>
+  HBM/DRAM暴涨80-90%+三巨头售罄确认前半段。但"国产跟随涨价→利润率改善→估值重估"未量化验证。封装链分化（长电+4% vs 通富-3%）。
+</div>
+
+<!-- 0506-01 -->
+<h2>2026-05-06-01：制裁扩至华虹——设备替代紧迫性升级 🔥</h2>
+<p class="chain-meta">因子：半导体-外部封锁 ↑ + 半导体-设备国产化 ↑ | 置信度：🟢 | 时效：⚡ 即时</p>
+<p>美商务部命令Lam/AMAT/KLA断供华虹→先进制程产能冻结→华虹被迫转向国产设备→北方华创/中微公司直接受益</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-green">✅ 确认</span>
+  5/7设备板块全面上涨。但上涨更多由高盛WFE上调+全球周期数据驱动，华虹断供作为独立催化的边际贡献难以分离。
+</div>
+
+<!-- 0506-02 -->
+<h2>2026-05-06-02：光刻机维修断供28-65nm——成熟制程安全边际压缩 🔥</h2>
+<p class="chain-meta">因子：光刻胶-日本供应风险 ↑ + 光刻胶-国产验证加速 ↑ | 置信度：🟢 | 时效：⚡ 即时</p>
+<p>ASML维修断供覆盖成熟制程→存量DUV成消耗品→国产光刻胶/零部件替代窗口强制压缩→南大光电/彤程新材受益</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-green">✅ 确认</span>
+  5/7光刻胶板块11/33上涨+4.2%。华特气体-13.63%为归因错误。需注意维修断供是存量渐进影响，市场定价的是情绪+预期。
+</div>
+
+<!-- 0506-03 -->
+<h2>2026-05-06-03：HBM产能全锁定——先进封装需求溢出 🔥</h2>
+<p class="chain-meta">因子：HBM供给约束 ↑ + 先进封装-景气度 ↑ | 置信度：🟢 | 时效：📅 中期</p>
+<p>全球HBM三巨头产能锁定→中国无法获取足够HBM→国产GPU封装需求溢出至国内封测厂→通富微电/长电科技受益</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-green">✅ 确认</span>
+  通富+3.74%→长电Q1>80%+提价，全段确认。⚠️通富-3.25%暴露分化——市场区分"已验证"和"预期待验证"。
+</div>
+
+<!-- 0507-01 -->
+<h2>2026-05-07-01：HBM/DRAM暴涨80-90%——封装链量价双击 🔥</h2>
+<p class="chain-meta">因子：HBM供给约束 ↑ + 半导体-定价权 ↑ | 置信度：🟢🟡 | 时效：📅 中期至2028</p>
+<p>DRAM单季+90%→封装成本端承压但AI客户价格不敏感→封装厂量价齐升；涨价周期至2028→2-3年需求支撑</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-green">✅ 确认</span>
+  三方确认。长电净利+42.7%远超营收增速，提价完全覆盖成本，毛利率改善。"成本端承压"假设需修正。
+</div>
+
+<!-- 0507-02 -->
+<h2>2026-05-07-02：寒武纪思元590 2026E出货30万颗——国产AI芯片规模化放量 🔥</h2>
+<p class="chain-meta">因子：AI芯片-国产替代 ↑ + 先进封装-景气度 ↑ | 置信度：🟢🟡 | 时效：📅 中期</p>
+<p>思元590出货30万颗→代工需求↑（中芯国际）+封装需求↑（通富/长电）+板块估值重塑</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-red">❌ 时点错配</span>
+  方向正确但交易时点预测失败——涨停后5/8-5.6%回调，海光两日-6.18%。低估了短期过热后的获利回吐。中期逻辑未破。
+</div>
+
+<!-- 0508-01 -->
+<h2>2026-05-08-01：HBM售罄至2026底——供给从"涨价"升级为"无货可供" 🔥</h2>
+<p class="chain-meta">因子：HBM供给约束 ↑↑ + 先进封装-景气度 ↑ | 置信度：🟢 | 时效：📅 数周至2027</p>
+<p>三巨头HBM全部售罄+2027订单已锁定→先进封装需求刚性↑→长电/通富产能利用率持续高位</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-yellow">⏳ 待验证</span>
+  当日信号。长电+4.08%已反映业绩会催化。通富-3.25%背离。⚠️双向传导风险：HBM售罄→国产GPU可能无HBM可用→出货目标下修。
+</div>
+
+<!-- 0508-02 -->
+<h2>2026-05-08-02：长电Q1产能>80%+主动提价——先进封装景气度定量确认 🔥</h2>
+<p class="chain-meta">因子：先进封装-景气度 ↑↑ | 置信度：🟢 | 时效：📅 数周</p>
+<p>Q1产能利用率>80%+2.5D量产导入+主动提价+净利+42.7%→封装链从方向信号升级为定量确认</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-green">✅ 确认</span>
+  长电+4.08%当日唯一上涨双链标的。但通富-3.25%形成分化。教训："同行业≠同节奏"，个股验证缺口不可跳过。
+</div>
+
+<!-- 0508-03 -->
+<h2>2026-05-08-03：美国AI监管法案——制裁从"芯片清单"升级为"AI用途全面管控" 🔥</h2>
+<p class="chain-meta">因子：AI芯片-制裁升级 ↑ + 半导体-外部封锁 ↑ | 置信度：🟡 | 时效：📅 中长期 (6-12月)</p>
+<p>两党提案→若通过则英伟达/AMD全产品线受限→国产GPU替代确定性↑↑→寒武纪/海光受益</p>
+<div class="verify">
+  <strong>验证 (2026-05-09)：</strong>
+  <span class="tag tag-yellow">⏳ 待验证</span>
+  提案初期。5/8寒武纪/海光逆跌说明政策故事定价钝化。关键观察点：是否进入委员会审议（2-3月内）。
+</div>
+
+<!-- 错误模式总结 -->
+<h2 style="color:var(--red);border-color:rgba(239,68,68,0.2)">⚠️ 本周错误模式</h2>
+
+<div class="error-summary">
+<h3>1. 交易时点 vs 基本面方向错配</h3>
+<p>寒武纪/海光：方向对，但涨停后大幅回调。在1周尺度被证伪，1-3月尺度逻辑未破。</p>
+<div class="learn-box"><strong>教训：</strong> 高波动标的需要显式标注"短期过热风险"，区分方向判断和时点判断。</div>
+</div>
+
+<div class="error-summary">
+<h3>2. 板块内部分化 — "行业受益"≠"个股等权受益"</h3>
+<p>封装链统一预测但长电+4.08% vs 通富-3.25%严重分化。市场区分"已验证业绩"和"预期待验证"。</p>
+<div class="learn-box"><strong>教训：</strong> 需增加个股验证门槛前置检查，未公告业绩的标的不能直接继承板块逻辑。</div>
+</div>
+
+<div class="error-summary">
+<h3>3. 政策催化时滞低估</h3>
+<p>立法类催化以"数周"为时效，实际6-12月。市场对提案阶段已出现定价钝化。</p>
+<div class="learn-box"><strong>教训：</strong> 立法类催化的时效标注应为"📅 中长期(6-12月)"，短期仅限情绪脉冲。</div>
+</div>
+
+<div class="error-summary">
+<h3>4. 信源半验证 → 传导链污染</h3>
+<p>天阳科技35亿信号，Scanner URL 404，partial标记仍进传导链。</p>
+<div class="learn-box"><strong>教训：</strong> partial验证信号不应进入传导链，应入"观察池"待独立确认后再链条化。</div>
+</div>
+
+<footer>
+  创建: 2026-05-02 | 更新: 2026-05-09 Archivist周度复盘 | <a href="https://zhonghui-co.github.io/daily-signal/">daily-signal</a>
+</footer>
+</div>
+</body>
+</html>

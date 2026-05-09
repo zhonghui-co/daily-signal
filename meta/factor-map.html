@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mimo 因子映射表</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.88rem; }
+.container { max-width: 1100px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 14px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+nav { margin-bottom: 16px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 14px; }
+.card-header { margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h3 { color: var(--text-heading); font-size: 0.95rem; }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.88rem; color: var(--text-heading); margin: 12px 0 6px; }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+tr.new-factor td { background: rgba(34,197,94,0.04); }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.new-badge { font-size: 0.62rem; color: var(--green); font-weight: 700; margin-left: 2px; }
+.up-badge { font-size: 0.62rem; color: var(--amber); font-weight: 700; margin-left: 2px; }
+p, li { margin: 3px 0; font-size: 0.84rem; }
+ul { padding-left: 18px; margin: 4px 0; }
+footer { margin-top: 28px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--text-muted); }
+footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🧩 因子映射表</h1>
+  <div class="sub">事件/新闻 → 改变的因子 → 受益行业 → 受损行业 &nbsp;|&nbsp; 更新: 2026-05-09 Archivist</div>
+</header>
+
+<nav>
+  <a href="index.html">← 每日信号</a>
+  <a href="weekly/review-2026-05-09.html">📊 周度复盘</a>
+  <a href="meta/chain-log.html">🔗 传导链日志</a>
+  <a href="directory.html">📂 目录</a>
+</nav>
+
+<h2>核心因子 (12个)</h2>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+  <th>因子</th>
+  <th>方向</th>
+  <th>受益行业</th>
+  <th>受损行业</th>
+  <th>置信度</th>
+  <th>最后验证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>半导体-政策强度</strong></td>
+  <td>↑</td>
+  <td>设备、材料、晶圆制造</td>
+  <td>—</td>
+  <td><span class="tag tag-green">🟢</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr>
+  <td><strong>半导体-外部封锁</strong></td>
+  <td>↑</td>
+  <td>国产设备、EDA、先进材料</td>
+  <td>依赖进口的Fabless</td>
+  <td><span class="tag tag-green">🟢</span> <span class="up-badge">⬆️</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr>
+  <td><strong>半导体-国产设备</strong></td>
+  <td>↑突破</td>
+  <td>晶圆制造、设备零部件</td>
+  <td>海外设备商</td>
+  <td><span class="tag tag-red">🔴</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">—</td>
+</tr>
+<tr>
+  <td><strong>半导体-定价权</strong></td>
+  <td>↑</td>
+  <td>晶圆代工、存储芯片</td>
+  <td>下游模组/终端</td>
+  <td><span class="tag tag-yellow">🟡</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr>
+  <td><strong>半导体-周期</strong></td>
+  <td>↑景气</td>
+  <td>全产业链</td>
+  <td>—</td>
+  <td><span class="tag tag-green">🟢</span> <span class="up-badge">⬆️</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr>
+  <td><strong>光刻胶-日本供应风险</strong></td>
+  <td>↑断供风险</td>
+  <td>国产光刻胶、上游树脂</td>
+  <td>依赖进口的晶圆厂</td>
+  <td><span class="tag tag-yellow">🟡</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr>
+  <td><strong>光刻胶-国产验证加速</strong></td>
+  <td>↑国产渗透</td>
+  <td>南大光电、上海新阳、晶瑞电材</td>
+  <td>JSR、TOK、信越化学</td>
+  <td><span class="tag tag-yellow">🟡</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr>
+  <td><strong>半导体-晶圆厂扩产</strong></td>
+  <td>↑产能</td>
+  <td>设备、材料、制造</td>
+  <td>—</td>
+  <td><span class="tag tag-green">🟢</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr class="new-factor">
+  <td><strong>HBM供给约束</strong> <span class="new-badge">NEW</span></td>
+  <td>↑↑短缺</td>
+  <td>先进封装、存储制造、封装设备</td>
+  <td>依赖HBM的AI芯片设计（成本端）</td>
+  <td><span class="tag tag-green">🟢</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr class="new-factor">
+  <td><strong>先进封装-景气度</strong> <span class="new-badge">NEW</span></td>
+  <td>↑↑紧张</td>
+  <td>长电/通富、封装设备、封装材料</td>
+  <td>—</td>
+  <td><span class="tag tag-green">🟢</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr class="new-factor">
+  <td><strong>AI芯片-制裁升级</strong> <span class="new-badge">NEW</span></td>
+  <td>↑扩大</td>
+  <td>国产GPU、设备、封装</td>
+  <td>NVIDIA/AMD中国业务</td>
+  <td><span class="tag tag-yellow">🟡</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+<tr class="new-factor">
+  <td><strong>AI芯片-国产替代</strong> <span class="new-badge">NEW</span></td>
+  <td>↑放量</td>
+  <td>AI芯片设计、晶圆代工(SMIC)、封装、IP/EDA</td>
+  <td>海外GPU供应商</td>
+  <td><span class="tag tag-green">🟢</span></td>
+  <td style="font-size:0.72rem;color:var(--text-muted)">2026-05</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- 变动记录 -->
+<h2 style="color:var(--green)">📈 因子变动记录 (2026-05-09)</h2>
+
+<div class="card" style="border-left: 3px solid var(--green);margin-bottom:10px">
+<div class="card-header"><h3>🆕 新增因子 (4)</h3></div>
+<ol style="font-size:0.84rem">
+  <li><strong>HBM供给约束 ↑↑</strong> — 本周最强变量。三巨头售罄至2026底+2027订单锁定，供给从涨价升级为物理短缺。⚠️双向传导：封装受益 vs GPU受限。</li>
+  <li><strong>先进封装-景气度 ↑↑</strong> — 长电Q1产能>80%+提价+净利+42.7%定量确认。Onto/KLA封装设备收入>50%增长上游验证。🟢</li>
+  <li><strong>AI芯片-制裁升级 ↑</strong> — AI监管法案将管制从"芯片清单"升级为"AI用途全面管控"。通过概率&lt;50%，🟡暂定。</li>
+  <li><strong>AI芯片-国产替代 ↑</strong> — 寒武纪Q1+159%/海光+68%，30万颗年目标。从概念进入规模化放量。🟢</li>
+</ol>
+</div>
+
+<div class="card" style="border-left: 3px solid var(--amber)">
+<div class="card-header"><h3>🔄 置信度调整 (2)</h3></div>
+<ul style="font-size:0.84rem">
+  <li><strong>半导体-外部封锁</strong> 🟡→🟢：华虹断供+光刻机维修+AI法案三线并进确认</li>
+  <li><strong>半导体-周期</strong> 🟡→🟢：SIA Q1 +25%历史极值+高盛WFE至2028年2080亿美元</li>
+</ul>
+</div>
+
+<div class="card" style="border-left: 3px solid var(--text-muted)">
+<div class="card-header"><h3>⚠️ 关注的因子</h3></div>
+<ul style="font-size:0.84rem">
+  <li><strong>半导体-国产设备</strong>（光刻机良率90%）保持🔴，2周零验证。若下周仍无进展建议降级移除。</li>
+  <li>所有其他因子本周均获方向性验证或未被证伪。</li>
+</ul>
+</div>
+
+<!-- 光刻胶细分 -->
+<h2>🔬 光刻胶细分</h2>
+
+<h3>光刻胶成品</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>公司</th><th>代码</th><th>概念来源</th><th>中芯关联</th></tr></thead>
+<tbody>
+<tr><td>南大光电</td><td>300346</td><td>TS730,TS624</td><td>已通过中芯验证</td></tr>
+<tr><td>上海新阳</td><td>300236</td><td>TS730,TS804</td><td>中芯供应链</td></tr>
+<tr><td>晶瑞电材</td><td>300655</td><td>TS730,TS624</td><td>部分供货</td></tr>
+<tr><td>彤程新材</td><td>603650</td><td>TS730</td><td>—</td></tr>
+<tr><td>飞凯材料</td><td>300398</td><td>TS730,TS804</td><td>中芯供应链</td></tr>
+<tr><td>强力新材</td><td>300429</td><td>TS730</td><td>—</td></tr>
+<tr><td>容大感光</td><td>300576</td><td>TS730</td><td>—</td></tr>
+<tr><td>江化微</td><td>603078</td><td>TS730,TS804</td><td>中芯供应链</td></tr>
+<tr><td>安集科技</td><td>688019</td><td>TS730,TS804,TS620</td><td>中芯供应链+大基金</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>上游材料</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>公司</th><th>代码</th><th>概念来源</th><th>业务</th></tr></thead>
+<tbody>
+<tr><td>雅克科技</td><td>002409</td><td>TS730,TS804,TS620</td><td>前驱体/SOD</td></tr>
+<tr><td>华特气体</td><td>688268</td><td>TS730,TS804</td><td>电子特气</td></tr>
+<tr><td>沪硅产业</td><td>688126</td><td>TS804,TS620</td><td>大硅片</td></tr>
+<tr><td>江丰电子</td><td>300666</td><td>TS804</td><td>溅射靶材</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>设备+封测（与中芯供应链联动）</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>公司</th><th>代码</th><th>概念来源</th><th>业务</th></tr></thead>
+<tbody>
+<tr><td>北方华创</td><td>002371</td><td>TS804,TS620</td><td>刻蚀/薄膜设备</td></tr>
+<tr><td>中微公司</td><td>688012</td><td>TS804</td><td>刻蚀设备</td></tr>
+<tr><td>长电科技</td><td>600584</td><td>TS804,TS620</td><td>封测</td></tr>
+</tbody>
+</table>
+</div>
+
+<footer>
+  更新: 2026-05-09 | Archivist周度复盘 — 新增4因子 + 2因子置信度升级 | <a href="https://zhonghui-co.github.io/daily-signal/">daily-signal</a>
+</footer>
+</div>
+</body>
+</html>
