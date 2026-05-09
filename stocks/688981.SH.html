@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>中芯国际 - Mimo</title>
-  <style>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>中芯国际 (688981.SH) — Daily Signals</title>
+<style>
 :root {
   --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
   --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
@@ -15,20 +17,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
 header h1 { font-size: 1.35rem; color: var(--text-heading); }
 header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
-header .meta-row { display: flex; gap: 10px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
-.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); text-decoration: none; }
-.date-tag:hover { border-color: var(--accent); }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
 nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
 nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
-nav a:hover, nav a.active { background: rgba(56,189,248,0.15); color: #7dd3fc; }
-.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; margin-bottom: 12px; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-.card-header h2, .card-header h3 { color: var(--text-heading); margin: 0; font-size: 1rem; }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
 .card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
 h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
 h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
-h4 { font-size: 0.85rem; color: var(--text-muted); margin: 8px 0 4px; }
-h2.h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
 .table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
 table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
 th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
@@ -36,64 +35,67 @@ td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-ali
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: rgba(56,189,248,0.03); }
 p { margin: 4px 0; font-size: 0.86rem; }
-p.subtitle-p { font-weight: 600; color: var(--text-heading); font-size: 0.9rem; margin: 8px 0 4px; }
 blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
-blockquote strong { color: #c7d2fe; }
-ul { margin: 6px 0 6px 18px; font-size: 0.85rem; } li { margin: 2px 0; }
-code { background: rgba(56,189,248,0.1); color: #7dd3fc; padding: 1px 4px; border-radius: 2px; font-size: 0.85em; }
-pre { background: #0a1628; border: 1px solid var(--border); border-radius: 4px; padding: 10px 14px; overflow-x: auto; margin: 8px 0; font-size: 0.78rem; line-height: 1.45; }
-pre code { background: none; padding: 0; color: var(--text); }
-hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
-.tq-card { background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; margin: 8px 0; }
-.tq-card h4 { color: var(--accent); font-size: 0.85rem; margin: 0 0 4px 0; padding: 0; border: none; }
-.tq-card p { font-size: 0.84rem; margin: 0; }
-.mermaid-wrap { background: rgba(10,22,40,0.5); border: 1px solid var(--border); border-radius: 6px; padding: 12px; margin: 10px 0; overflow-x: auto; }
-.mermaid-wrap .mermaid { display: flex; justify-content: center; }
-.badge { font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; font-weight: 600; display: inline-flex; align-items: center; gap: 2px; }
-.badge-alert { background: rgba(239,68,68,0.15); color: #f87171; }
-.badge-warn { background: rgba(245,158,11,0.15); color: #fbbf24; }
-.badge-info { background: rgba(56,189,248,0.15); color: #7dd3fc; }
-.badge-ok { background: rgba(34,197,94,0.15); color: #4ade80; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media(max-width:700px) { .grid-2 { grid-template-columns: 1fr; } }
-.pct-up { color: var(--red); font-weight: 600; } .pct-down { color: var(--green); font-weight: 600; } .vol-high { color: var(--amber); }
-tr.critical-row td { background: rgba(239,68,68,0.05); }
-tr.critical-row td:first-child { border-left: 2px solid var(--red); }
-.toc { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; padding: 8px 12px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
-.toc a { font-size: 0.76rem; color: var(--accent); text-decoration: none; padding: 2px 6px; border-radius: 3px; }
-.toc a:hover { background: rgba(56,189,248,0.1); }
-.footer { margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--border); text-align: center; }
-.footer p { font-size: 0.72rem; color: var(--text-muted); } .footer a { color: var(--accent); opacity: 0.6; } .footer a:hover { opacity: 1; }
-.summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
-.summary-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 10px; text-align: center; }
-.summary-item .value { font-size: 1.25rem; font-weight: 700; color: var(--text-heading); }
-.summary-item .label { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
-.summary-item.alert { border-color: var(--red); } .summary-item.alert .value { color: var(--red); }
-.stock-link { color: var(--text-heading); text-decoration: none; } .stock-link:hover { color: var(--accent); text-decoration: underline; }
-.biz-desc { font-size: 0.8rem; color: var(--text-muted); margin: 8px 0; padding: 8px 12px; background: rgba(56,189,248,0.03); border-left: 2px solid var(--accent); border-radius: 0 4px 4px 0; }
-</style></head><body><div class="container">
-  <header>
-    <h1>中芯国际</h1>
-    <div class="sub">688981.SH | 半导体 | <span class="badge badge-info">国产替代</span> <span class="badge badge-info">AI算力</span></div>
-    <div class="meta-row">
-      <a href="/daily-signal/" class="date-tag">&larr; 主页</a>
-      <a href="/daily-signal/stocks/" class="date-tag">标的目录</a>
-      <span class="date-tag">2026-05-07</span>
-    </div>
-  </header>
-  <div class="biz-desc">中国大陆技术最先进、规模最大的集成电路晶圆代工企业，提供0.35μm-14nm的晶圆代工服务。</div>
-  <h3>投资逻辑追踪 (1 条)</h3>
-  <div class="card" style="margin-bottom:8px">
-    <div class="card-header"><h3 style="margin:0;font-size:0.9rem">制裁扩大下'唯一先进制程国产代工'稀缺性增强。国产AI芯片出货增长→晶圆需求↑。但自身制裁风险未消除。...</h3>
-      <span class="badge badge-ok">活跃</span></div>
-    <p style="font-size:0.83rem">制裁扩大下'唯一先进制程国产代工'稀缺性增强。国产AI芯片出货增长→晶圆需求↑。但自身制裁风险未消除。</p>
-    <div style="margin-top:6px;font-size:0.78rem;color:var(--text-muted)">
-      <strong>关键变量：</strong>季度产能利用率, 先进制程进展, 制裁风险变化, 国产设备导入进度<br>
-      <strong>失效条件：</strong>被纳入更严厉制裁 或 先进制程客户流失<br>
-      <strong>关联催化：</strong>美国制裁扩至华虹, 国产AI芯片Q1业绩集体验证</div>
-    <div style="margin-top:6px"><strong style="font-size:0.78rem;color:var(--text-muted)">体检记录：</strong>
-      <div style="margin:4px 0;font-size:0.78rem">2026-05-06: 制裁→稀缺性↑，国产AI芯片出货→晶圆需求↑，但制裁风险双向存在</div>
-    </div></div>
-  <div class="footer"><p>Mimo &middot; AI 投研助手 | 2026-05-07</p><p><a href="/daily-signal/">主页</a> | <a href="/daily-signal/stocks/">标的目录</a></p></div>
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.06); font-size: 0.82rem; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.06); font-size: 0.82rem; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.06); font-size: 0.82rem; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>中芯国际 <code style="font-size:0.8rem;color:var(--text-muted)">688981.SH</code></h1>
+    <div class="sub">晶圆制造 · 最新价 120.31 · 20260508 · 5日 +5.7% · 20日 +23.8%</div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+<div style="display:flex;flex-wrap:wrap;gap:10px 20px;font-size:0.8rem;margin-bottom:10px">
+<span>👤 董事长：刘训峰</span>
+<span>📅 成立：20040226</span>
+<span>💰 注册资本：80万元</span>
+<span>👥 员工：19952人</span>
+<span>📍 GrandCayman</span>
+<span>🌐 <a href="www.smics.com" target="_blank" class="ticker-link">www.smics.com</a></span>
+</div>
+<div style="margin:8px 0"><strong style="color:var(--text-heading)">主营业务：</strong>主要为客户提供0.35微米至14纳米多种技术节点,不同工艺平台的集成电路晶圆代工及配套服务</div>
+<div style="margin:4px 0;font-size:0.78rem;color:var(--text-muted)"><strong>经营范围：</strong>从事集成电路晶圆代工业务,以及相关的设计服务与IP支持,光掩模制造,凸块加工及测试等配套服务.</div>
+<div style="margin:8px 0;font-size:0.78rem;color:var(--text-muted);line-height:1.6">公司是世界领先的集成电路晶圆代工企业之一，也是中国大陆集成电路制造业领导者，拥有领先的工艺制造能力、产能优势、服务配套，向全球客户提供8英寸和12英寸晶圆代工与技术服务。公司总部位于中国上海，拥有全球化的制造和服务基地，在上海、北京、天津、深圳建有多座8英寸和12英寸晶圆厂。公司还在美国、欧洲、日本和中国台湾设立营销办事处、提供客户服务。</div>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-09</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中芯国际：中芯国际集成电路制造有限公司发行股份购买资产暨关联交易报告书（修订稿）</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">A股代码：688981 A股简称：中芯国际 上市地点：上海证券交易所 港股代码：00981 港股简称：中芯国际 上市地点：香港联合交易所 Semiconductor Manufacturing International Corporation 中芯国际集成电路制造有限公司 发行股份购买资产暨关联交易报告书 （修订稿） 项目 交易对方 国家集成电路产业投资基金股份有限公司 北京集成电路制造和装备股权投资中心（有限合伙） 发行股份购买资产 北京亦庄国际投资发展有限公司 中关村发展集团股份有限公司 北京工业发展投资管理有限公司 独立财务顾问 二〇二六年四月 中芯国际集成电路制造有限公司 发行股份购买资产暨关联交易报告书 声明 本部分所述词语或简称与本报告书“释义”所述词语或简称具有相同含义。 一、上市公司声明 本公司及本公司全体董事、高级管理人员承诺本报告书及其摘要以及本公司 所出具的所有相关申请文件的内容的真实、准确、完整，不存在虚假记载、误导 性陈述或者重大遗漏，并对其真实性、准确性、完整性承担相应的法律责任。 本公司持股5%以上股东、董事、高级管理人员承诺：如本次交易因涉嫌所 提供或...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-09/1225086665.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-09</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中芯国际：中芯国际集成电路制造有限公司发行股份购买资产暨关联交易报告书（摘要）（修订稿）</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">A股代码：688981 A股简称：中芯国际 上市地点：上海证券交易所 港股代码：00981 港股简称：中芯国际 上市地点：香港联合交易所 Semiconductor Manufacturing International Corporation 中芯国际集成电路制造有限公司 发行股份购买资产暨关联交易报告书 摘要（修订稿） 项目 交易对方 国家集成电路产业投资基金股份有限公司 北京集成电路制造和装备股权投资中心（有限合伙） 发行股份购买资产 北京亦庄国际投资发展有限公司 中关村发展集团股份有限公司 北京工业发展投资管理有限公司 独立财务顾问 二〇二六年四月 中芯国际集成电路制造有限公司 发行股份购买资产暨关联交易报告书（摘要） 声明 本部分所述词语或简称与本报告书摘要“释义”所述词语或简称具有相同含 义。 一、上市公司声明 本公司及本公司全体董事、高级管理人员承诺重组报告书及其摘要以及本公 司所出具的所有相关申请文件的内容的真实、准确、完整，不存在虚假记载、误 导性陈述或者重大遗漏，并对其真实性、准确性、完整性承担相应的法律责任。 本公司持股5%以上股东、董事、高级管理人员承诺：如本次...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-09/1225086662.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-09</td><td><span class="tag tag-red">⚠️ 监管问询</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中芯国际：安永华明会计师事务所（特殊普通合伙）关于中芯国际集成电路制造有限公司发行股份购买资产暨关联交易申请的审核问询函中相关财务问题的专项核查意见</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">关于中芯国际集成电路制造有限公司 发行股份购买资产暨关联交易申请的审核问询函中相关财务问题的专项核查意见 上海证券交易所： 安永华明会计师事务所（特殊普通合伙）（以下简称“我们”）审阅了中芯国际集成 电路制造有限公司（以下简称“上市公司”）编制的备考财务报表，包括 2024 年 12 月 31 日及 2025 年 8 月 31 日的备考合并资产负债表，2024 年度及截至 2025 年 8 月 31 日止 8 个月期间的备考合并利润表以及相关备考财务报表附注（以下简称“上市公司备 考合并财务报表”），并于 2025 年 12 月 29 日出具了无保留意见的审阅报告（报告编 号：安永华明（2025）专字第70017693_B03号）。审计了中芯北方集成电路制造（北 京）有限公司（以下简称“标的公司”）编制的财务报表，包括2023年12月31日、2024 年12月31日及2025年8月31日的资产负债表，2023年度、2024年度及截至2025 年8月31日止8个月期间的利润表、权益变动表和现金流量表以及相关财务报表附注 （以下简称“标的公司财务报表”）并于 2025 年 12 月29 日...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-09/1225086657.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-09</td><td><span class="tag tag-red">⚠️ 监管问询</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中芯国际：上海东洲资产评估有限公司关于中芯国际集成电路制造有限公司发行股份购买资产暨关联交易申请的审核问询函中资产评估相关问题回复核查意见</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">上海东洲资产评估有限公司 关于上海证券交易所《关于中芯国际集成电路制造有限公司 发行股份购买资产暨关联交易申请的审核问询函》 （上证科审并购重组）〔2026〕10 号） 资产评估相关问题回复之核查意见 上海东洲资产评估有限公司 二〇二六年四月 上海证券交易所： 按照贵所下发的《关于中芯国际集成电路制造有限公司发行股份购买资产暨 关联交易申请的审核问询函》（上证科审并购重组）〔2026〕10 号）（以下简 称“审核问询函”）的要求，上海东洲资产评估有限公司（以下简称“评估机构”、 或“评估师”）就审核问询函所提问题进行了认真讨论分析，现将相关回复说明 如下。 本审核问询函回复（以下简称“本回复”）中的报告期指 2023 年度、2024 年度和 2025 年 1-8 月；除此之外，如无特别说明，本回复所述的词语或简称与 重组报告书中释义所定义的词语或简称具有相同的含义。在本回复中，若合计数 与各分项数值相加之和在尾数上存在差异，均为四舍五入所致。本回复所引用的 财务数据和财务指标，如无特别说明，指合并报表口径的财务数据和根据该类财 务数据计算的财务指标。 本回复报告的字体代表以下含义： 问...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-09/1225086659.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-09</td><td><span class="tag tag-red">⚠️ 监管问询</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中芯国际：中芯国际集成电路制造有限公司关于发行股份购买资产暨关联交易申请的审核问询函回复</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">中芯国际集成电路制造有限公司 关于 发行股份购买资产暨关联交易申请的 审核问询函回复 独立财务顾问 二〇二六年四月 上海证券交易所： 按照贵所下发的《关于中芯国际集成电路制造有限公司发行股份购买资产暨 关联交易申请的审核问询函》（上证科审（并购重组）〔2026〕10 号）（以下 简称“审核问询函”）的要求，中芯国际集成电路制造有限公司（以下简称“公 司”、“上市公司”或“中芯国际”）及相关中介机构就审核问询函所提问题进 行了认真讨论分析，现将相关回复说明如下。 本审核问询函回复（以下简称“本回复”）中的报告期指2023 年度、2024 年度和 2025 年 1-8 月；除此之外，如无特别说明，本回复所述的词语或简称与 重组报告书中释义所定义的词语或简称具有相同的含义。在本回复中，若合计数 与各分项数值相加之和在尾数上存在差异，均为四舍五入所致。本回复所引用的 财务数据和财务指标，如无特别说明，指合并报表口径的财务数据和根据该类财 务数据计算的财务指标。 本回复报告的字体代表以下含义： 问询函所列问题 黑体（加粗） 对问询函所列问题的回复 宋体 对重组报告书、问询回复的修改、补充 楷体（...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-09/1225086656.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-09</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中芯国际：中芯国际关于发行股份购买资产暨关联交易报告书（修订稿）修订说明的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">A股代码：688981 A股简称：中芯国际 公告编号：2026-009 港股代码：00981 港股简称：中芯国际 中芯国际集成电路制造有限公司 关于发行股份购买资产暨关联交易报告书（修订稿） 修订说明的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 中芯国际集成电路制造有限公司（以下简称“公司”）拟向国家集成电路产 业投资基金股份有限公司、北京集成电路制造和装备股权投资中心（有限合伙）、 北京亦庄国际投资发展有限公司、中关村发展集团股份有限公司及北京工业发展 投资管理有限公司发行股份购买其所合计持有的中芯北方集成电路制造（北京） 有限公司49%的股权（以下简称“本次交易”）。 2026 年 2 月 25 日，公司收到上海证券交易所（以下简称“上交所”）出具 的《关于受理中芯国际集成电路制造有限公司发行股份购买资产申请的通知》（上 证科审（并购重组）〔2026〕7号），并于2026 年3月9日收到上交所出具的《关 于中芯国际集成电路制造有限公司发行股份购买资产暨关联交易申请的审核问 询函》（上证科审...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-09/1225086658.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-09</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中芯国际：上海市锦天城律师事务所关于中芯国际集成电路制造有限公司发行股份购买资产暨关联交易之补充法律意见书（二）</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">上海市锦天城律师事务所 关于中芯国际集成电路制造有限公司 发行股份购买资产暨关联交易 之 补充法律意见书（二） 地址：上海市浦东新区银城中路 501号上海中心大厦 11、12层 电话：021-20511000 传真：021-20511999 邮编：200120 上海市锦天城律师事务所 补充法律意见书（二） 目 录 正 文......................................................................................................................... 6 一、 关于《问询函》问题 1“关于交易目的与协同效应”的核查意见....... 6 6-4-1 上海市锦天城律师事务所 补充法律意见书（二） 上海市锦天城律师事务所 关于中芯国际集成电路制造有限公司 发行股份购买资产暨关联交易之 补充法律意见书（二） 案号：01F20255971 致：中芯国际集成电路制造有限公司 上海市锦天城律师事务所（以下简称“本所”）接受中芯国际集成电路制造 有限公司（以下简称“公司”“上市公司”或“中芯...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-09/1225086661.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-09</td><td><span class="tag tag-red">⚠️ 监管问询</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中芯国际：中芯国际关于发行股份购买资产暨关联交易的审核问询函回复的提示性公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">A股代码：688981 A股简称：中芯国际 公告编号：2026-010 港股代码：00981 港股简称：中芯国际 中芯国际集成电路制造有限公司 关于发行股份购买资产暨关联交易的审核问询函回复 的提示性公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 中芯国际集成电路制造有限公司（以下简称“公司”）拟向国家集成电路产 业投资基金股份有限公司、北京集成电路制造和装备股权投资中心（有限合伙）、 北京亦庄国际投资发展有限公司、中关村发展集团股份有限公司及北京工业发展 投资管理有限公司发行股份购买其所合计持有的中芯北方集成电路制造（北京） 有限公司49%的股权（以下简称“本次交易”）。公司于2026 年3月9日收到上 海证券交易所（以下简称“上交所”）出具的《关于中芯国际集成电路制造有限 公司发行股份购买资产暨关联交易申请的审核问询函》（上证科审（并购重组） 〔2026〕10 号）（以下简称“《审核问询函》”）。公司及相关中介机构根据《审核 问询函》的要求，就相关事项进行了逐项说明和回复，具体内容详见公司于2...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-09/1225086664.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260508</td><td>120.31</td><td class="negative">-4.01%</td><td>708618</td></tr><tr><td>20260507</td><td>125.34</td><td class="positive">+1.82%</td><td>842774</td></tr><tr><td>20260506</td><td>123.10</td><td class="positive">+3.68%</td><td>1292941</td></tr><tr><td>20260430</td><td>118.73</td><td class="positive">+5.57%</td><td>1018383</td></tr><tr><td>20260429</td><td>112.47</td><td class="negative">-1.34%</td><td>514883</td></tr><tr><td>20260428</td><td>114.00</td><td class="negative">-2.21%</td><td>625007</td></tr><tr><td>20260427</td><td>116.58</td><td class="positive">+5.06%</td><td>970296</td></tr><tr><td>20260424</td><td>110.96</td><td class="positive">+4.70%</td><td>910704</td></tr><tr><td>20260423</td><td>105.98</td><td class="negative">-1.75%</td><td>441491</td></tr><tr><td>20260422</td><td>107.87</td><td class="positive">+0.38%</td><td>375217</td></tr><tr><td>20260421</td><td>107.46</td><td class="negative">-0.46%</td><td>372584</td></tr><tr><td>20260420</td><td>107.96</td><td class="positive">+2.59%</td><td>547703</td></tr><tr><td>20260417</td><td>105.23</td><td class="positive">+1.01%</td><td>503755</td></tr><tr><td>20260416</td><td>104.18</td><td class="positive">+0.26%</td><td>393721</td></tr><tr><td>20260415</td><td>103.91</td><td class="positive">+2.35%</td><td>704839</td></tr><tr><td>20260414</td><td>101.52</td><td class="positive">+0.87%</td><td>370911</td></tr><tr><td>20260413</td><td>100.64</td><td class="negative">-0.37%</td><td>351885</td></tr><tr><td>20260410</td><td>101.01</td><td class="positive">+1.29%</td><td>406305</td></tr><tr><td>20260409</td><td>99.72</td><td class="negative">-1.44%</td><td>310717</td></tr><tr><td>20260408</td><td>101.18</td><td class="positive">+5.81%</td><td>544697</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
 </div></body></html>
