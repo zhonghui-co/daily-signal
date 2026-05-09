@@ -256,7 +256,11 @@ footer { text-align: center; padding: 24px; color: var(--text-muted); font-size:
           <span class="body">
             <strong>{{ step.factor }}</strong> → {{ step.sector }}<br>
             <span style="color:var(--text-muted);font-size:0.72rem">{{ step.rationale }}</span><br>
-            <span class="tickers">{{ (step.tickers || []).join(', ') }}</span>
+            <span class="tickers">
+              <span v-for="(tk, i) in (step.tickers || [])" :key="tk">
+                <a :href="'stocks/' + tk + '.html'" class="ticker-link" style="font-size:0.7rem">{{ tickerName(tk) }}</a><span v-if="i < (step.tickers||[]).length - 1">, </span>
+              </span>
+            </span>
           </span>
         </div>
 
@@ -308,7 +312,8 @@ createApp({
       pool: {},
       scanner: {},
       analyst: {},
-      theses: []
+      theses: [],
+      tickerNames: {}
     }
   },
   computed: {
@@ -362,6 +367,9 @@ createApp({
       if (v == null) return '--';
       return (v > 0 ? '+' : '') + v.toFixed(2) + '%';
     },
+    tickerName(code) {
+      return this.tickerNames[code] || code;
+    },
     timeframeLabel(tf) {
       const map = { days: '⚡ 日内', weeks: '📅 数周', months: '🗓️ 数月', structural: '🏗️ 结构性' };
       return map[tf] || '📅 ' + tf;
@@ -383,6 +391,9 @@ createApp({
       this.analyst = await analystRes.json();
       const thesesData = await thesesRes.json();
       this.theses = thesesData.theses || thesesData;
+      // Build ticker→name lookup
+      this.tickerNames = {};
+      (this.pool.stocks || []).forEach(s => { this.tickerNames[s.code] = s.name; });
     } catch(e) {
       console.error('数据加载失败:', e);
     }
