@@ -169,6 +169,12 @@ footer { text-align: center; padding: 24px; color: var(--text-muted); font-size:
         </div>
       </div>
 
+      <!-- Capital Flow Summary -->
+      <div class="card" style="border-left:3px solid var(--amber)" v-if="capitalSummary">
+        <div class="card-header"><h3>💰 资金面</h3></div>
+        <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.6">{{ capitalSummary }}</div>
+      </div>
+
       <!-- Scanner -->
       <h2 class="chain-h2">📡 Scanner 催化扫描</h2>
 
@@ -229,6 +235,15 @@ footer { text-align: center; padding: 24px; color: var(--text-muted); font-size:
           <span :class="['tag', sig.verification === 'confirmed' ? 'tag-green' : 'tag-yellow']">{{ sig.verification === 'confirmed' ? '🟢 已确认' : '🟡 部分确认' }}</span>
           · {{ sig.confidence === 'green' ? '🟢' : sig.confidence === 'yellow' ? '🟡' : '🔴' }} {{ sig.confidence === 'green' ? '高置信' : sig.confidence === 'yellow' ? '中置信' : '低置信' }}
           · {{ timeframeLabel(sig.timeframe) }}
+          <span v-if="sig.capital_backing">
+            · 💰 资金面：
+            <span :class="['tag', sig.capital_backing.level === 'strong' ? 'tag-green' : sig.capital_backing.level === 'moderate' ? 'tag-yellow' : 'tag-red']">
+              {{ sig.capital_backing.level === 'strong' ? '强支撑' : sig.capital_backing.level === 'moderate' ? '有支撑' : '弱支撑' }}
+            </span>
+            <span class="tag-sm" v-if="sig.capital_backing.big_fund">大基金</span>
+            <span class="tag-sm" v-if="sig.capital_backing.national_team_etf">国家队ETF</span>
+            <span class="tag-sm" v-if="sig.capital_backing.recent_bidding">近期中标</span>
+          </span>
         </p>
 
         <div class="block"><strong>变量：</strong>{{ sig.three_questions?.variable }}</div>
@@ -329,6 +344,17 @@ createApp({
       const urls = new Set();
       (this.scanner.signals || []).forEach(s => (s.source_urls || []).forEach(u => urls.add(u)));
       return [...urls];
+    },
+    capitalSummary() {
+      if (!this.analyst.signals) return null;
+      const strong = this.analyst.signals.filter(s => s.capital_backing?.level === 'strong').length;
+      const moderate = this.analyst.signals.filter(s => s.capital_backing?.level === 'moderate').length;
+      if (strong + moderate === 0) return '本期信号暂无大资金面支撑，关注后续发展。';
+      let parts = [];
+      if (strong > 0) parts.push(`${strong} 条信号获强资金支撑（大基金/国家队ETF/近期中标）`);
+      if (moderate > 0) parts.push(`${moderate} 条有部分支撑`);
+      parts.push('A股是资金市，有资金背书的信号持续性强于纯消息驱动。');
+      return parts.join(' · ');
     }
   },
   methods: {
