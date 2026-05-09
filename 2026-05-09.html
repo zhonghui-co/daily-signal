@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mimo 每日信号追踪 — 2026-05-09</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.06); font-size: 0.82rem; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.06); font-size: 0.82rem; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.06); font-size: 0.82rem; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<header>
+    <h1>🦉 Mimo 每日信号追踪</h1>
+    <div class="sub">两条需求链：国产替代 / AI算力 | 池子+逻辑+归因</div>
+    <div class="date-tag">2026-05-09 · 池子 0 只 · 上涨 0 只 · 10:09 CST</div>
+</header>
+<nav><a href="index.html">📊 今日</a> <a href="directory.html">📋 标的目录</a> <a href="2026-05-08.html">05-08</a> <a href="2026-05-07.html">05-07</a> <a href="2026-05-06.html">05-06</a> <a href="2026-05-05.html">05-05</a> <a href="2026-05-04.html">05-04</a> <a href="2026-05-03.html">05-03</a> <a href="2026-05-02.html">05-02</a></nav>
+<div class="card">
+<div class="card-header"><h3>📊 今日概览</h3></div>
+<div style="font-size:0.9rem;margin-bottom:6px">
+  <strong>信号 0 条</strong> · 异动 0 只
+ · 🔥 紧急 0 条
+</div>
+<div style="margin-bottom:4px">
+<span class="tag tag-blue">国产替代 <span class="negative">0.00%</span></span> 
+<span class="tag tag-blue">AI算力 <span class="negative">0.00%</span></span> 
+</div>
+<div>
+</div></div>
+<h2 class="chain-h2">📈 涨跌榜</h2>
+<div class="table-wrap"><table>
+            <tr><th colspan="3" style="color:var(--text-heading)">📈 涨幅榜</th></tr>
+            <tr><th>标的</th><th>分组</th><th>涨跌</th></tr>
+            
+        </table></div><div class="table-wrap"><table>
+            <tr><th colspan="3" style="color:var(--text-heading)">📉 跌幅榜</th></tr>
+            <tr><th>标的</th><th>分组</th><th>涨跌</th></tr>
+            
+        </table></div>
+<div class="mermaid-wrap">
+        <pre class="mermaid">
+graph LR
+    subgraph 链一["链一 · 国产替代"]
+        A1[设备] --> A2[北方华创]
+        A1 --> A3[中微公司]
+        B1[材料] --> B2[光刻胶]
+        B1 --> B3[特气/靶材]
+        C1[制造] --> C2[中芯国际]
+    end
+    subgraph 链二["链二 · AI算力"]
+        D1[GPU] --> D2[寒武纪]
+        D1 --> D3[海光信息]
+        E1[封装] --> E2[通富微电]
+        E1 --> E3[长电科技]
+    end
+    C2 -.-> E2
+    A2 -.-> D3
+        </pre>
+    </div>
+<h2 class="chain-h2">📡 Scanner 催化扫描</h2>
+<p style="color:var(--text-muted);font-size:0.82rem">Scanner 数据未生成</p>
+<h2 class="chain-h2">📡 异动归因</h2>
+<p style="color:var(--text-muted)">今日无异动</p>
+<h2 class="chain-h2">🎯 投资逻辑追踪</h2>
+<div class="table-wrap"><table>
+        <tr><th>ID</th><th>标的</th><th>逻辑</th><th>状态</th></tr>
+        <tr><td>TH-001</td><td><a class="ticker-link" href="stocks/603650.SH.html">彤程新材</a></td><td style="font-size:0.76rem">ArF光刻胶唯一规模放量标的，2025年营收增长800%+，已通过头部晶圆厂验证量产。光刻机管制扩大倒逼光刻胶国产化加速。</td><td><span class="tag tag-green">活跃</span></td></tr><tr><td>TH-002</td><td><a class="ticker-link" href="stocks/688041.SH.html">海光信息</a></td><td style="font-size:0.76rem">Q1营收40亿+68% YoY，2026计划交付25万片DCU(+150%)。国产AI芯片从'烧钱研发'进入'利润兑现'拐点。</td><td><span class="tag tag-green">活跃</span></td></tr><tr><td>TH-003</td><td><a class="ticker-link" href="stocks/688256.SH.html">寒武纪</a></td><td style="font-size:0.76rem">Q1营收28.85亿+159% YoY，经营现金流首次转正(+8.34亿)。国产AI芯片商业验证拐点，从概念切换为成长。</td><td><span class="tag tag-green">活跃</span></td></tr><tr><td>TH-004</td><td><a class="ticker-link" href="stocks/002156.SZ.html">通富微电</a></td><td style="font-size:0.76rem">先进封装双驱动：AMD深度绑定+国产GPU出货量增长。Q1净利+45.5%，2026全年营收目标323亿(+15.7%)。</td><td><span class="tag tag-green">活跃</span></td></tr><tr><td>TH-005</td><td><a class="ticker-link" href="stocks/002371.SZ.html">北方华创</a></td><td style="font-size:0.76rem">制裁扩大+光刻机管制→设备国产替代紧迫性全面升级。全品类平台(刻蚀/薄膜/清洗/炉管)，华虹+中芯均为核心客户。</td><td><span class="tag tag-green">活跃</span></td></tr><tr><td>TH-006</td><td><a class="ticker-link" href="stocks/688012.SH.html">中微公司</a></td><td style="font-size:0.76rem">刻蚀设备国产替代主力，CCP/ICP刻蚀在3D NAND和逻辑制程均为必需品。制裁扩大加速国产设备导入。</td><td><span class="tag tag-green">活跃</span></td></tr><tr><td>TH-007</td><td><a class="ticker-link" href="stocks/600584.SH.html">长电科技</a></td><td style="font-size:0.76rem">国内最大封测厂，先进封装占比提升直接受益于国产GPU出货量增长+HBM封装产能扩张。</td><td><span class="tag tag-green">活跃</span></td></tr><tr><td>TH-008</td><td><a class="ticker-link" href="stocks/688981.SH.html">中芯国际</a></td><td style="font-size:0.76rem">制裁扩大下'唯一先进制程国产代工'稀缺性增强。国产AI芯片出货增长→晶圆需求↑。但自身制裁风险未消除。</td><td><span class="tag tag-green">活跃</span></td></tr><tr><td>TH-009</td><td><a class="ticker-link" href="stocks/688126.SH.html">沪硅产业</a></td><td style="font-size:0.76rem">大硅片涨价Q2兑现，12英寸硅片国产化率仅15%。'十五五'目标80%➔5年5倍空间。但DUV管制限制远期产能扩张。</td><td><span class="tag tag-green">活跃</span></td></tr><tr><td>TH-010</td><td><a class="ticker-link" href="stocks/688082.SH.html">盛美上海</a></td><td style="font-size:0.76rem">清洗设备在成熟制程国产替代率高，华虹被断供→加速成熟制程国产清洗设备导入。</td><td><span class="tag tag-green">活跃</span></td></tr>
+    </table></div>
+<footer>
+    🦉 Mimo · AI 管家 + 投研顾问 | 自动生成于 2026-05-09 10:09 CST<br>
+    仅供研究参考，不构成投资建议 | 🟢已确认 🟡合理推断 🔴待验证
+</footer>
+</div></body></html>
