@@ -229,7 +229,7 @@ footer { text-align: center; padding: 24px; color: var(--text-muted); font-size:
       <h2 class="chain-h2">🔬 Analyst 深度分析</h2>
 
       <div v-for="sig in analyst.signals" :key="sig.id" style="margin-bottom:14px">
-        <h3>#{{ sig.id.substring(1) }} {{ sig.title }}</h3>
+        <h2 style="font-size:1.05rem;margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--border);color:var(--text-heading)">#{{ sig.id.substring(1) }} {{ sig.title }}</h2>
         <p style="color:var(--text-muted);font-size:0.73rem;margin-bottom:6px">
           链{{ sig.chain === 'chain1' ? '一' : sig.chain === 'chain2' ? '二' : '一+二' }} ·
           <span :class="['tag', sig.verification === 'confirmed' ? 'tag-green' : 'tag-yellow']">{{ sig.verification === 'confirmed' ? '🟢 已确认' : '🟡 部分确认' }}</span>
