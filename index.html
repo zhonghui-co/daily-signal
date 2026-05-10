@@ -280,10 +280,16 @@ footer { text-align: center; padding: 24px; color: var(--text-muted); font-size:
           </span>
         </div>
 
-        <div class="alert" v-for="alert in (sig.alerts || [])" :key="alert.title">
-          <span :class="['tag', alert.level === 'high' ? 'tag-red' : 'tag-yellow', 'tag-sm']">{{ alert.level === 'high' ? '⚠' : 'ℹ' }}</span>
-          <strong>{{ alert.title }}</strong><br>
-          <span style="font-size:0.72rem;color:var(--text-muted)">{{ alert.impact }}</span>
+        <div class="alert" v-for="(alert, idx) in (sig.alerts || [])" :key="idx">
+          <template v-if="typeof alert === 'string'">
+            <span :class="['tag', alert.startsWith('⚠️') || alert.includes('风险') ? 'tag-red' : 'tag-blue', 'tag-sm']">{{ alert.startsWith('⚠️') ? '⚠' : '🔮' }}</span>
+            {{ alert }}
+          </template>
+          <template v-else>
+            <span :class="['tag', alert.level === 'high' ? 'tag-red' : 'tag-yellow', 'tag-sm']">{{ alert.level === 'high' ? '⚠' : 'ℹ' }}</span>
+            <strong>{{ alert.title }}</strong><br>
+            <span style="font-size:0.72rem;color:var(--text-muted)">{{ alert.impact }}</span>
+          </template>
         </div>
       </div>
 
