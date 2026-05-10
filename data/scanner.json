@@ -1,102 +1,119 @@
 {
   "date": "2026-05-10",
-  "run_at": "2026-05-10T16:30:00+08:00",
+  "run_at": "2026-05-10T22:30:00+08:00",
   "source": "readhub+brave",
   "signals": [
     {
       "id": "s1",
-      "chain": "chain2",
-      "title": "ASIC架构加速蚕食GPU算力份额：Google TPU 5GW+400亿美元、Broadcom 730亿美元订单积压、Cerebras IPO三重验证",
-      "summary": "AI算力供给侧发生结构性偏移。Google-Anthropic合作扩展至5GW TPU容量+400亿美元投资，Morgan Stanley上调TPU 2027/2028出货量至500万/700万颗。Broadcom AI ASIC年收入200亿美元、订单积压730亿。Cerebras(晶圆级AI芯片)5/9纳斯达克上市，受AI基础设施投资热潮推动。三重信号指向同一结论：通用GPU在AI算力中的份额正被ASIC/TPU等专用架构侵蚀。对A股寒武纪/海光：①远期来看国产ASIC路径为GPU替代提供第二技术路线②但短期GPU仍是主流，A股国产GPU叙事未受直接影响③ASIC竞争加剧可能压低全球GPU溢价预期。",
-      "variable_change": "AI算力架构竞争从GPU独大→GPU+ASIC+TPU多元格局加速形成。算力供给侧结构变量：GPU需求增速未必随整体AI扩张同步提升，专用芯片分流效应需纳入估值模型",
+      "chain": "chain1",
+      "title": "丁薛祥调研华为芯片基础技术实验室：国产替代政策信号从部委级→国家顶层",
+      "summary": "5/8《新闻联播》播出中共中央政治局常委、国务院副总理丁薛祥到访上海华为练秋湖研发中心，与任正非在芯片基础技术研究实验室站立交流。丁薛祥呼吁科技领军企业敢于做从0到1的原创突破，注重从源头和底层解决技术问题。这是迄今国产芯片自主可控的最高级别政治背书——信号层级从部委级(发改委调研AI实验室/商务部阻断令)跃升至国务院常务副总理亲自站台。",
+      "variable_change": "国产替代政策强制力量级跃升：此前政策信号以部委级和产业层为主(发改委郑栅洁调研AI实验室/商务部阻断禁令)，丁薛祥调研华为芯片实验室将半导体自主可控拔高至国务院常务副总理层级，政策背书从产业支持升级为国家意志。信号强度大于之前所有部委级信号。对设备(北方华创/中微公司)/材料(沪硅/安集科技)/制造(中芯国际/华虹)形成系统级政策利好。华为自身非上市，但产业链受益标的宽广，周一(5/12)为首次定价窗口。",
       "source_urls": [
-        "https://finance.sina.com.cn/roll/2026-05-09/doc-inhxhzcc3474632.shtml",
-        "https://finance.sina.com.cn/stock/t/2026-05-09/doc-inhxhqpf1456094.shtml"
+        "https://readhub.cn/topic/8syqfbAIhP4"
       ],
       "priority": "fire",
       "lifecycle": "emerging",
-      "lifecycle_rationale": "ASIC vs GPU架构竞争叙事本周首次获得三重数据验证（Anthropic 5GW TPU+Morgan Stanley量化+ Cerebras IPO）。中文财经媒体5/9开始覆盖此角度，尚属新叙事，<48h。此前市场关注点在GPU供需/HBM紧缺，ASIC分流为增量变量，量比和股价未反映",
-      "related_tickers": ["688256.SH", "688041.SH"],
-      "tags": ["AI算力", "ASIC", "TPU", "架构竞争", "GPU替代"],
+      "lifecycle_rationale": "5/8晚间新闻联播首播，至5/10 22:30约50小时。主流财经媒体(21世纪经济/财联社/证券时报)尚未发布独立分析文章，传播以B站/快科技等非财经渠道为主，媒体覆盖稀疏。市场完全未定价此信号——上一交易日(5/9)半导体设备/材料板块虽多股涨停但驱动逻辑为资金轮动+材料涨价而非此政治信号。48h边界但传播未达positioning标准(量比未异常，需等待周一开盘验证)。",
+      "related_tickers": ["688012.SH", "688361.SH", "688981.SH", "688126.SH", "688019.SH", "600584.SH", "002156.SZ", "688206.SH"],
+      "tags": ["top_level_policy", "domestic_substitution", "equipment", "materials", "manufacturing", "Huawei"],
       "capital_flow_tags": ["big_fund", "national_team"]
     },
     {
       "id": "s2",
       "chain": "chain2",
-      "title": "清华系容芯致远AI Infra数亿元融资：GPU-centric架构重构计算机系统，已适配海光/龙芯/飞腾国产CPU",
-      "summary": "36氪5/10报道，清华系AI基础设施厂商容芯致远完成数亿元融资。核心技术为以GPU为核心重构计算机系统架构，显著降低对CPU性能依赖。已实现适配海光、龙芯、飞腾等国产CPU+主流GPU，构建开放计算生态。这是国产AI基础设施从单一芯片替代→系统级自主创新的标志性事件。对海光信息：生态伙伴+1，GPU-centric架构下CPU需求结构可能改变（从算力CPU→调度CPU），利好海光DCU+CPU双产品线的系统集成定位。",
-      "variable_change": "国产AI生态从芯片级替代（寒武纪/海光替代英伟达）→系统架构级创新（GPU-centric重构计算），竞争维度从跟随→差异化。国内AI Infra投资热度持续，融资事件验证国产替代从政策驱动→市场化资本驱动",
+      "title": "DeepSeek融资500亿信号升级：梁文锋个人出资200亿领投+大基金参与",
+      "summary": "格隆汇5/10报道：DeepSeek首轮融资规模500亿元，创始人梁文锋个人出资200亿元领投，国家集成电路产业投资基金(大基金)、两家头部科技大厂及浙大相关投资机构有望参与。资金将用于6月发布V4.1模型(多模态+企业级工具+MCP服务B端)。若完成将创中国AI史上单轮融资最高纪录。500亿融资直接转化为算力采购需求，对国产GPU(寒武纪/海光)/HBM/先进封装形成需求脉冲。",
+      "variable_change": "信号可信度从传闻/洽谈阶段升级为领投方确认：梁文锋200亿个人领投极大增强融资确定性(此前分析称仍在洽谈阶段非确定性事件)。大基金参与将DeepSeek与国家半导体战略绑定。但需警惕三风险：①寒武纪5/8在融资利好下-5.6%背离②梁文锋自掏200亿可能反映外部VC对国产AI芯片估值分歧③最终交割时间和机构名单未定。信号对寒武纪/海光短期价格驱动有限(已背离)但中长期算力需求逻辑强化。",
       "source_urls": [
-        "https://36kr.com/p/3799984046333186"
+        "https://readhub.cn/topic/8t0ZrYuHPGp"
       ],
       "priority": "fire",
-      "lifecycle": "emerging",
-      "lifecycle_rationale": "5/10当日发布的独家融资新闻（<12h），媒体覆盖极少（仅36氪首发），尚未进入主流财经视野。融资额达数亿元级别，清华系团队背书，是国产AI Infra方向鲜见的系统架构级创新。市场完全未定价",
-      "related_tickers": ["688041.SH"],
-      "tags": ["AI基础设施", "GPU-centric", "国产CPU生态", "融资", "清华系"],
+      "lifecycle": "positioning",
+      "lifecycle_rationale": "5/7首次曝光(彭博→中文财经)→5/8 DeepSeek洽谈阶段确认→5/10梁文锋200亿领投细节。3天多轮传播，覆盖5+主流财经媒体(格隆汇/证券时报/36氪/东方财富)。股价已有显著反应：寒武纪5/6 +14%→5/8 -5.6%(利好出尽)，海光5/7 -0.82%→5/8 -5.36%。价格已部分price in 300-400亿规模预期，但梁文锋200亿+大基金细节为增量，周一(5/12)验证是否存在利好落地即调整效应。",
+      "related_tickers": ["688256.SH", "688041.SH", "600584.SH", "002156.SZ", "688525.SH"],
+      "tags": ["AI_compute_demand", "domestic_GPU", "DeepSeek", "national_fund", "fundraising"],
       "capital_flow_tags": ["national_team"]
     },
     {
       "id": "s3",
       "chain": "chain2",
-      "title": "存储市场「三级跳」量化预测：IDC预计总营收2025年2260亿→2026年5947亿→2027年7904亿美元",
-      "summary": "新浪财经5/9-10连续两篇半导体专题引用IDC预测：AI重新定价存储芯片，市场将实现三级跳——2025年2260亿→2026年5947亿（+163%）→2027年7904亿（+33%）。叠加美光单周暴涨38%市值破8400亿、HBM 2026全年产能售罄。存储从AI配角升级为最大增量板块。对A股：①长电/通富先进封装直接受益于HBM/DRAM量价齐升②兆易创新/NOR Flash/DRAM国产替代受益③存储芯片(长江存储)若上市将成链二最大权重标的。IDC $5947亿量级远超此前市场预期，需验证方法论。",
-      "variable_change": "存储市场增量预期从'高速增长'升级为'三级跳翻倍级爆发'。IDC $5947亿/2026预测远超常规WSTS/SIA预测（此前共识约$2500-3000亿），若验证将重估整个存储+封装产业链估值中枢",
+      "title": "SanDisk HBF挑战HBM垄断：中文媒体跟进，又一个HBM杀手叙事扩散",
+      "summary": "36氪5/8刊发《又一个HBM杀手，曝光》深入分析SanDisk HBF(High Bandwidth Flash)技术：8-16倍于HBM容量+更低成本+相同封装面积，2026H2送样。Benzinga 5/8标题称SanDisk在数月内做到Nvidia花了9年才做成的事。HBF非JEDEC标准，若成功将打破HBM寡占格局(SK海力士/三星/美光)。同时JEDEC标准路线仍为HBM4(2048位接口)/HBM4E推进。两条路线并行：短期HBM紧缺不变，远期HBF开辟替代路径。",
+      "variable_change": "HBM技术格局从单一路线垄断转为架构竞争萌芽：此前市场默认HBM为唯一高带宽存储方案，SanDisk HBF引入NAND架构竞争者。对A股双面影响：①短期(1-3年)HBM紧缺逻辑不变，封装链(长电/通富)需求支撑不受影响②远期(2027+)若HBF成功，HBM寡头定价权松动，存储产业链重构。对国产存储(兆易创新/长江存储/长鑫)：NAND+先进封装路线为HBM替代提供国产化第二路径，降低对韩系HBM依赖。信号10:30 scanner首次识别，本窗口36氪/Benzinga中文传播深化。",
       "source_urls": [
-        "https://www.sina.cn/news/detail/5296471017522225.html",
-        "https://www.tradingkey.com/zh-hant/analysis/stocks/us-stock/261876458-mu-mustock-hbm-dram-skhynix-micron-tradingkey"
+        "https://36kr.com/p/3798541613898754",
+        "https://www.benzinga.com/markets/tech/26/05/52425213/sandisk-nvidia-ai-semiconductor-memory-stocks"
       ],
       "priority": "fire",
       "lifecycle": "positioning",
-      "lifecycle_rationale": "IDC预测数据5/9-10首次出现在中文财经媒体，但底层数据可能来自IDC Q1或Q2报告（2-5天窗口）。美光+HBM售罄已广泛传播进入positioning。IDC三级跳量级异常（翻倍级），为分析师验证的关键对象。尚未出现券商引用此IDC预测批量发研报的共识阶段特征",
-      "related_tickers": ["600584.SH", "002156.SZ", "603986.SH"],
-      "tags": ["存储", "HBM", "IDC预测", "三级跳", "封装"],
-      "capital_flow_tags": ["big_fund", "national_team"]
+      "lifecycle_rationale": "5/7 Reuters首次报道→5/8 Benzinga+36氪跟进→5/10进一步扩散。2-3天传播期，覆盖中英文财经媒体(Reuters/Benzinga/36氪/Yahoo Finance)。量比：存储板块前期已因HBM涨价上涨15-30%，HBF当前为远期叙事(2026H2才送样→2027-2028商业化)，短期对股价驱动有限。属于逻辑框架变量而非即时催化剂。",
+      "related_tickers": ["603986.SH", "600584.SH", "002156.SZ", "688525.SH"],
+      "tags": ["HBM", "storage", "advanced_packaging", "technology_disruption", "HBF", "NAND"],
+      "capital_flow_tags": ["none"]
     },
     {
       "id": "s4",
-      "chain": "chain1",
-      "title": "2026中国光刻机行业概览发布：国产自主攻坚进入关键赛程，全产业链突破进展梳理",
-      "summary": "新浪财经5/9发布《2026年中国光刻机行业概览》，确认光刻机正处自主突破关键阶段，发展速度迅猛。报告梳理产业链上游零部件（光学/光源系统）、中游整机制造、下游芯片应用。此前36氪5/10深度文章指出：①成熟制程产能领先已完成第一步②14nm以下技术突破（SMIC MJ3工艺迭代+国产EUV替代路线+先进封装Chiplet/CoWoS弥补制程差距）决定长期竞争力③2026年政府设定国产硅晶圆使用率>70%目标，光刻胶国产化率从3%向更高比例推进。材料/设备国产替代从定性→定量目标管理。",
-      "variable_change": "国产替代从'方向共识'→'关键赛程定量目标'。硅晶圆70%国产化率+光刻胶3%→X%推进时间表为新的可跟踪量化指标。但两份报告均为行业概览/回顾型文章，非增量催化剂",
+      "chain": "chain2",
+      "title": "科技巨头出资帮SK海力士扩HBM产线：中文财经跟进，军备竞赛从买芯片升级为买产线",
+      "summary": "Yahoo Finance香港5/8确认：Nvidia/Google/Amazon等科技巨头提出直接投资SK海力士HBM产线+资助买ASML光刻机。美光2026年HBM产能几乎全数售罄。三星加速HBM3E认证以追赶SK海力士。HBM供给约束从涨价(80-90%)→售罄(2026全年)→客户出资建产线三级跳，为存储史上最极端供需失衡。中文市场对此行为信号的定价程度仍远低于英文市场。",
+      "variable_change": "HBM供需失衡从产业供需升级为金融资本介入：下游客户愿意承担CAPEX风险以保障HBM供应，标志着HBM从商品采购升级为战略物资。对A股双刃剑：①利好封装链(长电/通富)——HBM扩产推高先进封装需求②利空国产GPU(寒武纪/海光)——全球HBM被科技巨头包揽，国产GPU获HBM难度加大，30万/25万出货目标20-40%下修风险。中文市场对②几乎无认知。",
       "source_urls": [
-        "http://finance.sina.com.cn/wm/2026-05-09/doc-inhxhkfi1523842.shtml",
-        "https://36kr.com/p/3798834887914248"
+        "https://hk.finance.yahoo.com/news/科技巨头连HBM产线都想包下-030004501.html",
+        "https://247wallst.com/investing/2026/05/09/apple-dominated-the-2026-chip-war-googles-partners-are-left-to-buy-scraps/"
       ],
-      "priority": "normal",
-      "lifecycle": "consensus",
-      "lifecycle_rationale": "光刻机国产替代叙事已持续数月，材料/设备方向获大基金+ETF+涨价triple match验证。5/9行业概览为总结性报告非增量催化，无新事件驱动。lifecycle=consensus已是本轮材料/设备方向共识。下一催化剂为5月下旬材料全面涨价窗口或具体技术突破",
-      "related_tickers": ["002371.SH", "688012.SH", "688072.SH", "688126.SH"],
-      "tags": ["光刻机", "光刻胶", "国产替代", "材料", "设备"],
-      "capital_flow_tags": ["big_fund", "national_team"]
+      "priority": "fire",
+      "lifecycle": "positioning",
+      "lifecycle_rationale": "5/8 Reuters首发→5/8-5/10 Yahoo Finance香港/24/7 Wall St/中文财经跟进。2天传播期，量比异常：美光单周+38%市值8400亿→全球资金已大幅定价。A股：长电科技5/8 +4.08%、通富微电-3.25%(背离)。中文市场定价程度显著低于英文市场——HBM售罄对国产GPU供应的下行风险完全未被中文市场认知。positioning阶段，距离consensus还需2-3家券商研报覆盖。",
+      "related_tickers": ["600584.SH", "002156.SZ", "688256.SH", "688041.SH"],
+      "tags": ["HBM", "supply_constraint", "advanced_packaging", "GPU_risk", "CAPEX"],
+      "capital_flow_tags": ["none"]
     },
     {
       "id": "s5",
-      "chain": "chain2",
-      "title": "xAI Grok预训练负责人庄钧堂离职+单日多人离职浪潮：核心人才链崩溃深化，Colossus 1(22万GPU)归Anthropic",
-      "summary": "xAI瓦解从'不再独立运营'→'核心人才链崩溃'深化。智东西5/10报道Grok预训练负责人庄钧堂（曾在OpenAI/xAI各两年）离职，同日多名员工宣布离职，累计超80人。马斯克驳斥'Grok将死'传闻但新模型训练正常进行。Colossus 1(22万GPU)已归Anthropic。影响：①AI人才向OpenAI/Anthropic/Google集中→大模型头部效应强化②xAI剩余GPU若释放→全球GPU供给边际微松但量级小③A股传导路径长而间接。与10:30扫描保持一致性，无新变量。",
-      "variable_change": "无增量变化。10:30已fire此信号，16:30窗口仅做追踪确认。人才链崩溃持续但速度未加速，Colossus 1归属Anthropic已为确定性事件。对A股国产GPU无直接传导",
+      "chain": "chain1",
+      "title": "国产硅晶圆使用率超70%政策目标：从能用到批量用的质量关",
+      "summary": "36氪5/9深度分析《国产芯片十二年：从0到22%全球份额》指出：2026年中国政府设定国产硅晶圆使用率超70%目标，这是从能用到批量用的质量关。光刻胶国产化率从3%向更高比例推进的时间表是观察材料替代的关键指标。同时指出真正决定中国半导体长期竞争力的三个变量：14nm以下技术突破进度、材料和设备的质量替代速度、先进封装能否弥补制程差距。",
+      "variable_change": "材料国产替代从方向共识升级为量化目标：70%硅晶圆使用率为首次明确的量化KPI。此前材料板块上涨驱动为涨价(靶材60-70%)+大基金二期(2042亿)+ETF(85亿)三重共振，70%政策目标增加了第四根支柱——政府定量考核。对沪硅产业/立昂微/中环股份等硅片厂商构成中期(2026全年)目标锚定，对光刻胶厂商(彤程新材/南大光电/上海新阳)提供替代进度加速预期。",
       "source_urls": [
-        "https://www.gplp.cn/archives/148833"
+        "https://36kr.com/p/3798834887914248",
+        "https://caifuhao.eastmoney.com/news/20260503081657111831740"
       ],
       "priority": "normal",
       "lifecycle": "positioning",
-      "lifecycle_rationale": "5/9-10 xAI人才链新闻已扩散至智东西/GPLP等多源覆盖。由10:30的emerging/fire→16:30更新为positioning/normal。新闻已传开，A股传导路径长，不构成直接交易信号",
-      "related_tickers": [],
-      "tags": ["xAI", "人才流失", "Anthropic", "GPU释放"],
-      "capital_flow_tags": ["none"]
+      "lifecycle_rationale": "材料板块已处于consensus阶段(5/9 analyst确认triple match=涨价+大基金+ETF)，70%硅晶圆目标为新增量化维度。该目标在36氪5/9分析文章中首次被系统阐述，但政策本身(十五五规划)先前已有提及。属于老政策新解读——为正在positioning→consensus过渡中的材料板块注入新证据。非独立催化信号而是confirmatory signal。",
+      "related_tickers": ["688126.SH", "605358.SH", "002129.SZ", "603650.SH", "300346.SZ", "688019.SH"],
+      "tags": ["materials", "silicon_wafer", "photoresist", "domestic_substitution", "policy_target"],
+      "capital_flow_tags": ["big_fund", "national_team"]
+    },
+    {
+      "id": "s6",
+      "chain": "chain1+chain2",
+      "title": "五月科技行情框架：AI存储资本开支+先进制程国产替代双轮驱动确立",
+      "summary": "36氪5/6深度分析指出：本轮半导体设备行情驱动逻辑已从2019-2020年的全球缺芯+成熟制程扩产升级为AI存储资本开支爆发+先进制程国产替代加速双轮驱动。全球科技巨头2026年合计超7000亿美元AI数据中心CAPEX+十五五芯片自给率突破45%目标形成双引擎。与上一轮周期相比核心差异：下游驱动力从消费电子→AI数据中心，国产替代从0→1突破升级为规模化替代，估值锚点从跟随全球周期→独立国产替代溢价。",
+      "variable_change": "行情叙事从单轮驱动升级为双轮驱动框架：此前市场或关注AI算力需求或关注国产替代，二者各自独立。36氪框架将两个叙事合并为同一驱动力——AI资本开支拉动全球半导体扩张+国产替代抢占增量份额→A股半导体享受双重Beta。对板块整体估值中枢上移有支撑作用，但属于后验框架总结对边际定价贡献低。",
+      "source_urls": [
+        "https://36kr.com/p/3797517281598464",
+        "https://finance.sina.com.cn/roll/2026-05-07/doc-inhwzmmr2907303.shtml"
+      ],
+      "priority": "normal",
+      "lifecycle": "consensus",
+      "lifecycle_rationale": "双轮驱动框架为市场共识级叙事：5/6证券时报报道成交额超3万亿+半导体全线大涨，5/7新浪财经基金经理提醒勿押注单一赛道。多家券商(高盛/东吴/广发)已发布类似框架研报。媒体覆盖超过5家，股价已充分反应(寒武纪月内+27.5%/海光+23.5%)。属于后验框架总结，对边际定价贡献低，但对新入场资金有叙事引导作用。",
+      "related_tickers": ["688256.SH", "688041.SH", "688981.SH", "688012.SH", "688361.SH", "600584.SH"],
+      "tags": ["sector_framework", "AI_CAPEX", "domestic_substitution", "valuation", "dual_driver"],
+      "capital_flow_tags": ["big_fund", "national_team"]
     }
   ],
   "stats": {
-    "chain1_count": 1,
+    "chain1_count": 3,
     "chain2_count": 4,
-    "fire_count": 3,
+    "fire_count": 4,
     "by_lifecycle": {
-      "emerging": 2,
-      "positioning": 2,
+      "emerging": 1,
+      "positioning": 4,
       "consensus": 1,
       "exhausted": 0
     },
-    "with_capital_backing": 4
+    "with_capital_backing": 3
   }
 }
