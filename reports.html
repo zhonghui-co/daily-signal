@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>日报列表 — Mimo 每日信号</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 800px; margin: 0 auto; padding: 16px; }
+header { padding: 8px 0 16px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+header h1 { font-size: 1.3rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+nav { margin-bottom: 20px; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.8rem; padding: 4px 10px; border-radius: 4px; }
+nav a:hover { background: rgba(56,189,248,0.1); }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 8px 12px; border-bottom: 1px solid var(--border); font-size: 0.8rem; }
+td { padding: 8px 12px; border-bottom: 1px solid rgba(30,58,95,0.3); font-size: 0.85rem; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+footer { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="container">
+<nav><a href="index.html">← 回到日报</a> | <a href="directory.html">📋 标的目录</a></nav>
+<header>
+  <h1>📅 历史日报列表</h1>
+  <div class="sub">共 5 期</div>
+</header>
+<div class="card">
+  <table>
+    <tr><th>日期</th><th>星期</th><th>查看</th></tr>
+      <tr><td><a href="2026-05-10.html">📄 2026-05-10</a></td><td>周日</td><td>2026年05月10日</td></tr>
+      <tr><td><a href="2026-05-09.html">📄 2026-05-09</a></td><td>周六</td><td>2026年05月09日</td></tr>
+      <tr><td><a href="2026-05-08.html">📄 2026-05-08</a></td><td>周五</td><td>2026年05月08日</td></tr>
+      <tr><td><a href="2026-05-07.html">📄 2026-05-07</a></td><td>周四</td><td>2026年05月07日</td></tr>
+      <tr><td><a href="2026-05-06.html">📄 2026-05-06</a></td><td>周三</td><td>2026年05月06日</td></tr>
+  </table>
+</div>
+<footer>🦉 Mimo · AI 管家 + 投研顾问 | 自动生成</footer>
+</div>
+</body>
+</html>
