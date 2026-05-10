@@ -63,7 +63,7 @@ h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
 .tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
 .tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
 .tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
-.tag-sm { display: inline-block; padding: 1px 5px; border-radius: 3px; font-size: 0.65rem; font-weight: 500; margin-right: 2px; background: rgba(30,58,95,0.5); color: var(--text-muted); }
+.tag-sm { display: inline-block; padding: 1px 5px; border-radius: 3px; font-size: 0.65rem; font-weight: 500; margin-right: 2px; }
 
 /* Tables */
 .table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
@@ -256,9 +256,9 @@ footer { text-align: center; padding: 24px; color: var(--text-muted); font-size:
             <span :class="['tag', sig.capital_backing.level === 'strong' ? 'tag-green' : sig.capital_backing.level === 'moderate' ? 'tag-yellow' : 'tag-red']">
               {{ sig.capital_backing.level === 'strong' ? '强支撑' : sig.capital_backing.level === 'moderate' ? '有支撑' : '弱支撑' }}
             </span>
-            <span class="tag-sm" v-if="sig.capital_backing.big_fund">大基金</span>
-            <span class="tag-sm" v-if="sig.capital_backing.national_team_etf">国家队ETF</span>
-            <span class="tag-sm" v-if="sig.capital_backing.recent_bidding">近期中标</span>
+            <span class="tag-sm tag-red" v-if="sig.capital_backing.big_fund">大基金</span>
+            <span class="tag-sm tag-blue" v-if="sig.capital_backing.national_team_etf">国家队ETF</span>
+            <span class="tag-sm tag-green" v-if="sig.capital_backing.recent_bidding">近期中标</span>
           </span>
         </p>
 
