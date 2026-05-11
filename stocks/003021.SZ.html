@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>兆威机电 (003021.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>兆威机电 <code style="font-size:0.8rem;color:var(--text-muted)">003021.SZ</code></h1>
+    <div class="sub">🤖电机驱动 · 最新价 102.45 · 20260511 · 5日 +8.8% · 20日 +4.0%</div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">兆威机电：2026年一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">深圳市兆威机电股份有限公司2026年第一季度报告 证券代码：003021 证券简称：兆威机电 公告编号：2026-029 深圳市兆威机电股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 重要内容提示： 1.董事会及董事、高级管理人员保证季度报告的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担 个别和连带的法律责任。 2.公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）声明：保证季度报告中财务信息的真实、准确、 完整。 3.第一季度财务会计报告是否经审计 □是 否 一、主要财务数据 （一） 主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是 否 本报告期比上年同期增减 本报告期 上年同期 （%） 营业收入（元） 357,477,104.69 367,530,437.85 -2.74% 归属于上市公司股东的净利润（元） 40,951,727.67 54,709,914.92 -25.15% 归属于上市公司股东的扣除非经常性损益的净利 32,139,13...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225217073.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-22</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">兆威机电：关于公司拟参与竞买国有土地使用权并投资建设项目的进展公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：003021 证券简称：兆威机电 公告编号：2026-027 深圳市兆威机电股份有限公司 关于公司拟参与竞买国有土地使用权并投资建设项目的进展公告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有 虚假记载、误导性陈述或重大遗漏。 一、交易概述 深圳市兆威机电股份有限公司（以下简称“公司”）于2026 年4 月9日召 开公司第三届董事会第十八次会议，审议通过《关于公司拟参与竞买国有土地使 用权并投资建设项目的议案》，同意公司拟参与竞买国有土地使用权并投资建设 灵巧手及微型驱动系统产业园项目（以下简称“本次投资”），项目投资总额约 为8亿元人民币（含建设用地使用权出让价款，最终项目投资总额以实际投资为 准），具体内容详见公司2026 年4月10 日披露于巨潮信息网的《关于公司拟参 与竞买国有土地使用权并投资建设项目的公告》（公告编号：2026-026）。 二、交易进展情况 公司已于近日与深圳市宝安区工业和信息化局签署了《宝安区重点产业类项 目产业发展监管协议》（以下简称《监管协议》或《本协议》）。 三、《监管协议》主要内容 甲方：深圳市宝安区工业和信息化局 乙方：...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-22/1225135453.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-10</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">兆威机电：关于公司拟参与竞买国有土地使用权并投资建设项目的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：003021 证券简称：兆威机电 公告编号：2026-026 深圳市兆威机电股份有限公司 关于公司拟参与竞买国有土地使用权并投资建设项目的公告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有 虚假记载、误导性陈述或重大遗漏。 深圳市兆威机电股份有限公司（以下简称“公司”）于2026 年4 月9日召 开公司第三届董事会第十八次会议，审议通过《关于公司拟参与竞买国有土地使 用权并投资建设项目的议案》，同意公司拟参与竞买国有土地使用权并投资建设 灵巧手及微型驱动系统产业园项目（以下简称“本次投资”）。现将相关情况公 告如下： 一、交易概述 基于公司业务发展需求，以及整体生产经营规划安排，并充分利用公司在微 型传动和微型驱动系统领域的领先优势，公司计划参与竞买深圳市宝安区建设用 地A317-0592 宗地，并投资建设灵巧手及微型驱动系统产业园项目，扩大公司机 器人板块的业务布局，优化公司整体产能分布，完善产业布局，进一步提升公司 在微型驱动和灵巧手领域的行业地位与市场占有率。 公司拟参与竞拍深圳市规划和自然资源局宝安管理局以挂牌方式出让的国 有建设用地使用权（宗地代码...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-10/1225087038.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-31</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">兆威机电：2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">深圳市兆威机电股份有限公司2025年年度报告摘要 证券代码：003021 证券简称：兆威机电 公告编号：2026-016 深圳市兆威机电股份有限公司 2025 年年度报告摘要 一、重要提示 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规划，投资者应当到证监 会指定媒体仔细阅读年度报告全文。 所有董事均已出席了审议本报告的董事会会议。 非标准审计意见提示 □适用 不适用 董事会审议的报告期利润分配预案或公积金转增股本预案 适用 □不适用 是否以公积金转增股本 □是 否 公司经本次董事会审议通过的利润分配预案为：以董事会审议该议案当日的总股本267,482,700股为基数，向全体 股东每10股派发现金红利3.85元（含税），送红股0股（含税），不以公积金转增股本。 董事会决议通过的本报告期优先股利润分配预案 □适用 不适用 二、公司基本情况 1、公司简介 兆威机电（A股） 003021（A股） 股票简称 股票代码 兆威機電（H股） 2692（H股） 股票上市交易所 深圳证券交易所、香港联合交易所 变更前的股票简称（如有） 无 联系人和联系方式 董事...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225057986.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-31</td><td><span class="tag tag-purple">🏛️ 董事会</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">兆威机电：董事会薪酬与考核委员会关于回购注销2024年股票期权与限制性股票激励计划部分限制性股票及注销部分股票期权的核查意见</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">深圳市兆威机电股份有限公司 董事会薪酬与考核委员会 关于回购注销 2024 年股票期权与限制性股票激励计划部分 限制性股票及注销部分股票期权的核查意见 深圳市兆威机电股份有限公司（以下简称“公司”）于2026 年3月30 日召 开第三届董事会第十七次会议，审议通过了《关于回购注销部分限制性股票及注 销部分股票期权的议案》，依据《上市公司股权激励管理办法》等有关法律、法 规、规范性文件和《深圳市兆威机电股份有限公司 2024 年股票期权与限制性股 票激励计划（草案）》（以下简称《激励计划（草案）》）的规定，董事会薪酬与考 核委员会对公司本次拟回购注销股票期权与限制性股票的数量及涉及的激励对 象名单进行核查，并发表核查意见如下： 经核查本次回购注销所涉股数及人员名单，董事会薪酬与考核委员会认为， 公司2024年股票期权与限制性股票激励计划中部分激励对象已离职，不再具备 激励对象资格，根据《上市公司股权激励管理办法》等相关法律、法规、规范性 文件及《激励计划（草案）》）的相关规定，董事会薪酬与考核委员会同意公司以 21.35元/股回购注销离职激励对象的限制性股票共计24,800股并注销离职激...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225058000.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+<div class="card"><h3>💬 投资者调研</h3>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260403</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">路演活动 ·  · 机构：兆威机电：2025年度网上业绩说明会投资者关系活动记录表</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">交流内容及具体 公司于2026 年4月3日（星期五）15:00—16:30 在全景网 问答记录 “投资者关系互动平台”（网址：https://ir.p5w.net）举行了公 司 2025 年度网上业绩说明会，本次业绩说明会采用网络远程文 字交流方式召开，问答环节主要内容如下： Q1：领导，您好！我来自四川大决策，请问，公司汽车业务保 持高增长，能否介绍主要增量产品、核心客户结构，以及 2026 年</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260401</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：兆威机电：2026年4月1日投资者关系活动记录</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">交流内容及具体 一、基本情况介绍 问答记录 2025 年度，公司实现营收 17.16 亿元，同比增长 12.52%，净利 润2.54 亿元，同比增长12.97%，扣非后净利润2.25 亿元，同比 增长22.60%，综合毛利率33.66%，同比提升2.23 个百分点。公 司始终秉承稳健经营，持续发展的理念，持续提升公司产品竞争 力，助力公司在相关业务板块的拓展，推进相关项目落地，各项 业务稳步推进中</div></div>
+</div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260511</td><td>102.45</td><td class="negative">-0.87%</td><td>61668</td></tr><tr><td>20260508</td><td>103.35</td><td class="positive">+2.73%</td><td>78761</td></tr><tr><td>20260507</td><td>100.60</td><td class="positive">+3.15%</td><td>49056</td></tr><tr><td>20260506</td><td>97.53</td><td class="positive">+0.97%</td><td>38610</td></tr><tr><td>20260430</td><td>96.59</td><td class="positive">+2.86%</td><td>39892</td></tr><tr><td>20260429</td><td>93.90</td><td class="positive">+1.24%</td><td>33039</td></tr><tr><td>20260428</td><td>92.75</td><td class="negative">-7.42%</td><td>79466</td></tr><tr><td>20260427</td><td>100.18</td><td class="positive">+4.03%</td><td>55834</td></tr><tr><td>20260424</td><td>96.30</td><td class="negative">-1.27%</td><td>28833</td></tr><tr><td>20260423</td><td>97.54</td><td class="negative">-3.12%</td><td>47017</td></tr><tr><td>20260422</td><td>100.68</td><td class="positive">+0.40%</td><td>28577</td></tr><tr><td>20260421</td><td>100.28</td><td class="negative">-1.25%</td><td>29844</td></tr><tr><td>20260420</td><td>101.55</td><td class="negative">-0.16%</td><td>31142</td></tr><tr><td>20260417</td><td>101.71</td><td class="negative">-0.18%</td><td>33572</td></tr><tr><td>20260416</td><td>101.89</td><td class="positive">+1.98%</td><td>39056</td></tr><tr><td>20260415</td><td>99.91</td><td class="negative">-1.16%</td><td>33830</td></tr><tr><td>20260414</td><td>101.08</td><td class="positive">+1.46%</td><td>29290</td></tr><tr><td>20260413</td><td>99.63</td><td class="negative">-0.17%</td><td>26287</td></tr><tr><td>20260410</td><td>99.80</td><td class="positive">+2.39%</td><td>37808</td></tr><tr><td>20260409</td><td>97.47</td><td class="negative">-1.66%</td><td>24621</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

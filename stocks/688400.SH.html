@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>凌云光 (688400.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>凌云光 <code style="font-size:0.8rem;color:var(--text-muted)">688400.SH</code></h1>
+    <div class="sub">🤖传感感知 · 最新价 66.45 · 20260511 · 5日 +31.7% · 20日 +41.5%</div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-purple">👤 人事变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">凌云光：关于会计估计变更的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688400 证券简称：凌云光 公告编号：2026-031 凌云光技术股份有限公司 关于会计估计变更的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈 述或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 重点内容提示：  本次会计估计变更不会对公司的财务状况、经营成果和现金流量产生重 大影响，亦不存在损害公司及股东利益的情况。 一、本次会计估计变更概述 2026 年4月27 日，公司召开第二届董事会第二十八次会议全票通过了《关 于会计估计变更的议案》。因公司已完成对 JAIA/S（以下简称“JAI”）100% 股权收购，为有序衔接双方差异，特进行本次会计估计变更。本次会计估计变更 无需提交公司股东会审议。 二、本次会计估计变更具体情况及对公司的影响 （一）会计估计变更原因 公司于2025 年完成了对JAIA/S 100%股权收购，JAI 成为公司全资子公司， 纳入公司会计报表合并范围。鉴于公司与JAI固定资产折旧年限、无形资产摊销 年限存在差异，为确保披露的折旧与摊销信息的有序衔接，结合公司及JAI 固定 资产、无形资产实际情况，拟将...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225251958.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">凌云光：关于公司股东减持股份计划的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688400 证券简称：凌云光 公告编号：2026-035 凌云光技术股份有限公司 关于公司股东减持股份计划的公告 本公司董事会、全体董事及相关股东保证本公告内容不存在任何虚假记载、 误导性陈述或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律 责任。 重要内容提示：  本次减持股东持股的基本情况 截至本公告披露日，凌云光技术股份有限公司（以下简称“公司”）股东富联 裕展科技（深圳）有限公司（以下简称“富联裕展”）持有公司股份10,161,081 股， 占公司总股本的2.12%。 上述股份均为公司 IPO 前富联裕展通过战略投资取得的股份，该部分股份 已于2023 年7月28 日上市流通。  减持计划的主要内容 公司股东富联裕展拟通过集中竞价交易方式减持其所持有的公司股份合计 不超过 3,200,000 股，减持比例合计不超过公司股份总数的 0.67%（若减持计划 期间公司有送股、资本公积转增股本、配股等股份变动事项，上述拟减持比例不 变，股份数量将相应进行调整），自本减持计划公告之日起15 个交易日后的2个 月内（2026 年5月26 日至2026 年7月25...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225251914.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">凌云光：2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">凌云光技术股份有限公司2025年年度报告 公司代码：688400 公司简称：凌云光 凌云光技术股份有限公司 2025 年年度报告 1/280 凌云光技术股份有限公司2025年年度报告 重要提示 一、本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 二、公司上市时未盈利且尚未实现盈利 □是 √否 三、重大风险提示 公司已在本报告中详细阐述公司在生产经营过程中可能面临的各种风险及应对措施，敬请查阅本 报告“第三节管理层讨论与分析”之“四、风险因素”。 四、公司全体董事出席董事会会议。 五、天健会计师事务所（特殊普通合伙）为本公司出具了标准无保留意见的审计报告。 六、公司负责人姚毅、主管会计工作负责人顾宝兴及会计机构负责人（会计主管人员）解利红声 明：保证年度报告中财务报告的真实、准确、完整。 七、董事会决议通过的本报告期利润分配预案或公积金转增股本预案 公司拟向全体股东每10股派发现金红利0.85元（含税），不进行资本公积转增股本，不送红股 。截至本报告披露日，公司总股本479,230,395股，...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225251946.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">凌云光：2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">凌云光技术股份有限公司2025年年度报告摘要 公司代码：688400 公司简称：凌云光 凌云光技术股份有限公司 年年度报告摘要 2025 凌云光技术股份有限公司2025年年度报告摘要 第一节 重要提示 1、 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规 划，投资者应当到www.sse.com.cn网站仔细阅读年度报告全文。 2、 重大风险提示 公司已在本报告中详细阐述公司在生产经营过程中可能面临的各种风险及应对措施，敬请查阅本 报告“第三节管理层讨论与分析”之“四、风险因素”。 3、 本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 4、 公司全体董事出席董事会会议。 5、 天健会计师事务所（特殊普通合伙）为本公司出具了标准无保留意见的审计报告。 6、 公司上市时未盈利且尚未实现盈利 □是 √否 7、 董事会决议通过的本报告期利润分配预案或公积金转增股本预案 公司拟向全体股东每10股派发现金红利0.85元（含税），不进行资本公积转增股本，不送红股 。截至本报...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225251967.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">凌云光：关于将募集资金无息借款部分转为对全资子公司投资的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688400 证券简称：凌云光 公告编号：2026-029 凌云光技术股份有限公司 关于将募集资金无息借款部分转为对 全资子公司投资的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈 述或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 凌云光技术股份有限公司（以下简称“公司”）于2026 年4月27 日召开第 二届董事会第二十八次会议审议通过了《关于将募集资金无息借款部分转为对全 资子公司投资的议案》，同意将公司对全资子公司苏州凌云光工业智能技术有限 公司（以下简称“苏州光工业”）提供的人民币 30,000 万元的募集资金无息借 款转为对苏州光工业投资。现将相关情况公告如下： 一、募集资金基本情况 根据中国证券监督管理委员会《关于同意凌云光技术股份有限公司首次公开 发行股票注册的批复》（证监许可〔2022〕719 号）核准同意，公司首次公开发 行人民币普通股（A 股）9,000 万股（超额配售选择权行使前），每股发行价格 为21.93 元。募集资金总额为人民币197,370.00 万元，扣除发行费用（不含增值 税）人民币 16,841....</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225251984.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260511</td><td>66.45</td><td class="negative">-0.15%</td><td>307076</td></tr><tr><td>20260508</td><td>66.55</td><td class="negative">-0.21%</td><td>263686</td></tr><tr><td>20260507</td><td>66.69</td><td class="positive">+7.24%</td><td>334992</td></tr><tr><td>20260506</td><td>62.19</td><td class="positive">+4.84%</td><td>407654</td></tr><tr><td>20260430</td><td>59.32</td><td class="positive">+20.01%</td><td>401628</td></tr><tr><td>20260429</td><td>49.43</td><td class="positive">+7.55%</td><td>304579</td></tr><tr><td>20260428</td><td>45.96</td><td class="negative">-1.79%</td><td>106351</td></tr><tr><td>20260427</td><td>46.80</td><td class="positive">+0.28%</td><td>98306</td></tr><tr><td>20260424</td><td>46.67</td><td class="negative">-0.91%</td><td>115024</td></tr><tr><td>20260423</td><td>47.10</td><td class="negative">-6.81%</td><td>211844</td></tr><tr><td>20260422</td><td>50.54</td><td class="positive">+2.81%</td><td>177019</td></tr><tr><td>20260421</td><td>49.16</td><td class="positive">+2.59%</td><td>149733</td></tr><tr><td>20260420</td><td>47.92</td><td class="negative">-2.08%</td><td>125301</td></tr><tr><td>20260417</td><td>48.94</td><td class="positive">+1.47%</td><td>153667</td></tr><tr><td>20260416</td><td>48.23</td><td class="positive">+2.12%</td><td>112705</td></tr><tr><td>20260415</td><td>47.23</td><td class="negative">-2.62%</td><td>139588</td></tr><tr><td>20260414</td><td>48.50</td><td class="positive">+1.81%</td><td>216463</td></tr><tr><td>20260413</td><td>47.64</td><td class="negative">-0.13%</td><td>152792</td></tr><tr><td>20260410</td><td>47.70</td><td class="positive">+3.61%</td><td>297545</td></tr><tr><td>20260409</td><td>46.04</td><td class="positive">+1.86%</td><td>175929</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>禾川科技 (688320.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>禾川科技 <code style="font-size:0.8rem;color:var(--text-muted)">688320.SH</code></h1>
+    <div class="sub">🤖电机驱动 · 最新价 38.37 · 20260511 · 5日 +14.5% · 20日 +22.2%</div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-05-01</td><td><span class="tag tag-purple">👤 人事变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">禾川科技：浙江禾川科技股份有限公司关于变更投资者联系方式的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688320 证券简称：禾川科技 公告编号：2026-035 浙江禾川科技股份有限公司 关于变更投资者联系方式的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 浙江禾川科技股份有限公司（以下简称“禾川科技”或“公司”）为进一步 做好投资者关系管理工作，便于与广大投资者的沟通交流，现将公司联系方式变 更如下： 变更前： 投资者联系电话：0570-7117218 变更后： 投资者联系电话：0570-7117288 变更后的联系方式自2026年5月1日起启用，公司原投资者联系电话停止使用。 除上述变更外，公司其他联系方式均保持不变。 特此公告。 浙江禾川科技股份有限公司 董事会 2026年5月1日</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-05-01/1225272034.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-green">💰 分红派息</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">禾川科技：浙江禾川科技股份有限公司2025年度利润分配方案以及2026年中期分红安排的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688320 证券简称：禾川科技 公告编号：2026-023 浙江禾川科技股份有限公司 关于 年度利润分配方案及 年中期分红安排 2025 2026 的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 重要内容提示： 1、浙江禾川科技股份有限公司（以下简称“公司”）2025 年度利润分配方案 为：不分配利润，不派发现金红利，不以资本公积转增股本，不送红股。 2、公司2025 年年度不分配利润，主要是基于公司发展阶段、盈利水平及未 来发展需求的综合考虑。 3、公司2025 年度利润分配方案已经公司第五届董事会第十九次会议、第五 届董事会审计委员会第九次会议审议通过，尚需提交2025 年年度股东会审议。 4、本次利润分配预案的实施不会触及《上海证券交易所科创板股票上市规 则》第12.9.1 条第一款第（八）项规定的可能被实施其他风险警示的情形。 一、利润分配方案内容 （一）利润分配方案的具体内容 经天健会计师事务所（特殊普通合伙）审计，2025 年度，公司实现归属于母 公司所有者的净利润为...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225224892.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">禾川科技：浙江禾川科技股份有限公司2026年第一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">浙江禾川科技股份有限公司2026年第一季度报告 证券代码：688320 证券简称：禾川科技 浙江禾川科技股份有限公司 年第一季度报告 2026 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 重要内容提示 公司董事会及董事、高级管理人员保证季度报告内容的真实、准确、完整，不存在虚假记载、误 导性陈述或重大遗漏，并承担个别和连带的法律责任。 公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）保证季度报告中财务信息 的真实、准确、完整。 第一季度财务报表是否经审计 □是 √否 一、主要财务数据 (一)主要会计数据和财务指标 单位：万元 币种：人民币 本报告期比上年同 项目 本报告期 上年同期 期增减变动幅度(%) 营业收入 27,242.93 22,950.27 18.70 利润总额 -797.03 -2,884.10 不适用 归属于上市公司股东的净利润 -562.96 -2,693.91 不适用 归属于上市公司股东的扣除非经常 -1,352.41 -4,214.22 不适用 性损益的净利润...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225224806.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">禾川科技：浙江禾川科技股份有限公司2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">浙江禾川科技股份有限公司2025年年度报告 公司代码：688320 公司简称：禾川科技 浙江禾川科技股份有限公司 2025 年年度报告 1/282 浙江禾川科技股份有限公司2025年年度报告 重要提示 一、本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 二、公司上市时未盈利且尚未实现盈利 □是 √否 三、重大风险提示 公司已在本报告中详细阐述公司在经营过程中可能面临的各种风险及应对措施，敬请查阅本报告 第三节“管理层讨论与分析”之四“风险因素”。 四、公司全体董事出席董事会会议。 五、 天健会计师事务所（特殊普通合伙）为本公司出具了标准无保留意见的审计报告。 六、公司负责人王项彬、主管会计工作负责人叶云青及会计机构负责人（会计主管人员）吴长银 声明：保证年度报告中财务报告的真实、准确、完整。 七、 董事会决议通过的本报告期利润分配预案或公积金转增股本预案 公司于2026年4月27日召开第五届董事会第十九次会议，审议通过了《关于2025年度利润分配 方案以及2026年中期分红安排的议案》。经天...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225224905.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">禾川科技：浙江禾川科技股份有限公司2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">浙江禾川科技股份有限公司2025年年度报告摘要 公司代码：688320 公司简称：禾川科技 浙江禾川科技股份有限公司 2025 年年度报告摘要 浙江禾川科技股份有限公司2025年年度报告摘要 第一节 重要提示 1、 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规 划，投资者应当到http://www.sse.com.cn/网站仔细阅读年度报告全文。 2、 重大风险提示 公司已在本报告中详细阐述公司在经营过程中可能面临的各种风险及应对措施，敬请查阅本报告第三 节“管理层讨论与分析”之四“风险因素”。 3、 本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 4、 公司全体董事出席董事会会议。 5、 天健会计师事务所（特殊普通合伙）为本公司出具了标准无保留意见的审计报告。 6、 公司上市时未盈利且尚未实现盈利 □是 √否 7、 董事会决议通过的本报告期利润分配预案或公积金转增股本预案 公司于2026年4月27日召开第五届董事会第十九次会议，审议通过了《关于2025年...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225224811.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260511</td><td>38.37</td><td class="negative">-0.05%</td><td>63452</td></tr><tr><td>20260508</td><td>38.39</td><td class="positive">+2.59%</td><td>106733</td></tr><tr><td>20260507</td><td>37.42</td><td class="positive">+8.56%</td><td>108938</td></tr><tr><td>20260506</td><td>34.47</td><td class="positive">+2.19%</td><td>42903</td></tr><tr><td>20260430</td><td>33.73</td><td class="positive">+1.23%</td><td>37768</td></tr><tr><td>20260429</td><td>33.32</td><td class="positive">+6.86%</td><td>51654</td></tr><tr><td>20260428</td><td>31.18</td><td class="negative">-4.03%</td><td>24711</td></tr><tr><td>20260427</td><td>32.49</td><td class="positive">+5.62%</td><td>38116</td></tr><tr><td>20260424</td><td>30.76</td><td class="negative">-0.23%</td><td>15667</td></tr><tr><td>20260423</td><td>30.83</td><td class="negative">-2.06%</td><td>17535</td></tr><tr><td>20260422</td><td>31.48</td><td class="positive">+1.68%</td><td>18184</td></tr><tr><td>20260421</td><td>30.96</td><td class="negative">-0.96%</td><td>18834</td></tr><tr><td>20260420</td><td>31.26</td><td class="negative">-0.57%</td><td>17743</td></tr><tr><td>20260417</td><td>31.44</td><td class="negative">-0.35%</td><td>15998</td></tr><tr><td>20260416</td><td>31.55</td><td class="positive">+1.12%</td><td>18543</td></tr><tr><td>20260415</td><td>31.20</td><td class="negative">-1.08%</td><td>18205</td></tr><tr><td>20260414</td><td>31.54</td><td class="positive">+0.90%</td><td>18822</td></tr><tr><td>20260413</td><td>31.26</td><td class="positive">+0.84%</td><td>30859</td></tr><tr><td>20260410</td><td>31.00</td><td class="positive">+2.99%</td><td>24959</td></tr><tr><td>20260409</td><td>30.10</td><td class="negative">-3.06%</td><td>20113</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

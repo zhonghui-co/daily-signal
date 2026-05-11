@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>埃斯顿 (002747.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>埃斯顿 <code style="font-size:0.8rem;color:var(--text-muted)">002747.SZ</code></h1>
+    <div class="sub">🤖控制与计算 · 最新价 24.23 · 20260511 · 5日 +15.6% · 20日 +17.2%</div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-purple">📝 制度文件</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">埃斯顿：关于变更公司注册资本并修订《公司章程》的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">股票代码：002747 股票简称：埃斯顿 公告编号：2026-029 号 南京埃斯顿自动化股份有限公司 关于变更公司注册资本并修订《公司章程》的公告 本公司及董事会全体成员保证信息披露内容的真实、准确和完整，没有虚假记 载、误导性陈述或重大遗漏。 南京埃斯顿自动化股份有限公司（以下简称“公司”）于 2026年 4月29日 召开第五届董事会第二十四次会议，审议并通过《关于变更公司注册资本并修订 <公司章程>的议案》，具体情况公告如下： 一、公司注册资本变更情况 鉴于公司已完成H股股票发行并在香港联合交易所有限公司（以下简称“香 港联交所”）上市，公司总股本、注册资本发生变化，具体情况如下： 经香港联交所批准，公司发行的 96,780,000 股H 股股份（行使超额配售权 之前）于2026 年3月9日在香港联交所主板挂牌并上市交易，且整体协调人（为 其本身及代表国际承销商）于稳定价格期并未行使超额配售权，公司总股本由 871,018,453 股变更为967,798,453 股，注册资本由人民币871,018,453 元变更 为人民币967,798,453 元。 二、《公司章程》修订对照表 ...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225261275.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">埃斯顿：2026年一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">南京埃斯顿自动化股份有限公司2026年第一季度报告 证券代码：002747 证券简称：埃斯顿 公告编号：2026-028号 南京埃斯顿自动化股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 重要内容提示： 1.董事会及董事、高级管理人员保证季度报告的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担 个别和连带的法律责任。 2.公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）声明：保证季度报告中财务信息的真实、准确、 完整。 3.第一季度财务会计报告是否经审计 □是 否 1 南京埃斯顿自动化股份有限公司2026年第一季度报告 一、主要财务数据 （一） 主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是 否 本报告期 上年同期 本报告期比上年同期增减（%） 营业收入（元） 1,216,554,921.40 1,244,130,343.59 -2.22% 归属于上市公司股东的净利润（元） 97,836,660.50 12,629,943.07 674.64...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225261270.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-31</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">埃斯顿：2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">南京埃斯顿自动化股份有限公司2025年年度报告全文 南京埃斯顿自动化股份有限公司 2025 年年度报告 2026 年 3 月 1 南京埃斯顿自动化股份有限公司2025年年度报告全文 2025 年年度报告 第一节 重要提示、目录和释义 公司董事会及董事、高级管理人员保证年度报告内容的真实、准确、完 整，不存在虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责 任。 公司负责人吴波、主管会计工作负责人何灵军及会计机构负责人（会计主 管人员）兰景智声明：保证本年度报告中财务报告的真实、准确、完整。 所有董事均已出席了审议本报告的董事会会议。 本报告所涉及的未来计划、发展战略等前瞻性陈述不构成公司对投资者的 实质承诺，敬请投资者注意投资风险。 本报告第三节“管理层讨论与分析”之“十一、公司未来发展的展望”， 详细描述了公司经营中可能存在的风险及应对措施，敬请投资者关注相关内容 并注意投资风险。 公司计划不派发现金红利，不送红股，不以公积金转增股本。 2 南京埃斯顿自动化股份有限公司2025年年度报告全文 目录 第一节 重要提示、目录和释义 ...........................</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225059898.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-31</td><td><span class="tag tag-green">💰 分红派息</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">埃斯顿：未来三年股东分红回报规划（2026年-2028年）</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">股票代码：002747 股票简称：埃斯顿 南京埃斯顿自动化股份有限公司 未来三年股东分红回报规划（2026 年-2028 年） 为了进一步完善和健全南京埃斯顿自动化股份有限公司（以下简称“公司”） 持续稳定的分红机制，积极回报投资者，根据《中华人民共和国公司法》《中华 人民共和国证券法》《上市公司监管指引第3号——上市公司现金分红》及《公 司章程》等相关文件的规定和要求，公司董事会制定了未来三年（2026 年-2028 年）股东分红回报规划（以下简称“本规划”），具体内容如下： 一、本次制定利润分配分红回报规划的基本原则 1、公司应积极实施连续、稳定的股利分配政策，综合考虑投资者的合理投 资回报和公司的可持续发展，在保证公司正常经营发展的前提下，为公司建立持 续、稳定、积极的分红政策。 2、公司可以采取现金、股票或二者相结合的形式分配股利。公司积极推行 以现金方式分配股利，现金分红相对于股票股利在利润分配方式中具有优先顺序。 3、在符合相关法律法规及《公司章程》规定的现金分红条件的前提下，公 司每年以现金形式分配的利润不少于当年实现的可供分配利润的20%。 4、公司主要采取现金分红的股...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225059910.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+<div class="card"><h3>💬 投资者调研</h3>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260414</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：埃斯顿：2026年4月14日投资者关系活动记录表</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容介绍 1、问：一季度业绩如何？ 答：您好，感谢您对公司的关注！具体情况请您届时关注公司即将披露的 2026年一季度报告。 2、问：埃斯顿2025年归母净利润扭亏为盈但扣非净利润显著偏 低，非经常性损益的具体构成及可持续性如何，公司如何看待主营业务 真实盈利水平？ 答：您好，感谢您对公司的关注！2025年，公司实现扭亏为盈，销 售收入48.88亿元，同比增长21.93%，综合毛利率同比基本持</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260410</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：埃斯顿：2026年3月31日-4月8日投资者关系活动记录表</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">投资者关系活动记录表 编号：2026001 投资者关系活动类别 □特定对象调研 □分析师会议 □媒体采访 □业绩说明会 □新闻发布会 □路演活动 □现场参观 ■其他（电话会议、券商策略会） 参与单位名称及人员姓名 2026年3月31日 9:00-10:00 电话会议 泰信基金管理有限公司、美林国际、法国巴黎 银行、凯基证券亚洲有限公司、摩根士丹利亞 洲有限公司、深圳市领骥资本管理有限公司、 湖南正</div></div>
+</div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260511</td><td>24.23</td><td class="positive">+0.62%</td><td>412443</td></tr><tr><td>20260508</td><td>24.08</td><td class="positive">+2.64%</td><td>449539</td></tr><tr><td>20260507</td><td>23.46</td><td class="positive">+2.76%</td><td>294079</td></tr><tr><td>20260506</td><td>22.83</td><td class="positive">+4.39%</td><td>379966</td></tr><tr><td>20260430</td><td>21.87</td><td class="positive">+5.14%</td><td>331035</td></tr><tr><td>20260429</td><td>20.80</td><td class="positive">+2.06%</td><td>101437</td></tr><tr><td>20260428</td><td>20.38</td><td class="negative">-2.72%</td><td>99554</td></tr><tr><td>20260427</td><td>20.95</td><td class="positive">+1.60%</td><td>96026</td></tr><tr><td>20260424</td><td>20.62</td><td class="negative">-1.20%</td><td>90304</td></tr><tr><td>20260423</td><td>20.87</td><td class="negative">-1.46%</td><td>100936</td></tr><tr><td>20260422</td><td>21.18</td><td class="negative">0.00%</td><td>88920</td></tr><tr><td>20260421</td><td>21.18</td><td class="negative">-1.17%</td><td>109961</td></tr><tr><td>20260420</td><td>21.43</td><td class="positive">+0.28%</td><td>123882</td></tr><tr><td>20260417</td><td>21.37</td><td class="positive">+1.91%</td><td>150475</td></tr><tr><td>20260416</td><td>20.97</td><td class="positive">+1.21%</td><td>97517</td></tr><tr><td>20260415</td><td>20.72</td><td class="negative">-0.91%</td><td>98158</td></tr><tr><td>20260414</td><td>20.91</td><td class="positive">+1.36%</td><td>104135</td></tr><tr><td>20260413</td><td>20.63</td><td class="positive">+0.78%</td><td>107097</td></tr><tr><td>20260410</td><td>20.47</td><td class="positive">+2.15%</td><td>122892</td></tr><tr><td>20260409</td><td>20.04</td><td class="negative">-2.24%</td><td>93130</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

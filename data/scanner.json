@@ -1,119 +1,89 @@
 {
-  "date": "2026-05-10",
-  "run_at": "2026-05-10T22:30:00+08:00",
+  "date": "2026-05-11",
+  "run_at": "2026-05-11T22:30:00+08:00",
   "source": "readhub+brave",
   "signals": [
     {
       "id": "s1",
       "chain": "chain1",
-      "title": "丁薛祥调研华为芯片基础技术实验室：国产替代政策信号从部委级→国家顶层",
-      "summary": "5/8《新闻联播》播出中共中央政治局常委、国务院副总理丁薛祥到访上海华为练秋湖研发中心，与任正非在芯片基础技术研究实验室站立交流。丁薛祥呼吁科技领军企业敢于做从0到1的原创突破，注重从源头和底层解决技术问题。这是迄今国产芯片自主可控的最高级别政治背书——信号层级从部委级(发改委调研AI实验室/商务部阻断令)跃升至国务院常务副总理亲自站台。",
-      "variable_change": "国产替代政策强制力量级跃升：此前政策信号以部委级和产业层为主(发改委郑栅洁调研AI实验室/商务部阻断禁令)，丁薛祥调研华为芯片实验室将半导体自主可控拔高至国务院常务副总理层级，政策背书从产业支持升级为国家意志。信号强度大于之前所有部委级信号。对设备(北方华创/中微公司)/材料(沪硅/安集科技)/制造(中芯国际/华虹)形成系统级政策利好。华为自身非上市，但产业链受益标的宽广，周一(5/12)为首次定价窗口。",
-      "source_urls": [
-        "https://readhub.cn/topic/8syqfbAIhP4"
-      ],
+      "title": "🔥中芯国际发行股份购买资产获上交所重组委审议通过",
+      "summary": "2026年5月11日，上交所并购重组审核委员会2026年第5次审议会议通过中芯国际发行股份购买资产事项，符合重组条件和信息披露要求。此为SMIC资本运作的监管里程碑，资产重组获批意味着SMIC产能扩张/技术升级路径获得监管绿灯。叠加南下资金连续5日净买入中芯国际共计34.3亿港元（5/11单日净买入数据含阿里10.74亿/快手9.88亿/中芯国际在列），机构资金与监管审批形成双重确认。",
+      "variable_change": "SMIC产能扩张从'公司规划'升级为'监管批准+资金流入'双重确认。链一核心标的中芯国际获得资本运作实质推进，对国产替代整条产业链（设备/材料/封测）形成需求端正向预期。南下资金持续净买入表明机构对国产替代龙头的定价意愿。",
+      "source_urls": ["https://www.gelonghui.com/", "https://zdnet.co.kr/"],
       "priority": "fire",
       "lifecycle": "emerging",
-      "lifecycle_rationale": "5/8晚间新闻联播首播，至5/10 22:30约50小时。主流财经媒体(21世纪经济/财联社/证券时报)尚未发布独立分析文章，传播以B站/快科技等非财经渠道为主，媒体覆盖稀疏。市场完全未定价此信号——上一交易日(5/9)半导体设备/材料板块虽多股涨停但驱动逻辑为资金轮动+材料涨价而非此政治信号。48h边界但传播未达positioning标准(量比未异常，需等待周一开盘验证)。",
-      "related_tickers": ["688012.SH", "688361.SH", "688981.SH", "688126.SH", "688019.SH", "600584.SH", "002156.SZ", "688206.SH"],
-      "tags": ["top_level_policy", "domestic_substitution", "equipment", "materials", "manufacturing", "Huawei"],
-      "capital_flow_tags": ["big_fund", "national_team"]
+      "lifecycle_rationale": "5/11当日上交所公告，<6小时。主流财经媒体尚未展开深度解读，仅格隆汇/财联社简讯提及。重组具体内容（购买何种资产/交易对价/摊薄比例）尚未披露，市场完全未定价此信号。",
+      "related_tickers": ["688981.SH", "00981.HK"],
+      "tags": ["SMIC", "资产重组", "监管审批", "南下资金", "产能扩张"],
+      "capital_flow_tags": ["big_fund", "national_team", "recent_bidding"]
     },
     {
       "id": "s2",
       "chain": "chain2",
-      "title": "DeepSeek融资500亿信号升级：梁文锋个人出资200亿领投+大基金参与",
-      "summary": "格隆汇5/10报道：DeepSeek首轮融资规模500亿元，创始人梁文锋个人出资200亿元领投，国家集成电路产业投资基金(大基金)、两家头部科技大厂及浙大相关投资机构有望参与。资金将用于6月发布V4.1模型(多模态+企业级工具+MCP服务B端)。若完成将创中国AI史上单轮融资最高纪录。500亿融资直接转化为算力采购需求，对国产GPU(寒武纪/海光)/HBM/先进封装形成需求脉冲。",
-      "variable_change": "信号可信度从传闻/洽谈阶段升级为领投方确认：梁文锋200亿个人领投极大增强融资确定性(此前分析称仍在洽谈阶段非确定性事件)。大基金参与将DeepSeek与国家半导体战略绑定。但需警惕三风险：①寒武纪5/8在融资利好下-5.6%背离②梁文锋自掏200亿可能反映外部VC对国产AI芯片估值分歧③最终交割时间和机构名单未定。信号对寒武纪/海光短期价格驱动有限(已背离)但中长期算力需求逻辑强化。",
-      "source_urls": [
-        "https://readhub.cn/topic/8t0ZrYuHPGp"
-      ],
+      "title": "🔥SK海力士与英特尔推进2.5D封装合作，CoWoS替代路径浮现",
+      "summary": "SK海力士正与英特尔在先进封装领域推进合作，双方就2.5D封装技术展开研发，测试HBM与系统半导体集成方案，SK海力士正评估导入英特尔EMIB技术，相关测试进入初期阶段。此合作出现在台积电CoWoS产能持续紧张背景下。SK海力士已从英特尔获取搭载EMIB的基板进行测试，韩国已运行小规模2.5D封装研发线。业内预计英特尔方案有望成为AI加速器用2.5D封装供应链的新增选项。",
+      "variable_change": "2.5D先进封装从台积电CoWoS单一垄断→英特尔EMIB成为第二供应路径。对A股：①长电科技/通富微电等国产封测企业可能获得新封装技术路线的合作/导入机会②台积电CoWoS产能紧张获产业端交叉验证→先进封装需求缺口继续扩大③封装供应链从'台积电独家定价'向'多元化竞争'演进，长期利好封测环节毛利率。",
+      "source_urls": ["https://zdnet.co.kr/view/?no=20260511105848", "https://stock.jrj.com.cn/2026/05/11111057061008.shtml"],
       "priority": "fire",
-      "lifecycle": "positioning",
-      "lifecycle_rationale": "5/7首次曝光(彭博→中文财经)→5/8 DeepSeek洽谈阶段确认→5/10梁文锋200亿领投细节。3天多轮传播，覆盖5+主流财经媒体(格隆汇/证券时报/36氪/东方财富)。股价已有显著反应：寒武纪5/6 +14%→5/8 -5.6%(利好出尽)，海光5/7 -0.82%→5/8 -5.36%。价格已部分price in 300-400亿规模预期，但梁文锋200亿+大基金细节为增量，周一(5/12)验证是否存在利好落地即调整效应。",
-      "related_tickers": ["688256.SH", "688041.SH", "600584.SH", "002156.SZ", "688525.SH"],
-      "tags": ["AI_compute_demand", "domestic_GPU", "DeepSeek", "national_fund", "fundraising"],
-      "capital_flow_tags": ["national_team"]
+      "lifecycle": "emerging",
+      "lifecycle_rationale": "ZDNet Korea 5/11 15:02 KST首发，<8小时。中文媒体（手机中国）同日转引但仅简讯。产业意义（CoWoS替代路径）尚未被A股市场消化。长电/通富今日走势未反映此信号。",
+      "related_tickers": ["600584.SH", "002156.SZ", "688362.SH"],
+      "tags": ["HBM", "2.5D封装", "EMIB", "CoWoS替代", "SK海力士", "英特尔"],
+      "capital_flow_tags": ["none"]
     },
     {
       "id": "s3",
-      "chain": "chain2",
-      "title": "SanDisk HBF挑战HBM垄断：中文媒体跟进，又一个HBM杀手叙事扩散",
-      "summary": "36氪5/8刊发《又一个HBM杀手，曝光》深入分析SanDisk HBF(High Bandwidth Flash)技术：8-16倍于HBM容量+更低成本+相同封装面积，2026H2送样。Benzinga 5/8标题称SanDisk在数月内做到Nvidia花了9年才做成的事。HBF非JEDEC标准，若成功将打破HBM寡占格局(SK海力士/三星/美光)。同时JEDEC标准路线仍为HBM4(2048位接口)/HBM4E推进。两条路线并行：短期HBM紧缺不变，远期HBF开辟替代路径。",
-      "variable_change": "HBM技术格局从单一路线垄断转为架构竞争萌芽：此前市场默认HBM为唯一高带宽存储方案，SanDisk HBF引入NAND架构竞争者。对A股双面影响：①短期(1-3年)HBM紧缺逻辑不变，封装链(长电/通富)需求支撑不受影响②远期(2027+)若HBF成功，HBM寡头定价权松动，存储产业链重构。对国产存储(兆易创新/长江存储/长鑫)：NAND+先进封装路线为HBM替代提供国产化第二路径，降低对韩系HBM依赖。信号10:30 scanner首次识别，本窗口36氪/Benzinga中文传播深化。",
-      "source_urls": [
-        "https://36kr.com/p/3798541613898754",
-        "https://www.benzinga.com/markets/tech/26/05/52425213/sandisk-nvidia-ai-semiconductor-memory-stocks"
-      ],
+      "chain": "chain1+chain2",
+      "title": "🔥国务院：AI综合立法加速推进+集成电路布图设计保护条例修订",
+      "summary": "国务院办公厅印发《国务院2026年度立法工作计划》，明确：①完善人工智能治理，加快推进人工智能健康发展综合性立法，完善AI共性要素及重点应用场景立法②提请全国人大常委会审议修订集成电路布图设计保护条例③预备提请审议航天法草案、预备制定卫星导航条例等。此为AI领域首次在国家立法层面明确'综合性立法'时间表，同时集成电路布图设计保护条例修订意味着对芯片设计知识产权的法律保护升级。",
+      "variable_change": "政策信号从'部门级文件/指导意见'升级为'国务院年度立法计划'，法律强制力层级跃升。AI综合立法→为AI产业发展提供法律确定性，降低监管不确定性风险。IC布图设计保护条例修订→强化芯片设计知识产权保护，对国产芯片设计企业（寒武纪/海光等）形成制度性利好。此为链一（IC保护）+链二（AI立法）双链共振的最高层级政策信号。",
+      "source_urls": ["https://www.gelonghui.com/"],
       "priority": "fire",
-      "lifecycle": "positioning",
-      "lifecycle_rationale": "5/7 Reuters首次报道→5/8 Benzinga+36氪跟进→5/10进一步扩散。2-3天传播期，覆盖中英文财经媒体(Reuters/Benzinga/36氪/Yahoo Finance)。量比：存储板块前期已因HBM涨价上涨15-30%，HBF当前为远期叙事(2026H2才送样→2027-2028商业化)，短期对股价驱动有限。属于逻辑框架变量而非即时催化剂。",
-      "related_tickers": ["603986.SH", "600584.SH", "002156.SZ", "688525.SH"],
-      "tags": ["HBM", "storage", "advanced_packaging", "technology_disruption", "HBF", "NAND"],
+      "lifecycle": "emerging",
+      "lifecycle_rationale": "5/11国务院办公厅发布，<12小时。仅格隆汇简讯提及，主流财经媒体零覆盖。立法计划为年度框架性文件，市场通常滞后2-5个交易日才开始定价其中产业相关条款。AI综合立法为国内首次明确写入国务院立法计划，标志性意义重大。",
+      "related_tickers": ["688256.SH", "688041.SH", "688981.SH"],
+      "tags": ["AI立法", "集成电路布图设计", "国务院", "知识产权保护", "政策升级"],
       "capital_flow_tags": ["none"]
     },
     {
       "id": "s4",
       "chain": "chain2",
-      "title": "科技巨头出资帮SK海力士扩HBM产线：中文财经跟进，军备竞赛从买芯片升级为买产线",
-      "summary": "Yahoo Finance香港5/8确认：Nvidia/Google/Amazon等科技巨头提出直接投资SK海力士HBM产线+资助买ASML光刻机。美光2026年HBM产能几乎全数售罄。三星加速HBM3E认证以追赶SK海力士。HBM供给约束从涨价(80-90%)→售罄(2026全年)→客户出资建产线三级跳，为存储史上最极端供需失衡。中文市场对此行为信号的定价程度仍远低于英文市场。",
-      "variable_change": "HBM供需失衡从产业供需升级为金融资本介入：下游客户愿意承担CAPEX风险以保障HBM供应，标志着HBM从商品采购升级为战略物资。对A股双刃剑：①利好封装链(长电/通富)——HBM扩产推高先进封装需求②利空国产GPU(寒武纪/海光)——全球HBM被科技巨头包揽，国产GPU获HBM难度加大，30万/25万出货目标20-40%下修风险。中文市场对②几乎无认知。",
-      "source_urls": [
-        "https://hk.finance.yahoo.com/news/科技巨头连HBM产线都想包下-030004501.html",
-        "https://247wallst.com/investing/2026/05/09/apple-dominated-the-2026-chip-war-googles-partners-are-left-to-buy-scraps/"
-      ],
+      "title": "🔥英伟达2026年AI生态投资超400亿美元：循环投资构筑竞争护城河",
+      "summary": "英伟达2026年前几个月已向AI企业投入超400亿美元股权资金，其中OpenAI获300亿美元为最大单笔注资，另官宣7笔数十亿美元级上市公司投资。2025年完成67笔风投交易，2026年已参与约20余轮非上市初创企业融资。韦德布什分析师认为虽属'循环投资'（投资客户→客户采购GPU），但成功的投资布局将助英伟达构筑竞争护城河。",
+      "variable_change": "英伟达从GPU供应商→AI生态全栈投资者的角色深化。400亿美元量级（接近全球AI风投总额的40-50%）意味着英伟达正在用资本锁定AI应用层客户，形成'投资→绑定→GPU采购→再投资'闭环。对A股：①AI资本开支周期远未见顶（英伟达用真金白银投票）②国产GPU（寒武纪/海光）面临的不只是技术竞争，更是生态系统竞争③算力需求端的安全边际进一步增强。",
+      "source_urls": ["https://www.kuaitech.com/", "https://www.gelonghui.com/"],
       "priority": "fire",
       "lifecycle": "positioning",
-      "lifecycle_rationale": "5/8 Reuters首发→5/8-5/10 Yahoo Finance香港/24/7 Wall St/中文财经跟进。2天传播期，量比异常：美光单周+38%市值8400亿→全球资金已大幅定价。A股：长电科技5/8 +4.08%、通富微电-3.25%(背离)。中文市场定价程度显著低于英文市场——HBM售罄对国产GPU供应的下行风险完全未被中文市场认知。positioning阶段，距离consensus还需2-3家券商研报覆盖。",
-      "related_tickers": ["600584.SH", "002156.SZ", "688256.SH", "688041.SH"],
-      "tags": ["HBM", "supply_constraint", "advanced_packaging", "GPU_risk", "CAPEX"],
+      "lifecycle_rationale": "英伟达投资AI企业并非全新信息，但$400亿累计金额+循环投资策略的量化是5/11新披露。新闻已开始传播（快科技/格隆汇），但市场尚未将英伟达生态投资规模与AI资本开支周期持续性建立清晰关联。2-3天后将进入consensus阶段。",
+      "related_tickers": ["688256.SH", "688041.SH"],
+      "tags": ["英伟达", "AI投资", "循环投资", "生态锁定", "资本开支"],
       "capital_flow_tags": ["none"]
     },
     {
       "id": "s5",
-      "chain": "chain1",
-      "title": "国产硅晶圆使用率超70%政策目标：从能用到批量用的质量关",
-      "summary": "36氪5/9深度分析《国产芯片十二年：从0到22%全球份额》指出：2026年中国政府设定国产硅晶圆使用率超70%目标，这是从能用到批量用的质量关。光刻胶国产化率从3%向更高比例推进的时间表是观察材料替代的关键指标。同时指出真正决定中国半导体长期竞争力的三个变量：14nm以下技术突破进度、材料和设备的质量替代速度、先进封装能否弥补制程差距。",
-      "variable_change": "材料国产替代从方向共识升级为量化目标：70%硅晶圆使用率为首次明确的量化KPI。此前材料板块上涨驱动为涨价(靶材60-70%)+大基金二期(2042亿)+ETF(85亿)三重共振，70%政策目标增加了第四根支柱——政府定量考核。对沪硅产业/立昂微/中环股份等硅片厂商构成中期(2026全年)目标锚定，对光刻胶厂商(彤程新材/南大光电/上海新阳)提供替代进度加速预期。",
-      "source_urls": [
-        "https://36kr.com/p/3798834887914248",
-        "https://caifuhao.eastmoney.com/news/20260503081657111831740"
-      ],
+      "chain": "chain2",
+      "title": "摩尔线程与光轮智能达成战略合作，国产GPU仿真生态扩展",
+      "summary": "摩尔线程与光轮智能达成战略合作，将依托摩尔线程全功能GPU与夸娥（KUAE）智算集群，结合光轮智能全栈自研仿真平台，联合打造高置信度仿真数据合成方案。此为国产GPU在自动驾驶仿真/合成数据领域的生态拓展。",
+      "variable_change": "国产GPU生态从'通用算力适配'向'垂直行业解决方案'延伸。摩尔线程加速构建行业应用护城河，但摩尔线程未上市，对A股GPU标的（寒武纪/海光）的直接竞争/互补影响需进一步评估。量级：minor，不改变链变量方向。",
+      "source_urls": ["https://www.cls.cn/"],
       "priority": "normal",
       "lifecycle": "positioning",
-      "lifecycle_rationale": "材料板块已处于consensus阶段(5/9 analyst确认triple match=涨价+大基金+ETF)，70%硅晶圆目标为新增量化维度。该目标在36氪5/9分析文章中首次被系统阐述，但政策本身(十五五规划)先前已有提及。属于老政策新解读——为正在positioning→consensus过渡中的材料板块注入新证据。非独立催化信号而是confirmatory signal。",
-      "related_tickers": ["688126.SH", "605358.SH", "002129.SZ", "603650.SH", "300346.SZ", "688019.SH"],
-      "tags": ["materials", "silicon_wafer", "photoresist", "domestic_substitution", "policy_target"],
-      "capital_flow_tags": ["big_fund", "national_team"]
-    },
-    {
-      "id": "s6",
-      "chain": "chain1+chain2",
-      "title": "五月科技行情框架：AI存储资本开支+先进制程国产替代双轮驱动确立",
-      "summary": "36氪5/6深度分析指出：本轮半导体设备行情驱动逻辑已从2019-2020年的全球缺芯+成熟制程扩产升级为AI存储资本开支爆发+先进制程国产替代加速双轮驱动。全球科技巨头2026年合计超7000亿美元AI数据中心CAPEX+十五五芯片自给率突破45%目标形成双引擎。与上一轮周期相比核心差异：下游驱动力从消费电子→AI数据中心，国产替代从0→1突破升级为规模化替代，估值锚点从跟随全球周期→独立国产替代溢价。",
-      "variable_change": "行情叙事从单轮驱动升级为双轮驱动框架：此前市场或关注AI算力需求或关注国产替代，二者各自独立。36氪框架将两个叙事合并为同一驱动力——AI资本开支拉动全球半导体扩张+国产替代抢占增量份额→A股半导体享受双重Beta。对板块整体估值中枢上移有支撑作用，但属于后验框架总结对边际定价贡献低。",
-      "source_urls": [
-        "https://36kr.com/p/3797517281598464",
-        "https://finance.sina.com.cn/roll/2026-05-07/doc-inhwzmmr2907303.shtml"
-      ],
-      "priority": "normal",
-      "lifecycle": "consensus",
-      "lifecycle_rationale": "双轮驱动框架为市场共识级叙事：5/6证券时报报道成交额超3万亿+半导体全线大涨，5/7新浪财经基金经理提醒勿押注单一赛道。多家券商(高盛/东吴/广发)已发布类似框架研报。媒体覆盖超过5家，股价已充分反应(寒武纪月内+27.5%/海光+23.5%)。属于后验框架总结，对边际定价贡献低，但对新入场资金有叙事引导作用。",
-      "related_tickers": ["688256.SH", "688041.SH", "688981.SH", "688012.SH", "688361.SH", "600584.SH"],
-      "tags": ["sector_framework", "AI_CAPEX", "domestic_substitution", "valuation", "dual_driver"],
-      "capital_flow_tags": ["big_fund", "national_team"]
+      "lifecycle_rationale": "摩尔线程持续发布生态合作新闻（已属常态），光轮智能非知名企业。仿真数据合成为细分方向，对整体AI芯片叙事无方向性影响。媒体覆盖仅限于财联社简讯。",
+      "related_tickers": [],
+      "tags": ["摩尔线程", "国产GPU", "仿真", "生态合作"],
+      "capital_flow_tags": ["none"]
     }
   ],
   "stats": {
-    "chain1_count": 3,
+    "chain1_count": 2,
     "chain2_count": 4,
     "fire_count": 4,
     "by_lifecycle": {
-      "emerging": 1,
-      "positioning": 4,
-      "consensus": 1,
+      "emerging": 3,
+      "positioning": 2,
+      "consensus": 0,
       "exhausted": 0
     },
-    "with_capital_backing": 3
+    "with_capital_backing": 1
   }
 }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>汉宇集团 (300403.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>汉宇集团 <code style="font-size:0.8rem;color:var(--text-muted)">300403.SZ</code></h1>
+    <div class="sub">🤖电机驱动 · 最新价 11.80 · 20260511 · 5日 +9.1% · 20日 +0.2%</div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-27</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">汉宇集团：2026年一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">汉宇集团股份有限公司2026年第一季度报告 证券代码：300403 证券简称：汉宇集团 公告编号：2026-019 汉宇集团股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 重要内容提示： 1.董事会及董事、高级管理人员保证季度报告的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担 个别和连带的法律责任。 2.公司负责人、主管会计工作负责人及会计机构负责人(会计主管人员)声明：保证季度报告中财务信息的真实、准确、 完整。 3.第一季度财务会计报告是否经过审计 □是 否 一、主要财务数据 （一） 主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是 否 本报告期 上年同期 本报告期比上年同期增减（%） 营业收入（元） 253,848,499.62 281,014,889.96 -9.67% 归属于上市公司股东的净利润（元） 33,270,518.66 55,574,733.56 -40.13% 归属于上市公司股东的扣除非经常性损益 31,607,294.47 56,1...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-27/1225176709.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-11</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">汉宇集团：2025年度证券与衍生品投资情况的专项报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">汉宇集团股份有限公司 2025 年度证券与衍生品投资情况的专项报告 根据《深圳证券交易所创业板上市公司自律监管指南第1号--业务办理》等 有关规定的要求，公司董事会对公司 2025年度证券与衍生品投资情况进行了核 查，具体情况如下： 一、证券与衍生品投资审议批准情况 2025年3月24 日，公司第五届董事会第十一次会议审议通过了《关于开展 以套期保值为目的的远期结售汇业务、外汇期权业务、外汇掉期业务的议案》， 为有效规避和防范汇率风险，减少汇率波动对公司经营的影响，同意公司开展以 套期保值为目的的远期结售汇业务、外汇期权业务、外汇掉期业务，合计金额不 超过 5.5 亿美元或相同价值的外汇金额，授权期限自 2024 年年度股东会审议通 过之日起12 个月内有效。 2025年4月15 日，公司2024年年度股东会审议通过上述议案。 二、2025年度公司证券与衍生品投资的具体情况 1. 衍生品投资情况 单位：万元 本期公允 计入权益的 报告期 报告期 期末投资金额 衍生品投资 期初金额 价值变动 累计公允价 内购入 内售出 期末金额 占公司报告期 类型 损益 值变动 金额 金额 末净资产比例...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-11/1225094205.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-11</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">汉宇集团：2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">汉宇集团股份有限公司2025年年度报告全文 汉宇集团股份有限公司 2025 年年度报告 2026-008 2026 年 4 月 1 汉宇集团股份有限公司2025年年度报告全文 年年度报告 2025 第一节 重要提示、目录和释义 公司董事会及董事、高级管理人员保证年度报告内容的真实、准确、完整， 不存在虚假记载、误导性陈述或者重大遗漏，并承担个别和连带的法律责任。 公司负责人石华山、主管会计工作负责人马春寿及会计机构负责人(会计 主管人员)马春寿声明：保证本年度报告中财务报告的真实、准确、完整。 所有董事均已出席了审议本报告的董事会会议。 公司已在本报告中阐述了经营管理中可能面临的风险及应对措施，详见 第三节“管理层讨论与分析”之“十一、公司未来发展的展望”相关内容。 敬请广大投资者关注，并注意投资风险。 公司经本次董事会审议通过的利润分配预案为：以 603,000,000 股为基 数，向全体股东每 10 股派发现金红利 0.80 元（含税），送红股 0 股（含 税），以资本公积金向全体股东每 10股转增 0 股。 2 汉宇集团股份有限公司2025年年度报告全文 目录 第一节 重要提示、...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-11/1225094198.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-11</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">汉宇集团：2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">汉宇集团股份有限公司2025年年度报告摘要 证券代码：300403 证券简称：汉宇集团 公告编号：2026-007 汉宇集团股份有限公司 2025 年年度报告摘要 一、重要提示 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规划，投资者应当到证监会指 定媒体仔细阅读年度报告全文。 所有董事均已出席了审议本报告的董事会会议。 致同会计师事务所（特殊普通合伙）对本年度公司财务报告的审计意见为：标准的无保留意见。 非标准审计意见提示 □适用不适用 公司上市时未盈利且目前未实现盈利 □适用不适用 董事会审议的报告期利润分配预案或公积金转增股本预案 适用□不适用 公司经本次董事会审议通过的利润分配预案为：以603,000,000股为基数，向全体股东每10股派发现金红利0.80元（含 税），送红股0股（含税），以资本公积金向全体股东每10股转增0股。 董事会决议通过的本报告期优先股利润分配预案 □适用☑不适用 二、公司基本情况 1、公司简介 股票简称 汉宇集团 股票代码 300403 股票上市交易所 深圳证券交易所 联系人和联系方式 董事会秘书 证券事务代表 ...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-11/1225094197.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+<div class="card"><h3>💬 投资者调研</h3>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260422</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：汉宇集团：300403汉宇集团投资者关系管理信息20260422</div><div style="margin:6px 0 2px;color:var(--accent);font-weight:600">Q: 投资者关系活动记录表 编号：2026-IR001 特定对象调研 分析师会议 ☐ ☐ ☐ 媒体采访 业绩说明会 投资者关系活动类别 新闻发布会 路演活动 ☐ ☐ 现场参观 ☐ 其他（请文字说明其他活动内容） ☐ 参与单位名称及人员 线上参加公司2025年度业绩说明会的投资者 姓名 时间 2026年04月22日 15:00-17:00 地点 价值在线（https://www.ir-online.cn/）网络互动 董事长、总经理 石华山 董事、副总经理、财务负责人 马春寿 上市公司接待人员姓名 独立董事 陈启生 董事会秘书 郑扬志 1.充电桩/充电站2025产值多少？未来几年充电桩/充 电站目标产值分别是多少？ 答：充电桩业务2025年营收占比较小，未来公司将结 合发展规划，稳步推进充电桩业务。 2.一季度业绩如何 答：公司2026年一季度业绩详见4月27日披露相关公告。 投资者关系活动主要 内容介绍 3.为什么股价喋喋不休，公司有没有计划稳定股价？ 不能大股东光减持，我们小股东却受到不断下跌痛苦的 折磨。 答：公司经营业绩良好，持续稳健发展，但股价受到 1 二级市场情绪、宏观经济等多重因素影响，后续公司如有 相关稳定股价措施将及时披露，届时请以公司公告为准。 4.董事长先生，你控股的公司没有注入上市公司的资 产什么时候能注入上市公司？同川科技现在已经盈利是 否考虑收购并表。你本人减持是否告一段落了？ 答：看来你对我挺了解的，我控股的公司需要看时机 是否注入上市公司。但我能肯定的是：同川如果能独立上 市，对汉宇是最大的利益。汉宇原则上不会去收购同川的 股份，只会支持同川往上市方向健康发展。同川的产业， 是很大的，未来机器人包括人形机器人产业，是个不可限 量的巨大市场。后来的投资者（去年募集了1.2亿元资金）， 也是在全力支撑同川独立上市。本人的减持，已经在3月3 日公告完成减持。 5.董事长好，未来还有减持计划吗？ 答：减持，未必是坏事。大家不要将减持当成坏事。 （1）董事长减持，将个人债务减轻，就不容易出现控股 权丢失的问题。（2）买到汉宇股票的投资者，难道他希 望股价降低吗？不是的。（3）董事长减持股票，只要不 是拿来消费享受，对未来肯定都是好的。比如，投资了好 的新产业，如果并入到上市公司，其实是壮大上市公司的。 我能很老实的说，我减持股票，是投资在技术方面和减轻 个人负债的，不是拿来享受生活的。（4）至于未来是否 还有减持计划，当下还没有。我本人是十分珍惜汉宇的股 权的。未来合适的时候，也不排除增持。 6.目前，25年同川科技业绩对汉宇集团业绩有多少影 响？预计26年有多少影响？ 答：同川属于新兴行业，处于市场爆发的初期，虽然 同川排位在行业值得骄傲的位置，但是其营收及利润规模 还不算大，从财务数据看目前对公司25年业绩影响较小。 2 7.贵公司连续多年每季度减持！对股市价格造成长期 低迷是否负责？拿着股民的钱用在哪些地方？今年是不 是还继续减持？ 答：公司正在调动第二成长曲线。就是汽车配件之重 要项：汽车泵及热管理。第二成长曲线起来的概率极高。 减持不是造成股价低迷的核心因素。董事长减持的钱，都 用在了体外研发。我们的下一轮是和国际大公司竞争，并 非易事，需要全社会多支持。 8.请问贵公司对同川的早期投资，是否有业务转型的 计划？ 答：同川处于挺好的赛道，且处于行业一流水平，我 预感同川股东应该不会觉得有转型的需要，而是进一步拓 展产品、客户，提升技术。 9.请问下截止4月21日，股东人数是多少 答：您好！截至2026年4月20日，公司股东人数（已 合并）为47,503户。 10.公司股价董事长关注了吗？是不否满意？是否知 道公司股价已经严重落后股指了！ 答：有关注。我作为大股东，当然是希望股价越高越 好。但股价还是以市场调节为主，潮起潮落嘛。公司经营 方面，我们还是保持稳健经营。比如，去年业绩虽然不是 很好，但大环境确实不好，汉宇集团还是保持了20%税后 净利润的韧性。我们已经连续16年保持了税后净利润 20%。企业经营是长期的行为。因此，我们团队还是稳健 经营为主体。同时，也说明我们的短板不会太多。 11.同川科技年内能否上市？ 答：作为股东，公司看到了同川对资本巿场的重视， 同川正在利用好资本巿场工具加速发展自身业务。年内上 市？政策程序也来不及吧。 3 12.同川科技目前在人形机器人关节减速器领域，与 哪些头部客户达成了合作？订单规模和交付节奏如何？ 是否有大额订单落地的可能？2026年的出货量和营收目 标是多少？新投产的江门150万套产能预计何时释放？ 公司管理层明确表示同川科技年内上市“政策程序来不 及”，能否披露更具体的上市时间表？后续是否会调整股 权结构或引入战略投资者？ 答：同川的增长是按照三位数在增长。大家包括我本 人还是需要给点耐心。 13.董事长先生你控制的欧佩德什么时候能注入上市 公司 答：这块要对付的是国际大公司，包括西门子/ABB/ 美国AB等，对手也不是等闲之辈。但现在我们已经有资 格跟他们竞争了。比如，在纸机的主传统动力系统，近100 个电机，纸机以1000米/分钟的车速，要连续运行一周不 断纸，即纸幅走10000公里，我们的距离误差不能超过20 毫米（超过20毫米，纸幅就扯断了），欧佩德做了超过10 条生产线，都成功了。且是降维式的国产替代（国际公司 采用的方式是异步电机+减速箱+变频器，欧佩德采用的 是伺服直驱+驱动器，不需要减速箱，省电超过25%）。 技 术上已经达到了国际巨头的水平，后面就是要将体量做 大。后续视情况再定。 14.请问管理层：同川科技目前是否已经完成股份制 改造？是否已经与券商签署了上市辅导协议并向证监局 备案？ 请明确这两个前置程序的进度。 答：同川目前尚未完成股改。 15.新“国九条”明确鼓励上市公司加强市值管理。公 司股价长期跌跌不休，请问董事长石华山先生：公司目 前，是否有实质性的市值管理预案？（如大股东增持、 4 公司回购股份用于注销）计划何时推出？ 答：如有相关事项，届时公司将按规定对外披露。 16.菫秘你好，最近有多少机构来公司调研？ 答：公司同资本市场投资者保持顺畅交流，近期暂无 机构现场调研。 17.近期汉宇股价的异常弱势是否意味着公司在一季 度的经营中出现了未披露的重大风险或客户流失？请董 事长正面回应。 答：公司没有重大风险。公司没有大客户流失。公司 生产当前处于加班干活中，公司一季度业绩可关注公司4 月27日披露公告。 18.“既然董秘明确同川尚未完成股改，请问目前推进 缓慢的核心原因是什么？是内部资产梳理问题，还是外 部战略投资者尚未谈妥引进？预计今年上半年能否完成 股改？” 答：同川一直高度关注资本市场动态；有关上市进展， 同川结合自身实际情况以及资本市场动态，稳步推进。 19.汉宇集团是否和同川合作研发核心产品 机器人 集成式微液冷散热模组，微型(机器人可用） ，技术成熟 度， 机器人场景量产落地， 通用液冷泵大批量供货， 绑定头部客户。还有汉宇集团BLDC液冷电子水泵（算力 /车载/储能）可用，公司应该大力去研发第二增长曲线产 品，争取第二增长曲线的产品能爆发出业绩和利润。目 前是人工智能+，大爆发的前夜，希望公司能在大浪潮下 增长几倍甚至几十倍。石董，请问贵公司在液冷和人工 智能领域方面，未来有哪些规划? 答：高手！点赞。 20.同川科技的谐波减速器，目前在具身智能/头部人 形机器人产业链的送样及测试进展究竟到了哪个阶段？ 5 是否已经具备了批量供货能力？” 答：同川重视具身智能智能机器人市场，相应产品研 发生产按计划推进。 21.董事长先生，公司资产负债交低每年盈利尚可是 否收购新能源及液冷泵等公司？</div><div style="margin:2px 0 12px 12px;font-size:0.78rem;line-height:1.7;color:var(--text)">A: 如有合适的标的，欢迎向公司推荐。 22.既然同川上市暂缓，公司今年大额理财资金到期 后，主要资本开支将投向哪里？是否有计划直接在二级 市场启动注销式回购？ 答：除结合市场情况公司适度扩产外，目前公司暂无 确定的大额资本开支，后续如有注销回购，请以公司相关 公告为准。 23.2025年公司营收增长缓慢，管理层是否承认存在 经营天花板？公司高管或大股东近期是否有减持计划？ 请明确回答“有”或“没有”，并请承诺未来6个月不减持。 答：公司一直保持稳步增长，有关减持相关事宜，请 以公告为准。 24.2026年一季度，同川科技减速器的实际交付量是 多少台？环比2025年四季度增长了百分之多少？ 答：同川近年来发展势头较好，未来可期。 25.针对近期股价持续下跌，创出新低的情况，董事 长是否认可当前股价反映了公司真实价值？如果认可， 请问公司认为合理估值应是多少？ 答：公司股价受多重因素影响，作为股东，亦希望公 司股价能够保持较好水平。 26.同川科技目前的谐波减速器，良品率（直通率）具 体达到了多少？是否达到了行业一流水平（98%以上）？ 答：据了解，同川产品性能良好，客户认可同川产品。 27.同川科技2025年全年的营收和净利润分别是多少？ 6 2026年一季度的盈利情况如何？是否实现了扭亏为盈？ 答：同川2025 年度实现营业收入 9,722.49 万元，净 利润166.58万元，同川经营发展势头较好。 28.同川减速器目前在精度、寿命、噪音等关键指标 上，与纳博特斯克、绿的谐波等头部厂商相比，具体差 距是多少？公司计划在多久内追平？ 答：据了解，同川减速器产品性能较好，客户认可同 川的产品。 29.同川减速器目前的交付周期是多久？面对下游客 户的扩产需求，公司的产能爬坡计划能否匹配？如果不 能，瓶颈是什么？ 答：同川结合市场情况按计划安排产能，及时响应客 户需求。 30.请管理层解释，为何2025年研发投入反而下降， 在行业变革期不加大投入，反而收缩，是基于何种战略 判断？ 答：研发需要考虑市场及组织匹配，公司的研发投入 始终以效益最大化为目标。 我们的研发人员大量使用AI。节省了投入，还加快 了研发进程。研发费用的减少，不一定会影响研发进程的。 31.同川目前的客户中，是否存在年采购额超过5000 万的核心客户？如果有，请说明客户类型和合作稳定性。 答：同川主要客户稳定，亦在积极开发市场。 32.石董，请问优巨新材近期有无重新上市计划，创 业板新规也出来了，还有贵公司近期是否有新的投资或 者并购计划? 答：优巨新材目前发展势头还是很好的。2024年12 月深创投还追加了4亿元的投资。目前，枝江市的400亩厂 区有一半已经完成了投产。机器人产业的发展特别是人形 7 机器人产业、新能源汽车的发展，都会促进优巨新材高端 塑料包括PPSU、PSU、耐高温尼龙等原材料的需求。适 当时候，重启上市是必然的。投资和并购都是公司一直在 关注的，但有时候调研几十个项目，真正投资的可能一个 都没有，我们毕竟以慎重为主。 33.针对人形机器人客户，同川减速器目前的验证周 期一般需要多久？已送样的客户中，有多少家已进入量 产阶段？预计2026年能转化多少为稳定订单？ 答：机器人市场空间大，同川减速器有巨大的市场空 间，未来可期。 34.2026年一季度，同川工业端客户的订单同比增速是 多少？是否出现了订单延期、取消或加班赶货的情况？ 答：同川发展势头强劲，目前生产热火朝天。 35.同川科技目前的海外客户（如欧美、东南亚）占 比是多少？主要分布在哪些行业？是否有持续拓展海外 市场的计划？ 答：同川高度重视海外市场，目前市场以国内为主。 关于本次活动是否涉及 本次活动不涉及未公开披露的重大信息。 应披露重大信息的说明 附件清单（如有） 日期 2026年04月22日 8</div></div>
+</div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260511</td><td>11.80</td><td class="negative">-0.59%</td><td>126901</td></tr><tr><td>20260508</td><td>11.87</td><td class="positive">+4.49%</td><td>224434</td></tr><tr><td>20260507</td><td>11.36</td><td class="positive">+2.71%</td><td>108883</td></tr><tr><td>20260506</td><td>11.06</td><td class="positive">+1.47%</td><td>85112</td></tr><tr><td>20260430</td><td>10.90</td><td class="positive">+1.02%</td><td>99691</td></tr><tr><td>20260429</td><td>10.79</td><td class="positive">+0.65%</td><td>63484</td></tr><tr><td>20260428</td><td>10.72</td><td class="negative">-4.54%</td><td>123778</td></tr><tr><td>20260427</td><td>11.23</td><td class="negative">-4.34%</td><td>211095</td></tr><tr><td>20260424</td><td>11.74</td><td class="negative">-1.34%</td><td>72470</td></tr><tr><td>20260423</td><td>11.90</td><td class="negative">-2.30%</td><td>83929</td></tr><tr><td>20260422</td><td>12.18</td><td class="negative">-0.08%</td><td>62760</td></tr><tr><td>20260421</td><td>12.19</td><td class="negative">-0.57%</td><td>78424</td></tr><tr><td>20260420</td><td>12.26</td><td class="positive">+1.74%</td><td>102506</td></tr><tr><td>20260417</td><td>12.05</td><td class="positive">+0.67%</td><td>71815</td></tr><tr><td>20260416</td><td>11.97</td><td class="positive">+1.44%</td><td>71794</td></tr><tr><td>20260415</td><td>11.80</td><td class="negative">-1.67%</td><td>79029</td></tr><tr><td>20260414</td><td>12.00</td><td class="positive">+0.42%</td><td>72584</td></tr><tr><td>20260413</td><td>11.95</td><td class="positive">+0.34%</td><td>73624</td></tr><tr><td>20260410</td><td>11.91</td><td class="positive">+2.50%</td><td>83093</td></tr><tr><td>20260409</td><td>11.62</td><td class="negative">-1.78%</td><td>58341</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

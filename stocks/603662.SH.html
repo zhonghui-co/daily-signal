@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>柯力传感 (603662.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>柯力传感 <code style="font-size:0.8rem;color:var(--text-muted)">603662.SH</code></h1>
+    <div class="sub">🤖传感感知 · 最新价 61.24 · 20260511 · 5日 +10.1% · 20日 +9.4%</div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">柯力传感：柯力传感2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">宁波柯力传感科技股份有限公司2025年年度报告摘要 公司代码：603662 公司简称：柯力传感 宁波柯力传感科技股份有限公司 2025 年年度报告摘要 宁波柯力传感科技股份有限公司2025年年度报告摘要 第一节 重要提示 1、 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规 划，投资者应当到http://www.sse.com.cn网站仔细阅读年度报告全文。 2、 本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 3、 公司全体董事出席董事会会议。 4、 立信会计师事务所（特殊普通合伙）为本公司出具了标准无保留意见的审计报告。 5、 董事会决议通过的本报告期利润分配预案或公积金转增股本预案 经立信会计师事务所（特殊普通合伙）审计，宁波柯力传感科技股份有限公司（以下简称“公 司”）2025年度实现归属于母公司股东的净利润为340,551,270.86元。截至2025年12月31日，公司 母公司报表中期末未分配利润为人民币1,391,181,198.04元。经董事...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225199603.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">柯力传感：柯力传感2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">宁波柯力传感科技股份有限公司2025年年度报告 公司代码：603662 公司简称：柯力传感 宁波柯力传感科技股份有限公司 2025 年年度报告 二〇二六年四月 1/219 宁波柯力传感科技股份有限公司2025年年度报告 做时间的朋友，做产业的迎风者——致全体股东的一封信 尊敬的各位股东： 2025年，外部环境依然复杂多变，产业的潮汐、技术的脉冲、市场的冷暖交织在一起。越 是在这样的时期，我们越发体会到：企业前行的力量，不来自于对风口的追逐，而来自于对市场 的敬畏、对主业的坚守，以及在不确定性中依然选择“做正确的事”的定力。 回顾柯力的发展历程，从称重传感器起步，逐步拓展至多物理量传感器、工业物联网及相关 应用领域。我们始终尊重产业规律，聆听客户声音，持续投入研发，践行长期主义。当前，传感 器作为连接物理世界与数字世界的核心基础元件，其价值在产业升级中持续显现。公司正围绕 “传感器森林”战略，推动多物理量融合、场景化解决方案与产业生态协同，持续提升从器件供应 到系统应用的综合服务能力。 过去一年，柯力并未追逐喧闹的概念，而是选择沉下来，继续夯实基本功，持续提升产品 力、交付力、服务力和组...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225199660.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">柯力传感：柯力传感2026年第一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">宁波柯力传感科技股份有限公司2026年第一季度报告 证券代码：603662 证券简称：柯力传感 宁波柯力传感科技股份有限公司 2026 年第一季度报告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述或 者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 重要内容提示 公司董事会及董事、高级管理人员保证季度报告内容的真实、准确、完整，不存在虚假记载、误 导性陈述或重大遗漏，并承担个别和连带的法律责任。 公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）保证季度报告中财务信息 的真实、准确、完整。 第一季度财务报表是否经审计 □是 √否 一、主要财务数据 (一)主要会计数据和财务指标 单位：元 币种：人民币 本报告期比上年同期 项目 本报告期 上年同期 增减变动幅度(%) 营业收入 357,689,246.81 315,579,652.53 13.34 利润总额 56,348,662.67 96,588,799.82 -41.66 归属于上市公司股东的净利润 41,119,298.94 75,654,263.27 -45.65 归属于上市公司股东的...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225199666.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-02-06</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">柯力传感：柯力传感关于控股股东的一致行动人集中竞价减持时间届满暨减持结果的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：603662 证券简称：柯力传感 公告编号：2026-001 宁波柯力传感科技股份有限公司 关于控股股东的一致行动人集中竞价减持时间届满 暨减持结果的公告 本公司董事会、全体董事及相关股东保证本公告内容不存在任何虚假记载、 误导性陈述或者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 重要内容提示：  股东持股的基本情况 截至减持股份计划公告披露日前，宁波柯力传感科技股份有限公司（以下简 称“公司”）控股股东的一致行动人鲁忠耿先生持有公司 1,350,000 股，占公司总 股本比例为 0.4807%；黄朝霞女士持有公司 100,879 股，占公司总股本比例为 0.0359%。  减持计划的实施结果情况 公司于 2025 年 10 月16 日披露了《柯力传感关于控股股东的一致行动人集 中竞价减持股份计划公告》，鲁忠耿先生以集中竞价交易方式减持所持有的公司 无限售条件流通股不超过 1,350,000 股，占公司总股本的 0.4807%；黄朝霞女士 以集中竞价交易方式减持所持有的公司无限售条件流通股不超过100,879 股，占 公司总股本的0.0359%。 公司于 ...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-02-06/1224968484.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260511</td><td>61.24</td><td class="negative">-0.10%</td><td>73590</td></tr><tr><td>20260508</td><td>61.30</td><td class="positive">+3.99%</td><td>103553</td></tr><tr><td>20260507</td><td>58.95</td><td class="positive">+3.19%</td><td>58782</td></tr><tr><td>20260506</td><td>57.13</td><td class="positive">+1.65%</td><td>46925</td></tr><tr><td>20260430</td><td>56.20</td><td class="positive">+1.41%</td><td>37769</td></tr><tr><td>20260429</td><td>55.42</td><td class="positive">+1.26%</td><td>29704</td></tr><tr><td>20260428</td><td>54.73</td><td class="negative">-3.78%</td><td>47567</td></tr><tr><td>20260427</td><td>56.88</td><td class="positive">+1.92%</td><td>46314</td></tr><tr><td>20260424</td><td>55.81</td><td class="negative">-0.39%</td><td>23998</td></tr><tr><td>20260423</td><td>56.03</td><td class="negative">-1.82%</td><td>39565</td></tr><tr><td>20260422</td><td>57.07</td><td class="positive">+0.30%</td><td>30311</td></tr><tr><td>20260421</td><td>56.90</td><td class="negative">-0.68%</td><td>27059</td></tr><tr><td>20260420</td><td>57.29</td><td class="negative">-0.07%</td><td>32800</td></tr><tr><td>20260417</td><td>57.33</td><td class="positive">+0.76%</td><td>31421</td></tr><tr><td>20260416</td><td>56.90</td><td class="positive">+0.73%</td><td>25095</td></tr><tr><td>20260415</td><td>56.49</td><td class="negative">-0.70%</td><td>34195</td></tr><tr><td>20260414</td><td>56.89</td><td class="positive">+2.19%</td><td>30451</td></tr><tr><td>20260413</td><td>55.67</td><td class="negative">-0.61%</td><td>23747</td></tr><tr><td>20260410</td><td>56.01</td><td class="positive">+2.39%</td><td>36404</td></tr><tr><td>20260409</td><td>54.70</td><td class="negative">-2.25%</td><td>25898</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>领益智造 (002600.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>领益智造 <code style="font-size:0.8rem;color:var(--text-muted)">002600.SZ</code></h1>
+    <div class="sub">🤖结构件 · 最新价 15.24 · 20260511 · 5日 +8.4% · 20日 +14.0%</div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-03</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">领益智造：关于取得金融机构股票回购专项贷款承诺函的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002600 证券简称：领益智造 公告编号：2026-036 广东领益智造股份有限公司 关于取得金融机构股票回购专项贷款承诺函的公告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚 假记载、误导性陈述或重大遗漏。 一、股份回购方案概述 广东领益智造股份有限公司（以下简称“公司”）于2026 年3月26 日召开第 六届董事会第二十三次会议，审议通过了《关于回购公司股份方案的议案》，同 意公司以自有资金及回购专项贷款回购部分公司股份；回购股份的种类为公司已 发行上市的人民币普通股（A 股）股票，回购股份的资金总额不低于人民币 2亿 元（含），不超过人民币 4 亿元（含），回购股份的价格不超过人民币 21.10 元/ 股（含本数）。公司已在中国证券登记结算有限责任公司深圳分公司开立了回购 专用证券账户，并于 2026 年3 月28 日披露了《关于回购公司股份方案的公告》 《回购报告书》，具体内容详见巨潮资讯网（www.cninfo.com.cn）和公司指定信 息披露报刊的相关公告。 二、取得金融机构股票回购专项贷款承诺函的情况 近日，公司取得中国工商银行股份有限公...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-03/1225074378.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-01</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">领益智造：关于回购公司股份的进展公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002600 证券简称：领益智造 公告编号：2026-035 广东领益智造股份有限公司 关于回购公司股份的进展公告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚 假记载、误导性陈述或重大遗漏。 一、股份回购方案概述 广东领益智造股份有限公司（以下简称“公司”）于2026 年3月26 日召开第 六届董事会第二十三次会议，审议通过了《关于回购公司股份方案的议案》，同 意公司以自有资金及回购专项贷款回购部分公司股份；回购股份的种类为公司已 发行上市的人民币普通股（A 股）股票，回购股份的资金总额不低于人民币 2亿 元（含），不超过人民币 4 亿元（含），回购股份的价格不超过人民币 21.10 元/ 股（含本数）。公司已在中国证券登记结算有限责任公司深圳分公司开立了回购 专用证券账户，并于 2026 年3 月28 日披露了《关于回购公司股份方案的公告》 《回购报告书》，具体内容详见巨潮资讯网（www.cninfo.com.cn）和公司指定信 息披露报刊的相关公告。 二、股份回购实施进展 根据《深圳证券交易所股票上市规则》《上市公司股份回购规则》及《深圳 证券交易所...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-01/1225066104.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-31</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">领益智造：关于回购股份事项前十名股东及前十名无限售条件股东持股情况的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002600 证券简称：领益智造 公告编号：2026-034 广东领益智造股份有限公司 关于回购股份事项前十名股东及前十名无限售条件 股东持股情况的公告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记 载、误导性陈述或重大遗漏。 广东领益智造股份有限公司（以下简称“公司”）于 2026 年 3 月 26 日召开第六 届董事会第二十三次会议，审议通过了《关于回购公司股份方案的议案》。具体内容 详见公司于 2026 年 3 月 28 日在巨潮资讯网（www.cninfo.com.cn）披露的《第六届 董事会第二十三次会议决议公告》（公告编号：2026-020）和《关于回购公司股份方 案的公告》（公告编号：2026-027）。 根据《公司法》《证券法》《上市公司股份回购规则》《深圳证券交易所上市公司 自律监管指引第 9 号—回购股份》等法律法规、规范性文件及《公司章程》的有关 规定，现将公司董事会公告回购股份决议的前一个交易日（即 2026 年 3月 27 日） 登记在册的前十名股东和前十名无限售条件股东的名称、持股数量及持股比例情况 公告如下： 一、董事会公...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225050198.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-28</td><td><span class="tag tag-purple">👤 人事变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">领益智造：关于会计政策变更的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002600 证券简称：领益智造 公告编号：2026-030 广东领益智造股份有限公司 关于会计政策变更的公告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚 假记载、误导性陈述或重大遗漏。 一、会计政策变更概述 1、本次会计政策变更的原因及日期 2025 年 12 月 5 日，财政部发布了《关于印发<企业会计准则解释第 19 号> 的通知》（财会〔2025〕32 号），规定了“关于非同一控制下企业合并中补偿 性资产的会计处理”“关于处置原通过同一控制下企业合并取得子公司时相关资 本公积的会计处理”“关于采用电子支付系统结算的金融负债的终止确认”“关 于金融资产合同现金流量特征的评估及相关披露”“关于指定为以公允价值计量 且其变动计入其他综合收益的权益工具的披露”等内容自 2026 年 1 月 1 日起 施行。 2、变更前采取的会计政策 本次会计政策变更前，公司执行财政部颁布的《企业会计准则——基本准则》 和各项具体会计准则、企业会计准则应用指南、企业会计准则解释公告以及其他 相关规定。 3、变更后采取的会计政策 本次会计政策变更后，公司将执行财政部发布的《...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-28/1225043486.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-28</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">领益智造：关于回购公司股份方案的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002600 证券简称：领益智造 公告编号：2026-027 广东领益智造股份有限公司 关于回购公司股份方案的公告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记 载、误导性陈述或重大遗漏。 重要内容提示： （一）回购股份基本情况 1、拟回购资金总额：不低于人民币2亿元（含），不超过人民币4亿元（含）； 2、拟回购股份的种类：公司已发行的人民币普通股（A股）股票； 3、拟回购用途：用于股权激励计划或员工持股计划，用于股权激励计划或员工 持股计划部分将在回购完成之后36 个月内授予，法定期间未使用部分公司将履行相 关程序予以注销并减少注册资本； 4、拟回购价格：不超过人民币 21.10 元/股（含本数），未超过公司董事会通过 回购股份决议前30 个交易日公司股票交易均价的150%； 5、拟回购数量：按照回购金额上限 4 亿元（含）测算，预计回购股份数量约 18,957,345 股，约占目前公司扣除回购专户上已回购股份后的总股本的0.26%；按照 回购金额下限2亿元（含）测算，预计回购股份数量约9,478,673 股，约占目前公司 扣除回购专户上已回购股份后...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-28/1225043465.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+<div class="card"><h3>💬 投资者调研</h3>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260430</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：领益智造：2026年4月29月投资者关系活动记录表</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">投资者关系活动记录表 证券代码：002600 证券简称：领益智造 广东领益智造股份有限公司 投资者关系活动记录表 编号：2026-004 投资者关系活动  特定对象调研 □ 分析师会议 □ 媒体采访 类别  业绩说明会 □ 新闻发布会  路演活动  现场参观 □ 其他（请文字说明其他活动内容） 财信基金、创金合信基金、大成基金、富国基金、工银理财、光大理财、 参与单位名称与 国联基金、国寿</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260416</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：领益智造：2026年4月16日投资者关系活动记录表</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容介绍 公司业绩增长主要归因于以下三方面： （1）公司通过持续增加AI 硬件高附加值产品相关的研发投 入、提升市场份额，进一步提升产线稼动率及降低制造成本，公 司整体利润同比有所提升； （2）公司海外工厂收入大幅增长，盈利能力持续改善； （3）凭借在工艺能力及效率提升方面进展较好，公司汽车相 关业务市场份额及盈利能力不断提升。 1/5 广东领益智造股份有限公司 投资者关系活动记录表 公司两个</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260407</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：领益智造：2026年4月7日投资者关系活动记录表</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容介绍 频共振、顺势而为，坚守实业初心、秉持长期主义，在行业变革 与市场挑战中勇毅攻坚，实现营业收入 514.29 亿元，同比增长 16.20%，归属于上市公司股东的净利润 22.88 亿元，同比增长 30.34%，经营性现金净流入44.33 亿元，同比增长10.40%。为实 现2030 年中长期发展目标奠定了坚实基础。 这一年，我们深耕主业，第 N 增长曲线加速运转。坚持“内 生+外延”双</div></div>
+</div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260511</td><td>15.24</td><td class="positive">+0.99%</td><td>2069429</td></tr><tr><td>20260508</td><td>15.09</td><td class="positive">+3.85%</td><td>2400488</td></tr><tr><td>20260507</td><td>14.53</td><td class="positive">+2.90%</td><td>1433416</td></tr><tr><td>20260506</td><td>14.12</td><td class="positive">+0.43%</td><td>1094025</td></tr><tr><td>20260430</td><td>14.06</td><td class="positive">+0.21%</td><td>1030696</td></tr><tr><td>20260429</td><td>14.03</td><td class="positive">+0.50%</td><td>744601</td></tr><tr><td>20260428</td><td>13.96</td><td class="negative">-3.32%</td><td>938903</td></tr><tr><td>20260427</td><td>14.44</td><td class="positive">+1.98%</td><td>1090982</td></tr><tr><td>20260424</td><td>14.16</td><td class="negative">-2.68%</td><td>1002629</td></tr><tr><td>20260423</td><td>14.55</td><td class="negative">-2.68%</td><td>1548823</td></tr><tr><td>20260422</td><td>14.95</td><td class="positive">+4.25%</td><td>2107537</td></tr><tr><td>20260421</td><td>14.34</td><td class="negative">-2.05%</td><td>1398491</td></tr><tr><td>20260420</td><td>14.64</td><td class="positive">+6.16%</td><td>2439697</td></tr><tr><td>20260417</td><td>13.79</td><td class="positive">+0.36%</td><td>773016</td></tr><tr><td>20260416</td><td>13.74</td><td class="positive">+1.18%</td><td>784739</td></tr><tr><td>20260415</td><td>13.58</td><td class="negative">-2.16%</td><td>877648</td></tr><tr><td>20260414</td><td>13.88</td><td class="positive">+0.95%</td><td>968978</td></tr><tr><td>20260413</td><td>13.75</td><td class="positive">+1.03%</td><td>1040614</td></tr><tr><td>20260410</td><td>13.61</td><td class="positive">+2.41%</td><td>1035446</td></tr><tr><td>20260409</td><td>13.29</td><td class="negative">-0.30%</td><td>845450</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>
