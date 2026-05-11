@@ -1,80 +1,19 @@
 {
-  "generated": "2026-05-09T11:15:00+08:00",
-  "source": "web_search (Brave) + chinabidding.cn / mofcom.gov.cn / gov-cg.org.cn",
-  "total": 8,
-  "search_queries": ["半导体设备 中标公告 招标 2026", "北方华创 中微公司 拓荆 中标 晶圆厂"],
-  "key_findings": [
-    {
-      "type": "统计",
-      "source": "广发证券研报 (2025.5.13)",
-      "title": "2025Q1晶圆厂招标/中标统计",
-      "summary": "Q1合计15项招标（积塔/燕东/中芯前三），以检测/研磨抛光/清洗为主。11项中标，国产设备整体中标比例约82%",
-      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2025-05-13/doc-inewmaiv4346680.shtml",
-      "date": "2025-05-13",
-      "companies": ["中芯国际", "华虹半导体", "燕东微电子", "积塔半导体"]
-    },
+  "generated": "2026-05-11T12:01:00+08:00",
+  "source": "web_search (Brave)",
+  "total": 1,
+  "results": [
     {
       "type": "中标公示",
-      "source": "中国国际招标网 (chinabidding.mofcom.gov.cn)",
-      "title": "上海易启芯程半导体有限公司晶圆切割膜贴膜设备 - 国际招标公告(2)",
-      "summary": "晶圆切割膜贴膜设备国际招标，招标人上海易启芯程半导体",
-      "url": "http://chinabidding.mofcom.gov.cn/",
-      "date": "2026-05-06",
-      "companies": ["易启芯程半导体"],
-      "equipment_type": "晶圆切割膜贴膜设备"
-    },
-    {
-      "type": "中标公示",
-      "source": "中国招标网 (chinabidding.cn)",
-      "title": "i线步进式光刻系统中标候选人公示",
-      "summary": "招标人：上海芯源创新中心。第一中标候选人：吉姆西半导体科技（无锡）股份有限公司。中标价格：9,900万元。招标公告日期：2026年2月13日，开标：2026年3月13日",
-      "url": "https://www.chinabidding.cn/3867_cw/",
-      "date": "2026-03-19",
-      "amount": "9900万元",
-      "companies": ["吉姆西半导体", "上海芯源创新中心"],
-      "equipment_type": "i线步进式光刻系统"
-    },
-    {
-      "type": "中标公告",
-      "source": "中国政府采购招标网 (gov-cg.org.cn)",
-      "title": "商城县轻工业园区半导体光学元件产业园项目工程监理中标结果公告",
-      "summary": "半导体光学元件产业园项目（不包含室外工程）工程监理",
-      "url": "http://www.gov-cg.org.cn/BidInfoDetails_bid_25818034.html",
-      "date": "2026-01-06",
-      "companies": [],
-      "equipment_type": "半导体光学元件产业园"
-    },
-    {
-      "type": "投标公告",
-      "source": "东方财富",
-      "title": "上海申微智创科技金桥半导体设备项目投标截止2026年1月20日",
-      "summary": "投标截止2026年1月20日上海申微智创科技金桥半导体设备项目",
-      "url": "https://emcreative.eastmoney.com/app_fortune/article/index.html?artCode=20251226205011891882270",
-      "date": "2025-12-26",
-      "companies": ["申微智创科技"]
+      "source": "bidcenter.com.cn (采招网)",
+      "title": "华海清科股份有限公司共聚焦拉曼光谱仪购置项目中标结果公告",
+      "summary": "华海清科（CMP设备龙头）采购共聚焦拉曼光谱仪的中标结果公告，属于半导体设备公司内部检测设备采购。详细信息需登录采招网会员查看。",
+      "url": "https://www.bidcenter.com.cn/newsmore-2026-4-11.html",
+      "date": "2026-05-08",
+      "amount": "",
+      "companies": ["华海清科"],
+      "equipment_type": "检测设备（拉曼光谱仪）"
     }
   ],
-  "meta": {
-    "notes": [
-      "广发证券Q1统计为最系统性的招投标数据（需付费订阅采招网数据）",
-      "中国国际招标网(chinabidding.mofcom.gov.cn)有半导体设备国际招标公告",
-      "chinabidding.cn 有国产设备中标详情（含金额）",
-      "各晶圆厂（中芯/华虹/长存/长鑫）招标数据分散在多个平台，需逐个查询",
-      "建议定期用 web_search 扫描 \"半导体 中标 设备 晶圆\" 关键词"
-    ],
-    "data_sources": {
-      "primary": [
-        "chinabidding.mofcom.gov.cn（商务部机电产品国际招标）",
-        "chinabidding.cn（中国采购与招标网）",
-        "ccgp.gov.cn（中国政府采购网，限频严重）"
-      ],
-      "secondary": [
-        "采招网（bidcenter.com.cn，付费）",
-        "剑鱼标讯（jianyu360.com，付费）"
-      ],
-      "securities_research": [
-        "广发/国盛/中信建投等券商定期发布半导体设备招标月报（基于采招网数据）"
-      ]
-    }
-  }
+  "key_findings": "本期无半导体制造设备直采中标公告公开可查（采招网/中国招标投标平台均为付费墙）。行业背景：MATCH法案升级+美国设备商断供华虹，倒逼国产设备加速导入，2026年初国产化率已从25%跃升至35%，刻蚀/薄膜沉积突破40%，长江存储三期国产设备采购占比首超50%。"
 }
