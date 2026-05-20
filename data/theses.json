@@ -1,166 +1,467 @@
 {
   "version": 1,
-  "last_updated": "2026-05-06T21:07:00+08:00",
+  "last_updated": "2026-05-20T23:05:00.806275+08:00",
   "theses": [
     {
       "id": "TH-001",
       "stock": "彤程新材",
       "code": "603650.SH",
       "thesis": "ArF光刻胶唯一规模放量标的，2025年营收增长800%+，已通过头部晶圆厂验证量产。光刻机管制扩大倒逼光刻胶国产化加速。",
-      "key_vars": ["季度营收增速", "ArF光刻胶新客户导入进度", "光刻胶国产化率"],
+      "key_vars": [
+        "季度营收增速",
+        "ArF光刻胶新客户导入进度",
+        "光刻胶国产化率"
+      ],
       "failure_trigger": "连续两季营收增速<50% YoY 或 失去头部晶圆厂认证",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "high",
-      "chains": ["国产替代"],
-      "catalysts": ["光刻机管制扩大至28-65nm", "半导体材料国产替代加速"],
+      "chains": [
+        "国产替代"
+      ],
+      "catalysts": [
+        "光刻机管制扩大至28-65nm",
+        "半导体材料国产替代加速"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "2025年报+800%收入增长确认，Q1材料涨价趋势延续，光刻机管制→替代紧迫性↑"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "2025年报+800%收入增长确认，Q1材料涨价趋势延续，光刻机管制→替代紧迫性↑"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 57.58,
+            "latest_date": "20260515",
+            "since_date": "2026-05-06",
+            "since_return_pct": 27.11,
+            "ret_5d_pct": 0.4,
+            "ret_1d_pct": 1.7,
+            "high_since": 64.3,
+            "low_since": 45.3,
+            "from_high_pct": -10.45
+          }
+        }
+      ],
+      "last_check": "2026-05-20"
     },
     {
       "id": "TH-002",
       "stock": "海光信息",
       "code": "688041.SH",
       "thesis": "Q1营收40亿+68% YoY，2026计划交付25万片DCU(+150%)。国产AI芯片从'烧钱研发'进入'利润兑现'拐点。",
-      "key_vars": ["季度DCU出货量", "营收增速", "代工产能保障", "客户结构(信创vs互联网)"],
+      "key_vars": [
+        "季度DCU出货量",
+        "营收增速",
+        "代工产能保障",
+        "客户结构(信创vs互联网)"
+      ],
       "failure_trigger": "DCU出货量不及目标50% 或 代工产能被切断 或 营收增速<30%",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "high",
-      "chains": ["AI算力"],
-      "catalysts": ["国产AI芯片Q1业绩集体验证", "海光今日涨停市值突破8200亿"],
+      "chains": [
+        "AI算力"
+      ],
+      "catalysts": [
+        "国产AI芯片Q1业绩集体验证",
+        "海光今日涨停市值突破8200亿"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "Q1营收40.34亿+68%, DCU 25万片目标, 今日涨停市值8200亿"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "Q1营收40.34亿+68%, DCU 25万片目标, 今日涨停市值8200亿"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 316.74,
+            "latest_date": "20260520",
+            "since_date": "2026-05-06",
+            "since_return_pct": 40.15,
+            "ret_5d_pct": -2.6,
+            "ret_1d_pct": 1.51,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -9.29
+          }
+        }
+      ],
+      "last_check": "2026-05-20"
     },
     {
       "id": "TH-003",
       "stock": "寒武纪",
       "code": "688256.SH",
       "thesis": "Q1营收28.85亿+159% YoY，经营现金流首次转正(+8.34亿)。国产AI芯片商业验证拐点，从概念切换为成长。",
-      "key_vars": ["季度营收增速", "经营现金流", "客户结构(信创占比)"],
+      "key_vars": [
+        "季度营收增速",
+        "经营现金流",
+        "客户结构(信创占比)"
+      ],
       "failure_trigger": "经营现金流转负 或 营收增速<50%",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "high",
-      "chains": ["AI算力"],
-      "catalysts": ["国产AI芯片Q1业绩集体验证"],
+      "chains": [
+        "AI算力"
+      ],
+      "catalysts": [
+        "国产AI芯片Q1业绩集体验证"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "Q1营收28.85亿+159%, 经营现金流转正+8.34亿, 市值7168亿"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "Q1营收28.85亿+159%, 经营现金流转正+8.34亿, 市值7168亿"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1362.41,
+            "latest_date": "20260520",
+            "since_date": "2026-05-06",
+            "since_return_pct": -1.98,
+            "ret_5d_pct": 8.08,
+            "ret_1d_pct": 3.28,
+            "high_since": 1868.0,
+            "low_since": 971.3,
+            "from_high_pct": -27.07
+          },
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-27.07%"
+          ]
+        }
+      ],
+      "last_check": "2026-05-20"
     },
     {
       "id": "TH-004",
       "stock": "通富微电",
       "code": "002156.SZ",
       "thesis": "先进封装双驱动：AMD深度绑定+国产GPU出货量增长。Q1净利+45.5%，2026全年营收目标323亿(+15.7%)。",
-      "key_vars": ["季度营收/净利增速", "先进封装占比", "国产GPU封装订单量"],
+      "key_vars": [
+        "季度营收/净利增速",
+        "先进封装占比",
+        "国产GPU封装订单量"
+      ],
       "failure_trigger": "营收增速<10% 或 先进封装占比下降",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "high",
-      "chains": ["AI算力", "国产替代"],
-      "catalysts": ["国产AI芯片Q1业绩集体验证", "HBM涨价+先进封装Capex加速"],
+      "chains": [
+        "AI算力",
+        "国产替代"
+      ],
+      "catalysts": [
+        "国产AI芯片Q1业绩集体验证",
+        "HBM涨价+先进封装Capex加速"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "Q1净利+45.5%, 全年营收目标323亿, 先进封装占比提升"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "Q1净利+45.5%, 全年营收目标323亿, 先进封装占比提升"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 62.28,
+            "latest_date": "20260520",
+            "since_date": "2026-05-06",
+            "since_return_pct": 57.51,
+            "ret_5d_pct": 8.5,
+            "ret_1d_pct": 5.81,
+            "high_since": 62.28,
+            "low_since": 39.54,
+            "from_high_pct": 0.0
+          }
+        }
+      ],
+      "last_check": "2026-05-20"
     },
     {
       "id": "TH-005",
       "stock": "北方华创",
       "code": "002371.SZ",
       "thesis": "制裁扩大+光刻机管制→设备国产替代紧迫性全面升级。全品类平台(刻蚀/薄膜/清洗/炉管)，华虹+中芯均为核心客户。",
-      "key_vars": ["季度新增订单", "国产设备验证进度", "制裁覆盖范围变化"],
+      "key_vars": [
+        "季度新增订单",
+        "国产设备验证进度",
+        "制裁覆盖范围变化"
+      ],
       "failure_trigger": "制裁放松 或 新订单增速<20%",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "high",
-      "chains": ["国产替代"],
-      "catalysts": ["美国制裁扩至华虹", "光刻机管制扩大至成熟制程", "材料国产替代加速"],
+      "chains": [
+        "国产替代"
+      ],
+      "catalysts": [
+        "美国制裁扩至华虹",
+        "光刻机管制扩大至成熟制程",
+        "材料国产替代加速"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "制裁从SMIC扩至华虹→设备替代窗口加速，全品类平台受益确定性高"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "制裁从SMIC扩至华虹→设备替代窗口加速，全品类平台受益确定性高"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 656.0,
+            "latest_date": "20260520",
+            "since_date": "2026-05-06",
+            "since_return_pct": 38.25,
+            "ret_5d_pct": 16.23,
+            "ret_1d_pct": 5.86,
+            "high_since": 656.0,
+            "low_since": 424.08,
+            "from_high_pct": 0.0
+          }
+        }
+      ],
+      "last_check": "2026-05-20"
     },
     {
       "id": "TH-006",
       "stock": "中微公司",
       "code": "688012.SH",
       "thesis": "刻蚀设备国产替代主力，CCP/ICP刻蚀在3D NAND和逻辑制程均为必需品。制裁扩大加速国产设备导入。",
-      "key_vars": ["季度新增订单", "3D NAND刻蚀设备验证进度", "先进制程刻蚀导入"],
+      "key_vars": [
+        "季度新增订单",
+        "3D NAND刻蚀设备验证进度",
+        "先进制程刻蚀导入"
+      ],
       "failure_trigger": "制裁放松 或 新订单增速<15%",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "high",
-      "chains": ["国产替代"],
-      "catalysts": ["美国制裁扩至华虹", "光刻机管制扩大至成熟制程"],
+      "chains": [
+        "国产替代"
+      ],
+      "catalysts": [
+        "美国制裁扩至华虹",
+        "光刻机管制扩大至成熟制程"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "制裁扩大→国产刻蚀设备需求上升，CCP/ICP刻蚀覆盖逻辑+存储双线"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "制裁扩大→国产刻蚀设备需求上升，CCP/ICP刻蚀覆盖逻辑+存储双线"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 490.33,
+            "latest_date": "20260520",
+            "since_date": "2026-05-06",
+            "since_return_pct": 57.5,
+            "ret_5d_pct": 26.64,
+            "ret_1d_pct": 2.26,
+            "high_since": 490.33,
+            "low_since": 293.5,
+            "from_high_pct": 0.0
+          }
+        }
+      ],
+      "last_check": "2026-05-20"
     },
     {
       "id": "TH-007",
       "stock": "长电科技",
       "code": "600584.SH",
       "thesis": "国内最大封测厂，先进封装占比提升直接受益于国产GPU出货量增长+HBM封装产能扩张。",
-      "key_vars": ["季度营收增速", "先进封装营收占比", "HBM相关封装订单"],
+      "key_vars": [
+        "季度营收增速",
+        "先进封装营收占比",
+        "HBM相关封装订单"
+      ],
       "failure_trigger": "先进封装占比下降 或 营收增速<10%",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "medium",
-      "chains": ["AI算力", "国产替代"],
-      "catalysts": ["国产AI芯片Q1业绩集体验证", "HBM涨价+先进封装Capex加速"],
+      "chains": [
+        "AI算力",
+        "国产替代"
+      ],
+      "catalysts": [
+        "国产AI芯片Q1业绩集体验证",
+        "HBM涨价+先进封装Capex加速"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "国产GPU出货↑+先进封装Capex↑双驱动，但弹性弱于通富微电"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "国产GPU出货↑+先进封装Capex↑双驱动，但弹性弱于通富微电"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 66.22,
+            "latest_date": "20260520",
+            "since_date": "2026-05-06",
+            "since_return_pct": 72.63,
+            "ret_5d_pct": 21.93,
+            "ret_1d_pct": 8.9,
+            "high_since": 66.22,
+            "low_since": 38.29,
+            "from_high_pct": 0.0
+          }
+        }
+      ],
+      "last_check": "2026-05-20"
     },
     {
       "id": "TH-008",
       "stock": "中芯国际",
       "code": "688981.SH",
       "thesis": "制裁扩大下'唯一先进制程国产代工'稀缺性增强。国产AI芯片出货增长→晶圆需求↑。但自身制裁风险未消除。",
-      "key_vars": ["季度产能利用率", "先进制程进展", "制裁风险变化", "国产设备导入进度"],
+      "key_vars": [
+        "季度产能利用率",
+        "先进制程进展",
+        "制裁风险变化",
+        "国产设备导入进度"
+      ],
       "failure_trigger": "被纳入更严厉制裁 或 先进制程客户流失",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "medium",
-      "chains": ["国产替代", "AI算力"],
-      "catalysts": ["美国制裁扩至华虹", "国产AI芯片Q1业绩集体验证"],
+      "chains": [
+        "国产替代",
+        "AI算力"
+      ],
+      "catalysts": [
+        "美国制裁扩至华虹",
+        "国产AI芯片Q1业绩集体验证"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "制裁→稀缺性↑，国产AI芯片出货→晶圆需求↑，但制裁风险双向存在"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "制裁→稀缺性↑，国产AI芯片出货→晶圆需求↑，但制裁风险双向存在"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 133.81,
+            "latest_date": "20260520",
+            "since_date": "2026-05-06",
+            "since_return_pct": 2.97,
+            "ret_5d_pct": 13.49,
+            "ret_1d_pct": 12.62,
+            "high_since": 133.81,
+            "low_since": 91.78,
+            "from_high_pct": 0.0
+          }
+        }
+      ],
+      "last_check": "2026-05-20"
     },
     {
       "id": "TH-009",
       "stock": "沪硅产业",
       "code": "688126.SH",
       "thesis": "大硅片涨价Q2兑现，12英寸硅片国产化率仅15%。'十五五'目标80%➔5年5倍空间。但DUV管制限制远期产能扩张。",
-      "key_vars": ["硅片均价(QoQ)", "12英寸硅片出货量", "新产能投产进度"],
+      "key_vars": [
+        "硅片均价(QoQ)",
+        "12英寸硅片出货量",
+        "新产能投产进度"
+      ],
       "failure_trigger": "硅片价格回落 或 产能扩张明显放缓",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "medium",
-      "chains": ["国产替代"],
-      "catalysts": ["半导体材料国产替代加速", "光刻机管制扩大"],
+      "chains": [
+        "国产替代"
+      ],
+      "catalysts": [
+        "半导体材料国产替代加速",
+        "光刻机管制扩大"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "硅片涨价Q2兑现，DUV管制→远期天花板受限但近期涨价确定性强"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "硅片涨价Q2兑现，DUV管制→远期天花板受限但近期涨价确定性强"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 29.31,
+            "latest_date": "20260520",
+            "since_date": "2026-05-06",
+            "since_return_pct": 31.14,
+            "ret_5d_pct": 17.38,
+            "ret_1d_pct": -0.71,
+            "high_since": 29.52,
+            "low_since": 16.61,
+            "from_high_pct": -0.71
+          }
+        }
+      ],
+      "last_check": "2026-05-20"
     },
     {
       "id": "TH-010",
       "stock": "盛美上海",
       "code": "688082.SH",
       "thesis": "清洗设备在成熟制程国产替代率高，华虹被断供→加速成熟制程国产清洗设备导入。",
-      "key_vars": ["季度清洗设备订单", "华虹/中芯新采购份额", "成熟制程设备国产化率"],
+      "key_vars": [
+        "季度清洗设备订单",
+        "华虹/中芯新采购份额",
+        "成熟制程设备国产化率"
+      ],
       "failure_trigger": "制裁放松 或 清洗设备份额下降",
       "status": "active",
       "since": "2026-05-06",
       "confidence": "medium",
-      "chains": ["国产替代"],
-      "catalysts": ["美国制裁扩至华虹", "光刻机管制扩大至成熟制程"],
+      "chains": [
+        "国产替代"
+      ],
+      "catalysts": [
+        "美国制裁扩至华虹",
+        "光刻机管制扩大至成熟制程"
+      ],
       "checks": [
-        {"date": "2026-05-06", "status": "active", "evidence": "华虹被限→成熟制程设备国产替代加速，清洗设备国产化率较高"}
-      ]
+        {
+          "date": "2026-05-06",
+          "status": "active",
+          "evidence": "华虹被限→成熟制程设备国产替代加速，清洗设备国产化率较高"
+        },
+        {
+          "date": "2026-05-20",
+          "status": "active",
+          "metrics": {
+            "latest_close": 175.2,
+            "latest_date": "20260515",
+            "since_date": "2026-05-06",
+            "since_return_pct": -4.65,
+            "ret_5d_pct": 5.4,
+            "ret_1d_pct": 0.06,
+            "high_since": 212.45,
+            "low_since": 139.74,
+            "from_high_pct": -17.53
+          },
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-17.53%"
+          ]
+        }
+      ],
+      "last_check": "2026-05-20"
     }
   ]
 }
