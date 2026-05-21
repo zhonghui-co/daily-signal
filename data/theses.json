@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-21T17:05:00.437859+08:00",
+  "last_updated": "2026-05-21T23:05:00.710918+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -121,16 +121,10 @@
           },
           "signals": [
             {
-              "signal_id": "a1",
-              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
-              "confidence": "yellow",
-              "lifecycle": "emerging"
-            },
-            {
               "signal_id": "a2",
-              "title": "🔥英伟达Q1营收$81.6B(+85%)/净利润$58.3B(+211%)——需求展望翻倍至$3-4T+Vera Rubin全周期供应受限，AI算力超级周期延伸至2030年",
+              "title": "英伟达Q1财报：营收816亿(+85%)、净利润583亿(+211%)、追加$800亿回购、Vera Rubin全周期供应受限",
               "confidence": "yellow",
-              "lifecycle": "positioning"
+              "lifecycle": "consensus"
             }
           ]
         }
@@ -197,28 +191,10 @@
           },
           "signals": [
             {
-              "signal_id": "a1",
-              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
-              "confidence": "yellow",
-              "lifecycle": "emerging"
-            },
-            {
               "signal_id": "a2",
-              "title": "🔥英伟达Q1营收$81.6B(+85%)/净利润$58.3B(+211%)——需求展望翻倍至$3-4T+Vera Rubin全周期供应受限，AI算力超级周期延伸至2030年",
+              "title": "英伟达Q1财报：营收816亿(+85%)、净利润583亿(+211%)、追加$800亿回购、Vera Rubin全周期供应受限",
               "confidence": "yellow",
-              "lifecycle": "positioning"
-            },
-            {
-              "signal_id": "a4",
-              "title": "📊费城半导体+4.49%/ARM+15%/AMD+8%——英伟达财报驱动芯片股全面爆发，为A股5/21开盘提供强外部顺风",
-              "confidence": "yellow",
-              "lifecycle": "positioning"
-            },
-            {
-              "signal_id": "a5",
-              "title": "📊谷歌$150亿密苏里+美光创纪录自由现金流+OpenAI冲刺IPO——AI基础设施多源验证超级周期",
-              "confidence": "yellow",
-              "lifecycle": "positioning"
+              "lifecycle": "consensus"
             }
           ],
           "warnings": [
@@ -288,13 +264,19 @@
           "signals": [
             {
               "signal_id": "a1",
-              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "title": "国产晶圆代工产业景气度攀升 头部企业纷纷提价",
               "confidence": "yellow",
-              "lifecycle": "emerging"
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a2",
+              "title": "英伟达Q1财报：营收816亿(+85%)、净利润583亿(+211%)、追加$800亿回购、Vera Rubin全周期供应受限",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
             },
             {
               "signal_id": "a3",
-              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
+              "title": "AMD宣布台积电2nm工艺量产下一代EPYC Venice 业内首款2nm高性能CPU",
               "confidence": "green",
               "lifecycle": "emerging"
             }
@@ -363,21 +345,15 @@
           "signals": [
             {
               "signal_id": "a1",
-              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "title": "国产晶圆代工产业景气度攀升 头部企业纷纷提价",
               "confidence": "yellow",
-              "lifecycle": "emerging"
+              "lifecycle": "positioning"
             },
             {
               "signal_id": "a3",
-              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
+              "title": "AMD宣布台积电2nm工艺量产下一代EPYC Venice 业内首款2nm高性能CPU",
               "confidence": "green",
               "lifecycle": "emerging"
-            },
-            {
-              "signal_id": "a4",
-              "title": "📊费城半导体+4.49%/ARM+15%/AMD+8%——英伟达财报驱动芯片股全面爆发，为A股5/21开盘提供强外部顺风",
-              "confidence": "yellow",
-              "lifecycle": "positioning"
             }
           ]
         }
@@ -443,13 +419,13 @@
           "signals": [
             {
               "signal_id": "a1",
-              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "title": "国产晶圆代工产业景气度攀升 头部企业纷纷提价",
               "confidence": "yellow",
-              "lifecycle": "emerging"
+              "lifecycle": "positioning"
             },
             {
               "signal_id": "a3",
-              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
+              "title": "AMD宣布台积电2nm工艺量产下一代EPYC Venice 业内首款2nm高性能CPU",
               "confidence": "green",
               "lifecycle": "emerging"
             }
@@ -518,13 +494,19 @@
           "signals": [
             {
               "signal_id": "a1",
-              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "title": "国产晶圆代工产业景气度攀升 头部企业纷纷提价",
               "confidence": "yellow",
-              "lifecycle": "emerging"
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a2",
+              "title": "英伟达Q1财报：营收816亿(+85%)、净利润583亿(+211%)、追加$800亿回购、Vera Rubin全周期供应受限",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
             },
             {
               "signal_id": "a3",
-              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
+              "title": "AMD宣布台积电2nm工艺量产下一代EPYC Venice 业内首款2nm高性能CPU",
               "confidence": "green",
               "lifecycle": "emerging"
             }
@@ -594,19 +576,7 @@
           "signals": [
             {
               "signal_id": "a1",
-              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
-              "confidence": "yellow",
-              "lifecycle": "emerging"
-            },
-            {
-              "signal_id": "a3",
-              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
-              "confidence": "green",
-              "lifecycle": "emerging"
-            },
-            {
-              "signal_id": "a4",
-              "title": "📊费城半导体+4.49%/ARM+15%/AMD+8%——英伟达财报驱动芯片股全面爆发，为A股5/21开盘提供强外部顺风",
+              "title": "国产晶圆代工产业景气度攀升 头部企业纷纷提价",
               "confidence": "yellow",
               "lifecycle": "positioning"
             }
