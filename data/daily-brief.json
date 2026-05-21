@@ -1,78 +1,39 @@
 {
-  "generated_at": "2026-05-20T23:10:00.679872+08:00",
-  "date": "2026-05-20",
+  "generated_at": "2026-05-21T17:10:00.239993+08:00",
+  "date": "2026-05-21",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-05-20",
-      "run_at": "2026-05-20T17:00:00+08:00",
+      "date": "2026-05-21",
+      "run_at": "2026-05-21T17:00:00+08:00",
       "stats": {
-        "total_signals": 7,
+        "total_signals": 5,
         "chain1": 1,
         "chain2": 4,
-        "cross_chain": 1,
+        "cross_chain": 4,
         "by_lifecycle": {
-          "emerging": 4,
-          "positioning": 1,
+          "emerging": 2,
+          "positioning": 2,
           "consensus": 1,
-          "exhausted": 1
+          "exhausted": 0
         },
         "by_priced_in": {
           "not_priced": 2,
           "partially_priced": 2,
           "mostly_priced": 1,
-          "fully_priced": 1
+          "fully_priced": 0
         },
-        "strong_backing": 2,
-        "moderate_backing": 2,
-        "weak_backing": 3,
-        "by_confidence": {
-          "red": 3,
-          "yellow": 3,
-          "green": 1
-        }
+        "strong_backing": 1,
+        "moderate_backing": 1,
+        "weak_backing": 3
       },
       "signals": [
         {
           "id": "a1",
           "priority": "normal",
-          "title": "🔥三星谈判破裂→5/21周四罢工确定。positioning→resolution跳变完成/最差情景。HBM/DRAM月产能-10-15%从尾部风险→基准情景。链一存储国产替代受益确定化 vs 链二H",
-          "chain": "chain1+chain2",
-          "confidence": "red",
-          "lifecycle": "emerging",
-          "priced_in": "not_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金三期(3440亿)明确投向AI算力/先进封装/HBM，一二期重仓存储制造(CXMT/长江存储)+封测(长电/通富)。科创50ETF重仓中芯国际/兆易创新/长电科技。bidding.json无最近中标(数据延迟)。双维度覆盖=strong。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a2",
-          "priority": "normal",
-          "title": "🔥阿里云峰会：真武M890三代路线图+56万片出货+128卡超节点+平头哥独立IPO——链二去稀缺性供给侧最强信号。国产AI芯片竞争格局从'双极'→'多极'获产业级实证",
-          "chain": "chain2",
-          "confidence": "red",
-          "lifecycle": "emerging",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "阿里/平头哥非大基金直投标的(大基金投向制造/设备/材料/封测)。但科创50ETF/半导体ETF间接覆盖寒武纪/海光等受影响标的。纯事件驱动，无中国资本直接投入。moderate为一个维度匹配。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a3",
-          "priority": "normal",
-          "title": "🔥科创50+2%续创历史新高+中芯国际+12.62%——链一突破前高获指数级别验证。A股第5次美股免疫测试以最强形态通过。链一>>链二结构性判断从研究员假设→市场实证",
+          "title": "国产晶圆代工产业景气度攀升 头部企业纷纷提价",
           "chain": "chain1",
-          "confidence": "red",
+          "confidence": "yellow",
           "lifecycle": "positioning",
           "priced_in": "partially_priced",
           "capital_backing": {
@@ -80,31 +41,14 @@
             "big_fund": true,
             "national_team_etf": true,
             "recent_bidding": false,
-            "note": "链一核心标的全覆盖：中芯国际(大基金一二期+科创50ETF)、北方华创/中微公司(大基金二期+科创50ETF)、长电科技(大基金一期+ETF)。bidding.json数据延迟。双维度=strong。近期设备板块24/26上涨中所有大基金标的均在列。"
+            "note": "大基金一期(987亿)重制造投SMIC/长电等下游龙头，二期(2042亿)重设备材料投北方华创/中微等上游，三期(3440亿)明确晶圆制造+卡脖子方向。SMIC(688981)/北方华创(002371)/中微(688012)均被多期大基金覆盖。科创50ETF重仓688981/002371/688012。5月无设备中标记录（采招网付费墙），但行业大趋势明确。"
           },
           "tickers": []
         },
         {
-          "id": "a4",
+          "id": "a2",
           "priority": "normal",
-          "title": "🔥两部门绿电直连优先算力设施——算力能源叙事第四次政策共振，政策密度达2026年临界阈值",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "emerging",
-          "priced_in": "not_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "纯政策信号。无大基金直接投向算力能源基础设施(不在大基金投向范围)。无ETF直接映射(无专属算力能源ETF)。间接利好寒武纪/海光下游需求但传导链长达12-24月。weak(0维度匹配)。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a5",
-          "priority": "normal",
-          "title": "⚠️寒武纪8600亿+3.28%收盘创新高——'拒绝Google I/O落地回吐'叙事需修正：从+5%高点回落至+3.28%含三重压力。consensus→exhausted预警信号强化",
+          "title": "英伟达Q1财报：营收816亿(+85%)、净利润583亿(+211%)、追加$800亿回购、Vera Rubin全周期供应受限",
           "chain": "chain2",
           "confidence": "yellow",
           "lifecycle": "consensus",
@@ -114,14 +58,31 @@
             "big_fund": false,
             "national_team_etf": true,
             "recent_bidding": false,
-            "note": "科创50ETF华夏持仓寒武纪1137万股→national_team维度匹配。但寒武纪非大基金直投标的(大基金投资偏重制造/设备/材料而非AI芯片设计)。moderate=1维度匹配。"
+            "note": "寒武纪(688256)在科创50ETF华夏持仓1137万股，海光信息(688041)也在科创50ETF。大基金三期虽提及AI算力方向但未直接投寒武纪/海光。AI算力链在A股缺乏直接对标NV的标的，传导路径为间接受益（先进封装/光模块/存储）。"
           },
           "tickers": []
         },
         {
-          "id": "a6",
+          "id": "a3",
           "priority": "normal",
-          "title": "英特尔CEO：AI推理时代CPU:GPU配比从1:8→1:1甚至4:1——GPU需求长期叙事首获产业链级别挑战",
+          "title": "AMD宣布台积电2nm工艺量产下一代EPYC Venice 业内首款2nm高性能CPU",
+          "chain": "chain2",
+          "confidence": "green",
+          "lifecycle": "emerging",
+          "priced_in": "not_priced",
+          "capital_backing": {
+            "level": "weak",
+            "big_fund": false,
+            "national_team_etf": false,
+            "recent_bidding": false,
+            "note": "AMD/台积电均为海外公司，不涉及大基金或国家队ETF直接持仓。二阶传导至国产先进封装/设备可间接匹配，但资本关联度弱。"
+          },
+          "tickers": []
+        },
+        {
+          "id": "a4",
+          "priority": "normal",
+          "title": "Anthropic三年$450亿向SpaceX采购算力 首次实现季度盈利",
           "chain": "chain2",
           "confidence": "yellow",
           "lifecycle": "emerging",
@@ -131,24 +92,24 @@
             "big_fund": false,
             "national_team_etf": false,
             "recent_bidding": false,
-            "note": "全球事件，零中国资本支撑。Intel CEO言论不涉及中国资本流动。weak(0维度)。"
+            "note": "Anthropic/SpaceX均为美国公司，不涉及任何A股资本匹配。链二二阶传导至光模块/存储/服务器供应链可间接受益，但资本关联度为零。"
           },
           "tickers": []
         },
         {
-          "id": "a7",
+          "id": "a5",
           "priority": "normal",
-          "title": "DeepSeek组建Harness团队+Meta 7000人转AI——AI代码智能体军备竞赛+人才重分配。叙事级事件，短期零财务影响",
+          "title": "舜宇光学切入光学互连 光模块产业链迎增量玩家",
           "chain": "chain2",
           "confidence": "green",
-          "lifecycle": "exhausted",
-          "priced_in": "fully_priced",
+          "lifecycle": "positioning",
+          "priced_in": "partially_priced",
           "capital_backing": {
             "level": "weak",
             "big_fund": false,
             "national_team_etf": false,
             "recent_bidding": false,
-            "note": "纯叙事信号。DeepSeek AIGC领域无A股映射/Meta全球事件。weak。"
+            "note": "舜宇光学(02382.HK)为港股，非大基金/国家队ETF标的。光通信国产替代可间接匹配大基金三期AI算力方向，但无直接资本关联。光模块板块在A股有圣邦/光迅/新易盛等标的被部分行业ETF覆盖但非国家队重仓。"
           },
           "tickers": []
         }
@@ -321,605 +282,66 @@
     },
     "themes": {
       "available": true,
-      "date": "20260520",
+      "date": "20260521",
       "top_themes": []
     },
     "kdj": {
       "available": true,
-      "date": "2026-05-20",
+      "date": "2026-05-21",
       "count": 0,
       "stocks": []
     },
     "alerts": {
       "available": true,
-      "total_active": 93,
-      "recent_count": 76,
-      "fire": [
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥英伟达投资迈威尔20亿美元→硅光子AI数据中心互连，算力基础设施从电→光代际跃升。链二光模块/光通信获2026年最强产业信号",
-          "impact": "英伟达5/20宣布向迈威尔投资20亿美元合作研发硅光子技术升级AI数据中心网络，将GPU与自研AI芯片无缝集成。迈威尔股价大涨12.8%市值866亿美元。硅光子互连将AI集群从电信号→光信号代际升级→直连链二光通信/光模块方向。此前5/18光纤供需缺口+伊朗光缆叙事→今日英伟达直接投资硅光子从产业链顶层确认光通信方向。利好中际旭创/新易盛/天孚通信/亨通光电/长飞光纤。zero capital backing(全球事件)。emerging<6h→中文媒体零覆盖→信息不对称窗口12-24h。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥长鑫科技科创板IPO 5/27上会日期确定——存储制造龙头上市最后冲刺。CXMT催化从'待上会'→'5/27明确日期'确定性跃升。四家券商327亿账面浮盈",
-          "impact": "上交所5/20公告审议长鑫科技首发事项定于5/27。招商/华安/中信建投/中金四家券商合计持股327亿，招商浮盈或近200亿。CXMT从'已提交招股书(时间不确定)'→'7日后上会'催化确定性跃升。Q1营收508亿(+719%)/H1指引1100-1200亿→全球DRAM第四极。此前兆易涨停+10%已price in CXMT IPO预期75-85%→日期确认可能触发'利好兑现'获利了结 vs '第二轮定价'(具体测算上市影响)。净效应偏正但需警惕买预期卖事实。big_fund+national_team双覆盖。emerging<4h。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥阿里云峰会真武M890三代路线图+56万片+平头哥独立IPO→进入consensus阶段(priced_in 30-40%)，链二去稀缺性三连击完成",
-          "impact": "5/20全天媒体密集覆盖阿里云全栈发布→16:30 scanner fire→22:30确认consensus。真武M890(144GB/800GB/s)+V900(2027Q3)→J900(2028Q3)三代路线图+56万片累计出货+128卡超节点+平头哥独立IPO+Qwen3.7-Max国产第一。与5/16昆仑芯97%+5/17平头哥量产形成'去稀缺性三连击'→寒武纪/海光稀缺性溢价持续压缩。寒武纪从+5%→收+3.28%已部分反映。priced_in 30-40%→1-3日或升至60-70%。national_team覆盖。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥科创50+2%续创新高+中芯国际+5%+中科飞测+14%——链一指数级别突破/A股第5次美股免疫通过。positioning延续",
-          "impact": "科创50至1813.74点创历史新高。费城半导体-3.5%背景下第5次且最强免疫。链一设备/材料/封测全线共振。资金从链二→链一系统性转移获指数层面最强验证。A股半导体正构建独立于美股的价格发现机制。big_fund+national_team双覆盖。positioning→priced_in 60-70%。短线获利盘需警惕(中芯+12.62%后1-2日技术性回调2-4%)。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥阿里云峰会：真武M890三代路线图+56万片+128卡超节点+平头哥独立IPO——链二去稀缺性供给侧最强信号，国产AI芯片竞争格局永久改变",
-          "impact": "5/20阿里云峰会全栈发布：真武M890性能3倍前代(144GB显存/800GB/s互联)，三代路线图(2027Q3 V900→2028Q3 J900)，累计出货56万片服务400+客户，128卡超节点(百纳秒时延)，Qwen3.7-Max国产模型第一，平头哥筹备独立IPO。国产GPU从'技术验证'→'商业实证+产业规划'→供给侧从双极→多极不可逆。去稀缺性逻辑从'远期威胁'→'中期确定性现实'。寒武纪/海光稀缺性溢价面临持续压缩。与5/16昆仑芯97%+5/17平头哥量产形成'去稀缺性三连击'。national_team覆盖。emerging<8h。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥寒武纪8600亿+5.27%创历史新高/263x PE——市场拒绝'Google I/O落地回吐'但高位三重压力积聚(三星罢工+真武去稀缺性+估值泡沫)",
-          "impact": "寒武纪盘中涨超5%市值首破8600亿创历史新高，20日涨20%+。思元590获云厂商大规模部署/订单至2027年/高盛上调目标价。凌晨scanner预测的'Google I/O落地回吐'被市场强势拒绝→国产算力叙事定价权重高于事件驱动获利了结。但263x动态PE远超行业均值+三星罢工HBM断供实锤+真武M890去稀缺性三连击→高位三重压力。consensus→exhausted预警信号活跃。national_team覆盖。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥科创50涨超2%续创历史新高+中芯国际+5%——链一突破前高指数级验证/A股第5次免疫美股半导体下跌测试通过/中美半导体脱钩从假设→实证",
-          "impact": "科创50盘中+2%至1813.74点续创历史新高。成分股中科飞测+14%/中芯国际+5%领涨。在费城半导体-3.5%背景下强势免疫——2026年第5次且最强的一次。链一(设备/材料/制造/封测)核心标的从个股走强→指数级别突破。资金从链二向链一系统性转移获指数层面最强验证。链一>>链二结构性判断从研究员判断→市场实证。A股半导体正在构建独立于美股的价格发现机制。big_fund+national_team双覆盖。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] 🔥中芯国际实际+12.62%远强于scanner估计(+5%)——scanner系统性低估链一收盘强度7.62pp。池子设备24/26上涨(92%)/材料25/25(100%)/封测8/9(89%)→链一全产业链共振",
-          "impact": "Scanner 16:30数据中芯+5%(盘中)→实际收盘+12.62% vol 5.65为近月最大单日涨幅。差距7.62pp=系统性低估→尾盘机构资金加速流入。链一全线爆发: 中科飞测+17.43%/长电+8.90% vol 5.60/北方华创+5.86%/设备92%上涨/材料100%上涨。第5次美股免疫测试以最强形态通过(费城-3.5%→科创50+2%创新高81.74)。链一>>链二结构性判断从analyst假设→市场真金白银投票。strong_backing(大基金+ETF双覆盖)。positioning(趋势延续)但需关注短线获利盘(中芯+12.62%后1-2日技术性回调2-4%概率不低)"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] 🔥阿里云峰会真武M890三代路线图——链二去稀缺性获产业级最强信号。与昆仑芯97%+平头哥量产形成'去稀缺性三连击'→寒武纪/海光稀缺性溢价持续压缩",
-          "impact": "a2为链二去稀缺性供给侧最强信号。真武M890(144GB显存/800GB/s互联/3倍前代)+三代路线图(2027Q3 V900→2028Q3 J900)+56万片累计出货+128卡超节点+平头哥独立IPO。国产GPU从'技术验证'→'商业实证+产业规划'三代演进→供给侧从双极→多极不可逆。与5/16昆仑芯97%+5/17平头哥量产形成'去稀缺性三连击'→信号密度达临界。寒武纪从+5%→+3.28%收盘部分反映此逻辑(盘中三重压力显效)。moderate_backing(ETF间接覆盖)。emerging<12h，priced_in 30-40%→1-3日或升至60-70%"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥ASML CEO：首批High-NA EUV光刻机生产的芯片数月内面世——全球2nm/1.4nm进入High-NA时代，中国零获取→制程代差从1.5代扩大至2代+。链一从'追赶固定靶'→'追赶移动靶'风险升级",
-          "impact": "ASML CEO富凯5/19确认High-NA EUV距产出首批芯片仅数月。台积电/三星/Intel推进High-NA量产→全球进入2nm/1.4nm世代。中国因制裁被完全排除在此技术世代之外→中芯国际止步DUVi 7nm vs 台积电High-NA 2nm→代差从1.5代扩大至2代+。链一国产替代的基准情景从'线性追赶Duv→EUV'变为'追赶EUV但对方已进入High-NA'→移动靶加速风险。中长期利好国产替代紧迫性(替代需求更刚性)但短期压制链一估值天花板(技术上永远落后2代+的心理定价)。emerging<9h，信息不对称窗口24-48h。zero capital backing(全球事件)。相关标的: 中微/北方华创/拓荆/中芯国际。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥OpenAI推出'保障容量'1-3年算力长约——全球最大AI公司自身算力供给不确定→AI算力紧缺叙事从'GPU交货期'→'平台锁量竞争'层级跃升",
-          "impact": "OpenAI 5/19推出保障容量服务，客户可选1-3年承诺期限锁定算力访问权限，折扣随年度承诺额度增加。OpenAI自己都无法确保按需获取算力→需客户提前1-3年锁量锁价→算力紧缺获最强平台级验证。AI算力从'当前紧缺'→'中长期锁量竞争'→利好国产算力远期需求逻辑但短期无直接传导。链二去稀缺性+全球供给扩张(谷歌TPU云+Cerebras+Tenstorrent)双向角力未解。emerging<15h，信息不对称窗口24-48h。zero capital backing(全球事件)。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥Google I/O全线AI产品升级——Gemini 3.5 Flash免费+搜索25年最大改版+科研版Gemini+音频眼镜。但昨日寒武纪+8.40%已部分price in→警惕回吐",
-          "impact": "Google I/O密集发布：Gemini 3.5 Flash全球免费+搜索AI模式嵌入(25年来最大升级)+Gemini for Science科研版+三星谷歌智能眼镜首展。Google从AI追赶者→全栈进击。利好AI算力总需求但昨日寒武纪+8.40%已部分price in I/O预期→警惕1-2日事件驱动回吐。positioning阶段——事件已被预期但产品细节为新增量。zero capital backing(全球事件)。相关: 寒武纪/海光/中际旭创/新易盛/恒玄科技。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-23:00] 🔥YMTC IPO辅导→存储制造CXMT单核→CXMT+YMTC双核驱动——本窗口最大增量。strong_backing(大基金+ETF双覆盖)。emerging<6h，信息不对称48-72h。利好NAND全产业链",
-          "impact": "a1(YMTC IPO)为本轮唯一strong_backing信号。池子验证：沪硅涨停+20%(NAND硅片材料)/设备24/28上涨(五连强势)/中微+21%两日。但存储内部严重分化：佰维-5.34%(模组买预期卖事实)/澜起-0.35%(二阶传导受损) vs 沪硅涨停/中微领涨。NAND设计/设备/材料受益 vs 模组/接口受损。5/20-21首轮券商研报跟进→priced_in可能快速升至30-40%→窗口收缩。推荐：增配设备/材料(北方华创/中微/沪硅)，观望存储模组(佰维/澜起)"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-23:00] 🔥全球AI算力供给三连击：谷歌TPU云(a3)+Cerebras 602亿+Tenstorrent 50亿→去稀缺性从国产→全球维度强化。链二AI芯片中期结构性压力持续升级",
-          "impact": "a3(谷歌黑石50亿AI云)为本周内第三波全球AI算力供给侧扩张信号。此前Cerebras 602亿美元上市(5/14)+Tenstorrent 50亿估值+平头哥量产(5/17)+昆仑芯97%训练率(5/17)→今日谷歌TPU商用云将竞争层级从芯片侧→基础设施侧。去稀缺性超级趋势已从多点开花→产业共识。寒武纪+8.40%今日反弹为Google I/O事件驱动非趋势反转→去稀缺性中期结构+全球供给扩张将持续压制国产GPU估值溢价。反弹为减仓窗口而非加仓信号。维持链二AI芯片观望/减仓。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥长江存储启动IPO辅导——中信证券+中信建投辅导备案，YMTC科创板上市正式进入轨道。存储制造从CXMT单核→CXMT+YMTC双核驱动，2026年链一存储方向最大增量变量",
-          "impact": "5/19 17:09界面独家：中信证券+中信建投发布YMTC IPO辅导备案报告。YMTC是中国3D NAND绝对龙头（全球份额约6%，232层量产）。此前CXMT（DRAM）IPO催化存储制造→YMTC接力→存储方向从DRAM单品类→NAND+DRAM全品类国产替代共振。与CXMT 508亿Q1营收形成存储双雄叙事。信号层级：存储国产替代从'DRAM有龙头'→'NAND也有龙头'质变。big_fund+national_team双覆盖。emerging<5h，信息不对称窗口48-72h。利好NAND产业链全环节（设备/材料/封装/设计）。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥中美同意开展AI政府间对话——外交部确认两国元首就人工智能建设性交流。2026年首次官方确认中美AI合作对话渠道",
-          "impact": "外交部发言人郭嘉昆5/19记者会确认：特朗普访华期间两国元首就AI问题建设性交流，同意开展政府间对话。中美AI关系从'全面技术脱钩'→新增'局部合作对话渠道'。虽不直接改变链二供需格局，但为去稀缺性叙事提供'政策可能缓解'的预期变量。若后续对话成果涉及AI芯片→寒武纪/海光稀缺性溢价可能加速消退。zero capital backing（纯政策信号）。emerging<3h，信息不对称窗口24-48h。±1-2%温和偏正。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥谷歌+黑石50亿美元成立AI云公司——TPU从自用→对外商用，全球AI算力供给扩张加速去稀缺性趋势",
-          "impact": "Alphabet旗下谷歌与黑石计划成立AI云计算公司，黑石50亿股权成多数股东，谷歌提供TPU+软件+服务。2027年500兆瓦算力。谷歌TPU从内部基础设施→第三方商用AI云→与英伟达GPU形成供给侧双轨竞争。链二去稀缺性逻辑从国产维度→全球维度强化。Cerebras/Tenstorrent/平头哥是芯片侧竞争→谷歌TPU云是基础设施侧竞争，竞争层级升级。zero capital backing（全球事件）。emerging<11h。中长期利空寒武纪/海光稀缺性溢价。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥高盛英伟达前瞻：Agentic AI驱动新估值叙事——万亿美元指引仍有上修空间，企业端渗透为关键催化剂",
-          "impact": "高盛5/19研报：维持买入/目标价250美元。CY26/27 EPS上调约12%，预计Q1营收超预期约20亿美元。核心增量：Agentic AI加速渗透企业端是首次被卖方定位为英伟达独立估值催化剂（非训练/推理间接衍生）。三个股价催化剂：超大规模云商盈利改善+Agentic AI企业渗透+非传统客户部署能见度。但市场预期水位已高→5/28财报前边际催化有限。zero capital backing（全球事件）。lifecycle: positioning（市场已广泛预期超预期）。链二中期利好国产算力远期需求但短期传导弱。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥CPO概念暴跌+算力硬件领跌——链二光通信伊朗光缆+光纤缺口叙事24h内emerging→exhausted。天孚/联特-9%+，2026年最快生命周期跳变案例",
-          "impact": "5/19盘中CPO持续下挫，天孚通信/联特科技跌超9%。距离伊朗光缆新闻仅24h→光通信板块即-9%暴跌。方法论教训：Scanner 10:30评为'emerging<18h最佳风险收益比'→实际窗口<24h。纯地缘叙事(伊朗光缆)信号生命周期应下调至12-24h。链二光通信短期上行空间封顶。national_team覆盖。exhausted确认。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥小摩LTA占比攀升推动存储芯片估值框架切换(P/B→P/E)——链一存储方向新增估值重定价催化。emerging<2h",
-          "impact": "JP Morgan 5/19报告：2026-2030年AI存储供给无法满足云厂商需求→LTA比重上升→P/B估值过时→切换到P/E框架。同步上调三星/SK海力士/铠侠目标价。CXMT产业链从'营收/利润量级确认'→新增'估值方法论重构'质变维度。存储芯片从周期品→成长属性的估值重定价。big_fund+national_team双覆盖。emerging<2h，信息不对称窗口24-48h。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥前三星芯片负责人警告：中国企业积极扩产→明年下半年内存显著降价——CXMT超级周期首个权威反方风险信号。emerging<6h",
-          "impact": "三星DS前总裁庆桂显5/19韩国NAEK论坛：中国企业扩产→供应量激增→市场格局可能在H2 2027或H1 2028转变。若大型科技公司capex ROI下降→2028年后内存需求可能萎缩。CXMT超级周期叙事的首个权威反方信号。短期(6-12月)不受影响但改变中长期风险收益比。与s2(LTA估值切换)对比——LTA锁定需求可部分对冲。big_fund+national_team双覆盖。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] 🔥三星罢工获韩国央行GDP量化-0.5%——信号层级从企业劳资纠纷→国家级经济威胁。政府干预不可逆，和解概率+10-15pp。5/19-20谈判result为本周最大事件风险",
-          "impact": "韩国央行首次量化单一企业罢工GDP影响。政府干预压力从隐性→显性→不可逆的政治任务。和解概率35-45%→50-60%。若和解→AI芯片反弹3-5%+封测获利了结；若破裂→5/21罢工确定+海光/寒武纪再跌5-10%。moderate_backing(大基金+ETF双覆盖但招投标弱)。positioning→resolution临界点，<24h即跳变。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] 🔥CXMT H1 1100-1200亿(+612-677%)确认DRAM超级周期——链一存储方向确定性从强→极强。但兆易涨停后警惕买预期卖事实。设备/材料仍有补涨空间5-10%",
-          "impact": "长鑫科技招股书H1指引1100-1200亿/净利500-570亿。全年有望2500亿+→CXMT从追赶者→全球第四极。strong_backing(大基金一二三期全覆盖+ETF重仓)。consensus阶段→兆易涨停后次日上涨概率仅35-40%→警惕exhausted。设备/材料首日定价30-50%→补涨空间5-10%。维持核心仓位不追高。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] 🔥伊朗霍尔木兹海峡海底光缆收费——链二光通信新增地缘风险维度。2026年首次海底光缆地缘风险信号。emerging<18h，信息不对称窗口24-72h",
-          "impact": "伊朗议会5/18宣布对霍尔木兹海峡海底互联网电缆收费。与光纤供需缺口形成双驱动共振。利好亨通光电/长飞光纤/中天科技/中际旭创/新易盛。weak_backing(仅ETF间接覆盖)。emerging<18h→最佳风险收益比阶段。推荐小仓位短线参与。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥三星罢工获韩国央行GDP量化-0.5%——从企业劳资纠纷升级为国家级经济威胁。政府干预压力从隐性→显性，和解概率+10-15pp。谈判延长至周二，结果5/19-20出炉",
-          "impact": "韩国央行5/18预计三星罢工拉低GDP 0.5个百分点。信号层级跃升：企业劳资纠纷→国家级宏观经济威胁→政府无法承受罢工持续。韩国总统/总理已表态介入。和解概率从35-45%→50-60%。若和解→AI芯片反弹3-5%/封测获利了结；若5/21罢工仍发生→DRAM月产能-10-15%/海光寒武纪再跌5-10%。5/19-20 resolution窗口→5/20-21 A股定价。big_fund+national_team双覆盖。positioning→resolution临界点。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥长鑫科技H1指引1100-1200亿(+612-677%)/净利500-570亿——DRAM国产替代从Q1验证升级为全年超级周期。警惕兆易涨停后买预期卖事实",
-          "impact": "长鑫科技5/17更新招股书：2025年营收617.99亿(+155%)。H1指引1100-1200亿(+612-677%)/净利500-570亿(+2244-2544%)。全球份额7.67%有望继续增长。CXMT从'Q1单季验证'→'全年2500亿+超级周期'。链一存储制造方向确定性从强→极强。但兆易5/18已涨停(priced_in 75-85%)→5/19警惕买预期卖事实(次日上涨概率仅35-40%)。利好产业链全环节(设备/材料/封测/设计)。big_fund+national_team双覆盖。lifecycle: consensus(兆易涨停后)。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥伊朗拟对霍尔木兹海峡海底光缆收费——链二光通信新增地缘风险维度。2026年首次海底光缆地缘风险信号。利好光通信/光纤自主可控",
-          "impact": "伊朗议会5/18宣布计划对霍尔木兹海峡海底互联网电缆收费，涉及谷歌等全球科技公司。未来电缆维修维护权或仅限伊朗企业。霍尔木兹海峡为欧亚海底光缆关键通道。链二光通信从单一'供需缺口驱动'(光纤涨价+交货期20周)→新增'地缘风险+自主可控'双驱动。利好亨通光电/长飞光纤/中天科技/中际旭创/新易盛。national_team覆盖(5G/通信ETF)。emerging<18h，财联社独家。信息不对称窗口24-72h。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-23:00] 🔥双副国级同日站台——丁薛祥(算力网)+李强(AI+制造)。2026年最高密度政策信号日！链一确定性跃升至年内最高，链二算力需求获顶级背书。5/19开盘首次定价",
-          "impact": "丁薛祥调研算力网建设(副总理级别)+李强调研AI与先进制造融合(总理级别)同日发布。链一设备/制造获总理公开站台→国产替代从市场驱动→市场+政策双驱动。链二算力基建获副总理战略背书+光纤供需缺口+新闻联播+核电直连四重催化共振。双副国级同日站台为2026年最高密度政策信号。5/19开盘首次定价两者。信息不对称窗口24-48h。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥丁薛祥调研算力网建设：加快构建全国一体化算力网——副总理级别战略背书，算力基建从部门级→国家战略级跃升",
-          "impact": "丁薛祥在北京/河北/内蒙古调研算力网建设，强调算力是国家综合国力重要体现，统筹能源资源配置与算力设施建设，以电强算/以算促电。与5/16新闻联播青海算电协同+5/8四部门核电直连+光纤供需缺口形成算力基础设施四重催化共振。利好国产算力芯片(寒武纪/海光)、AI服务器(昇腾)、光模块/光纤(中际旭创/新易盛/天孚通信)、IDC全产业链。national_team覆盖。emerging<2h，信息不对称窗口24-48h。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥李强北京调研：推动AI与先进制造业深度融合——总理亲自站台，半导体设备/制造获最高级别政策背书",
-          "impact": "李强先后到北京人形机器人创新中心、小米汽车调研，强调AI+先进制造融合/实施'人工智能+'行动/加快新一代智能制造。与中微董事长央视《对话》形成企业+政府双重驱动。链一从'市场驱动'升级为'市场+政策双驱动'。利好北方华创/中微公司/拓荆科技/紫光国微/兆易创新。big_fund+national_team双覆盖。emerging<2h。与丁薛祥算力网调研同日发布→双副国级同日站台科技制造，信号集中度极高。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥百度AI云Q1收入88亿同比+79%，GPU云收入同比+184%——AI算力需求获百度财报量化验证",
-          "impact": "百度Q1 AI云收入88亿+79%，GPU云+184%。百度智能云全面升级为大模型智能体应用全栈AI云。与阿里云AI收入首破30%(89.71亿)形成双巨头AI云收入爆发→国产算力需求从预期→财务实证。昆仑芯P800万卡97%训练率+天池256卡6月上市。但链二核心矛盾(去稀缺性+竞争加剧)未变。national_team覆盖。positioning<6h。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] 🔥三星谈判Day9法院禁令+延长至周二——罢工概率55-60%→35-45%。resolution窗口5/19-20，±5-10%方向性冲击为本周最大事件风险。长电vol_ratio 4.73仅+0.48%→获利了结压力price in 50-60%",
-          "impact": "韩国法院禁令(罢工不得妨碍生产否则罚款)+李在明/金民锡双重表态+谈判延长至周二。和解(55-65%): AI芯片反弹3-5%+存储/封测获利了结-3-5%。破裂(35-45%): 5/21罢工确定+海光/寒武纪再跌5-10%。长电今日放量滞涨为获利了结明确信号。5/19-20结果出炉→A股5/20-21定价。推荐: 持仓不变等结果。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] ⚡MLCC价格循环反转向上——2026年首次行业级别涨价信号！风华高科+9% vol_ratio 4.41(池子最强验证)。与CXMT存储涨价形成'双涨价'共振",
-          "impact": "TrendForce报告AI芯片需求→高端MLCC供需偏紧→挤压消费类产能→全品类涨价。风华+9% vol 4.41/三环+2.57% vol 2.02。材料板块22/25上涨(最强板块)。MLCC+存储双涨价共振→设备+材料+被动元件三线并进。信息不对称窗口<24h(风华已+9%压缩窗口)。推荐: 三环集团(机构标的)优先。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] CXMT Q1 50.8B first pricing day - GigaDevice limit up (+130B volume, market cap 290B). DRAM substitution strongest quant + market validation. strong_backing. lifecycle positioning->consensus accelerating. priced_in 75-85%",
-          "impact": "CXMT 5/17 disclosed Q1 revenue 50.8B (+719% YoY)/net profit 33B. 5/18 Mon first pricing: GigaDevice hits daily limit up (exceeds Scanner +10% forecast), 130B+ volume, total market cap 290B+. DRAM substitution from concept -> 50.8B financial proof -> limit up confirms. CXMT H1 guidance 110-120B exceeds expectations by 33%. Related tickers (equipment/materials/OSAT) still have catch-up potential. Post-limit-up priced_in 75-85% -> next trading day (5/19) beware buy-rumor-sell-fact."
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] Samsung 10:00 mediation in progress - positioning->resolution inflection. Pool two-way price-in (60-70%) confirmed. +/-5-10% directional shock. Settlement 55-60% vs breakdown 40-45%. 3 days to 5/21",
-          "impact": "Samsung 5/18 10:00 second round mediation has started (~1h in progress), result unknown. Settlement -> strike premium dissipates + AI chips rebound 3-5% + storage/OSAT profit-taking 3-5%. Breakdown -> 5/21 strike confirmed -> DRAM monthly -10-15% -> Hygon/Cambricon another -5-10%. Result may be published this afternoon/evening -> 5/19 open gap pricing. KR govt may exercise emergency adjustment -> breakdown probability lower than nominal."
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] Huang Renxun Stanford speech opposes AI chip export controls - NVIDIA CEO publicly states controls failed and counterproductive. emerging<3h. weak_backing pure narrative catalyst",
-          "impact": "NVIDIA CEO at Stanford Youtube lecture clearly opposes AI chip export controls. Together with Qualcomm CEO meeting Commerce Minister Wang Wentao (5/16) forms US chip industry collective opposition to controls. Mid-term policy easing probability marginal +5-10pp (from ~30% to ~35-40%). For A-shares: short-term negative for Chain1 (substitution narrative marginally weakened), slightly positive for Chain2 (competitive environment improvement). Pure narrative with zero China capital backing -> short-term market reaction limited (+/-1-2%). Info asymmetry window 24-48h -> expected spread 5/19-20. Warning: may be over-interpreted as policy is about to ease -> actual probability <40% -> do not chase."
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥三星谈判Day9方向性转折——韩国法院禁令(罢工不得妨碍生产否则罚款)+谈判延长至周二，罢工概率55-60%→35-45%。positioning→resolution临界点",
-          "impact": "韩国法院部分应允三星禁令申请+谈判从周一10:00一次性调解延长至周二持续谈判+总统/总理表态介入。三重降压使罢工概率从55-60%→35-45%。三星股价早盘大涨但韩KOSPI续跌3.39%显示市场仍在定价不确定性。此前海光-6.82%/寒武纪-4.09%已price in HBM断供担忧60-70%。若和解确认→AI芯片反弹3-5%+存储/封测获利了结；若破裂→5/21罢工确定→海光/寒武纪再跌5-10%。谈判持续至周二→结果5/19-20出炉→5/20-21 A股定价。big_fund+national_team双覆盖。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥AI数据中心致光纤价格暴涨+交货期20周+——链二光模块/光纤光缆获全新供需缺口催化。emerging<8h，2026年首次光通信供给约束信号",
-          "impact": "财联社5/18首报：北美光纤需求+22-25% vs 供应+12-19%→大批量买家交货期20周+(小批量1年)。光纤/光模块供需缺口首次获量化数据。与HBM短缺形成'算力基础设施双瓶颈'共振(HBM制约GPU出货+光纤制约数据中心互联)。利好中际旭创/新易盛/天孚通信/亨通光电/长飞光纤。此前链二光模块方向未被系统覆盖，为首次进入扫描信号。信息不对称窗口24-48h→预计5/19-20券商研报跟进。national_team覆盖(5G/通信ETF)。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥MLCC价格循环反转向上——TrendForce报告AI芯片需求致高端MLCC供需偏紧→挤压消费类→全品类涨价。emerging<6h，2026年首次行业级别涨价信号",
-          "impact": "TrendForce 5/18报告：AI芯片需求使高端MLCC供需偏紧→部分代理商预防性囤购→供应商调价→整体MLCC价格平均降幅创近三年新低→价格循环反转。2026年首次被动元件行业级别涨价信号。利好风华高科/三环集团/洁美科技。与存储涨价(CXMT 508亿验证)形成'半导体上游材料双涨价'共振。信息不对称窗口24-72h→券商预计1-3天内集中跟进。national_team覆盖(半导体芯片ETF)。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥长鑫科技Q1 508亿首日定价——兆易创新开盘涨超10%, DRAM国产替代获市场真金白银确认。HBM/存储器概念同步领涨。big_fund+national_team双覆盖。positioning→首日定价中",
-          "impact": "长鑫科技5/17披露Q1营收508亿(+719% YoY)/净利330亿。5/18周一首次定价: 兆易创新(688981)开盘涨超10%领涨半导体板块, HBM/存储器概念同步上涨。A股三大指数低开(-0.37~-0.87%)背景下存储板块逆势大涨。DRAM国产替代从概念→508亿财务实证→市场以资金投票。长鑫科技H1指引1100-1200亿超预期。兆易+10%已将利好price in 60-70%→警惕利好兑现→若收盘涨幅<5%为买预期卖事实。big_fund(大基金三期投资存储)+national_team(科创50ETF重仓兆易)双覆盖。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥黄仁勋斯坦福演讲公开反对AI芯片出口管制——英伟达CEO亲自表态'管制失败且适得其反'。emerging<3h, 快科技5/18 08:15首发",
-          "impact": "英伟达CEO黄仁勋在斯坦福Youtube讲座中明确反对AI芯片出口管制, 称'此类管制失败且适得其反', 反感将AI芯片比作核武器, 认为全球应采用美国技术体系, 限制他国使用会损害美国自身技术优势。信号层级: 英伟达(95%+AI训练芯片份额)CEO vs 美国政府对华管制政策→全球AI芯片产业链最具分量的市场声音公开反对。对A股: ①短期偏多链二(若政策松动→国产GPU竞争环境改善) ②短空链一国产替代叙事(若管制放松→替代紧迫性边际下降)。中期传导需数月, 当前纯叙事催化。emerging<3h, zero capital backing。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥三星罢工Day8——倒计时3天+存储vs代工5倍奖金结构性裂痕+韩KOSPI再跌3.39%。今日10:00调解positioning→resolution临界点。big_fund+national_team双覆盖",
-          "impact": "三星超4.5万名员工威胁5/21起罢工18天。核心裂痕升级: 存储器部门奖金5亿韩元 vs 芯片代工部门仅8000万韩元→5倍差距→AI红利分配不均→人才从逻辑芯片流失至SK海力士→三星长期竞争力风险。韩KOSPI 5/18续跌3.39%报7239点(叠加美股周五纳指-1.54%/英伟达-4%)。今日10:00第二轮事后调解结果未知。若和解→罢工溢价消散+AI芯片反弹3-5%+存储封测获利了结; 若破裂→5/21罢工确定+DRAM月产能-10-15%+海光/寒武纪再跌5-10%。5/21仅剩3天。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-23:05] 🔥长鑫科技Q1营收508亿(+719%)/净利330亿——DRAM国产替代最强量化验证。5/18周一首次定价。strong_backing（大基金三期+科创50ETF双覆盖）。H1指引1100-1200亿超预期。⚠️兆易/长电周五已涨5-7%，警惕利好兑现"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-23:05] 🔥三星5/18 10:00第二轮事后调解——5源confirm，positioning→resolution临界点。池子双向price in成立。±5-10%方向性冲击，本周最大事件风险。建议开盘前关注谈判进展"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥长鑫科技科创板IPO招股书：Q1营收+719%至508亿，净利330亿——DRAM国产替代获最强量化验证",
-          "impact": "长鑫科技（国内DRAM绝对龙头）IPO招股书申报稿5/17 17:50披露：Q1营收508亿(+719% YoY)/净利330亿/归母净利247.6亿。全球算力需求+厂商产能调配→DRAM供不应求+价格快速上涨。DRAM国产替代从概念→508亿Q1营收量化验证。链一：存储制造国产规模化获财务实证→设备/材料需求上行。链二：DRAM涨价→HBM供给进一步紧张→国产GPU获取HBM难度加大。利好兆易创新(688981)/澜起科技(688008)/长电科技(600584)/通富微电(002156)。5/18周一首次定价。big_fund+national_team双覆盖。emerging<2h。长鑫未上市但IPO预期将催化存储全产业链。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥三星谈判最后12小时倒计时——明日10:00调解结果决定罢工probability 0%或90%+，±5-10%方向性冲击",
-          "impact": "钛媒体5/17确认三星劳资双方明日10:00第二轮事后调解。5/21罢工仅剩4天。池子双向price in验证：海光-6.82%/寒武纪-4.09%(HBM担忧60-70%) vs 兆易+5.38%/长电+6.89%(涨价预期50-60%)。若和解→罢工溢价消散+AI芯片反弹3-5%；若破裂→5/21罢工确定+海光/寒武纪再跌5-10%。5/18 A股收盘前谈判结果将出炉。big_fund+national_team双覆盖。positioning→resolution临界点。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] 🔥上海启动全球首颗光计算卫星研制——太空AI算力开辟链二全新叙事维度",
-          "impact": "东方天算与光本位共建天基光计算创新中心，启动全球首颗光计算卫星。光计算板卡单卡300 TOPS，芯片已太空先期验证。长三角天基计算创新联合体同步筹备。开辟链二AI算力从地面→太空全新维度。短期零财务影响（5-10年商业化）但叙事价值高：中国率先将光计算+太空算力结合。零中国资本直接支撑（none）。emerging<12h，界面独家。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] 🔥中微公司董事长央视《对话》公开呼吁——设备国产替代获龙头企业+国家级平台双重背书，strong_backing(大基金二期+ETF双覆盖)",
-          "impact": "尹志尧在央视《对话》公开呼吁客户给国产设备更多机会。信号层级：设备龙头+国家级舆论平台→加速FAB客户心理门槛突破。5/18周一首次定价。但中微周五已+11.81%→警惕买预期卖事实。设备替代方向为当前确定性最强的主线。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] 🔥阿里平头哥自研GPU量产+昆仑芯万卡97%训练率——双技术验证信号对寒武纪/海光利好传导被市场持续拒绝",
-          "impact": "昆仑芯97%训练率(超H100集群90-93%)+平头哥GPU量产为国产AI芯片技术实证里程碑，逻辑上利好寒武纪/海光。但两者5/16双跌-4.09%/-6.82%。市场正在做'技术突破→竞争加剧→去稀缺性→估值下修'的逻辑重定价。此为链二AI芯片方向最危险的结构性信号。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥阿里平头哥自研GPU规模化量产——国产AI芯片竞争从寒武纪/海光双极→三极格局",
-          "impact": "阿里Q4财报确认平头哥自研GPU量产+阿里云AI收入首破30%(89.71亿)。国产GPU供给侧出现第三极。对寒武纪/海光多空交织：阿里(最大互联网客户)自研→可能部分替代外部采购(利空稀缺性溢价)，但验证国产GPU量产技术门槛(长期利好板块)。5/18周一Day3定价窗口。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥无锡Token工厂落地——弘信电子+华为昇腾384超节点规模化部署，国产算力基础设施商业闭环",
-          "impact": "5/15弘信电子联手华为昇腾在无锡落地省内首个昇腾384超节点集群，定位'国芯国模'算力样板。与电信174亿Token工厂形成运营商+民企双线并行。华为昇腾从备选→规模化商业部署。emerging<24h，5/18周一首次定价。利好昇腾供应链+国产算力整体需求。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥中微公司董事长央视《对话》公开呼吁客户给国产设备更多机会——链一设备国产替代龙头企业主动推进",
-          "impact": "尹志尧公开表示客户'先入为主认为国外设备好'，呼吁给国产设备更多机会。信号层级：设备龙头在国家级舆论平台公开喊话→加速FAB客户心理门槛突破。但暴露现实阻力(认知惯性)意味着35%→50%国产化有非技术性阻力。big_fund+national_team双覆盖。5/18周一首次定价。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔥百度昆仑芯完成文心5.1全国产集群训练——万卡集群有效训练率97%+天池256卡超节点6月上市",
-          "impact": "昆仑芯P800万卡集群有效训练率97%(超越H100集群90-93%)，万卡线性扩展度>85%。国产AI芯片从'能不能训大模型'→技术实证消除质疑。天池256卡超节点6月上市为百度云对外提供国产算力商业化起点。6月为下一催化剂。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] 🚨中美芯片合作获商务层面递进确认——王文涛会见高通CEO，脱钩尾部风险~5%→~3%。5/18周一首次定价",
-          "impact": "Edge AI Daily 5/16确认王文涛会见高通CEO安蒙。高通46%营收来自中国。继5/16 20:20商务部磋商成果无芯片条款同日→商务部长见高通CEO→芯片合作在商务层面形成递进确认。脱钩尾部风险下降，利好链一估值修复。但松绑叙事边际削弱国产替代溢价。5/18周一首次定价，±1-2%温和偏正。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥三星5/18明日10:00重启第二轮事后调解——Day9最后谈判窗口，positioning→resolution临界点",
-          "impact": "钛媒体5/17 10:20确认。罢工概率45-55%，明日10:00为最后调解窗口。若和解→罢工溢价消散+存储/HBM短期压力缓解（海光/寒武纪HBM担忧price in 60-70%修复）；若破裂→5/21罢工确定+全球DRAM/HBM月产能-10-15%。±5-10%方向性冲击，为本周末最大事件风险。5/18周一A股开盘前可能已有谈判结果。big_fund+national_team双覆盖。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥商务部部长王文涛会见高通CEO安蒙——中美芯片合作商务层面持续推进，脱钩尾部风险下降",
-          "impact": "钛媒体Edge AI Daily 5/16报道。高通46%营收来自中国+中国智能手机芯片35-38%份额→深度市场绑定。继5/16商务部公布中美经贸磋商5项成果（无芯片条款）同日→商务部长见高通CEO→芯片合作在商务层面形成递进确认。中美科技脱钩尾部风险进一步下降（~5%→~3%），利好链一估值修复。5/18周一首次定价。big_fund+national_team双覆盖。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥Cerebras首周交易完整数据+钛媒体万字深度——670亿→602亿理性回归，AI推理赛道定价锚确立",
-          "impact": "CBRS 5/14上市首周：185→311(+68%)→次日-10%→周末~279/602亿美元。钛媒体深度分析WSE-3 4万亿晶体管/90万核心，推理延迟50ms vs GPU 800ms(16x)，吞吐10-15x。2025财年首度GAAP盈利2.378亿美元，积压246亿美元（OpenAI 200亿）。AI推理芯片从概念→602亿美元公开市场定价锚。对寒武纪/海光多空交织。零中国资本直接支撑。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "fire",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] 🔥OpenAI上市前最大重组+Brockman挂帅+马耳他首个国家AI合作——AI部署范式B2C→B2G",
-          "impact": "三重共振：①ChatGPT/Codex/API三合一→超级应用，Brockman挂帅备战万亿美元IPO ②马耳他57万公民免费ChatGPT Plus→AI国家服务平台范式突破 ③此前完成1220亿美元私募融资(8520亿估值)。AI部署从企业级→国家财政背书→算力需求超级周期延长。利好国产算力远期需求。big_fund+national_team覆盖。"
-        }
-      ],
-      "high": [
-        {
-          "date": "2026-05-20",
-          "level": "critical",
-          "source": "scanner",
-          "title": "[SCANNER-22:30] ⚡三星罢工新增劳动部长亲自调解——16:00 CST谈判reopen！5/21确定性从headline 100%→实质75-85%，最后一刻逆转变量复活。±5-10%方向性冲击重新打开。5/21 A股开盘前结果将出炉",
-          "impact": "5/20 16:00 CST韩国劳动部长金英勋亲自主持调解，三星与工会恢复谈判。上午第三次后调解无结论→部长以罢工前一天紧急调解权促成会面。此前10:55 CST headline'谈判终止/罢工确定'已全市场扩散→最差情景price in(兆易涨停+10%/长电+8.90% vs 寒武纪+3.28%)。部长介入后逆转概率15-20%→若和解→AI芯片反弹3-5%+存储/封测获利了结；若仍破裂→实锤无逆转→链二HBM断供升级/链一存储飙涨。5/21 A股开盘前最终结果出炉→本窗口最大变量。big_fund+national_team双覆盖。emerging<6.5h。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "critical",
-          "source": "scanner",
-          "title": "[SCANNER-16:30] 🔴三星谈判破裂→5/21周四罢工确定！positioning→resolution跳变完成/最差情景。HBM/DRAM月产能-10-15%即将兑现。链一存储国产替代确定受益 vs 链二HBM断供实锤升级",
-          "impact": "三星电子韩国工会5/20 10:55 CST宣布终止谈判，5/21罢工确定。历时10天谈判以最差情景破裂。DRAM月产能-10-15%+HBM出货中断即将兑现(韩政府量化GDP影响-0.5%)。此前市场price in和解60-70%(寒武纪+8.40%中含部分和解溢价)→需反向重定价。链一：存储国产替代(CXMT/YMTC)替代需求刚性猛增，兆易/长电/通富利好。链二：HBM物理断供→寒武纪/海光出货下修20-40%压力即刻升级。±5-10%方向性冲击中downside case确立→5/21 A股开盘首次定价。big_fund+national_team双覆盖。"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "critical",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] 🔴三星罢工确定→5/21开盘首次定价。positioning→resolution跳变完成/最差情景。HBM/DRAM月产能-10-15%从尾部风险→基准情景。链一存储受益确定化 vs 链二HBM断供升级为物理实锤。strong_backing(pool双向验证: 兆易涨停+10%/长电+8.90% vs 寒武纪从+5%回落至+3.28%)。±5-10%方向性冲击中downside case确立",
-          "impact": "三星电子韩国工会5/20 10:55 CST宣布终止谈判，5/21周四罢工确定。历时10天谈判以最差情景破裂。a1为本窗口最大增量——此前scanner/analyst反复预警的'今日最大事件风险'以最差情景兑现。池子双向定价验证: 兆易涨停+10%(涨价预期85%+)/长电+8.90% vol 5.60(封测转向) vs 寒武纪从+5%→+3.28%(HBM担忧升级70-80%)/海光未入anomalies(结构性弱势延续)。链一: 存储国产替代从'可能受益'→'确定性受益'+涨价逻辑从强→极强。链二: HBM物理断供→寒武纪/海光AI芯片出货下修20-40%压力即刻升级。此前price in和解60-70%→破裂后溢价需回吐+bad news叠加。5/21 A股开盘首次定价。strong_backing(大基金一二三期+科创50ETF双覆盖)。emerging<6h，priced_in 0-15%"
-        },
-        {
-          "date": "2026-05-20",
-          "level": "high",
-          "source": "scanner",
-          "title": "[SCANNER-10:30] ⚠️三星5/20谈判resolution今日为最大事件风险——结果可能在日内任何时点出炉。±5-10%方向性冲击。本窗口无新增三星信息→需持续监控",
-          "impact": "三星劳资谈判延长至周二(5/20)今日进行。韩国央行量化罢工GDP影响-0.5%/法院禁令/总统表态三重加压→和解概率50-60%。若和解→罢工溢价消散+AI芯片反弹3-5%+存储/封测获利了结-3-5%。若破裂→5/21罢工确定+海光/寒武纪再跌5-10%。resolution可能在日内任何时点出炉→5/20-21 A股定价。此前寒武纪+8.40%中30-40%可能为和解溢价→若和解→已部分price in→反弹空间缩窄至1-3%。big_fund+national_team双覆盖。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "high",
-          "source": "analyst",
-          "title": "[ANALYST-23:00] ⚠️存储方向内部严重分化——佰维-5.34%+澜起-0.35%(模组/接口) vs 沪硅涨停+20%+中微+9.29%(材料/设备)。存储涨价传导出现结构性裂痕",
-          "impact": "5背离信号中d1(佰维存储)、d3(澜起科技)最为严峻。CXMT 508亿+YMTC IPO+三星罢工三重利好下存储模组/接口方向逆向走弱→存储涨价ASP利好 vs 出货量受损的逻辑博弈正在被市场price in。池子验证：佰维-5.34%在IC设计38/46上涨背景下逆跌(vol 2.45)/澜起连续3+日放量方向不明(vol 4.00)。若5/20继续→存储接口芯片逻辑重定价风险确认→中期负面。推荐：观望佰维/澜起，核心仓位维持在设备/材料方向"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "critical",
-          "source": "analyst",
-          "title": "[ANALYST-23:00] 🔴链一>>链二结构性判断维持——delta从18.63pp收窄至~10pp但方向不变。设备五连强势(中微+21%) vs AI芯片反弹但结构弱",
-          "impact": "池子数据：设备24/28上涨(五连强势,中微+9.29%两日+21%)/材料24/25最强(沪硅涨停+20%)/封测7/9上涨(长电+4.25%转向)/IC设计38/46上涨(圣邦+6.88%领涨) vs AI芯片7/11上涨(寒武纪+8.40%事件驱动反弹)。链一(1 strong+2 moderate) vs 链二(0 strong+1 moderate)。资金从链二向链一系统性转移趋势未变。但delta从5/16 18.63pp→5/19 ~10pp(寒武纪反弹缩窄)→若三星和解→delta可能进一步缩窄至5-8pp→链一>>链二判断的极端程度下降但方向不变。维持链一(设备/材料/封测)核心仓位。"
-        },
-        {
-          "date": "2026-05-19",
-          "level": "high",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] ⚠️封测方向集体获利了结——长电vol_ratio 4.73仅+0.48%/澜起vol_ratio 4.59平盘。CXMT super cycle在封测方向利好已price in 85-90%",
-          "impact": "长电连续放量滞涨+澜起连续放量方向不明→封测方向三连warning。CXMT DRAM超级周期最强利好下封测不涨→买预期卖事实已从预期→实证。若5/19继续→封测短期回调3-5%。建议减仓封测暴露。"
-        },
-        {
-          "date": "2026-05-18",
-          "level": "critical",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] Dual-chain divergence widening further - Chain1 (GigaDevice limit up + CXMT 50.8B) >> Chain2 (AI chips weak). Chain1>>Chain2 is strongest structural judgment for 2026. Recommend overweight Chain1, underweight Chain2 AI chips",
-          "impact": "5/18 AM: GigaDevice limit up (storage design -> Chain1) vs Hygon/Cambricon weak (Chain2 under Samsung negotiation + HBM constraint + de-scarcity triple suppression). Chain1 gains CXMT 50.8B super catalyst -> certainty unprecedentedly strong. Chain2 weakness deepening. Chain1 direction 3 strong_backing vs Chain2 0 strong. Maintain: Chain1 (equipment/materials/OSAT/storage) core position, Chain2 AI chips observe/reduce. If Samsung negotiation breaks down -> Chain2 may fall another 5-10% -> recommend pre-emptive reduction."
-        },
-        {
-          "date": "2026-05-18",
-          "level": "high",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] GigaDevice limit up + 130B volume - 5/19 profit-taking pressure high. Post-limit-up next-day up probability only 40-45%. CXMT catalyst priced_in 75-85%. Related tickers (equipment/materials/OSAT) still have catch-up room",
-          "impact": "GigaDevice intraday limit up, 130B+ volume, total market cap 290B+. Historical pattern: semi leader limit up next-day up probability only 40-45%. If 5/19 opens high and drops -> buy-rumor-sell-fact -> sector correction 2-4%. If continues limit up -> exhausted risk -> deeper correction later. Recommendation: hold limit-up ticker but do not chase, watch related tickers (NAURA/AMEC/JCET/NSIG) for catch-up. Related tickers first-day pricing degree lower (30-50%) -> still has room."
-        },
-        {
-          "date": "2026-05-17",
-          "level": "critical",
-          "source": "analyst",
-          "title": "[ANALYST-23:05] 🔴双链撕裂确认为2026年主旋律——设备(+11.81%) vs AI芯片(-6.82%) delta=18.63pp。链一确定性持续增强（长鑫508亿验证）vs 链二不确定性上升（竞争格局恶化+HBM约束）。建议增配链一、减仓链二AI芯片"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "critical",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] 🔴AI芯片板块'技术突破→去稀缺性'逻辑重定价风险——新增最高风险！昆仑芯97%训练率+平头哥GPU量产证明国产GPU量产门槛可跨越→寒武纪/海光稀缺性溢价面临持续稀释",
-          "impact": "昆仑芯97%训练率(超H100集群)+平头哥GPU量产→国产GPU从双极→三极→四极(昆仑芯IPO在即)。技术越突破→稀缺性越下降→估值溢价越稀释。叠加HBM供给约束(四巨头包揽)→技术可量产但出货量受限→涨也涨不动。此为链二AI芯片方向中期结构性风险，不因任何单条利好而改变。寒武纪/海光5/16在双重技术利好下续跌-4.09%/-6.82%为市场正在price in此逻辑的证据。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "critical",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] 🔴5/18周一为2026年最复杂定价日——三星谈判(±5-10%)+5条新信号首次定价+全球AI密集事件周(AMD/Google/NVIDIA)三重叠加",
-          "impact": "三种情景概率：①和解+信号共振(40%)→AI芯片反弹5-8%+设备续涨 ②和解+竞争稀释(35%)→AI芯片小涨1-2%后回落 ③破裂+信号混乱(25%)→AI芯片再跌5-10%+设备对冲性走强。建议5/18开盘前关注三星谈判最新进展。维持链一核心仓位，减仓/观望链二AI芯片暴露。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "critical",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] 🔴链一>>链二最强确认——中微+11.81%(设备) vs 海光-6.82%(AI芯片) delta=18.63pp为2026年最大单日分化",
-          "impact": "设备13/17上涨 vs AI芯片3/6上涨。资金从链二(AI芯片)向链一(设备/封装)系统性转移的趋势正在加速而非缓解。HBM短缺→国产GPU出货下修20-40%持续被机构资金price in。维持链一(设备/封装/材料)核心仓位，建议减仓链二AI芯片暴露。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "critical",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] 🔴三星5/18周一10:00谈判为positioning→resolution临界点——唯一strong_backing，双向price in成立。±5-10%方向性冲击为本周最大事件风险",
-          "impact": "5/5信号全confirmed（钛媒体+Edge AI Daily+ReadHub多源溯源）。pool.db双向price in验证：海光-6.82%(HBM担忧60-70%)/寒武纪-4.09%/兆易+5.38%(涨价预期50-60%)/长电+6.89%。若和解→罢工溢价消散+AI芯片反弹3-5%；若破裂→5/21罢工确定+海光/寒武纪再跌5-10%。5/18 A股开盘前谈判结果可能已出炉。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "critical",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] 🔴海光第9+日背离-6.82%——若5/18谈判破裂→再跌5-10%确认结构性弱势。建议减仓AI芯片暴露",
-          "impact": "海光在五重利好叠加下续跌-6.82%为池子AI芯片最差。HBM短缺→国产GPU出货下修20-40%是中文市场最大信息差。若5/18谈判破裂→海光可能再跌5-10%→确认中期走弱趋势(10-15%下行空间)。若谈判和解→反弹3-5%但高度有限（HBM被四巨头包揽的底层压制未变）。寒武纪-4.09%同步走弱。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "high",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] 🟡本轮资金面改善：1 strong(a1/条件型) + 2 moderate(a2/a4) + 2 weak(a3/a5) vs 上轮0 strong",
-          "impact": "a1(三星罢工)获大基金三期+ETF双覆盖→strong但依赖事件结果（条件型）。a2(中美合作)、a4(OpenAI)获大基金+ETF→moderate。a3(Cerebras美股)、a5(ASML印度)零中国资本→weak。链一核心仓位维持（前期信号已获strong_backing），链二AI芯片观望/减仓。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "high",
-          "source": "analyst",
-          "title": "[ANALYST-17:00] ⚠️澜起科技vol_ratio 6.67为池子最高量比——异常放量跌提示存储涨价二阶传导可能为负，需关注5/18是否延续",
-          "impact": "澜起-6.45%+vol_ratio 6.67在存储涨价利好下逆向放量跌，为池子最高量比。提示存储涨价周期中内存接口芯片真实传导可能为负（ASP利好 vs 出货量受损）。vol_ratio 6.67提示机构资金主动出货而非散户恐慌。若5/18继续放量跌→可能触发存储接口芯片板块逻辑重定价。"
-        },
-        {
-          "date": "2026-05-17",
-          "level": "high",
-          "source": "analyst",
-          "title": "[ANALYST-11:00] DEPRECATED ⚠️澜起科技vol_ratio 6.67异常放量跌——存储涨价二阶效应存疑，池子最高量比",
-          "impact": "澜起-6.45% vol_ratio 6.67在存储涨价利好下逆向放量跌。对比长电+6.89%→存储涨价ASP直接受益 vs 澜起→内存接口二阶传导可能为负（ASP利好 vs 出货量受损）。vol_ratio 6.67提示机构主动出货。需关注5/18是否延续→若继续放量跌→可能为行业逻辑重定价。"
-        }
-      ]
+      "total_active": 8,
+      "recent_count": 0,
+      "fire": [],
+      "high": []
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-05-20T23:05:00.806275+08:00",
+      "last_updated": "2026-05-21T17:05:00.437859+08:00",
       "active_count": 10,
       "positions": [
         {
           "code": "600584.SH",
           "name": "长电科技",
-          "return_pct": 72.63,
-          "ret_5d": 21.93,
+          "return_pct": 74.24,
+          "ret_5d": 15.14,
           "warnings": [],
-          "last_check": "2026-05-20"
+          "last_check": "2026-05-21"
         },
         {
           "code": "002156.SZ",
           "name": "通富微电",
-          "return_pct": 57.51,
-          "ret_5d": 8.5,
+          "return_pct": 56.2,
+          "ret_5d": 8.31,
           "warnings": [],
-          "last_check": "2026-05-20"
+          "last_check": "2026-05-21"
         },
         {
           "code": "688012.SH",
           "name": "中微公司",
-          "return_pct": 57.5,
-          "ret_5d": 26.64,
+          "return_pct": 52.83,
+          "ret_5d": 9.91,
           "warnings": [],
-          "last_check": "2026-05-20"
-        },
-        {
-          "code": "688041.SH",
-          "name": "海光信息",
-          "return_pct": 40.15,
-          "ret_5d": -2.6,
-          "warnings": [],
-          "last_check": "2026-05-20"
+          "last_check": "2026-05-21"
         },
         {
           "code": "002371.SZ",
           "name": "北方华创",
-          "return_pct": 38.25,
-          "ret_5d": 16.23,
+          "return_pct": 39.72,
+          "ret_5d": 11.99,
           "warnings": [],
-          "last_check": "2026-05-20"
+          "last_check": "2026-05-21"
         },
         {
-          "code": "688126.SH",
-          "name": "沪硅产业",
-          "return_pct": 31.14,
-          "ret_5d": 17.38,
+          "code": "688041.SH",
+          "name": "海光信息",
+          "return_pct": 35.84,
+          "ret_5d": 1.32,
           "warnings": [],
-          "last_check": "2026-05-20"
+          "last_check": "2026-05-21"
         },
         {
           "code": "603650.SH",
@@ -927,25 +349,23 @@
           "return_pct": 27.11,
           "ret_5d": 0.4,
           "warnings": [],
-          "last_check": "2026-05-20"
+          "last_check": "2026-05-21"
+        },
+        {
+          "code": "688126.SH",
+          "name": "沪硅产业",
+          "return_pct": 23.85,
+          "ret_5d": 15.0,
+          "warnings": [],
+          "last_check": "2026-05-21"
         },
         {
           "code": "688981.SH",
           "name": "中芯国际",
-          "return_pct": 2.97,
-          "ret_5d": 13.49,
+          "return_pct": -2.1,
+          "ret_5d": 6.89,
           "warnings": [],
-          "last_check": "2026-05-20"
-        },
-        {
-          "code": "688256.SH",
-          "name": "寒武纪",
-          "return_pct": -1.98,
-          "ret_5d": 8.08,
-          "warnings": [
-            "⚠️ 从thesis以来高点回撤-27.07%"
-          ],
-          "last_check": "2026-05-20"
+          "last_check": "2026-05-21"
         },
         {
           "code": "688082.SH",
@@ -955,7 +375,17 @@
           "warnings": [
             "⚠️ 从thesis以来高点回撤-17.53%"
           ],
-          "last_check": "2026-05-20"
+          "last_check": "2026-05-21"
+        },
+        {
+          "code": "688256.SH",
+          "name": "寒武纪",
+          "return_pct": -7.13,
+          "ret_5d": 6.77,
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-30.89%"
+          ],
+          "last_check": "2026-05-21"
         }
       ]
     }

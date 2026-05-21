@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-20T23:05:00.806275+08:00",
+  "last_updated": "2026-05-21T17:05:00.437859+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -43,9 +43,24 @@
             "low_since": 45.3,
             "from_high_pct": -10.45
           }
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 57.58,
+            "latest_date": "20260515",
+            "since_date": "2026-05-06",
+            "since_return_pct": 27.11,
+            "ret_5d_pct": 0.4,
+            "ret_1d_pct": 1.7,
+            "high_since": 64.3,
+            "low_since": 45.3,
+            "from_high_pct": -10.45
+          }
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     },
     {
       "id": "TH-002",
@@ -89,9 +104,38 @@
             "low_since": 207.04,
             "from_high_pct": -9.29
           }
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 307.0,
+            "latest_date": "20260521",
+            "since_date": "2026-05-06",
+            "since_return_pct": 35.84,
+            "ret_5d_pct": 1.32,
+            "ret_1d_pct": -3.08,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -12.08
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a2",
+              "title": "🔥英伟达Q1营收$81.6B(+85%)/净利润$58.3B(+211%)——需求展望翻倍至$3-4T+Vera Rubin全周期供应受限，AI算力超级周期延伸至2030年",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     },
     {
       "id": "TH-003",
@@ -136,9 +180,53 @@
           "warnings": [
             "⚠️ 从thesis以来高点回撤-27.07%"
           ]
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1290.9,
+            "latest_date": "20260521",
+            "since_date": "2026-05-06",
+            "since_return_pct": -7.13,
+            "ret_5d_pct": 6.77,
+            "ret_1d_pct": -5.25,
+            "high_since": 1868.0,
+            "low_since": 971.3,
+            "from_high_pct": -30.89
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a2",
+              "title": "🔥英伟达Q1营收$81.6B(+85%)/净利润$58.3B(+211%)——需求展望翻倍至$3-4T+Vera Rubin全周期供应受限，AI算力超级周期延伸至2030年",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "📊费城半导体+4.49%/ARM+15%/AMD+8%——英伟达财报驱动芯片股全面爆发，为A股5/21开盘提供强外部顺风",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "📊谷歌$150亿密苏里+美光创纪录自由现金流+OpenAI冲刺IPO——AI基础设施多源验证超级周期",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ],
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-30.89%"
+          ]
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     },
     {
       "id": "TH-004",
@@ -182,9 +270,38 @@
             "low_since": 39.54,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 61.76,
+            "latest_date": "20260521",
+            "since_date": "2026-05-06",
+            "since_return_pct": 56.2,
+            "ret_5d_pct": 8.31,
+            "ret_1d_pct": -0.83,
+            "high_since": 62.28,
+            "low_since": 39.54,
+            "from_high_pct": -0.83
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     },
     {
       "id": "TH-005",
@@ -228,9 +345,44 @@
             "low_since": 424.08,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 662.99,
+            "latest_date": "20260521",
+            "since_date": "2026-05-06",
+            "since_return_pct": 39.72,
+            "ret_5d_pct": 11.99,
+            "ret_1d_pct": 1.07,
+            "high_since": 662.99,
+            "low_since": 424.08,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a4",
+              "title": "📊费城半导体+4.49%/ARM+15%/AMD+8%——英伟达财报驱动芯片股全面爆发，为A股5/21开盘提供强外部顺风",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     },
     {
       "id": "TH-006",
@@ -273,9 +425,38 @@
             "low_since": 293.5,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 475.8,
+            "latest_date": "20260521",
+            "since_date": "2026-05-06",
+            "since_return_pct": 52.83,
+            "ret_5d_pct": 9.91,
+            "ret_1d_pct": -2.96,
+            "high_since": 490.33,
+            "low_since": 293.5,
+            "from_high_pct": -2.96
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     },
     {
       "id": "TH-007",
@@ -319,9 +500,38 @@
             "low_since": 38.29,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 66.84,
+            "latest_date": "20260521",
+            "since_date": "2026-05-06",
+            "since_return_pct": 74.24,
+            "ret_5d_pct": 15.14,
+            "ret_1d_pct": 0.94,
+            "high_since": 66.84,
+            "low_since": 38.29,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     },
     {
       "id": "TH-008",
@@ -366,9 +576,44 @@
             "low_since": 91.78,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 127.22,
+            "latest_date": "20260521",
+            "since_date": "2026-05-06",
+            "since_return_pct": -2.1,
+            "ret_5d_pct": 6.89,
+            "ret_1d_pct": -4.92,
+            "high_since": 133.81,
+            "low_since": 91.78,
+            "from_high_pct": -4.92
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "⚡三星罢工达成暂定协议——2026年最大事件风险180度逆转，DRAM/HBM断供从基准情景→尾部风险",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "🔥国产晶圆代工提价——存储/PMIC/MCU需求释放+产能利用率大幅提升，链一从'政策驱动替补'→'需求拉动+定价权提升'良性循环初现",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a4",
+              "title": "📊费城半导体+4.49%/ARM+15%/AMD+8%——英伟达财报驱动芯片股全面爆发，为A股5/21开盘提供强外部顺风",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     },
     {
       "id": "TH-009",
@@ -411,9 +656,24 @@
             "low_since": 16.61,
             "from_high_pct": -0.71
           }
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 27.68,
+            "latest_date": "20260521",
+            "since_date": "2026-05-06",
+            "since_return_pct": 23.85,
+            "ret_5d_pct": 15.0,
+            "ret_1d_pct": -5.56,
+            "high_since": 29.52,
+            "low_since": 16.61,
+            "from_high_pct": -6.23
+          }
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     },
     {
       "id": "TH-010",
@@ -459,9 +719,27 @@
           "warnings": [
             "⚠️ 从thesis以来高点回撤-17.53%"
           ]
+        },
+        {
+          "date": "2026-05-21",
+          "status": "active",
+          "metrics": {
+            "latest_close": 175.2,
+            "latest_date": "20260515",
+            "since_date": "2026-05-06",
+            "since_return_pct": -4.65,
+            "ret_5d_pct": 5.4,
+            "ret_1d_pct": 0.06,
+            "high_since": 212.45,
+            "low_since": 139.74,
+            "from_high_pct": -17.53
+          },
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-17.53%"
+          ]
         }
       ],
-      "last_check": "2026-05-20"
+      "last_check": "2026-05-21"
     }
   ]
 }
