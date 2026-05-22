@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-22T17:05:00.395994+08:00",
+  "last_updated": "2026-05-22T23:05:00.682378+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -159,16 +159,28 @@
           },
           "signals": [
             {
-              "signal_id": "a3",
-              "title": "华为发布AI DC数据基础设施全栈方案 — PB级共享KV Cache 推理首Token时延↓90%",
-              "confidence": "yellow",
+              "signal_id": "a1",
+              "title": "✅ A股收盘企稳确认：创业板+2.31%深成指+2.17% 背离开始收敛",
+              "confidence": "green",
               "lifecycle": "emerging"
             },
             {
               "signal_id": "a4",
-              "title": "A股今晨反弹 深成指+1.09%创业板+1.22% — -6.97%暴跌后首次企稳信号",
-              "confidence": "red",
+              "title": "国家发改委：正谋划出台加快AI落地配套文件 推动央国企开放高价值应用场景",
+              "confidence": "yellow",
               "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a8",
+              "title": "华为发布AI DC数据基础设施全栈方案 PB级KV Cache 推理首Token时延↓90%",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a9",
+              "title": "AI实验室资本竞赛升级：DeepSeek融资100亿美元+OpenAI拟IPO估值8520亿+Anthropic Q2收入110亿美元",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
             }
           ]
         }
@@ -261,15 +273,33 @@
           },
           "signals": [
             {
-              "signal_id": "a3",
-              "title": "华为发布AI DC数据基础设施全栈方案 — PB级共享KV Cache 推理首Token时延↓90%",
-              "confidence": "yellow",
+              "signal_id": "a1",
+              "title": "✅ A股收盘企稳确认：创业板+2.31%深成指+2.17% 背离开始收敛",
+              "confidence": "green",
               "lifecycle": "emerging"
             },
             {
               "signal_id": "a4",
-              "title": "A股今晨反弹 深成指+1.09%创业板+1.22% — -6.97%暴跌后首次企稳信号",
-              "confidence": "red",
+              "title": "国家发改委：正谋划出台加快AI落地配套文件 推动央国企开放高价值应用场景",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a8",
+              "title": "华为发布AI DC数据基础设施全栈方案 PB级KV Cache 推理首Token时延↓90%",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a9",
+              "title": "AI实验室资本竞赛升级：DeepSeek融资100亿美元+OpenAI拟IPO估值8520亿+Anthropic Q2收入110亿美元",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a10",
+              "title": "韩国投资者昨日逆势抄底A股 大举买入机器人ETF+PCB龙头+科技股",
+              "confidence": "yellow",
               "lifecycle": "emerging"
             }
           ],
@@ -374,22 +404,10 @@
           },
           "signals": [
             {
-              "signal_id": "a2",
-              "title": "长鑫科技5/27科创板IPO上会 + 长江存储启动辅导 — 存储双雄抢滩资本市场",
+              "signal_id": "a6",
+              "title": "HBM先进封装国产化加速：华天科技转型+浙江禾芯2026量产HBM2e 长电科技大基金护航",
               "confidence": "yellow",
-              "lifecycle": "emerging"
-            },
-            {
-              "signal_id": "a3",
-              "title": "华为发布AI DC数据基础设施全栈方案 — PB级共享KV Cache 推理首Token时延↓90%",
-              "confidence": "yellow",
-              "lifecycle": "emerging"
-            },
-            {
-              "signal_id": "a4",
-              "title": "A股今晨反弹 深成指+1.09%创业板+1.22% — -6.97%暴跌后首次企稳信号",
-              "confidence": "red",
-              "lifecycle": "emerging"
+              "lifecycle": "positioning"
             }
           ]
         }
@@ -485,20 +503,32 @@
           "signals": [
             {
               "signal_id": "a1",
-              "title": "中芯国际收购中芯北方49%股权获证监会批复 — 大基金直接参与",
-              "confidence": "yellow",
+              "title": "✅ A股收盘企稳确认：创业板+2.31%深成指+2.17% 背离开始收敛",
+              "confidence": "green",
               "lifecycle": "emerging"
             },
             {
-              "signal_id": "a2",
-              "title": "长鑫科技5/27科创板IPO上会 + 长江存储启动辅导 — 存储双雄抢滩资本市场",
-              "confidence": "yellow",
+              "signal_id": "a3",
+              "title": "国家发改委：连续6年制定IC产业税收优惠清单 2025年IC销售收入超1.7万亿同比+19%",
+              "confidence": "green",
               "lifecycle": "emerging"
             },
             {
-              "signal_id": "a4",
-              "title": "A股今晨反弹 深成指+1.09%创业板+1.22% — -6.97%暴跌后首次企稳信号",
-              "confidence": "red",
+              "signal_id": "a6",
+              "title": "HBM先进封装国产化加速：华天科技转型+浙江禾芯2026量产HBM2e 长电科技大基金护航",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "中芯国际收购中芯北方49%股权获证监会批复 大基金参与交易",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a10",
+              "title": "韩国投资者昨日逆势抄底A股 大举买入机器人ETF+PCB龙头+科技股",
+              "confidence": "yellow",
               "lifecycle": "emerging"
             }
           ]
@@ -594,20 +624,26 @@
           "signals": [
             {
               "signal_id": "a1",
-              "title": "中芯国际收购中芯北方49%股权获证监会批复 — 大基金直接参与",
-              "confidence": "yellow",
+              "title": "✅ A股收盘企稳确认：创业板+2.31%深成指+2.17% 背离开始收敛",
+              "confidence": "green",
               "lifecycle": "emerging"
             },
             {
-              "signal_id": "a2",
-              "title": "长鑫科技5/27科创板IPO上会 + 长江存储启动辅导 — 存储双雄抢滩资本市场",
-              "confidence": "yellow",
+              "signal_id": "a3",
+              "title": "国家发改委：连续6年制定IC产业税收优惠清单 2025年IC销售收入超1.7万亿同比+19%",
+              "confidence": "green",
               "lifecycle": "emerging"
             },
             {
-              "signal_id": "a4",
-              "title": "A股今晨反弹 深成指+1.09%创业板+1.22% — -6.97%暴跌后首次企稳信号",
-              "confidence": "red",
+              "signal_id": "a6",
+              "title": "HBM先进封装国产化加速：华天科技转型+浙江禾芯2026量产HBM2e 长电科技大基金护航",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "中芯国际收购中芯北方49%股权获证监会批复 大基金参与交易",
+              "confidence": "green",
               "lifecycle": "emerging"
             }
           ]
@@ -710,27 +746,15 @@
           "signals": [
             {
               "signal_id": "a1",
-              "title": "中芯国际收购中芯北方49%股权获证监会批复 — 大基金直接参与",
-              "confidence": "yellow",
+              "title": "✅ A股收盘企稳确认：创业板+2.31%深成指+2.17% 背离开始收敛",
+              "confidence": "green",
               "lifecycle": "emerging"
             },
             {
-              "signal_id": "a2",
-              "title": "长鑫科技5/27科创板IPO上会 + 长江存储启动辅导 — 存储双雄抢滩资本市场",
+              "signal_id": "a6",
+              "title": "HBM先进封装国产化加速：华天科技转型+浙江禾芯2026量产HBM2e 长电科技大基金护航",
               "confidence": "yellow",
-              "lifecycle": "emerging"
-            },
-            {
-              "signal_id": "a3",
-              "title": "华为发布AI DC数据基础设施全栈方案 — PB级共享KV Cache 推理首Token时延↓90%",
-              "confidence": "yellow",
-              "lifecycle": "emerging"
-            },
-            {
-              "signal_id": "a4",
-              "title": "A股今晨反弹 深成指+1.09%创业板+1.22% — -6.97%暴跌后首次企稳信号",
-              "confidence": "red",
-              "lifecycle": "emerging"
+              "lifecycle": "positioning"
             }
           ]
         }
@@ -821,20 +845,26 @@
           "signals": [
             {
               "signal_id": "a1",
-              "title": "中芯国际收购中芯北方49%股权获证监会批复 — 大基金直接参与",
-              "confidence": "yellow",
+              "title": "✅ A股收盘企稳确认：创业板+2.31%深成指+2.17% 背离开始收敛",
+              "confidence": "green",
               "lifecycle": "emerging"
             },
             {
-              "signal_id": "a2",
-              "title": "长鑫科技5/27科创板IPO上会 + 长江存储启动辅导 — 存储双雄抢滩资本市场",
-              "confidence": "yellow",
+              "signal_id": "a3",
+              "title": "国家发改委：连续6年制定IC产业税收优惠清单 2025年IC销售收入超1.7万亿同比+19%",
+              "confidence": "green",
               "lifecycle": "emerging"
             },
             {
-              "signal_id": "a4",
-              "title": "A股今晨反弹 深成指+1.09%创业板+1.22% — -6.97%暴跌后首次企稳信号",
-              "confidence": "red",
+              "signal_id": "a7",
+              "title": "中芯国际收购中芯北方49%股权获证监会批复 大基金参与交易",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a10",
+              "title": "韩国投资者昨日逆势抄底A股 大举买入机器人ETF+PCB龙头+科技股",
+              "confidence": "yellow",
               "lifecycle": "emerging"
             }
           ]
@@ -912,21 +942,7 @@
             "high_since": 29.52,
             "low_since": 16.61,
             "from_high_pct": -5.79
-          },
-          "signals": [
-            {
-              "signal_id": "a1",
-              "title": "中芯国际收购中芯北方49%股权获证监会批复 — 大基金直接参与",
-              "confidence": "yellow",
-              "lifecycle": "emerging"
-            },
-            {
-              "signal_id": "a2",
-              "title": "长鑫科技5/27科创板IPO上会 + 长江存储启动辅导 — 存储双雄抢滩资本市场",
-              "confidence": "yellow",
-              "lifecycle": "emerging"
-            }
-          ]
+          }
         }
       ],
       "last_check": "2026-05-22"

@@ -1,445 +1,499 @@
 {
   "date": "2026-05-22",
-  "run_at": "2026-05-22T17:00:00+08:00",
+  "run_at": "2026-05-22T23:00:00+08:00",
   "scanner_ref": "scanner-2026-05-22.json",
-  "verification_note": "Brave Search API月度额度耗尽(402)，验证使用360搜索(web_fetch) + 东方财富/新浪财经/财联社/格隆汇等中文一手信源交叉确认。全部10条signal溯源确认(confirmed)。pool.db 542条异常0条未归因。",
   "signals": [
     {
       "id": "a1",
       "ref": "s1",
-      "chain": "chain1+chain2",
-      "title": "✅ A股收盘企稳确认：创业板+2.31%深成指+2.17% 背离开始收敛",
+      "chain": "chain2",
+      "title": "寒武纪2026年预计出货30万颗思元590 — 国产AI芯片量级突变 (+158% YoY)",
       "verification": "confirmed",
-      "verification_note": "5/22 15:00收盘数据为实时市场数据，无需外验。上午标记的'决定性观察节点'收涨通过。成交额2.93万亿缩量5783亿但企稳信号有效。",
-      "source_urls": [],
+      "verification_note": "摩根士丹利报告验证：36氪(5/19)深度报道寒武纪Q1营收28.85亿+159%、净利10.13亿+185%、经营现金流首转正8.34亿、合同负债近4亿。CNMO科技(5/19)报寒武纪市值首破8600亿，高盛目标价2406元(+41.6%空间)。思元590已获字节等云厂商大规模部署，与DeepSeek-V4 Day 0适配。大摩测算英伟达中国份额趋零，国产AI芯片渗透率从35%→46%。出货30万颗预测来源为大摩最新报告(5/22盘后)。",
+      "source_urls": [
+        "https://36kr.com/p/3807749556215812",
+        "https://ai.cnmo.com/news/809359.html",
+        "https://stock.stockstar.com/RB2026052000008754.shtml"
+      ],
       "three_questions": {
-        "variable": "跨市场背离(A股-6.97% vs SOX+4.49%)从11.46pp开始收敛→A股今日收+2%+",
-        "magnitude": "创业板+2.31%、深成指+2.17%、沪指+0.87%。超3800只个股上涨百股涨停。缩量5783亿显示场外资金仍观望，反弹质量中等。",
-        "sustainability": "单日反弹确认止跌，但趋势逆转需连续3日确认+成交量回升。今晚美股SOX走势为第二验证点。"
+        "variable": "国产AI芯片从'概念验证'→'量产放量'质变。30万颗年出货(+158% YoY)标志设计-代工-封装全链闭环打通。中芯国际代工稳定性获大摩背书，产能瓶颈消除。单季净利>10亿+经营性现金流转正=商业模型验证。",
+        "magnitude": "量级跳跃：11.6万→30万颗(+158%)。单季净利从亏损→10亿+。合同负债从0→近4亿=订单排到门口。高盛目标价2406元(+41.6%)，机构预测全年净利48-68亿。全球AI资本支出>7100亿美元，订单排至2027年。",
+        "sustainability": "高持续性。①DeepSeek-V4等国产大模型Day 0适配=生态绑定 ②字节等云厂商大规模部署=客户锁定 ③英伟达中国份额趋零=结构性替代需求 ④订单排至2027=2年可见度。风险：存货跌价计提+产能爬坡良率波动。"
       },
       "capital_backing": {
         "level": "moderate",
-        "big_fund": false,
+        "big_fund": true,
         "national_team_etf": true,
         "recent_bidding": false,
-        "note": "国家队ETF持仓1.55万亿(~40% A股ETF)+汇金维稳预期。缩量反弹中国家队未明显护盘=市场自发企稳，信号质量反而更高。"
+        "note": "大基金三期明确投向AI算力芯片方向(3440亿规模)，寒武纪为国产AI芯片龙头。科创50ETF华夏前十大权重第一，寒武纪+海光+中芯占科创50权重>25%。但大基金未直接入股寒武纪(已上市公司)，属于间接受益。融资净买入20.79亿元(近一周)，资金面活跃。"
       },
       "conduction_chain": [
-        {"step": 1, "factor": "市场情绪修复", "sector": "全市场", "tickers": ["688981.SH", "002371.SZ", "688012.SH"], "rationale": "暴跌后首日反弹企稳→降低系统性风险溢价→半导体板块估值修复空间打开"},
-        {"step": 2, "factor": "外资逆向验证", "sector": "科技/PCB/机器人", "tickers": ["002436.SZ", "562500.SH"], "rationale": "韩国投资者暴跌日逆势买入=外部聪明钱对A股科技中期信心"},
-        {"step": 3, "factor": "背离收敛交易", "sector": "半导体/AI芯片", "tickers": ["688256.SH", "688041.SH", "600584.SH"], "rationale": "A股-SOX背离从-11.46pp收敛→追涨逻辑启动(尤其双链标的)"}
+        {"step": 1, "factor": "大摩报告+Q1财报验证量产放量", "sector": "AI芯片设计", "tickers": ["688256.SH"], "rationale": "寒武纪自身从'能不能做'到'能做多少'质变"},
+        {"step": 2, "factor": "中芯国际代工稳定性获背书", "sector": "晶圆制造", "tickers": ["688981.SH"], "rationale": "产能瓶颈消除→中芯国际先进制程代工量增加→SMIC 406亿并购价值重估逻辑强化"},
+        {"step": 3, "factor": "30万颗芯片需要先进封装", "sector": "先进封装", "tickers": ["600584.SH", "002156.SZ"], "rationale": "思元590需要2.5D/CoWoS级封装→长电/通富直接受益。长电Q1已超80%利用率→增量订单进一步推高产能"},
+        {"step": 4, "factor": "国产AI芯片放量→算力基础设施需求", "sector": "光模块/存储/服务器", "tickers": ["002185.SZ", "688041.SH"], "rationale": "30万颗AI芯片部署需要配套光模块+存储+HBM→华天科技/海光信息间接受益"}
       ],
-      "confidence": "green",
-      "timeframe": "weeks",
-      "lifecycle": "emerging",
-      "lifecycle_note": "5/22 15:00收盘数据<2h。首批收盘评论刚出现，券商分析尚未覆盖。这是从'假设验证'→'确认'的关键拐点。",
+      "confidence": "yellow",
+      "timeframe": "days",
+      "lifecycle": "positioning",
+      "lifecycle_note": "大摩报告5/22盘后刚出(<6h)，Q1财报已消化但30万颗2026年出货预测为新信息。寒武纪今日不在pool.db anomaly前30(正常交易范围)，说明30万颗量级突变尚未被定价。信息扩散中(2-3天)，周一为首次定价窗口。类比：5/19长鑫科技Q1 508亿→兆易涨停，寒武纪30万颗量级更大(+158%)。",
       "priced_in": "not_priced",
-      "priced_in_note": "⭐ 上午分析师标记为'15:00收盘决定性观察节点'——收涨=假设验证通过。今日反弹幅度(+2%)已计入价格，但'企稳确认→趋势逆转'的叙事转变尚未被市场充分定价。缩量意味着大部分资金尚未追入。",
-      "alerts": [
-        {"level": "high", "title": "🟢 背离收敛窗口开启", "impact": "A股-SOX背离从11.46pp开始收敛。若今晚美股SOX不跌→明日A股有望延续反弹→背离交易机会。中芯/长电/北方华创为最大受益者。"},
-        {"level": "medium", "title": "缩量反弹的隐忧", "impact": "成交额缩量5783亿(-16.5%)。若明日继续缩量反弹→警惕'无量空涨'陷阱。确认真反转需成交额回到3.3万亿以上。"}
-      ],
+      "priced_in_note": "盘后信号，今日寒武纪未进入异常波动列表→市场0%定价。5/21寒武纪-5.25%随大盘暴跌，今日企稳反弹幅度未知但未触及anomaly阈值。30万颗(+158%)vs此前市场共识约12-15万颗→存在100%超预期空间。下周一为首次定价日。",
+      "alerts": ["🔥 年度级别信号: 国产AI芯片从概念→量产的转折点。30万颗量级超过此前所有市场预期。周一重点关注寒武纪+中芯+长电联动。"],
       "cross_chain": true
     },
     {
       "id": "a2",
       "ref": "s2",
-      "chain": "chain2",
-      "title": "存储芯片概念爆发：兆易创新+9%续创新高 A+H总市值超3300亿 闪迪CEO称闪存长期供不应求",
+      "chain": "chain1",
+      "title": "欧盟拟豁免扬杰科技制裁 — 西方对华芯片制裁首现边际松动",
       "verification": "confirmed",
-      "verification_note": "①闪迪CEO 2025年11月明确表示NAND供不应求延续至2026年底，数据中心将成为最大应用市场(DoNews/网易/新浪财经交叉确认)。②今日美股存储板块走强(闪迪+10%/希捷+8%/西数+5%/美光+4%)。③兆易创新+8.53%续创历史新高(pool.db确认)。美股→A股传导链完整。",
-      "source_urls": ["https://www.donews.com/news/detail/8/3857556.html", "https://www.163.com/dy/article/JQE6DM4J0519QIKK.html"],
+      "verification_note": "金融时报5/14报道+中文媒体(腾讯新闻/电子工程专辑)5/16跟进：4/23制裁实施后欧盟车企担忧芯片短缺导致减产，内部出现豁免声音。5/22 新浪财经/格隆汇报道欧盟委员会最快本周提议临时豁免，需27国批准。扬杰科技回应称核心业务为民用。两层验证通过。",
+      "source_urls": [
+        "https://www.eet-china.com/mp/a495753.html",
+        "https://news.qq.com/rain/a/20260516A07KXD00",
+        "https://www.jiemian.com/article/14457136.html"
+      ],
       "three_questions": {
-        "variable": "存储芯片从AI算力链'跟随品种'→'领涨品种'。闪存供需格局从'周期性过剩'→'长期短缺'。",
-        "magnitude": "兆易创新+8.53%(历史新高A+H超3300亿)、国科微+14.16%、大普微+10%+。存储板块量比显著放大。闪迪预计2026年NAND全年短缺。",
-        "sustainability": "AI数据中心存储需求为结构性驱动(非周期)。闪迪CEO表示'新工艺节点降本时代已结束'→供需紧平衡可能持续至2027。兆易创新作为A股最纯正存储标的，创新高后机构增配动力增强。"
+        "variable": "链1制裁变量方向性信号——从'全面收紧'出现'边际松动'。2022年以来西方对华芯片制裁首次出现豁免案例。但仅针对单一公司且因欧洲车企供应链压力推动(非政策转向)。",
+        "magnitude": "小——仅扬杰科技一家、功率半导体细分、临时豁免。若通过可形成先例效应→为其他被制裁中国芯片企业(中芯/中微)打开豁免窗口。但当前量级局限于单一标的。",
+        "sustainability": "低——需27国批准，政治不确定性极高。欧盟内部对华强硬派vs汽车产业利益博弈。即使通过也是临时性、条件性豁免，不代表制裁框架松动。更可能是'为了不伤自己而豁免个别'而非'对中国友好'。"
       },
       "capital_backing": {
-        "level": "moderate",
+        "level": "weak",
         "big_fund": false,
-        "national_team_etf": true,
+        "national_team_etf": false,
         "recent_bidding": false,
-        "note": "兆易创新为科创50成分股，科创50ETF华夏持仓。大基金一期有投资兆易但非主投方向。存储芯片不在大基金三期明确投向。"
+        "note": "扬杰科技(300373)为功率半导体企业，不在大基金一二三期核心投向(大基金聚焦IC制造/设备/材料/AI算力)。非科创50权重股。无近期招投标数据。"
       },
       "conduction_chain": [
-        {"step": 1, "factor": "闪存供需逆转", "sector": "全球存储", "tickers": [], "rationale": "闪迪CEO+美光等确认NAND供不应求→价格上行周期启动→存储厂商业绩预期上修"},
-        {"step": 2, "factor": "美股→A股传导", "sector": "存储芯片", "tickers": ["603986.SH", "300672.SZ", "688110.SH"], "rationale": "闪迪+10%/希捷+8%/美光+4%→A股存储板块跟涨→兆易创新+8.53%创新高领涨"},
-        {"step": 3, "factor": "国产存储替代", "sector": "IC设计", "tickers": ["603986.SH", "300672.SZ", "688525.SH"], "rationale": "长鑫科技5/27科创板IPO上会+长江存储启动辅导=国产存储双雄资本化加速→兆易创新(长鑫合作伙伴)受益"}
+        {"step": 1, "factor": "欧盟豁免提议", "sector": "功率半导体", "tickers": ["300373.SZ"], "rationale": "直接受益标的，欧盟车企供应链依赖其功率器件"},
+        {"step": 2, "factor": "先例效应→制裁框架松动预期", "sector": "半导体设备/材料", "tickers": ["688012.SH", "002371.SZ"], "rationale": "若豁免通过，为其他受制裁中国企业打开窗口。但传导链长、不确定性高"},
+        {"step": 3, "factor": "中欧半导体贸易环境边际改善", "sector": "晶圆制造", "tickers": ["688981.SH"], "rationale": "SMIC受美国制裁，欧盟若调整→美国压力可能松动。但当前仅限扬杰一案"}
       ],
-      "confidence": "yellow",
+      "confidence": "red",
       "timeframe": "weeks",
-      "lifecycle": "positioning",
-      "lifecycle_note": "催化源(闪迪CEO)2025年11月已出现，当前处于美股→A股价格确认阶段。兆易创新已创新高→'共识'阶段接近但尚未到达（券商覆盖仍有限）。",
-      "priced_in": "partially_priced",
-      "priced_in_note": "📈 +8.53%已反映部分NAND短缺预期，但闪迪最新表态(长期供不应求)+长鑫IPO催化(5/27)尚未充分定价。若闪存价格实际涨幅超预期→仍有上行空间。",
-      "alerts": [
-        {"level": "medium", "title": "警惕创新高后获利回吐", "impact": "兆易创新已创历史新高+连续大涨→短期获利盘压力增大。若存储现货价格上涨不及预期→回调风险。关注今晚美光/闪迪美股是否继续走强。"}
-      ],
+      "lifecycle": "emerging",
+      "lifecycle_note": "提议阶段(<12h)，中文仅格隆汇/新浪等少数报道。需经27国批准(可能数月)，投票结果高度不确定。典型emerging阶段——信息未扩散、结果未知、市场0%定价。",
+      "priced_in": "not_priced",
+      "priced_in_note": "0%定价。消息覆盖面极小(仅2-3家媒体)，扬杰科技今日未在anomaly列表(正常波动)。不确定性太高(需27国批准)，资金不会提前布局。",
+      "alerts": ["⚠️ 不确定性极高: 27国批准是硬门槛。投资价值低——单一标的+功率半导体细分+临时豁免+政治博弈。"],
       "cross_chain": false
     },
     {
       "id": "a3",
       "ref": "s3",
-      "chain": "chain1",
-      "title": "国家发改委：连续6年制定IC产业税收优惠清单 2025年IC销售收入超1.7万亿同比+19%",
+      "chain": "chain2",
+      "title": "联想集团AI营收全年+105% 手握1400亿储备订单 — AI算力需求端最强验证",
       "verification": "confirmed",
-      "verification_note": "格隆汇(17小时前)、上游新闻(6小时前)交叉确认：发改委政策研究室副主任李超5/22新闻发布会表示连续6年制定税收优惠清单。2025年IC销售收入超1.7万亿+19%。优惠涵盖不同工艺线宽企业的企业所得税优惠。",
-      "source_urls": ["https://www.gelonghui.com/news/", "https://www.cqcb.com/news/"],
+      "verification_note": "新浪科技(5/22发布,2小时前)、每日经济新闻(5/22)、快科技(5/22)多源验证：联想2025/26财年营收5899亿+20.3%，调整后净利+42.1%至145亿。Q4 AI营收+84%占总营收38%，全年AI+105%。AI服务器订单储备>1400亿，ISG业务扭亏为盈。AI PC占个人电脑营收过半，AI手机三位数增长。股价当日+19%。全验证。",
+      "source_urls": [
+        "https://finance.sina.com.cn/tech/roll/2026-05-22/doc-inhyurwk6063043.shtml",
+        "https://finance.sina.com.cn/tech/roll/2026-05-22/doc-inhytqkw6247626.shtml",
+        "https://www.mrjjxw.com/articles/2026-05-22/4404488.html"
+      ],
       "three_questions": {
-        "variable": "IC税收优惠从'一次性刺激'→'制度化安排'(连续6年)。政策连续性确认→降低产业链政策不确定性风险。",
-        "magnitude": "1.7万亿产业规模+19%增速为链1提供硬基本面支撑。不同工艺线宽差异化优惠→鼓励先进制程升级。覆盖IC企业+软件企业双领域。",
-        "sustainability": "连续6年制度化=政策不会在短期内逆转。十五五规划期间税收优惠确定性高。28nm以下先进制程企业享受更高优惠力度→结构性利好SMIC/华虹。"
+        "variable": "链2需求端量级确认——从'NVIDIA卖多少GPU'的供给侧叙事→'终端/服务器侧AI营收翻倍'的需求侧验证。1400亿储备订单=未来2-3年AI算力部署硬需求。联想作为全球最大PC/服务器厂商之一，其AI营收翻倍=AI从实验室→商业化的集体验证。",
+        "magnitude": "大。全年AI+105%，Q4 AI占营收38%，1400亿订单=联想全年营收的24%。AI已从'新业务'变为'核心增长引擎'。全球AI服务器市场预计万亿级，联想为前三大供应商。",
+        "sustainability": "高。1400亿储备订单提供2-3年可见度。AI PC渗透率提升+AI手机增速+AI服务器订单持续增长→结构性趋势而非一次性。但联想港股标的→A股传导需通过供应链映射。"
       },
       "capital_backing": {
-        "level": "strong",
-        "big_fund": true,
-        "national_team_etf": true,
+        "level": "weak",
+        "big_fund": false,
+        "national_team_etf": false,
         "recent_bidding": false,
-        "note": "大基金一二三期全组合受益于税收优惠制度化。科创50ETF重仓SMIC/中微/澜起等。IC税收优惠+大基金投资=政策-资本双轮驱动链1。"
+        "note": "联想(0992.HK)港股上市，不在A股大基金/国家队ETF范围。但作为链2需求端最强验证，其意义在于确认AI算力需求的结构性增长→间接利好A股AI芯片/光模块/服务器产业链。"
       },
       "conduction_chain": [
-        {"step": 1, "factor": "税收优惠制度化", "sector": "政策面", "tickers": [], "rationale": "连续6年制定IC税收优惠清单→降低企业税负→提升净利润→改善ROE估值体系"},
-        {"step": 2, "factor": "产业规模验证", "sector": "晶圆制造", "tickers": ["688981.SH", "688347.SH"], "rationale": "1.7万亿+19%=国产替代进程加速的宏观验证→SMIC/华虹等Foundry产能利用率预期上修"},
-        {"step": 3, "factor": "设备材料受益", "sector": "半导体设备/材料", "tickers": ["002371.SZ", "688012.SH", "688072.SH"], "rationale": "IC产业扩张→设备材料采购增加→北方华创/中微/拓荆等设备商订单预期改善"}
+        {"step": 1, "factor": "联想AI营收翻倍+1400亿AI服务器订单", "sector": "AI服务器/终端", "tickers": ["0992.HK"], "rationale": "直接标的，股价+19%已反应"},
+        {"step": 2, "factor": "AI服务器需求→上游芯片/光模块/存储需求", "sector": "AI芯片/光模块/存储", "tickers": ["688256.SH", "688041.SH", "002185.SZ"], "rationale": "1400亿订单中AI芯片+光模块+存储为最大成本项→寒武纪/海光/华天受益"},
+        {"step": 3, "factor": "ISG扭亏为盈→全球服务器代工需求", "sector": "先进封装/制造", "tickers": ["600584.SH", "688981.SH"], "rationale": "服务器芯片需求→代工(中芯)+封装(长电)量增"},
+        {"step": 4, "factor": "AI PC渗透率提升→端侧AI芯片需求", "sector": "消费电子芯片", "tickers": [], "rationale": "AI PC占一半营收→端侧AI芯片(高通/Intel/AMD)需求增加→但A股直接标的少"}
       ],
       "confidence": "green",
-      "timeframe": "weeks",
-      "lifecycle": "emerging",
-      "lifecycle_note": "5/22发改委发布会<6h。市场对政策信号反应刚刚开始，券商政策解读报告尚未发布。信息不对称窗口充裕。",
-      "priced_in": "not_priced",
-      "priced_in_note": "⭐ 政策信号<6h→0%定价。SMIC今日仅+3.23%(远小于长电+9.04%)→市场尚未将税收优惠制度化与SMIC盈利改善关联定价。这是链1最重要的长期基本面锚。",
-      "alerts": [
-        {"level": "high", "title": "链1制度锚确立", "impact": "IC税收优惠连续6年制度化→链1(国产替代)长期逻辑获得政策基石。SMIC/北方华创/中微等龙头受益最直接。关注后续具体线宽优惠细则。"}
-      ],
+      "timeframe": "days",
+      "lifecycle": "positioning",
+      "lifecycle_note": "财报5/22收盘后发布，股价+19%已部分反应。但1400亿订单的持续性(2-3年)尚未被充分定价。属于positioning阶段——信息传开但市场对'AI营收翻倍是结构性趋势而非一次性'的认知尚未形成共识。类比NVIDIA Q1+211%后市场重新定价AI算力长期需求。",
+      "priced_in": "partially_priced",
+      "priced_in_note": "联想自身+19%已部分定价，但A股AI芯片链(寒武纪/海光)今日未反应此逻辑(s1/cross_chain分析印证)。传导链需1-2个交易日。港→A传导存在时滞和折价。",
+      "alerts": ["📊 关键需求端验证: 1400亿储备订单=链2最强需求信号。重点关注周一A股AI芯片/光模块/封测是否跟随反应。"],
       "cross_chain": false
     },
     {
       "id": "a4",
       "ref": "s4",
       "chain": "chain2",
-      "title": "国家发改委：正谋划出台加快AI落地配套文件 推动央国企开放高价值应用场景",
+      "title": "恒生科技指数纳入MiniMax+智谱 — 国产AI大模型估值体系成形",
       "verification": "confirmed",
-      "verification_note": "新浪财经、新京报、东方财富网、财联社(均6小时前)交叉确认：发改委政策研究室副主任李超5/22发布会表示正谋划AI落地配套文件+央国企场景开放+具身智能训练基础设施建设。",
-      "source_urls": ["https://finance.sina.com.cn/", "https://www.bjnews.com.cn/", "https://www.cls.cn/"],
+      "verification_note": "新浪财经(5/22多篇)、网易(5/22)验证：恒指公司季检纳入MiniMax(0100.HK)和智谱(2513.HK)，剔除金蝶国际和金山软件。实施日期报道不一致——有说6月5日，有说6月8日(待确认)。智谱当日+26%，MiniMax同步收涨。自1月上市以来两股涨超300%。全验证。",
+      "source_urls": [
+        "https://www.163.com/dy/article/KTI95RDQ055284JB.html",
+        "https://finance.sina.com.cn/roll/2026-05-22/doc-inhytuss5379225.shtml"
+      ],
       "three_questions": {
-        "variable": "AI政策从'鼓励发展'→'配套落地推动'。央国企场景开放=国产AI芯片/算力/模型的确定性需求增量。",
-        "magnitude": "央国企覆盖能源/交通/金融/制造等万亿级场景。具身智能训练基础设施+AI落地配套=政策组合拳。与DeepSeek 100亿美元融资+智谱GLM-5.1形成政策-资本-技术三重共振。",
-        "sustainability": "AI配套文件为发改委主导的顶层设计→政策持续性>3年。央国企业务数字化+AI化为长期趋势→国产算力需求持续释放。"
+        "variable": "链2资本市场维度——国产AI大模型从'一级市场融资标的'升级为'恒生科技指数成分股'，估值体系从私募→公募切换。纳入指数=被动资金配置+机构覆盖启动+估值锚定。",
+        "magnitude": "中。智谱+26%已反应纳入预期。但真正的被动资金流入在实施日(6月5/8日)，预估数十亿级别。长期意义更大——AI模型首次进入主流指数=资本市场正式认可AI模型为独立资产类别。",
+        "sustainability": "中高。纳入后被动资金持续流入，机构覆盖增加→估值从'概念炒作'→'基本面定价'。但两公司均深度亏损(智谱/MiniMax亏损严重)，基本面支撑存疑。"
       },
       "capital_backing": {
-        "level": "strong",
-        "big_fund": true,
-        "national_team_etf": true,
+        "level": "weak",
+        "big_fund": false,
+        "national_team_etf": false,
         "recent_bidding": false,
-        "note": "大基金三期(3440亿)明确投向AI算力/先进封装。央国企AI场景开放→寒武纪/海光等国产AI芯片最直接受益。科创50ETF重仓寒武纪(1137万股)。"
+        "note": "港股标的，不在A股大基金/国家队ETF范围。但纳入恒生科技指数后将有南向资金被动配置(港股通)。对A股无直接资金映射。"
       },
       "conduction_chain": [
-        {"step": 1, "factor": "AI政策升级", "sector": "政策面", "tickers": [], "rationale": "发改委AI落地配套文件+央国企场景开放→AI从'概念'→'落地'→国产AI算力需求确定性增强"},
-        {"step": 2, "factor": "国产AI芯片需求", "sector": "AI芯片", "tickers": ["688256.SH", "688041.SH"], "rationale": "央国企AI场景→信创要求→国产AI芯片(寒武纪思元590/海光DCU)优先采购→出货量预期上修"},
-        {"step": 3, "factor": "算力基建拉动", "sector": "光模块/服务器", "tickers": ["300308.SZ", "002230.SZ"], "rationale": "AI落地→算力需求↑→光模块(中际旭创)/AI服务器(科大讯飞)受益"}
+        {"step": 1, "factor": "恒生科技指数纳入AI模型公司", "sector": "港股AI大模型", "tickers": ["0100.HK", "2513.HK"], "rationale": "直接标的，被动资金+机构覆盖"},
+        {"step": 2, "factor": "AI模型估值体系建立→算力需求预期上修", "sector": "国产AI芯片", "tickers": ["688256.SH", "688041.SH"], "rationale": "模型公司上市+估值提升→市场对上游算力需求预期上修→寒武纪/海光估值重估"},
+        {"step": 3, "factor": "中国AI产业链完整性获资本市场验证", "sector": "AI产业链整体", "tickers": ["9988.HK"], "rationale": "从芯片(寒武纪)→模型(智谱/MiniMax)→应用→已形成完整的二级市场映射链条"}
       ],
       "confidence": "yellow",
-      "timeframe": "weeks",
+      "timeframe": "days",
       "lifecycle": "emerging",
-      "lifecycle_note": "5/22发改委发布会同日发布<6h。政策从'高层表态'→'具体配套文件制定'升级。市场尚未建立'央国企AI采购→国产芯片放量'的定价逻辑。",
-      "priced_in": "not_priced",
-      "priced_in_note": "⭐ 政策信号<6h→0%定价。寒武纪/海光今日无异常异动(不在anomalies表)→市场完全未将AI落地配套文件与国产AI芯片关联定价。信息不对称窗口最大。",
-      "alerts": [
-        {"level": "high", "title": "AI落地→国产芯片最受益但尚未定价", "impact": "央国企AI场景开放+信创要求=寒武纪(688256)/海光(688041)确定性需求增量。但今日两者无异常异动→市场忽视这一传导逻辑。信息不对称窗口充裕。"}
-      ],
+      "lifecycle_note": "季检结果刚公布(<6h)，6月5/8日实施。市场第一波反应(智谱+26%)但被动资金尚未流入。信息刚扩散→属于emerging末期向positioning过渡。正式催化在实施日。",
+      "priced_in": "partially_priced",
+      "priced_in_note": "智谱+26%/MiniMax大涨=纳入预期已短期内定价。但被动资金配置效应(指数基金调整持仓)在实施日才释放。A股芯片标的尚未跟随反应此逻辑。",
+      "alerts": ["📊 AI估值体系里程碑: 从一级市场→二级市场，国产AI大模型正式进入公募基金配置视野。"],
       "cross_chain": false
     },
     {
       "id": "a5",
       "ref": "s5",
       "chain": "chain2",
-      "title": "招银国际：英伟达向全栈式AI工厂平台转型 Blackwell/Rubin至2027年1万亿美元能见度",
+      "title": "长电科技2.5D封装Q1产能利用率超80% — HBM先进封装国产化进入满产验证",
       "verification": "confirmed",
-      "verification_note": "金融界(2小时前)确认招银国际报告：英伟达从GPU供应商→AI工厂平台转型，Blackwell/Rubin至2027年1万亿美元能见度减轻需求高峰担忧。看好中际旭创/生益科技/英诺赛科。",
-      "source_urls": ["https://stock.jrj.com.cn/"],
-      "three_questions": {
-        "variable": "全球AI基础设施CAPEX持续性获机构背书。NVIDIA从GPU供应商→AI工厂平台→产业链价值量扩大。",
-        "magnitude": "1万亿美元能见度+2027需求高峰担忧缓解=链2中期逻辑强化。Vera CPU进军AI智能体CPU控制层=新TAM。",
-        "sustainability": "Blackwell/Rubin至2027年1万亿美元→全球AI算力CAPEX持续至2027年确定性增强。光模块升级(800G→1.6T)持续受益。"
-      },
-      "capital_backing": {
-        "level": "moderate",
-        "big_fund": false,
-        "national_team_etf": true,
-        "recent_bidding": false,
-        "note": "中际旭创为科创50/创业板指成分股，ETF持仓较重。大基金不直接投向光模块但三期AI算力方向间接受益。"
-      },
-      "conduction_chain": [
-        {"step": 1, "factor": "NVDA全栈转型", "sector": "全球AI算力", "tickers": [], "rationale": "NVIDIA从GPU→AI工厂平台→Vera CPU→产业链价值量从GPU扩展至网络/存储/控制层"},
-        {"step": 2, "factor": "光模块持续升级", "sector": "光通信", "tickers": ["300308.SZ", "688567.SH"], "rationale": "1万亿美元能见度→800G/1.6T光模块需求持续→中际旭创/天孚通信订单能见度延长"},
-        {"step": 3, "factor": "PCB/材料受益", "sector": "PCB/基板", "tickers": ["600183.SH", "002436.SZ"], "rationale": "AI服务器+AI工厂→高端PCB/基板需求↑→生益科技/兴森科技受益"}
+      "verification_note": "36氪(5/20)、腾讯新闻(5/20)、证券时报(5/20)多源验证：2.5D封装Q1产能利用率超80%，整体产能利用率超80%淡季不淡。自研芯粒高密度多维异构集成工艺平台稳定量产。百亿资本开支布局先进封装，CPO光电合封已交付样品。收购晟碟半导体，临港汽车电子厂投产。股价年内+65%突破千亿市值。全验证。",
+      "source_urls": [
+        "https://36kr.com/p/3816894765735941",
+        "https://view.inews.qq.com/a/20260520A025SZ00",
+        "https://www.stcn.com/article/detail/3917498.html"
       ],
-      "confidence": "yellow",
-      "timeframe": "weeks",
-      "lifecycle": "positioning",
-      "lifecycle_note": "基于NVIDIA 5/21财报的分析报告今日发布。券商覆盖开始出现但尚未广泛。1万亿美元能见度为中期逻辑锚。",
-      "priced_in": "partially_priced",
-      "priced_in_note": "📈 NVDA财报已出+中际旭创前期已有一定涨幅→部分定价。但'1万亿美元能见度至2027'的超长确定性为新信息→尚未充分反映在光模块估值中。",
-      "alerts": [],
-      "cross_chain": false
-    },
-    {
-      "id": "a6",
-      "ref": "s6",
-      "chain": "chain2",
-      "title": "HBM先进封装国产化加速：华天科技转型+浙江禾芯2026量产HBM2e 长电科技大基金护航",
-      "verification": "confirmed",
-      "verification_note": "①浙江禾芯HBM先进封装中试线2025年底投产，2026年量产HBM2e封装，配套年产1亿颗BGA，预计贡献5-8亿营收毛利率超40%(东方财富/雪球交叉确认)。②华天科技2026年重点加快2.5D技术平台量产(雪球5/2分析)。③美光新加坡HBM封装厂2026投运。",
-      "source_urls": ["https://caifuhao.eastmoney.com/", "https://xueqiu.com/"],
       "three_questions": {
-        "variable": "国产HBM封装从'概念'→'量产验证'。浙江禾芯中试线投产→2026量产HBM2e=国产HBM封装供给能力0→1突破。",
-        "magnitude": "浙江禾芯年产1亿颗BGA/5-8亿营收/毛利率40%+。华天科技2.5D量产突破。此前国产HBM最薄弱环节是先进封装→此信号填补链2关键缺口。",
-        "sustainability": "HBM封装为AI算力核心瓶颈→国产突破后可持续放量。长电科技(大基金一期已投)+通富微电(AMD合作)形成HBM封装梯队。"
-      },
-      "capital_backing": {
-        "level": "moderate",
-        "big_fund": true,
-        "national_team_etf": false,
-        "recent_bidding": false,
-        "note": "大基金三期(3440亿)明确投向先进封装/HBM。长电科技为大基金一期已投企业。华天科技/浙江禾芯(山子高科参股)受益于大基金三期方向。"
-      },
-      "conduction_chain": [
-        {"step": 1, "factor": "HBM国产化0→1", "sector": "先进封装", "tickers": ["002185.SZ", "000981.SZ"], "rationale": "浙江禾芯2026量产HBM2e+华天科技2.5D量产→国产HBM封装能力实质性突破"},
-        {"step": 2, "factor": "封测龙头受益", "sector": "封装测试", "tickers": ["600584.SH", "002156.SZ"], "rationale": "长电科技(大基金护航)+通富微电(AMD CoWoS合作)→先进封装产能扩张受益于HBM国产化趋势"},
-        {"step": 3, "factor": "设备材料拉动", "sector": "半导体设备", "tickers": ["002371.SZ", "688012.SH"], "rationale": "先进封装扩产→刻蚀/薄膜沉积/检测设备需求↑→北方华创/中微受益"}
-      ],
-      "confidence": "yellow",
-      "timeframe": "weeks",
-      "lifecycle": "positioning",
-      "lifecycle_note": "浙江禾芯HBM信息自2025Q4开始传播，2026年1月确认中试线投产。当前处于产线推进→量产验证阶段，信息已扩散但产业实际进展仍在兑现中。长电+9.04%显示价格已有所反应。",
-      "priced_in": "partially_priced",
-      "priced_in_note": "📈 长电科技+9.04%为今日封测板块最强→HBM封装逻辑部分定价。但浙江禾芯2026量产的具体时间节点尚未明确→量产新闻出现时仍有催化空间。华天科技无异常异动→市场尚未将华天2.5D转型充分定价。",
-      "alerts": [
-        {"level": "high", "title": "长电科技+9.04% 封测龙头领涨 — HBM封装逻辑验证", "impact": "长电科技为今日封测板块最强标的(+9.04%, 板块9/9全涨)。HBM先进封装国产化逻辑正在被市场定价。大基金三期重点投向方向→长期逻辑确定性高。"}
-      ],
-      "cross_chain": false
-    },
-    {
-      "id": "a7",
-      "ref": "s7",
-      "chain": "chain1",
-      "title": "中芯国际收购中芯北方49%股权获证监会批复 大基金参与交易",
-      "verification": "confirmed",
-      "verification_note": "中华网(9小时前)、东方财富(8小时前)、网易(18小时前)、时代周报(5/12)交叉确认：5/21证监会批复同意SMIC向大基金等5家机构发行股份购买中芯北方49%股权，406亿交易，批复12个月有效。上交所5/11已过会。",
-      "source_urls": ["https://news.china.com/", "https://finance.eastmoney.com/", "https://www.163.com/"],
-      "three_questions": {
-        "variable": "大基金从出资方→交易对手方，背书升级。SMIC对中芯北方从51%→100%全资控股，12英寸产能控制权增强。",
-        "magnitude": "406亿交易(科创板史上最大并购)。中芯北方49%股权纳入→权益产能提升。大基金直接参与交易→国家意志对SMIC的支持从'出资'升级为'交易对手'。",
-        "sustainability": "12个月内部署窗口。产能集中度提升=SMIC规模效应增强→盈利能力改善。结构性的利好(非一次性)。"
+        "variable": "链2关键环节——HBM封装从'技术布局'→'产能满产'的量级跃迁。80%利用率=接近满产，百亿资本开支=产能扩张确定性。此前HBM封装国产化仅停留在'概念/研发'阶段，现在进入'量产交付+扩产'阶段。",
+        "magnitude": "大。①股价+65%突破千亿=市场最强定价的双链标的 ②Q1淡季不淡超80%→全年可能持续满产 ③百亿资本开支=未来2-3年产能翻倍确定性 ④CPO光电合封已交付样品=下一个增长点。3日累计+23%(5/20 +8.9%, 5/21 +0.94%, 5/22 +9.04%)。",
+        "sustainability": "高。①HBM全球需求缺口>50%→封测产能供不应求 ②2.5D→3D技术演进路线清晰 ③百亿资本开支保障产能扩张 ④晟碟/临港产能并表。风险：估值已达千亿、涨幅已大、全球封装产能扩张可能带来竞争。"
       },
       "capital_backing": {
         "level": "strong",
         "big_fund": true,
         "national_team_etf": true,
         "recent_bidding": false,
-        "note": "大基金直接作为交易对手方参与406亿并购——从出资方升级为交易对手，背书强度max。SMIC为科创50第一大权重。该交易是大基金参与A股半导体最大并购案。"
+        "note": "大基金一期重仓长电科技(封测龙头)+三期明确投向先进封装/HBM方向。pool.db归因显示今日+9.04%由'HBM先进封装国产化加速'催化驱动。属于双基金覆盖+资金最强定价的双链标的。无近期招投标数据(封测厂采购设备≠中标)。"
       },
       "conduction_chain": [
-        {"step": 1, "factor": "SMIC产能集中", "sector": "晶圆制造", "tickers": ["688981.SH"], "rationale": "100%控股中芯北方→12英寸产能控制权增强→规模效应+成本优化→盈利能力改善"},
-        {"step": 2, "factor": "大基金背书升级", "sector": "国产替代链", "tickers": ["688981.SH", "002371.SZ", "688012.SH"], "rationale": "大基金从出资到交易对手→国家意志强化→SMIC作为链1核心标的溢价重估"},
-        {"step": 3, "factor": "设备订单拉动", "sector": "半导体设备", "tickers": ["002371.SZ", "688012.SH", "688072.SH"], "rationale": "SMIC产能扩张→国产设备采购增加→北方华创/中微/拓荆订单预期改善"}
+        {"step": 1, "factor": "2.5D产能超80%+百亿扩产", "sector": "先进封装龙头", "tickers": ["600584.SH"], "rationale": "直接标的，股价+65%为年度最强双链alpha"},
+        {"step": 2, "factor": "先进封装产能溢出→二线封测跟进", "sector": "封测", "tickers": ["002156.SZ", "002185.SZ"], "rationale": "长电满产→通富/华天承接溢出订单。通富+2.72%今日跟进"},
+        {"step": 3, "factor": "封装设备/材料需求增加", "sector": "封装设备/基板", "tickers": ["688012.SH"], "rationale": "百亿资本开支→设备采购→中微(刻蚀)等间接受益"},
+        {"step": 4, "factor": "HBM封装国产化→AI芯片全链闭环", "sector": "AI芯片/存储", "tickers": ["688256.SH", "688041.SH"], "rationale": "HBM封装是AI芯片最后短板，长电突破→寒武纪/海光供应链风险降低"}
       ],
       "confidence": "green",
       "timeframe": "weeks",
-      "lifecycle": "emerging",
-      "lifecycle_note": "5/21下午发布批复，5/22上午分析师标记为0%定价(not_priced⭐)。距今约24h，仍<48h窗口。市场注意力昨日被暴跌占用，今日反弹中SMIC仅+3.23%→定价严重不足。",
-      "priced_in": "not_priced",
-      "priced_in_note": "⭐ 上午标记为'0%定价(not_priced⭐)'。SMIC今日+3.23%远低于板块平均涨幅(封测+9%全涨)=市场仍严重低估此信号。406亿科创板史上最大并购+大基金交易对手身份为结构性升级，非一次性利好。",
-      "alerts": [
-        {"level": "high", "title": "⭐ 最被低估信号：SMIC 406亿并购仅+3.23%", "impact": "SMIC收购中芯北方为科创板史上最大并购(406亿)，大基金直接作为交易对手。今日SMIC仅+3.23% vs 长电+9.04% → 定价严重不足。并购后EPS增厚+PE重估尚未被市场计入。"}
+      "lifecycle": "consensus",
+      "lifecycle_note": "多平台覆盖(36氪/腾讯/证券时报/观察者网)，券商研报覆盖(华鑫5/12)。股价+65%突破千亿→已进入consensus阶段。但Q1产能利用率80%数据为新信息点(5/20业绩说明会)，对估值有上修作用。从'还能涨多少'角度已趋近完全定价，但从'产能缺口'角度长期逻辑完好。",
+      "priced_in": "fully_priced",
+      "priced_in_note": "股价+65%突破千亿=全年逻辑已大部分反映。Q1数据为增量但已被5/20以来+23%消化。当前估值需要2026Q2-Q3业绩兑现支撑。短期上行空间有限(catalyst大部分已兑现)，中长期（百亿扩产→2027产能翻倍）逻辑完好。",
+      "alerts": ["🟡 短期注意追高风险：+65%年内涨幅+3日+23%已大幅偏离均线。consensus阶段适合持有而非加仓。"],
+      "cross_chain": true
+    },
+    {
+      "id": "a6",
+      "ref": "s6",
+      "chain": "chain1",
+      "title": "28nm浸没式DUV光刻机批量交付良率90%+ — 国产光刻设备从'突破'走向'批量'",
+      "verification": "confirmed",
+      "verification_note": "文学城论坛帖子(5/17,有详细技术参数)、知乎(2周前,SSA800系列详细技术规格：套刻精度2.3-2.5nm,产能150片/小时,对标ASML NXT:1950i)、163.com(1月前-1月前多篇,上海微电子年产50台规划,通过SMIC验证)。芯智讯背书知乎分析。虽然信息来自论坛/自媒体而非官方公告,但多方交叉验证一致性高→可信。",
+      "source_urls": [
+        "https://bbs.wenxuecity.com/currentevent/3998394.html",
+        "https://zhuanlan.zhihu.com/p/2036767738660655742",
+        "https://c.m.163.com/news/a/KR8ESEPE0556BUO3.html"
       ],
+      "three_questions": {
+        "variable": "链1设备维度——光刻机从'实验室突破'→'批量交付'的可靠性确认。90%良率+90%国产化率=国产DUV具备产线级可用性。虽仍落后ASML 3-5年(28nm vs 3nm)，但28nm以上成熟制程自主可控基本实现。这是链1最重要的里程碑——没有光刻机就没有链1。",
+        "magnitude": "大(战略意义)但小(短期增量)。年产50台规划,全球DUV需求约600台/年→中国自制约8%份额,仅覆盖国内成熟制程需求。重点不在于量而在于'有'——从0→1的意义大于从1→N。对设备板块情绪支撑持续但非爆发性催化。",
+        "sustainability": "高(趋势)但催化已消化。28nm DUV国产化是持续性利好,成熟制程扩产需求稳定。7nm以下仍需多重曝光或EUV(EUV商业化5年+)。下一催化剂:7nm DUV(新凯来)通过产线验证。"
+      },
+      "capital_backing": {
+        "level": "strong",
+        "big_fund": true,
+        "national_team_etf": true,
+        "recent_bidding": false,
+        "note": "大基金二期(2042亿)重设备材料+三期(3440亿)重卡脖子设备→光刻机为最高优先级。上海微电子为未上市核心标的→其供应链(科益虹源/国望光学等)间接受益。北方华创/中微公司均在科创50前十大权重(合计>10%),国家队ETF资金持续流入。无近期光刻机直接招投标数据。"
+      },
+      "conduction_chain": [
+        {"step": 1, "factor": "DUV光刻机批量交付良率90%+", "sector": "光刻机供应链", "tickers": [], "rationale": "上海微电子未上市,直接供应链:科益虹源(光源)未上市/国望光学(物镜)未上市"},
+        {"step": 2, "factor": "成熟制程自主可控→晶圆厂扩产信心↑", "sector": "晶圆制造", "tickers": ["688981.SH"], "rationale": "SMIC已验证国产光刻机→28nm以上扩产不受西方设备限制→SMIC估值中制裁风险溢价下降"},
+        {"step": 3, "factor": "光刻→刻蚀/薄膜/清洗等配套需求", "sector": "半导体设备", "tickers": ["002371.SZ", "688012.SH"], "rationale": "光刻机国产化→带动国产刻蚀(中微)/薄膜(拓荆)/清洗等设备需求协同。北方华创今日+0.91%已反映部分"},
+        {"step": 4, "factor": "光刻胶等材料国产化需求", "sector": "半导体材料", "tickers": [], "rationale": "ArF光刻胶~10%国产化率,光刻机国产化→加速光刻胶验证导入→材料企业受益"}
+      ],
+      "confidence": "yellow",
+      "timeframe": "weeks",
+      "lifecycle": "consensus",
+      "lifecycle_note": "信息传播>5天,多平台覆盖(文学城/知乎/网易)。设备板块5/16-5/19已大幅上涨(中微5/16 +11.8%, 5/19 +9.29%)。当前属于consensus——逻辑被广泛认可,股价已反映。增量信息价值有限。",
+      "priced_in": "partially_priced",
+      "priced_in_note": "设备板块短期涨幅已反映光刻机突破逻辑(5/16-19设备板块联动24-28/28只,几乎全板上涨)。但长期自主可控价值——'从无到有'→中国半导体不再受光刻机'卡脖子'的系统性风险下降——尚未被充分定价。当前部分定价的是'设备公司短期受益',未定价的是'中国半导体行业系统性风险溢价下降'。",
+      "alerts": ["📊 链1核心里程碑: 光刻机国产化=链1存在的基石。虽然consensus阶段,但长期系统性意义>短期股价反应。"],
+      "cross_chain": false
+    },
+    {
+      "id": "a7",
+      "ref": "s7",
+      "chain": "chain2",
+      "title": "AMD Venice 2nm量产+全球三大厂商同步扩产 — 先进制程竞赛加速",
+      "verification": "confirmed",
+      "verification_note": "AMD官方新闻稿(5/21发布,官网+GlobalNewswire+HPCwire三源验证)：Venice处理器在台积电2nm工艺上开始量产爬坡,未来计划在台积电亚利桑那厂扩产。苏姿丰表示CPU和ASIC业务增长,快速提升产能,电力是瓶颈。NVIDIA Q1+211%/Blackwell至2027年1万亿美元可见度。Intel陈立武铁腕改革。全验证。",
+      "source_urls": [
+        "https://www.amd.com/en/newsroom/press-releases/2026-5-20-amd-announces-production-ramp-of-next-generation-a.html",
+        "https://www.hpcwire.com/off-the-wire/amd-announces-production-ramp-of-next-gen-amd-epyc-processor-venice-on-tsmc-2nm-process-tech/",
+        "https://www.globenewswire.com/news-release/2026/05/21/3299003/0/en/AMD-Announces-Production-Ramp-of-Next-Generation-AMD-EPYC-Processor-Venice-on-TSMC-2nm-Process-Technology.html"
+      ],
+      "three_questions": {
+        "variable": "链2供给侧——全球三大CPU/GPU厂商(NVIDIA+AMD+Intel)同步扩产+架构升级,算力供给端进入'全速扩张'周期。2nm制程量产=半导体制造进入新纪元→带动设备/材料/封装全链升级需求。",
+        "magnitude": "大(全球产业链)但中(A股映射)。2nm是半导体制造的历史性节点(台积电3nm→2nm提升约15%性能/25%能效)。全球设备资本开支预计2026-28年1410/1860/2080亿美元(高盛)。但A股直接受益标的有限——先进制程设备仍以欧美日为主。",
+        "sustainability": "高。2nm量产→3-5年产能爬坡周期→持续设备/材料需求。Venice+Blackwell+Rubin三线并行→台积电资本开支持续增加→中国设备企业(北方华创/中微)间接受益。"
+      },
+      "capital_backing": {
+        "level": "weak",
+        "big_fund": false,
+        "national_team_etf": false,
+        "recent_bidding": false,
+        "note": "全球供给端信号,非中国国内资本驱动。AMD/NVIDIA为美股,不涉及大基金/国家队ETF。但通过台积电资本开支→全球设备需求→中国设备企业间接受益传导链。"
+      },
+      "conduction_chain": [
+        {"step": 1, "factor": "AMD Venice 2nm量产+台积电资本开支增加", "sector": "全球晶圆代工", "tickers": [], "rationale": "台积电2nm扩产→全球设备采购增加"},
+        {"step": 2, "factor": "先进制程→设备升级需求", "sector": "半导体设备", "tickers": ["002371.SZ", "688012.SH"], "rationale": "北方华创/中微虽不直接供应2nm,但全球扩产周期中设备需求溢出→成熟制程设备国产替代加速"},
+        {"step": 3, "factor": "2nm芯片→先进封装需求", "sector": "先进封装", "tickers": ["600584.SH", "002156.SZ"], "rationale": "2nm Venice需先进封装(CoWoS级)→全球封装产能紧张→中国封测企业受益"},
+        {"step": 4, "factor": "全球算力供给扩张→AI需求可持续性验证", "sector": "AI芯片", "tickers": ["688256.SH", "688041.SH"], "rationale": "AMD/Intel加入供给扩张=AI算力需求被多方确认→国产AI芯片市场空间扩大"}
+      ],
+      "confidence": "yellow",
+      "timeframe": "weeks",
+      "lifecycle": "positioning",
+      "lifecycle_note": "AMD官方5/21发布(<48h),主流科技媒体(HPCwire/GlobalNewswire)已覆盖,但中文媒体覆盖有限(仅汇讯网等)。属于positioning早期——信息在专业圈扩散但A股投资者尚未广泛消化。",
+      "priced_in": "not_priced",
+      "priced_in_note": "A股设备/封测板块今日未反应2nm量产逻辑(归因显示主要受'企稳确认'+'IC税收优惠'+'HBM催化'驱动)。AMD 2nm→台积电→中国的传导链太长,市场尚未开始定价。需1-2周发酵。",
+      "alerts": ["📊 长期逻辑: 2nm量产=全球半导体资本开支周期上行→中国设备企业3-6个月后订单可能反映。短期催化弱但长期方向确定。"],
       "cross_chain": false
     },
     {
       "id": "a8",
       "ref": "s8",
       "chain": "chain2",
-      "title": "华为发布AI DC数据基础设施全栈方案 PB级KV Cache 推理首Token时延↓90%",
+      "title": "阿里千问Qwen3.7-Max+智谱GLM-5.1高速版 — 国产大模型旗舰能力+低延迟双突破",
       "verification": "confirmed",
-      "verification_note": "每日经济新闻(8小时前)、同花顺(17小时前)、DoNews(9小时前)交叉确认：5/21华为巴黎创新数据基础设施论坛发布AI DC全栈方案，涵盖OceanStor Pacific全闪分布式存储、CMS上下文记忆存储、AI数据平台、ModelEngine Nexent智能体平台。",
-      "source_urls": ["https://www.nbd.com.cn/", "https://news.10jqka.com.cn/", "https://www.donews.com/"],
+      "verification_note": "威易网(5/21)验证Qwen3.7-Max发布：Agent时代全面领先,编码/办公自动化/长程自主推理多维超越。知乎(5/18-22周报)记录Qwen3.7-Max本周发布。智谱GLM-5.1高速版400 tokens/s+TilerRT推理引擎。DataLearnerAI技术评测验证。全验证。",
+      "source_urls": [
+        "https://www.weste.net/2026/05-21/Qwen3.7-Max.html",
+        "https://zhuanlan.zhihu.com/p/670574382",
+        "https://www.datalearner.com/ai-models/pretrained-models/qwen3-7-max-preview"
+      ],
       "three_questions": {
-        "variable": "华为推出业界首个异构算力CMS→PB级共享KV Cache池→推理首Token时延降低90%。解决国产推理集群核心瓶颈(KV Cache共享)。",
-        "magnitude": "首Token时延↓90%=推理体验质的飞跃。PB级共享KV Cache池=大规模推理集群的效率革命。对国产AI算力利用率有系统性提升意义。",
-        "sustainability": "AI DC全栈方案覆盖存储/CMS/数据平台/智能体平台4层→华为在AI基础设施领域系统性布局。国内AI推理需求爆发→CMS方案需求持续增长。"
+        "variable": "链2模型层——国产大模型进入'旗舰能力+推理速度'双维度竞争。Qwen3.7-Max主打Agent工作流+代码能力,GLM-5.1主打400 tokens/s高速推理。模型能力提升→推理需求增加→算力需求扩大→链2正向循环强化。",
+        "magnitude": "中。模型升级本身不产生直接收入,但①提升AI应用体验→用户/调用量增长 ②Agent/代码能力→企业级应用付费转化 ③推理速度提升→单位算力服务更多用户。间接拉动云厂商算力部署需求。",
+        "sustainability": "高。国产大模型迭代周期已缩短至2-3个月/代(Qwen从3.6→3.7仅2个月),技术竞赛持续→算力需求持续增长。阿里云/华为云/字节等云厂商将持续采购AI芯片→链2上游需求确定。"
       },
       "capital_backing": {
         "level": "weak",
         "big_fund": false,
         "national_team_etf": false,
         "recent_bidding": false,
-        "note": "华为非上市公司，无直接大基金/ETF持仓映射。但华为AI DC方案拉动国产存储/服务器/交换机产业链→间接利好相关上市公司。"
+        "note": "模型层企业(阿里/智谱)为互联网/AI软件公司,不在半导体大基金范围。但通过算力需求→上游芯片的正向传导链,间接受益于大基金三期AI算力方向。"
       },
       "conduction_chain": [
-        {"step": 1, "factor": "推理效率革命", "sector": "AI基础设施", "tickers": [], "rationale": "PB级KV Cache+时延↓90%→国产推理集群效率大幅提升→AI应用落地加速"},
-        {"step": 2, "factor": "国产AI芯片受益", "sector": "AI芯片", "tickers": ["688256.SH", "688041.SH"], "rationale": "华为CMS方案优化国产算力利用率→寒武纪/海光等国产AI芯片推理场景扩展"},
-        {"step": 3, "factor": "存储/服务器拉动", "sector": "存储/服务器", "tickers": ["002230.SZ", "603986.SH"], "rationale": "全闪分布式存储+CMS→企业级存储/服务器需求↑→科大讯飞(AI服务器)/兆易创新(存储)受益"}
+        {"step": 1, "factor": "旗舰模型升级→推理需求增加", "sector": "AI大模型/云服务", "tickers": ["9988.HK", "2513.HK"], "rationale": "直接受益:阿里云/智谱API调用量增长"},
+        {"step": 2, "factor": "推理需求→AI芯片需求增加", "sector": "国产AI芯片", "tickers": ["688256.SH", "688041.SH"], "rationale": "阿里/智谱等模型厂商是寒武纪/海光核心客户→模型升级→更多芯片部署"},
+        {"step": 3, "factor": "AI应用爆发→光模块/服务器需求", "sector": "光通信/服务器", "tickers": ["002185.SZ"], "rationale": "AI推理延迟降低→更多实时AI应用→数据中心互联需求→光模块"},
+        {"step": 4, "factor": "国产大模型生态→AI产业链完整性", "sector": "整体AI链", "tickers": [], "rationale": "模型+芯片+应用全链国产化=链2从'单点突破'到'系统竞争力'"}
       ],
       "confidence": "yellow",
-      "timeframe": "weeks",
-      "lifecycle": "emerging",
-      "lifecycle_note": "5/21巴黎发布会，5/22凌晨中文报道出现，<12h。上午分析师标记为'最被忽视signal(not_priced⭐)'。华为AI DC方案的技术意义远超市场认知。",
-      "priced_in": "not_priced",
-      "priced_in_note": "⭐ 上午标记为'最被忽视signal(not_priced⭐)'。推理首Token时延↓90%为技术突破级别的进展，但市场今日完全未反应→0%定价。寒武纪/海光今日无异常异动→信息不对称窗口仍在。",
-      "alerts": [
-        {"level": "high", "title": "⭐ 最被忽视：华为AI DC全栈方案 推理时延↓90%", "impact": "PB级共享KV Cache+推理时延↓90%为国产AI推理基础设施的系统性突破。寒武纪/海光作为国产AI芯片龙头最直接受益，但今日无异常异动→严重低估。"}
-      ],
+      "timeframe": "days",
+      "lifecycle": "positioning",
+      "lifecycle_note": "Qwen3.7-Max 5/20发布(2天),GLM-5.1近日发布。中文AI社区广泛讨论,知乎周报收录→处于信息扩散中的positioning阶段。与华为AI DC、寒武纪30万颗形成链2多环节共振。",
+      "priced_in": "partially_priced",
+      "priced_in_note": "AI社区已消化模型升级信息,但传导到上游芯片/硬件标的需要时间。今日A股AI芯片(寒武纪/海光)未异常波动→传导链尚未激活。需模型厂商明确宣布芯片采购/部署计划才能触发。",
+      "alerts": [],
       "cross_chain": false
     },
     {
       "id": "a9",
       "ref": "s9",
       "chain": "chain2",
-      "title": "AI实验室资本竞赛升级：DeepSeek融资100亿美元+OpenAI拟IPO估值8520亿+Anthropic Q2收入110亿美元",
+      "title": "比亚迪5月28日智能化战略发布会 — 汽车+AI芯片融合催化预期",
       "verification": "confirmed",
-      "verification_note": "①DeepSeek融资额增至100亿美元(360快资讯4小时前更新)，投前估值450亿美元，腾讯/IDG/Monolith接近参投。②OpenAI IPO估值8520亿美元9月上市。③Anthropic Q2收入翻倍至110亿美元利润6亿美元。三家同日出消息交叉确认(新浪财经/证券时报/网易)。",
-      "source_urls": ["https://www.360kuai.com/", "https://www.stcn.com/", "https://finance.sina.cn/"],
+      "verification_note": "新浪科技/IT之家(5/22)、新京报(5/22)、网易(5/22)多源验证：比亚迪官宣5/28召开智能化战略发布会,继3/5'第二代刀片电池'后又一重大技术发布,预计智能化技术新突破。发改委此前强调加快具身智能训练基础设施建设。Stellantis与高通扩大合作(车规SoC)。全验证。",
+      "source_urls": [
+        "https://finance.sina.com.cn/tech/digi/2026-05-22/doc-inhyufhp7709437.shtml",
+        "https://www.bjnews.com.cn/detail/1779442701129127.html",
+        "https://www.163.com/dy/article/KTI1GOGM0511B8LM.html"
+      ],
       "three_questions": {
-        "variable": "AI资本化浪潮从私募→IPO。DeepSeek 450亿美元(大基金领投)+OpenAI 8520亿美元(史上最大科技IPO)+Anthropic Q2收入110亿美元=AI产业三位一体规模验证。",
-        "magnitude": "DeepSeek 700亿人民币融资(大基金领投)、OpenAI 8520亿美元估值(9月上市超沙特阿美)、Anthropic年化收入220亿美元(+100% QoQ)。三家合计估值规模接近1.3万亿美元。",
-        "sustainability": "AI实验室资本化→算力CAPEX持续→链2需求确定性增强。大基金领投DeepSeek=国家队直接押注AI→国产AI生态资本支持确定性强。"
+        "variable": "链2应用端——比亚迪作为全球最大新能源车企,智能化发布会将展示车载AI芯片/智驾方案实际部署。汽车智能化=链2下游最大应用场景之一,芯片需求(智驾SoC/座舱芯片/传感器)将持续拉动链2上游。",
+        "magnitude": "待定(取决于发布会内容)。若宣布重大智能化突破(如全系标配高速NOA/城区NOA)→车规AI芯片需求量级跳跃。若仅技术路线图→催化有限。比亚迪年销400万辆→单车智能化=巨大芯片增量市场。",
+        "sustainability": "中(一次性催化)。发布会为事件驱动,5/28后若无持续催化→炒作可能退潮。但汽车智能化趋势是长期的→结构性利好车规芯片/传感器产业链。"
       },
       "capital_backing": {
         "level": "weak",
         "big_fund": false,
         "national_team_etf": false,
         "recent_bidding": false,
-        "note": "AI实验室本身无直接A股映射。但大基金领投DeepSeek→大基金三期AI算力投向的逻辑得到验证。间接利好国产AI芯片/算力产业链。"
+        "note": "比亚迪为汽车链,非半导体大基金覆盖。但车载AI芯片需求→寒武纪/海光等国产AI芯片企业拓展汽车市场→间接受益于链2下游应用爆发。"
       },
       "conduction_chain": [
-        {"step": 1, "factor": "AI资本化浪潮", "sector": "全球AI", "tickers": [], "rationale": "三家AI实验室同日资本消息→AI产业规模获资本市场定价→AI算力CAPEX持续性得到资本验证"},
-        {"step": 2, "factor": "大基金AI布局", "sector": "国产AI生态", "tickers": ["688256.SH", "688041.SH"], "rationale": "大基金领投DeepSeek→国家队直接押注AI→三期3440亿AI算力投向的逻辑强化→寒武纪/海光受益"},
-        {"step": 3, "factor": "算力基建需求", "sector": "光模块/服务器", "tickers": ["300308.SZ"], "rationale": "AI实验室资本化→算力CAPEX持续→光模块(中际旭创)订单能见度延长"}
+        {"step": 1, "factor": "比亚迪5/28智能化发布会", "sector": "新能源汽车", "tickers": ["002594.SZ"], "rationale": "直接标的,发布会催化"},
+        {"step": 2, "factor": "汽车智能化→车载AI芯片/智驾SoC需求", "sector": "车规AI芯片", "tickers": ["688256.SH", "688041.SH"], "rationale": "寒武纪/海光具备车规AI芯片潜力(寒武纪有边缘产品线),地平线(未上市)为直接对标"},
+        {"step": 3, "factor": "智能驾驶→传感器/域控需求", "sector": "汽车电子", "tickers": [], "rationale": "摄像头/雷达/域控制器→韦尔股份/德赛西威等"},
+        {"step": 4, "factor": "具身智能政策→机器人+自动驾驶融合", "sector": "具身智能", "tickers": [], "rationale": "发改委强调加快具身智能训练基础设施→机器人+汽车智能化融合趋势"}
       ],
       "confidence": "yellow",
-      "timeframe": "weeks",
-      "lifecycle": "positioning",
-      "lifecycle_note": "DeepSeek融资已传2周+、OpenAI IPO传闻持续、Anthropic收入自5/21传播。信息扩散中，资本市场已开始定价AI主题。大基金领投DeepSeek为新增变量。",
-      "priced_in": "partially_priced",
-      "priced_in_note": "📈 AI主题已被市场部分定价。但DeepSeek融资额从最初的100亿→100亿美元升级+大基金领投确认=增量信息→尚未完全定价。",
-      "alerts": [],
+      "timeframe": "days",
+      "lifecycle": "emerging",
+      "lifecycle_note": "发布会提前6天预告(<12h),典型pre-announcement emerging阶段。正式催化在5/28,当前仅为预期阶段。车规芯片+AI融合主题可能在5/23-5/27发酵,但不确定性在于发布会具体内容未披露。",
+      "priced_in": "not_priced",
+      "priced_in_note": "0%定价。预告刚出,比亚迪/寒武纪/海光今日均未异常波动。资金未提前布局(发布会内容不确定)。5/28前存在预期炒作窗口但幅度取决于市场对发布会内容猜测。",
+      "alerts": ["📅 5/28关键催化日期: 比亚迪智能化战略发布会。关注周中(5/26-27)是否有预热报道。"],
       "cross_chain": false
     },
     {
       "id": "a10",
       "ref": "s10",
-      "chain": "chain1+chain2",
-      "title": "韩国投资者昨日逆势抄底A股 大举买入机器人ETF+PCB龙头+科技股",
+      "chain": "chain1",
+      "title": "*ST闻泰起诉荷兰安世半导体索赔80亿 — 半导体跨境诉讼标志性事件",
       "verification": "confirmed",
-      "verification_note": "格隆汇(7小时前)、新浪财经(6小时前)、财联社(5小时前)交叉确认：韩国证券存托结算院官方数据，韩国投资者5/21暴跌日净买入华夏中证机器人ETF 321万美元、兴森科技276万美元、立讯精密等科技股。",
-      "source_urls": ["https://www.163.com/dy/article/", "https://finance.sina.com.cn/", "https://www.cls.cn/"],
+      "verification_note": "新浪财经(5/22,1小时前)验证：东莞中院受理,索赔暂计80亿元。搜狐(5/17)报闻泰5月中旬启动针对荷兰政府国际仲裁,索赔80亿美元(约543亿元)。腾讯新闻(5/15)、中华网(5/15)有详细报道。实际上是两线诉讼：国内(80亿人民币 vs 安世)+国际仲裁(80亿美元 vs 荷兰政府)。注意金额单位差异。全验证。",
+      "source_urls": [
+        "https://finance.sina.com.cn/tech/roll/2026-05-22/doc-inhyurwe8346681.shtml",
+        "https://www.sohu.com/a/1023860303_122481596",
+        "https://news.qq.com/rain/a/20260515A07RA600"
+      ],
       "three_questions": {
-        "variable": "外资行为信号——暴跌日韩资逆势买入=对A股科技链中期信心。与今日反弹形成完美timing。",
-        "magnitude": "机器人ETF 321万美元+兴森科技276万美元+立讯精密等。韩国投资者通过A股ETF+个股双渠道逆向布局。PCB/机器人/科技→直接关联AI算力硬件+具身智能(发改委同日政策)。",
-        "sustainability": "韩国投资者行为为结构性(非一次性)。韩国散户对A股科技ETF配置为长期趋势。但单日买入量较小(百万美元级)→更多是信号意义>资金面影响。"
+        "variable": "链1法律维度——中国半导体企业首次以'歧视性限制措施'为由大规模起诉外国半导体公司+荷兰政府。若胜诉将形成判例效应,可能改变西方对中国半导体企业实施限制的法律风险评估。但*ST闻泰自身已ST,诉讼周期长达1-2年,短期无实质影响。",
+        "magnitude": "小(短期)/不确定(长期)。80亿人民币国内诉讼+80亿美元国际仲裁,金额巨大但胜诉概率极低。闻泰已连续11跌停→市值大幅缩水→诉讼更多是'背水一战'而非战略进攻。长期若胜诉→判例效应价值远超索赔金额。",
+        "sustainability": "极低。诉讼周期1-2年,期间闻泰业务已实质受损(2025年亏损87亿+2026Q1续亏)。即使胜诉,执行也存在巨大困难。更可能是漫长的法律消耗战。"
       },
       "capital_backing": {
-        "level": "moderate",
+        "level": "weak",
         "big_fund": false,
-        "national_team_etf": true,
+        "national_team_etf": false,
         "recent_bidding": false,
-        "note": "机器人ETF/PCB龙头被韩国投资者买入→间接验证国家队ETF持仓的吸引力。外部聪明钱行为与国家ETF持仓形成共振。"
+        "note": "*ST闻泰已ST→被剔除主要指数ETF,国家队不会持有。安世半导体虽原为中国收购的优质资产,但荷兰政府干预后控制权已失→大基金无介入空间。"
       },
       "conduction_chain": [
-        {"step": 1, "factor": "外资逆向行为", "sector": "市场情绪", "tickers": [], "rationale": "韩资暴跌日买入=外部聪明钱对A股科技中期信心→验证'暴跌为错杀'逻辑"},
-        {"step": 2, "factor": "PCB/机器人受益", "sector": "PCB/机器人", "tickers": ["002436.SZ", "002475.SZ", "562500.SH"], "rationale": "兴森科技(PCB)+机器人ETF→直接受益于AI算力硬件+具身智能双催化"},
-        {"step": 3, "factor": "科技链修复", "sector": "半导体/AI", "tickers": ["688981.SH", "002371.SZ", "688256.SH"], "rationale": "外资逆向买入→科技链信心修复→半导体/AI标的反弹动力增强"}
+        {"step": 1, "factor": "东莞中院受理80亿诉讼", "sector": "法律/地缘政治", "tickers": ["600745.SH"], "rationale": "直接标的但已ST,投资价值极低"},
+        {"step": 2, "factor": "中国半导体企业法律反击先例", "sector": "半导体行业整体", "tickers": [], "rationale": "若胜诉→为其他受制裁中国企业提供法律工具→但胜诉概率低+周期长"},
+        {"step": 3, "factor": "中欧半导体博弈新变量", "sector": "地缘政治", "tickers": ["688981.SH", "688012.SH"], "rationale": "与s2(扬杰豁免)形成'一松一紧'的对欧博弈格局,但直接影响极小"}
       ],
-      "confidence": "yellow",
-      "timeframe": "days",
+      "confidence": "red",
+      "timeframe": "months",
       "lifecycle": "emerging",
-      "lifecycle_note": "5/22盘中披露昨日交易数据<6h。媒体覆盖少，属于增量信息。韩资行为数据的分析尚不充分。",
+      "lifecycle_note": "公告刚出(<12h),法院刚受理。诉讼周期可能长达1-2年。*ST状态+不确定性极高→短期无投资价值。emerging阶段但投资意义极低——信息价值(了解地缘博弈)>>交易价值。",
       "priced_in": "not_priced",
-      "priced_in_note": "⭐ 韩资数据<6h发布→0%定价。兴森科技今日+6.40%可能部分归因于韩资买入披露，但'外资逆向布局A股科技'的叙事尚未被市场广泛认知。",
-      "alerts": [
-        {"level": "medium", "title": "韩资逆向买入=外部验证A股科技价值", "impact": "韩国投资者暴跌日抄底机器人ETF+PCB龙头→与今日反弹形成完美timing。PCB(兴森科技)直接关联AI算力硬件，机器人ETF关联具身智能(发改委同日政策)。外部聪明钱行为验证链1+链2中期逻辑。"}
-      ],
-      "cross_chain": true
+      "priced_in_note": "0%定价且不应被定价。*ST状态+胜诉概率极低+诉讼周期长→无资金关注。此信号价值在于'信息记录'而非'交易信号'。",
+      "alerts": ["⚠️ 低投资价值信号: *ST状态+诉讼不确定性+长周期。仅作为地缘政治博弈的案例记录。"],
+      "cross_chain": false
     }
   ],
   "attributions": [
-    {"ts_code": "688981.SH", "pct_chg": 3.23, "matched_signal": "a7", "explanation": "SMIC收购中芯北方49%股权获证监会批复(406亿科创板史上最大并购)+大基金升级为交易对手。长鑫科技5/27科创板IPO上会催化封测板块联动。+3.23% vs 封测板块全涨(9/9) → 定价严重不足——同板块长电+9.04%远超SMIC。"},
-    {"ts_code": "002371.SZ", "pct_chg": 0.91, "matched_signal": "a3", "explanation": "IC税收优惠制度化+SMIC收购批复→北方华创作为设备龙头受益。+0.91%弱于设备板块(23/26上涨) → 短期反弹力度不够但防御属性持续(5/21暴跌中+1.07%为板块唯一正收益)。大基金二期已投+三期设备材料方向→中期逻辑坚实。"},
-    {"ts_code": "688012.SH", "pct_chg": -1.30, "matched_signal": "a3", "explanation": "⚠️ 设备板块23/26上涨中中微反而-1.30% → 今日最大板块内背离。可能原因：①前期反弹后获利回吐 ②刻蚀设备国产化率已达~23%(高于其他环节)→边际改善空间相对有限。SMIC收购批复直接利好的是制造端而非设备端。"},
-    {"ts_code": "600584.SH", "pct_chg": 9.04, "matched_signal": "a6", "explanation": "🔥 今日最强双链标的！HBM先进封装国产化+SMIC收购批复双催化。长电为国内先进封装龙头，大基金一期已投+三期先进封装方向→资本背书最强。封测板块9/9全涨+长电领涨=HBM封装逻辑被市场最强定价。"},
-    {"ts_code": "002156.SZ", "pct_chg": 2.72, "matched_signal": "a6", "explanation": "通富微电(AMD CoWoS合作)受益于HBM先进封装国产化+长鑫IPO催化。+2.72%弱于长电+9.04%→先进封装受益度分化：长电(HBM直接)>>通富(AMD外包)。"},
-    {"ts_code": "603986.SH", "pct_chg": 8.53, "matched_signal": "a2", "explanation": "兆易创新存储芯片龙头创新高。闪迪CEO供不应求+美股存储走强+长鑫IPO催化三重共振。IC设计板块38/46上涨→存储为最强细分。A+H总市值超3300亿=机构增配标的。"},
-    {"ts_code": "300672.SZ", "pct_chg": 14.16, "matched_signal": "a2", "explanation": "国科微为今日IC设计板块涨幅第一(+14.16%)。存储芯片概念爆发+大普微创新高联动→存储细分全线上涨。"},
-    {"ts_code": "002436.SZ", "pct_chg": 6.40, "matched_signal": "a10", "explanation": "兴森科技(PCB龙头)韩国投资者5/21净买入276万美元→今日+6.40%。PCB关联AI算力硬件+韩资逆势买入=双催化。"},
-    {"ts_code": "002475.SZ", "pct_chg": 6.67, "matched_signal": "a10", "explanation": "立讯精密(科技龙头)韩国投资者5/21净买入→今日+6.67%。消费电子/元器件板块84/107上涨→板块全面修复。"},
-    {"ts_code": "688072.SH", "pct_chg": 1.78, "matched_signal": "a3", "explanation": "拓荆科技(薄膜沉积设备)半导体设备板块23/26上涨。+1.78%弱于板块平均水平→与中微同为设备板块'滞后'标的。IC税收优惠制度化→设备订单预期改善但尚未定价。"}
+    {
+      "date": "2026-05-22",
+      "total_anomalies": 408,
+      "attributed": 408,
+      "unattributed": 0,
+      "top_catalysts": [
+        "✅ A股收盘企稳确认：创业板+2.31%深成指+2.17% (覆盖>90%异常)",
+        "✅ HBM先进封装国产化加速：华天科技转型+浙江禾芯2026量产 (封测板块9/9联动)",
+        "✅ 国家发改委：连续6年IC税收优惠清单制度化+AI落地配套 (设备板块23/26+IC设计38/46联动)",
+        "存储芯片概念爆发：兆易创新+9%续创新高 (半导体材料23/25+IC设计38/46)",
+        "化工/材料板块联动(47/65只,受益于半导体材料需求溢出)"
+      ],
+      "chain1_attribution": "企稳确认+IC税收优惠制度化+国产替代设备板块联动(23/26)。核心驱动为政策托底+板块超跌反弹。",
+      "chain2_attribution": "HBM先进封装国产化+存储芯片爆发+AI算力板块联动(8/11)。封测为今日最强方向(9/9满联动)。",
+      "note": "pool.db 408条异常全部归因,0条unexplained。板块联动全覆盖。主要催化为企稳反弹(全局)+HBM先进封装(α)+IC政策(α)。"
+    },
+    {
+      "date": "2026-05-22",
+      "key_ticker_attributions": [
+        {"ts_code": "600584.SH", "name": "长电科技", "pct_chg": 9.04, "attribution": "HBM先进封装国产化加速+企稳确认。封测板块9/9满联动。三日累计+23%为年度最强双链标的。"},
+        {"ts_code": "688981.SH", "name": "中芯国际", "pct_chg": 3.23, "attribution": "企稳确认+IC税收优惠制度化。406亿并购逻辑持续低估(仅+3.23% vs 长电+9.04%)。"},
+        {"ts_code": "002156.SZ", "name": "通富微电", "pct_chg": 2.72, "attribution": "HBM先进封装催化,封测板块联动。跟随长电上涨但幅度明显弱于龙头。"},
+        {"ts_code": "002371.SZ", "name": "北方华创", "pct_chg": 0.91, "attribution": "企稳确认+IC税收优惠。设备板块温和反弹但非领涨。大基金防御属性持续验证。"},
+        {"ts_code": "688012.SH", "name": "中微公司", "pct_chg": -1.30, "attribution": "⚠️ 板块内最大背离! 设备板块23/26上涨中唯一大市值下跌。连续两日异常(5/21 -2.96%)→需排查个股负面。"}
+      ]
+    }
   ],
   "divergences": [
     {
-      "ts_code": "688012.SH",
-      "pct_chg": -1.30,
-      "signal_ref": "a3",
-      "explanation": "⚠️ 设备板块内最大背离：设备板块23/26上涨，中微公司-1.30%为该板块最大市值跌幅。IC税收优惠制度化+SMIC并购批复为设备行业β利好，但中微今日逆势下跌。可能原因：①中微5/21反弹已有一定幅度 ②刻蚀设备国产化率~23%已相对较高→边际定价空间收窄 ③市场对刻蚀设备估值溢价收窄。需关注中微是否出现基本面变化(未披露的利空)。"
+      "type": "板块内背离",
+      "severity": "high",
+      "title": "中微公司连续两日板块内反向 — 设备板块23/26上涨中唯一大市值下跌",
+      "detail": "5/22中微-1.30%(设备板块23/26上涨),5/21中微-2.96%(设备板块26/26联动但中微跌幅居前)。连续两日在板块上涨时独自下跌,背离加深。可能原因:①中微5/19+9.29%后获利了结 ②个股层面利空(CVD竞争加剧/刻蚀份额担忧) ③外资减持。需排查是否有未披露负面。",
+      "tickers": ["688012.SH"],
+      "action": "排查个股新闻,关注下周一是否修复。若连续三日背离→发出减仓信号。"
     },
     {
-      "ts_code": "688147.SH",
-      "pct_chg": -2.41,
-      "signal_ref": "a3",
-      "explanation": "微导纳米(ALD设备)-2.41%为设备板块最大跌幅。国产替代催化正当时但ALD细分方向今日逆势下跌→可能为前期获利回吐或板块内部资金轮动(资金从设备→封测)。"
+      "type": "定价背离",
+      "severity": "high",
+      "title": "⭐ 最大定价缺口：SMIC 406亿并购+3.23% vs 长电+9.04% — 严重低估持续",
+      "detail": "中芯国际收购中芯北方49%股权(406亿交易,大基金从出资方升级为交易对手)今日仅+3.23%,同期长电+9.04%、通富+2.72%。SMIC作为中国半导体'国家底牌',406亿并购逻辑被严重低估。与5/20 SMIC+12.62%相比,5/21-5/22累计-1.7%几乎回吐全部涨幅,呈现'消息刺激一日游'特征。",
+      "tickers": ["688981.SH", "600584.SH"],
+      "action": "SMIC 406亿并购若获得监管层正式批复(目前证监会已批复)→可能触发二次定价。下周一(5/26)为关键观察窗口。"
     },
     {
-      "ts_code": "688981.SH",
-      "pct_chg": 3.23,
-      "signal_ref": "a7",
-      "explanation": "SMIC 406亿并购(科创板史上最大)+大基金升级为交易对手→今日仅+3.23%，远低于同属封测归类的长电+9.04%和板块平均涨幅。市场严重低估SMIC并购的EPS增厚效应+大基金背书升级的估值重估逻辑。",
-      "note": "⭐ 最大定价背离：SMIC 406亿并购仅+3.23% vs 长电+9.04%"
+      "type": "传导链断裂",
+      "severity": "high",
+      "title": "🟡 寒武纪/海光AI政策0反应 — 传导链断裂风险持续",
+      "detail": "今日多重AI利好(发改委AI配套文件+华为AI DC+存储芯片爆发+联想AI翻倍),但寒武纪和海光今日均未进入异常波动列表(pool.db top30 无水花)。链2从'政策/需求'→'AI芯片'的传导链持续断裂。可能原因:①5/21暴跌后资金尚未回流AI芯片 ②AI芯片估值已高(寒武纪8600亿)缺乏弹性 ③资金集中于封测/存储板块轮动。",
+      "tickers": ["688256.SH", "688041.SH"],
+      "action": "今晚新增s1(寒武纪30万颗量级突变)为最大变量——能否打破传导链断裂魔咒?下周一为决定性观察日。"
     },
     {
-      "ts_code": "688256.SH",
-      "pct_chg": 0,
-      "signal_ref": "a4",
-      "explanation": "寒武纪今日无异常异动(不在anomalies表)。发改委AI落地配套文件+央国企场景开放→国产AI芯片最直接受益→但市场未将政策与寒武纪关联定价。信息不对称窗口最大。",
-      "note": "⭐ AI政策→国产芯片传导断裂：寒武纪0反应 vs 政策fire信号"
+      "type": "缩量反弹风险",
+      "severity": "medium",
+      "title": "🟡 缩量反弹：成交额2.93万亿缩量5783亿(-16.5%)",
+      "detail": "今日A股大幅反弹(创业板+2.31%)但成交额缩量16.5%至2.93万亿。缩量反弹=反弹质量存疑,需连续3日确认+成交量回升至3.5万亿以上才能确认企稳有效。若下周一再度缩量或放量下跌→反弹未能转化为反转。",
+      "tickers": [],
+      "action": "下周一关注成交量是否回升至3.5万亿+。若持续缩量→降低仓位。"
     },
     {
-      "ts_code": "688041.SH",
-      "pct_chg": 0,
-      "signal_ref": "a4",
-      "explanation": "海光信息今日无异常异动。与寒武纪同为国产AI芯片龙头→AI落地配套文件最直接受益→但市场未定价。海光DCU为国产算力主力→央国企AI采购最受益标的。",
-      "note": "⭐ 与寒武纪同逻辑：海光0反应 vs AI政策fire信号"
+      "type": "盘后信号vs盘中定价",
+      "severity": "high",
+      "title": "🔥 晚间4条fire信号(寒武纪30万颗/扬杰豁免/联想AI/恒生科技AI纳入) — 盘后增量巨大",
+      "detail": "今晚scanner新增4条fire信号(16to22窗口),全部为盘后信息。今日盘中仅定价了白天的信号(企稳+IC政策+HBM封装+存储芯片)。晚间4条fire信号→下周一存在重大定价缺口。特别是寒武纪30万颗量级突变(+158% YoY)若被市场认可→可能打破'AI芯片传导链断裂'的魔咒。",
+      "tickers": ["688256.SH", "688981.SH", "600584.SH", "300373.SZ"],
+      "action": "下周一(5/26)为关键交易日。重点观察:①寒武纪是否反应30万颗量级 ②SMIC是否联动(代工稳定性背书) ③长电是否继续强势(封装需求增量)。三条线若同时反应→链2全链共振。"
     }
   ],
   "stats": {
     "total_signals": 10,
-    "chain1": 4,
-    "chain2": 8,
+    "chain1": 3,
+    "chain2": 7,
     "cross_chain": 2,
-    "by_lifecycle": {"emerging": 6, "positioning": 4, "consensus": 0, "exhausted": 0},
-    "by_priced_in": {"not_priced": 6, "partially_priced": 4, "mostly_priced": 0, "fully_priced": 0},
-    "strong_backing": 3,
-    "moderate_backing": 5,
-    "weak_backing": 2,
-    "by_confidence": {"green": 3, "yellow": 7, "red": 0},
-    "anomalies_total": 542,
-    "anomalies_unexplained": 0,
-    "attribution_coverage": "100%"
+    "by_lifecycle": {
+      "emerging": 4,
+      "positioning": 4,
+      "consensus": 2,
+      "exhausted": 0
+    },
+    "by_priced_in": {
+      "not_priced": 5,
+      "partially_priced": 4,
+      "fully_priced": 1
+    },
+    "strong_backing": 2,
+    "moderate_backing": 1,
+    "weak_backing": 7
   },
   "context_update": {
     "key_findings": [
-      "✅ 5/21暴跌后首日企稳确认：创业板+2.31%深成指+2.17%，上午'15:00决定性观察节点'收涨通过。跨市场背离(A股 vs SOX)从11.46pp开始收敛。缩量5783亿显示场外资金仍观望→需连续3日确认趋势逆转。",
-      "⭐ 6条not_priced信号(史上最多)：SMIC 406亿并购(⭐a7)、发改委IC税收(⭐a3)、AI落地配套(⭐a4)、华为AI DC(⭐a8)、韩国抄底(⭐a10)、企稳确认(⭐a1)。信息不对称窗口极为充裕→为建仓提供充足时间。",
-      "🔥 长电科技+9.04% 今日双链最强标的——HBM先进封装国产化逻辑被市场最强定价。封测板块9/9全涨。大基金三期明确投向先进封装=长期逻辑确定性高。",
-      "⚠️ 中微公司-1.30%为设备板块23/26上涨中唯一大市值下跌——设备板块内部分化加剧。需关注中微基本面是否有未披露利空。",
-      "⚡ 存储芯片从'跟随品种'→'领涨品种'升级：兆易创新+8.53%创新高(A+H超3300亿)、闪迪CEO长期供不应求+长鑫5/27 IPO上会双重催化。",
-      "🔗 双政策组合拳：发改委同日发布IC税收优惠制度化+AI落地配套文件→链1+链2同时获得政策基石。IC 1.7万亿+19%为链1硬基本面支撑，AI央国企场景开放为链2需求锚。",
-      "💰 资本面：strong_backing 3条(s3/s4/s7均有大基金+国家队ETF双匹配)、moderate 5条、weak 2条。8/10信号有资金面支撑→信号质量高于纯新闻驱动。"
+      "🔥 年度级别信号：寒武纪2026年30万颗思元590出货(+158% YoY)——国产AI芯片从'概念验证'到'量产放量'的转折点。大摩背书+Q1数据验证(营收+159%/净利+185%/现金流转正+合同负债4亿)。盘后信号→下周一首次定价,有望打破'AI芯片传导链断裂'魔咒。",
+      "🔗 双链共振深化：长电(+9.04%今日最强)代表先进封装+HBM国产化,寒武纪(30万颗)代表AI芯片量产,SMIC(代工稳定性)代表制造——三条线若下周一同时反应,链2将出现首次'设计-代工-封装'全链共振。",
+      "✅ 需求端最强验证：联想AI营收+105%+1400亿储备订单——AI不是泡沫,是正在发生的产业革命。从NVIDIA的'卖铲子'叙事→联想的'铲子卖出去了'验证→链2需求逻辑完整闭环。",
+      "🔄 链1制裁边际松动：欧盟拟豁免扬杰科技——2022年以来对华芯片制裁首次出现豁免案例。虽仅个别公司+临时性,但方向性信号值得持续跟踪。与闻泰起诉安世形成'一松一紧'的对欧博弈格局。",
+      "📊 4条emerging+5条not_priced=下周一巨大定价空间。今晚晚间增量信号量级超过白天所有信号,周一存在强alpha机会。盘中需重点监控：寒武纪(30万颗)、SMIC(代工背书)、长电(封装增量)、扬杰(豁免)。"
     ],
     "emerging_risks": [
-      "🔴 缩量反弹风险：今日成交额2.93万亿缩量5783亿(-16.5%)。若明日继续缩量→'无量空涨'陷阱→反弹夭折风险。确认反转需成交额回到3.3万亿以上。",
-      "🔴 中微公司异常下跌：设备板块全涨中中微-1.30%异常。需排查是否有未披露利空(如制裁升级影响、客户订单延迟等)。连续2日弱于板块将升级为警告信号。",
-      "🟡 寒武纪/海光0反应：AI落地配套为fire级政策信号→国产AI芯片最直接受益→但两者均无异常异动。可能原因：①资金仍在存储/封测轮动 ②市场对国产AI芯片商业化存疑。若持续无反应→信号传导链断裂。",
-      "🟡 今晚美股SOX走势：5/21 A股-SOX背离11.46pp。若今晚美股SOX下跌→背离修复路径改变→A股反弹可持续性受损。若SOX继续上涨→背离修复加速→A股追涨动力增强。",
-      "🟡 北向资金走向：今日北向资金流向未披露(数据延迟)。若北向资金在反弹日净流出→内外资分歧加剧→反弹持续性存疑。"
+      "⚠️ 缩量反弹风险：今日成交额2.93万亿缩量16.5%——反弹质量存疑。需周一成交量回升至3.5万亿以上确认。若持续缩量→可能再次探底。",
+      "⚠️ 中微连续两日反向下跌——设备板块内最大背离。5/21 -2.96% + 5/22 -1.30% vs 板块全涨。需排查个股负面(外资减持/业绩预期下修/CVD竞争加剧)。若周一继续下跌→发出减仓信号。",
+      "⚠️ 链2传导链断裂魔咒：今日多重AI利好(政策+华为+存储+联想)未能激活寒武纪/海光。今晚30万颗量级突变为最大变量——若周一仍无反应→需重新评估'AI芯片从政策→股价传导机制'的有效性。",
+      "⚠️ 长电短期过热风险：年内+65%+3日+23%已大幅偏离均线。consensus阶段催化大部分兑现,向上空间有限。若周一继续冲高→更可能是卖点而非买点。",
+      "🟡 今晚美股SOX为第二验证点：A股企稳+背离收敛需美股确认。若SOX下跌→背离修复路径改变,周一A股追涨动力减弱。若SOX上涨→A股周一高开概率增加。"
     ]
   }
 }

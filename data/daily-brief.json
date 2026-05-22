@@ -1,181 +1,155 @@
 {
-  "generated_at": "2026-05-22T17:10:01.192568+08:00",
+  "generated_at": "2026-05-22T23:10:00.539263+08:00",
   "date": "2026-05-22",
   "sections": {
     "signals": {
       "available": true,
       "date": "2026-05-22",
-      "run_at": "2026-05-22T17:00:00+08:00",
+      "run_at": "2026-05-22T23:00:00+08:00",
       "stats": {
         "total_signals": 10,
-        "chain1": 4,
-        "chain2": 8,
+        "chain1": 3,
+        "chain2": 7,
         "cross_chain": 2,
         "by_lifecycle": {
-          "emerging": 6,
+          "emerging": 4,
           "positioning": 4,
-          "consensus": 0,
+          "consensus": 2,
           "exhausted": 0
         },
         "by_priced_in": {
-          "not_priced": 6,
+          "not_priced": 5,
           "partially_priced": 4,
-          "mostly_priced": 0,
-          "fully_priced": 0
+          "fully_priced": 1
         },
-        "strong_backing": 3,
-        "moderate_backing": 5,
-        "weak_backing": 2,
-        "by_confidence": {
-          "green": 3,
-          "yellow": 7,
-          "red": 0
-        },
-        "anomalies_total": 542,
-        "anomalies_unexplained": 0,
-        "attribution_coverage": "100%"
+        "strong_backing": 2,
+        "moderate_backing": 1,
+        "weak_backing": 7
       },
       "signals": [
         {
           "id": "a1",
           "priority": "normal",
-          "title": "✅ A股收盘企稳确认：创业板+2.31%深成指+2.17% 背离开始收敛",
-          "chain": "chain1+chain2",
-          "confidence": "green",
-          "lifecycle": "emerging",
+          "title": "寒武纪2026年预计出货30万颗思元590 — 国产AI芯片量级突变 (+158% YoY)",
+          "chain": "chain2",
+          "confidence": "yellow",
+          "lifecycle": "positioning",
           "priced_in": "not_priced",
           "capital_backing": {
             "level": "moderate",
-            "big_fund": false,
+            "big_fund": true,
             "national_team_etf": true,
             "recent_bidding": false,
-            "note": "国家队ETF持仓1.55万亿(~40% A股ETF)+汇金维稳预期。缩量反弹中国家队未明显护盘=市场自发企稳，信号质量反而更高。"
+            "note": "大基金三期明确投向AI算力芯片方向(3440亿规模)，寒武纪为国产AI芯片龙头。科创50ETF华夏前十大权重第一，寒武纪+海光+中芯占科创50权重>25%。但大基金未直接入股寒武纪(已上市公司)，属于间接受益。融资净买入20.79亿元(近一周)，资金面活跃。"
           },
           "tickers": []
         },
         {
           "id": "a2",
           "priority": "normal",
-          "title": "存储芯片概念爆发：兆易创新+9%续创新高 A+H总市值超3300亿 闪迪CEO称闪存长期供不应求",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
+          "title": "欧盟拟豁免扬杰科技制裁 — 西方对华芯片制裁首现边际松动",
+          "chain": "chain1",
+          "confidence": "red",
+          "lifecycle": "emerging",
+          "priced_in": "not_priced",
           "capital_backing": {
-            "level": "moderate",
+            "level": "weak",
             "big_fund": false,
-            "national_team_etf": true,
+            "national_team_etf": false,
             "recent_bidding": false,
-            "note": "兆易创新为科创50成分股，科创50ETF华夏持仓。大基金一期有投资兆易但非主投方向。存储芯片不在大基金三期明确投向。"
+            "note": "扬杰科技(300373)为功率半导体企业，不在大基金一二三期核心投向(大基金聚焦IC制造/设备/材料/AI算力)。非科创50权重股。无近期招投标数据。"
           },
           "tickers": []
         },
         {
           "id": "a3",
           "priority": "normal",
-          "title": "国家发改委：连续6年制定IC产业税收优惠清单 2025年IC销售收入超1.7万亿同比+19%",
-          "chain": "chain1",
+          "title": "联想集团AI营收全年+105% 手握1400亿储备订单 — AI算力需求端最强验证",
+          "chain": "chain2",
           "confidence": "green",
-          "lifecycle": "emerging",
-          "priced_in": "not_priced",
+          "lifecycle": "positioning",
+          "priced_in": "partially_priced",
           "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
+            "level": "weak",
+            "big_fund": false,
+            "national_team_etf": false,
             "recent_bidding": false,
-            "note": "大基金一二三期全组合受益于税收优惠制度化。科创50ETF重仓SMIC/中微/澜起等。IC税收优惠+大基金投资=政策-资本双轮驱动链1。"
+            "note": "联想(0992.HK)港股上市，不在A股大基金/国家队ETF范围。但作为链2需求端最强验证，其意义在于确认AI算力需求的结构性增长→间接利好A股AI芯片/光模块/服务器产业链。"
           },
           "tickers": []
         },
         {
           "id": "a4",
           "priority": "normal",
-          "title": "国家发改委：正谋划出台加快AI落地配套文件 推动央国企开放高价值应用场景",
+          "title": "恒生科技指数纳入MiniMax+智谱 — 国产AI大模型估值体系成形",
           "chain": "chain2",
           "confidence": "yellow",
           "lifecycle": "emerging",
-          "priced_in": "not_priced",
+          "priced_in": "partially_priced",
           "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
+            "level": "weak",
+            "big_fund": false,
+            "national_team_etf": false,
             "recent_bidding": false,
-            "note": "大基金三期(3440亿)明确投向AI算力/先进封装。央国企AI场景开放→寒武纪/海光等国产AI芯片最直接受益。科创50ETF重仓寒武纪(1137万股)。"
+            "note": "港股标的，不在A股大基金/国家队ETF范围。但纳入恒生科技指数后将有南向资金被动配置(港股通)。对A股无直接资金映射。"
           },
           "tickers": []
         },
         {
           "id": "a5",
           "priority": "normal",
-          "title": "招银国际：英伟达向全栈式AI工厂平台转型 Blackwell/Rubin至2027年1万亿美元能见度",
+          "title": "长电科技2.5D封装Q1产能利用率超80% — HBM先进封装国产化进入满产验证",
           "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
+          "confidence": "green",
+          "lifecycle": "consensus",
+          "priced_in": "fully_priced",
           "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
+            "level": "strong",
+            "big_fund": true,
             "national_team_etf": true,
             "recent_bidding": false,
-            "note": "中际旭创为科创50/创业板指成分股，ETF持仓较重。大基金不直接投向光模块但三期AI算力方向间接受益。"
+            "note": "大基金一期重仓长电科技(封测龙头)+三期明确投向先进封装/HBM方向。pool.db归因显示今日+9.04%由'HBM先进封装国产化加速'催化驱动。属于双基金覆盖+资金最强定价的双链标的。无近期招投标数据(封测厂采购设备≠中标)。"
           },
           "tickers": []
         },
         {
           "id": "a6",
           "priority": "normal",
-          "title": "HBM先进封装国产化加速：华天科技转型+浙江禾芯2026量产HBM2e 长电科技大基金护航",
-          "chain": "chain2",
+          "title": "28nm浸没式DUV光刻机批量交付良率90%+ — 国产光刻设备从'突破'走向'批量'",
+          "chain": "chain1",
           "confidence": "yellow",
-          "lifecycle": "positioning",
+          "lifecycle": "consensus",
           "priced_in": "partially_priced",
           "capital_backing": {
-            "level": "moderate",
+            "level": "strong",
             "big_fund": true,
-            "national_team_etf": false,
+            "national_team_etf": true,
             "recent_bidding": false,
-            "note": "大基金三期(3440亿)明确投向先进封装/HBM。长电科技为大基金一期已投企业。华天科技/浙江禾芯(山子高科参股)受益于大基金三期方向。"
+            "note": "大基金二期(2042亿)重设备材料+三期(3440亿)重卡脖子设备→光刻机为最高优先级。上海微电子为未上市核心标的→其供应链(科益虹源/国望光学等)间接受益。北方华创/中微公司均在科创50前十大权重(合计>10%),国家队ETF资金持续流入。无近期光刻机直接招投标数据。"
           },
           "tickers": []
         },
         {
           "id": "a7",
           "priority": "normal",
-          "title": "中芯国际收购中芯北方49%股权获证监会批复 大基金参与交易",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "emerging",
-          "priced_in": "not_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金直接作为交易对手方参与406亿并购——从出资方升级为交易对手，背书强度max。SMIC为科创50第一大权重。该交易是大基金参与A股半导体最大并购案。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a8",
-          "priority": "normal",
-          "title": "华为发布AI DC数据基础设施全栈方案 PB级KV Cache 推理首Token时延↓90%",
+          "title": "AMD Venice 2nm量产+全球三大厂商同步扩产 — 先进制程竞赛加速",
           "chain": "chain2",
           "confidence": "yellow",
-          "lifecycle": "emerging",
+          "lifecycle": "positioning",
           "priced_in": "not_priced",
           "capital_backing": {
             "level": "weak",
             "big_fund": false,
             "national_team_etf": false,
             "recent_bidding": false,
-            "note": "华为非上市公司，无直接大基金/ETF持仓映射。但华为AI DC方案拉动国产存储/服务器/交换机产业链→间接利好相关上市公司。"
+            "note": "全球供给端信号,非中国国内资本驱动。AMD/NVIDIA为美股,不涉及大基金/国家队ETF。但通过台积电资本开支→全球设备需求→中国设备企业间接受益传导链。"
           },
           "tickers": []
         },
         {
-          "id": "a9",
+          "id": "a8",
           "priority": "normal",
-          "title": "AI实验室资本竞赛升级：DeepSeek融资100亿美元+OpenAI拟IPO估值8520亿+Anthropic Q2收入110亿美元",
+          "title": "阿里千问Qwen3.7-Max+智谱GLM-5.1高速版 — 国产大模型旗舰能力+低延迟双突破",
           "chain": "chain2",
           "confidence": "yellow",
           "lifecycle": "positioning",
@@ -185,24 +159,41 @@
             "big_fund": false,
             "national_team_etf": false,
             "recent_bidding": false,
-            "note": "AI实验室本身无直接A股映射。但大基金领投DeepSeek→大基金三期AI算力投向的逻辑得到验证。间接利好国产AI芯片/算力产业链。"
+            "note": "模型层企业(阿里/智谱)为互联网/AI软件公司,不在半导体大基金范围。但通过算力需求→上游芯片的正向传导链,间接受益于大基金三期AI算力方向。"
+          },
+          "tickers": []
+        },
+        {
+          "id": "a9",
+          "priority": "normal",
+          "title": "比亚迪5月28日智能化战略发布会 — 汽车+AI芯片融合催化预期",
+          "chain": "chain2",
+          "confidence": "yellow",
+          "lifecycle": "emerging",
+          "priced_in": "not_priced",
+          "capital_backing": {
+            "level": "weak",
+            "big_fund": false,
+            "national_team_etf": false,
+            "recent_bidding": false,
+            "note": "比亚迪为汽车链,非半导体大基金覆盖。但车载AI芯片需求→寒武纪/海光等国产AI芯片企业拓展汽车市场→间接受益于链2下游应用爆发。"
           },
           "tickers": []
         },
         {
           "id": "a10",
           "priority": "normal",
-          "title": "韩国投资者昨日逆势抄底A股 大举买入机器人ETF+PCB龙头+科技股",
-          "chain": "chain1+chain2",
-          "confidence": "yellow",
+          "title": "*ST闻泰起诉荷兰安世半导体索赔80亿 — 半导体跨境诉讼标志性事件",
+          "chain": "chain1",
+          "confidence": "red",
           "lifecycle": "emerging",
           "priced_in": "not_priced",
           "capital_backing": {
-            "level": "moderate",
+            "level": "weak",
             "big_fund": false,
-            "national_team_etf": true,
+            "national_team_etf": false,
             "recent_bidding": false,
-            "note": "机器人ETF/PCB龙头被韩国投资者买入→间接验证国家队ETF持仓的吸引力。外部聪明钱行为与国家ETF持仓形成共振。"
+            "note": "*ST闻泰已ST→被剔除主要指数ETF,国家队不会持有。安世半导体虽原为中国收购的优质资产,但荷兰政府干预后控制权已失→大基金无介入空间。"
           },
           "tickers": []
         }
@@ -233,7 +224,7 @@
           "name": "瑞丰高材",
           "pct_chg": 20.01,
           "vol_ratio": 6.04,
-          "attribution": "✅国产替代,✅AI算力,化工/材料板块联动(76/105只)"
+          "attribution": "✅国产替代,✅AI算力,化工/材料板块联动(47/65只)"
         },
         {
           "date": "20260522",
@@ -241,7 +232,7 @@
           "name": "美新科技",
           "pct_chg": 20.01,
           "vol_ratio": 3.44,
-          "attribution": "✅国产替代,✅AI算力,化工/材料板块联动(76/105只)"
+          "attribution": "✅国产替代,✅AI算力,化工/材料板块联动(47/65只)"
         },
         {
           "date": "20260520",
@@ -252,28 +243,12 @@
           "attribution": "国产替代链,✅国产替代,✅AI算力,IC设计板块联动(36/46只)"
         },
         {
-          "date": "20260517",
-          "ts_code": "301696.SZ",
-          "name": "三瑞智能",
-          "pct_chg": 20.0,
-          "vol_ratio": 1.01,
-          "attribution": "✅AI算力,工业设备/通用机械板块联动(66/84只)"
-        },
-        {
-          "date": "20260522",
-          "ts_code": "688260.SH",
-          "name": "昀冢科技",
-          "pct_chg": 20.0,
-          "vol_ratio": 4.15,
-          "attribution": "✅国产替代,✅AI算力,消费电子/元器件板块联动(84/107只)"
-        },
-        {
           "date": "20260522",
           "ts_code": "688020.SH",
           "name": "方邦股份",
           "pct_chg": 20.0,
           "vol_ratio": 4.79,
-          "attribution": "✅国产替代,✅AI算力,消费电子/元器件板块联动(84/107只)"
+          "attribution": "✅国产替代,✅AI算力,消费电子/元器件板块联动(66/80只)"
         },
         {
           "date": "20260511",
@@ -282,14 +257,6 @@
           "pct_chg": 20.0,
           "vol_ratio": 5.8,
           "attribution": "✅AI算力,✅国产替代,材料板块联动(22/24只)"
-        },
-        {
-          "date": "20260522",
-          "ts_code": "301362.SZ",
-          "name": "民爆光电",
-          "pct_chg": 20.0,
-          "vol_ratio": 3.17,
-          "attribution": "✅国产替代,✅AI算力,消费电子/元器件板块联动(84/107只)"
         },
         {
           "date": "20260511",
@@ -341,14 +308,6 @@
         },
         {
           "date": "20260519",
-          "ts_code": "300616.SZ",
-          "name": "尚品宅配",
-          "pct_chg": 20.0,
-          "vol_ratio": 7.04,
-          "attribution": "✅AI算力,✅国产替代,消费/医药/传媒板块联动(49/77只)"
-        },
-        {
-          "date": "20260519",
           "ts_code": "300632.SZ",
           "name": "光莆股份",
           "pct_chg": 20.0,
@@ -370,6 +329,38 @@
           "pct_chg": 20.0,
           "vol_ratio": 2.43,
           "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
+        },
+        {
+          "date": "20260519",
+          "ts_code": "688126.SH",
+          "name": "沪硅产业",
+          "pct_chg": 20.0,
+          "vol_ratio": 9.71,
+          "attribution": "国产替代链,✅a2:🔥 长鑫科技H1指引1100-1200亿(+612-677%,半导体材料板块联动(24/25只)"
+        },
+        {
+          "date": "20260520",
+          "ts_code": "300069.SZ",
+          "name": "金利华电",
+          "pct_chg": 20.0,
+          "vol_ratio": 0.23,
+          "attribution": "✅国产替代,✅AI算力,新能源/电力设备板块联动(38/53只)"
+        },
+        {
+          "date": "20260520",
+          "ts_code": "301322.SZ",
+          "name": "绿通科技",
+          "pct_chg": 20.0,
+          "vol_ratio": 1.85,
+          "attribution": "✅国产替代,✅AI算力,汽车零部件板块联动(12/26只)"
+        },
+        {
+          "date": "20260520",
+          "ts_code": "688584.SH",
+          "name": "上海合晶",
+          "pct_chg": 20.0,
+          "vol_ratio": 7.46,
+          "attribution": "国产替代链,✅[半导体材料]催化,半导体材料板块联动(25/25只)"
         }
       ]
     },
@@ -386,14 +377,14 @@
     },
     "alerts": {
       "available": true,
-      "total_active": 34,
+      "total_active": 50,
       "recent_count": 0,
       "fire": [],
       "high": []
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-05-22T17:05:00.395994+08:00",
+      "last_updated": "2026-05-22T23:05:00.682378+08:00",
       "active_count": 10,
       "positions": [
         {
