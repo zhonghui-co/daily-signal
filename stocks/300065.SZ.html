@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>海兰信 (300065.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>海兰信 <code style="font-size:0.8rem;color:var(--text-muted)">300065.SZ</code></h1>
+    <div class="sub">待分类 · 最新价 24.71 · 20260522 · 5日 +5.4% · 20日 +5.4%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-05-15</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">海兰信：2025年度业绩说明会投资者活动记录表</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：300065 证券简称：海兰信 北京海兰信数据科技股份有限公司 海兰信 2025 年度业绩说明会 投资者活动记录表 编号： □特定对象调研 □分析师会议 □媒体采访 √业绩说明会 投资者关系活动 □新闻发布会 □路演活动 类别 □现场参观 □电话会议 □其他： （请文字说明其他活动内容） 参与单位名称 海兰信2025年度业绩说明会采用网络远程方式进行，面向全体投资者 及人员姓名 时间 2026年5月15日15:00-17:00 地点 深圳证券交易所“互动易平台”http://irm.cninfo.com.cn“云访谈”栏目 主持人：海兰信 董事长：卢耀祖 公司接待人员 财务总监：陈元法 姓名 董秘：杨晔 独立董事：段华友 独立董事：唐军武 1.经济半小时里面说的单体5-7M的海底数据中心研发进展如何？何时 能下水实用？ 答：尊敬的投资者您好！非常感谢您对公司海底数据中心业务进展的关 心。 您提到的相关项目中，公司目前正在推进的是单体 7MW 海底数 据中心舱体的研发与生产工作，各项工作按计划有序推进，预计将于本 年度内完成下水实用验证。公司将持续聚焦海底数据中心核心技术迭代 ...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-05-15/1225311397.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">海兰信：国泰海通证券股份有限公司关于北京海兰信数据科技股份有限公司部分募集资金投资项目延期的核查意见</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">国泰海通证券股份有限公司 关于北京海兰信数据科技股份有限公司 部分募集资金投资项目延期的核查意见 国泰海通证券股份有限公司（以下简称“国泰海通”、“保荐机构”）作为 北京海兰信数据科技股份有限公司（以下简称“海兰信”、“公司”）的持续督 导机构，根据《上市公司募集资金监管规则》（证监会公告〔2025〕10 号）、 《深圳证券交易所上市公司自律监管指引第2号——创业板上市公司规范运作》 以及《深圳证券交易所创业板上市公司自律监管指南第2号——公告格式》等有 关规定，对海兰信部分募集资金投资项目延期情况进行了核查，具体情况如下： 一、募集资金基本情况 1、经中国证券监督管理委员会《关于同意北京海兰信数据科技股份有限公司 向不特定对象发行可转换公司债券注册的批复》（证监许可[2020]3065号）核准， 公司向不特定对象发行可转换公司债券共计募集资金总额为73,000 万元，扣除保 荐承销费用（含税）人民币869.80万元，募集资金净额为72,130.20万元。上述募 集资金到位情况经天职国际会计师事务所（特殊普通合伙）审验，并于2020年12 月18日出具天职业字[2020]41728号验...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225270944.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-22</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">海兰信：2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">北京海兰信数据科技股份有限公司2025年年度报告摘要 证券代码：300065 证券简称：海兰信 公告编号：2026-016 北京海兰信数据科技股份有限公司 2025 年年度报告摘要 一、重要提示 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规划，投资者应当到证监会指 定媒体仔细阅读年度报告全文。 所有董事均已出席了审议本报告的董事会会议。 致同会计师事务所（特殊普通合伙）对本年度公司财务报告的审计意见为：标准的无保留意见。 非标准审计意见提示 □适用 不适用 公司上市时未盈利且目前未实现盈利 □适用 不适用 董事会审议的报告期利润分配预案或公积金转增股本预案 □适用 不适用 公司计划不派发现金红利，不送红股，不以公积金转增股本。 董事会决议通过的本报告期优先股利润分配预案 □适用 不适用 二、公司基本情况 1、公司简介 股票简称 海兰信 股票代码 300065 股票上市交易所 深圳证券交易所 联系人和联系方式 董事会秘书 证券事务代表 姓名 杨晔 孙跃鹏 北京市海淀区地锦路7号 北京市海淀区地锦路7号 办公地址 院10号楼 院10号楼 传真 0...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-22/1225141069.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-22</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">海兰信：2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">北京海兰信数据科技股份有限公司2025年年度报告全文 北京海兰信数据科技股份有限公司 2025 年年度报告 【2026 年 4 月】 1 北京海兰信数据科技股份有限公司2025年年度报告全文 年年度报告 2025 第一节 重要提示、目录和释义 公司董事会及董事、高级管理人员保证年度报告内容的真实、准确、完 整，不存在虚假记载、误导性陈述或者重大遗漏，并承担个别和连带的法律 责任。 公司负责人卢耀祖、主管会计工作负责人陈元法及会计机构负责人(会计 主管人员)何明哲声明：保证本年度报告中财务报告的真实、准确、完整。 所有董事均已出席了审议本报告的董事会会议。 本报告中如有涉及未来计划、业务预测等方面的内容，均不构成本公司 对任何投资者及相关人士的承诺，投资者及相关人士均应对此保持足够的风 险认识，并且应当理解计划、预测与承诺之间的差异。 （一）新业务转型风险 海底数据中心（UDC）相关技术经过海南项目长期运营验证，技术成熟 度已显著提升。但海域环境相对陆地具有复杂性，涉及海洋工程、海上风电 供电、数据通信等多系统集成，跨专业、跨领域的技术整合对项目持续大规 模拓展仍构成一定挑战。同时，海洋...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-22/1225141070.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-22</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">海兰信：2026年一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">北京海兰信数据科技股份有限公司2026年第一季度报告 证券代码：300065 证券简称：海兰信 公告编号：2026-017 北京海兰信数据科技股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 重要内容提示： 1.董事会及董事、高级管理人员保证季度报告的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担 个别和连带的法律责任。 2.公司负责人、主管会计工作负责人及会计机构负责人(会计主管人员)声明：保证季度报告中财务信息的真实、准确、完 整。 3.第一季度财务会计报告是否经过审计 □是 否 1 北京海兰信数据科技股份有限公司2026年第一季度报告 一、主要财务数据 （一） 主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是 否 本报告期比上年同期增减 本报告期 上年同期 （%） 营业收入（元） 91,365,333.25 346,447,574.15 -73.63% 归属于上市公司股东的净利 1,679,965.68 34,803,851.48 -95.17% 润（元...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-22/1225141081.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>24.71</td><td class="positive">+5.37%</td><td>623932</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>中航重机 (600765.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>中航重机 <code style="font-size:0.8rem;color:var(--text-muted)">600765.SH</code></h1>
+    <div class="sub">待分类 · 最新价 14.97 · 20260522 · 5日 -0.7% · 20日 -0.7%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中航重机：中航重机股份有限公司关于参加2026年贵州辖区上市公司投资者集体接待日的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：600765 证券简称：中航重机 公告编号：2026-022 中航重机股份有限公司 关于参加 2026 年贵州辖区上市公司投资者 集体接待日活动的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性承担个别及连带责任。 重要内容提示： 会议召开时间：2026 年5月11 日(星期一)下午15:30-17:30 会议召开地点：全景路演（网址：http://rs.p5w.net） 会议主题：2026 年贵州辖区上市公司投资者集体接待日 会议召开方式：网络互动 会议问题征集：提问通道自本公告发出之日起开放至2026年5月8日截 止，通过微信关注“贵州资本市场”公众号，发送关键词“提问”即可进入专 区提问。公司将在说明会上对投资者普遍关注的问题进行回答。 为加强上市公司与投资者的交流互动，便于投资者进一步了解公司 2026 年 第一季度经营情况及其他关切的问题，在贵州证监局指导下，贵州证券业协会联 合深圳市全景网络有限公司举办 2026 年贵州辖区上市公司投资者集体接待日并 征集相关问题，具体安...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225258570.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中航重机：中航重机2026年第一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">中航重机股份有限公司2026年第一季度报告 证券代码：600765 证券简称：中航重机 中航重机股份有限公司 2026 年第一季度报告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述或 者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 重要内容提示 公司董事会及董事、高级管理人员保证季度报告内容的真实、准确、完整，不存在虚假记载、误 导性陈述或重大遗漏，并承担个别和连带的法律责任。 公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）保证季度报告中财务信息 的真实、准确、完整。 第一季度财务报表是否经审计 □是 √否 一、主要财务数据 (一)主要会计数据和财务指标 单位：元 币种：人民币 本报告期比上年 项目 本报告期 上年同期 同期增减变动幅 度(%) 营业收入 2,455,399,146.81 2,306,301,514.23 6.46 利润总额 345,510,304.10 302,917,074.67 14.06 归属于上市公司股东的净 157,977,361.10 197,809,382.77 -20.14 利润 归属于上市公司股东的...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225258212.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-19</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中航重机：中航重机关于部分董事及高级管理人员增持股份计划的进展公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：600765 证券简称：中航重机 公告编号：2026-017 中航重机股份有限公司 关于部分董事及高级管理人员 增持股份计划的进展公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈 述或者重大遗漏，并对其内容的真实性、准确性和完整性承担个别及连带责任。 重要内容提示：  增持计划内容：公司部分董事及高级管理人员计划于增持计划披露之日起12 个月内，通过上海证券交易所系统集中竞价的方式增持公司 A 股社会公众股份 （以下简称“公司股份”）。本次增持合计总金额不低于人民币430 万元且不超过 人民币860 万元。本次增持不设置固定价格、价格区间，增持主体将根据公司股 票价格波动情况择机逐步实施增持计划，具体内容详见公司于 2025 年 12 月 16 日在上海证券交易所网站（www.sse.com.cn）上披露的《中航重机关于部分董事 及高级管理人员增持股份计划的公告》（公告编号：2025-084）。  增持计划实施情况：2026 年3 月16 日至 2026年 3月17 日，公司董事长冉 兴先生以自有资金增持公司股票 58,000 股，增持金额 100....</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-19/1225015830.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>14.97</td><td class="negative">-0.66%</td><td>165214</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

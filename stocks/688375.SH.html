@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>国博电子 (688375.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>国博电子 <code style="font-size:0.8rem;color:var(--text-muted)">688375.SH</code></h1>
+    <div class="sub">待分类 · 最新价 106.81 · 20260522 · 5日 +0.8% · 20日 +0.8%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">国博电子：南京国博电子股份有限公司2026年第一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">南京国博电子股份有限公司2026年第一季度报告 证券代码：688375 证券简称：国博电子 南京国博电子股份有限公司 2026 年第一季度报告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 重要内容提示 公司董事会及董事、高级管理人员保证季度报告内容的真实、准确、完整，不存在虚假记载、误 导性陈述或重大遗漏，并承担个别和连带的法律责任。 公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）保证季度报告中财务信息 的真实、准确、完整。 第一季度财务报表是否经审计 □是 √否 一、主要财务数据 (一)主要会计数据和财务指标 单位：元 币种：人民币 本报告期比 上年同期增 项目 本报告期 上年同期 减变动幅度 (%) 营业收入 318,878,713.94 350,016,384.48 -8.90 利润总额 -10,012,854.77 58,053,896.57 -117.25 归属于上市公司股东的净利润 856,305.62 57,531,429.42 -98.51 1 / 13 南京国博...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225263383.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-green">💬 投资者关系</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">国博电子：南京国博电子股份有限公司投资者关系管理制度</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">南京国博电子股份有限公司 投资者关系管理制度 第一章 总则 第一条为进一步加强南京国博电子股份有限公司（以下简 称“公司”）与投资者及潜在投资者（以下统称“投资者”） 之间的信息沟通，促进公司与投资者之间建立长期、稳定的良 性关系，提升公司的投资价值与诚信形象，切实保护投资者利 益，依据《中华人民共和国公司法》《中华人民共和国证券法》 《上市公司投资者关系管理工作指引》《上海证券交易所科创 板股票上市规则》《上海证券交易所科创板上市公司自律监管 指引第 1 号——规范运作》和《南京国博电子股份有限公司章 程》（以下简称《公司章程》）等有关规定,制定本管理制度。 第二条投资者关系管理是指公司通过便利股东权利行使、 信息披露、互动交流和诉求处理等工作，加强与投资者及潜在 投资者之间的沟通，增进投资者对公司的了解和认同，以提升 公司治理水平和企业整体价值，实现尊重投资者、回报投资者、 保护投资者目的的相关活动。 第三条公司投资者关系管理工作应当遵循公开、公平、公 正原则，真实、准确、完整地介绍和反映公司的实际状况，避 免在投资者关系活动中做出发布或者泄露未公开重大信息、过 - 1 - 度宣传...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225263380.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-green">💰 分红派息</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">国博电子：南京国博电子股份有限公司关于召开2025年度暨2026年第一季度业绩暨现金分红说明会的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688375 证券简称：国博电子 公告编号：2026-011 南京国博电子股份有限公司 关于召开 2025 年度暨 2026 年第一季度业绩暨现金分 红说明会的公告 本公司董事会及全体董事保证公告内容不存在任何虚假记载、误导性陈述或 者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 重要内容提示：  会议召开时间：2026年5月22 日（星期五）15:00-16:00；  会 议 召 开 地 点 ： 上 海 证 券 交 易 所 上 证 路 演 中 心 （ 网 址 ： https://roadshow.sseinfo.com/）；  会议召开方式：上证路演中心视频录播和网络互动；  投资者可于2026年5月15 日（星期五）至5月21 日（星期四）16:00 前登录上证路演中心网站首页点击“提问预征集”栏目或通过公司邮箱 support@gbdz.net 进行提问。公司将在说明会上对投资者普遍关注的问题进行 回答。 南京国博电子股份有限公司（以下简称“公司”）已于2026年4月10日发 布公司2025年年度报告及其摘要，已于2026年4月30 日发布公司...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225263381.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-10</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">国博电子：南京国博电子股份有限公司2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">南京国博电子股份有限公司2025年年度报告摘要 公司代码：688375 公司简称：国博电子 南京国博电子股份有限公司 2025 年年度报告摘要 南京国博电子股份有限公司2025年年度报告摘要 第一节 重要提示 1、 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规 划，投资者应当到www.sse.com.cn网站仔细阅读年度报告全文。 2、 重大风险提示 公司已在本报告“第三节管理层讨论与分析”之“四、风险因素”中披露了可能面对的风险， 提请投资者注意查阅。 3、 本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 4、 公司全体董事出席董事会会议。 5、 立信会计师事务所（特殊普通合伙）为本公司出具了标准无保留意见的审计报告。 6、 公司上市时未盈利且尚未实现盈利 □是 √否 7、 董事会决议通过的本报告期利润分配预案或公积金转增股本预案 公司经本次董事会审议通过的利润分配预案为：以公司总股本596,014,900股为基数，公司 拟向全体股东每10股派发现金红利...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-10/1225090341.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>106.81</td><td class="positive">+0.76%</td><td>45589</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

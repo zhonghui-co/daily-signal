@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>铂力特 (688333.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>铂力特 <code style="font-size:0.8rem;color:var(--text-muted)">688333.SH</code></h1>
+    <div class="sub">待分类 · 最新价 88.44 · 20260522 · 5日 +2.2% · 20日 +2.2%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">铂力特：中信建投证券股份有限公司关于西安铂力特增材技术股份有限公司使用自有和自筹资金增加募投项目投资总额并调整内部投资结构的核查意见</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">中信建投证券股份有限公司 关于西安铂力特增材技术股份有限公司 使用自有和自筹资金增加募投项目投资总额 并调整内部投资结构的核查意见 中信建投证券股份有限公司（以下简称“中信建投证券”、“保荐人”）作 为西安铂力特增材技术股份有限公司（以下简称“铂力特”或“公司”）2022 年 度向特定对象发行A股股票的保荐人，根据《证券发行上市保荐业务管理办法》 《上海证券交易所科创板股票上市规则》《上市公司募集资金监管规则》《科创 板上市公司持续监管办法》《上海证券交易所科创板上市公司自律监管指引第1 号——规范运作》等有关法律、法规的规定，对铂力特使用自有和自筹资金增加 募投项目投资总额并调整内部投资结构进行了审慎核查，具体核查情况和意见如 下： 一、募集资金的基本情况 根据中国证券监督管理委员会出具的《关于同意西安铂力特增材技术股份有限 公司向特定对象发行股票注册的批复》（证监许可[2023]1444 号），同意公司向特 定对象发行股票的注册申请。本次发行股票32,048,107股，每股发行价格94.50元， 募集资金总额为 3,028,546,111.50 元，扣除各项发行费用（不含增值税）共...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225265580.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">铂力特：西安铂力特增材技术股份有限公司2026年第一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">西安铂力特增材技术股份有限公司2026年第一季度报告 证券代码：688333 证券简称：铂力特 西安铂力特增材技术股份有限公司 2026 年第一季度报告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 重要内容提示 公司董事会及董事、高级管理人员保证季度报告内容的真实、准确、完整，不存在虚假记载、误 导性陈述或重大遗漏，并承担个别和连带的法律责任。 公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）保证季度报告中财务信息 的真实、准确、完整。 第一季度财务报表是否经审计 □是 √否 一、主要财务数据 (一)主要会计数据和财务指标 单位：元 币种：人民币 本报告期比 上年同期增 项目 本报告期 上年同期 减变动幅度 (%) 营业收入 325,907,509.31 227,008,450.71 43.57 利润总额 12,219,691.23 -30,107,779.95 不适用 归属于上市公司股东的净利润 16,775,787.66 -14,950,153.56 不适用 归属于上市公司股东...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225265683.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">铂力特：西安铂力特增材技术股份有限公司关于使用自有和自筹资金增加募投项目投资总额并调整内部投资结构的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688333 证券简称：铂力特 公告编号：2026-018 西安铂力特增材技术股份有限公司 关于使用自有和自筹资金增加募投项目投资总额 并调整内部投资结构的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈 述或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 西安铂力特增材技术股份有限公司（以下简称“公司”）于2026年4月29日召开第 三届董事会第二十八次会议，审议通过了《关于使用自有和自筹资金增加募投项目投 资总额并调整内部投资结构的议案》，同意公司在募投项目实施主体、实施地点、募 集资金投资金额和募集资金用途不发生变更的情况下，以自有和自筹资金增加募投项 目的投资总额并调整项目内部投资结构。上述项目投资总额由244,891.41 万元调整为 310,475.02万元，增加65,583.61万元拟全部以自有和自筹资金投入。该事项在公司董 事会审议权限范围内，无需提交股东会审议。现将有关情况公告如下： 一、募集资金的基本情况 根据中国证券监督管理委员会出具的《关于同意西安铂力特增材技术股份有限公 司向特定对象发行股票注册的批复》（证监许...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225265526.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">铂力特：西安铂力特增材技术股份有限公司2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">西安铂力特增材技术股份有限公司2025年年度报告 公司代码：688333 公司简称：铂力特 西安铂力特增材技术股份有限公司 2025 年年度报告 1/268 西安铂力特增材技术股份有限公司2025年年度报告 重要提示 一、本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 二、公司上市时未盈利且尚未实现盈利 □是 √否 三、重大风险提示 公司已在本报告中详细阐述公司在经营过程中可能面临的各种风险，敬请查阅本报告第三节“管 理层讨论与分析”之“四、风险因素”，敬请广大投资者仔细阅读并注意投资风险。 四、公司全体董事出席董事会会议。 五、 信永中和会计事务所（特殊普通合伙人）为本公司出具了带强调事项段的无保留意见的审 计报告。 审计报告中强调事项如下： “我们提醒财务报表使用者关注,如财务报表附注十六所述,铂力特公司于2025年12月31日收 到中国证券监督管理委员会（以下简称中国证监会）下发的《立案告知书》，因铂力特公司涉嫌 信息披露违法违规，中国证监会决定对铂力特公司予以立案。截至本报告日，立案...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225265594.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-purple">📝 制度文件</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">铂力特：西安铂力特增材技术股份有限公司关于制定公司部分治理制度、变更经营范围及修订《公司章程》并办理工商变更登记的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688333 证券简称：铂力特 公告编号：2026-016 西安铂力特增材技术股份有限公司 关于制定公司部分治理制度、变更经营范围及修订 《公司章程》并办理工商变更登记的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 西安铂力特增材技术股份有限公司（以下简称“公司”）于2026年4月29日 召开了第三届董事会第二十八次会议，审议通过了《关于变更公司经营范围、修订 <公司章程>并办理工商变更登记的议案》《关于制定公司<董事、高级管理人员薪 酬管理制度>的议案》《关于制定公司<外汇套期保值业务管理制度>的议案》，现 将相关内容公告如下： 一、关于变更经营范围的情况 根据公司实际情况及经营发展需要，拟新增经营范围：机械零件、零部件加 工；金属切削加工服务；金属工具制造。公司变更后的经营范围以登记机关核准的 内容为准。 二、《公司章程》修订情况 修订前 修订后 第十二条 第十二条 一般项目：增材制造；增材制造装备制造； 一般项目：增材制造；增材制造装备制造； 增材制造装备销售；通用设备制造（...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225265615.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>88.44</td><td class="positive">+2.22%</td><td>101885</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

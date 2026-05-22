@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>飞利信 (300287.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>飞利信 <code style="font-size:0.8rem;color:var(--text-muted)">300287.SZ</code></h1>
+    <div class="sub">待分类 · 最新价 4.32 · 20260522 · 5日 +1.6% · 20日 +1.6%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">飞利信：2026年第一季度报告（更正后）</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">北京飞利信科技股份有限公司2026年第一季度报告 证券代码：300287 证券简称：飞利信 公告编号：2026-016 北京飞利信科技股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 重要内容提示： 1.董事会及董事、高级管理人员保证季度报告的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担 个别和连带的法律责任。 2.公司负责人、主管会计工作负责人及会计机构负责人(会计主管人员)声明：保证季度报告中财务信息的真实、准确、 完整。 3.第一季度财务会计报告是否经过审计 □是 否 1 北京飞利信科技股份有限公司2026年第一季度报告 一、主要财务数据 （一） 主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是 否 本报告期比上年同期增减 本报告期 上年同期 （%） 营业收入（元） 72,905,117.43 115,544,583.98 -36.90% 归属于上市公司股东的净利 -28,597,498.24 -27,527,753.27 -3.89% 润（元） 归属...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225224729.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">飞利信：关于2026年第一季度报告的更正公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：300287 证券简称：飞利信 公告编号：2026-017 北京飞利信科技股份有限公司 关于2026年第一季度报告的更正公告 本公司及董事会全体成员保证信息披露的内容真实、准确和完整，没有虚假记载、误导 性陈述或重大遗漏。 北京飞利信科技股份有限公司（以下简称“公司”）于2026 年4月28 日披 露了《2026 年第一季度报告》，经公司事后检查，其中涉及“（一） 主要会计 数据和财务指标”内容需要更正，具体情况如下： 更正前： （一） 主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是 否 本报告期比上年同期增 本报告期 上年同期 减（%） 营业收入（元） 72,905,117.43 115,544,583.98 -36.90% 归属于上市公司股东的 -28,597,498.24 -27,527,753.27 -3.89% 净利润（元） 归属于上市公司股东的 扣除非经常性损益的净 -30,002,263.61 -28,155,933.01 -6.56% 利润（元） 经营活动产生的现金流 9,041,869.31 -34,733,486.23 126.0...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225224728.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-25</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">飞利信：2025年年度报告及其摘要披露提示性公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：300287 证券简称：飞利信 公告编号：2025-006 北京飞利信科技股份有限公司 2025年年度报告及其摘要披露提示性公告 本公司及董事会全体成员保证信息披露的内容真实、准确和完整，没有虚假记载、误导 性陈述或重大遗漏。 北京飞利信科技股份有限公司（以下简称“公司”）2025 年年度报告及其 摘要将于2026 年4月25 日在中国证监会指定的创业板信息披露网站上披露，敬 请投资者注意查阅。 特此公告。 北京飞利信科技股份有限公司 董事会 2026 年4月25 日</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-25/1225185810.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-25</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">飞利信：2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">北京飞利信科技股份有限公司2025年年度报告全文 北京飞利信科技股份有限公司 2025 年年度报告 2026-008 【2026 年 4 月】 1 北京飞利信科技股份有限公司2025年年度报告全文 年年度报告 2025 第一节 重要提示、目录和释义 公司董事会及董事、高级管理人员保证年度报告内容的真实、准确、完 整，不存在虚假记载、误导性陈述或者重大遗漏，并承担个别和连带的法律 责任。 公司负责人杨振华、主管会计工作负责人曹忻军及会计机构负责人(会计 主管人员)肖菲声明：保证本年度报告中财务报告的真实、准确、完整。 所有董事均已出席了审议本报告的董事会会议。 报告期内，公司的主营业务、核心竞争力、主要财务指标与行业趋势一 致，未发生重大不利变化。 对公司具有重大影响的其他信息详见本报告中“第五节 重要事项”中 “（十七）其他重大事项的说明”。敬请投资者关注相关内容。 存在的风险情况详见本报告第三节“管理层讨论与分析”中“（十一）公司 未来发展的展望”中“公司可能面对的风险及应对措施”。 公司计划不派发现金红利，不送红股，不以公积金转增股本。 截至报告期末，母公司存在未弥补亏损 经公司董...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-25/1225185786.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-25</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">飞利信：2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">北京飞利信科技股份有限公司2025年年度报告摘要 证券代码：300287 证券简称：飞利信 公告编号：2026-007 北京飞利信科技股份有限公司 2025 年年度报告摘要 一、重要提示 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规划，投资者应当到证监会指 定媒体仔细阅读年度报告全文。 所有董事均已出席了审议本报告的董事会会议。 中审亚太会计师事务所（特殊普通合伙）对本年度公司财务报告的审计意见为：标准的无保留意见。 非标准审计意见提示 □适用 不适用 公司上市时未盈利且目前未实现盈利 □适用 不适用 董事会审议的报告期利润分配预案或公积金转增股本预案 □适用 不适用 公司计划不派发现金红利，不送红股，不以公积金转增股本。 截至报告期末，母公司存在未弥补亏损 经公司董事会审议的2025年度利润分配预案为：不派发现金红利，不送红股，不以公积金转增股本。 董事会决议通过的本报告期优先股利润分配预案 □适用 ☑不适用 二、公司基本情况 1、公司简介 股票简称 飞利信 股票代码 300287 股票上市交易所 深圳证券交易所 变更前的股票简称（如有） 不...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-25/1225185785.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>4.32</td><td class="positive">+1.65%</td><td>267136</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

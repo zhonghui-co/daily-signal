@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>滨化股份 (601678.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>滨化股份 <code style="font-size:0.8rem;color:var(--text-muted)">601678.SH</code></h1>
+    <div class="sub">待分类 · 最新价 6.12 · 20260522 · 5日 +2.7% · 20日 +2.7%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-05-13</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">滨化股份：滨化股份关于参加2026年山东辖区上市公司投资者网上集体接待日活动的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：601678 股票简称：滨化股份 公告编号：2026-038 滨化集团股份有限公司 关于参加 年山东辖区上市公司投资者 2026 网上集体接待日活动的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述或者 重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 为进一步加强与投资者的互动交流，滨化集团股份有限公司（以下简称“公司”） 将参加由山东证监局、山东上市公司协会与深圳市全景网络有限公司联合举办的“2026 年山东辖区上市公司投资者网上集体接待日活动”，现将相关事项公告如下： 本次活动将采用网络远程的方式举行，投资者可登录“全景路演”网站 （http://rs.p5w.net）；或关注微信公众号（名称：全景财经）；或下载全景路演APP, 参与本次互动交流。活动时间为2026年5月15日（周五）15:00-16:30。届时公司董事会 秘书、证券事务代表将在线就公司2025年度业绩、公司治理、发展战略、经营状况和可 持续发展等投资者关心的问题，与投资者进行沟通与交流，欢迎广大投资者踊跃参与！ 特此公告。 滨化集团股份有限公司董事会 2026年5月1...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-05-13/1225300248.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">滨化股份：滨化股份2026年第一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">滨化集团股份有限公司2026年第一季度报告 证券代码：601678 证券简称：滨化股份 滨化集团股份有限公司 2026 年第一季度报告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述或者 重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 重要内容提示 公司董事会及董事、高级管理人员保证季度报告内容的真实、准确、完整，不存在虚假记载、误 导性陈述或重大遗漏，并承担个别和连带的法律责任。 公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）保证季度报告中财务信息 的真实、准确、完整。 第一季度财务报表是否经审计 □是 √否 一、主要财务数据 (一)主要会计数据和财务指标 单位：元 币种：人民币 本报告期比上年同 项目 本报告期 上年同期 期增减变动幅度 (%) 营业收入 3,922,541,936.83 3,782,455,195.57 3.70 利润总额 231,045,468.57 122,933,946.28 87.94 归属于上市公司股东的净利 146,443,573.20 95,999,141.81 52.55 润 归属于上市公司股东的扣除...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225254704.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-27</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">滨化股份：滨化股份高级管理人员减持股份结果公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：601678 证券简称：滨化股份 公告编号：2026-032 滨化集团股份有限公司 高级管理人员减持股份结果公告 本公司董事会、全体董事及相关股东保证本公告内容不存在任何虚假记载、 误导性陈述或者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 重要内容提示：  高级管理人员持股的基本情况：本次减持股份计划实施前，滨化集团股份有 限公司（以下简称“公司”）副总裁蔡颖辉持有公司股票1,200,000 股，占公 司总股本的0.058%。  减持计划的实施结果情况：公司于2026 年1月15 日披露了《滨化集团股份 有限公司高级管理人员减持股份计划公告》，蔡颖辉拟自减持计划公告披露 之日起 15 个交易日后的 3 个月内，通过集中竞价方式减持公司股份不超过 300,000 股，占公司总股本的0.015%。截至本公告披露日，蔡颖辉通过上海 证券交易所交易系统集中竞价方式累计减持公司股份300,000 股，占公司总 股本的0.015%，本次减持计划已实施完毕。 一、减持主体减持前基本情况 股东名称 蔡颖辉 控股股东、实控人及一致行动人 □是 □否 直接持股5%以上股东 □...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-27/1225198019.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-27</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">滨化股份：滨化股份关于持股5%以上股东增持股份触及1%刻度的提示性公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：601678 证券简称：滨化股份 公告编号：2026-031 滨化集团股份有限公司 关于持股 5%以上股东增持股份触及 1%刻度的提示性 公告 持股5%以上股东滨州和宜产业投资合伙企业（有限合伙）保证向本公司提供的信 息真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 本公司董事会及全体董事保证公告内容与信息披露义务人提供的信息一致。 重要内容提示： 权益变动方向 比例增加 比例减少□ 权益变动前合计比例 10.36% 权益变动后合计比例 11.00% 本次变动是否违反已作出的 是□ 否 承诺、意向、计划 是否触发强制要约收购义务 是□ 否 一、 信息披露义务人及其一致行动人的基本信息 1.身份类别 □控股股东/实际控制人及其一致行动人 □其他5%以上大股东及其一致行动人 投资者及其一致行动人的身 合并口径第一大股东及其一致行动人（仅适 份 用于无控股股东、实际控制人） □其他______________（请注明） 2.信息披露义务人信息 信息披露义务人名称 投资者身份 统一社会信用代码 □ 控股股东/实控人 91371622MA9503532Y 滨州和宜产业...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-27/1225198021.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-23</td><td><span class="tag tag-green">💰 分红派息</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">滨化股份：滨化股份2025年年度利润分配方案及2026年中期分红安排的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：601678 股票简称：滨化股份 公告编号：2026-026 滨化集团股份有限公司 年年度利润分配方案及 年中期分红安排的 2025 2026 公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 重要内容提示：  2025 年年度利润分配比例：每股派发现金红利 0.04 元  2025 年年度利润分配以实施权益分派股权登记日登记的总股本，扣除公 司回购专用账户所持股份为基数，具体日期将在各期权益分派实施公告中明确。 在实施权益分派的股权登记日前公司总股本发生变动的，拟维持每股分配比例不 变，相应调整分配总额，并将在相关公告中披露。  2026 年中期分红分配安排：拟在当期实现的可分配利润、累计未分配利润 为正且现金流可以满足正常经营和持续发展的需求的条件下，以实施中期权益分 派股权登记日登记的总股本（扣除公司回购专用账户中的股份数量）为基数，预 计派发现金红利总额不超过公司 2026 年相应期间归属于上市公司股东的净利润 的50%。该事项经 2025 年年度股东会审议通过后，授权董事会...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-23/1225146125.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>6.12</td><td class="positive">+2.68%</td><td>2001381</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

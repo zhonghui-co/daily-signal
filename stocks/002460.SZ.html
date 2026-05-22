@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>赣锋锂业 (002460.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>赣锋锂业 <code style="font-size:0.8rem;color:var(--text-muted)">002460.SZ</code></h1>
+    <div class="sub">待分类 · 最新价 75.90 · 20260522 · 5日 +0.8% · 20日 +0.8%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">赣锋锂业：2026年一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">江西赣锋锂业集团股份有限公司2026年第一季度报告 证券代码：002460 证券简称：赣锋锂业 公告编号：2026-044 江西赣锋锂业集团股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 重要内容提示： 1.董事会及董事、高级管理人员保证季度报告的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担 个别和连带的法律责任。 2.公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）声明：保证季度报告中财务信息的真实、准确、 完整。 3.第一季度财务会计报告是否经审计 □是否 1 江西赣锋锂业集团股份有限公司2026年第一季度报告 一、主要财务数据 （一）主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是否 本报告期比上年同期增减 本报告期 上年同期 （%） 营业收入（元） 9,196,158,318.22 3,771,800,382.54 143.81% 归属于上市公司股东的净利 1,837,274,971.24 -355,829,529.74 616.34...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225255341.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">赣锋锂业：关于参加江西辖区上市公司2026年投资者网上集体接待日活动的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002460 证券简称：赣锋锂业 编号：临2026-049 江西赣锋锂业集团股份有限公司 关于参加江西辖区上市公司2026年投资者 网上集体接待日活动的公告 本公司及董事会全体成员保证公告内容的真实、准确和完整，没 有虚假记载、误导性陈述或重大遗漏。 为进一步加强与投资者的互动交流，江西赣锋锂业集团股份有限 公司（以下简称“公司”）将参加由江西省上市公司协会举办的“2026 年江西辖区上市公司投资者集体接待日活动”，现将相关事项公告如 下： 本次活动将采用网络远程的方式举行，投资者可登录“全景路演” 网站（http://rs.p5w.net），或关注微信公众号：全景财经，或下载全 景路演APP，参与本次互动交流，互动时间为2026年5月15日（周五） 15:00-17:00。届时将在线就公司2025年度业绩、公司治理、发展战略、 经营状况、融资计划、股权激励和可持续发展等投资者关心的问题， 与投资者进行沟通与交流，欢迎广大投资者踊跃参与！ 特此公告。 江西赣锋锂业集团股份有限公司 董事会 2026 年 4 月 30 日</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225255350.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-17</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">赣锋锂业：2026年第一季度业绩预告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002460 证券简称：赣锋锂业 编号：临2026-040 江西赣锋锂业集团股份有限公司 2026 年第一季度业绩预告 本公司及董事会全体成员保证公告内容的真实、准确和完整，没 有虚假记载、误导性陈述或重大遗漏。 一、本期业绩预计情况 1、业绩预告期间：2026 年 1 月 1 日—2026 年 3 月 31 日 2、预计的经营业绩：预计净利润为正值且属于扭亏为盈 项目 本报告期 上年同期 归属上市公司股 盈利：160,000 万元 –210,000 万元 亏损： 东的净利润 比上年同期增长 549.65% –690.17% 35,582.95 万元 扣除非经常性损 盈利：125,000 万元 –175,000 万元 亏损： 益后的净利润 比上年同期增长 616.12% –822.56% 24,219.31 万元 基本每股收益 盈利：0.77 元/股 –1.01 元/股 亏损：0.18 元/股 二、与会计师事务所沟通情况 本次业绩预告相关的财务数据是公司财务部门初步测算的结果， 未经会计师事务所审计。但公司已就业绩预告有关事项与会计师事务 所进行了预沟通，公司与会计师事务所在...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-17/1225111388.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-10</td><td><span class="tag tag-purple">📝 制度文件</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">赣锋锂业：关于完成注册资本变更登记及《章程》备案并换发营业执照的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002460 证券简称：赣锋锂业 编号：临2026-037 江西赣锋锂业集团股份有限公司 关于完成注册资本变更登记及《章程》备案并换发营业执照的公告 本公司及董事会全体成员保证公告内容的真实、准确和完整，没 有虚假记载、误导性陈述或重大遗漏。 江西赣锋锂业集团股份有限公司（以下简称“公司”）于 2026 年 1 月 23 日召开第六届董事会第十二次会议，于 2026 年 3 月 11 日 召开 2026 年第一次临时股东会，审议通过了《关于变更公司注册资 本及修订公司章程的议案》。（详见公司公告：2026-003、2026-021） 近日，公司已办理完成相关的工商变更登记和《公司章程》备案 手续，并取得了由新余市行政审批局换发的《营业执照》，新《营业 执照》基本信息如下： 1、名称：江西赣锋锂业集团股份有限公司 2、统一社会信用代码：91360500716575125F 3、类型：其他股份有限公司（上市） 4、法定代表人：李良彬 5、注册资本：贰拾亿玖仟陆佰陆拾玖万肆仟肆佰零肆元整 6、成立日期：2000 年 03 月 02 日 7、住所：江西省新余经济开发区龙腾路 8、经营...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-10/1225087427.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-31</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">赣锋锂业：关于公司与合营公司作为联合承租人开展融资租赁业务的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002460 证券简称：赣锋锂业 编号：临2026-034 江西赣锋锂业集团股份有限公司 关于公司与合营公司作为联合承租人开展融资租赁业务的公告 本公司及董事会全体成员保证公告内容的真实、准确和完整，没 有虚假记载、误导性陈述或重大遗漏。 一、开展融资租赁业务概述 江西赣锋锂业集团股份有限公司（以下简称“公司”）于 2026 年 3 月 30 日召开的第六届董事会第十四次会议审议通过了《关于公 司与合营公司作为联合承租人开展融资租赁业务的议案》，为优化合 营公司刚果鲁源矿业有限公司（以下简称“刚果鲁源”）资产配置， 提升资产效率，加快其旗下刚果(布)布谷马西钾盐矿项目的开发建设， 同意公司与刚果鲁源作为联合承租人开展融资租赁业务，租赁物总价 不超过人民币 100,000 万元，租赁期限不超过 6 年。授权公司经营层 在本议案额度内代表公司办理相关手续，并签署相关法律文件。 本次交易不构成关联交易，亦不构成《上市公司重大资产重组管 理办法》规定的重大资产重组，本次交易尚需提交公司股东会审议。 二、联合承租人的基本情况 1、刚果鲁源的基本情况 公司名称（中/法文名）：刚果鲁源矿业...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225059966.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>75.90</td><td class="positive">+0.76%</td><td>358370</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

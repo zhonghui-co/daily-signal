@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>中兴通讯 (000063.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>中兴通讯 <code style="font-size:0.8rem;color:var(--text-muted)">000063.SZ</code></h1>
+    <div class="sub">待分类 · 最新价 35.64 · 20260522 · 5日 +2.3% · 20日 +2.3%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-25</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中兴通讯：2026年一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码（A/H）：000063/00763 证券简称（A/H）：中兴通讯 公告编号：202626 中兴通讯股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或 重大遗漏。 本公告在境内和香港同步刊登。本公告根据《深圳证券交易所股票上市规则》规定在境内刊登。 本公告依据《香港联合交易所有限公司证券上市规则》第 13.09(2)条、第 37.47B 条及第 13.10B 条 的披露义务及香港法例第571章《证券及期货条例》第XIVA部内幕消息条文而公布。 §1重要提示 1.1 中兴通讯股份有限公司（简称“中兴通讯”、“本公司”或“公司”）董事会及董事、 高级管理人员保证本季度报告内容的真实、准确、完整，不存在虚假记载、误导性陈述或 重大遗漏，并承担个别和连带的法律责任。 1.2 本季度报告已经于 2026 年 4 月 24 日召开的本公司第十届董事会第二十五次会议审 议通过，所有董事均亲自出席了本次会议。 1.3 本公司法定代表人徐子阳先生、财务总监李莹女士和会计机构负责人王秀红女士声明： 保证本季度报告中的财务报表...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-25/1225179186.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-03</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中兴通讯：关于回购A股股份的进展公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码（A/H）：000063/00763 证券简称（A/H）：中兴通讯 公告编号：202622 中兴通讯股份有限公司 关于回购 A 股股份的进展公告 本公司及董事会全体成员保证信息披露的内容真实、准确和完整，没有虚假记载、误导性陈述或 重大遗漏。 中兴通讯股份有限公司(以下简称“公司”)于 2025 年 12 月 12 日召开的第十届董事 会第十七次会议审议通过了《关于以集中竞价交易方式回购公司 A 股股份方案的议案》， 同意公司使用自有资金以集中竞价交易方式回购公司A股股份，用于实施公司员工持股计 划或者股权激励。回购资金总额不低于人民币10 亿元且不超过人民币12 亿元（均包含本 数），回购价格不超过人民币 63.09 元/股。回购期限为自董事会审议通过回购方案之日起 12 个月内。具体情况详见公司于2025年12 月12 日披露的《关于回购公司A 股股份方案 的公告暨回购报告书》。 根据《上市公司股份回购规则》《深圳证券交易所上市公司自律监管指引第 9 号—— 回购股份》等相关规定，公司在回购股份期间，应当在每个月的前三个交易日内公告截至 上月末的回购进展情况。现将有关情况公...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-03/1225074832.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-07</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中兴通讯：2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码（A/H）：000063/00763 证券简称(A/H)：中兴通讯 公告编号：202614 中兴通讯股份有限公司 二〇二五年年度报告摘要 1、重要提示 1.1 中兴通讯股份有限公司（“中兴通讯”或“公司”）董事会及董事、高级管理人员保证二 〇二五年年度报告（“年度报告”）内容的真实、准确、完整，不存在虚假记载、误导性 陈述或重大遗漏，并承担个别和连带的法律责任。 本年度报告摘要摘自二〇二五年年度报告全文，二〇二五年年度报告全文同时登载于深圳 证券交易所网站（www.szse.cn）、巨潮资讯网（www.cninfo.com.cn）和中兴通讯网站 （www.zte.com.cn），投资者可以通过阅读二〇二五年年度报告全文，全面了解公司经营成 果、财务状况及未来发展规划。 1.2 年度报告已经于2026年3月6日召开的公司第十届董事会第二十一次会议审议通过，所有 董事均亲自出席了本次会议。 1.3 中兴通讯及其附属公司（“本集团”）2025年度财务报告已经由安永华明会计师事务所（特 殊普通合伙）审计并出具了标准无保留意见的审计报告。 1.4 公司法定代表人徐子阳先生、财务总监李莹女...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-07/1225000300.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-07</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中兴通讯：2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">二〇二五年年度报告 中兴通讯股份有限公司 ZTE CORPORATION 重要提示 1. 公司董事会及董事、高级管理人员保证本报告内容的真实、准确、完整，不存在虚 假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 2. 本报告已经于2026年3月6日召开的公司第十届董事会第二十一次会议审议通过， 所有董事均亲自出席了本次会议。 3. 公司法定代表人徐子阳先生、财务总监李莹女士和会计机构负责人王秀红女士声明： 保证本报告中的财务报告真实、准确、完整。 4. 本集团2025年度财务报告已经由安永华明会计师事务所（特殊普通合伙）审计并出 具了标准无保留意见的审计报告。 5. 公司2025年度利润分配预案：以分红派息股权登记日股本总数为基数，向全体股东 每10股派发4.11元人民币现金（含税）。上述事项需提交股东会审议批准。 6. 本报告涉及未来计划、发展战略等前瞻性陈述，不构成公司对投资者的实质承诺； 本报告中描述了公司经营可能存在的风险，请投资者注意阅读，并注意投资风险。 7. 除特别说明外，本报告中货币单位均为人民币。 8. 本报告分别以中英文两种文字编制，在对本报告理解发生歧...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-07/1225000301.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-07</td><td><span class="tag tag-purple">🏛️ 董事会</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中兴通讯：董事会关于2025年度证券投资情况的专项说明</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">中兴通讯股份有限公司董事会 关于二〇二五年度证券投资情况的专项说明 根据《深圳证券交易所上市公司自律监管指引第7号——交易与关联交易》 及《中兴通讯股份有限公司证券投资管理制度》等有关规定，中兴通讯股份有限 公司（简称“公司”）对2025年度证券投资情况进行了核查，现将相关情况说明 如下： 一、本集团持有的其他上市公司股票情况 单位：万元人民币 计入权益 本期公允 本期 本期 期末 期末 证券 初始投资 期初 的累计公 报告期 期末 证券简称 价值变动 购买 出售 持股数量 持股 代码 金额 账面价值 允价值变 损益 账面价值 收益 金额 金额 （万股） 比例 动 688630 芯碁微装注1 100.1 1,578.7 (1,478.5) - - 1,829.9 159.3 - - - 301587 中瑞股份注1 3,000.0 6,836.8 (1,485.8) - 1.2 2,255.7 (86.9) 4,389.0 191.0 1.30% 600734 实达集团注2 - 2,396.2 1,161.6 - - - 1,161.6 3,557.8 948.2 0.44% ENA:T...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-07/1225000309.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>35.64</td><td class="positive">+2.33%</td><td>1196843</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

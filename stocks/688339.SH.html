@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>亿华通-U (688339.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>亿华通-U <code style="font-size:0.8rem;color:var(--text-muted)">688339.SH</code></h1>
+    <div class="sub">待分类 · 最新价 25.02 · 20260522 · 5日 +3.9% · 20日 +3.9%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-05-07</td><td><span class="tag tag-amber">📈 股份变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">亿华通：亿华通  股东减持股份结果公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688339 证券简称：亿华通 公告编号：2026-013 北京亿华通科技股份有限公司 股东减持股份结果公告 本公司董事会、全体董事及相关股东保证本公告内容不存在任何虚假记载、 误导性陈述或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律 责任。 重要内容提示：  股东持有股份的基本情况 本次减持股份计划实施前，公司股东周竹青女士持有北京亿华通科技股份有 限公司（以下简称“公司”）股份210,000 股（占公司总股本的0.09%，占公司 A股总股本的0.11%）。  减持计划的实施结果情况 公司于2026 年1月10 日披露了《北京亿华通科技股份有限公司股东减持股 份计划公告》（公告编号：2026-001）。公司股东周竹青女士因自身资金需求， 拟于减持计划披露之日起15 个交易日后的3个月内通过集中竞价方式减持其所 持有的公司股份，合计数量不超过52,400 股，即不超过公司总股本的0.02%。 近日，公司收到股东周竹青女士出具的《关于股份减持结果告知函》，其通 过集中竞价方式合计减持所持公司股份52,000 股，占公司总股本的0.02%。截 至本公告披露日，本...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-05-07/1225279383.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">亿华通：亿华通  2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">北京亿华通科技股份有限公司2025年年度报告摘要 公司代码：688339 公司简称：亿华通 北京亿华通科技股份有限公司 2025 年年度报告摘要 北京亿华通科技股份有限公司2025年年度报告摘要 第一节 重要提示 1、 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规 划，投资者应当到www.sse.com.cn（A股）网站仔细阅读年度报告全文。 2、 重大风险提示 （一）尚未盈利的风险 截至本报告期末，公司尚未实现盈利，截至2025年12月31日未分配利润为-161,548.92万 元。相关风险主要体现为： 1、公司实现盈利目前依赖于行业政策支持力度、市场需求放量速度、产业链降本进程等多种 因素，以上因素的不确定性导致公司盈利进度晚于预期。 2、为保持技术领先性，公司在研发、产能等方面仍需持续投入，在营业收入未能覆盖该等投 入规模前，该支出将持续对公司的盈利能力产生压力。 3、在尚未通过主营业务实现经营性现金流平衡的情况下，公司业务运营、研发及市场拓展在 一定程度上仍需依赖外部融资，若未来融资环境发生不利变化，可能对公司的持续经营能力构成 挑战。 （二...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225264027.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">亿华通：亿华通  2026年第一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">北京亿华通科技股份有限公司2026年第一季度报告 证券代码：688339 证券简称：亿华通 北京亿华通科技股份有限公司 2026 年第一季度报告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 重要内容提示 公司董事会及董事、高级管理人员保证季度报告内容的真实、准确、完整，不存在虚假记载、误 导性陈述或重大遗漏，并承担个别和连带的法律责任。 公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）保证季度报告中财务信息 的真实、准确、完整。 第一季度财务报表是否经审计 □是√否 一、主要财务数据 (一)主要会计数据和财务指标 单位：元 币种：人民币 本报告期比 上年同期增 项目 本报告期 上年同期 减变动幅度 (%) 营业收入 16,673,836.66 10,526,272.58 58.40 利润总额 -60,760,946.57 -114,660,646.63 不适用 归属于上市公司股东的净利润 -51,043,437.82 -93,008,005.78 不适用 1 / 13 北京亿华通科...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225264032.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-purple">🏛️ 董事会</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">亿华通：亿华通  董事会决议公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688339 证券简称：亿华通 公告编号：2026-011 北京亿华通科技股份有限公司 董事会决议公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈 述或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 一、 董事会会议召开情况 北京亿华通科技股份有限公司（以下简称"公司"）第四届董事会第十一次会 议于 2026 年 4 月 29 日在公司会议室召开。会议应出席董事 8 名，实际出席 8 名，符合《公司法》及《公司章程》规定。会议由公司董事长张国强召集并主持。 二、 董事会会议审议情况 (一)审议通过《关于<2025 年年度报告（及摘要）>的议案》 具体内容详见公司于上海证券交易所网站（www.sse.com.cn）披露的《北京 亿华通科技股份有限公司2025 年年度报告（及摘要）》。 本议案已经董事会审计委员会审议通过，审计委员会同意本议案内容，并同 意将其提交公司董事会审议。 表决结果：8名董事同意，0名董事反对，0名董事弃权。 回避情况：无。 提交股东会审议情况：本议案尚需提交2025 年年度股东会审议。 (二)审议通过《关于<202...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225263914.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">亿华通：亿华通2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">北京亿华通科技股份有限公司2025年年度报告 公司代码：688339 公司简称：亿华通 北京亿华通科技股份有限公司 2025 年年度报告 1/241 北京亿华通科技股份有限公司2025年年度报告 重要提示 一、本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 二、公司上市时未盈利且尚未实现盈利 √是□否 公司采用《上海证券交易所科创板股票上市规则》第2.1.2条第（四）项的标准上市，上市 时尚未盈利。公司2025年度实现营业收入为25,853.73万元；归属于母公司所有者的净利润为- 67,119.97万元；归属于母公司所有者的扣除非经常性损益的净利润为-72,783.58万元。报告期内 公司尚未实现盈利。 三、重大风险提示 （一）尚未盈利的风险 截至本报告期末，公司尚未实现盈利，截至2025年12月31日未分配利润为-161,548.92万 元。相关风险主要体现为： 1、公司实现盈利目前依赖于行业政策支持力度、市场需求放量速度、产业链降本进程等多 种因素，以上因素的不确定性导致公司盈利进度晚...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225263987.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>25.02</td><td class="positive">+3.95%</td><td>54636</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

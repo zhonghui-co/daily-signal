@@ -1,8 +1,22 @@
 {
-  "date": "2026-05-21",
-  "generated_at": "2026-05-21T16:35:53.105840",
-  "count": 0,
+  "date": "2026-05-22",
+  "generated_at": "2026-05-22T16:39:53.071237",
+  "count": 1,
   "threshold": "J < 15",
   "params": "KDJ(9,3,3)",
-  "items": []
+  "items": [
+    {
+      "ts_code": "300627.SZ",
+      "name": "华测导航",
+      "theme_category": "待分类",
+      "week_end": "2026-05-15",
+      "close": 30.89,
+      "week_chg": -8.09,
+      "K": 19.39,
+      "D": 22.82,
+      "J": 12.53,
+      "week_high_9w": 35.95,
+      "week_low_9w": 30.67
+    }
+  ]
 }

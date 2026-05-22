@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>中直股份 (600038.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>中直股份 <code style="font-size:0.8rem;color:var(--text-muted)">600038.SH</code></h1>
+    <div class="sub">待分类 · 最新价 28.08 · 20260522 · 5日 -2.1% · 20日 -2.1%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: - | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中直股份：中航直升机股份有限公司2026年第一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">中航直升机股份有限公司2026年第一季度报告 证券代码：600038 证券简称：中直股份 中航直升机股份有限公司 2026 年第一季度报告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述或 者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 重要内容提示 公司董事会及董事、高级管理人员保证季度报告内容的真实、准确、完整，不存在虚假记载、误 导性陈述或重大遗漏，并承担个别和连带的法律责任。 公司负责人闫灵喜、主管会计工作负责人章苑及会计机构负责人（会计主管人员）刘芬芳保证季 度报告中财务信息的真实、准确、完整。 第一季度财务报表是否经审计 □是 √否 一、主要财务数据 (一)主要会计数据和财务指标 单位：元 币种：人民币 本报告期比上 项目 本报告期 上年同期 年同期增减变 动幅度(%) 营业收入 2,373,106,172.39 2,376,075,398.25 -0.12 利润总额 23,452,066.44 181,442,519.68 -87.07 归属于上市公司股东的净利润 37,853,668.42 201,974,102.15 -81.26 归...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225198431.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-11</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中直股份：中航证券有限公司关于中航直升机股份有限公司发行股份购买资产并募集配套资金暨关联交易之2025年度持续督导意见暨持续督导总结报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">中航证券有限公司 关于 中航直升机股份有限公司 发行股份购买资产并募集配套资金 暨关联交易 之 年度持续督导意见 2025 暨持续督导总结报告 财务顾问 二〇二六年四月 1 声明和承诺 中航证券有限公司（以下简称“中航证券”或“财务顾问”）接受委托，担任 中航直升机股份有限公司（以下简称“中直股份”、“上市公司”或“公司”）发行股 份购买资产并募集配套资金暨关联交易的财务顾问。财务顾问按照证券行业公认 的业务标准、道德规范，本着诚实信用、勤勉尽责的态度，出具本持续督导意见。 1、本持续督导意见所依据的文件和材料由本次交易各方提供，提供方已承 诺上述有关资料均为真实、准确和完整的，不存在虚假记载、误导性陈述或者重 大遗漏，并承担因违反上述承诺而引致的个别和连带的法律责任。 2、财务顾问已按照规定履行尽职调查义务，有充分理由确信所发表的专业 意见与上市公司披露的文件内容不存在实质性差异，确信上市公司信息披露文件 真实、准确、完整。 3、本持续督导意见不构成对上市公司的任何投资建议，投资者根据本持续 督导意见所做出的任何投资决策而产生的相应风险，财务顾问不承担任何责任。 4、财务顾问未委托和...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-11/1225092101.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-11</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中直股份：中国国际金融股份有限公司关于中航直升机股份有限公司发行股份购买资产并募集配套资金暨关联交易之2025年度持续督导意见暨持续督导总结报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">中国国际金融股份有限公司 关于 中航直升机股份有限公司 发行股份购买资产并募集配套资金 暨关联交易 之 2025 年度持续督导意见 暨持续督导总结报告 独立财务顾问 北京市朝阳区建国门外大街 1 号国贸大厦 2 座 27 层及 28 层 签署日期：二〇二六年四月 1 声明和承诺 中国国际金融股份有限公司（以下简称“中金公司”）接受委托，担任中航 直升机股份有限公司（以下简称“中直股份”、“上市公司”或“公司”）发行股份 购买资产并募集配套资金暨关联交易的独立财务顾问（以下简称“独立财务顾 问”）。独立财务顾问按照证券行业公认的业务标准、道德规范，本着诚实信 用、勤勉尽责的态度，出具本持续督导意见。 1、本持续督导意见所依据的文件和材料由本次交易各方提供，提供方已承 诺上述有关资料均为真实、准确和完整的，不存在虚假记载、误导性陈述或者 重大遗漏，并承担因违反上述承诺而引致的个别和连带的法律责任。 2、独立财务顾问已按照规定履行尽职调查义务，有充分理由确信所发表的 专业意见与上市公司披露的文件内容不存在实质性差异，确信上市公司信息披 露文件真实、准确、完整。 3、本持续督导意见不构成对上市...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-11/1225092103.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-28</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中直股份：中国国际金融股份有限公司关于中航直升机股份有限公司发行股份购买资产并募集配套资金暨关联交易2025年度业绩承诺实现情况的核查意见</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">中国国际金融股份有限公司关于 中航直升机股份有限公司 发行股份购买资产并募集配套资金暨关联交易 之 2025 年度业绩承诺实现情况的核查意见 中国国际金融股份有限公司（以下简称“中金公司”或“独立财务顾问”） 作为中航直升机股份有限公司（以下简称“中直股份”、“公司”或“上市公司”） 发行股份购买资产并募集配套资金暨关联交易（以下简称“本次交易”）的独立 财务顾问，根据《上市公司重大资产重组管理办法》《上市公司并购重组财务顾 问业务管理办法》《上海证券交易所上市公司自律监管指引第 11 号——持续督 导》等相关法律、法规和规范性文件的要求，对相关业绩承诺人做出的关于昌河 飞机工业（集团）有限责任公司（以下简称“昌飞集团”）、哈尔滨飞机工业集团 有限责任公司（以下简称“哈飞集团”）相关业绩承诺资产2025 年度业绩承诺实 现情况进行了核查，并发表意见如下： 一、本次交易的基本情况 公司于 2023 年 7 月 18 日召开第八届董事会第二十五次会议，于 2023 年 9 月27日召开 2023 年第一次临时股东大会审议通过本次交易的相关议案。 2024 年 2 月，公司收到中国证监会出具...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-28/1225048014.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-28</td><td><span class="tag tag-blue">🏦 融资公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">中直股份：中航直升机股份有限公司关于发行股份购买资产并募集配套资金暨关联交易2025年业绩承诺实现情况的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：600038 证券简称：中直股份 公告编号：2026-009 中航直升机股份有限公司 关于发行股份购买资产并募集配套资金暨关联交易 2025年业绩承诺实现情况的公告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 中航直升机股份有限公司（以下简称“公司”或“上市公司”）向中国航空 科技工业股份有限公司（以下简称“中航科工”）发行股份购买其持有的昌河飞 机工业（集团）有限责任公司（以下简称“昌飞集团”）92.43%的股权、哈尔滨 飞机工业集团有限责任公司（以下简称“哈飞集团”）80.79%的股权，向中国航 空工业集团有限公司（以下简称“中国航空工业集团”）发行股份购买其持有的 昌飞集团7.57%的股权、哈飞集团19.21%的股权并募集配套资金（以下简称“本 次交易”或“本次发行股份购买资产”）。2026 年3月26 日，公司召开第九届董 事会第十三次会议，审议通过《关于发行股份购买资产并募集配套资金暨关联交 易之2025 年度业绩承诺完成情况的议案》，现将昌飞集团、哈飞集团 2025 年业 绩承...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-28/1225048442.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260522</td><td>28.08</td><td class="negative">-2.09%</td><td>113022</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>
