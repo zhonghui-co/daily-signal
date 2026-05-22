@@ -1,477 +1,207 @@
 {
-  "generated_at": "2026-05-22T23:10:00.539263+08:00",
-  "date": "2026-05-22",
+  "date": "2026-05-23",
+  "generated_at": "2026-05-23T00:34:13.284838+08:00",
   "sections": {
-    "signals": {
+    "rotation": {
       "available": true,
-      "date": "2026-05-22",
-      "run_at": "2026-05-22T23:00:00+08:00",
-      "stats": {
-        "total_signals": 10,
-        "chain1": 3,
-        "chain2": 7,
-        "cross_chain": 2,
-        "by_lifecycle": {
-          "emerging": 4,
-          "positioning": 4,
-          "consensus": 2,
-          "exhausted": 0
-        },
-        "by_priced_in": {
-          "not_priced": 5,
-          "partially_priced": 4,
-          "fully_priced": 1
-        },
-        "strong_backing": 2,
-        "moderate_backing": 1,
-        "weak_backing": 7
-      },
-      "signals": [
+      "top_5": [
         {
-          "id": "a1",
-          "priority": "normal",
-          "title": "寒武纪2026年预计出货30万颗思元590 — 国产AI芯片量级突变 (+158% YoY)",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "not_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金三期明确投向AI算力芯片方向(3440亿规模)，寒武纪为国产AI芯片龙头。科创50ETF华夏前十大权重第一，寒武纪+海光+中芯占科创50权重>25%。但大基金未直接入股寒武纪(已上市公司)，属于间接受益。融资净买入20.79亿元(近一周)，资金面活跃。"
-          },
-          "tickers": []
+          "direction": "可控核聚变",
+          "strength": 12.99,
+          "daily_return": 0.19,
+          "momentum_5d": 3.15
         },
         {
-          "id": "a2",
-          "priority": "normal",
-          "title": "欧盟拟豁免扬杰科技制裁 — 西方对华芯片制裁首现边际松动",
-          "chain": "chain1",
-          "confidence": "red",
-          "lifecycle": "emerging",
-          "priced_in": "not_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "扬杰科技(300373)为功率半导体企业，不在大基金一二三期核心投向(大基金聚焦IC制造/设备/材料/AI算力)。非科创50权重股。无近期招投标数据。"
-          },
-          "tickers": []
+          "direction": "集成电路",
+          "strength": 9.92,
+          "daily_return": 3.71,
+          "momentum_5d": 2.46
         },
         {
-          "id": "a3",
-          "priority": "normal",
-          "title": "联想集团AI营收全年+105% 手握1400亿储备订单 — AI算力需求端最强验证",
-          "chain": "chain2",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "联想(0992.HK)港股上市，不在A股大基金/国家队ETF范围。但作为链2需求端最强验证，其意义在于确认AI算力需求的结构性增长→间接利好A股AI芯片/光模块/服务器产业链。"
-          },
-          "tickers": []
+          "direction": "具身智能-机器人",
+          "strength": 9.04,
+          "daily_return": 2.05,
+          "momentum_5d": 6.35
         },
         {
-          "id": "a4",
-          "priority": "normal",
-          "title": "恒生科技指数纳入MiniMax+智谱 — 国产AI大模型估值体系成形",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "emerging",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "港股标的，不在A股大基金/国家队ETF范围。但纳入恒生科技指数后将有南向资金被动配置(港股通)。对A股无直接资金映射。"
-          },
-          "tickers": []
+          "direction": "新能源光风储电",
+          "strength": 8.53,
+          "daily_return": 3.66,
+          "momentum_5d": 2.68
         },
         {
-          "id": "a5",
-          "priority": "normal",
-          "title": "长电科技2.5D封装Q1产能利用率超80% — HBM先进封装国产化进入满产验证",
-          "chain": "chain2",
-          "confidence": "green",
-          "lifecycle": "consensus",
-          "priced_in": "fully_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金一期重仓长电科技(封测龙头)+三期明确投向先进封装/HBM方向。pool.db归因显示今日+9.04%由'HBM先进封装国产化加速'催化驱动。属于双基金覆盖+资金最强定价的双链标的。无近期招投标数据(封测厂采购设备≠中标)。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a6",
-          "priority": "normal",
-          "title": "28nm浸没式DUV光刻机批量交付良率90%+ — 国产光刻设备从'突破'走向'批量'",
-          "chain": "chain1",
-          "confidence": "yellow",
-          "lifecycle": "consensus",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金二期(2042亿)重设备材料+三期(3440亿)重卡脖子设备→光刻机为最高优先级。上海微电子为未上市核心标的→其供应链(科益虹源/国望光学等)间接受益。北方华创/中微公司均在科创50前十大权重(合计>10%),国家队ETF资金持续流入。无近期光刻机直接招投标数据。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a7",
-          "priority": "normal",
-          "title": "AMD Venice 2nm量产+全球三大厂商同步扩产 — 先进制程竞赛加速",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "not_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "全球供给端信号,非中国国内资本驱动。AMD/NVIDIA为美股,不涉及大基金/国家队ETF。但通过台积电资本开支→全球设备需求→中国设备企业间接受益传导链。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a8",
-          "priority": "normal",
-          "title": "阿里千问Qwen3.7-Max+智谱GLM-5.1高速版 — 国产大模型旗舰能力+低延迟双突破",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "模型层企业(阿里/智谱)为互联网/AI软件公司,不在半导体大基金范围。但通过算力需求→上游芯片的正向传导链,间接受益于大基金三期AI算力方向。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a9",
-          "priority": "normal",
-          "title": "比亚迪5月28日智能化战略发布会 — 汽车+AI芯片融合催化预期",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "emerging",
-          "priced_in": "not_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "比亚迪为汽车链,非半导体大基金覆盖。但车载AI芯片需求→寒武纪/海光等国产AI芯片企业拓展汽车市场→间接受益于链2下游应用爆发。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a10",
-          "priority": "normal",
-          "title": "*ST闻泰起诉荷兰安世半导体索赔80亿 — 半导体跨境诉讼标志性事件",
-          "chain": "chain1",
-          "confidence": "red",
-          "lifecycle": "emerging",
-          "priced_in": "not_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "*ST闻泰已ST→被剔除主要指数ETF,国家队不会持有。安世半导体虽原为中国收购的优质资产,但荷兰政府干预后控制权已失→大基金无介入空间。"
-          },
-          "tickers": []
+          "direction": "高端装备工业母机",
+          "strength": 4.79,
+          "daily_return": 2.08,
+          "momentum_5d": -3.48
         }
-      ]
+      ],
+      "bottom_3": [
+        {
+          "direction": "国产软件与信创",
+          "strength": -2.63,
+          "daily_return": 2.89
+        },
+        {
+          "direction": "核电",
+          "strength": -4.63,
+          "daily_return": 0.5
+        },
+        {
+          "direction": "商业航天与低空",
+          "strength": -9.6,
+          "daily_return": -0.31
+        }
+      ],
+      "spread": 22.59
     },
     "anomalies": {
-      "count": 20,
-      "top": [
+      "available": true,
+      "total": 247,
+      "fire": 65,
+      "directions": [
         {
-          "date": "20260518",
-          "ts_code": "688811.SH",
-          "name": "有研复材",
-          "pct_chg": 20.01,
-          "vol_ratio": 1.04,
-          "attribution": "✅国产替代,✅AI算力,化工/材料板块联动(82/108只)"
+          "direction": "机器人",
+          "anomaly_count": 42,
+          "fire_count": 0,
+          "fire_stocks": [
+            "扬杰科技(11.3001%)",
+            "裕兴股份(10.4265%)",
+            "双星新材(10.049%)",
+            "联创电子(10.0427%)",
+            "新大陆(10.0222%)"
+          ]
         },
         {
-          "date": "20260517",
-          "ts_code": "688549.SH",
-          "name": "中巨芯-U",
-          "pct_chg": 20.01,
-          "vol_ratio": 3.01,
-          "attribution": "国产替代链,✅AI算力,半导体材料板块联动(25/25只)"
+          "direction": "集成电路",
+          "anomaly_count": 40,
+          "fire_count": 0,
+          "fire_stocks": [
+            "光华科技(10.0217%)",
+            "华软科技(10.0176%)",
+            "巨化股份(10.0061%)",
+            "格林达(10.004%)",
+            "中材科技(10.0%)"
+          ]
         },
         {
-          "date": "20260522",
-          "ts_code": "300243.SZ",
-          "name": "瑞丰高材",
-          "pct_chg": 20.01,
-          "vol_ratio": 6.04,
-          "attribution": "✅国产替代,✅AI算力,化工/材料板块联动(47/65只)"
+          "direction": "新能源",
+          "anomaly_count": 36,
+          "fire_count": 0,
+          "fire_stocks": [
+            "银禧科技(14.653%)",
+            "新大陆(10.0222%)",
+            "贵州三力(10.0077%)",
+            "天准科技(9.2375%)",
+            "晶方科技(8.4812%)"
+          ]
         },
         {
-          "date": "20260522",
-          "ts_code": "301588.SZ",
-          "name": "美新科技",
-          "pct_chg": 20.01,
-          "vol_ratio": 3.44,
-          "attribution": "✅国产替代,✅AI算力,化工/材料板块联动(47/65只)"
+          "direction": "新材料",
+          "anomaly_count": 29,
+          "fire_count": 0,
+          "fire_stocks": [
+            "海伦哲(12.1027%)",
+            "四环生物(10.1333%)",
+            "蔚蓝锂芯(10.027%)",
+            "京东方A(10.0213%)",
+            "鹏鼎控股(10.0021%)"
+          ]
         },
         {
-          "date": "20260520",
-          "ts_code": "688449.SH",
-          "name": "联芸科技",
-          "pct_chg": 20.01,
-          "vol_ratio": 3.92,
-          "attribution": "国产替代链,✅国产替代,✅AI算力,IC设计板块联动(36/46只)"
+          "direction": "高端医疗器械",
+          "anomaly_count": 21,
+          "fire_count": 0,
+          "fire_stocks": [
+            "京东方A(10.0213%)",
+            "航锦科技(9.9863%)",
+            "巨力索具(2.9711%)",
+            "高乐股份(-2.4793%)"
+          ]
         },
         {
-          "date": "20260522",
-          "ts_code": "688020.SH",
-          "name": "方邦股份",
-          "pct_chg": 20.0,
-          "vol_ratio": 4.79,
-          "attribution": "✅国产替代,✅AI算力,消费电子/元器件板块联动(66/80只)"
+          "direction": "商业航天与低空经济",
+          "anomaly_count": 20,
+          "fire_count": 0,
+          "fire_stocks": [
+            "瑞丰高材(20.0115%)",
+            "双星新材(10.049%)",
+            "华软科技(10.0176%)",
+            "新金路(10.0147%)",
+            "水晶光电(10.0082%)"
+          ]
         },
         {
-          "date": "20260511",
-          "ts_code": "688146.SH",
-          "name": "中船特气",
-          "pct_chg": 20.0,
-          "vol_ratio": 5.8,
-          "attribution": "✅AI算力,✅国产替代,材料板块联动(22/24只)"
+          "direction": "核电",
+          "anomaly_count": 18,
+          "fire_count": 0,
+          "fire_stocks": [
+            "昂利康(-9.989%)",
+            "航锦科技(9.9863%)",
+            "德展健康(-9.7113%)",
+            "高乐股份(-2.4793%)"
+          ]
         },
         {
-          "date": "20260511",
-          "ts_code": "688766.SH",
-          "name": "普冉股份",
-          "pct_chg": 20.0,
-          "vol_ratio": 3.71,
-          "attribution": "✅AI算力,✅国产替代,数字芯片板块联动(63/79只)"
+          "direction": "创新药与生物医药",
+          "anomaly_count": 17,
+          "fire_count": 0,
+          "fire_stocks": [
+            "新金路(10.0147%)",
+            "深南电路(10.0006%)",
+            "飞亚达(9.9871%)",
+            "金隅集团(9.8039%)",
+            "巨力索具(2.9711%)"
+          ]
         },
         {
-          "date": "20260513",
-          "ts_code": "688146.SH",
-          "name": "中船特气",
-          "pct_chg": 20.0,
-          "vol_ratio": 6.1,
-          "attribution": "✅国产替代,✅AI算力,材料板块联动(19/24只)"
+          "direction": "高端装备与工业母机",
+          "anomaly_count": 15,
+          "fire_count": 0,
+          "fire_stocks": [
+            "新安股份(10.0415%)",
+            "新大陆(10.0222%)",
+            "新湖中宝(-0.625%)"
+          ]
         },
         {
-          "date": "20260517",
-          "ts_code": "300263.SZ",
-          "name": "隆华科技",
-          "pct_chg": 20.0,
-          "vol_ratio": 8.66,
-          "attribution": "✅AI算力,工业设备/通用机械板块联动(66/84只)"
-        },
-        {
-          "date": "20260517",
-          "ts_code": "688697.SH",
-          "name": "纽威数控",
-          "pct_chg": 20.0,
-          "vol_ratio": 7.84,
-          "attribution": "✅AI算力,工业设备/通用机械板块联动(66/84只)"
-        },
-        {
-          "date": "20260518",
-          "ts_code": "301666.SZ",
-          "name": "大普微-UW",
-          "pct_chg": 20.0,
-          "vol_ratio": 0.61,
-          "attribution": "国产替代链,✅国产替代,✅AI算力,IC设计板块联动(37/46只)"
-        },
-        {
-          "date": "20260518",
-          "ts_code": "688143.SH",
-          "name": "长盈通",
-          "pct_chg": 20.0,
-          "vol_ratio": 8.1,
-          "attribution": "AI算力链,✅国产替代,✅AI算力,光通信与光学板块联动(11/25只)"
-        },
-        {
-          "date": "20260519",
-          "ts_code": "300632.SZ",
-          "name": "光莆股份",
-          "pct_chg": 20.0,
-          "vol_ratio": 9.18,
-          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
-        },
-        {
-          "date": "20260519",
-          "ts_code": "300657.SZ",
-          "name": "弘信电子",
-          "pct_chg": 20.0,
-          "vol_ratio": 4.49,
-          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
-        },
-        {
-          "date": "20260519",
-          "ts_code": "301176.SZ",
-          "name": "逸豪新材",
-          "pct_chg": 20.0,
-          "vol_ratio": 2.43,
-          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
-        },
-        {
-          "date": "20260519",
-          "ts_code": "688126.SH",
-          "name": "沪硅产业",
-          "pct_chg": 20.0,
-          "vol_ratio": 9.71,
-          "attribution": "国产替代链,✅a2:🔥 长鑫科技H1指引1100-1200亿(+612-677%,半导体材料板块联动(24/25只)"
-        },
-        {
-          "date": "20260520",
-          "ts_code": "300069.SZ",
-          "name": "金利华电",
-          "pct_chg": 20.0,
-          "vol_ratio": 0.23,
-          "attribution": "✅国产替代,✅AI算力,新能源/电力设备板块联动(38/53只)"
-        },
-        {
-          "date": "20260520",
-          "ts_code": "301322.SZ",
-          "name": "绿通科技",
-          "pct_chg": 20.0,
-          "vol_ratio": 1.85,
-          "attribution": "✅国产替代,✅AI算力,汽车零部件板块联动(12/26只)"
-        },
-        {
-          "date": "20260520",
-          "ts_code": "688584.SH",
-          "name": "上海合晶",
-          "pct_chg": 20.0,
-          "vol_ratio": 7.46,
-          "attribution": "国产替代链,✅[半导体材料]催化,半导体材料板块联动(25/25只)"
+          "direction": "AI算力",
+          "anomaly_count": 9,
+          "fire_count": 0,
+          "fire_stocks": [
+            "三五互联(-1.506%)"
+          ]
         }
       ]
     },
-    "themes": {
+    "discovery": {
       "available": true,
-      "date": "20260522",
-      "top_themes": []
+      "count": 26,
+      "new_stocks": [
+        "四环生物(生物医药与器械, +10.1%)",
+        "云南铜业(国产软件与信创, +5.9%)",
+        "众泰汽车(新能源汽车, +5.7%)",
+        "九安医疗(生物医药与器械, +10.0%)",
+        "易明医药(生物医药与器械, +10.0%)",
+        "国瓷材料(新材料, +16.5%)",
+        "广信材料(新材料, +6.8%)",
+        "安车检测(生物医药与器械, +5.8%)",
+        "星云股份(国产软件与信创, +6.6%)",
+        "电工合金(新材料, +5.9%)",
+        "海力风电(新能源(光风储电), +8.3%)",
+        "力诺药包(生物医药与器械, +13.5%)",
+        "科源制药(生物医药与器械, +12.1%)",
+        "云汉芯城(国产软件与信创, +5.5%)",
+        "鑫科材料(新材料, +5.8%)"
+      ]
     },
     "kdj": {
       "available": true,
-      "date": "2026-05-22",
-      "count": 0,
-      "stocks": []
-    },
-    "alerts": {
-      "available": true,
-      "total_active": 50,
-      "recent_count": 0,
-      "fire": [],
-      "high": []
-    },
-    "thesis": {
-      "available": true,
-      "last_updated": "2026-05-22T23:05:00.682378+08:00",
-      "active_count": 10,
-      "positions": [
-        {
-          "code": "600584.SH",
-          "name": "长电科技",
-          "return_pct": 89.99,
-          "ret_5d": 24.94,
-          "warnings": [],
-          "last_check": "2026-05-22"
-        },
-        {
-          "code": "002156.SZ",
-          "name": "通富微电",
-          "return_pct": 60.45,
-          "ret_5d": 9.25,
-          "warnings": [],
-          "last_check": "2026-05-22"
-        },
-        {
-          "code": "688012.SH",
-          "name": "中微公司",
-          "return_pct": 50.84,
-          "ret_5d": 7.03,
-          "warnings": [],
-          "last_check": "2026-05-22"
-        },
-        {
-          "code": "002371.SZ",
-          "name": "北方华创",
-          "return_pct": 40.99,
-          "ret_5d": 11.88,
-          "warnings": [],
-          "last_check": "2026-05-22"
-        },
-        {
-          "code": "688041.SH",
-          "name": "海光信息",
-          "return_pct": 38.23,
-          "ret_5d": 2.89,
-          "warnings": [],
-          "last_check": "2026-05-22"
-        },
-        {
-          "code": "603650.SH",
-          "name": "彤程新材",
-          "return_pct": 27.11,
-          "ret_5d": 0.4,
-          "warnings": [],
-          "last_check": "2026-05-22"
-        },
-        {
-          "code": "688126.SH",
-          "name": "沪硅产业",
-          "return_pct": 24.43,
-          "ret_5d": 13.05,
-          "warnings": [],
-          "last_check": "2026-05-22"
-        },
-        {
-          "code": "688981.SH",
-          "name": "中芯国际",
-          "return_pct": 1.06,
-          "ret_5d": 11.66,
-          "warnings": [],
-          "last_check": "2026-05-22"
-        },
-        {
-          "code": "688082.SH",
-          "name": "盛美上海",
-          "return_pct": -4.65,
-          "ret_5d": 5.4,
-          "warnings": [
-            "⚠️ 从thesis以来高点回撤-17.53%"
-          ],
-          "last_check": "2026-05-22"
-        },
-        {
-          "code": "688256.SH",
-          "name": "寒武纪",
-          "return_pct": -7.48,
-          "ret_5d": 5.67,
-          "warnings": [
-            "⚠️ 从thesis以来高点回撤-31.16%"
-          ],
-          "last_check": "2026-05-22"
-        }
+      "count": 1,
+      "top": [
+        "华测导航(J=12.53)"
       ]
     }
-  }
+  },
+  "summary_md": "## 🦉 Mimo 收盘简报 — 2026-05-23\n\n### 📊 板块轮动 Top5\n1. 🔥 **可控核聚变** — 日收益 +0.2% | 强度 +13.0 | 5日 +3.1%\n2. 📈 **集成电路** — 日收益 +3.7% | 强度 +9.9 | 5日 +2.5%\n3. 📈 **具身智能-机器人** — 日收益 +2.0% | 强度 +9.0 | 5日 +6.3%\n4. 📈 **新能源光风储电** — 日收益 +3.7% | 强度 +8.5 | 5日 +2.7%\n5. ➡️ **高端装备工业母机** — 日收益 +2.1% | 强度 +4.8 | 5日 -3.5%\n\n⚠️ 弱势: 国产软件与信创(+2.9%) / 核电(+0.5%) / 商业航天与低空(-0.3%)\n\n### 📡 异动 — 247只 (🔥65 fire)\n- **机器人**: 42只 🔥扬杰科技(11.3001%),裕兴股份(10.4265%),双星新材(10.049%)\n- **集成电路**: 40只 🔥光华科技(10.0217%),华软科技(10.0176%),巨化股份(10.0061%)\n- **新能源**: 36只 🔥银禧科技(14.653%),新大陆(10.0222%),贵州三力(10.0077%)\n- **新材料**: 29只 🔥海伦哲(12.1027%),四环生物(10.1333%),蔚蓝锂芯(10.027%)\n- **高端医疗器械**: 21只 🔥京东方A(10.0213%),航锦科技(9.9863%),巨力索具(2.9711%)\n\n### 🆕 新发现 — 26只\n- 四环生物(生物医药与器械, +10.1%)\n- 云南铜业(国产软件与信创, +5.9%)\n- 众泰汽车(新能源汽车, +5.7%)\n- 九安医疗(生物医药与器械, +10.0%)\n- 易明医药(生物医药与器械, +10.0%)\n- 国瓷材料(新材料, +16.5%)\n- 广信材料(新材料, +6.8%)\n- 安车检测(生物医药与器械, +5.8%)\n- 星云股份(国产软件与信创, +6.6%)\n- 电工合金(新材料, +5.9%)\n\n### 📉 周线KDJ超卖 — 1只\n- 华测导航(J=12.53)"
 }
