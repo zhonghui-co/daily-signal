@@ -1,207 +1,619 @@
 {
+  "generated_at": "2026-05-23T23:10:01.106540+08:00",
   "date": "2026-05-23",
-  "generated_at": "2026-05-23T00:34:13.284838+08:00",
   "sections": {
-    "rotation": {
+    "signals": {
       "available": true,
-      "top_5": [
+      "date": "2026-05-23",
+      "run_at": "2026-05-23T17:00:00+08:00",
+      "stats": {
+        "total_signals": 5,
+        "chain1": 2,
+        "chain2": 3,
+        "cross_chain": 2,
+        "by_lifecycle": {
+          "emerging": 1,
+          "positioning": 2,
+          "consensus": 2,
+          "exhausted": 0
+        },
+        "by_priced_in": {
+          "not_priced": 1,
+          "partially_priced": 2,
+          "largely_priced": 2,
+          "fully_priced": 0
+        },
+        "strong_backing": 2,
+        "moderate_backing": 2,
+        "weak_backing": 1,
+        "verified": 5,
+        "unverified": 0,
+        "confirmed": 5,
+        "partially_confirmed": 0
+      },
+      "signals": [
         {
-          "direction": "可控核聚变",
-          "strength": 12.99,
-          "daily_return": 0.19,
-          "momentum_5d": 3.15
+          "id": "a1",
+          "priority": "normal",
+          "title": "长鑫存储CXMT DDR5首获Corsair采用——中国DRAM首次进入全球消费品牌供应链,国产存储0→1质变",
+          "chain": "chain1",
+          "confidence": "yellow",
+          "lifecycle": "emerging",
+          "priced_in": "not_priced",
+          "capital_backing": {
+            "level": "strong",
+            "big_fund": true,
+            "national_team_etf": true,
+            "recent_bidding": false,
+            "note": "大基金三期3440亿明确投向晶圆制造+卡脖子设备材料+AI算力/先进封装/HBM,存储芯片为核心卡脖子环节。长鑫科技IPO排队中(大基金一期二期均有持股,三期进一步加码概率高)。兆易创新(603986)为科创50ETF/半导体芯片ETF重仓,科创50ETF华夏持仓兆易创新为成份股。bidding.json本期无存储设备直采中标(付费墙),但长江存储三期国产设备采购占比首超50%间接验证存储领域国产替代加速。"
+          },
+          "tickers": []
         },
         {
-          "direction": "集成电路",
-          "strength": 9.92,
-          "daily_return": 3.71,
-          "momentum_5d": 2.46
+          "id": "a2",
+          "priority": "normal",
+          "title": "特朗普再次抨击'台湾偷走晶片'+美贸易代表松口关税下一步——芯片供应链地缘风险从单向制裁升级为双向关税博弈",
+          "chain": "chain1",
+          "confidence": "yellow",
+          "lifecycle": "positioning",
+          "priced_in": "partially_priced",
+          "capital_backing": {
+            "level": "strong",
+            "big_fund": true,
+            "national_team_etf": true,
+            "recent_bidding": false,
+            "note": "大基金三期明确投向晶圆制造+卡脖子设备材料→SMIC(688981)/华虹(688347)为直接受益标的。科创50ETF华夏重仓SMIC(权重>5%)→国家队ETF被动配置提供资金底。长电科技(600584)为芯片ETF/半导体ETF成份股。"
+          },
+          "tickers": []
         },
         {
-          "direction": "具身智能-机器人",
-          "strength": 9.04,
-          "daily_return": 2.05,
-          "momentum_5d": 6.35
+          "id": "a3",
+          "priority": "normal",
+          "title": "范式(6682.HK) Q1 Token调用量激增6倍+7万AI模型完成国产芯片适配——AI推理需求量化最强验证+国产AI芯片生态成熟度里程碑",
+          "chain": "chain2",
+          "confidence": "green",
+          "lifecycle": "positioning",
+          "priced_in": "partially_priced",
+          "capital_backing": {
+            "level": "moderate",
+            "big_fund": true,
+            "national_team_etf": false,
+            "recent_bidding": false,
+            "note": "范式为港股标的(6682.HK),A股无直接持仓。大基金三期间接关联:范式7万模型适配的国产芯片(寒武纪思元/海光深算/华为昇腾)为大基金三期AI算力投资方向。寒武纪(688256)被科创50ETF华夏持仓1137万股=国家队被动配置。但范式本身不受大基金直接投资,资金面背书为间接传导。"
+          },
+          "tickers": []
         },
         {
-          "direction": "新能源光风储电",
-          "strength": 8.53,
-          "daily_return": 3.66,
-          "momentum_5d": 2.68
+          "id": "a4",
+          "priority": "normal",
+          "title": "燧原科技启动IPO(腾讯连投六轮)——国产AI芯片'第三极'资本化,竞争格局从双龙戏珠到多极竞争",
+          "chain": "chain2",
+          "confidence": "yellow",
+          "lifecycle": "consensus",
+          "priced_in": "largely_priced",
+          "capital_backing": {
+            "level": "weak",
+            "big_fund": false,
+            "national_team_etf": false,
+            "recent_bidding": false,
+            "note": "燧原科技为腾讯系未上市公司,大基金未参与投资。腾讯连续六轮直投=产业资本背书但非国家队。燧原IPO对A股AI芯片标的无直接资金面影响。"
+          },
+          "tickers": []
         },
         {
-          "direction": "高端装备工业母机",
-          "strength": 4.79,
-          "daily_return": 2.08,
-          "momentum_5d": -3.48
+          "id": "a5",
+          "priority": "normal",
+          "title": "NVIDIA Vera Rubin制造成本因HBM涨价激增+小米预警内存持续涨价——HBM→DRAM挤占效应进入第二波全产业链传导",
+          "chain": "chain2",
+          "confidence": "yellow",
+          "lifecycle": "consensus",
+          "priced_in": "largely_priced",
+          "capital_backing": {
+            "level": "moderate",
+            "big_fund": true,
+            "national_team_etf": false,
+            "recent_bidding": false,
+            "note": "大基金三期明确投向先进封装/HBM→长电(600584)百亿扩产获国家队背书。兆易创新(603986)为NOR Flash/DRAM设计龙头,受益存储涨价周期,被科创50ETF/半导体ETF重仓。bidding.json无直接存储中标数据。"
+          },
+          "tickers": []
         }
-      ],
-      "bottom_3": [
-        {
-          "direction": "国产软件与信创",
-          "strength": -2.63,
-          "daily_return": 2.89
-        },
-        {
-          "direction": "核电",
-          "strength": -4.63,
-          "daily_return": 0.5
-        },
-        {
-          "direction": "商业航天与低空",
-          "strength": -9.6,
-          "daily_return": -0.31
-        }
-      ],
-      "spread": 22.59
+      ]
     },
     "anomalies": {
-      "available": true,
-      "total": 247,
-      "fire": 65,
-      "directions": [
+      "count": 20,
+      "top": [
         {
-          "direction": "机器人",
-          "anomaly_count": 42,
-          "fire_count": 0,
-          "fire_stocks": [
-            "扬杰科技(11.3001%)",
-            "裕兴股份(10.4265%)",
-            "双星新材(10.049%)",
-            "联创电子(10.0427%)",
-            "新大陆(10.0222%)"
-          ]
+          "date": "20260518",
+          "ts_code": "688811.SH",
+          "name": "有研复材",
+          "pct_chg": 20.01,
+          "vol_ratio": 1.04,
+          "attribution": "✅国产替代,✅AI算力,化工/材料板块联动(82/108只)"
         },
         {
-          "direction": "集成电路",
-          "anomaly_count": 40,
-          "fire_count": 0,
-          "fire_stocks": [
-            "光华科技(10.0217%)",
-            "华软科技(10.0176%)",
-            "巨化股份(10.0061%)",
-            "格林达(10.004%)",
-            "中材科技(10.0%)"
-          ]
+          "date": "20260517",
+          "ts_code": "688549.SH",
+          "name": "中巨芯-U",
+          "pct_chg": 20.01,
+          "vol_ratio": 3.01,
+          "attribution": "国产替代链,✅AI算力,半导体材料板块联动(25/25只)"
         },
         {
-          "direction": "新能源",
-          "anomaly_count": 36,
-          "fire_count": 0,
-          "fire_stocks": [
-            "银禧科技(14.653%)",
-            "新大陆(10.0222%)",
-            "贵州三力(10.0077%)",
-            "天准科技(9.2375%)",
-            "晶方科技(8.4812%)"
-          ]
+          "date": "20260522",
+          "ts_code": "300243.SZ",
+          "name": "瑞丰高材",
+          "pct_chg": 20.01,
+          "vol_ratio": 6.04,
+          "attribution": "✅AI算力,✅国产替代,化工/材料板块联动(47/65只)"
         },
         {
-          "direction": "新材料",
-          "anomaly_count": 29,
-          "fire_count": 0,
-          "fire_stocks": [
-            "海伦哲(12.1027%)",
-            "四环生物(10.1333%)",
-            "蔚蓝锂芯(10.027%)",
-            "京东方A(10.0213%)",
-            "鹏鼎控股(10.0021%)"
-          ]
+          "date": "20260523",
+          "ts_code": "300243.SZ",
+          "name": "瑞丰高材",
+          "pct_chg": 20.01,
+          "vol_ratio": 6.04,
+          "attribution": "✅AI算力,化工/材料板块联动(47/65只)"
         },
         {
-          "direction": "高端医疗器械",
-          "anomaly_count": 21,
-          "fire_count": 0,
-          "fire_stocks": [
-            "京东方A(10.0213%)",
-            "航锦科技(9.9863%)",
-            "巨力索具(2.9711%)",
-            "高乐股份(-2.4793%)"
-          ]
+          "date": "20260522",
+          "ts_code": "301588.SZ",
+          "name": "美新科技",
+          "pct_chg": 20.01,
+          "vol_ratio": 3.44,
+          "attribution": "✅AI算力,✅国产替代,化工/材料板块联动(47/65只)"
         },
         {
-          "direction": "商业航天与低空经济",
-          "anomaly_count": 20,
-          "fire_count": 0,
-          "fire_stocks": [
-            "瑞丰高材(20.0115%)",
-            "双星新材(10.049%)",
-            "华软科技(10.0176%)",
-            "新金路(10.0147%)",
-            "水晶光电(10.0082%)"
-          ]
+          "date": "20260523",
+          "ts_code": "301588.SZ",
+          "name": "美新科技",
+          "pct_chg": 20.01,
+          "vol_ratio": 3.44,
+          "attribution": "✅AI算力,化工/材料板块联动(47/65只)"
         },
         {
-          "direction": "核电",
-          "anomaly_count": 18,
-          "fire_count": 0,
-          "fire_stocks": [
-            "昂利康(-9.989%)",
-            "航锦科技(9.9863%)",
-            "德展健康(-9.7113%)",
-            "高乐股份(-2.4793%)"
-          ]
+          "date": "20260520",
+          "ts_code": "688449.SH",
+          "name": "联芸科技",
+          "pct_chg": 20.01,
+          "vol_ratio": 3.92,
+          "attribution": "国产替代链,✅国产替代,✅AI算力,IC设计板块联动(36/46只)"
         },
         {
-          "direction": "创新药与生物医药",
-          "anomaly_count": 17,
-          "fire_count": 0,
-          "fire_stocks": [
-            "新金路(10.0147%)",
-            "深南电路(10.0006%)",
-            "飞亚达(9.9871%)",
-            "金隅集团(9.8039%)",
-            "巨力索具(2.9711%)"
-          ]
+          "date": "20260522",
+          "ts_code": "688020.SH",
+          "name": "方邦股份",
+          "pct_chg": 20.0,
+          "vol_ratio": 4.79,
+          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(66/80只)"
         },
         {
-          "direction": "高端装备与工业母机",
-          "anomaly_count": 15,
-          "fire_count": 0,
-          "fire_stocks": [
-            "新安股份(10.0415%)",
-            "新大陆(10.0222%)",
-            "新湖中宝(-0.625%)"
-          ]
+          "date": "20260523",
+          "ts_code": "688020.SH",
+          "name": "方邦股份",
+          "pct_chg": 20.0,
+          "vol_ratio": 4.79,
+          "attribution": "✅AI算力,消费电子/元器件板块联动(66/80只)"
         },
         {
-          "direction": "AI算力",
-          "anomaly_count": 9,
-          "fire_count": 0,
-          "fire_stocks": [
-            "三五互联(-1.506%)"
-          ]
+          "date": "20260511",
+          "ts_code": "688146.SH",
+          "name": "中船特气",
+          "pct_chg": 20.0,
+          "vol_ratio": 5.8,
+          "attribution": "✅AI算力,✅国产替代,材料板块联动(22/24只)"
+        },
+        {
+          "date": "20260511",
+          "ts_code": "688766.SH",
+          "name": "普冉股份",
+          "pct_chg": 20.0,
+          "vol_ratio": 3.71,
+          "attribution": "✅AI算力,✅国产替代,数字芯片板块联动(63/79只)"
+        },
+        {
+          "date": "20260513",
+          "ts_code": "688146.SH",
+          "name": "中船特气",
+          "pct_chg": 20.0,
+          "vol_ratio": 6.1,
+          "attribution": "✅国产替代,✅AI算力,材料板块联动(19/24只)"
+        },
+        {
+          "date": "20260517",
+          "ts_code": "300263.SZ",
+          "name": "隆华科技",
+          "pct_chg": 20.0,
+          "vol_ratio": 8.66,
+          "attribution": "✅AI算力,工业设备/通用机械板块联动(66/84只)"
+        },
+        {
+          "date": "20260517",
+          "ts_code": "688697.SH",
+          "name": "纽威数控",
+          "pct_chg": 20.0,
+          "vol_ratio": 7.84,
+          "attribution": "✅AI算力,工业设备/通用机械板块联动(66/84只)"
+        },
+        {
+          "date": "20260518",
+          "ts_code": "301666.SZ",
+          "name": "大普微-UW",
+          "pct_chg": 20.0,
+          "vol_ratio": 0.61,
+          "attribution": "国产替代链,✅国产替代,✅AI算力,IC设计板块联动(37/46只)"
+        },
+        {
+          "date": "20260518",
+          "ts_code": "688143.SH",
+          "name": "长盈通",
+          "pct_chg": 20.0,
+          "vol_ratio": 8.1,
+          "attribution": "AI算力链,✅国产替代,✅AI算力,光通信与光学板块联动(11/25只)"
+        },
+        {
+          "date": "20260519",
+          "ts_code": "300632.SZ",
+          "name": "光莆股份",
+          "pct_chg": 20.0,
+          "vol_ratio": 9.18,
+          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
+        },
+        {
+          "date": "20260519",
+          "ts_code": "300657.SZ",
+          "name": "弘信电子",
+          "pct_chg": 20.0,
+          "vol_ratio": 4.49,
+          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
+        },
+        {
+          "date": "20260519",
+          "ts_code": "301176.SZ",
+          "name": "逸豪新材",
+          "pct_chg": 20.0,
+          "vol_ratio": 2.43,
+          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
+        },
+        {
+          "date": "20260519",
+          "ts_code": "688126.SH",
+          "name": "沪硅产业",
+          "pct_chg": 20.0,
+          "vol_ratio": 9.71,
+          "attribution": "国产替代链,✅a2:🔥 长鑫科技H1指引1100-1200亿(+612-677%,半导体材料板块联动(24/25只)"
         }
       ]
     },
-    "discovery": {
+    "themes": {
       "available": true,
-      "count": 26,
-      "new_stocks": [
-        "四环生物(生物医药与器械, +10.1%)",
-        "云南铜业(国产软件与信创, +5.9%)",
-        "众泰汽车(新能源汽车, +5.7%)",
-        "九安医疗(生物医药与器械, +10.0%)",
-        "易明医药(生物医药与器械, +10.0%)",
-        "国瓷材料(新材料, +16.5%)",
-        "广信材料(新材料, +6.8%)",
-        "安车检测(生物医药与器械, +5.8%)",
-        "星云股份(国产软件与信创, +6.6%)",
-        "电工合金(新材料, +5.9%)",
-        "海力风电(新能源(光风储电), +8.3%)",
-        "力诺药包(生物医药与器械, +13.5%)",
-        "科源制药(生物医药与器械, +12.1%)",
-        "云汉芯城(国产软件与信创, +5.5%)",
-        "鑫科材料(新材料, +5.8%)"
-      ]
+      "date": "20260522",
+      "top_themes": []
     },
     "kdj": {
       "available": true,
-      "count": 1,
-      "top": [
-        "华测导航(J=12.53)"
+      "date": "2026-05-22",
+      "count": 0,
+      "stocks": []
+    },
+    "alerts": {
+      "available": true,
+      "total_active": 81,
+      "recent_count": 27,
+      "fire": [
+        {
+          "id": "scanner-2026-05-23-2230-s1",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-23",
+          "title": "🔥 闻泰科技-安世半导体(Nexperia)控制权争议公开化 — 中国最大海外半导体资产面临治理风险 (emerging)",
+          "impact": "闻泰声明反驳安世'回避沟通'指控,暗示双方矛盾升级。Nexperia全球汽车芯片15%份额,年收入>20亿美元。控制权不稳→汽车芯片供应链风险+倒逼国内功率半导体自主化(斯达半导/时代电气/士兰微受益)。市场0%认知,周一首次定价窗口",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "scanner-2026-05-23-2230-s2",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-23",
+          "title": "🔥 NVIDIA RTX5090D V2中国特供版对华禁售 — 美国制裁从AI/HPC扩展至消费级GPU (positioning)",
+          "impact": "降级特供版也被禁→'全面封堵'信号确认。中美芯片双向脱钩进入实质执行期(仅隔1天H200拒买+RTX5090D2禁售)。国产GPU替代TAM从数据中心扩展至消费级PC。景嘉微/摩尔线程受益,周一集中定价制裁扩大预期",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "scanner-2026-05-23-2230-s3",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-23",
+          "title": "🔥 范式Q1官方通稿确认Token调用量6x+7万模型国产芯片适配 — AI推理需求审计级验证 (positioning)",
+          "impact": "官方通稿消除信息来源不确定性。Token 6x+7万模型适配获审计级数据支撑。配合寒武纪30万颗=链2周一双信号共振。HAMi vGPU多芯片管理方案降低对单芯片极致性能依赖",
+          "timeframe": "days"
+        },
+        {
+          "id": "scanner-2026-05-23-2230-cumulative",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-23",
+          "title": "周六三窗口累计10条fire信号 — 周一13+条首次定价窗口密集度创年度纪录,成交量是核心变量",
+          "impact": "上午4条+下午3条+晚间3条=10条fire。周一13+条信号等待首次定价。成交额2.93万亿(-16.5%)需回升至3.5万亿+才能支撑多重定价。SMIC 406亿并购+3.23%为最大定价缺口。三星罢工+RTX5090D2禁售+闻泰安世=三大新增风险维度",
+          "timeframe": "days"
+        },
+        {
+          "id": "analyst-2026-05-23-a1",
+          "level": "fire",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "长鑫CXMT DDR5首获Corsair采用——中国DRAM首次进入全球消费品牌供应链,国产存储0→1质变 (not_priced)",
+          "impact": "年度级别存储信号。五大国际科技媒体确认。Corsair Vengeance DDR5搭载CXMT颗粒,性能与三星/SK海力士持平。AI HBM挤占+三星罢工=全球DRAM供给缺口至少至2028。传导:兆易创新/深科技/通富微电→周一0%定价首次窗口",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "analyst-2026-05-23-a3",
+          "level": "fire",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "范式Q1 Token调用量6x+7万AI模型完成国产芯片适配——AI推理最强量化验证+国产AI芯片生态里程碑 (partially_priced)",
+          "impact": "范式Q1收入14.58亿+35.4%,API Token调用量超2025全年40%+Agentic AI订单+100%。信创模盒70,000+模型国产芯片适配=完成全年目标70%+。配合寒武纪30万颗=双信号共振。港股部分定价,A股尚未定价→周一首次定价窗口",
+          "timeframe": "days"
+        },
+        {
+          "id": "analyst-2026-05-23-div1",
+          "level": "fire",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "周一超密集定价窗口:13条信号同时等待首次定价——成交量是核心变量",
+          "impact": "上午8条+下午5条=13条已验证信号指向周一首次定价。3条not_priced+2条partially_priced。周五成交额2.93万亿(-16.5%缩量反弹)→需回升至3.5万亿+才能支撑多重定价。若成交量不足,利好集中兑现→冲高回落风险。SMIC为最大定价缺口(406亿并购+3.23%)",
+          "timeframe": "days"
+        },
+        {
+          "id": "robot-scanner-2026-05-23-1640-rs1",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-23",
+          "title": "特斯拉Optimus V3量产锁定7-8月+弗里蒙特产线改造已拆Model S/X产线 — 从模糊预期到确定性执行质变",
+          "impact": "量产时间精准化消除最大不确定性。供应链企业准备7-8月前最后窗口期供货认证，订单可见度从季度级→月度级。绿的谐波/三花智控/拓普集团/双环传动受益",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "robot-scanner-2026-05-23-1640-rs2",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-23",
+          "title": "Q1人形机器人融资681亿超2025全年+大基金三期首投银河通用 — 资本流入量级质变,产业资本全面下注",
+          "impact": "Q1单季>2025全年。大基金三期首次直投具身智能(银河通用25亿)+DeepSeek双线并进=国家级战略配置。10亿+融资24起、百亿估值企业9家→加速研发到量产周期",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "robot-scanner-2026-05-23-1640-rs3",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-23",
+          "title": "乐聚智能创业板IPO受理(第4套标准首单)+宇树科创板已受理 — 人形机器人IPO通道全面打开,估值体系从私募→公募切换",
+          "impact": "IPO通道打通→人形机器人将出现可比上市公司定价锚,产业链估值获得参照系。宇树2025出货5500台+扣非净利率35%证明人形机器人可以赚钱",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "scanner-2026-05-23-1630-s1",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-23",
+          "title": "🔥 长鑫存储CXMT DDR5首获Corsair采用——中国DRAM首次进入全球消费品牌供应链,国产存储0→1质变 (emerging)",
+          "impact": "Corsair Vengeance DDR5 6000MT/s搭载CXMT颗粒,性能与三星/SK海力士持平。AI HBM挤占三大厂DRAM产能为长鑫打开历史性窗口。长鑫已开发16Gb/24Gb DDR5,超频8000MT/s。国产存储从'白牌/内需'→'全球品牌供应链'三阶跃迁。传导:长鑫科技(IPO排队)/兆易创新/深科技/通富微电→周一首次定价窗口",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "scanner-2026-05-23-1630-s2",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-23",
+          "title": "🔥 特朗普再次抨击'台湾偷走晶片'+美贸易代表松口关税——芯片地缘博弈从单向制裁升级为双向关税博弈 (emerging)",
+          "impact": "特朗普二次公开攻击台湾芯片+美贸易代表松口关税下一步。继MATCH法案、H200拒买后,中美芯片博弈从'美国单方制裁'升级为'双向博弈(禁售/关税/拒买/替代)'。若关税实施:台系芯片成本↑→利好SMIC代工+长电封装;但短期可能引发全球供应链混乱→板块波动加剧。当前市场仅定价'国产替代受益',未定价'关税混乱风险'",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "scanner-2026-05-23-1630-s3",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-23",
+          "title": "🔥 范式(6682.HK) Q1 Token调用量激增6倍+7万AI模型完成国产芯片适配——AI推理需求量化最强验证+国产AI芯片生态成熟度里程碑 (positioning)",
+          "impact": "范式Q1收入14.58亿+35.4%,API Token调用量YOY+6倍(超2025全年40%),Agentic AI在手订单+100%。关键增量:信创模盒完成70,000+AI模型国产芯片适配(全年目标70%+)——直接验证寒武纪/海光/华为昇腾生态从'可用→规模化部署'。HAMi vGPU多芯片统一管理提升算力利用率。5/22港股收盘后发布,A股尚未交易→周一首次定价窗口。传导:寒武纪/海光/中芯国际",
+          "timeframe": "days"
+        },
+        {
+          "id": "analyst-2026-05-23-a1",
+          "level": "fire",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "🔥 Anthropic 300亿美元融资(9000亿估值)+300MW xAI算力协议 — 全球AI资本开支最强验证 not_priced⭐",
+          "impact": "300亿美元≈2100亿人民币=大基金三期61%。9000亿估值超越OpenAI。月收入年化500亿美元验证商业模式。传导:先进封装(长电/通富)+光模块(中际旭创/天孚)→周一首次定价",
+          "timeframe": "days"
+        },
+        {
+          "id": "analyst-2026-05-23-a2",
+          "level": "fire",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "🔥 DeepSeek 500亿融资(大基金领投100亿+梁文锋200亿+腾讯60亿) — 大基金三期首次直接投资AI大模型 not_priced⭐",
+          "impact": "宁德时代/京东/网易跨界入股=产业资本共识。大基金领投=国家级战略配置AI算力生态。寒武纪/海光周一首次定价窗口+3~5%",
+          "timeframe": "days"
+        },
+        {
+          "id": "analyst-2026-05-23-a3",
+          "level": "fire",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "🔥 中国拒绝采购H200(博弈质变:单向承压→双向博弈) — 国产GPU替代获政策最强催化 strong_backing⭐",
+          "impact": "博弈主动权首次向中国倾斜。H200采购搁置→算力缺口由国产GPU填补→寒武纪30万颗预期上调+5~10%。注意:拒买≠禁售,信号强度略低于Scanner原判但方向一致",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "robot-scanner-2026-05-23-rs1",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-23",
+          "title": "T链Q2正式采购订单落地 — 从送样到量产交付质变 绿的谐波/双环传动/三花智控受益",
+          "impact": "供应链关系质变：正式订单有货款交易，T链进入小批量量产交付，供应商开始确认机器人业务收入"
+        },
+        {
+          "id": "robot-scanner-2026-05-23-rs2",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-23",
+          "title": "特斯拉公开Optimus V3手部/关节4项国际专利 — 产品设计冻结 供应链定点窗口打开",
+          "impact": "25个线性执行器控制手部(23)+腕部(2)，精密传动需求弹性↑，设计冻结后供应链导入加速"
+        },
+        {
+          "id": "robot-scanner-2026-05-23-rs3",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-23",
+          "title": "五洲新春丝杠周产500台套+PEEK材料特斯拉首批订单 — 供给端量产能力获得验证",
+          "impact": "核心零部件从试制进入周产500台套级量产，Q1业绩开始兑现机器人业务贡献，双环传动Q1净利+50%"
+        }
+      ],
+      "high": [
+        {
+          "id": "analyst-2026-05-23-a2",
+          "level": "high",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "特朗普二次抨击台湾芯片+芯片关税独立谈判——博弈框架升级 (partially_priced)",
+          "impact": "台湾芯片面临关税不确定性→国产代工/封装(关税套利)受益。但短期全球供应链混乱风险被市场0%定价。SMIC/华虹/长电受益→周一补涨空间2~4%",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "analyst-2026-05-23-div2",
+          "level": "high",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "SMIC 406亿并购严重低估+三重新增催化→周一资金轮动至SMIC概率增加",
+          "impact": "SMIC 406亿并购仅+3.23% vs 长电+9.04%→严重低估。新增长鑫DDR5(需代工产能)+特朗普关税(关税套利受益)+范式7万模型适配(国产芯片代工需求),三重新增催化→周一补涨空间3~5%",
+          "timeframe": "days"
+        },
+        {
+          "id": "analyst-2026-05-23-risk1",
+          "level": "high",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "三星罢工5/21-6/7(18天)→HBM产能直接受损+KeyBanc下调VR产量至6,000台——供给收缩可能被误读为需求减弱",
+          "impact": "全球存储供给缺口23年最大→长鑫/长江份额扩张获历史性窗口。但市场可能误读VR产量下调为需求减弱引发AI板块抛售。需区分供给瓶颈(利好国产替代)vs需求下滑(利空全板块)",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "analyst-2026-05-23-risk3",
+          "level": "high",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "寒武纪关键窗口:30万颗+7万模型适配能否打破传导链断裂魔咒?竞争格局稀释vs需求爆发",
+          "impact": "寒武纪30万颗出货预期+范式7万模型适配=最强估值催化剂。但竞争格局多极化(燧原/平头哥/壁仞/摩尔线程IPO潮)稀释稀缺性。周一为关键检验——若仍无法突破传导链断裂,AI芯片板块可能面临较长时间估值消化",
+          "timeframe": "days"
+        },
+        {
+          "id": "analyst-2026-05-23-a8",
+          "level": "high",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "⭐ 平头哥真武PPU累计出货60万片(IDC Q1数据) — 国产AI芯片竞争超预期 寒武纪独占溢价可能收窄",
+          "impact": "Scanner'三大门派(寒武纪+海光+沐曦)'未含平头哥。阿里系真武PPU 60万片累计出货超寒武纪2025年11.6万颗。竞争格局更复杂但TAM扩大→所有参与者受益",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "analyst-2026-05-23-risk",
+          "level": "high",
+          "source": "analyst",
+          "date": "2026-05-23",
+          "title": "🔴 周一三大风险: ①缩量反弹2.93万亿(-16.5%)未修复 ②Anthropic估值9000亿=融资峰值可能领先股价峰值3-6月 ③H200'拒买'可能反复(博弈中)",
+          "impact": "成交量不足+AI估值可能接近周期高点+政策博弈不确定。周一若高开低走=利好兑现信号,需警惕追高。",
+          "timeframe": "days"
+        }
+      ]
+    },
+    "thesis": {
+      "available": true,
+      "last_updated": "2026-05-23T23:05:01.200011+08:00",
+      "active_count": 10,
+      "positions": [
+        {
+          "code": "600584.SH",
+          "name": "长电科技",
+          "return_pct": 89.99,
+          "ret_5d": 24.94,
+          "warnings": [],
+          "last_check": "2026-05-23"
+        },
+        {
+          "code": "002156.SZ",
+          "name": "通富微电",
+          "return_pct": 60.45,
+          "ret_5d": 9.25,
+          "warnings": [],
+          "last_check": "2026-05-23"
+        },
+        {
+          "code": "688012.SH",
+          "name": "中微公司",
+          "return_pct": 50.84,
+          "ret_5d": 7.03,
+          "warnings": [],
+          "last_check": "2026-05-23"
+        },
+        {
+          "code": "002371.SZ",
+          "name": "北方华创",
+          "return_pct": 40.99,
+          "ret_5d": 11.88,
+          "warnings": [],
+          "last_check": "2026-05-23"
+        },
+        {
+          "code": "688041.SH",
+          "name": "海光信息",
+          "return_pct": 38.23,
+          "ret_5d": 2.89,
+          "warnings": [],
+          "last_check": "2026-05-23"
+        },
+        {
+          "code": "688126.SH",
+          "name": "沪硅产业",
+          "return_pct": 24.43,
+          "ret_5d": 13.05,
+          "warnings": [],
+          "last_check": "2026-05-23"
+        },
+        {
+          "code": "688981.SH",
+          "name": "中芯国际",
+          "return_pct": 1.06,
+          "ret_5d": 11.66,
+          "warnings": [],
+          "last_check": "2026-05-23"
+        },
+        {
+          "code": "688256.SH",
+          "name": "寒武纪",
+          "return_pct": -7.48,
+          "ret_5d": 5.67,
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-31.16%"
+          ],
+          "last_check": "2026-05-23"
+        },
+        {
+          "code": "603650.SH",
+          "name": "彤程新材",
+          "return_pct": null,
+          "ret_5d": null,
+          "warnings": [],
+          "last_check": "2026-05-23"
+        },
+        {
+          "code": "688082.SH",
+          "name": "盛美上海",
+          "return_pct": null,
+          "ret_5d": null,
+          "warnings": [],
+          "last_check": "2026-05-23"
+        }
       ]
     }
-  },
-  "summary_md": "## 🦉 Mimo 收盘简报 — 2026-05-23\n\n### 📊 板块轮动 Top5\n1. 🔥 **可控核聚变** — 日收益 +0.2% | 强度 +13.0 | 5日 +3.1%\n2. 📈 **集成电路** — 日收益 +3.7% | 强度 +9.9 | 5日 +2.5%\n3. 📈 **具身智能-机器人** — 日收益 +2.0% | 强度 +9.0 | 5日 +6.3%\n4. 📈 **新能源光风储电** — 日收益 +3.7% | 强度 +8.5 | 5日 +2.7%\n5. ➡️ **高端装备工业母机** — 日收益 +2.1% | 强度 +4.8 | 5日 -3.5%\n\n⚠️ 弱势: 国产软件与信创(+2.9%) / 核电(+0.5%) / 商业航天与低空(-0.3%)\n\n### 📡 异动 — 247只 (🔥65 fire)\n- **机器人**: 42只 🔥扬杰科技(11.3001%),裕兴股份(10.4265%),双星新材(10.049%)\n- **集成电路**: 40只 🔥光华科技(10.0217%),华软科技(10.0176%),巨化股份(10.0061%)\n- **新能源**: 36只 🔥银禧科技(14.653%),新大陆(10.0222%),贵州三力(10.0077%)\n- **新材料**: 29只 🔥海伦哲(12.1027%),四环生物(10.1333%),蔚蓝锂芯(10.027%)\n- **高端医疗器械**: 21只 🔥京东方A(10.0213%),航锦科技(9.9863%),巨力索具(2.9711%)\n\n### 🆕 新发现 — 26只\n- 四环生物(生物医药与器械, +10.1%)\n- 云南铜业(国产软件与信创, +5.9%)\n- 众泰汽车(新能源汽车, +5.7%)\n- 九安医疗(生物医药与器械, +10.0%)\n- 易明医药(生物医药与器械, +10.0%)\n- 国瓷材料(新材料, +16.5%)\n- 广信材料(新材料, +6.8%)\n- 安车检测(生物医药与器械, +5.8%)\n- 星云股份(国产软件与信创, +6.6%)\n- 电工合金(新材料, +5.9%)\n\n### 📉 周线KDJ超卖 — 1只\n- 华测导航(J=12.53)"
+  }
 }
