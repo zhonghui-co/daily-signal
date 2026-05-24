@@ -1,60 +1,73 @@
 {
-  "generated_at": "2026-05-23T23:10:01.106540+08:00",
-  "date": "2026-05-23",
+  "generated_at": "2026-05-24T23:10:01.154830+08:00",
+  "date": "2026-05-24",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-05-23",
-      "run_at": "2026-05-23T17:00:00+08:00",
+      "date": "2026-05-24",
+      "run_at": "2026-05-24T23:00:00+08:00",
       "stats": {
-        "total_signals": 5,
+        "total_signals": 8,
         "chain1": 2,
-        "chain2": 3,
-        "cross_chain": 2,
+        "chain2": 5,
+        "cross_chain": 1,
         "by_lifecycle": {
-          "emerging": 1,
-          "positioning": 2,
-          "consensus": 2,
+          "emerging": 4,
+          "positioning": 3,
+          "consensus": 1,
           "exhausted": 0
         },
         "by_priced_in": {
-          "not_priced": 1,
-          "partially_priced": 2,
-          "largely_priced": 2,
+          "not_priced": 3,
+          "partially_priced": 4,
+          "mostly_priced": 1,
           "fully_priced": 0
         },
         "strong_backing": 2,
-        "moderate_backing": 2,
-        "weak_backing": 1,
-        "verified": 5,
-        "unverified": 0,
-        "confirmed": 5,
-        "partially_confirmed": 0
+        "moderate_backing": 6,
+        "weak_backing": 0
       },
       "signals": [
         {
           "id": "a1",
           "priority": "normal",
-          "title": "长鑫存储CXMT DDR5首获Corsair采用——中国DRAM首次进入全球消费品牌供应链,国产存储0→1质变",
-          "chain": "chain1",
-          "confidence": "yellow",
+          "title": "台积电员工罢工风险浮现 — ⚡三星世纪大罢工已和解(关键变量更新)",
+          "chain": "chain1+chain2",
+          "confidence": "low",
           "lifecycle": "emerging",
-          "priced_in": "not_priced",
+          "priced_in": "partially_priced",
           "capital_backing": {
-            "level": "strong",
+            "level": "moderate",
             "big_fund": true,
             "national_team_etf": true,
             "recent_bidding": false,
-            "note": "大基金三期3440亿明确投向晶圆制造+卡脖子设备材料+AI算力/先进封装/HBM,存储芯片为核心卡脖子环节。长鑫科技IPO排队中(大基金一期二期均有持股,三期进一步加码概率高)。兆易创新(603986)为科创50ETF/半导体芯片ETF重仓,科创50ETF华夏持仓兆易创新为成份股。bidding.json本期无存储设备直采中标(付费墙),但长江存储三期国产设备采购占比首超50%间接验证存储领域国产替代加速。"
+            "note": "受益标的SMIC/华虹/长电有大基金一+三期双覆盖，科创50ETF重仓。但三星罢工和解降低了这些标的从TSMC风险中获利的概率→资金面支撑仍在但催化强度降低。bidding.json无新增中标。"
           },
           "tickers": []
         },
         {
           "id": "a2",
           "priority": "normal",
-          "title": "特朗普再次抨击'台湾偷走晶片'+美贸易代表松口关税下一步——芯片供应链地缘风险从单向制裁升级为双向关税博弈",
-          "chain": "chain1",
+          "title": "AMD Venice EPYC 2nm正式量产 — 全球首款2nm服务器芯片商业化，制程军备竞赛加速",
+          "chain": "chain2",
           "confidence": "yellow",
+          "lifecycle": "emerging",
+          "priced_in": "not_priced",
+          "capital_backing": {
+            "level": "moderate",
+            "big_fund": true,
+            "national_team_etf": true,
+            "recent_bidding": false,
+            "note": "受益标的(长电/通富/中际旭创)有大基金三期(AI算力/先进封装)覆盖，科创50/半导体ETF重仓。但AMD为海外公司→传导间接→moderate。"
+          },
+          "tickers": []
+        },
+        {
+          "id": "a3",
+          "priority": "normal",
+          "title": "Anthropic+SpaceX 22万GPU Colossus 1集群投入运营 — AI算力从部署→运营阶段升级",
+          "chain": "chain2",
+          "confidence": "green",
           "lifecycle": "positioning",
           "priced_in": "partially_priced",
           "capital_backing": {
@@ -62,58 +75,92 @@
             "big_fund": true,
             "national_team_etf": true,
             "recent_bidding": false,
-            "note": "大基金三期明确投向晶圆制造+卡脖子设备材料→SMIC(688981)/华虹(688347)为直接受益标的。科创50ETF华夏重仓SMIC(权重>5%)→国家队ETF被动配置提供资金底。长电科技(600584)为芯片ETF/半导体ETF成份股。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a3",
-          "priority": "normal",
-          "title": "范式(6682.HK) Q1 Token调用量激增6倍+7万AI模型完成国产芯片适配——AI推理需求量化最强验证+国产AI芯片生态成熟度里程碑",
-          "chain": "chain2",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": true,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "范式为港股标的(6682.HK),A股无直接持仓。大基金三期间接关联:范式7万模型适配的国产芯片(寒武纪思元/海光深算/华为昇腾)为大基金三期AI算力投资方向。寒武纪(688256)被科创50ETF华夏持仓1137万股=国家队被动配置。但范式本身不受大基金直接投资,资金面背书为间接传导。"
+            "note": "大基金三期(3440亿)明确投向AI算力/先进封装/HBM→长电+通富双覆盖。科创50ETF华夏持仓寒武纪1137万股，半导体ETF重仓长电。与DeepSeek 500亿(大基金领投100亿)形成国内外双线共振。strong级资金面支撑。bidding.json无直接新增但长电/通富扩产本身就是最大'中标'。"
           },
           "tickers": []
         },
         {
           "id": "a4",
           "priority": "normal",
-          "title": "燧原科技启动IPO(腾讯连投六轮)——国产AI芯片'第三极'资本化,竞争格局从双龙戏珠到多极竞争",
-          "chain": "chain2",
+          "title": "砺算LX 7G100国产显卡创始版秒空 — 国产消费级GPU首次供不应求，从'能用'到'消费者用钱包投票'质变",
+          "chain": "chain1",
           "confidence": "yellow",
-          "lifecycle": "consensus",
-          "priced_in": "largely_priced",
+          "lifecycle": "emerging",
+          "priced_in": "not_priced",
           "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
+            "level": "moderate",
+            "big_fund": true,
+            "national_team_etf": true,
             "recent_bidding": false,
-            "note": "燧原科技为腾讯系未上市公司,大基金未参与投资。腾讯连续六轮直投=产业资本背书但非国家队。燧原IPO对A股AI芯片标的无直接资金面影响。"
+            "note": "受益标的间接：①寒武纪(688256)→AI GPU出货30万颗思元590预期+消费级GPU验证扩大国产GPU市场信心→大基金三期(AI算力)覆盖+科创50ETF重仓(持仓1137万股)。②景嘉微(300474)→国产GPU先行者，军工+信创+消费三线受益→大基金一期(设计)覆盖。③龙芯中科(688047)→国产CPU/GPU设计→ETF标的。砺算本身未上市→A股通过GPU设计板块接力受益。moderate而非strong因为传导链间接。bidding.json无直接中标。"
           },
           "tickers": []
         },
         {
           "id": "a5",
           "priority": "normal",
-          "title": "NVIDIA Vera Rubin制造成本因HBM涨价激增+小米预警内存持续涨价——HBM→DRAM挤占效应进入第二波全产业链传导",
-          "chain": "chain2",
+          "title": "华为DoB板上裸片封装突破制裁 — 122TB SSD量产，36层堆叠绕开3D NAND层数限制",
+          "chain": "chain1",
           "confidence": "yellow",
-          "lifecycle": "consensus",
-          "priced_in": "largely_priced",
+          "lifecycle": "emerging",
+          "priced_in": "not_priced",
           "capital_backing": {
             "level": "moderate",
             "big_fund": true,
-            "national_team_etf": false,
+            "national_team_etf": true,
             "recent_bidding": false,
-            "note": "大基金三期明确投向先进封装/HBM→长电(600584)百亿扩产获国家队背书。兆易创新(603986)为NOR Flash/DRAM设计龙头,受益存储涨价周期,被科创50ETF/半导体ETF重仓。bidding.json无直接存储中标数据。"
+            "note": "受益标的：①兆易创新(603986)→存储龙头，大基金一期覆盖+科创50ETF重仓，但华为DoB为间接催化(存储需求预期提升)。②深南电路(002916)/兴森科技(002436)→高精度PCB基板需求DoB技术增量，非大基金直投标的但有ETF持仓。③长电科技(600584)→封装创新逻辑共振，大基金一+三期双覆盖。综合：间接传导→moderate。bidding.json无新增中标。"
+          },
+          "tickers": []
+        },
+        {
+          "id": "a6",
+          "priority": "normal",
+          "title": "华泰证券：2028年国产交换芯片市场242亿元 CAGR 96% — AI算力需求填补链二'网络互联'量化空白",
+          "chain": "chain2",
+          "confidence": "low",
+          "lifecycle": "positioning",
+          "priced_in": "partially_priced",
+          "capital_backing": {
+            "level": "moderate",
+            "big_fund": true,
+            "national_team_etf": true,
+            "recent_bidding": false,
+            "note": "①盛科通信(688702)→科创板上市，科创50/科创板ETF标的，国家集成电路产业投资基金持股。大基金三期(3440亿)覆盖AI算力方向→交换芯片为AI数据中心核心组件间接受益。②中兴通讯(000063)→汇金/证金重仓+5G/AI通信基础设施龙头。综合：盛科通信资金面支撑moderate(大基金+ETF但体量小)，中兴通讯资金面strong(国家队重仓但交换芯片仅为其业务之一)。bidding.json无新增中标。"
+          },
+          "tickers": []
+        },
+        {
+          "id": "a7",
+          "priority": "normal",
+          "title": "全国一体化算力网12项技术标准加快制定 — AI算力基础设施从'粗放建设'进入'精耕细作'阶段",
+          "chain": "chain2",
+          "confidence": "low",
+          "lifecycle": "positioning",
+          "priced_in": "partially_priced",
+          "capital_backing": {
+            "level": "moderate",
+            "big_fund": true,
+            "national_team_etf": true,
+            "recent_bidding": false,
+            "note": "①寒武纪(688256)→大基金三期(AI算力)覆盖+科创50ETF重仓(华夏持仓1137万股)。算力网标准化→国产AI芯片被纳入国家级调度平台→出货确定性提升。②海光信息(688041)→国家队ETF重仓+国产算力核心标的。③浪潮信息(000977)/中科曙光(603019)→算力基础设施建设核心供应商。④中兴通讯(000063)→交换芯片+高速路由器双重受益→汇金/证金重仓。综合：政策推动型→moderate资金面支撑。bidding.json无直接新增中标——算力网标准化为政策/标准层事件而非采购层事件。"
+          },
+          "tickers": []
+        },
+        {
+          "id": "a8",
+          "priority": "normal",
+          "title": "Q1 AI领域融资超1100亿元同比激增185% — AI算力资本流入最强量化锚点确认超级周期",
+          "chain": "chain2",
+          "confidence": "yellow",
+          "lifecycle": "consensus",
+          "priced_in": "mostly_priced",
+          "capital_backing": {
+            "level": "strong",
+            "big_fund": true,
+            "national_team_etf": true,
+            "recent_bidding": false,
+            "note": "Q1 AI融资数据本身即是对全球AI算力资本流入的最强量化验证。链二受益标的获得三重资金支撑：①大基金三期(3440亿)明确AI算力/先进封装/HBM→长电/通富/寒武纪/海光 ②国家人工智能产业投资基金(600亿)已投具身智能+DPU+智能驾驶→算力需求延伸至终端 ③科创50ETF华夏持仓寒武纪1137万股→被动资金持续流入。国内外双线：海外Anthropic 300亿+xAI 200亿+OpenAI 1220亿=2420亿新增AI资本 vs 国内大基金三期3440亿+DeepSeek 500亿=3940亿人民币国内AI资本→链二总资金面为strong级。bidding.json无新增中标——此信号为资本面数据而非采购面数据。"
           },
           "tickers": []
         }
@@ -155,6 +202,14 @@
           "attribution": "✅AI算力,化工/材料板块联动(47/65只)"
         },
         {
+          "date": "20260524",
+          "ts_code": "300243.SZ",
+          "name": "瑞丰高材",
+          "pct_chg": 20.01,
+          "vol_ratio": 6.04,
+          "attribution": "✅AI算力,✅国产替代,化工/材料板块联动(47/65只)"
+        },
+        {
           "date": "20260522",
           "ts_code": "301588.SZ",
           "name": "美新科技",
@@ -169,6 +224,14 @@
           "pct_chg": 20.01,
           "vol_ratio": 3.44,
           "attribution": "✅AI算力,化工/材料板块联动(47/65只)"
+        },
+        {
+          "date": "20260524",
+          "ts_code": "301588.SZ",
+          "name": "美新科技",
+          "pct_chg": 20.01,
+          "vol_ratio": 3.44,
+          "attribution": "✅AI算力,✅国产替代,化工/材料板块联动(47/65只)"
         },
         {
           "date": "20260520",
@@ -193,6 +256,14 @@
           "pct_chg": 20.0,
           "vol_ratio": 4.79,
           "attribution": "✅AI算力,消费电子/元器件板块联动(66/80只)"
+        },
+        {
+          "date": "20260524",
+          "ts_code": "688020.SH",
+          "name": "方邦股份",
+          "pct_chg": 20.0,
+          "vol_ratio": 4.79,
+          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(66/80只)"
         },
         {
           "date": "20260511",
@@ -257,37 +328,11 @@
           "pct_chg": 20.0,
           "vol_ratio": 9.18,
           "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
-        },
-        {
-          "date": "20260519",
-          "ts_code": "300657.SZ",
-          "name": "弘信电子",
-          "pct_chg": 20.0,
-          "vol_ratio": 4.49,
-          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
-        },
-        {
-          "date": "20260519",
-          "ts_code": "301176.SZ",
-          "name": "逸豪新材",
-          "pct_chg": 20.0,
-          "vol_ratio": 2.43,
-          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(65/107只)"
-        },
-        {
-          "date": "20260519",
-          "ts_code": "688126.SH",
-          "name": "沪硅产业",
-          "pct_chg": 20.0,
-          "vol_ratio": 9.71,
-          "attribution": "国产替代链,✅a2:🔥 长鑫科技H1指引1100-1200亿(+612-677%,半导体材料板块联动(24/25只)"
         }
       ]
     },
     "themes": {
-      "available": true,
-      "date": "20260522",
-      "top_themes": []
+      "available": false
     },
     "kdj": {
       "available": true,
@@ -297,9 +342,144 @@
     },
     "alerts": {
       "available": true,
-      "total_active": 81,
-      "recent_count": 27,
+      "total_active": 60,
+      "recent_count": 43,
       "fire": [
+        {
+          "id": "analyst-2026-05-24-2300-summary",
+          "level": "fire",
+          "source": "analyst",
+          "date": "2026-05-24",
+          "title": "📊 分析师③晚间分析完成:8信号全验证(6 confirmed+2 partial),3 not_priced⭐周一首次定价,2 strong+6 moderate backing",
+          "impact": "晚间新增:①a7全国算力网12项标准(confirmed)→AI算力基建从粗放→精细 ②a8 Q1全球AI融资2420亿美元/国内1100亿+185%(partial→趋势确认数据待验证)。三星罢工和解为本周最大变量→基于罢工的交易逻辑需重评估。链一周末三线共振(砺算GPU+华为DoB+长鑫DDR5)→2026年以来最强。3 not_priced+15条fire周一超密集定价→成交量3.5万亿+为关键阈值。最大风险:利好超密集→高开低走 台积电辟谣→a1归零 寒武纪传导断裂持续 存储利好多已兑现。",
+          "timeframe": "days"
+        },
+        {
+          "id": "scanner-2026-05-24-2230-cumulative",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-24",
+          "title": "周日全天8信号/5fire——链1三fire(台积电罢工/砺算GPU/华为DoB)+链2六信号。周一15条fire超密集定价窗口",
+          "impact": "链1从'代工单线'→'GPU消费端+存储封装端+DRAM品牌端'三线共振。链2新增算力网标准+AI融资量化(1100亿+185%)强化需求确定性。全球云厂商AI CapEx 8300亿美元+79%为链2最强量化锚。三星罢工和解降低HBM供给风险但存储涨价趋势未变。周一15条fire(上周10+今日5)→成交量3.5万亿+为关键。最大风险:①利好超密集→高开低走 ②台积电周一辟谣→a1归零 ③寒武纪/海光传导断裂持续第三周",
+          "timeframe": "days"
+        },
+        {
+          "id": "robot-scanner-2026-05-24-1640-rs1",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-24",
+          "title": "🔥 T链Q2正式采购订单+新晋供应商入围+国产化率38.6%首次量化——供应商圈从'主力独供'扩展,供应链收入确认进入倒计时 (positioning)",
+          "impact": "三重增量:①正式订单有货款交易(区别于送样)→供应商开始确认机器人业务收入；②新晋供应商收到订单→T链供应商圈实质性扩大,受益标的不再限于拓普/三花/绿的三大主力；③国产化率从15%→38.6%(2023→2026Q1)首次量化。结构件(拓普/三花/长盈)+精密传动(绿的/双环/中大)双线受益,周一定价约70%完成但供应商圈扩大逻辑未充分定价",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "robot-scanner-2026-05-24-1640-rs2",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-24",
+          "title": "🔥 人形机器人行业分化加剧——批量倒闭+'卖不动租得火',非人形机器人盈利——泡沫退潮期头部供应链受益确定性提升 (emerging)",
+          "impact": "行业洗牌从理论预判进入现实发生。人形机器人泡沫退潮→①客户集中度提升(小客户淘汰→头部客户份额↑)→供应链标的池收窄但订单确定性提升；②估值分化——纯概念整机标的承压,供应链实单标的(绿的/双环/汇川)受益；③非人形机器人盈利证明机器人赛道不止人形一条路,传感器/控制器/减速器需求基础更扎实。精密传动+电机驱动+控制与计算三线受益,周一0%定价",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "scanner-2026-05-24-1630-s4",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-24",
+          "title": "🔥 砺算LX 7G100国产显卡创始版秒空——48小时预约3万/首批1000份秒空,国产消费级GPU首次供不应求 (emerging)",
+          "impact": "国产GPU替代从'政策驱动'→'消费者用钱包投票'质变。48小时3万预约+首批秒空为历史首次。周一0%定价窗口。传导:景嘉微/龙芯中科/寒武纪(国产GPU生态链)",
+          "timeframe": "days"
+        },
+        {
+          "id": "scanner-2026-05-24-1630-s5",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-24",
+          "title": "🔥 华为DoB封装突破制裁——122TB SSD量产/36层堆叠绕开3D NAND层数限制 (emerging)",
+          "impact": "制裁可规避性从理论→量产验证。DoB技术将堆叠从16层→36层,容量密度+33%。配合长鑫DDR5(5/23)→链1存储链双线共振。周一0%定价。传导:兆易创新/深科技/江波龙",
+          "timeframe": "days"
+        },
+        {
+          "id": "scanner-2026-05-24-1630-cumulative",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-24",
+          "title": "周日全天6信号/5fire——上午3条+下午3条=6条信号,周一15条fire(上周10+今日5)超密集定价窗口",
+          "impact": "下午新增链1双fire(砺算GPU+华为DoB存储)与长鑫DDR5形成链1三重共振。上午链2三fire(TSMC/AMD/Anthropic)保持。周一累计15条fire信号等待首次定价→成交量3.5万亿+为关键。链1从'代工单线'升级为'GPU+存储+封装'三线共振——国产替代最快赛道从制造扩展到全产业链。",
+          "timeframe": "days"
+        },
+        {
+          "id": "analyst-2026-05-24-summary",
+          "level": "fire",
+          "source": "analyst",
+          "date": "2026-05-24",
+          "title": "📊 分析师周日分析完成:5信号(3 confirmed+2 partial),3 not_priced⭐,2 strong backing。周一14条fire超密集定价窗口",
+          "impact": "核心增量:①台积电罢工风险(a1)双链最强催化→对赌周一官方回应 ②Anthropic-SpaceX 450亿美元/22万GPU获SEC S-1确证→链2需求端最强验证 ③AMD 2nm量产→制程军备竞赛加速 ④太极HBM第二极→封测格局重塑 ⑤28nm DUV量产切换。周一14条fire(上周10条+今日4条)信号等待首次定价→成交量3.5万亿+为关键阈值。最大定价缺口:SMIC 406亿并购+3.23%(vs长电+9.04%)。三大背离:中微连续2日逆跌/寒武纪海光传导断裂/SMIC定价滞后。",
+          "timeframe": "days"
+        },
+        {
+          "id": "robot-scanner-2026-05-24-rs1",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-24",
+          "title": "🔥 矩阵超智MATRIX-3发布——前特斯拉Optimus中国团队回国创业，人才+技术+量产三线扩散 (emerging)",
+          "impact": "张海星(前特斯拉Optimus中国创始领导者)带队发布MATRIX-3(58万起),年内5000台/2027年10万台。国产供应链从T链单一客户→T链+矩阵超智双客户,绿的谐波/三花智控/拓普集团/双环传动零部件需求弹性翻倍。人才扩散降低行业门槛→更多初创可能涌现→精密传动/结构件/电机驱动全面受益",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "robot-scanner-2026-05-24-rs2",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-24",
+          "title": "🔥 2026年国内人形机器人出货量预测6.25万台(+247%)——行业TAM首次量化锚定 (positioning)",
+          "impact": "2025年1.8万台→2026年6.25万台。减速器需求12.5-25万个+电机175万+个=供应链企业收入贡献从'远期期权'变为'12个月内可验证'。精密传动/电机/传感器TAM首次获量化,估值锚从想象空间切换至订单乘数。绿的谐波/双环传动/中大力德/兆威机电/鸣志电器受益",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "robot-scanner-2026-05-24-rs3",
+          "level": "fire",
+          "source": "robot_scanner",
+          "date": "2026-05-24",
+          "title": "🔥 绿的谐波国内人形机器人谐波减速器市占率90%+，4月工业机器人订单+40%——'收费站'地位数据验证 (positioning)",
+          "impact": "90%+市占率首次公开量化+4月订单+40%(近月首次具体增速)。人形+工业机器人双需求叠加→产能缺口从预期→现实→扩产确定性升级。特斯拉大规模量产将加剧产能缺口,绿的谐波是国内唯一可快速扩产的谐波减速器厂商。周一首次定价窗口",
+          "timeframe": "days"
+        },
+        {
+          "id": "scanner-2026-05-24-s1",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-24",
+          "title": "🔥 台积电员工罢工风险浮现 — 三星罢工第4天+台积电传削减奖金员工鼓吹学三星罢工 (emerging)",
+          "impact": "全球芯片供应链从'单一三星罢工(3%产能)'升级为'台积电+三星双风险(50%+先进制程)'。台积电未正式回应传闻阶段。若周一发酵→系统性供给危机定价→利好SMIC/华虹代工+长电封测(国产替代加速),但恐慌情绪可能导致板块无差别抛售。周一为关键首次定价窗口",
+          "timeframe": "days"
+        },
+        {
+          "id": "scanner-2026-05-24-s2",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-24",
+          "title": "🔥 AMD Venice 2nm EPYC正式量产 — 全球首款2nm芯片商业化时间表提前1年 (emerging)",
+          "impact": "2nm量产从预期2027年提前至2026年5月,AI算力需求驱动制程加速获最强验证。对链二短期偏利好(大盘扩张→封装/光模块/存储需求+),中期偏利空(制程差距2nm vs 7nm拉大→国产芯片需更依赖Chiplet弥补)。周一首次定价窗口",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "scanner-2026-05-24-s3",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-24",
+          "title": "🔥 Anthropic+SpaceX 22万GPU Colossus 1集群投入运营 — AI算力从融资计划→实际部署质变 (positioning)",
+          "impact": "22万GPU/300MW可交叉验证的硬数据,Anthropic单家算力需求超多数国家超算中心。传导:长电/通富(封装溢出)→中际旭创/天孚(光互联)→兆易/深科技(HBM需求)。周一仍有首次定价空间,尤其A股尚未对Anthropic具体部署规模定价",
+          "timeframe": "weeks"
+        },
+        {
+          "id": "scanner-2026-05-24-cumulative",
+          "level": "fire",
+          "source": "scanner",
+          "date": "2026-05-24",
+          "title": "周一13条fire信号密集定价窗口 — 周六10条+周日3条=13条fire,成交量3.5万亿+为关键阈值",
+          "impact": "新增三大风险维度:①台积电罢工传闻→系统性供给风险 ②AMD 2nm量产→制程差距拉大 ③Anthropic 22万GPU→需求端最强验证。核心变量:周一成交量能否从2.93万亿(-16.5%)回升至3.5万亿+。多重利好vs多重风险对冲→周一可能出现高波动、结构性分化",
+          "timeframe": "days"
+        },
         {
           "id": "scanner-2026-05-23-2230-s1",
           "level": "fire",
@@ -528,7 +708,7 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-05-23T23:05:01.200011+08:00",
+      "last_updated": "2026-05-24T23:05:00.223864+08:00",
       "active_count": 10,
       "positions": [
         {
@@ -537,7 +717,7 @@
           "return_pct": 89.99,
           "ret_5d": 24.94,
           "warnings": [],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         },
         {
           "code": "002156.SZ",
@@ -545,7 +725,7 @@
           "return_pct": 60.45,
           "ret_5d": 9.25,
           "warnings": [],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         },
         {
           "code": "688012.SH",
@@ -553,7 +733,7 @@
           "return_pct": 50.84,
           "ret_5d": 7.03,
           "warnings": [],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         },
         {
           "code": "002371.SZ",
@@ -561,7 +741,7 @@
           "return_pct": 40.99,
           "ret_5d": 11.88,
           "warnings": [],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         },
         {
           "code": "688041.SH",
@@ -569,7 +749,7 @@
           "return_pct": 38.23,
           "ret_5d": 2.89,
           "warnings": [],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         },
         {
           "code": "688126.SH",
@@ -577,7 +757,7 @@
           "return_pct": 24.43,
           "ret_5d": 13.05,
           "warnings": [],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         },
         {
           "code": "688981.SH",
@@ -585,7 +765,7 @@
           "return_pct": 1.06,
           "ret_5d": 11.66,
           "warnings": [],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         },
         {
           "code": "688256.SH",
@@ -595,7 +775,7 @@
           "warnings": [
             "⚠️ 从thesis以来高点回撤-31.16%"
           ],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         },
         {
           "code": "603650.SH",
@@ -603,7 +783,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         },
         {
           "code": "688082.SH",
@@ -611,7 +791,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-05-23"
+          "last_check": "2026-05-24"
         }
       ]
     }

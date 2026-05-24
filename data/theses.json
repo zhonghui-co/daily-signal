@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-23T23:05:01.200011+08:00",
+  "last_updated": "2026-05-24T23:05:00.223864+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -78,9 +78,14 @@
           "date": "2026-05-23",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -205,9 +210,32 @@
             "low_since": 207.04,
             "from_high_pct": -10.54
           }
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {
+            "latest_close": 312.4,
+            "latest_date": "20260522",
+            "since_date": "2026-05-06",
+            "since_return_pct": 38.23,
+            "ret_5d_pct": 2.89,
+            "ret_1d_pct": 1.76,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -10.54
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "AMD Venice EPYC 2nm正式量产 — 全球首款2nm服务器芯片商业化，先进制程竞赛加速",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -348,9 +376,35 @@
           "warnings": [
             "⚠️ 从thesis以来高点回撤-31.16%"
           ]
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1286.0,
+            "latest_date": "20260522",
+            "since_date": "2026-05-06",
+            "since_return_pct": -7.48,
+            "ret_5d_pct": 5.67,
+            "ret_1d_pct": -0.38,
+            "high_since": 1868.0,
+            "low_since": 971.3,
+            "from_high_pct": -31.16
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "AMD Venice EPYC 2nm正式量产 — 全球首款2nm服务器芯片商业化，先进制程竞赛加速",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ],
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-31.16%"
+          ]
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -469,9 +523,44 @@
             "low_since": 39.54,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {
+            "latest_close": 63.44,
+            "latest_date": "20260522",
+            "since_date": "2026-05-06",
+            "since_return_pct": 60.45,
+            "ret_5d_pct": 9.25,
+            "ret_1d_pct": 2.72,
+            "high_since": 63.44,
+            "low_since": 39.54,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "台积电员工罢工风险浮现 — 三星罢工第4天+台积电传削减奖金员工鼓吹学三星罢工",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a2",
+              "title": "AMD Venice EPYC 2nm正式量产 — 全球首款2nm服务器芯片商业化，先进制程竞赛加速",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "Anthropic+SpaceX 22万GPU Colossus 1集群投入运营 — AI算力从融资计划到实际部署质变",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -608,9 +697,38 @@
             "low_since": 424.08,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {
+            "latest_close": 669.0,
+            "latest_date": "20260522",
+            "since_date": "2026-05-06",
+            "since_return_pct": 40.99,
+            "ret_5d_pct": 11.88,
+            "ret_1d_pct": 0.91,
+            "high_since": 669.0,
+            "low_since": 424.08,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "台积电员工罢工风险浮现 — 三星罢工第4天+台积电传削减奖金员工鼓吹学三星罢工",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a5",
+              "title": "国产28nm浸没式DUV光刻机批量交付+良率90%以上 — 光刻机自主化从'突破'到'量产'阶段切换",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -740,9 +858,38 @@
             "low_since": 293.5,
             "from_high_pct": -4.23
           }
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {
+            "latest_close": 469.6,
+            "latest_date": "20260522",
+            "since_date": "2026-05-06",
+            "since_return_pct": 50.84,
+            "ret_5d_pct": 7.03,
+            "ret_1d_pct": -1.3,
+            "high_since": 490.33,
+            "low_since": 293.5,
+            "from_high_pct": -4.23
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "台积电员工罢工风险浮现 — 三星罢工第4天+台积电传削减奖金员工鼓吹学三星罢工",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a5",
+              "title": "国产28nm浸没式DUV光刻机批量交付+良率90%以上 — 光刻机自主化从'突破'到'量产'阶段切换",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -867,9 +1014,50 @@
             "low_since": 38.29,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {
+            "latest_close": 72.88,
+            "latest_date": "20260522",
+            "since_date": "2026-05-06",
+            "since_return_pct": 89.99,
+            "ret_5d_pct": 24.94,
+            "ret_1d_pct": 9.04,
+            "high_since": 72.88,
+            "low_since": 38.29,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "台积电员工罢工风险浮现 — 三星罢工第4天+台积电传削减奖金员工鼓吹学三星罢工",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a2",
+              "title": "AMD Venice EPYC 2nm正式量产 — 全球首款2nm服务器芯片商业化，先进制程竞赛加速",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "Anthropic+SpaceX 22万GPU Colossus 1集群投入运营 — AI算力从融资计划到实际部署质变",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "太极实业16层HBM堆叠封装技术+海太半导体98%良率 — HBM国产封装第二极浮现",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -995,9 +1183,38 @@
             "low_since": 91.78,
             "from_high_pct": -1.85
           }
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {
+            "latest_close": 131.33,
+            "latest_date": "20260522",
+            "since_date": "2026-05-06",
+            "since_return_pct": 1.06,
+            "ret_5d_pct": 11.66,
+            "ret_1d_pct": 3.23,
+            "high_since": 133.81,
+            "low_since": 91.78,
+            "from_high_pct": -1.85
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "台积电员工罢工风险浮现 — 三星罢工第4天+台积电传削减奖金员工鼓吹学三星罢工",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a5",
+              "title": "国产28nm浸没式DUV光刻机批量交付+良率90%以上 — 光刻机自主化从'突破'到'量产'阶段切换",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1087,9 +1304,24 @@
             "low_since": 16.61,
             "from_high_pct": -5.79
           }
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {
+            "latest_close": 27.81,
+            "latest_date": "20260522",
+            "since_date": "2026-05-06",
+            "since_return_pct": 24.43,
+            "ret_5d_pct": 13.05,
+            "ret_1d_pct": 0.47,
+            "high_since": 29.52,
+            "low_since": 16.61,
+            "from_high_pct": -5.79
+          }
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1178,9 +1410,14 @@
           "date": "2026-05-23",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-24",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-23",
+      "last_check": "2026-05-24",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     }
