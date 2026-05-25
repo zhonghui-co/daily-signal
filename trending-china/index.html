@@ -28,7 +28,7 @@ details summary { outline: none; }
 <body>
 
 <h1>🇨🇳 <span>趋势中国</span> Trending China</h1>
-<p class="subtitle">十五五规划 14大方向 · 20260525 · 生成于 2026-05-25 16:35:02 · 数据源: pool.db + classify.json</p>
+<p class="subtitle">十五五规划 14大方向 · 20260525 · 生成于 2026-05-25 22:55:41 · 数据源: pool.db + classify.json</p>
 
 <!-- 管线状态 -->
 <details>
@@ -6549,6 +6549,43 @@ details summary { outline: none; }
                 <td>strong_up</td>
                 <td style="font-size:12px">🆕60日高 🔥连放</td>
             </tr></table>
+
+<h2>📍 B1/B2/B3 信号扫描</h2>
+<div id="signals-board" style="color:#64748b">加载中...</div>
+<script>
+fetch('/daily-signal/data/signals-daily.json')
+.then(r => r.json())
+.then(d => {
+    let h = '';
+    if (d.golden && d.golden.length) {
+        h += '<h3>🥇 金叉 (近20日 ' + d.golden.length + '只)</h3><table><tr><th>代码</th><th>名称</th><th>方向</th><th>日期</th><th>金叉价</th><th>白线</th><th>黄线</th></tr>';
+        d.golden.slice(0,20).forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td>' + s[5] + '</td><td>' + s[6] + '</td><td>' + s[7] + '</td></tr>'; });
+        h += '</table>';
+    }
+    if (d.b2 && d.b2.length) {
+        h += '<h3>💥 B2确认 (近5日 >4%放量中阳 ' + d.b2.length + '只)</h3><table><tr><th>代码</th><th>名称</th><th>方向</th><th>日期</th><th>涨幅</th><th>量比</th><th>形态</th></tr>';
+        d.b2.slice(0,20).forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td style="color:#ef4444">+' + s[6] + '%</td><td>' + s[7] + 'x</td><td>' + (s[8]||'') + '</td></tr>'; });
+        h += '</table>';
+    }
+    if (d.b1 && d.b1.length) {
+        h += '<h3>📍 B1超卖 (J<13 白黄区间 ' + d.b1.length + '只)</h3><table><tr><th>代码</th><th>名称</th><th>方向</th><th>日期</th><th>收盘</th><th>J值</th><th>质量</th></tr>';
+        d.b1.slice(0,20).forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td>' + s[5] + '</td><td>' + s[6] + '</td><td>' + '⭐'.repeat(s[9]||0) + '</td></tr>'; });
+        h += '</table>';
+    }
+    if (d.death && d.death.length) {
+        h += '<h3>⚠️ 死叉预警 (近20日 ' + d.death.length + '只)</h3><table><tr><th>代码</th><th>名称</th><th>方向</th><th>日期</th><th>收盘</th></tr>';
+        d.death.slice(0,10).forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td>' + s[5] + '</td></tr>'; });
+        h += '</table>';
+    }
+    if (d.flows && Object.keys(d.flows).length) {
+        h += '<h3>💰 本周主力资金 (亿元)</h3><table><tr><th>板块</th><th>净流入</th></tr>';
+        Object.entries(d.flows).sort((a,b)=>b[1]-a[1]).slice(0,10).forEach(([k,v]) => { h += '<tr><td>' + k + '</td><td style="color:' + (v>0?'#22c55e':'#ef4444') + '">' + (v>0?'+':'') + v + '亿</td></tr>'; });
+        h += '</table>';
+    }
+    document.getElementById('signals-board').innerHTML = h || '暂无信号';
+})
+.catch(() => document.getElementById('signals-board').innerHTML = '信号数据加载失败');
+</script>
 
 <div class="footer">
     Trending China v2.0 · 基于「十五五规划纲要」产业方向 · 统一数据管线 (pool.db)
