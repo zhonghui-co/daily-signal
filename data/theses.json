@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-24T23:05:00.223864+08:00",
+  "last_updated": "2026-05-25T23:05:00.463852+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -83,9 +83,14 @@
           "date": "2026-05-24",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -233,9 +238,44 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {
+            "latest_close": 329.68,
+            "latest_date": "20260525",
+            "since_date": "2026-05-06",
+            "since_return_pct": 45.88,
+            "ret_5d_pct": 5.66,
+            "ret_1d_pct": 5.53,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -5.59
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "🔥 寒武纪传导链断裂魔咒打破——+11%创历史新高总市值超9000亿，四重AI催化首次获集体定价",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a3",
+              "title": "全球AI大模型周调用量五连涨至28.9万亿Token——国产AI连续4周超美国，推理需求量化强化",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "🔥 麒麟2026 τ定律产品化数据——晶体管密度+53.5%至238MTr/mm²，峰值频率首破3GHz",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -402,9 +442,47 @@
           "warnings": [
             "⚠️ 从thesis以来高点回撤-31.16%"
           ]
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1406.5,
+            "latest_date": "20260525",
+            "since_date": "2026-05-06",
+            "since_return_pct": 1.19,
+            "ret_5d_pct": 6.62,
+            "ret_1d_pct": 9.37,
+            "high_since": 1868.0,
+            "low_since": 971.3,
+            "from_high_pct": -24.71
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "🔥 寒武纪传导链断裂魔咒打破——+11%创历史新高总市值超9000亿，四重AI催化首次获集体定价",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a3",
+              "title": "全球AI大模型周调用量五连涨至28.9万亿Token——国产AI连续4周超美国，推理需求量化强化",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "🔥 麒麟2026 τ定律产品化数据——晶体管密度+53.5%至238MTr/mm²，峰值频率首破3GHz",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ],
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-24.71%"
+          ]
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -558,9 +636,44 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {
+            "latest_close": 69.78,
+            "latest_date": "20260525",
+            "since_date": "2026-05-06",
+            "since_return_pct": 76.48,
+            "ret_5d_pct": 18.55,
+            "ret_1d_pct": 9.99,
+            "high_since": 69.78,
+            "low_since": 39.54,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "🔥 寒武纪传导链断裂魔咒打破——+11%创历史新高总市值超9000亿，四重AI催化首次获集体定价",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a4",
+              "title": "🔥 麒麟2026 τ定律产品化数据——晶体管密度+53.5%至238MTr/mm²，峰值频率首破3GHz",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a5",
+              "title": "🔥 长鑫科技5/27IPO上会+朱一明让渡7.68亿股激励员工——国产DRAM龙头催化时间锚升级",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -726,9 +839,32 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {
+            "latest_close": 698.19,
+            "latest_date": "20260525",
+            "since_date": "2026-05-06",
+            "since_return_pct": 47.14,
+            "ret_5d_pct": 12.67,
+            "ret_1d_pct": 4.36,
+            "high_since": 698.19,
+            "low_since": 424.08,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a4",
+              "title": "🔥 麒麟2026 τ定律产品化数据——晶体管密度+53.5%至238MTr/mm²，峰值频率首破3GHz",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -887,9 +1023,38 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {
+            "latest_close": 485.3,
+            "latest_date": "20260525",
+            "since_date": "2026-05-06",
+            "since_return_pct": 55.88,
+            "ret_5d_pct": 1.21,
+            "ret_1d_pct": 3.34,
+            "high_since": 490.33,
+            "low_since": 293.5,
+            "from_high_pct": -1.03
+          },
+          "signals": [
+            {
+              "signal_id": "a4",
+              "title": "🔥 麒麟2026 τ定律产品化数据——晶体管密度+53.5%至238MTr/mm²，峰值频率首破3GHz",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a5",
+              "title": "🔥 长鑫科技5/27IPO上会+朱一明让渡7.68亿股激励员工——国产DRAM龙头催化时间锚升级",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1055,9 +1220,38 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {
+            "latest_close": 80.17,
+            "latest_date": "20260525",
+            "since_date": "2026-05-06",
+            "since_return_pct": 108.99,
+            "ret_5d_pct": 31.84,
+            "ret_1d_pct": 10.0,
+            "high_since": 80.17,
+            "low_since": 38.29,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "🔥 寒武纪传导链断裂魔咒打破——+11%创历史新高总市值超9000亿，四重AI催化首次获集体定价",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a4",
+              "title": "🔥 麒麟2026 τ定律产品化数据——晶体管密度+53.5%至238MTr/mm²，峰值频率首破3GHz",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1212,9 +1406,38 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {
+            "latest_close": 156.0,
+            "latest_date": "20260525",
+            "since_date": "2026-05-06",
+            "since_return_pct": 20.05,
+            "ret_5d_pct": 31.29,
+            "ret_1d_pct": 18.78,
+            "high_since": 156.0,
+            "low_since": 91.78,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "🔥 寒武纪传导链断裂魔咒打破——+11%创历史新高总市值超9000亿，四重AI催化首次获集体定价",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a4",
+              "title": "🔥 麒麟2026 τ定律产品化数据——晶体管密度+53.5%至238MTr/mm²，峰值频率首破3GHz",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1319,9 +1542,24 @@
             "low_since": 16.61,
             "from_high_pct": -5.79
           }
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {
+            "latest_close": 29.05,
+            "latest_date": "20260525",
+            "since_date": "2026-05-06",
+            "since_return_pct": 29.98,
+            "ret_5d_pct": -1.59,
+            "ret_1d_pct": 4.46,
+            "high_since": 29.52,
+            "low_since": 16.61,
+            "from_high_pct": -1.59
+          }
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1415,9 +1653,14 @@
           "date": "2026-05-24",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-25",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-24",
+      "last_check": "2026-05-25",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     }
