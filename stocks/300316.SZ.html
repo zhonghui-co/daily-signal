@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>晶盛机电 (300316.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>晶盛机电 <code style="font-size:0.8rem;color:var(--text-muted)">300316.SZ</code></h1>
+    <div class="sub">半导体设备 · 晶体生长/外延/SiC衬底 · 最新价 53.80 · 20260526 · 5日 +4.4% · 20日 +23.7%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: 业绩驱动 | 持续性: 🟡 中等
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+<div style="margin:8px 0"><strong style="color:var(--text-heading)">主营业务：</strong>晶体生长设备、半导体加工装备（外延/ALD/减薄/边抛）、碳化硅衬底材料、蓝宝石材料</div>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">晶盛机电：2026年一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">浙江晶盛机电股份有限公司 2026年第一季度报告 证券代码：300316 证券简称：晶盛机电 公告编号：2026-020 浙江晶盛机电股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 重要内容提示： 1.董事会及董事、高级管理人员保证季度报告的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担 个别和连带的法律责任。 2.公司负责人、主管会计工作负责人及会计机构负责人(会计主管人员)声明：保证季度报告中财务信息的真实、准确、完 整。 3.第一季度财务会计报告是否经过审计 □是否 1 浙江晶盛机电股份有限公司 2026年第一季度报告 一、主要财务数据 （一）主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是否 本报告期 上年同期 本报告期比上年同期增减（%） 营业收入（元） 1,729,485,850.04 3,137,803,861.66 -44.88% 归属于上市公司股东的净利润（元） 102,547,160.48 572,898,649.50 -82.10% 归...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225203335.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">晶盛机电：1、2026-019  关于2026年第一季度报告披露的提示性公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：300316 证券简称：晶盛机电 编号：2026-019 浙江晶盛机电股份有限公司 关于 2026 年第一季度报告披露的提示性公告 本公司及董事会全体成员保证信息披露内容的真实、准确、完整，没有 虚假记载、误导性陈述或重大遗漏。 2026年4月27日，浙江晶盛机电股份有限公司（以下简称“公司”）召开 第六届董事会第四次会议，审议通过了公司《2026 年第一季度报告》。为使投 资者全面了解公司的经营成果及财务状况，公司《2026 年第一季度报告》于2026 年 4 月 28 日在中国证监会指定的创业板信息披露媒体巨潮资讯网 （http://www.cninfo.com.cn）上披露，敬请投资者注意查阅。 特此公告。 浙江晶盛机电股份有限公司 董事会 2026年4月28日 1</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225203337.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-11</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">晶盛机电：2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">浙江晶盛机电股份有限公司 2025年年度报告摘要 证券代码：300316 证券简称：晶盛机电 公告编号：2026-012 浙江晶盛机电股份有限公司 2025 年年度报告摘要 一、重要提示 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规划，投资者应当到证监会指 定媒体仔细阅读年度报告全文。 所有董事均已出席了审议本报告的董事会会议。 天健会计师事务所（特殊普通合伙）对本年度公司财务报告的审计意见为：标准的无保留意见。 非标准审计意见提示 □适用不适用 公司上市时未盈利且目前未实现盈利 □适用不适用 董事会审议的报告期利润分配预案或公积金转增股本预案 适用□不适用 公司经本次董事会审议通过的利润分配预案为：以公司总股本1,309,533,797股扣除已回购股份2,173,984股后的 1,307,359,813股为基数，向全体股东每10股派发现金红利1.5元（含税），送红股0股（含税），以资本公积金向全体 股东每10股转增0股。 董事会决议通过的本报告期优先股利润分配预案 □适用不适用 二、公司基本情况 1、公司简介 股票简称 晶盛机电 股票代码 ...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-11/1225095475.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-11</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">晶盛机电：2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">浙江晶盛机电股份有限公司 2025年年度报告全文 浙江晶盛机电股份有限公司 2025 年年度报告 2026 年 4 月 1 浙江晶盛机电股份有限公司 2025年年度报告全文 第一节 重要提示、目录和释义 公司董事会及董事、高级管理人员保证年度报告内容的真实、准确、完 整，不存在虚假记载、误导性陈述或者重大遗漏，并承担个别和连带的法律 责任。 公司负责人曹建伟、主管会计工作负责人陆晓雯及会计机构负责人(会计 主管人员)章文勇声明：保证本年度报告中财务报告的真实、准确、完整。 所有董事均已出席了审议本报告的董事会会议。 报告期内，公司经营业绩下滑主要受光伏行业波动影响。公司主营业 务、核心竞争力以及持续经营能力等未发生重大不利变化，主要财务指标符 合行业发展情况。 本报告中如有涉及公司未来计划等前瞻性陈述，均不构成公司对投资者 的实质承诺，投资者及相关人士均应当对此保持足够的风险认识，并且应当 理解计划、预测与承诺之间的差异。 公司存在行业波动风险、市场竞争风险、技术研发风险、技术人员流失 风险以及订单履行风险，敬请广大投资者详细阅读本报告第三节“管理层讨论 与分析”之“（十一）公司未来发...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-11/1225095476.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-11</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">晶盛机电：关于2025年年度报告披露的提示性公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：300316 证券简称：晶盛机电 编号：2026-011 浙江晶盛机电股份有限公司 关于 2025 年年度报告披露的提示性公告 本公司及董事会全体成员保证信息披露内容的真实、准确、完整，没有 虚假记载、误导性陈述或重大遗漏。 2026 年 4 月 9 日，浙江晶盛机电股份有限公司（以下简称“公司”）召开 第六届董事会第三次会议，审议通过了公司《2025 年年度报告及摘要》。为使 投资者全面了解公司的经营成果、财务状况及未来发展规划，公司《2025 年年 度报告》及《2025 年年度报告摘要》于 2026 年 4 月 11 日在中国证监会指定的 创业板信息披露媒体巨潮资讯网（http://www.cninfo.com.cn）上披露，敬请投资 者注意查阅。 特此公告。 浙江晶盛机电股份有限公司 董事会 2026年4月11日 1</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-11/1225095490.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+<div class="card"><h3>💬 投资者调研</h3>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260514</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：晶盛机电：300316晶盛机电投资者关系管理信息20260514</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容介绍 引领与客户需求深度挖掘双轮驱动的研发体系，持续加大研发投入， 构建核心技术护城河，保障公司核心竞争力的长期可持续。在半导 体集成电路装备领域，公司率先实现8-12英寸大硅片制造装备的国 产化突破与规模化应用，并向芯片制造和先进封装环节延伸布局。 面向先进制程需求，公司开发8-12英寸减压外延设备、ALD等薄膜 沉积装备，依托差异化技术路线与迭代创新的产品理念，为客户提 供高适配性的国</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260414</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：晶盛机电：300316晶盛机电投资者关系管理信息20260414</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容介绍 答：报告期内，公司依托半导体装备国产替代的行业发展趋势 和机遇，积极推进半导体装备的市场推广。 在集成电路装备领域，积极推进12 英寸干进干出边抛机、12 英寸双面减薄机等新产品的客户验证；成功开发应用于先进封装的 超快紫外激光开槽设备，填补国内高端紫外激光开槽技术领域的空 白，实现国产替代。发布方形硅片全流程解决方案，为客户提供效 率更高、综合成本更优的一站式设备解决方案。公司自主</div></div>
+</div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260526</td><td>53.80</td><td class="negative">-4.61%</td><td>549700</td></tr><tr><td>20260525</td><td>56.40</td><td class="positive">+2.38%</td><td>466038</td></tr><tr><td>20260522</td><td>55.09</td><td class="positive">+5.11%</td><td>495968</td></tr><tr><td>20260521</td><td>52.41</td><td class="negative">-7.57%</td><td>486506</td></tr><tr><td>20260520</td><td>56.85</td><td class="positive">+9.10%</td><td>654656</td></tr><tr><td>20260519</td><td>52.11</td><td class="positive">+1.70%</td><td>355498</td></tr><tr><td>20260518</td><td>51.24</td><td class="negative">-2.95%</td><td>432523</td></tr><tr><td>20260515</td><td>52.80</td><td class="negative">-3.83%</td><td>637078</td></tr><tr><td>20260514</td><td>54.90</td><td class="positive">+1.69%</td><td>812127</td></tr><tr><td>20260513</td><td>53.99</td><td class="positive">+12.74%</td><td>813115</td></tr><tr><td>20260512</td><td>47.89</td><td class="positive">+0.42%</td><td>382142</td></tr><tr><td>20260511</td><td>47.69</td><td class="positive">+3.72%</td><td>405475</td></tr><tr><td>20260508</td><td>45.98</td><td class="negative">-0.28%</td><td>286795</td></tr><tr><td>20260507</td><td>46.11</td><td class="positive">+3.36%</td><td>453792</td></tr><tr><td>20260506</td><td>44.61</td><td class="positive">+4.67%</td><td>311862</td></tr><tr><td>20260430</td><td>42.62</td><td class="positive">+1.94%</td><td>224837</td></tr><tr><td>20260429</td><td>41.81</td><td class="positive">+3.80%</td><td>293096</td></tr><tr><td>20260428</td><td>40.28</td><td class="negative">-6.65%</td><td>495816</td></tr><tr><td>20260427</td><td>43.15</td><td class="negative">-0.90%</td><td>272314</td></tr><tr><td>20260424</td><td>43.54</td><td class="negative">-0.11%</td><td>201732</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

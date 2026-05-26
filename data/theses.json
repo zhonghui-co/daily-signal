@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-25T23:05:00.463852+08:00",
+  "last_updated": "2026-05-26T23:05:00.541232+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -88,9 +88,14 @@
           "date": "2026-05-25",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -273,9 +278,38 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {
+            "latest_close": 341.16,
+            "latest_date": "20260526",
+            "since_date": "2026-05-06",
+            "since_return_pct": 50.96,
+            "ret_5d_pct": 7.71,
+            "ret_1d_pct": 3.48,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -2.3
+          },
+          "signals": [
+            {
+              "signal_id": "a3",
+              "title": "🔥 壁仞科技纳入恒生综合指数——高盛Buy+港股通预期，国产AI芯片从寒武纪单极→三极资本通道格局",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "🔥 Goldman Sachs: AI Agent利润率拐点——TAM+资金+利润三线闭环，链2从'增长故事'→'增长+盈利双故事'",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -480,9 +514,47 @@
           "warnings": [
             "⚠️ 从thesis以来高点回撤-24.71%"
           ]
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1410.96,
+            "latest_date": "20260526",
+            "since_date": "2026-05-06",
+            "since_return_pct": 1.51,
+            "ret_5d_pct": 3.56,
+            "ret_1d_pct": 0.32,
+            "high_since": 1868.0,
+            "low_since": 971.3,
+            "from_high_pct": -24.47
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "🔴 科创50跌超2%+半导体领跌——τ定律获利回吐6小时快速验证，consensus→exhausted转换确认",
+              "confidence": "yellow",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a3",
+              "title": "🔥 壁仞科技纳入恒生综合指数——高盛Buy+港股通预期，国产AI芯片从寒武纪单极→三极资本通道格局",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "🔥 Goldman Sachs: AI Agent利润率拐点——TAM+资金+利润三线闭环，链2从'增长故事'→'增长+盈利双故事'",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ],
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-24.47%"
+          ]
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -671,9 +743,50 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {
+            "latest_close": 75.39,
+            "latest_date": "20260526",
+            "since_date": "2026-05-06",
+            "since_return_pct": 90.67,
+            "ret_5d_pct": 21.05,
+            "ret_1d_pct": 8.04,
+            "high_since": 75.39,
+            "low_since": 39.54,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "🔴 科创50跌超2%+半导体领跌——τ定律获利回吐6小时快速验证，consensus→exhausted转换确认",
+              "confidence": "yellow",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a3",
+              "title": "🔥 壁仞科技纳入恒生综合指数——高盛Buy+港股通预期，国产AI芯片从寒武纪单极→三极资本通道格局",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "🔥 Goldman Sachs: AI Agent利润率拐点——TAM+资金+利润三线闭环，链2从'增长故事'→'增长+盈利双故事'",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "SIA: Q1全球半导体2985亿美元+25%——AI超级周期数据锚定，全年万亿里程碑",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -862,9 +975,38 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {
+            "latest_close": 670.25,
+            "latest_date": "20260526",
+            "since_date": "2026-05-06",
+            "since_return_pct": 41.25,
+            "ret_5d_pct": 2.17,
+            "ret_1d_pct": -4.0,
+            "high_since": 698.19,
+            "low_since": 424.08,
+            "from_high_pct": -4.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "🔴 科创50跌超2%+半导体领跌——τ定律获利回吐6小时快速验证，consensus→exhausted转换确认",
+              "confidence": "yellow",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a2",
+              "title": "🔥 Nikkei Asia持续campaign——τ定律国际媒体从单篇→多国多篇叙事升级，设备/材料补涨窗口",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1052,9 +1194,32 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {
+            "latest_close": 463.51,
+            "latest_date": "20260526",
+            "since_date": "2026-05-06",
+            "since_return_pct": 48.88,
+            "ret_5d_pct": -5.47,
+            "ret_1d_pct": -4.49,
+            "high_since": 490.33,
+            "low_since": 293.5,
+            "from_high_pct": -5.47
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "🔥 Nikkei Asia持续campaign——τ定律国际媒体从单篇→多国多篇叙事升级，设备/材料补涨窗口",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1249,9 +1414,38 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {
+            "latest_close": 88.19,
+            "latest_date": "20260526",
+            "since_date": "2026-05-06",
+            "since_return_pct": 129.9,
+            "ret_5d_pct": 33.18,
+            "ret_1d_pct": 10.0,
+            "high_since": 88.19,
+            "low_since": 38.29,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a4",
+              "title": "🔥 Goldman Sachs: AI Agent利润率拐点——TAM+资金+利润三线闭环，链2从'增长故事'→'增长+盈利双故事'",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "SIA: Q1全球半导体2985亿美元+25%——AI超级周期数据锚定，全年万亿里程碑",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1435,9 +1629,44 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {
+            "latest_close": 149.18,
+            "latest_date": "20260526",
+            "since_date": "2026-05-06",
+            "since_return_pct": 14.8,
+            "ret_5d_pct": 11.49,
+            "ret_1d_pct": -4.37,
+            "high_since": 156.0,
+            "low_since": 91.78,
+            "from_high_pct": -4.37
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "🔴 科创50跌超2%+半导体领跌——τ定律获利回吐6小时快速验证，consensus→exhausted转换确认",
+              "confidence": "yellow",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a3",
+              "title": "🔥 壁仞科技纳入恒生综合指数——高盛Buy+港股通预期，国产AI芯片从寒武纪单极→三极资本通道格局",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "🔥 Goldman Sachs: AI Agent利润率拐点——TAM+资金+利润三线闭环，链2从'增长故事'→'增长+盈利双故事'",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1557,9 +1786,32 @@
             "low_since": 16.61,
             "from_high_pct": -1.59
           }
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {
+            "latest_close": 26.9,
+            "latest_date": "20260526",
+            "since_date": "2026-05-06",
+            "since_return_pct": 20.36,
+            "ret_5d_pct": -8.22,
+            "ret_1d_pct": -7.4,
+            "high_since": 29.52,
+            "low_since": 16.61,
+            "from_high_pct": -8.88
+          },
+          "signals": [
+            {
+              "signal_id": "a6",
+              "title": "光刻胶国产替代政策双驱动——政府工作报告写入+大基金三期注资，材料环节为τ定律最后补涨",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1658,9 +1910,14 @@
           "date": "2026-05-25",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-26",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-25",
+      "last_check": "2026-05-26",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     }
