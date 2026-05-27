@@ -337,6 +337,44 @@ a:hover { text-decoration:underline; }
     border:1px solid #30363d;
 }
 
+/* ===== Chain Progress ===== */
+.chain-card {
+    background:#161b22; border:1px solid #30363d; border-radius:10px;
+    padding:14px 16px;
+}
+.chain-card h3 { font-size:14px; color:#e6edf3; margin-bottom:4px; display:flex; align-items:center; gap:8px; }
+.chain-card .chain-desc { font-size:11px; color:#8b949e; margin-bottom:12px; }
+.chain-link-row {
+    display:flex; align-items:center; gap:8px; padding:6px 10px;
+    border-bottom:1px solid #21262d; font-size:12px; transition:background 0.15s;
+}
+.chain-link-row:last-child { border-bottom:none; }
+.chain-link-row:hover { background:rgba(88,166,255,0.04); }
+.chain-link-dot { width:10px; height:10px; border-radius:3px; flex-shrink:0; }
+.chain-link-dot.green { background:#3fb950; }
+.chain-link-dot.yellow { background:#d29922; }
+.chain-link-dot.red { background:#f85149; }
+.chain-link-dot.orange { background:#ff8c00; }
+.chain-link-name { font-weight:500; color:#e6edf3; min-width:110px; }
+.chain-link-rate { color:#8b949e; font-size:10px; min-width:65px; }
+.chain-link-status { font-size:10px; padding:1px 6px; border-radius:3px; white-space:nowrap; }
+.chain-link-status.driven { background:rgba(35,134,54,0.12); color:#3fb950; border:1px solid rgba(35,134,54,0.3); }
+.chain-link-status.spec { background:rgba(210,153,34,0.12); color:#d29922; border:1px solid rgba(210,153,34,0.3); }
+.chain-link-status.gap { background:rgba(218,54,51,0.12); color:#f85149; border:1px solid rgba(218,54,51,0.3); }
+.chain-link-tickers { font-size:10px; color:#58a6ff; display:flex; gap:3px; flex-wrap:wrap; min-width:80px; }
+.chain-link-note { font-size:10px; color:#8b949e; flex:1; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:180px; }
+
+/* Inflection Table */
+.inflection-table { width:100%; border-collapse:collapse; font-size:12px; }
+.inflection-table th { text-align:left; color:#8b949e; font-weight:600; padding:8px 12px; background:#161b22; border-bottom:1px solid #21262d; }
+.inflection-table td { padding:10px 12px; border-bottom:1px solid #21262d; }
+.inflection-table tr:hover td { background:rgba(88,166,255,0.03); }
+.inflection-status { font-size:10px; padding:2px 8px; border-radius:10px; font-weight:600; white-space:nowrap; }
+.inflection-status.waiting { background:rgba(210,153,34,0.12); color:#d29922; border:1px solid rgba(210,153,34,0.3); }
+.inflection-status.done { background:rgba(35,134,54,0.12); color:#3fb950; border:1px solid rgba(35,134,54,0.3); }
+.inflection-status.working { background:rgba(31,111,235,0.12); color:#58a6ff; border:1px solid rgba(31,111,235,0.3); }
+.inflection-arrow { color:#8b949e; font-size:11px; }
+
 /* ===== Thesis Summary ===== */
 .thesis-item {
     display:flex; align-items:center; gap:8px; padding:4px 8px;
@@ -402,6 +440,7 @@ a:hover { text-decoration:underline; }
     <button class="nav-tab" data-tab="health">🏥 监控</button>
     <button class="nav-tab" data-tab="attrib">📈 归因</button>
     <button class="nav-tab" data-tab="portfolio">💼 持仓</button>
+    <button class="nav-tab" data-tab="chains">🔗 双链</button>
     <button class="nav-tab" data-tab="anomalies">📡 异动</button>
 </div>
 
@@ -573,6 +612,24 @@ a:hover { text-decoration:underline; }
     </div>
 </div>
 
+<!-- Tab: 双链 -->
+<div class="tab-content" id="tab-chains">
+    <div class="section">
+        <div class="section-title">🔗 双链进度地图 <span style="font-size:10px;color:#484f58;font-weight:400;" id="chainDate"></span></div>
+        <div style="margin-bottom:8px;font-size:11px;color:#8b949e;">
+            <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#3fb950;margin-right:4px;"></span> 已走出来 ·
+            <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#d29922;margin:0 4px;"></span> 炒预期/临界点 ·
+            <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#f85149;margin:0 4px;"></span> 致命短板/空白
+        </div>
+    </div>
+    <div class="two-col" id="chainsContainer"></div>
+
+    <div class="section" style="margin-top:20px;">
+        <div class="section-title">🔥 临界点追踪 <span style="font-size:10px;color:#484f58;font-weight:400;">（最临近的突破点）</span></div>
+        <div id="inflectionTable"></div>
+    </div>
+</div>
+
 <!-- Tab: 异动 -->
 <div class="tab-content" id="tab-anomalies">
     <div class="section">
@@ -649,6 +706,9 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
         if (tab.dataset.tab === 'news') {
             const iframe = document.getElementById('newsIframe');
             if (!iframe.src) iframe.src = 'news-feed.html';
+        }
+        if (tab.dataset.tab === 'chains') {
+            loadChains();
         }
         if (tab.dataset.tab === 'anomalies') {
             loadAnomalies();
@@ -1710,6 +1770,110 @@ function renderTPO() {
     tpoContent.innerHTML = tpoItems.slice(0, 3).map(i => 
         `<div class="tpo-item">${i.text}</div>`
     ).join('');
+}
+
+// ===== 双链 Tab =====
+async function loadChains() {
+    const data = await loadJSON('data/chain-progress.json');
+    if (!data) {
+        document.getElementById('chainsContainer').innerHTML = '<div class="empty">无法加载双链数据</div>';
+        return;
+    }
+    
+    document.getElementById('chainDate').textContent = data.updated ? '· ' + data.updated : '';
+    
+    // Render both chains
+    const chains = data.chains || {};
+    const container = document.getElementById('chainsContainer');
+    
+    const chainEntries = Object.entries(chains);
+    container.innerHTML = chainEntries.map(([key, chain]) => {
+        const links = chain.links || [];
+        const chainIcon = key === 'chain1' ? '🔴' : '🔵';
+        const chainCls = key === 'chain1' ? 'badge-chain1' : 'badge-chain2';
+        
+        const linkRows = links.map(link => {
+            // Determine dot color
+            let dotCls = 'green';
+            if (link.level === '走出来') dotCls = 'green';
+            else if (link.level === '临界点') dotCls = 'orange';
+            else if (link.level === '空白') dotCls = 'red';
+            
+            // Status badge
+            let statusCls = 'driven', statusLabel = link.status || '';
+            if (link.status === '业绩驱动') { statusCls = 'driven'; }
+            else if (link.status === '炒预期') { statusCls = 'spec'; }
+            else if (link.status === '致命短板') { statusCls = 'gap'; }
+            
+            // Tickers display with names from pool
+            const tickers = link.tickers || [];
+            let tickerHtml = '';
+            if (tickers.length) {
+                tickerHtml = tickers.map(t => {
+                    const name = getNameForTicker(t);
+                    const display = name ? `${t} ${name}` : t;
+                    return `<span style="font-family:monospace;background:rgba(31,111,235,0.08);padding:1px 4px;border-radius:2px;">${display}</span>`;
+                }).join(' ');
+            } else {
+                tickerHtml = '<span style="color:#484f58;">无标的</span>';
+            }
+            
+            // Self-sufficiency rate
+            const rateHtml = link.self_rate ? `<span class="chain-link-rate">国产化${link.self_rate}</span>` : '<span class="chain-link-rate"></span>';
+            
+            return `<div class="chain-link-row">
+                <span class="chain-link-dot ${dotCls}"></span>
+                <span class="chain-link-name">${link.name}</span>
+                ${rateHtml}
+                <span class="chain-link-status ${statusCls}">${statusLabel}</span>
+                <span class="chain-link-tickers">${tickerHtml}</span>
+                <span class="chain-link-note" title="${link.note}">${link.note}</span>
+            </div>`;
+        }).join('');
+        
+        return `<div class="chain-card">
+            <h3>${chainIcon} <span class="badge ${chainCls}">${key === 'chain1' ? '链一' : '链二'}</span> ${chain.name}</h3>
+            <div class="chain-desc">${chain.description}</div>
+            ${linkRows}
+        </div>`;
+    }).join('');
+    
+    // Render inflection points
+    renderInflectionPoints(data.inflection_points || []);
+}
+
+function renderInflectionPoints(points) {
+    const container = document.getElementById('inflectionTable');
+    if (!points.length) {
+        container.innerHTML = '<div class="empty">暂无临界点追踪</div>';
+        return;
+    }
+    
+    const statusIcons = { '等待中': '🔶', '适配完成': '✅', '已过会': '📋', '研发中': '🔧' };
+    const statusCls = { '等待中': 'waiting', '适配完成': 'done', '已过会': 'done', '研发中': 'working' };
+    
+    container.innerHTML = `
+        <table class="inflection-table">
+            <thead><tr>
+                <th>临界点</th>
+                <th>盯</th>
+                <th>状态</th>
+                <th>→ 触发后影响</th>
+                <th>关注渠道</th>
+            </tr></thead>
+            <tbody>${points.map(p => {
+                const icon = statusIcons[p.status] || '📌';
+                const cls = statusCls[p.status] || 'waiting';
+                return `<tr>
+                    <td style="font-weight:600;color:#e6edf3;">${icon} ${p.name}</td>
+                    <td style="color:#58a6ff;font-size:11px;">${p.watch_target || ''}</td>
+                    <td><span class="inflection-status ${cls}">${p.status}</span></td>
+                    <td><span class="inflection-arrow">→</span> ${p.impact}</td>
+                    <td style="color:#8b949e;font-size:11px;">${p.watch}</td>
+                </tr>`;
+            }).join('')}</tbody>
+        </table>
+    `;
 }
 
 // ===== Start =====

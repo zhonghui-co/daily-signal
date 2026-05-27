@@ -1,0 +1,42 @@
+{
+  "updated": "2026-05-27",
+  "chains": {
+    "chain1": {
+      "name": "国产替代链",
+      "description": "从无到有，设备/材料/制造/封测/EDA/IP",
+      "links": [
+        {"name": "刻蚀设备", "status": "业绩驱动", "level": "走出来", "self_rate": "~23%", "tickers": ["002371","688012"], "note": "中微进台积电5nm"},
+        {"name": "薄膜沉积", "status": "业绩驱动", "level": "走出来", "self_rate": "~15%", "tickers": ["688072"], "note": "PECVD销量+33%"},
+        {"name": "CMP设备", "status": "业绩驱动", "level": "走出来", "self_rate": "~40%", "tickers": ["688120"], "note": "华海清科国产化率近40%"},
+        {"name": "靶材", "status": "业绩驱动", "level": "走出来", "self_rate": "~22%", "tickers": ["300666"], "note": "江丰电子全球第二"},
+        {"name": "ArF光刻胶", "status": "炒预期", "level": "临界点", "self_rate": "<5%", "tickers": ["300346","603650"], "note": "等待批量订单公告"},
+        {"name": "KrF树脂", "status": "炒预期", "level": "临界点", "self_rate": "刚突破", "tickers": ["688727"], "note": "AI攻克稳定制备"},
+        {"name": "混合键合设备", "status": "炒预期", "level": "临界点", "self_rate": "研发中", "tickers": ["688072"], "note": "拓荆布局中"},
+        {"name": "HBM", "status": "致命短板", "level": "空白", "self_rate": "送样", "tickers": [], "note": "长鑫HBM2送样，差3代"},
+        {"name": "EUV光刻机", "status": "致命短板", "level": "空白", "self_rate": "0", "tickers": [], "note": "完全空白"},
+        {"name": "EDA全流程", "status": "致命短板", "level": "空白", "self_rate": "<15%", "tickers": ["301269"], "note": "数字全流程缺失"}
+      ]
+    },
+    "chain2": {
+      "name": "AI算力链",
+      "description": "需求拉动的新增量，PCB/CCL/光模块/MLCC/铜箔",
+      "links": [
+        {"name": "800G/1.6T光模块", "status": "业绩驱动", "level": "走出来", "tickers": ["300308","300502"], "note": "中际+新易盛全球份额>60%"},
+        {"name": "AI服务器PCB", "status": "业绩驱动", "level": "走出来", "tickers": ["002463","300476"], "note": "沪电英伟达60%份额"},
+        {"name": "AI覆铜板CCL", "status": "业绩驱动", "level": "走出来", "tickers": ["600183"], "note": "生益净利33亿"},
+        {"name": "MLCC", "status": "业绩驱动", "level": "临界点", "self_rate": "刚启动", "tickers": ["000636"], "note": "AI服务器用量10x"},
+        {"name": "铜箔", "status": "业绩驱动", "level": "临界点", "tickers": ["301511","688388"], "note": "涨价60%+，订单到2027"},
+        {"name": "电子布", "status": "业绩驱动", "level": "临界点", "tickers": ["600176"], "note": "涨幅滞后宏和"},
+        {"name": "ABF载板", "status": "致命短板", "level": "空白", "self_rate": "<5%", "tickers": ["002436"], "note": "95%味之素垄断"},
+        {"name": "CPO", "status": "炒预期", "level": "临界点", "tickers": [], "note": "还需1-2年"}
+      ]
+    }
+  },
+  "inflection_points": [
+    {"name": "ArF批量订单", "watch_target": "南大光电", "status": "等待中", "impact": "光刻胶从炒预期→业绩", "watch": "公司公告"},
+    {"name": "KrF树脂验证", "watch_target": "恒坤新材", "status": "适配完成", "impact": "光刻胶上游突破", "watch": "上海AI实验室"},
+    {"name": "长鑫IPO", "watch_target": "长鑫科技", "status": "已过会", "impact": "设备封测全线受益", "watch": "上交所"},
+    {"name": "混合键合首台交付", "watch_target": "拓荆科技", "status": "研发中", "impact": "τ定律设备链启动", "watch": "年报/季报"},
+    {"name": "景嘉微信创GPU集采", "watch_target": "景嘉微", "status": "等待中", "impact": "国产GPU从军用到民用", "watch": "政府采购网"}
+  ]
+}
