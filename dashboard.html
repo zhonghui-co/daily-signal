@@ -1465,21 +1465,21 @@ async function loadAnomalies() {
         ].map(s=>`<div class="stat-card"><div class="stat-icon">📊</div><div class="stat-info"><div class="stat-value" style="color:${s.c}">${s.v}</div><div class="stat-label">${s.l}</div></div></div>`).join('');
         
         // Golden crosses
-        const golden = sd.golden || [];
+        const golden = recentGolden;
         document.getElementById('goldenCount').textContent = `(${golden.length}个)`;
         document.getElementById('goldenList').innerHTML = golden.length ? golden.map(s =>
             `<div class="anomaly-row"><span class="ticker-tag">${s[0]||''} ${s[1]||''}</span><span class="anomaly-dir">${s[2]||''}</span><span style="font-size:11px;color:#8b949e;">${s[4]||''}</span><span style="font-size:11px;color:#f85149;">${s[5]!=null?`白${s[5].toFixed(1)}`:''} ${s[6]!=null?`黄${s[6].toFixed(1)}`:''}</span></div>`
         ).join('') : '<div class="empty">无金叉信号</div>';
         
         // Death crosses
-        const death = sd.death || [];
+        const death = recentDeath;
         document.getElementById('deathCount').textContent = `(${death.length}个)`;
         document.getElementById('deathList').innerHTML = death.length ? death.map(s =>
             `<div class="anomaly-row"><span class="ticker-tag">${s[0]||''} ${s[1]||''}</span><span class="anomaly-dir">${s[2]||''}</span><span style="font-size:11px;color:#8b949e;">${s[4]||''}</span></div>`
         ).join('') : '<div class="empty">无死叉信号</div>';
         
         // B1 signals - dedup and sort by date desc
-        const b1Raw = sd.b1 || [];
+        const b1Raw = recentB1;
         const seenB1 = new Set();
         const b1 = b1Raw.filter(s => { const k = s[0]; if (seenB1.has(k)) return false; seenB1.add(k); return true; });
         b1.sort((a,b) => (b[4]||'').localeCompare(a[4]||''));
@@ -1490,8 +1490,8 @@ async function loadAnomalies() {
         }).join('') : '<div class="empty">无B1信号</div>';
         
         // B2/B3
-        const b2 = sd.b2 || [];
-        const b3 = sd.b3 || [];
+        const b2 = recentB2;
+        const b3 = recentB3;
         const b2b3 = [...b2.map(s=>({data:s,type:'B2'})), ...b3.map(s=>({data:s,type:'B3'}))];
         document.getElementById('b2b3Count').textContent = `(B2:${b2.length} B3:${b3.length})`;
         document.getElementById('b2b3List').innerHTML = b2b3.length ? b2b3.map(s => {
