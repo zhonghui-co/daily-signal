@@ -1829,6 +1829,7 @@ async function loadChains() {
                 <span class="chain-link-status ${statusCls}">${statusLabel}</span>
                 <span class="chain-link-tickers">${tickerHtml}</span>
                 <span class="chain-link-note" title="${link.note}">${link.note}</span>
+                <span class="chain-link-missing" title="${link.missing||''}">${link.missing ? '⚠ '+link.missing : ''}</span>
             </div>`;
         }).join('');
         
