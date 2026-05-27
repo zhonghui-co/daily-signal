@@ -859,7 +859,12 @@ function renderDirectionHeat() {
 
 function renderThesisPositions() {
     // Load B1 signals for overview from signals-daily.json (loaded in init)
-    const b1List = signalsDailyData?.b1 || [];
+    const b1Raw = signalsDailyData?.b1 || [];
+    // Dedup by stock code
+    const seen = new Set();
+    const b1List = b1Raw.filter(s => { const k = s[0]; if (seen.has(k)) return false; seen.add(k); return true; });
+    // Sort by date descending
+    b1List.sort((a,b) => (b[4]||'').localeCompare(a[4]||''));
     const container = document.getElementById('overviewB1List');
     const badge = document.getElementById('overviewB1Count');
     if (badge) badge.textContent = b1List.length + '个';
@@ -1413,8 +1418,11 @@ async function loadAnomalies() {
             `<div class="anomaly-row"><span class="ticker-tag">${s[0]||''} ${s[1]||''}</span><span class="anomaly-dir">${s[2]||''}</span><span style="font-size:11px;color:#8b949e;">${s[4]||''}</span></div>`
         ).join('') : '<div class="empty">无死叉信号</div>';
         
-        // B1 signals
-        const b1 = sd.b1 || [];
+        // B1 signals - dedup and sort by date desc
+        const b1Raw = sd.b1 || [];
+        const seenB1 = new Set();
+        const b1 = b1Raw.filter(s => { const k = s[0]; if (seenB1.has(k)) return false; seenB1.add(k); return true; });
+        b1.sort((a,b) => (b[4]||'').localeCompare(a[4]||''));
         document.getElementById('b1Count').textContent = `(${b1.length}个)`;
         document.getElementById('b1List').innerHTML = b1.length ? b1.map(s => {
             const code = s[0]||'', name = s[1]||'', dir = s[2]||'', date = s[4]||'', price = s[5], jval = s[6];
