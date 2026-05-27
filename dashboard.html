@@ -643,12 +643,35 @@ a:hover { text-decoration:underline; }
 </div>
 
 
+<!-- Tab: 报警 -->
+<div class="tab-content" id="tab-alerts">
+    <div class="section">
+        <div class="section-title">🚨 周线KDJ超买超卖报警 <span id="alertDate" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+    </div>
+    <div class="section">
+        <div class="section-title">🟢🟢 二级买点 (J &lt; 0) <span id="alertBuyL2Count" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+        <div id="alertBuyL2List"><div class="empty">加载中…</div></div>
+    </div>
+    <div class="section">
+        <div class="section-title">🟢 一级买点 (0 ≤ J &lt; 15) <span id="alertBuyL1Count" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+        <div id="alertBuyL1List"><div class="empty">加载中…</div></div>
+    </div>
+    <div class="section">
+        <div class="section-title">🔴 卖点信号 (J &gt; 80) <span id="alertSellCount" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+        <div id="alertSellList"><div class="empty">加载中…</div></div>
+    </div>
+    <div class="section">
+        <div class="section-title">📊 方向可靠性参考</div>
+        <div id="alertReliability" style="font-size:11px;color:#8b949e;"></div>
+    </div>
+</div>
+
 <!-- Tab: 回测 -->
 <div class="tab-content" id="tab-backtest">
     <div class="section">
         <div class="section-title">📊 周线KDJ回测 — 各方向胜率 <span style="font-size:10px;color:#8b949e;font-weight:400;">（1年 2025.06-2026.05 前复权）</span></div>
     </div>
-    <div id="backtestTable"></div>
+    <div id="backtestTable"><div class="empty">加载中…</div></div>
     <div style="font-size:11px;color:#8b949e;margin-top:10px;">
         ✅ = 胜率≥60%可用 | ⚠️ = 胜率&lt;60%慎用 | ⚠️⚠️ = 胜率&lt;50%不可用 | 样本&lt;20次可靠性低
     </div>
@@ -738,15 +761,19 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
         if (tab.dataset.tab === 'chains') {
             loadChains();
         }
+        if (tab.dataset.tab === 'alerts') {
+            loadAlerts();
+        }
+        if (tab.dataset.tab === 'backtest') {
+            loadBacktest();
+        }
         if (tab.dataset.tab === 'anomalies') {
             loadAnomalies();
-    loadAlerts();
             loadWeeklyB1();
-    loadWeeklyAlerts();
+            loadWeeklyAlerts();
         }
         if (tab.dataset.tab === 'trends') {
             loadTrends();
-    loadBacktest();
         }
     });
 });
@@ -2026,6 +2053,7 @@ async function loadWeeklyAlerts() {
 async function loadAlerts() {
     try {
         const wd = await loadJSON('data/weekly-kdj.json');
+        if (!wd) { console.warn('Alerts data not available'); return; }
         document.getElementById('alertDate').textContent = wd.date ? '周截止 ' + wd.date : '';
         const items = wd.items || [];
         
@@ -2096,7 +2124,8 @@ async function loadAlerts() {
 
 async function loadBacktest() {
     try {
-        const bt = await loadJSON('/daily-signal/data/backtest.json');
+        const bt = await loadJSON('data/backtest.json');
+        if (!bt) { console.warn('Backtest data not available'); return; }
         const dirs = bt.directions || [];
         document.getElementById('backtestTable').innerHTML = `
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:8px;">
