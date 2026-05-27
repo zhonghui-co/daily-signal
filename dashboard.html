@@ -434,7 +434,8 @@ a:hover { text-decoration:underline; }
 
 <!-- Nav Tabs -->
 <div class="nav-tabs" id="navTabs">
-    <button class="nav-tab active" data-tab="overview">📊 概览</button>
+    <button class="nav-tab active" data-tab="alerts">🚨 报警</button>
+    <button class="nav-tab" data-tab="overview">📊 概览</button>
     <button class="nav-tab" data-tab="signals">🔥 信号</button>
     <button class="nav-tab" data-tab="themes">🎯 主题</button>
     <button class="nav-tab" data-tab="health">🏥 监控</button>
@@ -2002,6 +2003,78 @@ async function loadWeeklyAlerts() {
                 <span style="font-size:10px;color:#484f58;">周收盘${(s.close||0).toFixed(2)}</span>
             </div>`
         ).join('') : '<div class="empty">当前无二级买点</div>';
+    } catch(e) { console.log('Alert load err:', e); }
+}
+
+
+// ===== 报警 Tab =====
+async function loadAlerts() {
+    try {
+        const wd = await loadJSON('/daily-signal/data/weekly-kdj.json');
+        document.getElementById('alertDate').textContent = wd.date ? '周截止 ' + wd.date : '';
+        const items = wd.items || [];
+        
+        // Buy L2 (J < 0) - highest priority
+        const buyL2 = items.filter(s => s.J < 0).sort((a,b) => a.J - b.J);
+        document.getElementById('alertBuyL2Count').textContent = `(${buyL2.length}只)`;
+        document.getElementById('alertBuyL2List').innerHTML = buyL2.length ? buyL2.map(s => 
+            `<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(35,134,54,0.08);border-left:3px solid #2ea043;border-radius:6px;margin-bottom:4px;flex-wrap:wrap;">
+                <span style="color:#2ea043;font-weight:bold;font-size:13px;">🟢🟢</span>
+                <span style="font-weight:600;color:#e6edf3;font-size:13px;min-width:90px;">${s.name||''}</span>
+                <span style="font-size:11px;color:#58a6ff;font-family:monospace;">${s.ts_code||''}</span>
+                <span style="font-size:11px;color:#8b949e;">${s.theme_category||''}</span>
+                <span style="font-weight:bold;font-size:14px;color:#2ea043;">J=${(s.J||0).toFixed(1)}</span>
+                <span style="font-size:11px;color:#8b949e;">周收${(s.close||0).toFixed(2)}</span>
+                <span style="font-size:10px;color:#484f58;">周涨${(s.week_chg||0).toFixed(1)}%</span>
+            </div>`
+        ).join('') : '<div class="empty">✅ 无二级买点</div>';
+        
+        // Buy L1 (0 <= J < 15)
+        const buyL1 = items.filter(s => s.J >= 0 && s.J < 15).sort((a,b) => a.J - b.J);
+        document.getElementById('alertBuyL1Count').textContent = `(${buyL1.length}只)`;
+        document.getElementById('alertBuyL1List').innerHTML = buyL1.length ? buyL1.map(s => 
+            `<div style="display:flex;align-items:center;gap:10px;padding:6px 12px;background:rgba(35,134,54,0.04);border-left:2px solid #3fb950;border-radius:6px;margin-bottom:3px;flex-wrap:wrap;">
+                <span style="color:#3fb950;font-size:12px;">🟢</span>
+                <span style="font-weight:600;color:#e6edf3;font-size:12px;min-width:90px;">${s.name||''}</span>
+                <span style="font-size:10px;color:#58a6ff;font-family:monospace;">${s.ts_code||''}</span>
+                <span style="font-size:10px;color:#8b949e;">${s.theme_category||''}</span>
+                <span style="font-weight:bold;font-size:13px;color:#3fb950;">J=${(s.J||0).toFixed(1)}</span>
+                <span style="font-size:10px;color:#8b949e;">周收${(s.close||0).toFixed(2)}</span>
+                <span style="font-size:10px;color:#484f58;">周涨${(s.week_chg||0).toFixed(1)}%</span>
+            </div>`
+        ).join('') : '<div class="empty">✅ 无一级买点</div>';
+        
+        // Sell signals
+        const sell = items.filter(s => s.J > 80).sort((a,b) => b.J - a.J);
+        document.getElementById('alertSellCount').textContent = `(${sell.length}只)`;
+        document.getElementById('alertSellList').innerHTML = sell.length ? sell.map(s => {
+            const lvl = s.J > 100 ? '🔴🔴' : '🔴';
+            const color = s.J > 100 ? '#da3633' : '#f85149';
+            return `<div style="display:flex;align-items:center;gap:10px;padding:6px 12px;background:rgba(218,54,51,0.04);border-left:2px solid ${color};border-radius:6px;margin-bottom:3px;flex-wrap:wrap;">
+                <span style="color:${color};font-size:12px;">${lvl}</span>
+                <span style="font-weight:600;color:#e6edf3;font-size:12px;min-width:90px;">${s.name||''}</span>
+                <span style="font-size:10px;color:#58a6ff;font-family:monospace;">${s.ts_code||''}</span>
+                <span style="font-size:10px;color:#8b949e;">${s.theme_category||''}</span>
+                <span style="font-weight:bold;font-size:13px;color:${color};">J=${(s.J||0).toFixed(1)}</span>
+                <span style="font-size:10px;color:#8b949e;">周收${(s.close||0).toFixed(2)}</span>
+            </div>`;
+        }).join('') : '<div class="empty">✅ 无卖点</div>';
+        
+        // Reliability reference
+        document.getElementById('alertReliability').innerHTML = [
+            {d:'集成电路',wl1:'74.9%',wl2:'75.7%',ok:true},
+            {d:'工业母机',wl1:'70.5%',wl2:'77.9%',ok:true},
+            {d:'低空经济',wl1:'68.8%',wl2:'81.8%',ok:true},
+            {d:'机器人',wl1:'64.6%',wl2:'—',ok:true},
+            {d:'新材料',wl1:'62.7%',wl2:'61.6%',ok:true},
+            {d:'新能源',wl1:'—',wl2:'—',ok:null},
+            {d:'生物医药',wl1:'46.5%',wl2:'41.7%',ok:false},
+            {d:'核电',wl1:'<50%',wl2:'—',ok:false},
+        ].map(d => 
+            `<span style="display:inline-block;margin:2px 4px;padding:3px 8px;border-radius:4px;font-size:11px;background:${d.ok===true?'rgba(35,134,54,0.1)':d.ok===false?'rgba(218,54,51,0.1)':'#161b22'};color:${d.ok===true?'#3fb950':d.ok===false?'#f85149':'#8b949e'};border:1px solid ${d.ok===true?'rgba(35,134,54,0.3)':d.ok===false?'rgba(218,54,51,0.3)':'#30363d'};">
+                ${d.ok===true?'✅':d.ok===false?'⚠️':'❓'} ${d.d} L1:${d.wl1} L2:${d.wl2}
+            </span>`
+        ).join('');
     } catch(e) { console.log('Alert load err:', e); }
 }
 
