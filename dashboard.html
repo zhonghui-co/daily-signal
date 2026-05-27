@@ -276,7 +276,7 @@ a:hover { text-decoration:underline; }
 }
 .risk-banner strong { color:#e3b341; }
 
-.two-col { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.two-col { display:grid; grid-template-columns:3fr 7fr; gap:16px; }
 @media (max-width:768px) { .two-col { grid-template-columns:1fr; } }
 
 .footer { text-align:center; padding:30px 0 20px; color:#484f58; font-size:11px; border-top:1px solid #21262d; margin-top:20px; }
@@ -323,7 +323,7 @@ a:hover { text-decoration:underline; }
 .pf-change { font-size:14px; font-weight:600; }
 .pf-change.up { color:#f85149; }
 .pf-change.down { color:#3fb950; }
-.pf-indicators { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-bottom:8px; font-size:11px; }
+.pf-indicators { display:grid; grid-template-columns:3fr 7fr 1fr; gap:6px; margin-bottom:8px; font-size:11px; }
 .pf-ind { text-align:center; padding:4px; background:#0d1117; border-radius:4px; }
 .pf-ind-label { color:#484f58; font-size:9px; }
 .pf-ind-val { color:#c9d1d9; font-weight:600; font-size:12px; }
@@ -677,7 +677,7 @@ a:hover { text-decoration:underline; }
 
 <!-- Tab: 报警 -->
 <div class="tab-content" id="tab-alerts">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div style="display:grid;grid-template-columns:3fr 7fr;gap:16px;">
         <!-- 左侧：信号列表 -->
         <div style="overflow-y:auto;max-height:85vh;">
             <div class="section-title">🚨 周线KDJ报警 <span id="alertDate" style="font-size:10px;color:#484f58;"></span></div>
@@ -1666,7 +1666,7 @@ function renderRotation() {
     const maxCatScore = Math.max(...catList.map(c => Math.abs(c.avgScore)), 1);
     
     container.innerHTML = `
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="display:grid;grid-template-columns:3fr 7fr;gap:16px;">
             <div>
                 <div class="section-title" style="font-size:12px;">🔥 最强方向</div>
                 <table class="rotation-table">
