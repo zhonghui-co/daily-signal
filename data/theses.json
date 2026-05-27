@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-26T23:05:00.541232+08:00",
+  "last_updated": "2026-05-27T23:05:01.054610+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -93,9 +93,14 @@
           "date": "2026-05-26",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -307,9 +312,38 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {
+            "latest_close": 316.79,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": 40.17,
+            "ret_5d_pct": 3.19,
+            "ret_1d_pct": -7.14,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -9.28
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "高通+字节跳动数百万颗定制ASIC芯片协议——中国AI算力供给从GPU-only→ASIC+GPU双结构质变",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a4",
+              "title": "τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列——国际定价从偶然关注→系统研究三阶跃迁",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -552,9 +586,41 @@
           "warnings": [
             "⚠️ 从thesis以来高点回撤-24.47%"
           ]
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1340.0,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": -3.6,
+            "ret_5d_pct": 3.8,
+            "ret_1d_pct": -5.03,
+            "high_since": 1868.0,
+            "low_since": 971.3,
+            "from_high_pct": -28.27
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "高通+字节跳动数百万颗定制ASIC芯片协议——中国AI算力供给从GPU-only→ASIC+GPU双结构质变",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a4",
+              "title": "τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列——国际定价从偶然关注→系统研究三阶跃迁",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ],
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-28.27%"
+          ]
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -784,9 +850,56 @@
               "lifecycle": "consensus"
             }
           ]
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {
+            "latest_close": 71.52,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": 80.88,
+            "ret_5d_pct": 15.8,
+            "ret_1d_pct": -5.13,
+            "high_since": 75.39,
+            "low_since": 39.54,
+            "from_high_pct": -5.13
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "高通+字节跳动数百万颗定制ASIC芯片协议——中国AI算力供给从GPU-only→ASIC+GPU双结构质变",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a2",
+              "title": "长鑫HBM3年底量产+12英寸月产能15万片+三星罢工HBM缺口持续——国产存储HBM从0→1+产能爬坡双引擎",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列——国际定价从偶然关注→系统研究三阶跃迁",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "DRAM Q1全球营收近千亿美元环比+80%创历史新高——存储超级周期最强量化验证",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a6",
+              "title": "玻璃基板+先进封装——京东方与康宁战略合作，国产封装材料从显示→AI算力赛道切换",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1004,9 +1117,38 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {
+            "latest_close": 654.77,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": 37.99,
+            "ret_5d_pct": -1.24,
+            "ret_1d_pct": -2.31,
+            "high_since": 698.19,
+            "low_since": 424.08,
+            "from_high_pct": -6.22
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "长鑫HBM3年底量产+12英寸月产能15万片+三星罢工HBM缺口持续——国产存储HBM从0→1+产能爬坡双引擎",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列——国际定价从偶然关注→系统研究三阶跃迁",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1217,9 +1359,38 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {
+            "latest_close": 455.05,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": 46.16,
+            "ret_5d_pct": -4.36,
+            "ret_1d_pct": -1.83,
+            "high_since": 490.33,
+            "low_since": 293.5,
+            "from_high_pct": -7.2
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "长鑫HBM3年底量产+12英寸月产能15万片+三星罢工HBM缺口持续——国产存储HBM从0→1+产能爬坡双引擎",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列——国际定价从偶然关注→系统研究三阶跃迁",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1443,9 +1614,56 @@
               "lifecycle": "consensus"
             }
           ]
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {
+            "latest_close": 86.16,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": 124.61,
+            "ret_5d_pct": 28.9,
+            "ret_1d_pct": -2.3,
+            "high_since": 88.19,
+            "low_since": 38.29,
+            "from_high_pct": -2.3
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "高通+字节跳动数百万颗定制ASIC芯片协议——中国AI算力供给从GPU-only→ASIC+GPU双结构质变",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a2",
+              "title": "长鑫HBM3年底量产+12英寸月产能15万片+三星罢工HBM缺口持续——国产存储HBM从0→1+产能爬坡双引擎",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列——国际定价从偶然关注→系统研究三阶跃迁",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "DRAM Q1全球营收近千亿美元环比+80%创历史新高——存储超级周期最强量化验证",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a6",
+              "title": "玻璃基板+先进封装——京东方与康宁战略合作，国产封装材料从显示→AI算力赛道切换",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1664,9 +1882,44 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {
+            "latest_close": 146.22,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": 12.52,
+            "ret_5d_pct": 14.93,
+            "ret_1d_pct": -1.98,
+            "high_since": 156.0,
+            "low_since": 91.78,
+            "from_high_pct": -6.27
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "高通+字节跳动数百万颗定制ASIC芯片协议——中国AI算力供给从GPU-only→ASIC+GPU双结构质变",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "高盛三重验证——AI CapEx上调至$800B + PB获利了结近一年最快 + 标普500目标8000点——资金面多空对峙深化",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列——国际定价从偶然关注→系统研究三阶跃迁",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1809,9 +2062,24 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {
+            "latest_close": 28.07,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": 25.59,
+            "ret_5d_pct": 1.41,
+            "ret_1d_pct": 4.35,
+            "high_since": 29.52,
+            "low_since": 16.61,
+            "from_high_pct": -4.91
+          }
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1915,9 +2183,14 @@
           "date": "2026-05-26",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-27",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-26",
+      "last_check": "2026-05-27",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     }

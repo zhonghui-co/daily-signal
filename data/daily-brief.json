@@ -1,174 +1,10 @@
 {
-  "generated_at": "2026-05-27T17:10:01.135897+08:00",
+  "generated_at": "2026-05-27T23:10:00.652401+08:00",
   "date": "2026-05-27",
   "sections": {
     "signals": {
-      "available": true,
-      "date": "2026-05-27",
-      "run_at": "2026-05-27T17:00:00+08:00",
-      "stats": {
-        "total_signals": 8,
-        "chain1": 4,
-        "chain2": 4,
-        "cross_chain": 4,
-        "by_lifecycle": {
-          "emerging": 2,
-          "positioning": 5,
-          "consensus": 0,
-          "exhausted": 1
-        },
-        "by_priced_in": {
-          "under_priced": 2,
-          "partially_priced": 4,
-          "fully_priced": 2,
-          "over_priced": 0
-        },
-        "strong_backing": 2,
-        "moderate_backing": 2,
-        "weak_backing": 4,
-        "triple_confirmed": 0,
-        "dual_confirmed": 2,
-        "single_sourced": 4,
-        "unverified": 2
-      },
-      "signals": [
-        {
-          "id": "a1",
-          "priority": "normal",
-          "title": "高通+字节跳动数百万颗定制ASIC芯片协议——中国AI算力供给从GPU-only→ASIC+GPU双结构质变",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "emerging",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "高通为美股非大基金标的。但字节AI算力需求→国产芯片(寒武纪/海光在科创50ETF华夏持仓)+先进封装(长电/通富获国家大基金三期注资)→间接收益。大基金三期明确投向AI算力/先进封装/HBM。字节2000亿AI CapEx→先进封装订单增长可期。moderate backing: 1维度匹配(国家队ETF通过寒武纪/海光间接)。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a2",
-          "priority": "normal",
-          "title": "长鑫HBM3年底量产+12英寸月产能15万片+三星罢工HBM缺口持续——国产存储HBM从0→1+产能爬坡双引擎",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": true,
-            "note": "三维度全匹配(strong): ①大基金三期3440亿明确投向HBM/先进封装→长鑫HBM为最核心标的 ②科创50ETF华夏重仓兆易创新(与长鑫关联交易57亿/+6.5倍) ③bidding.json显示长电100亿+通富44亿+深科技14.7亿封测扩产→长鑫HBM产能建设→设备采购订单将释放(北方华创/中微/中科仪)。三重资金验证→长鑫HBM为最强capital backing信号。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a3",
-          "priority": "normal",
-          "title": "高盛三重验证——AI CapEx上调至$800B + PB获利了结近一年最快 + 标普500目标8000点——资金面多空对峙深化",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "高盛三重验证为全球资金面信号，不直接对接中国大基金/国家队ETF/招投标。A股设备/封测资金面由国内机构主导(大基金+国家队ETF)→与美股对冲基金获利了结相关性较低。弱capital backing但不影响信号价值——这是风险提示信号而非投资机会信号。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a4",
-          "priority": "normal",
-          "title": "τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列——国际定价从偶然关注→系统研究三阶跃迁",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": true,
-            "note": "三维度全匹配(strong): ①大基金三期3440亿投向晶圆制造+卡脖子设备材料→τ定律核心受益方 ②科创50ETF华夏重仓中芯国际/寒武纪/海光→国家队ETF全面覆盖τ定律标的 ③bidding.json显示长电100亿+通富44亿+SMIC 406亿并购物美→τ定律推升的先进封装+晶圆制造扩产已转化为实际招投标和设备采购。三重验证→τ定律为当前最强capital backing信号。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a5",
-          "priority": "normal",
-          "title": "DRAM Q1全球营收近千亿美元环比+80%创历史新高——存储超级周期最强量化验证",
-          "chain": "chain2",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金一期(987亿)重制造→兆易创新/长电间接受益但非直接投向。大基金三期投向AI算力/HBM→间接利好存储链。科创50ETF华夏重仓兆易创新→国家队通过宽基ETF配置存储链。招投标数据：封测扩产(长电100亿/通富44亿)但存储芯片直接采购招投标少。moderate backing: 1维度匹配(国家队ETF)。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a6",
-          "priority": "normal",
-          "title": "玻璃基板+先进封装——京东方与康宁战略合作，国产封装材料从显示→AI算力赛道切换",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "emerging",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "玻璃基板为新兴材料方向，大基金三期虽投向先进封装但主要聚焦设备和成熟材料(ArF光刻胶/大硅片等)。京东方虽为面板龙头但玻璃基封装载板非核心业务→科创50ETF持仓不以此逻辑。招投标数据中未见玻璃基板相关采购。weak backing: 0维度匹配。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a7",
-          "priority": "normal",
-          "title": "⚠️ 减持潮蔓延——兆易创新朱一明11天套现超21亿+华峰测控股东减持1%——产业资本在超级周期顶部兑现",
-          "chain": "chain1",
-          "confidence": "yellow",
-          "lifecycle": "exhausted",
-          "priced_in": "fully_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "减持为风险信号非机会信号。产业资本套现vs大基金/国家队ETF持有→形成'聪明钱分歧'(产业资本出/国家队入)。兆易创新仍在科创50ETF重仓中→ETF被动配置不受减持影响。但减持信号本身代表产业资本对当前估值的判断→警示估值已处高位。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a8",
-          "priority": "normal",
-          "title": "三星越南15亿美元存储芯片测试工厂+美光全球产能重组——存储产能全球化布局加速",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "fully_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "三星/美光为海外公司→与中国大基金/国家队ETF/招投标无关。weak backing: 0维度匹配。对A股投资决策无指导意义。"
-          },
-          "tickers": []
-        }
-      ]
+      "available": false,
+      "error": "Invalid control character at: line 436 column 82 (char 30781)"
     },
     "anomalies": {
       "count": 20,
@@ -807,7 +643,7 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-05-27T17:05:00.337723+08:00",
+      "last_updated": "2026-05-27T23:05:01.054610+08:00",
       "active_count": 10,
       "positions": [
         {
