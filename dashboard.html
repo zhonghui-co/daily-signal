@@ -294,10 +294,10 @@ a:hover { text-decoration:underline; }
 <div class="tab-content active" id="tab-overview">
     <!-- Stats Row -->
     <div class="stats-row" id="overviewStats">
-        <div class="stat-card"><div class="stat-icon">📦</div><div class="stat-info"><div class="stat-value" id="statPool">-</div><div class="stat-label">池子标的数</div></div></div>
-        <div class="stat-card"><div class="stat-icon">🔥</div><div class="stat-info"><div class="stat-value" id="statSignals">-</div><div class="stat-label">今日信号</div></div></div>
-        <div class="stat-card"><div class="stat-icon">🎯</div><div class="stat-info"><div class="stat-value" id="statHot">-</div><div class="stat-label">方向热点</div></div></div>
-        <div class="stat-card"><div class="stat-icon">⚠️</div><div class="stat-info"><div class="stat-value" id="statAlerts">-</div><div class="stat-label">活跃预警</div></div></div>
+        <div class="stat-card"><div class="stat-icon">📈</div><div class="stat-info"><div class="stat-value" id="statHot">-</div><div class="stat-label">今日最强方向</div></div></div>
+        <div class="stat-card"><div class="stat-icon">💰</div><div class="stat-info"><div class="stat-value" id="statFlow">-</div><div class="stat-label">主力资金流向</div></div></div>
+        <div class="stat-card"><div class="stat-icon">🔥</div><div class="stat-info"><div class="stat-value" id="statFire">-</div><div class="stat-label">Fire 信号</div></div></div>
+        <div class="stat-card"><div class="stat-icon">⚠️</div><div class="stat-info"><div class="stat-value" id="statSupply">-</div><div class="stat-label">供需预警</div></div></div>
     </div>
 
     <!-- Risk Banner -->
@@ -314,8 +314,8 @@ a:hover { text-decoration:underline; }
         <div>
             <!-- Thesis Positions -->
             <div class="section">
-                <div class="section-title">💼 核心持仓 <span class="badge badge-15" id="thesisCount"></span></div>
-                <div id="thesisPositions" style="max-height:300px;overflow-y:auto;"></div>
+                <div class="section-title">⭐ 今日 B1 机会 <span class="badge badge-fire" id="overviewB1Count"></span></div>
+                <div id="overviewB1List" style="max-height:300px;overflow-y:auto;"></div>
             </div>
 
             <!-- Recent Fire Signals -->
@@ -575,10 +575,7 @@ async function init() {
 // ===== Overview Tab =====
 function renderOverview() {
     // Stats
-    const poolTotal = poolData?.total || poolData?.stocks?.length || 0;
-    const signalCount = scannerData?.signals?.length || 0;
     const fireCount = scannerData?.signals?.filter(s => s.priority === 'fire').length || 0;
-    const alertCount = briefData?.alerts?.total_active || briefData?.alerts?.recent_count || 0;
     
     // Find hottest direction (highest avg_pct from pool groups)
     let hotDir = '-';
@@ -590,10 +587,20 @@ function renderOverview() {
         }
     }
     
-    document.getElementById('statPool').textContent = poolTotal;
-    document.getElementById('statSignals').textContent = `${signalCount} (🔥${fireCount})`;
+    // Net money flow
+    let flowText = '-';
+    if (poolData?.groups?.length) {
+        const sorted = [...poolData.groups].sort((a,b) => (b.net_flow||0) - (a.net_flow||0));
+        if (sorted.length && sorted[0].net_flow) {
+            const s = sorted[0];
+            flowText = `${s.group} ${s.net_flow>0?'+':''}${(s.net_flow/1e8).toFixed(1)}亿`;
+        }
+    }
+    
     document.getElementById('statHot').textContent = hotDir;
-    document.getElementById('statAlerts').textContent = alertCount;
+    document.getElementById('statFlow').textContent = flowText;
+    document.getElementById('statFire').textContent = fireCount;
+    document.getElementById('statSupply').textContent = briefData?.alerts?.total_active || briefData?.alerts?.recent_count || 0;
     
     // Risk banner - show key risk if exists
     const riskAlerts = briefData?.alerts?.high || [];
@@ -650,28 +657,25 @@ function renderDirectionHeat() {
 }
 
 function renderThesisPositions() {
-    const container = document.getElementById('thesisPositions');
-    const positions = briefData?.thesis?.positions || [];
-    document.getElementById('thesisCount').textContent = positions.length + '只';
-    
-    if (!positions.length) {
-        container.innerHTML = '<div class="empty">暂无持仓数据</div>';
-        return;
-    }
-    
-    container.innerHTML = positions.map(p => {
-        const ret = p.return_pct;
-        const retCls = ret >= 0 ? 'ret-up' : 'ret-down';
-        const ret5d = p.ret_5d;
-        const ret5dCls = ret5d >= 0 ? 'ret-up' : 'ret-down';
-        const warn = p.warnings?.length ? ' ⚠️' : '';
-        return `<div class="position-row">
-            <div class="position-name">${p.name}${warn}</div>
-            <div class="position-code">${p.code}</div>
-            <div class="position-return ${retCls}">${ret != null ? (ret >= 0 ? '+' : '') + ret.toFixed(2) + '%' : '-'}</div>
-            <div class="position-5d ${ret5dCls}">5日:${ret5d != null ? (ret5d >= 0 ? '+' : '') + ret5d.toFixed(1) + '%' : '-'}</div>
-        </div>`;
-    }).join('');
+    // Load B1 signals for overview
+    try {
+        const sd = await loadJSON('/daily-signal/data/signals-daily.json');
+        const b1List = sd?.b1 || [];
+        const container = document.getElementById('overviewB1List');
+        document.getElementById('overviewB1Count').textContent = b1List.length + '个';
+        if (!b1List.length) {
+            container.innerHTML = '<div class="empty">今日无B1信号</div>';
+        } else {
+            container.innerHTML = b1List.map(s => 
+                `<div class="position-row">
+                    <span class="ticker-tag" style="font-size:11px;">${s.ticker||''} ${s.name||''}</span>
+                    <span style="font-size:10px;color:#8b949e;">${s.direction||''}</span>
+                    <span style="font-size:11px;color:#d29922;font-weight:600;">J=${s.j!=null?s.j.toFixed(1):'?'}</span>
+                    <span style="font-size:10px;color:#484f58;">${s.date||''}</span>
+                </div>`
+            ).join('');
+        }
+    } catch(e) { console.log('B1 load err:', e); }
 }
 
 function renderRecentFireSignals() {
