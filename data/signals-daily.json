@@ -4476,8 +4476,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000518.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.7万元"
       }
     },
     {
@@ -4492,8 +4494,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000697.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.7万元"
       }
     },
     {
@@ -4508,8 +4512,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000969.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.9万元"
       }
     },
     {
@@ -4524,8 +4530,10 @@
       "pattern": "平行重炮",
       "post_golden": true,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002747.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.5万元"
       }
     },
     {
@@ -4540,8 +4548,10 @@
       "pattern": "灾后重建",
       "post_golden": true,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300537.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.5万元"
       }
     },
     {
@@ -4556,8 +4566,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300626.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.6万元"
       }
     },
     {
@@ -4572,8 +4584,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300975.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 3.1万元"
       }
     },
     {
@@ -4588,8 +4602,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301099.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.6万元"
       }
     },
     {
@@ -4604,8 +4620,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301285.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.9万元"
       }
     },
     {
@@ -4620,8 +4638,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301563.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.4万元"
       }
     },
     {
@@ -4636,8 +4656,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600529.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -4652,8 +4674,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600545.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.4万元"
       }
     },
     {
@@ -4668,8 +4692,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603158.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -4684,8 +4710,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688981.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 4.6万元"
       }
     },
     {
@@ -4700,8 +4728,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000518.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -4716,8 +4746,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "001389.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.2万元"
       }
     },
     {
@@ -4732,8 +4764,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002125.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -4748,8 +4782,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002328.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -4764,8 +4800,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002422.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.6万元"
       }
     },
     {
@@ -4780,8 +4818,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002463.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 15.7万元"
       }
     },
     {
@@ -4796,8 +4836,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002652.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.5万元"
       }
     },
     {
@@ -4812,8 +4854,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002741.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 2.2万元"
       }
     },
     {
@@ -4828,8 +4872,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002826.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.5万元"
       }
     },
     {
@@ -4844,8 +4890,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300243.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.6万元"
       }
     },
     {
@@ -4860,8 +4908,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300285.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.9万元"
       }
     },
     {
@@ -4876,8 +4926,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300408.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 2.5万元"
       }
     },
     {
@@ -4892,8 +4944,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300476.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 34.3万元"
       }
     },
     {
@@ -4908,8 +4962,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300586.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.5万元"
       }
     },
     {
@@ -4924,8 +4980,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300672.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.2万元"
       }
     },
     {
@@ -4940,8 +4998,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301281.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -4956,8 +5016,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301526.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 3.5万元"
       }
     },
     {
@@ -4972,8 +5034,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600529.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -4988,8 +5052,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603158.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5004,8 +5070,10 @@
       "pattern": "灾后重建",
       "post_golden": true,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603439.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.3万元"
       }
     },
     {
@@ -5020,8 +5088,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688139.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5036,8 +5106,10 @@
       "pattern": "灾后重建",
       "post_golden": true,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688458.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -5052,8 +5124,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688519.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.0万元"
       }
     },
     {
@@ -5068,8 +5142,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688657.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -5084,8 +5160,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000026.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.0万元"
       }
     },
     {
@@ -5100,8 +5178,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000518.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.4万元"
       }
     },
     {
@@ -5116,8 +5196,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "001270.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.8万元"
       }
     },
     {
@@ -5132,8 +5214,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "001896.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 13.2万元"
       }
     },
     {
@@ -5148,8 +5232,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300323.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -5164,8 +5250,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300503.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.9万元"
       }
     },
     {
@@ -5180,8 +5268,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301322.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.3万元"
       }
     },
     {
@@ -5196,8 +5286,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603590.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.4万元"
       }
     },
     {
@@ -5212,8 +5304,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603906.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.1万元"
       }
     },
     {
@@ -5228,8 +5322,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688192.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -5244,8 +5340,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688271.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.4万元"
       }
     },
     {
@@ -5260,8 +5358,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000518.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -5276,8 +5376,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000636.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 5.3万元"
       }
     },
     {
@@ -5292,8 +5394,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002755.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.1万元"
       }
     },
     {
@@ -5308,8 +5412,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "003004.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5324,8 +5430,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300222.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.8万元"
       }
     },
     {
@@ -5340,8 +5448,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300853.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.4万元"
       }
     },
     {
@@ -5356,8 +5466,10 @@
       "pattern": "灾后重建",
       "post_golden": true,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603439.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -5372,8 +5484,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688131.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -5388,8 +5502,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688347.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 2.1万元"
       }
     },
     {
@@ -5404,8 +5520,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688584.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.8万元"
       }
     },
     {
@@ -5420,8 +5538,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688981.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 3.3万元"
       }
     },
     {
@@ -5436,8 +5556,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002422.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.9万元"
       }
     },
     {
@@ -5452,8 +5574,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002963.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -5468,8 +5592,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300657.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 3.3万元"
       }
     },
     {
@@ -5484,8 +5610,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300976.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -5500,8 +5628,10 @@
       "pattern": "平行重炮",
       "post_golden": true,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600578.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.2万元"
       }
     },
     {
@@ -5516,8 +5646,10 @@
       "pattern": "平行重炮",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603125.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.3万元"
       }
     },
     {
@@ -5532,8 +5664,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603773.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 3.2万元"
       }
     },
     {
@@ -5548,8 +5682,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688099.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.0万元"
       }
     },
     {
@@ -5564,8 +5700,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688126.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 2.1万元"
       }
     },
     {
@@ -5580,8 +5718,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688610.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -5596,8 +5736,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002326.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.5万元"
       }
     },
     {
@@ -5612,8 +5754,10 @@
       "pattern": "",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002527.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -5628,8 +5772,10 @@
       "pattern": "灾后重建",
       "post_golden": true,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002747.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 3.6万元"
       }
     },
     {
@@ -5644,8 +5790,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300024.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 2.6万元"
       }
     },
     {
@@ -5660,8 +5808,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603728.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.3万元"
       }
     },
     {
@@ -5676,8 +5826,10 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002896.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 3.6万元"
       }
     },
     {
@@ -5692,8 +5844,8 @@
       "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "status": "data_unavailable",
+        "label": "无数据"
       }
     }
   ],
@@ -5708,8 +5860,10 @@
       "pct": 0.3,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000963.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -5722,8 +5876,10 @@
       "pct": 2.6,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002031.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.3万元"
       }
     },
     {
@@ -5736,8 +5892,10 @@
       "pct": 0.3,
       "vol_ratio": 0.49,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002392.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5750,8 +5908,10 @@
       "pct": 1.0,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002422.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5764,8 +5924,10 @@
       "pct": 1.9,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002536.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.5万元"
       }
     },
     {
@@ -5778,8 +5940,10 @@
       "pct": 2.6,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002755.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -5792,8 +5956,10 @@
       "pct": 0.3,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002773.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5806,8 +5972,10 @@
       "pct": 1.7,
       "vol_ratio": 0.7,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "003022.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -5820,8 +5988,10 @@
       "pct": 3.3,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300097.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5834,8 +6004,10 @@
       "pct": 2.3,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300214.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -5848,8 +6020,10 @@
       "pct": 1.8,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300449.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -5862,8 +6036,10 @@
       "pct": 0.4,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300760.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -5876,8 +6052,10 @@
       "pct": 1.5,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300821.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.8万元"
       }
     },
     {
@@ -5890,8 +6068,10 @@
       "pct": 3.6,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300965.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -5904,8 +6084,10 @@
       "pct": 2.5,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301538.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5918,8 +6100,10 @@
       "pct": 3.0,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600130.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5932,8 +6116,10 @@
       "pct": 1.5,
       "vol_ratio": 0.59,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600379.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -5946,8 +6132,10 @@
       "pct": 0.2,
       "vol_ratio": 0.7,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600905.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -5960,8 +6148,10 @@
       "pct": 2.9,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603318.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -5974,8 +6164,10 @@
       "pct": 2.2,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603399.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -5988,8 +6180,10 @@
       "pct": 2.5,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603698.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6002,8 +6196,10 @@
       "pct": 0.5,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688192.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -6016,8 +6212,10 @@
       "pct": 2.2,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688282.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6030,8 +6228,10 @@
       "pct": 0.1,
       "vol_ratio": 0.53,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688290.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6044,8 +6244,10 @@
       "pct": 1.0,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688545.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6058,8 +6260,10 @@
       "pct": 1.9,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688549.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.8万元"
       }
     },
     {
@@ -6072,8 +6276,10 @@
       "pct": 4.9,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688590.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -6086,8 +6292,10 @@
       "pct": 1.2,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688697.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -6100,8 +6308,10 @@
       "pct": 0.8,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688783.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6114,8 +6324,10 @@
       "pct": 1.4,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000539.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.3万元"
       }
     },
     {
@@ -6128,8 +6340,10 @@
       "pct": 1.0,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000601.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -6142,8 +6356,10 @@
       "pct": 1.9,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002031.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.5万元"
       }
     },
     {
@@ -6156,8 +6372,10 @@
       "pct": 1.1,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002176.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6170,8 +6388,10 @@
       "pct": 2.0,
       "vol_ratio": 0.7,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002256.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.3万元"
       }
     },
     {
@@ -6184,8 +6404,10 @@
       "pct": 2.0,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002392.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6198,8 +6420,10 @@
       "pct": 1.7,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002498.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -6212,8 +6436,10 @@
       "pct": 2.1,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002805.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6226,8 +6452,10 @@
       "pct": 0.2,
       "vol_ratio": 0.6,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002903.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6240,8 +6468,10 @@
       "pct": 0.5,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002963.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -6254,8 +6484,10 @@
       "pct": 2.2,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002971.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -6268,8 +6500,10 @@
       "pct": 1.6,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002997.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -6282,8 +6516,10 @@
       "pct": 1.1,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300158.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6296,8 +6532,10 @@
       "pct": 0.4,
       "vol_ratio": 0.58,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300222.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -6310,8 +6548,10 @@
       "pct": 2.1,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300263.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.6万元"
       }
     },
     {
@@ -6324,8 +6564,10 @@
       "pct": 2.0,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300265.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6338,8 +6580,10 @@
       "pct": 1.3,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300661.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -6352,8 +6596,10 @@
       "pct": 0.3,
       "vol_ratio": 0.57,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300686.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6366,8 +6612,10 @@
       "pct": 4.6,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300687.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -6380,8 +6628,10 @@
       "pct": 1.7,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300965.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6394,8 +6644,10 @@
       "pct": 0.7,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301489.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.8万元"
       }
     },
     {
@@ -6408,8 +6660,10 @@
       "pct": 2.2,
       "vol_ratio": 0.59,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600130.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -6422,8 +6676,10 @@
       "pct": 0.4,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600216.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6436,8 +6692,10 @@
       "pct": 1.7,
       "vol_ratio": 0.52,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600379.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6450,8 +6708,10 @@
       "pct": 1.3,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603016.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6464,8 +6724,10 @@
       "pct": 2.3,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603045.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6478,8 +6740,10 @@
       "pct": 2.0,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603095.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6492,8 +6756,10 @@
       "pct": 0.9,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603318.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -6506,8 +6772,10 @@
       "pct": 0.2,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603608.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6520,8 +6788,10 @@
       "pct": 0.4,
       "vol_ratio": 0.51,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603698.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -6534,8 +6804,10 @@
       "pct": 2.5,
       "vol_ratio": 0.62,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603916.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -6548,8 +6820,10 @@
       "pct": 1.9,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688061.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6562,8 +6836,10 @@
       "pct": 2.4,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688102.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6576,8 +6852,10 @@
       "pct": 4.9,
       "vol_ratio": 0.49,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688143.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.3万元"
       }
     },
     {
@@ -6590,8 +6868,10 @@
       "pct": 2.2,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688146.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.4万元"
       }
     },
     {
@@ -6604,8 +6884,10 @@
       "pct": 4.4,
       "vol_ratio": 0.58,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688189.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6618,8 +6900,10 @@
       "pct": 0.6,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688227.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6632,8 +6916,10 @@
       "pct": 0.3,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688356.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -6646,8 +6932,10 @@
       "pct": 3.5,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688549.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -6660,8 +6948,10 @@
       "pct": 2.5,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688692.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6674,8 +6964,10 @@
       "pct": 0.2,
       "vol_ratio": 0.7,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000539.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6688,8 +6980,10 @@
       "pct": 0.3,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000601.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6702,8 +6996,10 @@
       "pct": 1.3,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000697.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6716,8 +7012,10 @@
       "pct": 3.1,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300508.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6730,8 +7028,10 @@
       "pct": 2.2,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300959.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.7万元"
       }
     },
     {
@@ -6744,8 +7044,10 @@
       "pct": 4.3,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688189.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6758,8 +7060,10 @@
       "pct": 0.0,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000513.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6772,8 +7076,10 @@
       "pct": 0.8,
       "vol_ratio": 0.51,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000697.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6786,8 +7092,10 @@
       "pct": 1.9,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000967.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.9万元"
       }
     },
     {
@@ -6800,8 +7108,10 @@
       "pct": 1.0,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000999.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6814,8 +7124,10 @@
       "pct": 0.5,
       "vol_ratio": 0.53,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "001359.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6828,8 +7140,10 @@
       "pct": 0.4,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002019.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6842,8 +7156,10 @@
       "pct": 0.8,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002038.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6856,8 +7172,10 @@
       "pct": 0.8,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002046.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6870,8 +7188,10 @@
       "pct": 1.4,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002080.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -6884,8 +7204,10 @@
       "pct": 0.4,
       "vol_ratio": 0.55,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002132.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -6898,8 +7220,10 @@
       "pct": 1.8,
       "vol_ratio": 0.6,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002245.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.0万元"
       }
     },
     {
@@ -6912,8 +7236,10 @@
       "pct": 0.6,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002606.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -6926,8 +7252,10 @@
       "pct": 0.3,
       "vol_ratio": 0.57,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002838.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -6940,8 +7268,10 @@
       "pct": 1.2,
       "vol_ratio": 0.53,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002843.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -6954,8 +7284,10 @@
       "pct": 1.7,
       "vol_ratio": 0.53,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002962.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -6968,8 +7300,10 @@
       "pct": 0.0,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002975.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.1万元"
       }
     },
     {
@@ -6982,8 +7316,10 @@
       "pct": 0.3,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002976.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -6996,8 +7332,10 @@
       "pct": 0.5,
       "vol_ratio": 0.57,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002990.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.3万元"
       }
     },
     {
@@ -7010,8 +7348,10 @@
       "pct": 0.4,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300001.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.4万元"
       }
     },
     {
@@ -7024,8 +7364,10 @@
       "pct": 2.8,
       "vol_ratio": 0.52,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300083.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.7万元"
       }
     },
     {
@@ -7038,8 +7380,10 @@
       "pct": 1.7,
       "vol_ratio": 0.58,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300161.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -7052,8 +7396,10 @@
       "pct": 1.7,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300214.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -7066,8 +7412,10 @@
       "pct": 1.3,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300252.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.5万元"
       }
     },
     {
@@ -7080,8 +7428,10 @@
       "pct": 3.6,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300292.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.9万元"
       }
     },
     {
@@ -7094,8 +7444,10 @@
       "pct": 1.6,
       "vol_ratio": 0.59,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300347.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -7108,8 +7460,10 @@
       "pct": 4.6,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300449.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.6万元"
       }
     },
     {
@@ -7122,8 +7476,10 @@
       "pct": 1.3,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300475.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 7.2万元"
       }
     },
     {
@@ -7136,8 +7492,10 @@
       "pct": 0.8,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300476.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 11.1万元"
       }
     },
     {
@@ -7150,8 +7508,10 @@
       "pct": 2.1,
       "vol_ratio": 0.62,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300508.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -7164,8 +7524,10 @@
       "pct": 2.1,
       "vol_ratio": 0.6,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300572.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7178,8 +7540,10 @@
       "pct": 1.7,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300681.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -7192,8 +7556,10 @@
       "pct": 0.6,
       "vol_ratio": 0.5,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300696.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -7206,8 +7572,10 @@
       "pct": 2.5,
       "vol_ratio": 0.6,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300745.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -7220,8 +7588,10 @@
       "pct": 3.0,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300758.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -7234,8 +7604,10 @@
       "pct": 0.6,
       "vol_ratio": 0.62,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300776.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.8万元"
       }
     },
     {
@@ -7248,8 +7620,10 @@
       "pct": 2.9,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300820.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -7262,8 +7636,10 @@
       "pct": 1.1,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300900.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -7276,8 +7652,10 @@
       "pct": 1.8,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300936.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -7290,8 +7668,10 @@
       "pct": 3.7,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300959.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -7304,8 +7684,10 @@
       "pct": 0.0,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301005.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -7318,8 +7700,10 @@
       "pct": 1.2,
       "vol_ratio": 0.57,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301053.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7332,8 +7716,10 @@
       "pct": 1.9,
       "vol_ratio": 0.51,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301157.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -7346,8 +7732,10 @@
       "pct": 1.9,
       "vol_ratio": 0.62,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301189.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -7360,8 +7748,10 @@
       "pct": 0.5,
       "vol_ratio": 0.47,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301197.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7374,8 +7764,10 @@
       "pct": 0.7,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301285.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -7388,8 +7780,10 @@
       "pct": 0.9,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301369.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -7402,8 +7796,10 @@
       "pct": 0.2,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301631.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -7416,8 +7812,10 @@
       "pct": 1.1,
       "vol_ratio": 0.54,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600172.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -7430,8 +7828,10 @@
       "pct": 0.6,
       "vol_ratio": 0.57,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600380.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -7444,8 +7844,10 @@
       "pct": 0.4,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600497.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -7458,8 +7860,10 @@
       "pct": 0.3,
       "vol_ratio": 0.48,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600510.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7472,8 +7876,10 @@
       "pct": 2.7,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600601.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -7486,8 +7892,10 @@
       "pct": 0.7,
       "vol_ratio": 0.55,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600770.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -7500,8 +7908,10 @@
       "pct": 0.4,
       "vol_ratio": 0.6,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "601137.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -7514,8 +7924,10 @@
       "pct": 2.1,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "601882.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -7528,8 +7940,10 @@
       "pct": 1.1,
       "vol_ratio": 0.6,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603002.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7542,8 +7956,10 @@
       "pct": 0.7,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603016.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7556,8 +7972,10 @@
       "pct": 0.6,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603318.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -7570,8 +7988,10 @@
       "pct": 1.6,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603679.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7584,8 +8004,10 @@
       "pct": 2.7,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688090.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -7598,8 +8020,10 @@
       "pct": 0.3,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688183.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.1万元"
       }
     },
     {
@@ -7612,8 +8036,10 @@
       "pct": 3.9,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688189.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7626,8 +8052,10 @@
       "pct": 2.0,
       "vol_ratio": 0.62,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688320.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7640,8 +8068,10 @@
       "pct": 0.3,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688321.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -7654,8 +8084,10 @@
       "pct": 1.7,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688523.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -7668,8 +8100,10 @@
       "pct": 0.5,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688566.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -7682,8 +8116,10 @@
       "pct": 1.3,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688663.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -7696,8 +8132,10 @@
       "pct": 0.3,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688669.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -7710,8 +8148,10 @@
       "pct": 0.1,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000009.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7724,8 +8164,10 @@
       "pct": 0.9,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000513.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -7738,8 +8180,10 @@
       "pct": 0.9,
       "vol_ratio": 0.59,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000661.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -7752,8 +8196,10 @@
       "pct": 0.9,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000768.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.5万元"
       }
     },
     {
@@ -7766,8 +8212,10 @@
       "pct": 2.0,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000878.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.9万元"
       }
     },
     {
@@ -7780,8 +8228,10 @@
       "pct": 2.9,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000889.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -7794,8 +8244,10 @@
       "pct": 0.1,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000963.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7808,8 +8260,10 @@
       "pct": 1.8,
       "vol_ratio": 0.58,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "000967.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 1.7万元"
       }
     },
     {
@@ -7822,8 +8276,10 @@
       "pct": 1.8,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002009.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.7万元"
       }
     },
     {
@@ -7836,8 +8292,10 @@
       "pct": 0.5,
       "vol_ratio": 0.46,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002038.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -7850,8 +8308,10 @@
       "pct": 0.7,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002432.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.8万元"
       }
     },
     {
@@ -7864,8 +8324,10 @@
       "pct": 0.8,
       "vol_ratio": 0.52,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002559.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -7878,8 +8340,10 @@
       "pct": 0.2,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002606.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.3万元"
       }
     },
     {
@@ -7892,8 +8356,10 @@
       "pct": 1.6,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002653.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -7906,8 +8372,10 @@
       "pct": 1.3,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002755.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -7920,8 +8388,10 @@
       "pct": 1.3,
       "vol_ratio": 0.55,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002838.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -7934,8 +8404,10 @@
       "pct": 0.0,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002866.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -7948,8 +8420,10 @@
       "pct": 1.1,
       "vol_ratio": 0.59,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002962.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -7962,8 +8436,10 @@
       "pct": 0.4,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002976.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -7976,8 +8452,10 @@
       "pct": 1.9,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002990.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -7990,8 +8468,10 @@
       "pct": 1.3,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "003022.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.6万元"
       }
     },
     {
@@ -8004,8 +8484,10 @@
       "pct": 2.3,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300083.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -8018,8 +8500,10 @@
       "pct": 4.6,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300097.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8032,8 +8516,10 @@
       "pct": 1.6,
       "vol_ratio": 0.7,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300154.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -8046,8 +8532,10 @@
       "pct": 1.6,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300199.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.7万元"
       }
     },
     {
@@ -8060,8 +8548,10 @@
       "pct": 1.1,
       "vol_ratio": 0.7,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300214.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -8074,8 +8564,10 @@
       "pct": 0.7,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300265.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8088,8 +8580,10 @@
       "pct": 0.4,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300270.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8102,8 +8596,10 @@
       "pct": 1.9,
       "vol_ratio": 0.54,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300292.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.5万元"
       }
     },
     {
@@ -8116,8 +8612,8 @@
       "pct": 1.7,
       "vol_ratio": 0.58,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "status": "data_unavailable",
+        "label": "无数据"
       }
     },
     {
@@ -8130,8 +8626,10 @@
       "pct": 1.1,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300347.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.7万元"
       }
     },
     {
@@ -8144,8 +8642,10 @@
       "pct": 3.5,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300449.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.5万元"
       }
     },
     {
@@ -8158,8 +8658,10 @@
       "pct": 2.5,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300626.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -8172,8 +8674,10 @@
       "pct": 0.6,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300656.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8186,8 +8690,10 @@
       "pct": 1.2,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300671.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -8200,8 +8706,10 @@
       "pct": 1.1,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300696.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8214,8 +8722,10 @@
       "pct": 2.0,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300720.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.4万元"
       }
     },
     {
@@ -8228,8 +8738,10 @@
       "pct": 2.7,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300745.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -8242,8 +8754,10 @@
       "pct": 1.1,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300782.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.0万元"
       }
     },
     {
@@ -8256,8 +8770,10 @@
       "pct": 1.5,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300845.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -8270,8 +8786,10 @@
       "pct": 0.6,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300852.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -8284,8 +8802,10 @@
       "pct": 2.6,
       "vol_ratio": 0.51,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300959.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.5万元"
       }
     },
     {
@@ -8298,8 +8818,10 @@
       "pct": 3.0,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300964.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8312,8 +8834,10 @@
       "pct": 0.5,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301041.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8326,8 +8850,10 @@
       "pct": 1.1,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301155.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8340,8 +8866,10 @@
       "pct": 2.8,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301157.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -8354,8 +8882,10 @@
       "pct": 0.6,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301196.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.6万元"
       }
     },
     {
@@ -8368,8 +8898,10 @@
       "pct": 2.9,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301197.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.4万元"
       }
     },
     {
@@ -8382,8 +8914,10 @@
       "pct": 0.5,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301217.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -8396,8 +8930,10 @@
       "pct": 2.5,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301237.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8410,8 +8946,10 @@
       "pct": 2.1,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301285.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8424,8 +8962,10 @@
       "pct": 0.0,
       "vol_ratio": 0.58,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301286.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8438,8 +8978,10 @@
       "pct": 1.2,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301326.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8452,8 +8994,10 @@
       "pct": 0.2,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301328.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -8466,8 +9010,10 @@
       "pct": 0.0,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "301526.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -8480,8 +9026,10 @@
       "pct": 2.0,
       "vol_ratio": 0.58,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600172.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.8万元"
       }
     },
     {
@@ -8494,8 +9042,10 @@
       "pct": 0.5,
       "vol_ratio": 0.62,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600196.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -8508,8 +9058,10 @@
       "pct": 0.5,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600433.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8522,8 +9074,10 @@
       "pct": 1.0,
       "vol_ratio": 0.55,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600497.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -8536,8 +9090,10 @@
       "pct": 1.1,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600510.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8550,8 +9106,10 @@
       "pct": 0.7,
       "vol_ratio": 0.52,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600529.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8564,8 +9122,10 @@
       "pct": 0.5,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600572.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8578,8 +9138,10 @@
       "pct": 1.5,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600588.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8592,8 +9154,10 @@
       "pct": 2.7,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600601.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -8606,8 +9170,10 @@
       "pct": 1.0,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600760.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8620,8 +9186,10 @@
       "pct": 0.1,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "600770.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8634,8 +9202,10 @@
       "pct": 1.1,
       "vol_ratio": 0.54,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "601778.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.5万元"
       }
     },
     {
@@ -8648,8 +9218,10 @@
       "pct": 1.3,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603045.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.5万元"
       }
     },
     {
@@ -8662,8 +9234,10 @@
       "pct": 0.4,
       "vol_ratio": 0.66,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603110.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8676,8 +9250,10 @@
       "pct": 0.2,
       "vol_ratio": 0.59,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603679.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8690,8 +9266,10 @@
       "pct": 2.0,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603985.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8704,8 +9282,10 @@
       "pct": 0.2,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "603998.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.0万元"
       }
     },
     {
@@ -8718,8 +9298,10 @@
       "pct": 1.5,
       "vol_ratio": 0.63,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688131.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8732,8 +9314,10 @@
       "pct": 0.3,
       "vol_ratio": 0.51,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688159.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8746,8 +9330,10 @@
       "pct": 1.9,
       "vol_ratio": 0.6,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688189.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.1万元"
       }
     },
     {
@@ -8760,8 +9346,10 @@
       "pct": 1.1,
       "vol_ratio": 0.59,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688221.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -8774,8 +9362,10 @@
       "pct": 0.3,
       "vol_ratio": 0.68,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688223.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.2万元"
       }
     },
     {
@@ -8788,8 +9378,10 @@
       "pct": 2.7,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688300.SH",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -8802,8 +9394,10 @@
       "pct": 0.5,
       "vol_ratio": 0.64,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688382.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8816,8 +9410,10 @@
       "pct": 0.7,
       "vol_ratio": 0.69,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688488.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8830,8 +9426,10 @@
       "pct": 0.8,
       "vol_ratio": 0.49,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688566.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8844,8 +9442,10 @@
       "pct": 0.9,
       "vol_ratio": 0.7,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688685.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8858,8 +9458,10 @@
       "pct": 2.3,
       "vol_ratio": 0.59,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "688693.SH",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.3万元"
       }
     },
     {
@@ -8872,8 +9474,10 @@
       "pct": 0.8,
       "vol_ratio": 0.67,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300537.SZ",
+        "label": "✓ 主力同向",
+        "status": "confirm",
+        "detail": "净流入 0.1万元"
       }
     },
     {
@@ -8886,8 +9490,10 @@
       "pct": 2.7,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "300124.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 1.4万元"
       }
     },
     {
@@ -8900,8 +9506,10 @@
       "pct": 0.0,
       "vol_ratio": 0.56,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002326.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.2万元"
       }
     },
     {
@@ -8914,8 +9522,10 @@
       "pct": 0.0,
       "vol_ratio": 0.65,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002527.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.0万元"
       }
     },
     {
@@ -8928,8 +9538,10 @@
       "pct": 1.1,
       "vol_ratio": 0.61,
       "moneyflow": {
-        "status": "error",
-        "label": "Cannot operate on a closed database."
+        "code": "002326.SZ",
+        "label": "⚠️ 大单净流出",
+        "status": "warning",
+        "detail": "净流出 0.6万元"
       }
     }
   ],
