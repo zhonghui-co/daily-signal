@@ -71,16 +71,6 @@
       22.16
     ],
     [
-      "300477",
-      "ST合纵",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260518",
-      2.79,
-      2.76,
-      2.76
-    ],
-    [
       "300820",
       "英杰电气",
       "集成电路",
@@ -89,16 +79,6 @@
       66.67,
       51.21,
       50.81
-    ],
-    [
-      "600730",
-      "*ST高科",
-      "国产软件与信创",
-      "软件与IT服务",
-      "20260518",
-      13.07,
-      10.07,
-      9.99
     ],
     [
       "300124",
@@ -441,16 +421,6 @@
       8.78
     ],
     [
-      "300295",
-      "*ST三六",
-      "国产软件与信创",
-      "软件与IT服务",
-      "20260511",
-      12.21,
-      11.32,
-      11.24
-    ],
-    [
       "300607",
       "拓斯达",
       "具身智能/机器人",
@@ -459,16 +429,6 @@
       31.55,
       28.38,
       28.3
-    ],
-    [
-      "600381",
-      "*ST春天",
-      "生物医药与器械",
-      "消费/医药/传媒",
-      "20260511",
-      4.37,
-      3.36,
-      3.36
     ],
     [
       "688147",
@@ -719,16 +679,6 @@
       29.55,
       24.02,
       23.84
-    ],
-    [
-      "603559",
-      "ST通脉",
-      "人工智能(AI算力)",
-      "通信/6G",
-      "20260507",
-      8.36,
-      7.25,
-      7.23
     ],
     [
       "688051",
@@ -1451,16 +1401,6 @@
       17.01
     ],
     [
-      "603595",
-      "ST东尼",
-      "集成电路",
-      "消费电子/元器件",
-      "20260427",
-      18.37,
-      16.66,
-      16.61
-    ],
-    [
       "603660",
       "苏州科达",
       "国产软件与信创",
@@ -1659,16 +1599,6 @@
       8.57,
       6.44,
       6.42
-    ],
-    [
-      "002898",
-      "*ST赛隆",
-      "生物医药与器械",
-      "生物医药",
-      "20260416",
-      13.44,
-      12.51,
-      12.45
     ]
   ],
   "death": [
@@ -2051,16 +1981,6 @@
       4.99,
       5.27,
       5.27
-    ],
-    [
-      "002898",
-      "*ST赛隆",
-      "生物医药与器械",
-      "生物医药",
-      "20260427",
-      9.68,
-      12.24,
-      12.26
     ],
     [
       "300158",
@@ -2479,18 +2399,6 @@
       3
     ],
     [
-      "300295",
-      "*ST三六",
-      "国产软件与信创",
-      "软件与IT服务",
-      "20260520",
-      12.07,
-      -3.8,
-      12.12,
-      11.66,
-      3
-    ],
-    [
       "300322",
       "硕贝德",
       "国产软件与信创",
@@ -2536,42 +2444,6 @@
       -17.5,
       9.07,
       8.37,
-      3
-    ],
-    [
-      "300477",
-      "ST合纵",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260521",
-      2.8,
-      -4.3,
-      2.83,
-      2.8,
-      3
-    ],
-    [
-      "300477",
-      "ST合纵",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260522",
-      2.83,
-      -8.7,
-      2.84,
-      2.8,
-      3
-    ],
-    [
-      "300477",
-      "ST合纵",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260525",
-      2.84,
-      -7.2,
-      2.85,
-      2.8,
       3
     ],
     [
@@ -2668,18 +2540,6 @@
       -16.5,
       5.75,
       5.17,
-      3
-    ],
-    [
-      "600337",
-      "ST美克",
-      "新能源(光风储电)",
-      "消费/医药/传媒",
-      "20260525",
-      2.97,
-      1.5,
-      3.03,
-      2.94,
       3
     ],
     [
@@ -3604,18 +3464,6 @@
       -9.4,
       6.0,
       5.48,
-      2
-    ],
-    [
-      "300295",
-      "*ST三六",
-      "国产软件与信创",
-      "软件与IT服务",
-      "20260522",
-      11.76,
-      -1.3,
-      12.12,
-      11.65,
       2
     ],
     [
@@ -4616,6 +4464,4476 @@
     ]
   ],
   "b2": [
+    {
+      "code": "000518",
+      "name": "四环生物",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 4.54,
+      "pct": 9.9,
+      "vol_ratio": 2.08,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000697",
+      "name": "炼石航空",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260525",
+      "close": 13.06,
+      "pct": 8.4,
+      "vol_ratio": 1.92,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000969",
+      "name": "安泰科技",
+      "ff": "可控核聚变",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 24.01,
+      "pct": 5.7,
+      "vol_ratio": 1.99,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002747",
+      "name": "埃斯顿",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 28.61,
+      "pct": 12.5,
+      "vol_ratio": 1.8,
+      "pattern": "平行重炮",
+      "post_golden": true,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300537",
+      "name": "广信材料",
+      "ff": "新材料",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 31.15,
+      "pct": 19.2,
+      "vol_ratio": 2.34,
+      "pattern": "灾后重建",
+      "post_golden": true,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300626",
+      "name": "华瑞股份",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260525",
+      "close": 39.02,
+      "pct": 20.0,
+      "vol_ratio": 1.6,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300975",
+      "name": "商络电子",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260525",
+      "close": 27.36,
+      "pct": 20.0,
+      "vol_ratio": 1.53,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301099",
+      "name": "雅创电子",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260525",
+      "close": 68.59,
+      "pct": 6.8,
+      "vol_ratio": 1.54,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301285",
+      "name": "鸿日达",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260525",
+      "close": 121.39,
+      "pct": 7.7,
+      "vol_ratio": 1.9,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301563",
+      "name": "云汉芯城",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 199.62,
+      "pct": 16.7,
+      "vol_ratio": 1.82,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600529",
+      "name": "山东药玻",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 19.44,
+      "pct": 4.6,
+      "vol_ratio": 2.18,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600545",
+      "name": "卓郎智能",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260525",
+      "close": 6.65,
+      "pct": 4.2,
+      "vol_ratio": 1.56,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603158",
+      "name": "腾龙股份",
+      "ff": "新能源汽车",
+      "tc": "汽车零部件",
+      "date": "20260525",
+      "close": 15.8,
+      "pct": 8.7,
+      "vol_ratio": 1.74,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688981",
+      "name": "中芯国际",
+      "ff": "集成电路",
+      "tc": "封测与基板",
+      "date": "20260525",
+      "close": 156.0,
+      "pct": 18.8,
+      "vol_ratio": 1.51,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000518",
+      "name": "四环生物",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 4.13,
+      "pct": 10.1,
+      "vol_ratio": 1.75,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "001389",
+      "name": "广合科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260522",
+      "close": 195.01,
+      "pct": 9.0,
+      "vol_ratio": 1.51,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002125",
+      "name": "湘潭电化",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 14.73,
+      "pct": 5.0,
+      "vol_ratio": 1.56,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002328",
+      "name": "新朋股份",
+      "ff": "新能源(光风储电)",
+      "tc": "汽车零部件",
+      "date": "20260522",
+      "close": 10.15,
+      "pct": 5.7,
+      "vol_ratio": 1.52,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002422",
+      "name": "科伦药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260522",
+      "close": 34.72,
+      "pct": 7.2,
+      "vol_ratio": 1.78,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002463",
+      "name": "沪电股份",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260522",
+      "close": 114.07,
+      "pct": 10.0,
+      "vol_ratio": 1.53,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002652",
+      "name": "扬子新材",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260522",
+      "close": 6.38,
+      "pct": 7.2,
+      "vol_ratio": 1.51,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002741",
+      "name": "光华科技",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260522",
+      "close": 25.36,
+      "pct": 10.0,
+      "vol_ratio": 1.76,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002826",
+      "name": "易明医药",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 19.59,
+      "pct": 10.0,
+      "vol_ratio": 2.33,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300243",
+      "name": "瑞丰高材",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260522",
+      "close": 20.87,
+      "pct": 20.0,
+      "vol_ratio": 1.59,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300285",
+      "name": "国瓷材料",
+      "ff": "新材料",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 48.4,
+      "pct": 16.5,
+      "vol_ratio": 1.51,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300408",
+      "name": "三环集团",
+      "ff": "新材料",
+      "tc": "消费电子/元器件",
+      "date": "20260522",
+      "close": 115.0,
+      "pct": 16.8,
+      "vol_ratio": 1.62,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300476",
+      "name": "胜宏科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260522",
+      "close": 375.5,
+      "pct": 13.3,
+      "vol_ratio": 1.73,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300586",
+      "name": "美联新材",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 12.37,
+      "pct": 9.7,
+      "vol_ratio": 1.61,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300672",
+      "name": "国科微",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260522",
+      "close": 296.73,
+      "pct": 14.2,
+      "vol_ratio": 1.55,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301281",
+      "name": "科源制药",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 40.55,
+      "pct": 12.1,
+      "vol_ratio": 1.83,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301526",
+      "name": "国际复材",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260522",
+      "close": 20.49,
+      "pct": 15.0,
+      "vol_ratio": 1.6,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600529",
+      "name": "山东药玻",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 18.58,
+      "pct": 5.1,
+      "vol_ratio": 2.16,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603158",
+      "name": "腾龙股份",
+      "ff": "新能源汽车",
+      "tc": "汽车零部件",
+      "date": "20260522",
+      "close": 14.53,
+      "pct": 5.3,
+      "vol_ratio": 1.67,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603439",
+      "name": "三力制药",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 14.29,
+      "pct": 10.0,
+      "vol_ratio": 1.51,
+      "pattern": "灾后重建",
+      "post_golden": true,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688139",
+      "name": "海尔生物",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 36.79,
+      "pct": 10.8,
+      "vol_ratio": 2.92,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688458",
+      "name": "美芯晟",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260522",
+      "close": 47.49,
+      "pct": 12.5,
+      "vol_ratio": 1.6,
+      "pattern": "灾后重建",
+      "post_golden": true,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688519",
+      "name": "南亚新材",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260522",
+      "close": 201.93,
+      "pct": 10.3,
+      "vol_ratio": 1.61,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688657",
+      "name": "浩辰软件",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 39.04,
+      "pct": 6.5,
+      "vol_ratio": 1.98,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000026",
+      "name": "飞亚达",
+      "ff": "生物医药与器械",
+      "tc": "消费/医药/传媒",
+      "date": "20260521",
+      "close": 23.23,
+      "pct": 6.6,
+      "vol_ratio": 1.66,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000518",
+      "name": "四环生物",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260521",
+      "close": 3.75,
+      "pct": 10.0,
+      "vol_ratio": 2.76,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "001270",
+      "name": "铖昌科技",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260521",
+      "close": 146.5,
+      "pct": 6.2,
+      "vol_ratio": 1.79,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "001896",
+      "name": "豫能控股",
+      "ff": "新能源(光风储电)",
+      "tc": "电力运营",
+      "date": "20260521",
+      "close": 16.37,
+      "pct": 10.0,
+      "vol_ratio": 1.66,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300323",
+      "name": "华灿光电",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260521",
+      "close": 18.73,
+      "pct": 9.9,
+      "vol_ratio": 1.58,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300503",
+      "name": "昊志机电",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260521",
+      "close": 86.97,
+      "pct": 14.7,
+      "vol_ratio": 1.73,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301322",
+      "name": "绿通科技",
+      "ff": "新能源汽车",
+      "tc": "汽车零部件",
+      "date": "20260521",
+      "close": 56.58,
+      "pct": 4.5,
+      "vol_ratio": 2.99,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603590",
+      "name": "康辰药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260521",
+      "close": 39.22,
+      "pct": 10.0,
+      "vol_ratio": 2.66,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603906",
+      "name": "龙蟠科技",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260521",
+      "close": 29.3,
+      "pct": 5.3,
+      "vol_ratio": 1.76,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688192",
+      "name": "迪哲医药-U",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260521",
+      "close": 57.56,
+      "pct": 10.7,
+      "vol_ratio": 2.12,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688271",
+      "name": "联影医疗",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260521",
+      "close": 123.3,
+      "pct": 10.1,
+      "vol_ratio": 2.79,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000518",
+      "name": "四环生物",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260520",
+      "close": 3.41,
+      "pct": 10.0,
+      "vol_ratio": 2.04,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000636",
+      "name": "风华高科",
+      "ff": "新材料",
+      "tc": "消费电子/元器件",
+      "date": "20260520",
+      "close": 34.0,
+      "pct": 5.0,
+      "vol_ratio": 1.7,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002755",
+      "name": "奥赛康",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260520",
+      "close": 17.1,
+      "pct": 6.0,
+      "vol_ratio": 2.25,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "003004",
+      "name": "声迅股份",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260520",
+      "close": 45.13,
+      "pct": 10.0,
+      "vol_ratio": 1.98,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300222",
+      "name": "科大智能",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260520",
+      "close": 15.06,
+      "pct": 7.3,
+      "vol_ratio": 1.72,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300853",
+      "name": "申昊科技",
+      "ff": "具身智能/机器人",
+      "tc": "机器人/自动化",
+      "date": "20260520",
+      "close": 35.65,
+      "pct": 11.6,
+      "vol_ratio": 1.63,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603439",
+      "name": "三力制药",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260520",
+      "close": 13.5,
+      "pct": 7.9,
+      "vol_ratio": 1.59,
+      "pattern": "灾后重建",
+      "post_golden": true,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688131",
+      "name": "皓元医药",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260520",
+      "close": 75.39,
+      "pct": 6.5,
+      "vol_ratio": 1.66,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688347",
+      "name": "华虹公司",
+      "ff": "集成电路",
+      "tc": "封测与基板",
+      "date": "20260520",
+      "close": 177.8,
+      "pct": 18.7,
+      "vol_ratio": 1.61,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688584",
+      "name": "上海合晶",
+      "ff": "集成电路",
+      "tc": "半导体材料",
+      "date": "20260520",
+      "close": 32.16,
+      "pct": 20.0,
+      "vol_ratio": 1.72,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688981",
+      "name": "中芯国际",
+      "ff": "集成电路",
+      "tc": "封测与基板",
+      "date": "20260520",
+      "close": 133.81,
+      "pct": 12.6,
+      "vol_ratio": 1.89,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002422",
+      "name": "科伦药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 32.34,
+      "pct": 5.6,
+      "vol_ratio": 1.6,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002963",
+      "name": "豪尔赛",
+      "ff": "集成电路",
+      "tc": "地产/基建",
+      "date": "20260519",
+      "close": 20.98,
+      "pct": 6.4,
+      "vol_ratio": 1.57,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300657",
+      "name": "弘信电子",
+      "ff": "新能源(光风储电)",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 52.08,
+      "pct": 20.0,
+      "vol_ratio": 1.73,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300976",
+      "name": "达瑞电子",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 84.92,
+      "pct": 10.0,
+      "vol_ratio": 1.65,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600578",
+      "name": "京能电力",
+      "ff": "新能源(光风储电)",
+      "tc": "电力运营",
+      "date": "20260519",
+      "close": 8.27,
+      "pct": 7.3,
+      "vol_ratio": 1.71,
+      "pattern": "平行重炮",
+      "post_golden": true,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603125",
+      "name": "常青科技",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 28.14,
+      "pct": 4.1,
+      "vol_ratio": 1.57,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603773",
+      "name": "沃格光电",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 70.73,
+      "pct": 4.8,
+      "vol_ratio": 1.72,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688099",
+      "name": "晶晨股份",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260519",
+      "close": 122.52,
+      "pct": 12.1,
+      "vol_ratio": 1.59,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688126",
+      "name": "沪硅产业",
+      "ff": "集成电路",
+      "tc": "半导体材料",
+      "date": "20260519",
+      "close": 29.52,
+      "pct": 20.0,
+      "vol_ratio": 1.6,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688610",
+      "name": "埃科光电",
+      "ff": "国产软件与信创",
+      "tc": "光通信与光学",
+      "date": "20260519",
+      "close": 164.71,
+      "pct": 20.0,
+      "vol_ratio": 1.76,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002326",
+      "name": "永太科技",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260515",
+      "close": 23.52,
+      "pct": 6.9,
+      "vol_ratio": 1.69,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002527",
+      "name": "新时达",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260515",
+      "close": 13.73,
+      "pct": 4.7,
+      "vol_ratio": 1.9,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002747",
+      "name": "埃斯顿",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260515",
+      "close": 25.43,
+      "pct": 7.1,
+      "vol_ratio": 1.97,
+      "pattern": "灾后重建",
+      "post_golden": true,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300024",
+      "name": "机器人",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260515",
+      "close": 16.09,
+      "pct": 7.7,
+      "vol_ratio": 2.48,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603728",
+      "name": "鸣志电器",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260515",
+      "close": 64.99,
+      "pct": 5.3,
+      "vol_ratio": 1.74,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002896",
+      "name": "中大力德",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260512",
+      "close": 80.4,
+      "pct": 6.4,
+      "vol_ratio": 1.85,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000584",
+      "name": "哈工智能",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20250710",
+      "close": 0.29,
+      "pct": 11.5,
+      "vol_ratio": 1.82,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    }
+  ],
+  "b3": [
+    {
+      "code": "000963",
+      "name": "华东医药",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260525",
+      "close": 29.13,
+      "pct": 0.3,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002031",
+      "name": "巨轮智能",
+      "ff": "具身智能/机器人",
+      "tc": "机器人/自动化",
+      "date": "20260525",
+      "close": 7.21,
+      "pct": 2.6,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002392",
+      "name": "北京利尔",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260525",
+      "close": 9.11,
+      "pct": 0.3,
+      "vol_ratio": 0.49,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002422",
+      "name": "科伦药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260525",
+      "close": 34.36,
+      "pct": 1.0,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002536",
+      "name": "飞龙股份",
+      "ff": "新能源汽车",
+      "tc": "汽车零部件",
+      "date": "20260525",
+      "close": 45.77,
+      "pct": 1.9,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002755",
+      "name": "奥赛康",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260525",
+      "close": 16.22,
+      "pct": 2.6,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002773",
+      "name": "康弘药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260525",
+      "close": 21.12,
+      "pct": 0.3,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "003022",
+      "name": "联泓新科",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260525",
+      "close": 24.98,
+      "pct": 1.7,
+      "vol_ratio": 0.7,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300097",
+      "name": "智云股份",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260525",
+      "close": 10.13,
+      "pct": 3.3,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300214",
+      "name": "日科化学",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260525",
+      "close": 8.22,
+      "pct": 2.3,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300449",
+      "name": "汉邦高科",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260525",
+      "close": 8.49,
+      "pct": 1.8,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300760",
+      "name": "迈瑞医疗",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 153.63,
+      "pct": 0.4,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300821",
+      "name": "东岳硅材",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260525",
+      "close": 14.98,
+      "pct": 1.5,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300965",
+      "name": "恒宇信通",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260525",
+      "close": 67.74,
+      "pct": 3.6,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301538",
+      "name": "骏鼎达",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260525",
+      "close": 103.87,
+      "pct": 2.5,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600130",
+      "name": "波导股份",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260525",
+      "close": 5.21,
+      "pct": 3.0,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600379",
+      "name": "宝光股份",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260525",
+      "close": 13.34,
+      "pct": 1.5,
+      "vol_ratio": 0.59,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600905",
+      "name": "三峡能源",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 4.12,
+      "pct": 0.2,
+      "vol_ratio": 0.7,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603318",
+      "name": "水发燃气",
+      "ff": "新能源(光风储电)",
+      "tc": "电力运营",
+      "date": "20260525",
+      "close": 9.68,
+      "pct": 2.9,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603399",
+      "name": "永杉锂业",
+      "ff": "新能源(光风储电)",
+      "tc": "化工/材料",
+      "date": "20260525",
+      "close": 17.56,
+      "pct": 2.2,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603698",
+      "name": "航天工程",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260525",
+      "close": 37.7,
+      "pct": 2.5,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688192",
+      "name": "迪哲医药-U",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 54.83,
+      "pct": 0.5,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688282",
+      "name": "理工导航",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260525",
+      "close": 89.92,
+      "pct": 2.2,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688290",
+      "name": "景业智能",
+      "ff": "具身智能/机器人",
+      "tc": "机器人/自动化",
+      "date": "20260525",
+      "close": 70.13,
+      "pct": 0.1,
+      "vol_ratio": 0.53,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688545",
+      "name": "兴福电子",
+      "ff": "集成电路",
+      "tc": "半导体材料",
+      "date": "20260525",
+      "close": 81.16,
+      "pct": 1.0,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688549",
+      "name": "中巨芯-U",
+      "ff": "集成电路",
+      "tc": "半导体材料",
+      "date": "20260525",
+      "close": 15.99,
+      "pct": 1.9,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688590",
+      "name": "新致软件",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260525",
+      "close": 16.63,
+      "pct": 4.9,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688697",
+      "name": "纽威数控",
+      "ff": "高端装备(工业母机)",
+      "tc": "工业设备/通用机械",
+      "date": "20260525",
+      "close": 24.19,
+      "pct": 1.2,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688783",
+      "name": "西安奕材-U",
+      "ff": "集成电路",
+      "tc": "半导体材料",
+      "date": "20260525",
+      "close": 33.12,
+      "pct": 0.8,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000539",
+      "name": "粤电力Ａ",
+      "ff": "集成电路",
+      "tc": "电力运营",
+      "date": "20260522",
+      "close": 6.53,
+      "pct": 1.4,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000601",
+      "name": "韶能股份",
+      "ff": "新能源(光风储电)",
+      "tc": "电力运营",
+      "date": "20260522",
+      "close": 7.33,
+      "pct": 1.0,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002031",
+      "name": "巨轮智能",
+      "ff": "具身智能/机器人",
+      "tc": "机器人/自动化",
+      "date": "20260522",
+      "close": 7.4,
+      "pct": 1.9,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002176",
+      "name": "江特电机",
+      "ff": "具身智能/机器人",
+      "tc": "新能源/电力设备",
+      "date": "20260522",
+      "close": 12.87,
+      "pct": 1.1,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002256",
+      "name": "兆新股份",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260522",
+      "close": 4.58,
+      "pct": 2.0,
+      "vol_ratio": 0.7,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002392",
+      "name": "北京利尔",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260522",
+      "close": 9.14,
+      "pct": 2.0,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002498",
+      "name": "汉缆股份",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260522",
+      "close": 8.91,
+      "pct": 1.7,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002805",
+      "name": "丰元股份",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260522",
+      "close": 23.36,
+      "pct": 2.1,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002903",
+      "name": "宇环数控",
+      "ff": "高端装备(工业母机)",
+      "tc": "工业设备/通用机械",
+      "date": "20260522",
+      "close": 44.64,
+      "pct": 0.2,
+      "vol_ratio": 0.6,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002963",
+      "name": "豪尔赛",
+      "ff": "集成电路",
+      "tc": "地产/基建",
+      "date": "20260522",
+      "close": 19.2,
+      "pct": 0.5,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002971",
+      "name": "和远气体",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260522",
+      "close": 33.94,
+      "pct": 2.2,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002997",
+      "name": "瑞鹄模具",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 33.17,
+      "pct": 1.6,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300158",
+      "name": "振东制药",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260522",
+      "close": 5.48,
+      "pct": 1.1,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300222",
+      "name": "科大智能",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260522",
+      "close": 14.14,
+      "pct": 0.4,
+      "vol_ratio": 0.58,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300263",
+      "name": "隆华科技",
+      "ff": "集成电路",
+      "tc": "半导体零部件",
+      "date": "20260522",
+      "close": 12.93,
+      "pct": 2.1,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300265",
+      "name": "通光线缆",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260522",
+      "close": 21.58,
+      "pct": 2.0,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300661",
+      "name": "圣邦股份",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260522",
+      "close": 111.01,
+      "pct": 1.3,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300686",
+      "name": "智动力",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260522",
+      "close": 17.53,
+      "pct": 0.3,
+      "vol_ratio": 0.57,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300687",
+      "name": "赛意信息",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260522",
+      "close": 32.85,
+      "pct": 4.6,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300965",
+      "name": "恒宇信通",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260522",
+      "close": 70.3,
+      "pct": 1.7,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301489",
+      "name": "思泉新材",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260522",
+      "close": 269.5,
+      "pct": 0.7,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600130",
+      "name": "波导股份",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260522",
+      "close": 5.37,
+      "pct": 2.2,
+      "vol_ratio": 0.59,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600216",
+      "name": "浙江医药",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260522",
+      "close": 13.61,
+      "pct": 0.4,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600379",
+      "name": "宝光股份",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260522",
+      "close": 13.54,
+      "pct": 1.7,
+      "vol_ratio": 0.52,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603016",
+      "name": "新宏泰",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260522",
+      "close": 48.6,
+      "pct": 1.3,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603045",
+      "name": "福达合金",
+      "ff": "新能源(光风储电)",
+      "tc": "其他",
+      "date": "20260522",
+      "close": 65.29,
+      "pct": 2.3,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603095",
+      "name": "越剑智能",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260522",
+      "close": 21.63,
+      "pct": 2.0,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603318",
+      "name": "水发燃气",
+      "ff": "新能源(光风储电)",
+      "tc": "电力运营",
+      "date": "20260522",
+      "close": 9.97,
+      "pct": 0.9,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603608",
+      "name": "天创时尚",
+      "ff": "具身智能/机器人",
+      "tc": "消费/医药/传媒",
+      "date": "20260522",
+      "close": 16.99,
+      "pct": 0.2,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603698",
+      "name": "航天工程",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260522",
+      "close": 38.65,
+      "pct": 0.4,
+      "vol_ratio": 0.51,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603916",
+      "name": "苏博特",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260522",
+      "close": 15.41,
+      "pct": 2.5,
+      "vol_ratio": 0.62,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688061",
+      "name": "灿瑞科技",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260522",
+      "close": 41.39,
+      "pct": 1.9,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688102",
+      "name": "斯瑞新材",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260522",
+      "close": 40.58,
+      "pct": 2.4,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688143",
+      "name": "长盈通",
+      "ff": "国产软件与信创",
+      "tc": "光通信与光学",
+      "date": "20260522",
+      "close": 138.47,
+      "pct": 4.9,
+      "vol_ratio": 0.49,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688146",
+      "name": "中船特气",
+      "ff": "集成电路",
+      "tc": "半导体材料",
+      "date": "20260522",
+      "close": 130.72,
+      "pct": 2.2,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688189",
+      "name": "南新制药",
+      "ff": "生物医药与器械",
+      "tc": "消费/医药/传媒",
+      "date": "20260522",
+      "close": 9.74,
+      "pct": 4.4,
+      "vol_ratio": 0.58,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688227",
+      "name": "品高股份",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260522",
+      "close": 90.05,
+      "pct": 0.6,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688356",
+      "name": "键凯科技",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260522",
+      "close": 81.47,
+      "pct": 0.3,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688549",
+      "name": "中巨芯-U",
+      "ff": "集成电路",
+      "tc": "半导体材料",
+      "date": "20260522",
+      "close": 16.3,
+      "pct": 3.5,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688692",
+      "name": "XD达梦数",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260522",
+      "close": 261.68,
+      "pct": 2.5,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000539",
+      "name": "粤电力Ａ",
+      "ff": "集成电路",
+      "tc": "电力运营",
+      "date": "20260521",
+      "close": 6.44,
+      "pct": 0.2,
+      "vol_ratio": 0.7,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000601",
+      "name": "韶能股份",
+      "ff": "新能源(光风储电)",
+      "tc": "电力运营",
+      "date": "20260521",
+      "close": 7.26,
+      "pct": 0.3,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000697",
+      "name": "炼石航空",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260521",
+      "close": 11.73,
+      "pct": 1.3,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300508",
+      "name": "维宏股份",
+      "ff": "高端装备(工业母机)",
+      "tc": "软件与IT服务",
+      "date": "20260521",
+      "close": 47.46,
+      "pct": 3.1,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300959",
+      "name": "线上线下",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260521",
+      "close": 178.9,
+      "pct": 2.2,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688189",
+      "name": "南新制药",
+      "ff": "生物医药与器械",
+      "tc": "消费/医药/传媒",
+      "date": "20260521",
+      "close": 9.33,
+      "pct": 4.3,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000513",
+      "name": "丽珠集团",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260520",
+      "close": 31.19,
+      "pct": 0.0,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000697",
+      "name": "炼石航空",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260520",
+      "close": 11.88,
+      "pct": 0.8,
+      "vol_ratio": 0.51,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000967",
+      "name": "盈峰环境",
+      "ff": "新能源(光风储电)",
+      "tc": "其他",
+      "date": "20260520",
+      "close": 13.08,
+      "pct": 1.9,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000999",
+      "name": "华润三九",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260520",
+      "close": 24.69,
+      "pct": 1.0,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "001359",
+      "name": "平安电工",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260520",
+      "close": 100.54,
+      "pct": 0.5,
+      "vol_ratio": 0.53,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002019",
+      "name": "亿帆医药",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260520",
+      "close": 10.51,
+      "pct": 0.4,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002038",
+      "name": "双鹭药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260520",
+      "close": 6.23,
+      "pct": 0.8,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002046",
+      "name": "国机精工",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260520",
+      "close": 51.07,
+      "pct": 0.8,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002080",
+      "name": "中材科技",
+      "ff": "新能源(光风储电)",
+      "tc": "化工/材料",
+      "date": "20260520",
+      "close": 65.21,
+      "pct": 1.4,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002132",
+      "name": "恒星科技",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260520",
+      "close": 5.4,
+      "pct": 0.4,
+      "vol_ratio": 0.55,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002245",
+      "name": "蔚蓝锂芯",
+      "ff": "集成电路",
+      "tc": "新能源/电力设备",
+      "date": "20260520",
+      "close": 39.94,
+      "pct": 1.8,
+      "vol_ratio": 0.6,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002606",
+      "name": "大连电瓷",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260520",
+      "close": 15.61,
+      "pct": 0.6,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002838",
+      "name": "道恩股份",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260520",
+      "close": 37.22,
+      "pct": 0.3,
+      "vol_ratio": 0.57,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002843",
+      "name": "泰嘉股份",
+      "ff": "新能源(光风储电)",
+      "tc": "工业设备/通用机械",
+      "date": "20260520",
+      "close": 26.98,
+      "pct": 1.2,
+      "vol_ratio": 0.53,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002962",
+      "name": "五方光电",
+      "ff": "国产软件与信创",
+      "tc": "光通信与光学",
+      "date": "20260520",
+      "close": 18.26,
+      "pct": 1.7,
+      "vol_ratio": 0.53,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002975",
+      "name": "博杰股份",
+      "ff": "集成电路",
+      "tc": "半导体设备",
+      "date": "20260520",
+      "close": 119.08,
+      "pct": 0.0,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002976",
+      "name": "瑞玛精密",
+      "ff": "具身智能/机器人",
+      "tc": "汽车零部件",
+      "date": "20260520",
+      "close": 35.54,
+      "pct": 0.3,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002990",
+      "name": "盛视科技",
+      "ff": "具身智能/机器人",
+      "tc": "软件与IT服务",
+      "date": "20260520",
+      "close": 62.32,
+      "pct": 0.5,
+      "vol_ratio": 0.57,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300001",
+      "name": "特锐德",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260520",
+      "close": 40.01,
+      "pct": 0.4,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300083",
+      "name": "创世纪",
+      "ff": "高端装备(工业母机)",
+      "tc": "工业设备/通用机械",
+      "date": "20260520",
+      "close": 11.23,
+      "pct": 2.8,
+      "vol_ratio": 0.52,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300161",
+      "name": "华中数控",
+      "ff": "高端装备(工业母机)",
+      "tc": "工业设备/通用机械",
+      "date": "20260520",
+      "close": 37.21,
+      "pct": 1.7,
+      "vol_ratio": 0.58,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300214",
+      "name": "日科化学",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260520",
+      "close": 8.7,
+      "pct": 1.7,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300252",
+      "name": "金信诺",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260520",
+      "close": 16.31,
+      "pct": 1.3,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300292",
+      "name": "吴通控股",
+      "ff": "国产软件与信创",
+      "tc": "通信/6G",
+      "date": "20260520",
+      "close": 6.1,
+      "pct": 3.6,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300347",
+      "name": "泰格医药",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260520",
+      "close": 44.89,
+      "pct": 1.6,
+      "vol_ratio": 0.59,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300449",
+      "name": "汉邦高科",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260520",
+      "close": 9.1,
+      "pct": 4.6,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300475",
+      "name": "香农芯创",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260520",
+      "close": 186.4,
+      "pct": 1.3,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300476",
+      "name": "胜宏科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260520",
+      "close": 334.2,
+      "pct": 0.8,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300508",
+      "name": "维宏股份",
+      "ff": "高端装备(工业母机)",
+      "tc": "软件与IT服务",
+      "date": "20260520",
+      "close": 48.96,
+      "pct": 2.1,
+      "vol_ratio": 0.62,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300572",
+      "name": "安车检测",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260520",
+      "close": 33.47,
+      "pct": 2.1,
+      "vol_ratio": 0.6,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300681",
+      "name": "英搏尔",
+      "ff": "具身智能/机器人",
+      "tc": "汽车零部件",
+      "date": "20260520",
+      "close": 33.69,
+      "pct": 1.7,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300696",
+      "name": "爱乐达",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260520",
+      "close": 37.2,
+      "pct": 0.6,
+      "vol_ratio": 0.5,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300745",
+      "name": "欣锐科技",
+      "ff": "具身智能/机器人",
+      "tc": "汽车零部件",
+      "date": "20260520",
+      "close": 50.85,
+      "pct": 2.5,
+      "vol_ratio": 0.6,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300758",
+      "name": "七彩化学",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260520",
+      "close": 13.93,
+      "pct": 3.0,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300776",
+      "name": "帝尔激光",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260520",
+      "close": 143.75,
+      "pct": 0.6,
+      "vol_ratio": 0.62,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300820",
+      "name": "英杰电气",
+      "ff": "集成电路",
+      "tc": "半导体零部件",
+      "date": "20260520",
+      "close": 72.36,
+      "pct": 2.9,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300900",
+      "name": "广联航空",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260520",
+      "close": 40.9,
+      "pct": 1.1,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300936",
+      "name": "中英科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260520",
+      "close": 86.93,
+      "pct": 1.8,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300959",
+      "name": "线上线下",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260520",
+      "close": 182.95,
+      "pct": 3.7,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301005",
+      "name": "超捷股份",
+      "ff": "新能源汽车",
+      "tc": "汽车零部件",
+      "date": "20260520",
+      "close": 168.0,
+      "pct": 0.0,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301053",
+      "name": "远信工业",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260520",
+      "close": 53.35,
+      "pct": 1.2,
+      "vol_ratio": 0.57,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301157",
+      "name": "华塑科技",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260520",
+      "close": 79.76,
+      "pct": 1.9,
+      "vol_ratio": 0.51,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301189",
+      "name": "奥尼电子",
+      "ff": "人工智能(AI算力)",
+      "tc": "消费电子/元器件",
+      "date": "20260520",
+      "close": 94.0,
+      "pct": 1.9,
+      "vol_ratio": 0.62,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301197",
+      "name": "工大科雅",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260520",
+      "close": 35.46,
+      "pct": 0.5,
+      "vol_ratio": 0.47,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301285",
+      "name": "鸿日达",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260520",
+      "close": 117.98,
+      "pct": 0.7,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301369",
+      "name": "联动科技",
+      "ff": "集成电路",
+      "tc": "半导体设备",
+      "date": "20260520",
+      "close": 376.06,
+      "pct": 0.9,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301631",
+      "name": "壹连科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260520",
+      "close": 133.91,
+      "pct": 0.2,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600172",
+      "name": "黄河旋风",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260520",
+      "close": 10.7,
+      "pct": 1.1,
+      "vol_ratio": 0.54,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600380",
+      "name": "健康元",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260520",
+      "close": 10.29,
+      "pct": 0.6,
+      "vol_ratio": 0.57,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600497",
+      "name": "驰宏锌锗",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260520",
+      "close": 9.97,
+      "pct": 0.4,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600510",
+      "name": "黑牡丹",
+      "ff": "人工智能(AI算力)",
+      "tc": "地产/基建",
+      "date": "20260520",
+      "close": 9.16,
+      "pct": 0.3,
+      "vol_ratio": 0.48,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600601",
+      "name": "方正科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260520",
+      "close": 12.03,
+      "pct": 2.7,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600770",
+      "name": "综艺股份",
+      "ff": "人工智能(AI算力)",
+      "tc": "金融/综合",
+      "date": "20260520",
+      "close": 6.97,
+      "pct": 0.7,
+      "vol_ratio": 0.55,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "601137",
+      "name": "博威合金",
+      "ff": "新材料",
+      "tc": "待分类",
+      "date": "20260520",
+      "close": 20.62,
+      "pct": 0.4,
+      "vol_ratio": 0.6,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "601882",
+      "name": "海天精工",
+      "ff": "高端装备(工业母机)",
+      "tc": "待分类",
+      "date": "20260520",
+      "close": 23.28,
+      "pct": 2.1,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603002",
+      "name": "宏昌电子",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260520",
+      "close": 15.66,
+      "pct": 1.1,
+      "vol_ratio": 0.6,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603016",
+      "name": "新宏泰",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260520",
+      "close": 49.43,
+      "pct": 0.7,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603318",
+      "name": "水发燃气",
+      "ff": "新能源(光风储电)",
+      "tc": "电力运营",
+      "date": "20260520",
+      "close": 10.65,
+      "pct": 0.6,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603679",
+      "name": "华体科技",
+      "ff": "新能源(光风储电)",
+      "tc": "消费电子/元器件",
+      "date": "20260520",
+      "close": 17.44,
+      "pct": 1.6,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688090",
+      "name": "瑞松科技",
+      "ff": "具身智能/机器人",
+      "tc": "机器人/自动化",
+      "date": "20260520",
+      "close": 91.65,
+      "pct": 2.7,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688183",
+      "name": "生益电子",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260520",
+      "close": 104.14,
+      "pct": 0.3,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688189",
+      "name": "南新制药",
+      "ff": "生物医药与器械",
+      "tc": "消费/医药/传媒",
+      "date": "20260520",
+      "close": 9.75,
+      "pct": 3.9,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688320",
+      "name": "禾川科技",
+      "ff": "具身智能/机器人",
+      "tc": "机器人/自动化",
+      "date": "20260520",
+      "close": 40.18,
+      "pct": 2.0,
+      "vol_ratio": 0.62,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688321",
+      "name": "微芯生物",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260520",
+      "close": 29.02,
+      "pct": 0.3,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688523",
+      "name": "航天环宇",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260520",
+      "close": 69.53,
+      "pct": 1.7,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688566",
+      "name": "吉贝尔",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260520",
+      "close": 26.53,
+      "pct": 0.5,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688663",
+      "name": "新风光",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260520",
+      "close": 101.1,
+      "pct": 1.3,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688669",
+      "name": "聚石化学",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260520",
+      "close": 35.83,
+      "pct": 0.3,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000009",
+      "name": "中国宝安",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 7.85,
+      "pct": 0.1,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000513",
+      "name": "丽珠集团",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 31.18,
+      "pct": 0.9,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000661",
+      "name": "长春高新",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 83.55,
+      "pct": 0.9,
+      "vol_ratio": 0.59,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000768",
+      "name": "中航西飞",
+      "ff": "商业航天与低空",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 23.42,
+      "pct": 0.9,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000878",
+      "name": "云南铜业",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 18.22,
+      "pct": 2.0,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000889",
+      "name": "中嘉博创",
+      "ff": "国产软件与信创",
+      "tc": "通信/6G",
+      "date": "20260519",
+      "close": 4.7,
+      "pct": 2.9,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000963",
+      "name": "华东医药",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 30.13,
+      "pct": 0.1,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "000967",
+      "name": "盈峰环境",
+      "ff": "新能源(光风储电)",
+      "tc": "其他",
+      "date": "20260519",
+      "close": 13.33,
+      "pct": 1.8,
+      "vol_ratio": 0.58,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002009",
+      "name": "天奇股份",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 28.06,
+      "pct": 1.8,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002038",
+      "name": "双鹭药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 6.28,
+      "pct": 0.5,
+      "vol_ratio": 0.46,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002432",
+      "name": "九安医疗",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 73.93,
+      "pct": 0.7,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002559",
+      "name": "亚威股份",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 11.37,
+      "pct": 0.8,
+      "vol_ratio": 0.52,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002606",
+      "name": "大连电瓷",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260519",
+      "close": 15.7,
+      "pct": 0.2,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002653",
+      "name": "海思科",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 51.73,
+      "pct": 1.6,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002755",
+      "name": "奥赛康",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 16.13,
+      "pct": 1.3,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002838",
+      "name": "道恩股份",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 37.35,
+      "pct": 1.3,
+      "vol_ratio": 0.55,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002866",
+      "name": "传艺科技",
+      "ff": "新能源(光风储电)",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 22.49,
+      "pct": 0.0,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002962",
+      "name": "五方光电",
+      "ff": "国产软件与信创",
+      "tc": "光通信与光学",
+      "date": "20260519",
+      "close": 18.57,
+      "pct": 1.1,
+      "vol_ratio": 0.59,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002976",
+      "name": "瑞玛精密",
+      "ff": "具身智能/机器人",
+      "tc": "汽车零部件",
+      "date": "20260519",
+      "close": 35.44,
+      "pct": 0.4,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002990",
+      "name": "盛视科技",
+      "ff": "具身智能/机器人",
+      "tc": "软件与IT服务",
+      "date": "20260519",
+      "close": 62.62,
+      "pct": 1.9,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "003022",
+      "name": "联泓新科",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 23.99,
+      "pct": 1.3,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300083",
+      "name": "创世纪",
+      "ff": "高端装备(工业母机)",
+      "tc": "工业设备/通用机械",
+      "date": "20260519",
+      "close": 11.55,
+      "pct": 2.3,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300097",
+      "name": "智云股份",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260519",
+      "close": 10.32,
+      "pct": 4.6,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300154",
+      "name": "瑞凌股份",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260519",
+      "close": 11.38,
+      "pct": 1.6,
+      "vol_ratio": 0.7,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300199",
+      "name": "翰宇药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 23.92,
+      "pct": 1.6,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300214",
+      "name": "日科化学",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 8.85,
+      "pct": 1.1,
+      "vol_ratio": 0.7,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300265",
+      "name": "通光线缆",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260519",
+      "close": 22.74,
+      "pct": 0.7,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300270",
+      "name": "中威电子",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260519",
+      "close": 13.98,
+      "pct": 0.4,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300292",
+      "name": "吴通控股",
+      "ff": "国产软件与信创",
+      "tc": "通信/6G",
+      "date": "20260519",
+      "close": 6.33,
+      "pct": 1.9,
+      "vol_ratio": 0.54,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300316",
+      "name": "晶盛机电",
+      "ff": "集成电路",
+      "tc": "半导体设备",
+      "date": "20260519",
+      "close": 52.25,
+      "pct": 1.7,
+      "vol_ratio": 0.58,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300347",
+      "name": "泰格医药",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 45.61,
+      "pct": 1.1,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300449",
+      "name": "汉邦高科",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260519",
+      "close": 9.54,
+      "pct": 3.5,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300626",
+      "name": "华瑞股份",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260519",
+      "close": 31.7,
+      "pct": 2.5,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300656",
+      "name": "民德电子",
+      "ff": "集成电路",
+      "tc": "工业设备/通用机械",
+      "date": "20260519",
+      "close": 31.4,
+      "pct": 0.6,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300671",
+      "name": "富满微",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260519",
+      "close": 51.09,
+      "pct": 1.2,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300696",
+      "name": "爱乐达",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260519",
+      "close": 37.41,
+      "pct": 1.1,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300720",
+      "name": "海川智能",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260519",
+      "close": 70.99,
+      "pct": 2.0,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300745",
+      "name": "欣锐科技",
+      "ff": "具身智能/机器人",
+      "tc": "汽车零部件",
+      "date": "20260519",
+      "close": 49.61,
+      "pct": 2.7,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300782",
+      "name": "卓胜微",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260519",
+      "close": 129.39,
+      "pct": 1.1,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300845",
+      "name": "捷安高科",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260519",
+      "close": 15.17,
+      "pct": 1.5,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300852",
+      "name": "四会富仕",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 52.19,
+      "pct": 0.6,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300959",
+      "name": "线上线下",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260519",
+      "close": 176.38,
+      "pct": 2.6,
+      "vol_ratio": 0.51,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300964",
+      "name": "本川智能",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 84.6,
+      "pct": 3.0,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301041",
+      "name": "金百泽",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 33.48,
+      "pct": 0.5,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301155",
+      "name": "海力风电",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 69.88,
+      "pct": 1.1,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301157",
+      "name": "华塑科技",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260519",
+      "close": 81.28,
+      "pct": 2.8,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301196",
+      "name": "唯科科技",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260519",
+      "close": 153.0,
+      "pct": 0.6,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301197",
+      "name": "工大科雅",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260519",
+      "close": 35.63,
+      "pct": 2.9,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301217",
+      "name": "铜冠铜箔",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 87.53,
+      "pct": 0.5,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301237",
+      "name": "和顺科技",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 72.44,
+      "pct": 2.5,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301285",
+      "name": "鸿日达",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 118.81,
+      "pct": 2.1,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301286",
+      "name": "侨源股份",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 62.65,
+      "pct": 0.0,
+      "vol_ratio": 0.58,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301326",
+      "name": "捷邦科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 171.33,
+      "pct": 1.2,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301328",
+      "name": "维峰电子",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 79.03,
+      "pct": 0.2,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "301526",
+      "name": "国际复材",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 18.7,
+      "pct": 0.0,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600172",
+      "name": "黄河旋风",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 10.82,
+      "pct": 2.0,
+      "vol_ratio": 0.58,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600196",
+      "name": "复星医药",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 24.19,
+      "pct": 0.5,
+      "vol_ratio": 0.62,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600433",
+      "name": "冠豪高新",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 4.28,
+      "pct": 0.5,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600497",
+      "name": "驰宏锌锗",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260519",
+      "close": 9.93,
+      "pct": 1.0,
+      "vol_ratio": 0.55,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600510",
+      "name": "黑牡丹",
+      "ff": "人工智能(AI算力)",
+      "tc": "地产/基建",
+      "date": "20260519",
+      "close": 9.13,
+      "pct": 1.1,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600529",
+      "name": "山东药玻",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 17.81,
+      "pct": 0.7,
+      "vol_ratio": 0.52,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600572",
+      "name": "康恩贝",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 4.28,
+      "pct": 0.5,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600588",
+      "name": "用友网络",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 11.77,
+      "pct": 1.5,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600601",
+      "name": "方正科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 12.36,
+      "pct": 2.7,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600760",
+      "name": "XD中航沈",
+      "ff": "商业航天与低空",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 47.1,
+      "pct": 1.0,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "600770",
+      "name": "综艺股份",
+      "ff": "人工智能(AI算力)",
+      "tc": "金融/综合",
+      "date": "20260519",
+      "close": 7.02,
+      "pct": 0.1,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "601778",
+      "name": "晶科科技",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260519",
+      "close": 6.67,
+      "pct": 1.1,
+      "vol_ratio": 0.54,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603045",
+      "name": "福达合金",
+      "ff": "新能源(光风储电)",
+      "tc": "其他",
+      "date": "20260519",
+      "close": 70.04,
+      "pct": 1.3,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603110",
+      "name": "东方材料",
+      "ff": "新材料",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 23.42,
+      "pct": 0.4,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603679",
+      "name": "华体科技",
+      "ff": "新能源(光风储电)",
+      "tc": "消费电子/元器件",
+      "date": "20260519",
+      "close": 17.72,
+      "pct": 0.2,
+      "vol_ratio": 0.59,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603985",
+      "name": "XD恒润股",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260519",
+      "close": 26.98,
+      "pct": 2.0,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "603998",
+      "name": "方盛制药",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 10.52,
+      "pct": 0.2,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688131",
+      "name": "皓元医药",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 70.76,
+      "pct": 1.5,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688159",
+      "name": "有方科技",
+      "ff": "新能源(光风储电)",
+      "tc": "通信/6G",
+      "date": "20260519",
+      "close": 63.15,
+      "pct": 0.3,
+      "vol_ratio": 0.51,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688189",
+      "name": "南新制药",
+      "ff": "生物医药与器械",
+      "tc": "消费/医药/传媒",
+      "date": "20260519",
+      "close": 10.15,
+      "pct": 1.9,
+      "vol_ratio": 0.6,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688221",
+      "name": "前沿生物-U",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 22.27,
+      "pct": 1.1,
+      "vol_ratio": 0.59,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688223",
+      "name": "晶科能源",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 6.75,
+      "pct": 0.3,
+      "vol_ratio": 0.68,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688300",
+      "name": "联瑞新材",
+      "ff": "集成电路",
+      "tc": "半导体零部件",
+      "date": "20260519",
+      "close": 124.51,
+      "pct": 2.7,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688382",
+      "name": "益方生物-U",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260519",
+      "close": 20.24,
+      "pct": 0.5,
+      "vol_ratio": 0.64,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688488",
+      "name": "艾迪药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 16.09,
+      "pct": 0.7,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688566",
+      "name": "吉贝尔",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260519",
+      "close": 26.4,
+      "pct": 0.8,
+      "vol_ratio": 0.49,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688685",
+      "name": "迈信林",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260519",
+      "close": 55.43,
+      "pct": 0.9,
+      "vol_ratio": 0.7,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "688693",
+      "name": "锴威特",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260519",
+      "close": 126.96,
+      "pct": 2.3,
+      "vol_ratio": 0.59,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300537",
+      "name": "广信材料",
+      "ff": "新材料",
+      "tc": "待分类",
+      "date": "20260515",
+      "close": 26.14,
+      "pct": 0.8,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "300124",
+      "name": "汇川技术",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260514",
+      "close": 74.42,
+      "pct": 2.7,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002326",
+      "name": "永太科技",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260513",
+      "close": 23.17,
+      "pct": 0.0,
+      "vol_ratio": 0.56,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002527",
+      "name": "新时达",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260513",
+      "close": 13.49,
+      "pct": 0.0,
+      "vol_ratio": 0.65,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    },
+    {
+      "code": "002326",
+      "name": "永太科技",
+      "ff": "新能源(光风储电)",
+      "tc": "待分类",
+      "date": "20260512",
+      "close": 23.17,
+      "pct": 1.1,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "error",
+        "label": "Cannot operate on a closed database."
+      }
+    }
+  ],
+  "b2_raw": [
     [
       "000518",
       "四环生物",
@@ -4769,18 +9087,6 @@
       15.8,
       8.7,
       1.74,
-      "平行重炮",
-      false
-    ],
-    [
-      "688020",
-      "方邦股份",
-      "集成电路",
-      "消费电子/元器件",
-      "20260525",
-      174.7,
-      5.4,
-      1.64,
       "平行重炮",
       false
     ],
@@ -5157,18 +9463,6 @@
       false
     ],
     [
-      "300758",
-      "七彩化学",
-      "新能源(光风储电)",
-      "待分类",
-      "20260521",
-      14.5,
-      4.1,
-      1.66,
-      "",
-      false
-    ],
-    [
       "301322",
       "绿通科技",
       "新能源汽车",
@@ -5226,30 +9520,6 @@
       10.1,
       2.79,
       "灾后重建",
-      false
-    ],
-    [
-      "688331",
-      "荣昌生物",
-      "生物医药与器械",
-      "待分类",
-      "20260521",
-      121.99,
-      4.6,
-      1.81,
-      "",
-      false
-    ],
-    [
-      "688428",
-      "诺诚健华",
-      "生物医药与器械",
-      "待分类",
-      "20260521",
-      25.85,
-      5.6,
-      1.99,
-      "",
       false
     ],
     [
@@ -5369,18 +9639,6 @@
       32.16,
       20.0,
       1.72,
-      "平行重炮",
-      false
-    ],
-    [
-      "688691",
-      "灿芯股份",
-      "集成电路",
-      "IC设计",
-      "20260520",
-      128.46,
-      5.2,
-      1.53,
       "平行重炮",
       false
     ],
@@ -5565,18 +9823,6 @@
       false
     ],
     [
-      "300115",
-      "长盈精密",
-      "具身智能/机器人",
-      "待分类",
-      "20260515",
-      38.1,
-      4.2,
-      1.57,
-      "灾后重建",
-      false
-    ],
-    [
       "603728",
       "鸣志电器",
       "具身智能/机器人",
@@ -5613,7 +9859,7 @@
       false
     ]
   ],
-  "b3": [
+  "b3_raw": [
     [
       "000963",
       "华东医药",
@@ -5653,16 +9899,6 @@
       34.36,
       1.0,
       0.65
-    ],
-    [
-      "002512",
-      "ST达华",
-      "集成电路",
-      "消费电子/元器件",
-      "20260525",
-      4.84,
-      0.8,
-      0.67
     ],
     [
       "002536",
@@ -5705,6 +9941,16 @@
       0.7
     ],
     [
+      "300097",
+      "智云股份",
+      "具身智能/机器人",
+      "工业设备/通用机械",
+      "20260525",
+      10.13,
+      3.3,
+      0.68
+    ],
+    [
       "300214",
       "日科化学",
       "集成电路",
@@ -5713,16 +9959,6 @@
       8.22,
       2.3,
       0.63
-    ],
-    [
-      "300295",
-      "*ST三六",
-      "国产软件与信创",
-      "软件与IT服务",
-      "20260525",
-      11.58,
-      1.5,
-      0.65
     ],
     [
       "300449",
@@ -5755,6 +9991,16 @@
       0.69
     ],
     [
+      "300965",
+      "恒宇信通",
+      "商业航天与低空",
+      "低空经济/航空",
+      "20260525",
+      67.74,
+      3.6,
+      0.68
+    ],
+    [
       "301538",
       "骏鼎达",
       "集成电路",
@@ -5773,16 +10019,6 @@
       5.21,
       3.0,
       0.65
-    ],
-    [
-      "600337",
-      "ST美克",
-      "新能源(光风储电)",
-      "消费/医药/传媒",
-      "20260525",
-      2.97,
-      1.7,
-      0.62
     ],
     [
       "600379",
@@ -5835,16 +10071,6 @@
       0.66
     ],
     [
-      "688184",
-      "ST帕瓦",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260525",
-      13.8,
-      0.2,
-      0.68
-    ],
-    [
       "688192",
       "迪哲医药-U",
       "生物医药与器械",
@@ -5895,6 +10121,16 @@
       0.65
     ],
     [
+      "688590",
+      "新致软件",
+      "国产软件与信创",
+      "待分类",
+      "20260525",
+      16.63,
+      4.9,
+      0.68
+    ],
+    [
       "688697",
       "纽威数控",
       "高端装备(工业母机)",
@@ -5933,16 +10169,6 @@
       7.33,
       1.0,
       0.67
-    ],
-    [
-      "000821",
-      "ST京机",
-      "具身智能/机器人",
-      "待分类",
-      "20260522",
-      9.86,
-      1.9,
-      0.53
     ],
     [
       "002031",
@@ -6055,16 +10281,6 @@
       0.64
     ],
     [
-      "300159",
-      "*ST新研",
-      "商业航天与低空",
-      "低空经济/航空",
-      "20260522",
-      4.16,
-      1.7,
-      0.64
-    ],
-    [
       "300222",
       "科大智能",
       "具身智能/机器人",
@@ -6095,16 +10311,6 @@
       0.66
     ],
     [
-      "300477",
-      "ST合纵",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260522",
-      2.83,
-      1.1,
-      0.51
-    ],
-    [
       "300661",
       "圣邦股份",
       "集成电路",
@@ -6123,6 +10329,16 @@
       17.53,
       0.3,
       0.57
+    ],
+    [
+      "300687",
+      "赛意信息",
+      "国产软件与信创",
+      "软件与IT服务",
+      "20260522",
+      32.85,
+      4.6,
+      0.68
     ],
     [
       "300965",
@@ -6165,16 +10381,6 @@
       0.64
     ],
     [
-      "600337",
-      "ST美克",
-      "新能源(光风储电)",
-      "消费/医药/传媒",
-      "20260522",
-      3.02,
-      0.3,
-      0.55
-    ],
-    [
       "600379",
       "宝光股份",
       "新能源(光风储电)",
@@ -6183,16 +10389,6 @@
       13.54,
       1.7,
       0.52
-    ],
-    [
-      "600381",
-      "*ST春天",
-      "生物医药与器械",
-      "消费/医药/传媒",
-      "20260522",
-      4.69,
-      1.7,
-      0.62
     ],
     [
       "603016",
@@ -6233,16 +10429,6 @@
       9.97,
       0.9,
       0.61
-    ],
-    [
-      "603559",
-      "ST通脉",
-      "人工智能(AI算力)",
-      "通信/6G",
-      "20260522",
-      9.44,
-      0.2,
-      0.4
     ],
     [
       "603608",
@@ -6295,6 +10481,16 @@
       0.68
     ],
     [
+      "688143",
+      "长盈通",
+      "国产软件与信创",
+      "光通信与光学",
+      "20260522",
+      138.47,
+      4.9,
+      0.49
+    ],
+    [
       "688146",
       "中船特气",
       "集成电路",
@@ -6303,6 +10499,16 @@
       130.72,
       2.2,
       0.69
+    ],
+    [
+      "688189",
+      "南新制药",
+      "生物医药与器械",
+      "消费/医药/传媒",
+      "20260522",
+      9.74,
+      4.4,
+      0.58
     ],
     [
       "688227",
@@ -6323,6 +10529,16 @@
       81.47,
       0.3,
       0.63
+    ],
+    [
+      "688549",
+      "中巨芯-U",
+      "集成电路",
+      "半导体材料",
+      "20260522",
+      16.3,
+      3.5,
+      0.68
     ],
     [
       "688692",
@@ -6365,6 +10581,16 @@
       0.66
     ],
     [
+      "300508",
+      "维宏股份",
+      "高端装备(工业母机)",
+      "软件与IT服务",
+      "20260521",
+      47.46,
+      3.1,
+      0.67
+    ],
+    [
       "300959",
       "线上线下",
       "国产软件与信创",
@@ -6375,14 +10601,14 @@
       0.66
     ],
     [
-      "603559",
-      "ST通脉",
-      "人工智能(AI算力)",
-      "通信/6G",
+      "688189",
+      "南新制药",
+      "生物医药与器械",
+      "消费/医药/传媒",
       "20260521",
-      9.42,
-      2.5,
-      0.66
+      9.33,
+      4.3,
+      0.61
     ],
     [
       "000513",
@@ -6585,16 +10811,6 @@
       0.52
     ],
     [
-      "300159",
-      "*ST新研",
-      "商业航天与低空",
-      "低空经济/航空",
-      "20260520",
-      4.17,
-      1.2,
-      0.68
-    ],
-    [
       "300161",
       "华中数控",
       "高端装备(工业母机)",
@@ -6625,13 +10841,13 @@
       0.67
     ],
     [
-      "300295",
-      "*ST三六",
+      "300292",
+      "吴通控股",
       "国产软件与信创",
-      "软件与IT服务",
+      "通信/6G",
       "20260520",
-      12.07,
-      1.2,
+      6.1,
+      3.6,
       0.65
     ],
     [
@@ -6643,6 +10859,16 @@
       44.89,
       1.6,
       0.59
+    ],
+    [
+      "300449",
+      "汉邦高科",
+      "国产软件与信创",
+      "软件与IT服务",
+      "20260520",
+      9.1,
+      4.6,
+      0.66
     ],
     [
       "300475",
@@ -6765,6 +10991,16 @@
       0.65
     ],
     [
+      "300959",
+      "线上线下",
+      "国产软件与信创",
+      "软件与IT服务",
+      "20260520",
+      182.95,
+      3.7,
+      0.66
+    ],
+    [
       "301005",
       "超捷股份",
       "新能源汽车",
@@ -6853,16 +11089,6 @@
       10.7,
       1.1,
       0.54
-    ],
-    [
-      "600337",
-      "ST美克",
-      "新能源(光风储电)",
-      "消费/医药/传媒",
-      "20260520",
-      3.12,
-      3.0,
-      0.68
     ],
     [
       "600380",
@@ -6965,16 +11191,6 @@
       0.67
     ],
     [
-      "603595",
-      "ST东尼",
-      "集成电路",
-      "消费电子/元器件",
-      "20260520",
-      22.08,
-      1.4,
-      0.67
-    ],
-    [
       "603679",
       "华体科技",
       "新能源(光风储电)",
@@ -7003,6 +11219,16 @@
       104.14,
       0.3,
       0.64
+    ],
+    [
+      "688189",
+      "南新制药",
+      "生物医药与器械",
+      "消费/医药/传媒",
+      "20260520",
+      9.75,
+      3.9,
+      0.56
     ],
     [
       "688320",
@@ -7285,6 +11511,16 @@
       0.64
     ],
     [
+      "300097",
+      "智云股份",
+      "具身智能/机器人",
+      "工业设备/通用机械",
+      "20260519",
+      10.32,
+      4.6,
+      0.65
+    ],
+    [
       "300154",
       "瑞凌股份",
       "具身智能/机器人",
@@ -7313,16 +11549,6 @@
       8.85,
       1.1,
       0.7
-    ],
-    [
-      "300225",
-      "*ST金泰",
-      "集成电路",
-      "化工/材料",
-      "20260519",
-      7.47,
-      0.3,
-      0.65
     ],
     [
       "300265",
@@ -7375,14 +11601,14 @@
       0.61
     ],
     [
-      "300561",
-      "*ST汇科",
+      "300449",
+      "汉邦高科",
       "国产软件与信创",
       "软件与IT服务",
       "20260519",
-      18.52,
-      1.3,
-      0.63
+      9.54,
+      3.5,
+      0.66
     ],
     [
       "300626",
@@ -7483,6 +11709,16 @@
       176.38,
       2.6,
       0.51
+    ],
+    [
+      "300964",
+      "本川智能",
+      "国产软件与信创",
+      "待分类",
+      "20260519",
+      84.6,
+      3.0,
+      0.61
     ],
     [
       "301041",
@@ -7959,17 +12195,6 @@
       0.66
     ],
     [
-      "000821",
-      "ST京机",
-      "具身智能/机器人",
-      "待分类",
-      "20260522",
-      9.86,
-      -3.9,
-      1.9,
-      0.53
-    ],
-    [
       "002031",
       "巨轮智能",
       "具身智能/机器人",
@@ -8278,17 +12503,6 @@
       0.7
     ],
     [
-      "300477",
-      "ST合纵",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260522",
-      2.83,
-      -3.4,
-      1.1,
-      0.51
-    ],
-    [
       "300478",
       "杭州高新",
       "集成电路",
@@ -8584,17 +12798,6 @@
       -6.6,
       2.1,
       0.73
-    ],
-    [
-      "603595",
-      "ST东尼",
-      "集成电路",
-      "消费电子/元器件",
-      "20260522",
-      22.44,
-      -3.2,
-      5.0,
-      0.49
     ],
     [
       "603698",
@@ -9010,11 +13213,11 @@
     "量子信息": 9.8
   },
   "stats": {
-    "total": 644,
-    "golden": 167,
-    "b2": 83,
-    "b3": 232,
-    "b1": 210,
-    "death": 42
+    "total": 629,
+    "golden": 160,
+    "b2": 77,
+    "b3": 231,
+    "b1": 204,
+    "death": 41
   }
 }
