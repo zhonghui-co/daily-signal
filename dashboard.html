@@ -442,6 +442,7 @@ a:hover { text-decoration:underline; }
     <button class="nav-tab" data-tab="attrib">📈 归因</button>
     <button class="nav-tab" data-tab="chains">🔗 双链</button>
     <button class="nav-tab" data-tab="trends">📈 趋势</button>
+    <button class="nav-tab" data-tab="backtest">📊 回测</button>
     <button class="nav-tab" data-tab="anomalies">📡 异动</button>
 </div>
 
@@ -641,6 +642,18 @@ a:hover { text-decoration:underline; }
     <div id="trendList"></div>
 </div>
 
+
+<!-- Tab: 回测 -->
+<div class="tab-content" id="tab-backtest">
+    <div class="section">
+        <div class="section-title">📊 周线KDJ回测 — 各方向胜率 <span style="font-size:10px;color:#8b949e;font-weight:400;">（1年 2025.06-2026.05 前复权）</span></div>
+    </div>
+    <div id="backtestTable"></div>
+    <div style="font-size:11px;color:#8b949e;margin-top:10px;">
+        ✅ = 胜率≥60%可用 | ⚠️ = 胜率&lt;60%慎用 | ⚠️⚠️ = 胜率&lt;50%不可用 | 样本&lt;20次可靠性低
+    </div>
+</div>
+
 <!-- Tab: 异动 -->
 <div class="tab-content" id="tab-anomalies">
     <div class="section">
@@ -732,6 +745,7 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
         }
         if (tab.dataset.tab === 'trends') {
             loadTrends();
+    loadBacktest();
         }
     });
 });
@@ -2076,6 +2090,44 @@ async function loadAlerts() {
             </span>`
         ).join('');
     } catch(e) { console.log('Alert load err:', e); }
+}
+
+
+async function loadBacktest() {
+    try {
+        const bt = await loadJSON('/daily-signal/data/backtest.json');
+        const dirs = bt.directions || [];
+        document.getElementById('backtestTable').innerHTML = `
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:8px;">
+                ${dirs.map(r => {
+                    const ok = r.ok;
+                    const bg = ok ? 'rgba(35,134,54,0.06)' : r.l1_wr < 50 ? 'rgba(218,54,51,0.06)' : 'rgba(210,153,34,0.04)';
+                    const border = ok ? '#3fb950' : r.l1_wr < 50 ? '#f85149' : '#d29922';
+                    const icon = ok ? '✅' : r.l1_wr < 50 ? '⚠️⚠️' : '⚠️';
+                    return `<div style="background:${bg};border-left:3px solid ${border};border-radius:8px;padding:10px 14px;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                            <span style="font-weight:600;color:#e6edf3;font-size:13px;">${icon} ${r.dir}</span>
+                            <span style="font-size:10px;color:#8b949e;">${r.stocks}标的</span>
+                        </div>
+                        <div style="display:flex;gap:16px;font-size:12px;">
+                            <div>
+                                <span style="color:#8b949e;">L1(J&lt;15):</span>
+                                <span style="color:#3fb950;font-weight:600;">${r.l1_wr}%</span>
+                                <span style="color:#8b949e;"> ${r.l1_count}次</span>
+                                <span style="color:${r.l1_ar>=0?'#f85149':'#3fb950'};font-size:10px;">${r.l1_ar>=0?'+':''}${r.l1_ar}%</span>
+                            </div>
+                            <div>
+                                <span style="color:#8b949e;">L2(J&lt;0):</span>
+                                <span style="color:#2ea043;font-weight:600;">${r.l2_wr}%</span>
+                                <span style="color:#8b949e;"> ${r.l2_count}次</span>
+                                <span style="color:${r.l2_ar>=0?'#f85149':'#3fb950'};font-size:10px;">${r.l2_ar>=0?'+':''}${r.l2_ar}%</span>
+                            </div>
+                        </div>
+                        ${r.l1_count < 20 ? '<div style="font-size:10px;color:#d29922;margin-top:4px;">⚠ 样本不足20次，可靠性低</div>' : ''}
+                    </div>`;
+                }).join('')}
+            </div>`;
+    } catch(e) { console.log('Backtest load err:', e); }
 }
 
 // ===== Start =====
