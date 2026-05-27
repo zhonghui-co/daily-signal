@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-27T18:14:08.878982",
+  "generated_at": "2026-05-27T20:06:55.044552",
   "stats": {
-    "total": 146,
+    "total": 150,
     "by_source": {
       "scanner": 8,
-      "readhub": 34,
+      "readhub": 38,
       "pool": 54,
       "b1b2b3": 30,
       "weekly_kdj": 20
@@ -12,15 +12,15 @@
     "by_type": {
       "fire": 54,
       "normal": 3,
-      "signal": 34,
+      "signal": 38,
       "high": 5,
       "b1": 30,
       "weekly_kdj": 20
     },
     "by_direction": {
-      "chain1": 11,
+      "chain1": 12,
       "chain2": 4,
-      "unclassified": 80,
+      "unclassified": 83,
       "chain8": 1,
       "国产软件与信创": 3,
       "高端装备(工业母机)": 2,
@@ -37,31 +37,241 @@
     "by_lifecycle": {
       "consensus": 2,
       "positioning": 4,
-      "emerging": 86,
+      "emerging": 90,
       "unknown": 54
     },
     "by_priority": {
       "fire": 54,
-      "normal": 57,
+      "normal": 61,
       "high": 5,
       "b1": 30
     }
   },
   "signals": [
     {
-      "id": "SIG-af14b79c6a97",
+      "id": "SIG-385aa2334368",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "fire",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "consensus",
+      "title": "🔥 日经亚洲三连击τ定律国际验证深化——华为新麒麟芯片克服美国制裁技术逼近TSMC/Intel",
+      "summary": "Nikkei Asia 5/25报道华为新麒麟芯片克服美国制裁取得重大突破，技术能力逼近TSMC和Intel。这是48h内日经亚洲第三篇华为芯片报道（5/24何庭波τ定律人物深度+5/25 Kirin突破+SK海力士HBM亚洲三巨头），international media从单篇→持续campaign→常态化覆盖三阶跃迁。τ定律叙事的国际验证从'一次报道'升级为'连续follow-up'状态——国际媒体对中国半导体不再是一次性猎奇而是持续性跟踪。券商(招商/国盛/华泰/中信)纷纷发布τ定律专题研报，先进封装/代工/设备/EDA/CPO全面受益。",
+      "priority": "fire",
+      "tickers": [
+        {
+          "code": "688981.SH",
+          "name": "中芯国际"
+        },
+        {
+          "code": "002371.SZ",
+          "name": "北方华创"
+        },
+        {
+          "code": "688012.SH",
+          "name": "中微公司"
+        },
+        {
+          "code": "688072.SH",
+          "name": "拓荆科技"
+        },
+        {
+          "code": "688256.SH",
+          "name": "寒武纪"
+        }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://asia.nikkei.com/spotlight/huawei-crackdown/huawei-says-new-kirin-chip-for-phones-overcomes-us-clampdown",
+        "https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-nvidia-and-asia-s-three-chip-giants-cash-in-on-ai-gold-rush"
+      ]
+    },
+    {
+      "id": "SIG-f19cbfc12400",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "fire",
+      "direction": "chain2",
+      "chain": "chain2",
+      "lifecycle": "positioning",
+      "title": "🔥 Goldman Sachs PB对冲基金半导体获利了结信号——与all in AI形成双向对立",
+      "summary": "CNBC 15h前报道高盛PB数据：对冲基金all in AI半导体仓位创历史最高+从软件轮动至硬件。但Goldman Sachs Insights 3天前另一篇报告指出：半导体股票强劲反弹后，对冲基金客户出现获利了结(taking profits on semiconductors)，虽然科技股继续创新高但'certain types'对冲基金正在profit-taking+rebalancing。双向信号：all in AI是长期趋势（right）但短期超买获利了结为战术撤退信号。与今日A股科创50跌超2%+半导体领跌形成中美共振——对冲基金是对A股半导体情绪的前瞻指标。",
+      "priority": "fire",
+      "tickers": [
+        {
+          "code": "688981.SH",
+          "name": "中芯国际"
+        },
+        {
+          "code": "688256.SH",
+          "name": "寒武纪"
+        },
+        {
+          "code": "002371.SZ",
+          "name": "北方华创"
+        },
+        {
+          "code": "688041.SH",
+          "name": "海光信息"
+        }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://www.cnbc.com/2026/05/25/hedge-mutual-funds-semiconductors-software-goldman-.html",
+        "https://www.goldmansachs.com/insights/articles/how-hedge-funds-are-trading-semiconductor-stocks"
+      ]
+    },
+    {
+      "id": "SIG-7821f261e50a",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "fire",
+      "direction": "chain2",
+      "chain": "chain2",
+      "lifecycle": "emerging",
+      "title": "🔥 盛视科技签订60亿算力产业合作协议——远超公司市值的算力服务跨界",
+      "summary": "盛视科技(002990.SZ)全资子公司与某公司签署《算力产业合作协议》，围绕算电协同、AIDC智能算力中心运营、算力产业资源整合、算力服务采购交付四大维度深度合作，整体合作业务体量折合约60亿元。盛视科技此前主营智慧口岸/智能交通，当前市值约50亿——60亿合同额超公司市值。公司公告称此为'布局算力服务业务的重要里程碑'，算力服务将成为'业绩增长的全新引擎'。16to22窗新鲜出炉(<8h)，媒体覆盖极少。",
+      "priority": "fire",
+      "tickers": [
+        {
+          "code": "002990.SZ",
+          "name": "盛视科技"
+        }
+      ],
+      "metrics": {},
+      "source_urls": []
+    },
+    {
+      "id": "SIG-32a3fc02b56f",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "fire",
+      "direction": "chain2",
+      "chain": "chain2",
+      "lifecycle": "positioning",
+      "title": "🔥 深科技14.7亿扩充高端存储封测——封测扩产三线共振（深科技+长电+通富=158.7亿）",
+      "summary": "深科技(000021.SZ)子公司深圳沛顿+合肥沛顿存储拟投资14.7亿扩充高端存储芯片封测产能，达产后月增封装产能3380万颗晶粒+测试800万颗。配合此前长电科技100亿固投(先进封装)+通富微电44亿定增(存储封测)+伟测科技20亿可转债，封测链条总投资达158.7亿+。三线共振背景：长鑫DDR5进入Corsair全球供应链+AI HBM需求缺口50-60%+华为τ定律将先进封装推向C位。深科技为长鑫核心封测合作伙伴，扩产直接挂钩长鑫5/27 IPO上会。",
+      "priority": "fire",
+      "tickers": [
+        {
+          "code": "000021.SZ",
+          "name": ""
+        },
+        {
+          "code": "600584.SH",
+          "name": "长电科技"
+        },
+        {
+          "code": "002156.SZ",
+          "name": "通富微电"
+        },
+        {
+          "code": "688213.SH",
+          "name": ""
+        }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://www.stcn.com/article/detail/3908151.html"
+      ]
+    },
+    {
+      "id": "SIG-e20b7a7af200",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "fire",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "positioning",
+      "title": "🔥 中国芯片出口翻倍至310亿美元——半导体/AI产品贡献出口增长一半，制裁反向加速全球竞争力",
+      "summary": "Benzinga 5/22报道中国芯片出口翻倍至310亿美元，Goldman Sachs + Nomura估算半导体/计算机/AI相关产品贡献了中国4月出口增长的一半。制裁反向效应：美国出口管制本意限制中国芯片产业，实际加速了中国半导体出口竞争力提升。36氪同期深度报道：国产芯片12年间从0→22%全球份额，成熟制程产能已领先，14nm以下突破为下一阶段。链1从'进口替代(减少进口)'→'出口竞争力(增加出口)'质变——制裁不仅没能压制中国半导体，反而催生了具备全球竞争力的半导体出口产业。",
+      "priority": "fire",
+      "tickers": [
+        {
+          "code": "688981.SH",
+          "name": "中芯国际"
+        },
+        {
+          "code": "002371.SZ",
+          "name": "北方华创"
+        },
+        {
+          "code": "603986.SH",
+          "name": "兆易创新"
+        }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://www.benzinga.com/markets/tech/26/05/52738788/chinas-chip-exports-double-to-31-billion-as-us-restrictions-fuel-ai-demand",
+        "https://36kr.com/p/3798834887914248"
+      ]
+    },
+    {
+      "id": "SIG-ed06ab31aad3",
       "timestamp": "2026-05-27T16:30:00+08:00",
       "source": "pool",
-      "type": "high",
+      "type": "fire",
       "direction": "",
       "chain": "",
       "lifecycle": "",
-      "title": "⚠️ 五大风险:①减持潮是否扩大 ②GS PB获利了结是否趋势化 ③高通ASIC合规风险 ④长鑫上会结果 ⑤寒武纪/海光传导断裂持续第六周",
-      "summary": "①若其他半导体龙头跟风减持→系统性回调。②下周GS PB数据为关键验证(连续3周净卖出=红色警报)。③若美方干预高通ASIC=deal信号反转。④长鑫上会结果盘后公布→明日开盘方向决定。⑤寒武纪-5%今日→传导断裂未修复→链二资金流向封测/存储/光模块而非独立GPU。",
-      "priority": "high",
+      "title": "🔥 高通+字节数百万颗ASIC协议——AI算力供给GPU-only→ASIC+GPU双结构质变 (emerging/under_priced⭐)",
+      "summary": "Bloomberg→Reuters→Yahoo Finance五源确认。字节将采购数百万颗高通ASIC支撑AI Agent软件，2026年AI基础设施投入2000亿元。中国AI算力供给结构质变→降低制裁集中度风险。首次定价窗口48-72h，0%定价。传导:先进封装(长电/通富/深科技)→晶圆代工(SMIC)→国产AI芯片TAM扩大(寒武纪/海光但竞争加剧)。风险:若美方视此为'绕开制裁'→可能触发新管制。",
+      "priority": "fire",
       "tickers": [],
       "metrics": {
         "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-af10f1773e1c",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 长鑫HBM3年底量产dual_confirmed——国产HBM 0→1年度级别战略突破 (positioning/partially_priced, strong backing)",
+      "summary": "Nikkei Asia多篇CXMT深度+Tom's Hardware/Digital Today Korea国际验证+中信证券国内验证。长鑫HBM3年底量产(月产6万片)、12英寸15万片月产、90% DDR5切换。三星罢工暂缓但HBM短缺未变。200亿IPO募资→设备采购订单(Naura/AMEC)。strong backing(大基金三期+国家队ETF+招投标三匹配)。风险:DigiTimes 4月报道时间表可能推迟。",
+      "priority": "fire",
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-492bc33b2232",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 τ定律国际定价三阶跃迁完成dual_confirmed——DigiTimes首推'Huawei Tau Law'专题系列(Series 1&2) (positioning/partially_priced)",
+      "summary": "Nikkei五连击+DigiTimes首次专题系列→国际定价从'偶然关注'→'常态化报道'→'系统性研究'仅3天完成。DigiTimes Series 2聚焦先进封装/光互联/EDA→细化τ定律受益方向。IC排名佐证:北方华创设备#6(+1)+中微#10(新进)+韦尔#9(新进)。国内券商密集覆盖接近consensus,国际资金定价2-4周窗口开启。设备/材料滞后SMIC 40pp+→补涨空间最大。",
+      "priority": "fire",
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-d81fa0f0c21f",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔴 四大背离确认:①双高权重源对立深化(Nikkei bullish vs Goldman bearish) ②产业资本套现 vs 产业基本面向 ③核心标的普跌 vs 信号面10fire ④高通ASIC竞争 vs TAM扩大",
+      "summary": "四大背离→短期(2-4周)震荡消化→中期方向取决于:①GS PB是否连续3周以上净卖出 ②长鑫今日上会结果 ③τ定律能否持续吸引国际资金。当前最佳策略:持有τ定律核心受益(设备/封测)不追高,等待缩量企稳信号。设备/材料(北方华创/中微/南大光电)为最佳补涨方向。",
+      "priority": "fire",
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
       },
       "source_urls": []
     },
@@ -215,23 +425,6 @@
       "tickers": [],
       "metrics": {
         "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-38d08898eff1",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "high",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "⚠️ 减持潮蔓延——兆易创新朱一明11天套现21亿+华峰测控股东减持1% (chain1, exhausted)",
-      "summary": "兆易创新近一年+358%，董事长减持0.90%套现25.72亿。华峰测控股东询价转让1%。澜起250.08元减持已落地。存储/设备龙头三连击减持→产业资本在超级周期顶部兑现。与长鑫HBM3量产+IPO上会形成对立信号→产业资本套现 vs 产业基本面向上。不改中期方向但增加短期回调压力。",
-      "priority": "high",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
       },
       "source_urls": []
     },
@@ -440,23 +633,6 @@
       "source_urls": []
     },
     {
-      "id": "SIG-c47287264f25",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "high",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "⚠️ 高盛PB双向信号——对冲基金月度净卖出半导体(2024年首次) vs all in AI,资金面多空对峙 (single_sourced, under_priced风险)",
-      "summary": "Goldman Sachs PB数据:半导体及设备为过去一个月最净卖出美股子板块,但对冲基金持仓仍处高位。Goldman定性为'战术获利了结'非'AI叙事反转'。目前市场只关注all in AI叙事,获利了结风险未充分定价。如果2-4周内对冲基金持续净卖出→风险从战术调整升级为趋势转变。回调=加仓机会(如果τ定律中期方向正确)。",
-      "priority": "high",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
       "id": "SIG-f9d9d876ccc8",
       "timestamp": "2026-05-26T16:30:00+08:00",
       "source": "pool",
@@ -484,23 +660,6 @@
       "title": "🔴 三大背离:①双高权重源首次对立(Nikkei bullish vs Goldman profit-taking) ②板块内冰火两重天(封测涨停vs消费暴跌) ③链1资金共识>链2",
       "summary": "背离①:短期(2-4周)震荡消化→中期方向不变;背离②:资金从广义半导体向τ定律核心受益方向集中→健康轮动;背离③:短期链1(先进封装/设备/材料)可能跑赢链2(AI算力)。关键验证:周三缩量企稳(3万亿以下)+长鑫5/27上会结果。",
       "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-b7e03fea2035",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "high",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔴 三大风险:①对冲基金获利了结趋势化 ②盛视/晶方两emerging信号未验证 ③长鑫上会结果+减持执行+tau定律制裁加码",
-      "summary": "①如果2-4周内对冲基金持续净卖出→风险从战术升级为趋势转变;②盛视科技60亿+晶方科技Anteryon分拆均未找到公告原文→48h内需官方确认;③长鑫5/27上会(过会=催化剂兑现/暂缓=封测回调)+澜起减持已落地+中微60亿待执行+tau定律可能触发美国新制裁。",
-      "priority": "high",
       "tickers": [],
       "metrics": {
         "timeframe": "days"
@@ -814,23 +973,6 @@
       "source_urls": []
     },
     {
-      "id": "SIG-8c527ec98712",
-      "timestamp": "2026-05-23T16:30:00+08:00",
-      "source": "pool",
-      "type": "high",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "三星罢工5/21-6/7(18天)→HBM产能直接受损+KeyBanc下调VR产量至6,000台——供给收缩可能被误读为需求减弱",
-      "summary": "全球存储供给缺口23年最大→长鑫/长江份额扩张获历史性窗口。但市场可能误读VR产量下调为需求减弱引发AI板块抛售。需区分供给瓶颈(利好国产替代)vs需求下滑(利空全板块)",
-      "priority": "high",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
       "id": "SIG-ae8d8f0b91d6",
       "timestamp": "2026-05-26T16:30:00+08:00",
       "source": "pool",
@@ -910,7 +1052,10 @@
       "summary": "B1=16.32 B2=15.87 B3=15.85 | +-2.8% from B1",
       "priority": "b1",
       "tickers": [
-        "688590"
+        {
+          "code": "688590",
+          "name": "新致软件"
+        }
       ],
       "metrics": {
         "b1_price": 16.32,
@@ -932,7 +1077,10 @@
       "summary": "B1=12.39 B2=11.65 B3=11.61 | +-6.0% from B1",
       "priority": "b1",
       "tickers": [
-        "000837"
+        {
+          "code": "000837",
+          "name": "秦川机床"
+        }
       ],
       "metrics": {
         "b1_price": 12.39,
@@ -954,7 +1102,10 @@
       "summary": "B1=7.54 B2=6.93 B3=6.89 | +-8.1% from B1",
       "priority": "b1",
       "tickers": [
-        "002031"
+        {
+          "code": "002031",
+          "name": "巨轮智能"
+        }
       ],
       "metrics": {
         "b1_price": 7.54,
@@ -976,7 +1127,10 @@
       "summary": "B1=32.80 B2=32.83 B3=32.78 | +0.1% from B1",
       "priority": "b1",
       "tickers": [
-        "002997"
+        {
+          "code": "002997",
+          "name": "瑞鹄模具"
+        }
       ],
       "metrics": {
         "b1_price": 32.8,
@@ -998,7 +1152,10 @@
       "summary": "B1=48.96 B2=39.60 B3=39.20 | +-19.1% from B1",
       "priority": "b1",
       "tickers": [
-        "300508"
+        {
+          "code": "300508",
+          "name": "维宏股份"
+        }
       ],
       "metrics": {
         "b1_price": 48.96,
@@ -1020,7 +1177,10 @@
       "summary": "B1=12.51 B2=11.61 B3=11.55 | +-7.2% from B1",
       "priority": "b1",
       "tickers": [
-        "603439"
+        {
+          "code": "603439",
+          "name": "三力制药"
+        }
       ],
       "metrics": {
         "b1_price": 12.51,
@@ -1042,7 +1202,10 @@
       "summary": "B1=25.08 B2=22.22 B3=22.16 | +-11.4% from B1",
       "priority": "b1",
       "tickers": [
-        "002782"
+        {
+          "code": "002782",
+          "name": "可立克"
+        }
       ],
       "metrics": {
         "b1_price": 25.08,
@@ -1064,7 +1227,10 @@
       "summary": "B1=2.79 B2=2.76 B3=2.76 | +-1.1% from B1",
       "priority": "b1",
       "tickers": [
-        "300477"
+        {
+          "code": "300477",
+          "name": "ST合纵"
+        }
       ],
       "metrics": {
         "b1_price": 2.79,
@@ -1086,7 +1252,10 @@
       "summary": "B1=66.67 B2=51.21 B3=50.81 | +-23.2% from B1",
       "priority": "b1",
       "tickers": [
-        "300820"
+        {
+          "code": "300820",
+          "name": "英杰电气"
+        }
       ],
       "metrics": {
         "b1_price": 66.67,
@@ -1108,7 +1277,10 @@
       "summary": "B1=13.07 B2=10.07 B3=9.99 | +-23.0% from B1",
       "priority": "b1",
       "tickers": [
-        "600730"
+        {
+          "code": "600730",
+          "name": "*ST高科"
+        }
       ],
       "metrics": {
         "b1_price": 13.07,
@@ -1130,7 +1302,10 @@
       "summary": "B1=77.32 B2=70.85 B3=70.55 | +-8.4% from B1",
       "priority": "b1",
       "tickers": [
-        "300124"
+        {
+          "code": "300124",
+          "name": "汇川技术"
+        }
       ],
       "metrics": {
         "b1_price": 77.32,
@@ -1152,7 +1327,10 @@
       "summary": "B1=78.01 B2=60.55 B3=59.80 | +-22.4% from B1",
       "priority": "b1",
       "tickers": [
-        "300965"
+        {
+          "code": "300965",
+          "name": "恒宇信通"
+        }
       ],
       "metrics": {
         "b1_price": 78.01,
@@ -1174,7 +1352,10 @@
       "summary": "B1=7.01 B2=5.33 B3=5.32 | +-24.0% from B1",
       "priority": "b1",
       "tickers": [
-        "600578"
+        {
+          "code": "600578",
+          "name": "京能电力"
+        }
       ],
       "metrics": {
         "b1_price": 7.01,
@@ -1196,7 +1377,10 @@
       "summary": "B1=30.60 B2=28.79 B3=28.70 | +-5.9% from B1",
       "priority": "b1",
       "tickers": [
-        "603666"
+        {
+          "code": "603666",
+          "name": "亿嘉和"
+        }
       ],
       "metrics": {
         "b1_price": 30.6,
@@ -1218,7 +1402,10 @@
       "summary": "B1=17.86 B2=15.27 B3=15.17 | +-14.5% from B1",
       "priority": "b1",
       "tickers": [
-        "603679"
+        {
+          "code": "603679",
+          "name": "华体科技"
+        }
       ],
       "metrics": {
         "b1_price": 17.86,
@@ -1240,7 +1427,10 @@
       "summary": "B1=44.58 B2=38.18 B3=38.03 | +-14.4% from B1",
       "priority": "b1",
       "tickers": [
-        "688458"
+        {
+          "code": "688458",
+          "name": "美芯晟"
+        }
       ],
       "metrics": {
         "b1_price": 44.58,
@@ -1262,7 +1452,10 @@
       "summary": "B1=32.10 B2=26.11 B3=26.04 | +-18.7% from B1",
       "priority": "b1",
       "tickers": [
-        "688598"
+        {
+          "code": "688598",
+          "name": "金博股份"
+        }
       ],
       "metrics": {
         "b1_price": 32.1,
@@ -1284,7 +1477,10 @@
       "summary": "B1=27.56 B2=24.85 B3=24.85 | +-9.8% from B1",
       "priority": "b1",
       "tickers": [
-        "002009"
+        {
+          "code": "002009",
+          "name": "天奇股份"
+        }
       ],
       "metrics": {
         "b1_price": 27.56,
@@ -1306,7 +1502,10 @@
       "summary": "B1=14.91 B2=11.50 B3=11.46 | +-22.9% from B1",
       "priority": "b1",
       "tickers": [
-        "002254"
+        {
+          "code": "002254",
+          "name": "泰和新材"
+        }
       ],
       "metrics": {
         "b1_price": 14.91,
@@ -1328,7 +1527,10 @@
       "summary": "B1=55.04 B2=45.40 B3=45.10 | +-17.5% from B1",
       "priority": "b1",
       "tickers": [
-        "300316"
+        {
+          "code": "300316",
+          "name": "晶盛机电"
+        }
       ],
       "metrics": {
         "b1_price": 55.04,
@@ -1350,7 +1552,10 @@
       "summary": "B1=16.84 B2=16.37 B3=16.37 | +-2.8% from B1",
       "priority": "b1",
       "tickers": [
-        "300697"
+        {
+          "code": "300697",
+          "name": "电工合金"
+        }
       ],
       "metrics": {
         "b1_price": 16.84,
@@ -1372,7 +1577,10 @@
       "summary": "B1=102.62 B2=81.49 B3=81.31 | +-20.6% from B1",
       "priority": "b1",
       "tickers": [
-        "301538"
+        {
+          "code": "301538",
+          "name": "骏鼎达"
+        }
       ],
       "metrics": {
         "b1_price": 102.62,
@@ -1394,7 +1602,10 @@
       "summary": "B1=171.70 B2=131.47 B3=130.71 | +-23.4% from B1",
       "priority": "b1",
       "tickers": [
-        "688123"
+        {
+          "code": "688123",
+          "name": "聚辰股份"
+        }
       ],
       "metrics": {
         "b1_price": 171.7,
@@ -1416,7 +1627,10 @@
       "summary": "B1=7.37 B2=6.87 B3=6.85 | +-6.8% from B1",
       "priority": "b1",
       "tickers": [
-        "688223"
+        {
+          "code": "688223",
+          "name": "晶科能源"
+        }
       ],
       "metrics": {
         "b1_price": 7.37,
@@ -1438,7 +1652,10 @@
       "summary": "B1=24.20 B2=21.99 B3=21.94 | +-9.1% from B1",
       "priority": "b1",
       "tickers": [
-        "002747"
+        {
+          "code": "002747",
+          "name": "埃斯顿"
+        }
       ],
       "metrics": {
         "b1_price": 24.2,
@@ -1460,7 +1677,10 @@
       "summary": "B1=12.06 B2=7.85 B3=7.80 | +-34.9% from B1",
       "priority": "b1",
       "tickers": [
-        "300449"
+        {
+          "code": "300449",
+          "name": "汉邦高科"
+        }
       ],
       "metrics": {
         "b1_price": 12.06,
@@ -1482,7 +1702,10 @@
       "summary": "B1=26.41 B2=23.49 B3=23.45 | +-11.1% from B1",
       "priority": "b1",
       "tickers": [
-        "300537"
+        {
+          "code": "300537",
+          "name": "广信材料"
+        }
       ],
       "metrics": {
         "b1_price": 26.41,
@@ -1504,7 +1727,10 @@
       "summary": "B1=31.51 B2=28.50 B3=28.40 | +-9.6% from B1",
       "priority": "b1",
       "tickers": [
-        "600460"
+        {
+          "code": "600460",
+          "name": "士兰微"
+        }
       ],
       "metrics": {
         "b1_price": 31.51,
@@ -1526,7 +1752,10 @@
       "summary": "B1=16.84 B2=14.48 B3=14.47 | +-14.0% from B1",
       "priority": "b1",
       "tickers": [
-        "600703"
+        {
+          "code": "600703",
+          "name": "三安光电"
+        }
       ],
       "metrics": {
         "b1_price": 16.84,
@@ -1548,7 +1777,10 @@
       "summary": "B1=56.40 B2=47.56 B3=47.40 | +-15.7% from B1",
       "priority": "b1",
       "tickers": [
-        "688685"
+        {
+          "code": "688685",
+          "name": "迈信林"
+        }
       ],
       "metrics": {
         "b1_price": 56.4,
@@ -1556,6 +1788,174 @@
         "b3_price": 47.4,
         "pct_from_b1": -15.7
       },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-af14b79c6a97",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⚠️ 五大风险:①减持潮是否扩大 ②GS PB获利了结是否趋势化 ③高通ASIC合规风险 ④长鑫上会结果 ⑤寒武纪/海光传导断裂持续第六周",
+      "summary": "①若其他半导体龙头跟风减持→系统性回调。②下周GS PB数据为关键验证(连续3周净卖出=红色警报)。③若美方干预高通ASIC=deal信号反转。④长鑫上会结果盘后公布→明日开盘方向决定。⑤寒武纪-5%今日→传导断裂未修复→链二资金流向封测/存储/光模块而非独立GPU。",
+      "priority": "high",
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-38d08898eff1",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⚠️ 减持潮蔓延——兆易创新朱一明11天套现21亿+华峰测控股东减持1% (chain1, exhausted)",
+      "summary": "兆易创新近一年+358%，董事长减持0.90%套现25.72亿。华峰测控股东询价转让1%。澜起250.08元减持已落地。存储/设备龙头三连击减持→产业资本在超级周期顶部兑现。与长鑫HBM3量产+IPO上会形成对立信号→产业资本套现 vs 产业基本面向上。不改中期方向但增加短期回调压力。",
+      "priority": "high",
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-c47287264f25",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⚠️ 高盛PB双向信号——对冲基金月度净卖出半导体(2024年首次) vs all in AI,资金面多空对峙 (single_sourced, under_priced风险)",
+      "summary": "Goldman Sachs PB数据:半导体及设备为过去一个月最净卖出美股子板块,但对冲基金持仓仍处高位。Goldman定性为'战术获利了结'非'AI叙事反转'。目前市场只关注all in AI叙事,获利了结风险未充分定价。如果2-4周内对冲基金持续净卖出→风险从战术调整升级为趋势转变。回调=加仓机会(如果τ定律中期方向正确)。",
+      "priority": "high",
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-b7e03fea2035",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔴 三大风险:①对冲基金获利了结趋势化 ②盛视/晶方两emerging信号未验证 ③长鑫上会结果+减持执行+tau定律制裁加码",
+      "summary": "①如果2-4周内对冲基金持续净卖出→风险从战术升级为趋势转变;②盛视科技60亿+晶方科技Anteryon分拆均未找到公告原文→48h内需官方确认;③长鑫5/27上会(过会=催化剂兑现/暂缓=封测回调)+澜起减持已落地+中微60亿待执行+tau定律可能触发美国新制裁。",
+      "priority": "high",
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-8c527ec98712",
+      "timestamp": "2026-05-23T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "三星罢工5/21-6/7(18天)→HBM产能直接受损+KeyBanc下调VR产量至6,000台——供给收缩可能被误读为需求减弱",
+      "summary": "全球存储供给缺口23年最大→长鑫/长江份额扩张获历史性窗口。但市场可能误读VR产量下调为需求减弱引发AI板块抛售。需区分供给瓶颈(利好国产替代)vs需求下滑(利空全板块)",
+      "priority": "high",
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-d88ccbd077ca",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain2",
+      "chain": "chain2",
+      "lifecycle": "consensus",
+      "title": "瑞银大幅上调美光目标价至1625美元/1.8万亿美元市值——AI存储需求远超共识预期",
+      "summary": "瑞银将美光目标价从535美元大幅上调至1625美元（华尔街最高），对应市值1.8万亿美元。分析师认为AI推动存储结构性变化迹象显现，美光估值将继续上修。美光盘前+7%，带动美股半导体普涨（AMD/高通+3%、ARM/台积电+2%）。此目标价隐含HBM/AI存储需求增速远超当前市场共识——1.8万亿美元市值=当前市值~2x。",
+      "priority": "normal",
+      "tickers": [
+        {
+          "code": "603986.SH",
+          "name": "兆易创新"
+        },
+        {
+          "code": "688525.SH",
+          "name": "佰维存储"
+        },
+        {
+          "code": "000021.SZ",
+          "name": ""
+        },
+        {
+          "code": "002156.SZ",
+          "name": "通富微电"
+        }
+      ],
+      "metrics": {},
+      "source_urls": []
+    },
+    {
+      "id": "SIG-ec30c3bd09e8",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "positioning",
+      "title": "光刻胶国产替代深度研报出炉——南大光电ArF率先突破+政府工作报告写入双催化",
+      "summary": "新浪财经5/25发布光刻胶深度研报：全球市场日本企业(TOK/JSR/信越/富士)占80%，国内彤程新材产品线最全(覆盖g线到ArF)、南大光电ArF率先突破(2025年收入突破2000万)。配合此前政府工作报告写入加速光刻胶国产化+大基金三期18%约288亿注资+超长期国债低息贷款，光刻胶为材料环节最强政策催化方向。36氪同步报道：光刻胶国产化率仅3%，硅晶圆国产使用率目标70%。",
+      "priority": "normal",
+      "tickers": [
+        {
+          "code": "300346.SZ",
+          "name": ""
+        },
+        {
+          "code": "603650.SH",
+          "name": ""
+        },
+        {
+          "code": "688300.SH",
+          "name": "联瑞新材"
+        }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://finance.sina.com.cn/roll/2026-05-25/doc-inhzcati5115289.shtml",
+        "https://36kr.com/p/3798834887914248"
+      ]
+    },
+    {
+      "id": "SIG-074edaa62e9f",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "emerging",
+      "title": "晶方科技分拆荷兰子公司Anteryon至阿姆斯特丹上市——中国半导体企业国际化新范式",
+      "summary": "晶方科技(603005.SH)拟分拆子公司Anteryon至阿姆斯特丹交易所上市。Anteryon为荷兰光学半导体子公司，分拆完成后晶方科技仍保持控制权。这是中国半导体企业首次将欧洲子公司推向公开市场——不同于海外并购，而是反向将海外资产证券化。方案尚需股东会+阿姆斯特丹交易所批准。同期思特威+紫光展锐联合布局MicroLED光互连，中国半导体企业国际化进入'资产证券化+战略合作'多线程阶段。",
+      "priority": "normal",
+      "tickers": [
+        {
+          "code": "603005.SH",
+          "name": ""
+        }
+      ],
+      "metrics": {},
       "source_urls": []
     },
     {
@@ -1570,7 +1970,10 @@
       "summary": "周线KDJ超卖 | K=6.8 D=16.2 J=-11.9 | 周涨跌=-3.9%",
       "priority": "normal",
       "tickers": [
-        "600216.SH"
+        {
+          "code": "600216.SH",
+          "name": "浙江医药"
+        }
       ],
       "metrics": {
         "K": 6.85,
@@ -1592,7 +1995,10 @@
       "summary": "周线KDJ超卖 | K=8.5 D=18.4 J=-11.2 | 周涨跌=-2.9%",
       "priority": "normal",
       "tickers": [
-        "002455.SZ"
+        {
+          "code": "002455.SZ",
+          "name": "百川股份"
+        }
       ],
       "metrics": {
         "K": 8.53,
@@ -1614,7 +2020,10 @@
       "summary": "周线KDJ超卖 | K=19.1 D=34.2 J=-11.1 | 周涨跌=-2.5%",
       "priority": "normal",
       "tickers": [
-        "000931.SZ"
+        {
+          "code": "000931.SZ",
+          "name": "中关村"
+        }
       ],
       "metrics": {
         "K": 19.1,
@@ -1636,7 +2045,10 @@
       "summary": "周线KDJ超卖 | K=13.2 D=25.1 J=-10.6 | 周涨跌=-7.2%",
       "priority": "normal",
       "tickers": [
-        "601633.SH"
+        {
+          "code": "601633.SH",
+          "name": "长城汽车"
+        }
       ],
       "metrics": {
         "K": 13.23,
@@ -1658,7 +2070,10 @@
       "summary": "周线KDJ超卖 | K=6.2 D=14.0 J=-9.3 | 周涨跌=-5.4%",
       "priority": "normal",
       "tickers": [
-        "002019.SZ"
+        {
+          "code": "002019.SZ",
+          "name": "亿帆医药"
+        }
       ],
       "metrics": {
         "K": 6.23,
@@ -1680,7 +2095,10 @@
       "summary": "周线KDJ超卖 | K=18.5 D=32.2 J=-8.9 | 周涨跌=-6.6%",
       "priority": "normal",
       "tickers": [
-        "688506.SH"
+        {
+          "code": "688506.SH",
+          "name": "百利天恒"
+        }
       ],
       "metrics": {
         "K": 18.49,
@@ -1702,7 +2120,10 @@
       "summary": "周线KDJ超卖 | K=9.8 D=19.1 J=-8.9 | 周涨跌=-5.2%",
       "priority": "normal",
       "tickers": [
-        "002923.SZ"
+        {
+          "code": "002923.SZ",
+          "name": "润都股份"
+        }
       ],
       "metrics": {
         "K": 9.76,
@@ -1724,7 +2145,10 @@
       "summary": "周线KDJ超卖 | K=7.4 D=15.5 J=-8.7 | 周涨跌=-4.5%",
       "priority": "normal",
       "tickers": [
-        "002773.SZ"
+        {
+          "code": "002773.SZ",
+          "name": "康弘药业"
+        }
       ],
       "metrics": {
         "K": 7.4,
@@ -1746,7 +2170,10 @@
       "summary": "周线KDJ超卖 | K=3.9 D=10.0 J=-8.3 | 周涨跌=-2.0%",
       "priority": "normal",
       "tickers": [
-        "000999.SZ"
+        {
+          "code": "000999.SZ",
+          "name": "华润三九"
+        }
       ],
       "metrics": {
         "K": 3.88,
@@ -1768,7 +2195,10 @@
       "summary": "周线KDJ超卖 | K=16.9 D=29.3 J=-7.9 | 周涨跌=-1.3%",
       "priority": "normal",
       "tickers": [
-        "688566.SH"
+        {
+          "code": "688566.SH",
+          "name": "吉贝尔"
+        }
       ],
       "metrics": {
         "K": 16.88,
@@ -1790,7 +2220,10 @@
       "summary": "周线KDJ超卖 | K=12.4 D=22.5 J=-7.7 | 周涨跌=-6.7%",
       "priority": "normal",
       "tickers": [
-        "000963.SZ"
+        {
+          "code": "000963.SZ",
+          "name": "华东医药"
+        }
       ],
       "metrics": {
         "K": 12.44,
@@ -1812,7 +2245,10 @@
       "summary": "周线KDJ超卖 | K=9.7 D=17.8 J=-6.6 | 周涨跌=-0.3%",
       "priority": "normal",
       "tickers": [
-        "000513.SZ"
+        {
+          "code": "000513.SZ",
+          "name": "丽珠集团"
+        }
       ],
       "metrics": {
         "K": 9.67,
@@ -1834,7 +2270,10 @@
       "summary": "周线KDJ超卖 | K=4.1 D=9.1 J=-5.9 | 周涨跌=-0.4%",
       "priority": "normal",
       "tickers": [
-        "300068.SZ"
+        {
+          "code": "300068.SZ",
+          "name": "ST南都"
+        }
       ],
       "metrics": {
         "K": 4.09,
@@ -1856,7 +2295,10 @@
       "summary": "周线KDJ超卖 | K=16.7 D=27.7 J=-5.2 | 周涨跌=-3.1%",
       "priority": "normal",
       "tickers": [
-        "300016.SZ"
+        {
+          "code": "300016.SZ",
+          "name": "北陆药业"
+        }
       ],
       "metrics": {
         "K": 16.74,
@@ -1878,7 +2320,10 @@
       "summary": "周线KDJ超卖 | K=24.2 D=38.1 J=-3.6 | 周涨跌=-9.5%",
       "priority": "normal",
       "tickers": [
-        "688356.SH"
+        {
+          "code": "688356.SH",
+          "name": "键凯科技"
+        }
       ],
       "metrics": {
         "K": 24.22,
@@ -1900,7 +2345,10 @@
       "summary": "周线KDJ超卖 | K=17.9 D=28.6 J=-3.4 | 周涨跌=-4.7%",
       "priority": "normal",
       "tickers": [
-        "300149.SZ"
+        {
+          "code": "300149.SZ",
+          "name": "睿智医药"
+        }
       ],
       "metrics": {
         "K": 17.92,
@@ -1922,7 +2370,10 @@
       "summary": "周线KDJ超卖 | K=34.7 D=53.7 J=-3.3 | 周涨跌=1.8%",
       "priority": "normal",
       "tickers": [
-        "688331.SH"
+        {
+          "code": "688331.SH",
+          "name": "荣昌生物"
+        }
       ],
       "metrics": {
         "K": 34.71,
@@ -1944,7 +2395,10 @@
       "summary": "周线KDJ超卖 | K=3.2 D=5.7 J=-1.8 | 周涨跌=16.0%",
       "priority": "normal",
       "tickers": [
-        "000584.SZ"
+        {
+          "code": "000584.SZ",
+          "name": "哈工智能"
+        }
       ],
       "metrics": {
         "K": 3.17,
@@ -1966,7 +2420,10 @@
       "summary": "周线KDJ超卖 | K=22.6 D=34.8 J=-1.7 | 周涨跌=-3.0%",
       "priority": "normal",
       "tickers": [
-        "600196.SH"
+        {
+          "code": "600196.SH",
+          "name": "复星医药"
+        }
       ],
       "metrics": {
         "K": 22.6,
@@ -1988,13 +2445,171 @@
       "summary": "周线KDJ超卖 | K=9.7 D=15.2 J=-1.2 | 周涨跌=0.0%",
       "priority": "normal",
       "tickers": [
-        "600905.SH"
+        {
+          "code": "600905.SH",
+          "name": "三峡能源"
+        }
       ],
       "metrics": {
         "K": 9.71,
         "D": 15.15,
         "J": -1.18,
         "week_chg": 0.0
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-9d085d42bdcf",
+      "timestamp": "2026-05-27T01:50:11.179Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 创业板指涨逾 1% 光伏领涨",
+      "summary": "指数分化，创业板指拉升涨逾 1.00%，沪指跌 0.08%，深成指涨 0.26%。光伏、电力、芯片等方向涨幅居前，沪深京三市上涨个股近 2600 只。",
+      "priority": "normal",
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片",
+          "创业板"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-e9ab52ce3c9e",
+      "timestamp": "2026-05-27T01:45:37.456Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 郑州「十五五」规划纲要：积极创建超硬材料领域国家制造业创新中心 打造培育钻石之都",
+      "summary": "郑州市「十五五」规划纲要提出，实施产业创新工程，强化战略性新兴产业支柱作用，打造新一代信息技术、新能源及智能网联汽车 2 个万亿级和高端装备、新材料、生物医药、节能环保 4 个千亿级产业集群。其中，将统筹电子信息全链条发展，构建新能源汽车产业体系，建设高端装备产业基地，巩固提升材料优势，积极创建超硬材料领域国家制造业创新中心，打造培育钻石之都，同时发展生物医药和节能环保产业。",
+      "priority": "normal",
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "材料"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-143f54ea2faf",
+      "timestamp": "2026-05-27T01:30:48.721Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 AI 眼镜新品频发，产业链追「光」逐「芯」",
+      "summary": "AI 眼镜市场热度升温，厂商密集发布新品，谷歌亦预告秋季推出首款 AI 眼镜。A 股 AI 眼镜产业链加速布局，光学部件（近半成本，Micro LED 为重点方向）和主控芯片（成本占比两至三成）成核心环节，相关公司纷纷卡位。",
+      "priority": "normal",
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-4779aa51afc5",
+      "timestamp": "2026-05-27T01:10:41.609Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 智谱等在上海成立人工智能产业创投合伙企业",
+      "summary": "上海智谱国泰海通人工智能产业创业投资合伙企业（有限合伙）近日成立，经营范围为创业投资（限投资未上市企业），由智谱全资子公司北京智谱未来科技有限公司、国泰海通全资子公司国泰君安创新投资有限公司等共同出资。",
+      "priority": "normal",
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-92de68b1d66c",
+      "timestamp": "2026-05-26T17:56:20.786Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 字节跳动向 Seed 员工开放「豆包股」认购权",
+      "summary": "字节跳动首次针对特定业务单元发行股权，为旗下 Seed 人工智能部门员工提供与该部门挂钩的低价股票期权「豆包股」，当前认购价为每股 13 美元。该「豆包长期激励计划」始于 2025 年四季度，初期估值参考业务投入成本，未来将结合豆包及大模型 toB 业务发展重新估值，以加强对大模型人才的长期吸引和激励。此外，字节此前已为 Seed 部门核心技术员工实施期权增发，按绩效与职级分档，员工每月可拿到约 9 万、11 万、13 万元人民币价值的字节期权，按月归属，首批连续发放 18 个月，最高可达百万元级别。",
+      "priority": "normal",
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能",
+          "字节"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-9a024f96118c",
+      "timestamp": "2026-05-26T17:55:38.831Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 蚂蚁集团：Token 消耗将迎来指数级增长 预计 2030 年消耗量增长超 300 倍",
+      "summary": "今日支付宝举行 AI 支付生态大会，蚂蚁集团研究院院长庄蹯表示 Token、数据和工具是智能体的重要生产要素，预测 2030 年 Token 消耗量将增长超 300 倍，活跃智能体达 22 亿，年执行任务 400 万亿次。另据《全国数据资源调查报告（2025 年）》显示，2025 年全国日均 Token 调用量从年初超万亿增长到年末 100 万亿，全年累计约 21100 万亿。Token 是人工智能大模型拆分数据后的最小信息载体。",
+      "priority": "normal",
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-598114727146",
+      "timestamp": "2026-05-26T17:45:28.328Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 SpaceX IPO「磁场效应」持续发酵 美股商业航天板块盘前飙升",
+      "summary": "受 SpaceX 上市乐观情绪提振，美股商业航天板块盘前延续涨势，Momentus 飙升 80%，Redwire 上涨 16%，MDA Space 上涨 18%，Firefly Aerospace 上涨 8%，Voyager Technologies 涨 7.6%，Intuitive Machines 涨 10%，York Space Systems 涨 7.8%，AST SpaceMobile 涨 6.5%，Rocket Lab 涨 5.6%.",
+      "priority": "normal",
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "商业航天"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-cfe6c278d656",
+      "timestamp": "2026-05-26T16:25:14.862Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 马斯克：星链战时收费暴涨 5 倍，五角大楼被迫买单",
+      "summary": "美伊战争期间，SpaceX 以星链网络不可替代性为由，将用于自杀式无人机的卫星连接费用从每月约 5000 美元大幅提至 25000 美元，五角大楼最终妥协。这一争议暴露了美国军事体系对单一商业供应商的深度依赖。SpaceX 认为无人机使用条件接近航空级服务，而军方则认为其使用时间短不应适用该高价。马斯克曾公开表示商业星链用于武器系统违反服务条款，加剧双方矛盾。分析人士指出，SpaceX 因拥有庞大商业市场，在谈判中底气远超传统军工企业，而五角大楼缺乏替代选项。此外，SpaceX 还就向伊朗平民提供直连蜂窝服务开价 5 亿美元启动费加每月 1 亿美元运营费。此次定价争议发生在 SpaceX 即将",
+      "priority": "normal",
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "无人机",
+          "卫星"
+        ]
       },
       "source_urls": []
     }

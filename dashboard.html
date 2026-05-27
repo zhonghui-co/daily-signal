@@ -436,7 +436,70 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
 });
 
 // ===== Data Loading =====
-let poolData = null, scannerData = null, briefData = null, stateData = null, signalsDailyData = null, attribData = null;
+let poolData = null, scannerData = null, briefData = null, stateData = null, signalsDailyData = null, attribData = null, tickerNameMap = {};
+
+// Build ticker-to-name mapping from pool.json
+function buildTickerNameMap() {
+    tickerNameMap = {};
+    if (poolData?.stocks) {
+        poolData.stocks.forEach(s => {
+            if (s.code && s.name) {
+                tickerNameMap[s.code] = s.name;
+                // Also map short codes (without .SH/.SZ/.BJ suffix)
+                const shortCode = s.code.replace(/\.SH$/, '').replace(/\.SZ$/, '').replace(/\.BJ$/, '');
+                if (shortCode !== s.code) {
+                    tickerNameMap[shortCode] = s.name;
+                }
+            }
+        });
+    }
+}
+
+function getNameForTicker(code) {
+    // Direct lookup
+    if (tickerNameMap[code]) return tickerNameMap[code];
+    // Try with exchange suffixes
+    for (const suffix of ['.SH', '.SZ', '.BJ']) {
+        if (tickerNameMap[code + suffix]) return tickerNameMap[code + suffix];
+    }
+    // Try removing suffixes
+    const shortCode = code.replace(/\.SH$/, '').replace(/\.SZ$/, '').replace(/\.BJ$/, '');
+    if (shortCode !== code && tickerNameMap[shortCode]) return tickerNameMap[shortCode];
+    return '';
+}
+
+// Generate impact analysis for signals
+function generateImpactForSignal(title, summary, tags) {
+    const text = (title + ' ' + summary).toLowerCase();
+    const impacts = [];
+    
+    if (text.includes('涨停') || text.includes('大涨') || text.includes('暴涨')) impacts.push('📊 市场情绪高涨');
+    if (text.includes('突破') || text.includes('攻克') || text.includes('里程碑')) impacts.push('🔬 技术突破信号');
+    if (text.includes('量产') || text.includes('投产') || text.includes('商业化')) impacts.push('🏭 产业化加速');
+    if (text.includes('扩产') || text.includes('扩建') || text.includes('产能扩张')) impacts.push('📈 产能扩张期');
+    if (text.includes('涨价') || text.includes('提价')) impacts.push('💰 涨价周期');
+    if (text.includes('制裁') || text.includes('限制') || text.includes('出口管制')) impacts.push('⚠️ 制裁风险');
+    if (text.includes('国产替代') || text.includes('自主可控')) impacts.push('🇨🇳 国产替代加速');
+    if (text.includes('获利了结') || text.includes('回调') || text.includes('下跌')) impacts.push('⚠️ 短期风险信号');
+    
+    // Tag-based impact
+    const tagImpacts = {
+        'τ-law': '→ τ定律叙事升级',
+        'advanced-packaging': '→ 利好先进封装链',
+        'goldman-sachs': '→ 关注外资动向',
+        'hbm': '→ 利好HBM/存储链',
+        'kirin-chip': '→ 华为芯片链受益',
+    };
+    if (tags) {
+        for (const t of tags) {
+            if (tagImpacts[t] && !impacts.includes(tagImpacts[t])) {
+                impacts.push(tagImpacts[t]);
+            }
+        }
+    }
+    
+    return impacts.join(' · ');
+}
 
 async function loadJSON(path) {
     try {
@@ -465,6 +528,9 @@ async function init() {
     
     document.getElementById('updateTime').textContent = '最后更新: ' + 
         new Date().toLocaleTimeString('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit'});
+    
+    // Build ticker name map for displaying names
+    buildTickerNameMap();
     
     renderOverview();
     renderSignals();
@@ -578,7 +644,7 @@ function renderThesisPositions() {
 function renderRecentFireSignals() {
     const container = document.getElementById('recentSignals');
     const allSignals = scannerData?.signals || [];
-    const fireSignals = allSignals.filter(s => s.priority === 'fire').slice(0, 5);
+    const fireSignals = allSignals.filter(s => s.priority === 'fire');
     document.getElementById('fireCount').textContent = allSignals.filter(s => s.priority === 'fire').length;
     
     if (!fireSignals.length) {
@@ -593,7 +659,7 @@ function renderActiveAlerts() {
     const container = document.getElementById('activeAlerts');
     const fireAlerts = briefData?.alerts?.fire || [];
     const highAlerts = briefData?.alerts?.high || [];
-    const combined = [...fireAlerts, ...highAlerts].slice(0, 8);
+    const combined = [...fireAlerts, ...highAlerts];
     
     if (!combined.length) {
         container.innerHTML = '<div class="empty">暂无活跃预警</div>';
@@ -605,7 +671,7 @@ function renderActiveAlerts() {
         return `<div class="alert-item ${cls}">
             <div class="alert-date">${a.date} · ${a.source}</div>
             <div class="alert-title">${a.title}</div>
-            ${a.impact ? `<div style="font-size:11px;color:#8b949e;margin-top:4px;">${a.impact.substring(0,150)}…</div>` : ''}
+            ${a.impact ? `<div style="font-size:11px;color:#8b949e;margin-top:4px;">${a.impact}</div>` : ''}
         </div>`;
     }).join('');
 }
@@ -658,6 +724,30 @@ function renderSignalCard(s) {
     const chainCls = s.chain === 'chain1' ? 'badge-chain1' : 'badge-chain2';
     const chainLabel = s.chain === 'chain1' ? '链一' : '链二';
     
+    // P5: Source URL links
+    const sourceUrls = s.source_urls || [];
+    let titleHtml = s.title;
+    if (sourceUrls.length > 0) {
+        const url = sourceUrls[0];
+        const extra = sourceUrls.length > 1 ? `<span class="source-link-count">+${sourceUrls.length}来源</span>` : '';
+        titleHtml = `<a href="${url}" target="_blank" rel="noopener" style="color:#58a6ff;text-decoration:none;">${s.title}</a>${extra}`;
+    }
+    
+    // P2: Tickers with names from pool
+    let tickerHtml = '';
+    if (tickers.length) {
+        const tickerItems = tickers.map(t => {
+            const name = getNameForTicker(t);
+            const display = name ? `${t.replace('.SH','').replace('.SZ','').replace('.BJ','')} ${name}` : t;
+            return `<span class="ticker-tag">${display}</span>`;
+        }).join('');
+        tickerHtml = `<div class="signal-tickers">${tickerItems}</div>`;
+    }
+    
+    // P5: Impact analysis
+    const impactText = generateImpactForSignal(s.title, s.summary || '', tags);
+    const impactHtml = impactText ? `<div class="impact-row">🎯 ${impactText}</div>` : '';
+    
     return `<div class="signal-card ${isFire ? 'fire-card' : ''}">
         <div class="signal-header">
             ${isFire ? '<span class="badge badge-fire">🔥 Fire</span>' : '<span class="badge badge-normal">📡 信号</span>'}
@@ -665,10 +755,11 @@ function renderSignalCard(s) {
             <span class="badge ${lcCls}">${lcLabel}</span>
             ${s.source_weight === 'high' ? '<span class="badge badge-source">高权重源</span>' : ''}
         </div>
-        <div class="signal-title">${s.title}</div>
-        <div class="signal-summary">${s.summary?.substring(0,300) || ''}${(s.summary?.length || 0) > 300 ? '…' : ''}</div>
+        <div class="signal-title">${titleHtml}</div>
+        <div class="signal-summary">${s.summary || ''}</div>
+        ${impactHtml}
         ${tags.length ? `<div class="signal-meta">🏷️ ${tags.join(' · ')}</div>` : ''}
-        ${tickers.length ? `<div class="signal-tickers">${tickers.map(t => `<span class="ticker-tag">${t}</span>`).join('')}</div>` : ''}
+        ${tickerHtml}
     </div>`;
 }
 
@@ -684,7 +775,7 @@ function renderThemes() {
     const groups = poolData.groups
         .filter(g => g.count >= 2)
         .sort((a,b) => b.avg_pct - a.avg_pct)
-        .slice(0, 20);
+        ;
     
     grid.innerHTML = groups.map(g => {
         const pct = g.avg_pct;
@@ -768,15 +859,12 @@ function renderAttributionList(items) {
     // Sort by absolute pct change
     filtered.sort((a, b) => Math.abs(b.pct_change) - Math.abs(a.pct_change));
     
-    // Show top 50 for performance
-    const displayed = filtered.slice(0, 50);
-    
-    if (!displayed.length) {
+    if (!filtered.length) {
         container.innerHTML = '<div class="empty">无匹配归因记录</div>';
         return;
     }
     
-    container.innerHTML = displayed.map(item => {
+    container.innerHTML = filtered.map(item => {
         const pct = item.pct_change;
         const isUp = pct >= 0;
         const conf = item.confidence;
@@ -797,9 +885,7 @@ function renderAttributionList(items) {
         </div>`;
     }).join('');
     
-    if (filtered.length > 50) {
-        container.innerHTML += `<div style="text-align:center;padding:10px;font-size:12px;color:#8b949e;">显示前50条，共${filtered.length}条记录</div>`;
-    }
+    
 }
 
 // ===== Health Tab =====
