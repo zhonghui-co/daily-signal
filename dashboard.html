@@ -663,6 +663,10 @@ a:hover { text-decoration:underline; }
             <div class="section-title">🔄 方向资金流</div>
             <div id="flowList"></div>
         </div>
+        <div class="section">
+            <div class="section-title">📅 周B1 信号 <span id="weeklyB1Count" style="font-size:10px;color:#484f58;font-weight:400;"></span> <span style="font-size:10px;color:#d29922;">— 周线KDJ超卖</span></div>
+            <div id="weeklyB1List"></div>
+        </div>
     </div>
     <div class="section">
         <div class="section-title">🎯 方向轮动追踪</div>
@@ -1450,7 +1454,18 @@ async function loadAnomalies() {
         const sd = await loadJSON('data/signals-daily.json');
         document.getElementById('anomalyDate').textContent = sd.date ? '· ' + sd.date : '';
         
-        // Stats
+        // Filter to last 15 days
+        const cutoff = new Date();
+        cutoff.setDate(cutoff.getDate() - 15);
+        const cutoffStr = cutoff.getFullYear() + String(cutoff.getMonth()+1).padStart(2,'0') + String(cutoff.getDate()).padStart(2,'0');
+        const recent = (arr) => (arr||[]).filter(s => (s.date||s[4]||'') >= cutoffStr);
+        const recentGolden = recent(sd.golden);
+        const recentDeath = recent(sd.death);
+        const recentB1 = recent(sd.b1);
+        const recentB2 = recent(sd.b2);
+        const recentB3 = recent(sd.b3);
+        
+        // Stats (based on recent data)
         const sgolden = sd.golden?.length || 0;
         const sdeath = sd.death?.length || 0;
         const sb1 = sd.b1?.length || 0;
