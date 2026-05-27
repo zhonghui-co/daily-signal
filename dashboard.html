@@ -320,6 +320,64 @@ a:hover { text-decoration:underline; }
 .tpo-item .action-sell { background:rgba(218,54,51,0.15); color:#f85149; }
 .tpo-item .action-watch { background:rgba(210,153,34,0.15); color:#d29922; }
 .tpo-item .action-buy { background:rgba(35,134,54,0.15); color:#3fb950; }
+
+/* ===== Washout / Anomaly Row ===== */
+.anomaly-row { display:flex; align-items:center; gap:8px; padding:5px 8px; border-bottom:1px solid #21262d; font-size:12px; }
+.anomaly-row:hover { background:rgba(88,166,255,0.03); }
+.anomaly-dir { color:#8b949e; font-size:11px; flex:1; }
+.wash-row { align-items:center; gap:8px; padding:5px 8px; border-bottom:1px solid #21262d; font-size:12px; display:flex; }
+.wash-row:hover { background:rgba(88,166,255,0.03); }
+.wash-pct { font-weight:600; min-width:55px; }
+.wash-pct.down { color:#3fb950; }
+
+/* ===== Flow Chip ===== */
+.flow-chip { 
+    display:inline-flex; align-items:center; gap:4px;
+    border-radius:6px; padding:6px 10px; font-size:12px;
+    border:1px solid #30363d;
+}
+
+/* ===== Thesis Summary ===== */
+.thesis-item {
+    display:flex; align-items:center; gap:8px; padding:4px 8px;
+    border-bottom:1px solid #21262d; font-size:12px;
+}
+.thesis-item:hover { background:rgba(88,166,255,0.03); }
+.thesis-status { font-size:10px; padding:1px 6px; border-radius:3px; }
+.thesis-status.active { background:rgba(35,134,54,0.15); color:#3fb950; border:1px solid rgba(35,134,54,0.3); }
+.thesis-status.at_risk { background:rgba(210,153,34,0.15); color:#d29922; border:1px solid rgba(210,153,34,0.3); }
+.thesis-status.closed { background:rgba(139,148,158,0.1); color:#484f58; border:1px solid rgba(139,148,158,0.2); }
+
+/* ===== Theme Table ===== */
+.theme-table { width:100%; border-collapse:collapse; font-size:12px; }
+.theme-table th { text-align:left; color:#8b949e; font-weight:600; padding:6px 8px; background:#161b22; border-bottom:1px solid #21262d; position:sticky; top:0; z-index:2; }
+.theme-table td { padding:5px 8px; border-bottom:1px solid #21262d; }
+.theme-table tr:hover td { background:rgba(88,166,255,0.03); }
+.theme-heat-cell {
+    width:80px; height:20px; border-radius:3px; display:inline-block;
+    position:relative; vertical-align:middle;
+}
+.theme-heat-fill {
+    height:100%; border-radius:3px; position:absolute;
+    left:0; top:0; opacity:0.8;
+}
+.theme-heat-text {
+    position:absolute; right:4px; top:0; line-height:20px;
+    font-size:10px; font-weight:600; color:#e6edf3;
+    text-shadow:0 1px 2px rgba(0,0,0,0.5);
+}
+.theme-cat-tag {
+    font-size:10px; padding:1px 5px; border-radius:3px;
+    background:rgba(31,111,235,0.1); color:#58a6ff;
+    border:1px solid rgba(31,111,235,0.2);
+}
+
+/* ===== Rotation Table ===== */
+.rotation-table { width:100%; border-collapse:collapse; font-size:12px; }
+.rotation-table th { text-align:left; color:#8b949e; font-weight:600; padding:6px 8px; background:#161b22; border-bottom:1px solid #21262d; }
+.rotation-table td { padding:5px 8px; border-bottom:1px solid #21262d; }
+.rotation-table tr:hover td { background:rgba(88,166,255,0.03); }
+.rot-arrow { font-size:14px; }
 </style>
 </head>
 <body>
@@ -346,7 +404,6 @@ a:hover { text-decoration:underline; }
     <button class="nav-tab" data-tab="attrib">📈 归因</button>
     <button class="nav-tab" data-tab="portfolio">💼 持仓</button>
     <button class="nav-tab" data-tab="anomalies">📡 异动</button>
-    <button class="nav-tab" data-tab="portfolio">💼 持仓</button>
 </div>
 
 <!-- Main Content -->
@@ -365,6 +422,12 @@ a:hover { text-decoration:underline; }
     <!-- Risk Banner -->
     <div class="risk-banner" id="riskBanner" style="display:none;"></div>
 
+    <!-- Thesis Tracking Summary -->
+    <div class="section" id="thesisSummarySection">
+        <div class="section-title">📋 投资逻辑追踪 <span id="thesisSummaryBadge" style="font-size:10px;color:#8b949e;font-weight:400;"></span></div>
+        <div id="thesisSummaryList"></div>
+    </div>
+
     <div class="two-col">
         <!-- Left: Direction Heat -->
         <div class="section">
@@ -374,13 +437,13 @@ a:hover { text-decoration:underline; }
 
         <!-- Right: Alerts + Positions -->
         <div>
-            <!-- Thesis Positions -->
+            <!-- Alerts & B1 -->
             <div class="section">
-                <div class="section">
                 <div class="section-title">📋 今日持仓提醒</div>
                 <div id="overviewAlerts" style="font-size:13px;color:#c9d1d9;"></div>
             </div>
-            <div class="section-title">⭐ 今日 B1 机会 <span class="badge badge-fire" id="overviewB1Count"></span></div>
+            <div class="section">
+                <div class="section-title">⭐ 今日 B1 机会 <span class="badge badge-fire" id="overviewB1Count"></span></div>
                 <div id="overviewB1List" style="max-height:300px;overflow-y:auto;"></div>
             </div>
 
@@ -431,9 +494,20 @@ a:hover { text-decoration:underline; }
 
 <!-- Tab: Themes -->
 <div class="tab-content" id="tab-themes">
+    <div class="filter-bar" id="themeCatFilters">
+        <span class="filter-label">方向:</span>
+        <button class="filter-btn active" data-cat="all">全部 (85)</button>
+    </div>
     <div class="section">
-        <div class="section-title">🎯 板块热度 TOP 20 <span style="font-size:10px;color:#484f58;font-weight:400;">（平均涨幅%，仅显示≥2只成分股的板块）</span></div>
-        <div class="theme-grid" id="themeGrid"></div>
+        <div class="section-title">📊 今日主线监控 <span style="font-size:10px;color:#484f58;font-weight:400;" id="themeDate"></span></div>
+        <div style="overflow-x:auto;">
+            <table class="theme-table" id="themeTable">
+                <thead><tr>
+                    <th>#</th><th>分组</th><th>方向</th><th style="width:160px;">热度评分</th><th>今日涨跌</th><th>5日涨跌</th><th>量比</th><th>成分股</th>
+                </tr></thead>
+                <tbody id="themeBody"></tbody>
+            </table>
+        </div>
     </div>
     <div class="section">
         <div class="section-title">📊 板块涨跌分布</div>
@@ -526,9 +600,19 @@ a:hover { text-decoration:underline; }
             <div id="b2b3List"></div>
         </div>
     </div>
+    <div class="two-col">
+        <div class="section">
+            <div class="section-title">🌊 洗盘信号 <span id="washCount" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+            <div id="washList"></div>
+        </div>
+        <div class="section">
+            <div class="section-title">🔄 方向资金流</div>
+            <div id="flowList"></div>
+        </div>
+    </div>
     <div class="section">
-        <div class="section-title">💸 方向资金流</div>
-        <div id="flowList"></div>
+        <div class="section-title">🎯 方向轮动追踪</div>
+        <div id="rotationList"></div>
     </div>
 </div>
 
@@ -566,6 +650,9 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
         if (tab.dataset.tab === 'news') {
             const iframe = document.getElementById('newsIframe');
             if (!iframe.src) iframe.src = 'news-feed.html';
+        }
+        if (tab.dataset.tab === 'anomalies') {
+            loadAnomalies();
         }
     });
 });
@@ -662,6 +749,10 @@ async function init() {
         loadJSON('data/portfolio-status.json')
     ]);
     
+    // Load additional data
+    window.thesesData = await loadJSON('data/theses.json').catch(() => null);
+    window.themeData = await loadJSON('data/theme-data.json').catch(() => null);
+    
     document.getElementById('updateTime').textContent = '最后更新: ' + 
         new Date().toLocaleTimeString('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit'});
     
@@ -714,6 +805,9 @@ function renderOverview() {
         rb.innerHTML = `<strong>⚠️ 风险提示：</strong>${riskAlerts[0].title}`;
     }
     
+    // Overview Alerts - from portfolio
+    renderOverviewAlerts();
+    
     // Direction Heat
     renderDirectionHeat();
     
@@ -725,6 +819,9 @@ function renderOverview() {
     
     // Active Alerts
     renderActiveAlerts();
+    
+    // Thesis Summary
+    renderThesisSummary();
 }
 
 function renderDirectionHeat() {
@@ -761,25 +858,24 @@ function renderDirectionHeat() {
 }
 
 function renderThesisPositions() {
-    // Load B1 signals for overview
-    try {
-        const sd = await loadJSON('/daily-signal/data/signals-daily.json');
-        const b1List = sd?.b1 || [];
-        const container = document.getElementById('overviewB1List');
-        document.getElementById('overviewB1Count').textContent = b1List.length + '个';
-        if (!b1List.length) {
-            container.innerHTML = '<div class="empty">今日无B1信号</div>';
-        } else {
-            container.innerHTML = b1List.map(s => 
-                `<div class="position-row">
-                    <span class="ticker-tag" style="font-size:11px;">${s.ticker||''} ${s.name||''}</span>
-                    <span style="font-size:10px;color:#8b949e;">${s.direction||''}</span>
-                    <span style="font-size:11px;color:#d29922;font-weight:600;">J=${s.j!=null?s.j.toFixed(1):'?'}</span>
-                    <span style="font-size:10px;color:#484f58;">${s.date||''}</span>
-                </div>`
-            ).join('');
-        }
-    } catch(e) { console.log('B1 load err:', e); }
+    // Load B1 signals for overview from signals-daily.json (loaded in init)
+    const b1List = signalsDailyData?.b1 || [];
+    const container = document.getElementById('overviewB1List');
+    const badge = document.getElementById('overviewB1Count');
+    if (badge) badge.textContent = b1List.length + '个';
+    if (!b1List.length) {
+        container.innerHTML = '<div class="empty">今日无B1信号</div>';
+    } else {
+        container.innerHTML = b1List.map(s => {
+            const code = s[0]||'', name = s[1]||'', dir = s[2]||'', date = s[4]||'', price = s[5], jval = s[6];
+            return `<div class="position-row">
+                <span class="ticker-tag" style="font-size:11px;">${code} ${name}</span>
+                <span style="font-size:10px;color:#8b949e;">${dir}</span>
+                <span style="font-size:11px;color:#d29922;font-weight:600;">J=${jval!=null?jval.toFixed(1):'?'}</span>
+                <span style="font-size:10px;color:#484f58;">${date}</span>
+            </div>`;
+        }).join('');
+    }
 }
 
 function renderRecentFireSignals() {
@@ -814,6 +910,66 @@ function renderActiveAlerts() {
             <div class="alert-title">${a.title}</div>
             ${a.impact ? `<div style="font-size:11px;color:#8b949e;margin-top:4px;">${a.impact}</div>` : ''}
         </div>`;
+    }).join('');
+}
+
+function renderThesisSummary() {
+    const container = document.getElementById('thesisSummaryList');
+    const badge = document.getElementById('thesisSummaryBadge');
+    const theses = window.thesesData?.theses || [];
+    
+    if (!theses.length) {
+        container.innerHTML = '<div class="empty">暂无投资逻辑追踪</div>';
+        return;
+    }
+    
+    const active = theses.filter(t => t.status === 'active');
+    const atRisk = theses.filter(t => t.status === 'at_risk');
+    const closed = theses.filter(t => t.status === 'closed');
+    badge.textContent = `🟢${active.length}活跃 | 🟡${atRisk.length}风险 | ⚫${closed.length}关闭`;
+    
+    // Show all theses sorted by status priority
+    const sorted = [...active, ...atRisk, ...closed];
+    container.innerHTML = sorted.map(t => {
+        const latestCheck = t.checks?.length ? t.checks[t.checks.length - 1] : null;
+        const returnPct = latestCheck?.metrics?.since_return_pct;
+        const retDisplay = returnPct != null ? `${returnPct >= 0 ? '+' : ''}${returnPct.toFixed(1)}%` : '';
+        const retCls = returnPct != null && returnPct >= 0 ? 'ret-up' : 'ret-down';
+        return `<div class="thesis-item">
+            <span class="thesis-status ${t.status}">${t.status === 'active' ? '活跃' : t.status === 'at_risk' ? '风险' : '关闭'}</span>
+            <span style="font-weight:500;color:#e6edf3;min-width:70px;">${t.stock}</span>
+            <span style="color:#8b949e;font-size:10px;">${t.code}</span>
+            <span style="color:#58a6ff;font-size:10px;">${(t.chains||[]).join(',')}</span>
+            ${retDisplay ? `<span class="position-return ${retCls} ${retCls}" style="min-width:60px;text-align:right;">${retDisplay}</span>` : ''}
+            <span style="color:#8b949e;font-size:10px;flex:1;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px;" title="${t.thesis}">${t.thesis.substring(0,60)}${t.thesis.length>60?'...':''}</span>
+        </div>`;
+    }).join('');
+}
+
+function renderOverviewAlerts() {
+    const container = document.getElementById('overviewAlerts');
+    const positions = portfolioData?.positions || [];
+    const alerts = [];
+    
+    positions.forEach(p => {
+        if (p.status === 'stop_triggered') {
+            alerts.push({level:'danger', text:`<b>${p.name}</b> 触发止损！现价${p.current_price}`});
+        } else if (p.status === 'near_stop') {
+            alerts.push({level:'warn', text:`<b>${p.name}</b> 接近止损 (距${p.stop_distance_pct?.toFixed(1)}%)`});
+        }
+        if (p.alerts?.length) {
+            p.alerts.forEach(a => alerts.push({level:'info', text:`<b>${p.name}</b>: ${a}`}));
+        }
+    });
+    
+    if (!alerts.length) {
+        container.innerHTML = '<div style="color:#8b949e;font-size:12px;">暂无预警，持仓正常</div>';
+        return;
+    }
+    
+    container.innerHTML = alerts.slice(0, 5).map(a => {
+        const icon = a.level === 'danger' ? '🔴' : a.level === 'warn' ? '🟡' : 'ℹ️';
+        return `<div style="font-size:12px;color:${a.level==='danger'?'#f85149':a.level==='warn'?'#d29922':'#c9d1d9'};padding:3px 0;">${icon} ${a.text}</div>`;
     }).join('');
 }
 
@@ -905,59 +1061,114 @@ function renderSignalCard(s) {
 }
 
 // ===== Themes Tab =====
+let themeCatFilter = 'all';
+
 function renderThemes() {
-    // Theme Grid - Top 20 groups by avg_pct
-    const grid = document.getElementById('themeGrid');
-    if (!poolData?.groups?.length) {
-        grid.innerHTML = '<div class="empty">暂无板块数据</div>';
+    const themeScores = window.themeData?.scores || [];
+    const themeDate = window.themeData?.date || '';
+    
+    document.getElementById('themeDate').textContent = themeDate ? `· ${themeDate}` : '';
+    
+    // Populate category filter buttons
+    const catSet = new Set(themeScores.map(s => s.category || '其他'));
+    const cats = [...catSet].sort();
+    const filterBar = document.getElementById('themeCatFilters');
+    
+    let catFilterHtml = '<span class="filter-label">方向:</span>';
+    catFilterHtml += `<button class="filter-btn active" data-cat="all">全部 (${themeScores.length})</button>`;
+    cats.forEach(cat => {
+        const count = themeScores.filter(s => s.category === cat).length;
+        catFilterHtml += `<button class="filter-btn" data-cat="${cat}">${cat} (${count})</button>`;
+    });
+    filterBar.innerHTML = catFilterHtml;
+    
+    // Setup filter handlers
+    document.querySelectorAll('#themeCatFilters .filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('#themeCatFilters .filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            themeCatFilter = btn.dataset.cat;
+            renderThemeTable();
+        });
+    });
+    
+    renderThemeTable();
+    
+    // All sectors heat (from pool data)
+    const allHeat = document.getElementById('allSectorsHeat');
+    if (poolData?.groups?.length) {
+        const allGroups = poolData.groups
+            .filter(g => g.count >= 2)
+            .sort((a,b) => b.avg_pct - a.avg_pct);
+        const maxAbsAll = Math.max(Math.abs(allGroups[0]?.avg_pct || 0), Math.abs(allGroups[allGroups.length-1]?.avg_pct || 0), 0.5);
+        allHeat.innerHTML = allGroups.map(g => {
+            const pct = g.avg_pct;
+            const width = maxAbsAll > 0 ? (Math.abs(pct) / maxAbsAll * 100) : 0;
+            let cls = pct > 2 ? 'hot' : pct > 0 ? 'warm' : pct > -1 ? 'cool' : 'cold';
+            return `<div class="heat-row">
+                <div class="heat-label">${g.group}</div>
+                <div class="heat-bar-wrap">
+                    <div class="heat-bar ${cls}" style="width:${width}%"></div>
+                    <div class="heat-value">${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</div>
+                </div>
+                <div class="heat-pct">${g.count}只</div>
+            </div>`;
+        }).join('');
+    } else {
+        allHeat.innerHTML = '<div class="empty">暂无板块数据</div>';
+    }
+}
+
+function renderThemeTable() {
+    const themeScores = window.themeData?.scores || [];
+    const tbody = document.getElementById('themeBody');
+    
+    let filtered = themeScores;
+    if (themeCatFilter !== 'all') {
+        filtered = filtered.filter(s => s.category === themeCatFilter);
+    }
+    
+    // Sort by score descending
+    filtered.sort((a,b) => b.score - a.score);
+    
+    if (!filtered.length) {
+        tbody.innerHTML = '<tr><td colspan="8" class="empty">无匹配主题数据</td></tr>';
         return;
     }
     
-    const groups = poolData.groups
-        .filter(g => g.count >= 2)
-        .sort((a,b) => b.avg_pct - a.avg_pct)
-        ;
+    // Find max abs values for heat scale
+    const maxScore = Math.max(...filtered.map(s => s.score), 1);
+    const maxAbsD1 = Math.max(...filtered.map(s => Math.abs(s.d1)), 1);
+    const maxAbsD5 = Math.max(...filtered.map(s => Math.abs(s.d5)), 1);
     
-    grid.innerHTML = groups.map(g => {
-        const pct = g.avg_pct;
-        const absPct = Math.abs(pct);
-        const maxW = 8; // max bar width reference
-        const width = Math.min(100, absPct / maxW * 100);
-        const color = pct > 0 ? 
-            (pct > 2 ? '#f85149' : '#e3b341') : 
-            (pct > -1 ? '#58a6ff' : '#484f58');
-        return `<div class="theme-card">
-            <div class="theme-name">${g.group} <span class="theme-count">(${g.count}只)</span></div>
-            <div class="theme-bar-wrap">
-                <div class="theme-bar" style="width:${width}%;background:${color};"></div>
-            </div>
-            <div class="theme-meta">
-                <span>${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</span>
-                <span>${pct > 2 ? '🔥 热' : pct > 0 ? '🟡 温' : pct > -1 ? '🔵 凉' : '❄️ 冷'}</span>
-            </div>
-        </div>`;
-    }).join('');
-    
-    // All sectors heat
-    const allHeat = document.getElementById('allSectorsHeat');
-    const allGroups = poolData.groups
-        .filter(g => g.count >= 2)
-        .sort((a,b) => b.avg_pct - a.avg_pct);
-    
-    const maxAbsAll = Math.max(Math.abs(allGroups[0]?.avg_pct || 0), Math.abs(allGroups[allGroups.length-1]?.avg_pct || 0), 0.5);
-    
-    allHeat.innerHTML = allGroups.map(g => {
-        const pct = g.avg_pct;
-        const width = maxAbsAll > 0 ? (Math.abs(pct) / maxAbsAll * 100) : 0;
-        let cls = pct > 2 ? 'hot' : pct > 0 ? 'warm' : pct > -1 ? 'cool' : 'cold';
-        return `<div class="heat-row">
-            <div class="heat-label">${g.group}</div>
-            <div class="heat-bar-wrap">
-                <div class="heat-bar ${cls}" style="width:${width}%"></div>
-                <div class="heat-value">${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</div>
-            </div>
-            <div class="heat-pct">${g.count}只</div>
-        </div>`;
+    tbody.innerHTML = filtered.map((s, i) => {
+        const score = s.score || 0;
+        const scoreW = (score / maxScore * 100);
+        const scoreColor = score >= 70 ? '#b71c1c' : 
+            score >= 55 ? '#c62828' : score >= 40 ? '#e65100' : 
+            score >= 25 ? '#2e7d32' : '#1b5e20';
+        const scoreTextColor = score >= 40 ? '#ff9800' : '#66bb6a';
+        
+        const d1Cls = s.d1 >= 0 ? 'ret-up' : 'ret-down';
+        const d5Cls = s.d5 >= 0 ? 'ret-up' : 'ret-down';
+        const volCls = s.vol_r >= 1.5 ? 'ret-up' : (s.vol_r < 0.8 ? 'ret-down' : '');
+        const isCrowded = s.crowded;
+        
+        return `<tr ${isCrowded ? 'title="⚠️ 拥挤预警"' : ''}>
+            <td style="color:#8b949e;text-align:right;">${i+1}</td>
+            <td style="font-weight:500;color:#c9d1d9;">${s.name}${isCrowded ? ' ⚡' : ''}</td>
+            <td><span class="theme-cat-tag">${s.category || '?'}</span></td>
+            <td>
+                <div class="theme-heat-cell">
+                    <div class="theme-heat-fill" style="width:${scoreW}%;background:${scoreColor};"></div>
+                    <div class="theme-heat-text" style="color:${scoreTextColor};">${score.toFixed(0)}分</div>
+                </div>
+            </td>
+            <td class="${d1Cls}" style="font-weight:600;text-align:right;">${s.d1 >= 0 ? '+' : ''}${s.d1.toFixed(1)}%</td>
+            <td class="${d5Cls}" style="font-weight:600;text-align:right;">${s.d5 >= 0 ? '+' : ''}${s.d5.toFixed(1)}%</td>
+            <td style="text-align:right;${s.vol_r >= 1.5 ? 'color:#f85149;font-weight:600;' : 'color:#8b949e;'}">${s.vol_r != null ? s.vol_r.toFixed(1) + 'x' : '-'}</td>
+            <td style="color:#8b949e;text-align:right;">${s.stocks}</td>
+        </tr>`;
     }).join('');
 }
 
@@ -1169,49 +1380,64 @@ async function loadPortfolio() {
 // ===== 异动 Tab (Trending-China data) =====
 async function loadAnomalies() {
     try {
-        const sd = await loadJSON('/daily-signal/data/signals-daily.json');
-        document.getElementById('anomalyDate').textContent = sd.date || '';
+        const sd = await loadJSON('data/signals-daily.json');
+        document.getElementById('anomalyDate').textContent = sd.date ? '· ' + sd.date : '';
         
         // Stats
-        const stats = sd.stats || {};
+        const sgolden = sd.golden?.length || 0;
+        const sdeath = sd.death?.length || 0;
+        const sb1 = sd.b1?.length || 0;
+        const sb2 = sd.b2?.length || 0;
+        const sb3 = sd.b3?.length || 0;
+        const swash = sd.washout?.length || 0;
         document.getElementById('anomalyStats').innerHTML = [
-            {v:stats.golden||0,l:'金叉',c:'#f85149'},
-            {v:stats.death||0,l:'死叉',c:'#3fb950'},
-            {v:stats.b1||0,l:'B1',c:'#d29922'},
-            {v:stats.b2||0,l:'B2',c:'#58a6ff'},
-            {v:stats.b3||0,l:'B3',c:'#a371f7'},
-            {v:stats.wash||0,l:'洗盘',c:'#8b949e'},
+            {v:sgolden,l:'金叉',c:'#f85149'},
+            {v:sdeath,l:'死叉',c:'#3fb950'},
+            {v:sb1,l:'B1',c:'#d29922'},
+            {v:sb2,l:'B2',c:'#58a6ff'},
+            {v:sb3,l:'B3',c:'#a371f7'},
+            {v:swash,l:'洗盘',c:'#8b949e'},
         ].map(s=>`<div class="stat-card"><div class="stat-icon">📊</div><div class="stat-info"><div class="stat-value" style="color:${s.c}">${s.v}</div><div class="stat-label">${s.l}</div></div></div>`).join('');
         
         // Golden crosses
         const golden = sd.golden || [];
         document.getElementById('goldenCount').textContent = `(${golden.length}个)`;
         document.getElementById('goldenList').innerHTML = golden.length ? golden.map(s =>
-            `<div class="anomaly-row"><span class="ticker-tag">${s.ticker||''} ${s.name||''}</span><span class="anomaly-dir">${s.direction||''}</span><span style="font-size:11px;color:#8b949e;">${s.date||''}</span><span style="font-size:11px;color:#f85149;">${s.white!=null?`白${s.white.toFixed(1)}`:''} ${s.yellow!=null?`黄${s.yellow.toFixed(1)}`:''}</span></div>`
+            `<div class="anomaly-row"><span class="ticker-tag">${s[0]||''} ${s[1]||''}</span><span class="anomaly-dir">${s[2]||''}</span><span style="font-size:11px;color:#8b949e;">${s[4]||''}</span><span style="font-size:11px;color:#f85149;">${s[5]!=null?`白${s[5].toFixed(1)}`:''} ${s[6]!=null?`黄${s[6].toFixed(1)}`:''}</span></div>`
         ).join('') : '<div class="empty">无金叉信号</div>';
         
         // Death crosses
         const death = sd.death || [];
         document.getElementById('deathCount').textContent = `(${death.length}个)`;
         document.getElementById('deathList').innerHTML = death.length ? death.map(s =>
-            `<div class="anomaly-row"><span class="ticker-tag">${s.ticker||''} ${s.name||''}</span><span class="anomaly-dir">${s.direction||''}</span><span style="font-size:11px;color:#8b949e;">${s.date||''}</span></div>`
+            `<div class="anomaly-row"><span class="ticker-tag">${s[0]||''} ${s[1]||''}</span><span class="anomaly-dir">${s[2]||''}</span><span style="font-size:11px;color:#8b949e;">${s[4]||''}</span></div>`
         ).join('') : '<div class="empty">无死叉信号</div>';
         
         // B1 signals
         const b1 = sd.b1 || [];
         document.getElementById('b1Count').textContent = `(${b1.length}个)`;
-        document.getElementById('b1List').innerHTML = b1.length ? b1.map(s =>
-            `<div class="anomaly-row"><span class="ticker-tag">${s.ticker||''} ${s.name||''}</span><span class="anomaly-dir">${s.direction||''}</span><span style="font-size:11px;color:#8b949e;">${s.date||''}</span><span style="font-size:11px;color:#d29922;">J=${s.j!=null?s.j.toFixed(1):'?'}</span></div>`
-        ).join('') : '<div class="empty">无B1信号</div>';
+        document.getElementById('b1List').innerHTML = b1.length ? b1.map(s => {
+            const code = s[0]||'', name = s[1]||'', dir = s[2]||'', date = s[4]||'', price = s[5], jval = s[6];
+            return `<div class="anomaly-row"><span class="ticker-tag">${code} ${name}</span><span class="anomaly-dir">${dir}</span><span style="font-size:11px;color:#8b949e;">${date}</span><span style="font-size:11px;color:#d29922;">J=${jval!=null?jval.toFixed(1):'?'}</span></div>`;
+        }).join('') : '<div class="empty">无B1信号</div>';
         
         // B2/B3
         const b2 = sd.b2 || [];
         const b3 = sd.b3 || [];
-        const b2b3 = [...b2.map(s=>({...s,type:'B2'})), ...b3.map(s=>({...s,type:'B3'}))];
+        const b2b3 = [...b2.map(s=>({data:s,type:'B2'})), ...b3.map(s=>({data:s,type:'B3'}))];
         document.getElementById('b2b3Count').textContent = `(B2:${b2.length} B3:${b3.length})`;
-        document.getElementById('b2b3List').innerHTML = b2b3.length ? b2b3.map(s =>
-            `<div class="anomaly-row"><span class="badge" style="background:${s.type==='B2'?'rgba(88,166,255,0.15)':'rgba(163,113,247,0.15)'};color:${s.type==='B2'?'#58a6ff':'#a371f7'};font-size:10px;margin-right:6px;">${s.type}</span><span class="ticker-tag">${s.ticker||''} ${s.name||''}</span><span class="anomaly-dir">${s.direction||''}</span><span style="font-size:11px;color:#8b949e;">${s.date||''}</span></div>`
-        ).join('') : '<div class="empty">无B2/B3信号</div>';
+        document.getElementById('b2b3List').innerHTML = b2b3.length ? b2b3.map(s => {
+            const code = s.data[0]||'', name = s.data[1]||'', dir = s.data[2]||'', date = s.data[4]||'';
+            return `<div class="anomaly-row"><span class="badge" style="background:${s.type==='B2'?'rgba(88,166,255,0.15)':'rgba(163,113,247,0.15)'};color:${s.type==='B2'?'#58a6ff':'#a371f7'};font-size:10px;margin-right:6px;">${s.type}</span><span class="ticker-tag">${code} ${name}</span><span class="anomaly-dir">${dir}</span><span style="font-size:11px;color:#8b949e;">${date}</span></div>`;
+        }).join('') : '<div class="empty">无B2/B3信号</div>';
+        
+        // Washout signals
+        const washout = sd.washout || [];
+        document.getElementById('washCount').textContent = `(${washout.length}个)`;
+        document.getElementById('washList').innerHTML = washout.length ? washout.map(s => {
+            const code = s[0]||'', name = s[1]||'', dir = s[2]||'', date = s[4]||'', price = s[5], pct = s[6], vol = s[7];
+            return `<div class="wash-row"><span class="ticker-tag">${code} ${name}</span><span class="anomaly-dir">${dir}</span><span class="wash-pct down">${pct!=null?(pct>=0?'+':'')+pct.toFixed(1)+'%':''}</span><span style="font-size:11px;color:#8b949e;">量${vol!=null?vol.toFixed(1):'?'}${s[8]!=null?'/'+s[8].toFixed(1)+'x':''}</span><span style="font-size:10px;color:#484f58;">${date}</span></div>`;
+        }).join('') : '<div class="empty">无洗盘信号</div>';
         
         // Money flow
         const flows = sd.flows || {};
@@ -1219,12 +1445,105 @@ async function loadAnomalies() {
         document.getElementById('flowList').innerHTML = flowEntries.length ? 
             `<div style="display:flex;flex-wrap:wrap;gap:8px;">${flowEntries.map(([dir,v]) => {
                 const isIn = v > 0;
-                return `<div class="flow-chip" style="border-left:3px solid ${isIn?'#f85149':'#3fb950'};background:#161b22;border-radius:6px;padding:8px 12px;font-size:12px;"><span style="color:#c9d1d9;">${dir}</span> <span style="color:${isIn?'#f85149':'#3fb950'};font-weight:600;">${isIn?'+':''}${(v/1e8).toFixed(1)}亿</span></div>`;
+                return `<div class="flow-chip" style="border-left:3px solid ${isIn?'#f85149':'#3fb950'};background:#161b22;"><span style="color:#c9d1d9;">${dir}</span> <span style="color:${isIn?'#f85149':'#3fb950'};font-weight:600;">${isIn?'+':''}${(v/1e8).toFixed(1)}亿</span></div>`;
             }).join('')}</div>`
             : '<div class="empty">无资金流数据</div>';
+        
+        // Direction rotation tracking
+        renderRotation();
     } catch(e) {
         console.error('Anomalies load error:', e);
     }
+}
+
+function renderRotation() {
+    const container = document.getElementById('rotationList');
+    if (!window.themeData?.scores?.length) {
+        container.innerHTML = '<div class="empty">无轮动数据</div>';
+        return;
+    }
+    
+    const scores = window.themeData.scores;
+    // Show top and bottom themes for rotation view
+    const top10 = [...scores].sort((a,b) => b.score - a.score).slice(0, 15);
+    const bottom10 = [...scores].sort((a,b) => a.score - b.score).slice(0, 10);
+    
+    // Aggregate by category
+    const catMap = {};
+    scores.forEach(s => {
+        const cat = s.category || '其他';
+        if (!catMap[cat]) catMap[cat] = { count: 0, totalScore: 0, totalD1: 0, totalD5: 0, totalVol: 0 };
+        catMap[cat].count++;
+        catMap[cat].totalScore += s.score;
+        catMap[cat].totalD1 += s.d1;
+        catMap[cat].totalD5 += s.d5;
+        catMap[cat].totalVol += s.vol_r;
+    });
+    
+    const catList = Object.entries(catMap).map(([cat, d]) => ({
+        cat, 
+        avgScore: d.totalScore / d.count,
+        avgD1: d.totalD1 / d.count,
+        avgD5: d.totalD5 / d.count,
+        avgVol: d.totalVol / d.count,
+        count: d.count
+    })).sort((a,b) => b.avgScore - a.avgScore);
+    
+    const maxCatScore = Math.max(...catList.map(c => Math.abs(c.avgScore)), 1);
+    
+    container.innerHTML = `
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div>
+                <div class="section-title" style="font-size:12px;">🔥 最强方向</div>
+                <table class="rotation-table">
+                    <tr><th>方向</th><th>均分</th><th>日涨跌</th><th>5日涨跌</th><th>量比</th><th>组数</th></tr>
+                    ${catList.slice(0,8).map(c => `
+                        <tr>
+                            <td style="font-weight:500;">${c.cat}</td>
+                            <td><span style="display:inline-block;width:${Math.abs(c.avgScore)/maxCatScore*60}px;height:14px;border-radius:3px;background:${c.avgScore>=40?'#b71c1c':c.avgScore>=25?'#e65100':'#2e7d32'};vertical-align:middle;margin-right:4px;"></span>${c.avgScore.toFixed(0)}</td>
+                            <td class="${c.avgD1>=0?'ret-up':'ret-down'}">${c.avgD1>=0?'+':''}${c.avgD1.toFixed(1)}%</td>
+                            <td class="${c.avgD5>=0?'ret-up':'ret-down'}">${c.avgD5>=0?'+':''}${c.avgD5.toFixed(1)}%</td>
+                            <td style="color:#8b949e;">${c.avgVol.toFixed(1)}x</td>
+                            <td style="color:#8b949e;">${c.count}组</td>
+                        </tr>
+                    `).join('')}
+                </table>
+            </div>
+            <div>
+                <div class="section-title" style="font-size:12px;">❄️ 最弱方向</div>
+                <table class="rotation-table">
+                    <tr><th>方向</th><th>均分</th><th>日涨跌</th><th>5日涨跌</th><th>量比</th><th>组数</th></tr>
+                    ${catList.slice(-8).reverse().map(c => `
+                        <tr>
+                            <td style="font-weight:500;">${c.cat}</td>
+                            <td><span style="display:inline-block;width:${Math.abs(c.avgScore)/maxCatScore*60}px;height:14px;border-radius:3px;background:${c.avgScore>=40?'#b71c1c':c.avgScore>=25?'#e65100':'#1b5e20'};vertical-align:middle;margin-right:4px;"></span>${c.avgScore.toFixed(0)}</td>
+                            <td class="${c.avgD1>=0?'ret-up':'ret-down'}">${c.avgD1>=0?'+':''}${c.avgD1.toFixed(1)}%</td>
+                            <td class="${c.avgD5>=0?'ret-up':'ret-down'}">${c.avgD5>=0?'+':''}${c.avgD5.toFixed(1)}%</td>
+                            <td style="color:#8b949e;">${c.avgVol.toFixed(1)}x</td>
+                            <td style="color:#8b949e;">${c.count}组</td>
+                        </tr>
+                    `).join('')}
+                </table>
+            </div>
+        </div>
+        <div style="margin-top:12px;">
+            <div class="section-title" style="font-size:12px;">📈 轮动热力 — Top/Bottom 主题得分</div>
+            <div class="heat-list">
+                ${[...scores].sort((a,b) => b.score - a.score).slice(0,15).map(s => {
+                    const w = Math.min(100, s.score / 100 * 100);
+                    const c = s.score >= 70 ? '#f85149' : s.score >= 55 ? '#ff6659' : s.score >= 40 ? '#ff9800' : s.score >= 25 ? '#66bb6a' : '#4caf50';
+                    return `<div class="heat-row">
+                        <div class="heat-label" style="width:100px;">${s.name}</div>
+                        <div class="heat-bar-wrap">
+                            <div class="heat-bar" style="width:${w}%;background:${c};"></div>
+                            <div class="heat-value">${s.score.toFixed(0)}分</div>
+                        </div>
+                        <div class="heat-pct">${s.category||'?'}</div>
+                    </div>`;
+                }).join('')}
+            </div>
+        </div>
+    `;
 }
 
 // ===== Portfolio Tab =====
