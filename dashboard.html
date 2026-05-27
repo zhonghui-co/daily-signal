@@ -440,6 +440,7 @@ a:hover { text-decoration:underline; }
     <button class="nav-tab" data-tab="health">🏥 监控</button>
     <button class="nav-tab" data-tab="attrib">📈 归因</button>
     <button class="nav-tab" data-tab="chains">🔗 双链</button>
+    <button class="nav-tab" data-tab="trends">📈 趋势</button>
     <button class="nav-tab" data-tab="anomalies">📡 异动</button>
 </div>
 
@@ -617,6 +618,16 @@ a:hover { text-decoration:underline; }
     </div>
 </div>
 
+
+<!-- Tab: 趋势 -->
+<div class="tab-content" id="tab-trends">
+    <div class="section">
+        <div class="section-title">📈 方向趋势判断 <span id="trendDate" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+        <div style="font-size:11px;color:#8b949e;margin-bottom:12px;">基于各方向金叉/死叉数量聚合，金叉多=上涨趋势，死叉多=下跌趋势</div>
+    </div>
+    <div id="trendList"></div>
+</div>
+
 <!-- Tab: 异动 -->
 <div class="tab-content" id="tab-anomalies">
     <div class="section">
@@ -699,6 +710,7 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
         }
         if (tab.dataset.tab === 'anomalies') {
             loadAnomalies();
+    loadTrends();
     loadWeeklyB1();
         }
     });
@@ -1883,6 +1895,66 @@ async function loadWeeklyB1() {
             </div>`
         ).join('') : '<div class="empty">无周B1信号</div>';
     } catch(e) { console.log('Weekly B1 load err:', e); }
+}
+
+
+// ===== 趋势 Tab =====
+async function loadTrends() {
+    try {
+        const sd = await loadJSON('/daily-signal/data/signals-daily.json');
+        document.getElementById('trendDate').textContent = sd.date || '';
+        
+        // Aggregate golden/death crosses by direction
+        const dirMap = {};
+        const processSignals = (arr, type) => {
+            (arr||[]).forEach(s => {
+                const dir = s.ff || s.direction || s[2] || '其他';
+                if (!dirMap[dir]) dirMap[dir] = {name:dir, golden:0, death:0, latest_golden:'', latest_death:'', total:0};
+                dirMap[dir][type]++;
+                if (s.date || s[4]) dirMap[dir][`latest_${type}`] = s.date || s[4];
+                dirMap[dir].total++;
+            });
+        };
+        processSignals(sd.golden, 'golden');
+        processSignals(sd.death, 'death');
+        
+        // Also count from flows if available
+        const flows = sd.flows || {};
+        
+        const dirs = Object.values(dirMap).map(d => {
+            const net = d.golden - d.death;
+            let trend, color, barColor;
+            if (net > 5) { trend = '⬆ 上涨趋势'; color = '#f85149'; barColor = 'linear-gradient(90deg,#da3633,#f85149)'; }
+            else if (net < -3) { trend = '⬇ 下跌趋势'; color = '#3fb950'; barColor = 'linear-gradient(90deg,#3fb950,#2ea043)'; }
+            else if (net >= 0) { trend = '→ 偏多震荡'; color = '#d29922'; barColor = 'linear-gradient(90deg,#d29922,#ff8c00)'; }
+            else { trend = '→ 偏空震荡'; color = '#8b949e'; barColor = 'linear-gradient(90deg,#8b949e,#6e7681)'; }
+            
+            const flowVal = flows[d.name];
+            const flowStr = flowVal ? ` | 资金 ${flowVal>0?'+':''}${(flowVal/1e8).toFixed(1)}亿` : '';
+            
+            // Bar width based on net score
+            const maxAbs = Math.max(...Object.values(dirMap).map(x => Math.abs(x.golden - x.death)), 10);
+            const barPct = Math.abs(net) / maxAbs * 100;
+            
+            return {name:d.name, golden:d.golden, death:d.death, net, trend, color, barColor, barPct, flowStr, total:d.total};
+        });
+        
+        // Sort by net score descending
+        dirs.sort((a,b) => b.net - a.net);
+        
+        document.getElementById('trendList').innerHTML = dirs.map(d => `
+            <div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:#161b22;border-radius:8px;margin-bottom:6px;border-left:3px solid ${d.color};">
+                <span style="font-weight:600;color:#e6edf3;min-width:120px;font-size:13px;">${d.name}</span>
+                <span style="font-weight:bold;font-size:13px;min-width:100px;color:${d.color};">${d.trend}</span>
+                <div style="flex:1;height:18px;background:#21262d;border-radius:4px;overflow:hidden;min-width:60px;">
+                    <div style="height:100%;width:${d.barPct}%;background:${d.barColor};border-radius:4px;transition:width 0.3s;"></div>
+                </div>
+                <span style="font-size:11px;color:#f85149;min-width:50px;text-align:center;">🟢${d.golden}金叉</span>
+                <span style="font-size:11px;color:#3fb950;min-width:50px;text-align:center;">🔴${d.death}死叉</span>
+                <span style="font-size:10px;color:#8b949e;min-width:100px;text-align:right;">净${d.net>0?'+':''}${d.net}${d.flowStr}</span>
+            </div>
+        `).join('') || '<div class="empty">无趋势数据</div>';
+    } catch(e) { console.log('Trends load err:', e); }
 }
 
 // ===== Start =====
