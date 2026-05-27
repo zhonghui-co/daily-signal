@@ -6514,7 +6514,7 @@ fetch('/daily-signal/data/signals-daily.json')
     let h = '';
     if (d.golden && d.golden.length) {
         h += '<h3>🥇 金叉 (近20日 ' + d.golden.length + '只)</h3><table><tr><th>代码</th><th>名称</th><th>方向</th><th>日期</th><th>金叉价</th><th>白线</th><th>黄线</th></tr>';
-        d.golden.slice(0,20).forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td>' + s[5] + '</td><td>' + s[6] + '</td><td>' + s[7] + '</td></tr>'; });
+        d.golden.forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td>' + s[5] + '</td><td>' + s[6] + '</td><td>' + s[7] + '</td></tr>'; });
         h += '</table>';
     }
     if (d.b2 && d.b2.length) {
@@ -6524,12 +6524,12 @@ fetch('/daily-signal/data/signals-daily.json')
     }
     if (d.b1 && d.b1.length) {
         h += '<h3>📍 B1超卖 (J<13 白黄区间 ' + d.b1.length + '只)</h3><table><tr><th>代码</th><th>名称</th><th>方向</th><th>日期</th><th>收盘</th><th>J值</th><th>质量</th></tr>';
-        d.b1.slice(0,20).forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td>' + s[5] + '</td><td>' + s[6] + '</td><td>' + '⭐'.repeat(s[9]||0) + '</td></tr>'; });
+        d.b1.forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td>' + s[5] + '</td><td>' + s[6] + '</td><td>' + '⭐'.repeat(s[9]||0) + '</td></tr>'; });
         h += '</table>';
     }
     if (d.death && d.death.length) {
         h += '<h3>⚠️ 死叉预警 (近20日 ' + d.death.length + '只)</h3><table><tr><th>代码</th><th>名称</th><th>方向</th><th>日期</th><th>收盘</th></tr>';
-        d.death.slice(0,10).forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td>' + s[5] + '</td></tr>'; });
+        d.death.forEach(s => { h += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td>' + (s[2]||'') + '</td><td>' + s[4] + '</td><td>' + s[5] + '</td></tr>'; });
         h += '</table>';
     }
     if (d.flows && Object.keys(d.flows).length) {
