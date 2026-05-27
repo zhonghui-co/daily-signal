@@ -3,40 +3,67 @@
   "chains": {
     "chain1": {
       "name": "国产替代链",
-      "description": "从无到有，设备/材料/制造/封测/EDA/IP",
+      "description": "半导体设备→材料→EDA→制造→封测→核心IP. 从无到有.",
       "links": [
-        {"name": "刻蚀设备", "status": "业绩驱动", "level": "走出来", "self_rate": "~23%", "tickers": ["002371","688012"], "note": "中微进台积电5nm"},
-        {"name": "薄膜沉积", "status": "业绩驱动", "level": "走出来", "self_rate": "~15%", "tickers": ["688072"], "note": "PECVD销量+33%"},
-        {"name": "CMP设备", "status": "业绩驱动", "level": "走出来", "self_rate": "~40%", "tickers": ["688120"], "note": "华海清科国产化率近40%"},
-        {"name": "靶材", "status": "业绩驱动", "level": "走出来", "self_rate": "~22%", "tickers": ["300666"], "note": "江丰电子全球第二"},
-        {"name": "ArF光刻胶", "status": "炒预期", "level": "临界点", "self_rate": "<5%", "tickers": ["300346","603650"], "note": "等待批量订单公告"},
-        {"name": "KrF树脂", "status": "炒预期", "level": "临界点", "self_rate": "刚突破", "tickers": ["688727"], "note": "AI攻克稳定制备"},
-        {"name": "混合键合设备", "status": "炒预期", "level": "临界点", "self_rate": "研发中", "tickers": ["688072"], "note": "拓荆布局中"},
-        {"name": "HBM", "status": "致命短板", "level": "空白", "self_rate": "送样", "tickers": [], "note": "长鑫HBM2送样，差3代"},
-        {"name": "EUV光刻机", "status": "致命短板", "level": "空白", "self_rate": "0", "tickers": [], "note": "完全空白"},
-        {"name": "EDA全流程", "status": "致命短板", "level": "空白", "self_rate": "<15%", "tickers": ["301269"], "note": "数字全流程缺失"}
+        {"name":"光刻机 DUV","self_rate":"<5%","status":"炒预期","note":"上海微电子28nm中标1.1亿.2026-2027目标50-100台/年","missing":"EUV=0%.良率和稳定性待验证","tickers":[]},
+        {"name":"光刻机 EUV","self_rate":"0%","status":"致命短板","note":"完全空白.计划2026试产","missing":"全球仅ASML能做","tickers":[]},
+        {"name":"刻蚀 CCP","self_rate":"~20%","status":"业绩驱动","note":"中微进台积电5nm产线.北方14nm全覆盖","missing":"ICP高端仍由Lam/TEL主导.全球份额中微+北方仅~2.6%","tickers":["688012","002371"]},
+        {"name":"薄膜沉积 PECVD","self_rate":"<20%","status":"业绩驱动","note":"拓荆在手订单饱满.PECVD销量+33%","missing":"PVD被AMAT垄断85%.ALD被TEL+ASM垄断60%","tickers":["688072","002371"]},
+        {"name":"清洗设备","self_rate":"~20%","status":"业绩驱动","note":"盛美国内份额55-60%.定增44.82亿扩产","missing":"全球迪恩士主导.高端单晶圆清洗待突破","tickers":["688082"]},
+        {"name":"检测/量测","self_rate":"<10%","status":"炒预期","note":"中科飞测国内份额58.4%.2025发布首台国产CD-SEM","missing":"KLA垄断>70%.关键尺寸/缺陷检测差距大","tickers":["688361"]},
+        {"name":"离子注入","self_rate":"~10%","status":"炒预期","note":"凯世通交付>40台客户12+家.CIS注入机首台验收","missing":"全球AMAT/Axcelis CR3>80%.高能还在验证","tickers":["002058"]},
+        {"name":"CMP抛光","self_rate":"~40%","status":"业绩驱动","note":"华海清科成熟制程市占率第一.客服锁定产能","missing":"7nm以下CMP仍依赖AMAT","tickers":["688120"]},
+        {"name":"涂胶显影","self_rate":"<10%","status":"炒预期","note":"芯源微国内唯一量产.前道国产化率<10%","missing":"日系TEL垄断>90%.联机验证难度极高","tickers":["688037"]},
+        {"name":"大硅片300mm","self_rate":"~12%","status":"炒预期","note":"沪硅2025营收37亿.300mm产销跃升","missing":"全球前五垄断92%.沪硅仍亏损4.83亿","tickers":["688126"]},
+        {"name":"光刻胶 g/i线","self_rate":"~25%","status":"业绩驱动","note":"已批量供货.技术成熟","missing":"日本垄断高端品类","tickers":["603650","300655"]},
+        {"name":"光刻胶 KrF","self_rate":"~3%","status":"业绩驱动","note":"彤程通过中芯/华虹/长存认证并批量.H1收入+50%","missing":"日系垄断>90%","tickers":["603650"]},
+        {"name":"光刻胶 ArF","self_rate":"<1%","status":"炒预期","note":"南大3款通过验证少量销售.等待批量订单公告→临界点🔥","missing":"ArF浸没式仍空白.量产后客户导入慢","tickers":["300346","603650"]},
+        {"name":"光刻胶 EUV","self_rate":"0%","status":"致命短板","note":"尚处研发期.无国产产品","missing":"全球仅日本能做","tickers":[]},
+        {"name":"光刻胶树脂","self_rate":"<10%","status":"炒预期","note":"KrF树脂AI攻克稳定制备.恒坤适配完成→临界点🔥","missing":"ArF/EUV树脂仍进口.日企三井化学垄断","tickers":["688727","601208"]},
+        {"name":"光刻胶 PAG","self_rate":"<10%","status":"致命短板","note":"南大自主研发氟代芳烃PAG.量子产率0.8","missing":"JSR/TOK垄断.国内几乎为零","tickers":["300346","300429"]},
+        {"name":"光刻胶单体","self_rate":"<10%","status":"炒预期","note":"徐州博康单体80+款","missing":"品类不全.高端定制仍依赖进口","tickers":["605589"]},
+        {"name":"电子特气","self_rate":"~30%","status":"业绩驱动","note":"华特攻克正硅酸乙酯纯化","missing":"高端品种仅30%.品类数差距大","tickers":["688268","002409"]},
+        {"name":"CMP抛光液","self_rate":"~40%","status":"业绩驱动","note":"安集全球10%.铜抛光液国内>40%","missing":"氧化铈磨料等原料待提升","tickers":["688019"]},
+        {"name":"CMP抛光垫","self_rate":"~30%","status":"业绩驱动","note":"鼎龙全品类覆盖.市占率近30%","missing":"与陶氏杜邦差距仍有","tickers":["300054"]},
+        {"name":"靶材","self_rate":"~22%","status":"业绩驱动","note":"江丰全球第二22%.进台积电/SK海力士","missing":"7nm以下仍被日矿金属主导","tickers":["300666"]},
+        {"name":"前驱体","self_rate":"~20%","status":"业绩驱动","note":"雅克21亿.HBM配套翻倍增长.毛利44.8%","missing":"上游部分依赖韩国UP Chemical","tickers":["002409","300346"]},
+        {"name":"EDA工具","self_rate":"~15%","status":"炒预期","note":"华大九天支持5nm.28nm签核覆盖率60-70%","missing":"数字全流程缺口大.三巨头产品线完整度98%","tickers":["301269"]},
+        {"name":"中芯国际-先进制程","self_rate":"14nm量产.7nm N+2量产","status":"业绩驱动","note":"14nm良率>95%.N+2良率85%.12英寸4.5万片/月","missing":"EUV禁运限制5nm以下","tickers":["688981"]},
+        {"name":"长鑫存储 DRAM","self_rate":"1X/1Y量产","status":"业绩驱动","note":"Q1营收508亿+719%.月产能12万片.IPO募295亿","missing":"HBM2刚送样.差三星/SK海力士2代","tickers":[]},
+        {"name":"长江存储 NAND","self_rate":"270层 Xtacking4.0","status":"业绩驱动","note":"全球13%.月产能20万片.三期2026H2量产30万片","missing":"层数距三星/海力士仍有差距","tickers":[]},
+        {"name":"先进封装-长电","self_rate":"全球第三","status":"业绩驱动","note":"WLP/2.5D/3D/SiP全技术.2026固投100亿","missing":"Chiplet/HBM落后台积电CoWoS","tickers":["600584"]},
+        {"name":"先进封装-通富","self_rate":"国内第二","status":"业绩驱动","note":"FCBGA量产.CPO研发.2025净利+700%至11.8亿","missing":"绑定AMD.自主客户偏少","tickers":["002156"]},
+        {"name":"先进封装-华天","self_rate":"国内第三","status":"炒预期","note":"承接长存3D NAND.相关收入+50%","missing":"2.5D/3D刚通线.比长电/通富慢","tickers":["002185"]},
+        {"name":"CPU-海光","self_rate":"x86兼容.7nm","status":"业绩驱动","note":"国内x86服务器CPU最高.Q1营收40.34亿","missing":"依赖AMD授权.架构更新受限","tickers":["688041"]},
+        {"name":"AI芯片-寒武纪","self_rate":"思元590 256TFLOPS","status":"业绩驱动","note":"2025全年盈利.Q1营收28.85亿","missing":"生态碎片化.MagicMind软件栈","tickers":["688256"]}
       ]
     },
     "chain2": {
       "name": "AI算力链",
-      "description": "需求拉动的新增量，PCB/CCL/光模块/MLCC/铜箔",
+      "description": "算力芯片→PCB→光模块→MLCC→铜箔→散热. 需求拉动新增量.",
       "links": [
-        {"name": "800G/1.6T光模块", "status": "业绩驱动", "level": "走出来", "tickers": ["300308","300502"], "note": "中际+新易盛全球份额>60%"},
-        {"name": "AI服务器PCB", "status": "业绩驱动", "level": "走出来", "tickers": ["002463","300476"], "note": "沪电英伟达60%份额"},
-        {"name": "AI覆铜板CCL", "status": "业绩驱动", "level": "走出来", "tickers": ["600183"], "note": "生益净利33亿"},
-        {"name": "MLCC", "status": "业绩驱动", "level": "临界点", "self_rate": "刚启动", "tickers": ["000636"], "note": "AI服务器用量10x"},
-        {"name": "铜箔", "status": "业绩驱动", "level": "临界点", "tickers": ["301511","688388"], "note": "涨价60%+，订单到2027"},
-        {"name": "电子布", "status": "业绩驱动", "level": "临界点", "tickers": ["600176"], "note": "涨幅滞后宏和"},
-        {"name": "ABF载板", "status": "致命短板", "level": "空白", "self_rate": "<5%", "tickers": ["002436"], "note": "95%味之素垄断"},
-        {"name": "CPO", "status": "炒预期", "level": "临界点", "tickers": [], "note": "还需1-2年"}
+        {"name":"800G/1.6T光模块","self_rate":"全球>60%","status":"业绩驱动","note":"中际+新易盛全球主导.净利均超80亿/年","missing":"光芯片/电芯片仍依赖进口","tickers":["300308","300502"]},
+        {"name":"光芯片/电芯片","self_rate":"<20%","status":"炒预期","note":"源杰+1075%.仕佳+707%.光芯片国产替代加速","missing":"100G EML/VCSEL仍依赖Broadcom/Lumentum","tickers":[]},
+        {"name":"AI服务器PCB","self_rate":"全球领先","status":"业绩驱动","note":"沪电独占英伟达60%.胜宏净利+273%.PCB涨价60%+","missing":"上游CCL/铜箔供不应求","tickers":["002463","300476","002938"]},
+        {"name":"CCL覆铜板","self_rate":"全球领先","status":"业绩驱动","note":"生益净利33亿+205%.南亚+723%.华正扭亏","missing":"高端M8/M9级别材料仍被松下/日立主导","tickers":["600183","688519","603186"]},
+        {"name":"ABF载板","self_rate":"<5%","status":"致命短板","note":"兴森国内唯一量产.仍亏损.ABF膜95%被味之素垄断","missing":"薄膜国产化=0.产能距Ibiden/Shinko大","tickers":["002436","002916"]},
+        {"name":"铜箔 HVLP","self_rate":"国产化加速","status":"业绩驱动","note":"德福Q1+2000%.铜冠涨价60%+.订单排到2027","missing":"极低轮廓铜箔与日本三井/古河仍有距离","tickers":["301511","301217","688388"]},
+        {"name":"电子布","self_rate":"全球主导","status":"业绩驱动","note":"宏和+333%.中国巨石全球玻纤龙头.补涨中","missing":"超薄电子布（<5μm）国内刚起步","tickers":["603256","600176"]},
+        {"name":"MLCC电容","self_rate":"~15%","status":"业绩驱动","note":"风华+90%.三环+95%.AI服务器用量10x","missing":"高端MLCC仍被村田/三星主导","tickers":["000636","300408","301566"]},
+        {"name":"散热/液冷","self_rate":"国内份额提升","status":"业绩驱动","note":"AI服务器功耗暴增.液冷渗透率从10%→40%+","missing":"冷板/浸没方案标准未统一","tickers":[]},
+        {"name":"CPO共封装光学","self_rate":"量产初期","status":"炒预期","note":"长电/中际布局.还需1-2年规模部署","missing":"标准/产业链/可靠性验证未完成","tickers":["600584"]},
+        {"name":"ABF膜","self_rate":"0%","status":"致命短板","note":"95%日本味之素垄断.国内完全空白","missing":"没有任何国产替代方案","tickers":[]},
+        {"name":"HBM高带宽存储","self_rate":"送样阶段","status":"致命短板","note":"长鑫HBM2送样.距SK海力士HBM4差3代","missing":"量产规模和良率完全未知","tickers":[]}
       ]
     }
   },
   "inflection_points": [
-    {"name": "ArF批量订单", "watch_target": "南大光电", "status": "等待中", "impact": "光刻胶从炒预期→业绩", "watch": "公司公告"},
-    {"name": "KrF树脂验证", "watch_target": "恒坤新材", "status": "适配完成", "impact": "光刻胶上游突破", "watch": "上海AI实验室"},
-    {"name": "长鑫IPO", "watch_target": "长鑫科技", "status": "已过会", "impact": "设备封测全线受益", "watch": "上交所"},
-    {"name": "混合键合首台交付", "watch_target": "拓荆科技", "status": "研发中", "impact": "τ定律设备链启动", "watch": "年报/季报"},
-    {"name": "景嘉微信创GPU集采", "watch_target": "景嘉微", "status": "等待中", "impact": "国产GPU从军用到民用", "watch": "政府采购网"}
+    {"name":"南大光电 ArF批量订单","status":"等待中","impact":"ArF光刻胶从炒预期→业绩驱动","watch":"公司公告/季报"},
+    {"name":"恒坤新材 KrF树脂验证","status":"适配完成","impact":"光刻胶上游树脂国产化0→1","watch":"上海AI实验室公告"},
+    {"name":"长鑫科技 IPO挂牌","status":"已过会","impact":"设备/封测全线受益","watch":"上交所公告"},
+    {"name":"拓荆科技 混合键合首台","status":"研发中","impact":"τ定律设备链0→1启动","watch":"年报/季报"},
+    {"name":"景嘉微 信创GPU集采","status":"等待中","impact":"国产GPU从军用→民用放量","watch":"政府采购网"},
+    {"name":"兴森科技 ABF载板盈利","status":"亏损中","impact":"ABF载板从炒预期→业绩","watch":"季报毛利率转正"},
+    {"name":"长鑫 HBM2量产良率达标","status":"送样中","impact":"HBM国产化0→1","watch":"产业新闻/季报"}
   ]
 }
