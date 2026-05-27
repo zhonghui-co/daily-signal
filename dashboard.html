@@ -1918,7 +1918,7 @@ function renderInflectionPoints(points) {
 // ===== 周B1 信号 =====
 async function loadWeeklyB1() {
     try {
-        const wd = await loadJSON('/daily-signal/data/weekly-kdj.json');
+        const wd = await loadJSON('data/weekly-kdj.json');
         document.getElementById('weeklyB1Count').textContent = `(${wd.count||0}只 J<${wd.threshold||15})`;
         const items = wd.items || [];
         document.getElementById('weeklyB1List').innerHTML = items.length ? items.map(s => 
@@ -1997,7 +1997,7 @@ async function loadTrends() {
 
 async function loadWeeklyAlerts() {
     try {
-        const wd = await loadJSON('/daily-signal/data/weekly-kdj.json');
+        const wd = await loadJSON('data/weekly-kdj.json');
         const items = wd.items || [];
         const l1 = items.filter(s => s.J < 15 && s.J >= 0).length;
         const l2 = items.filter(s => s.J < 0).length;
@@ -2024,7 +2024,7 @@ async function loadWeeklyAlerts() {
 // ===== 报警 Tab =====
 async function loadAlerts() {
     try {
-        const wd = await loadJSON('/daily-signal/data/weekly-kdj.json');
+        const wd = await loadJSON('data/weekly-kdj.json');
         document.getElementById('alertDate').textContent = wd.date ? '周截止 ' + wd.date : '';
         const items = wd.items || [];
         
