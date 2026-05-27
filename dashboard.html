@@ -710,8 +710,10 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
         }
         if (tab.dataset.tab === 'anomalies') {
             loadAnomalies();
-    loadTrends();
-    loadWeeklyB1();
+            loadWeeklyB1();
+        }
+        if (tab.dataset.tab === 'trends') {
+            loadTrends();
         }
     });
 });
