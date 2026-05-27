@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🦉 Mimo 投研仪表盘</title>
+<style>
+/* ===== Reset & Base ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif; background:#0d1117; color:#c9d1d9; min-height:100vh; }
+a { color:#58a6ff; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* ===== Header ===== */
+.header { 
+    background:linear-gradient(135deg,#1a1a2e,#16213e);
+    border-bottom:1px solid #30363d; padding:12px 20px;
+    display:flex; align-items:center; justify-content:space-between;
+    position:sticky; top:0; z-index:100; flex-wrap:wrap; gap:10px;
+}
+.header-brand { display:flex; align-items:center; gap:10px; }
+.header-brand h1 { font-size:18px; color:#58a6ff; white-space:nowrap; }
+.header-brand .sub { font-size:10px; color:#8b949e; }
+.header-meta { font-size:11px; color:#484f58; text-align:right; }
+
+/* ===== Nav Tabs ===== */
+.nav-tabs {
+    display:flex; gap:0; background:#161b22; border-bottom:1px solid #30363d;
+    padding:0 16px; overflow-x:auto;
+}
+.nav-tab {
+    padding:10px 18px; border:none; background:none; color:#8b949e;
+    cursor:pointer; font-size:13px; font-weight:500;
+    border-bottom:2px solid transparent; transition:all 0.2s;
+    white-space:nowrap;
+}
+.nav-tab:hover { color:#c9d1d9; background:rgba(88,166,255,0.05); }
+.nav-tab.active { color:#58a6ff; border-bottom-color:#58a6ff; }
+
+/* ===== Main Content ===== */
+.main { max-width:1200px; margin:0 auto; padding:16px 20px 40px; }
+.tab-content { display:none; }
+.tab-content.active { display:block; }
+
+/* ===== Stats Cards ===== */
+.stats-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-bottom:16px; }
+.stat-card {
+    background:#161b22; border:1px solid #30363d; border-radius:10px;
+    padding:14px 16px; display:flex; align-items:center; gap:12px;
+    transition:border-color 0.2s;
+}
+.stat-card:hover { border-color:#58a6ff; }
+.stat-icon { font-size:28px; }
+.stat-info { flex:1; }
+.stat-value { font-size:22px; font-weight:bold; color:#e6edf3; }
+.stat-label { font-size:11px; color:#8b949e; margin-top:2px; }
+.stat-change { font-size:12px; margin-top:4px; }
+.stat-change.up { color:#3fb950; }
+.stat-change.down { color:#f85149; }
+
+/* ===== Section ===== */
+.section { margin-bottom:20px; }
+.section-title {
+    font-size:14px; font-weight:600; color:#c9d1d9;
+    margin-bottom:10px; padding-bottom:6px;
+    border-bottom:1px solid #21262d; display:flex; align-items:center; gap:8px;
+}
+.section-title .badge { font-size:10px; }
+
+/* ===== Heat Bars ===== */
+.heat-list { display:flex; flex-direction:column; gap:6px; }
+.heat-row { display:flex; align-items:center; gap:10px; }
+.heat-label { width:100px; font-size:12px; color:#c9d1d9; text-align:right; flex-shrink:0; }
+.heat-bar-wrap { flex:1; height:18px; background:#21262d; border-radius:4px; overflow:hidden; position:relative; }
+.heat-bar {
+    height:100%; border-radius:4px; transition:width 0.4s ease;
+    display:flex; align-items:center; padding-left:6px;
+}
+.heat-bar.hot { background:linear-gradient(90deg,#da3633,#f85149); }
+.heat-bar.warm { background:linear-gradient(90deg,#d29922,#e3b341); }
+.heat-bar.cool { background:linear-gradient(90deg,#1f6feb,#58a6ff); }
+.heat-bar.cold { background:linear-gradient(90deg,#30363d,#484f58); }
+.heat-value { position:absolute; right:6px; top:0; height:18px; line-height:18px; font-size:10px; color:#e6edf3; font-weight:600; }
+.heat-pct { font-size:10px; color:#8b949e; width:45px; text-align:left; }
+
+/* ===== Alert List ===== */
+.alert-list { display:flex; flex-direction:column; gap:6px; }
+.alert-item {
+    padding:8px 12px; border-radius:6px; font-size:12px; line-height:1.4;
+    border-left:3px solid;
+}
+.alert-fire { background:rgba(218,54,51,0.1); border-color:#f85149; }
+.alert-high { background:rgba(210,153,34,0.1); border-color:#d29922; }
+.alert-info { background:rgba(31,111,235,0.1); border-color:#58a6ff; }
+.alert-date { font-size:10px; color:#484f58; }
+.alert-title { font-weight:600; margin:2px 0; }
+
+/* ===== Signal Cards ===== */
+.signal-card {
+    background:#161b22; border:1px solid #30363d;
+    border-radius:10px; padding:14px; margin-bottom:10px;
+    transition:border-color 0.2s;
+}
+.signal-card:hover { border-color:#58a6ff; }
+.signal-card.fire-card { border-left:3px solid #f85149; }
+.signal-header { display:flex; gap:8px; margin-bottom:6px; flex-wrap:wrap; align-items:center; }
+.signal-title { font-size:14px; font-weight:600; color:#e6edf3; margin-bottom:6px; line-height:1.4; }
+.signal-summary { font-size:12px; color:#8b949e; line-height:1.5; }
+.signal-meta { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; font-size:11px; color:#8b949e; }
+.signal-tickers { display:flex; gap:4px; flex-wrap:wrap; margin-top:6px; }
+.ticker-tag {
+    font-size:10px; background:rgba(31,111,235,0.12); color:#58a6ff;
+    padding:2px 6px; border-radius:3px; border:1px solid rgba(31,111,235,0.25);
+    font-family:monospace;
+}
+
+/* ===== Badges ===== */
+.badge {
+    padding:2px 8px; border-radius:12px; font-size:11px; font-weight:600;
+    white-space:nowrap; display:inline-block;
+}
+.badge-fire { background:rgba(218,54,51,0.15); color:#f85149; border:1px solid rgba(218,54,51,0.3); }
+.badge-normal { background:rgba(139,148,158,0.15); color:#8b949e; border:1px solid rgba(139,148,158,0.3); }
+.badge-chain1 { background:rgba(218,54,51,0.12); color:#f85149; border:1px solid rgba(218,54,51,0.3); }
+.badge-chain2 { background:rgba(31,111,235,0.12); color:#58a6ff; border:1px solid rgba(31,111,235,0.3); }
+.badge-emerging { background:rgba(210,153,34,0.15); color:#d29922; border:1px solid rgba(210,153,34,0.3); }
+.badge-positioning { background:rgba(35,134,54,0.15); color:#3fb950; border:1px solid rgba(35,134,54,0.3); }
+.badge-consensus { background:rgba(139,148,158,0.15); color:#8b949e; border:1px solid rgba(139,148,158,0.3); }
+.badge-exhausted { background:rgba(139,148,158,0.08); color:#484f58; border:1px solid rgba(139,148,158,0.2); }
+.badge-15 { background:rgba(35,134,54,0.12); color:#3fb950; border:1px solid rgba(35,134,54,0.3); font-size:10px; }
+.badge-source { background:rgba(31,111,235,0.15); color:#58a6ff; border:1px solid rgba(31,111,235,0.3); }
+.badge-green { background:rgba(35,134,54,0.15); color:#3fb950; border:1px solid rgba(35,134,54,0.3); }
+.badge-yellow { background:rgba(210,153,34,0.15); color:#d29922; border:1px solid rgba(210,153,34,0.3); }
+.badge-red { background:rgba(218,54,51,0.15); color:#f85149; border:1px solid rgba(218,54,51,0.3); }
+
+/* ===== Filters ===== */
+.filter-bar { display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap; align-items:center; }
+.filter-label { font-size:12px; color:#8b949e; }
+.filter-btn {
+    padding:5px 12px; border-radius:6px; border:1px solid #30363d;
+    background:#21262d; color:#8b949e; cursor:pointer; font-size:12px;
+    transition:all 0.2s; white-space:nowrap;
+}
+.filter-btn:hover { border-color:#58a6ff; color:#c9d1d9; }
+.filter-btn.active { background:#1f6feb; color:#fff; border-color:#1f6feb; }
+
+/* ===== iframe ===== */
+.iframe-wrap { border:1px solid #30363d; border-radius:10px; overflow:hidden; background:#0d1117; }
+.iframe-wrap iframe { width:100%; height:calc(100vh - 120px); border:none; }
+
+/* ===== Health Table ===== */
+.health-table { width:100%; border-collapse:collapse; font-size:12px; }
+.health-table th { text-align:left; color:#8b949e; font-weight:600; padding:8px 12px; background:#161b22; border-bottom:1px solid #21262d; }
+.health-table td { padding:8px 12px; border-bottom:1px solid #21262d; }
+.health-table tr:hover td { background:rgba(88,166,255,0.03); }
+.status-ok { color:#3fb950; }
+.status-warn { color:#d29922; }
+.status-error { color:#f85149; }
+.status-idle { color:#484f58; }
+
+/* ===== Theme Cards ===== */
+.theme-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:10px; }
+.theme-card {
+    background:#161b22; border:1px solid #30363d; border-radius:8px;
+    padding:12px; transition:border-color 0.2s;
+}
+.theme-card:hover { border-color:#58a6ff; }
+.theme-name { font-size:13px; font-weight:600; color:#e6edf3; margin-bottom:6px; }
+.theme-bar-wrap { width:100%; height:14px; background:#21262d; border-radius:4px; overflow:hidden; margin-bottom:6px; }
+.theme-bar {
+    height:100%; border-radius:4px; transition:width 0.4s ease;
+    background:linear-gradient(90deg,#da3633,#f85149);
+}
+.theme-meta { display:flex; justify-content:space-between; font-size:11px; color:#8b949e; }
+.theme-count { color:#8b949e; }
+
+/* ===== Thesis Positions ===== */
+.position-row { display:flex; align-items:center; gap:8px; padding:6px 10px; border-bottom:1px solid #21262d; font-size:12px; }
+.position-row:hover { background:rgba(88,166,255,0.03); }
+.position-name { font-weight:500; color:#e6edf3; min-width:80px; }
+.position-code { color:#8b949e; font-size:10px; font-family:monospace; min-width:90px; }
+.position-return { font-weight:600; min-width:70px; text-align:right; }
+.position-5d { font-size:11px; color:#8b949e; min-width:60px; text-align:right; }
+.ret-up { color:#3fb950; }
+.ret-down { color:#f85149; }
+
+/* ===== Empty State ===== */
+.empty { text-align:center; padding:40px; color:#484f58; font-size:14px; }
+
+/* ===== Loading ===== */
+.loading { text-align:center; padding:20px; color:#8b949e; font-size:13px; }
+.loading::after { content:'...'; animation:dots 1.5s steps(4,end) infinite; }
+@keyframes dots { 0%,20% { content:'.'; } 40% { content:'..'; } 60%,100% { content:'...'; } }
+
+/* ===== Enhancements ===== */
+.risk-banner {
+    background:rgba(210,153,34,0.08); border:1px solid rgba(210,153,34,0.3);
+    border-radius:8px; padding:10px 14px; margin-bottom:12px; font-size:12px;
+    color:#d29922;
+}
+.risk-banner strong { color:#e3b341; }
+
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media (max-width:768px) { .two-col { grid-template-columns:1fr; } }
+
+.footer { text-align:center; padding:30px 0 20px; color:#484f58; font-size:11px; border-top:1px solid #21262d; margin-top:20px; }
+
+/* Mobile */
+@media (max-width:640px) {
+    .header { padding:10px 12px; }
+    .header-brand h1 { font-size:15px; }
+    .nav-tab { padding:8px 12px; font-size:12px; }
+    .main { padding:12px; }
+    .stats-row { grid-template-columns:repeat(2,1fr); }
+    .heat-label { width:70px; font-size:11px; }
+    .theme-grid { grid-template-columns:1fr; }
+    .two-col { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="header-brand">
+        <span style="font-size:22px;">🦉</span>
+        <div>
+            <h1>Mimo 投研仪表盘</h1>
+            <div class="sub">十五五方向 · 双链信号 · 主题监控</div>
+        </div>
+    </div>
+    <div class="header-meta" id="updateTime">加载中…</div>
+</div>
+
+<!-- Nav Tabs -->
+<div class="nav-tabs" id="navTabs">
+    <button class="nav-tab active" data-tab="overview">📊 概览</button>
+    <button class="nav-tab" data-tab="signals">🔥 信号</button>
+    <button class="nav-tab" data-tab="news">📰 情报</button>
+    <button class="nav-tab" data-tab="themes">🎯 主题</button>
+    <button class="nav-tab" data-tab="health">🏥 监控</button>
+</div>
+
+<!-- Main Content -->
+<div class="main" id="main">
+
+<!-- Tab: Overview -->
+<div class="tab-content active" id="tab-overview">
+    <!-- Stats Row -->
+    <div class="stats-row" id="overviewStats">
+        <div class="stat-card"><div class="stat-icon">📦</div><div class="stat-info"><div class="stat-value" id="statPool">-</div><div class="stat-label">池子标的数</div></div></div>
+        <div class="stat-card"><div class="stat-icon">🔥</div><div class="stat-info"><div class="stat-value" id="statSignals">-</div><div class="stat-label">今日信号</div></div></div>
+        <div class="stat-card"><div class="stat-icon">🎯</div><div class="stat-info"><div class="stat-value" id="statHot">-</div><div class="stat-label">方向热点</div></div></div>
+        <div class="stat-card"><div class="stat-icon">⚠️</div><div class="stat-info"><div class="stat-value" id="statAlerts">-</div><div class="stat-label">活跃预警</div></div></div>
+    </div>
+
+    <!-- Risk Banner -->
+    <div class="risk-banner" id="riskBanner" style="display:none;"></div>
+
+    <div class="two-col">
+        <!-- Left: Direction Heat -->
+        <div class="section">
+            <div class="section-title">📈 方向热度 <span style="font-size:10px;color:#484f58;font-weight:400;">（今日板块涨幅%）</span></div>
+            <div class="heat-list" id="directionHeat"></div>
+        </div>
+
+        <!-- Right: Alerts + Positions -->
+        <div>
+            <!-- Thesis Positions -->
+            <div class="section">
+                <div class="section-title">💼 核心持仓 <span class="badge badge-15" id="thesisCount"></span></div>
+                <div id="thesisPositions" style="max-height:300px;overflow-y:auto;"></div>
+            </div>
+
+            <!-- Recent Fire Signals -->
+            <div class="section">
+                <div class="section-title">🔥 最新信号 <span class="badge badge-fire" id="fireCount"></span></div>
+                <div id="recentSignals"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Active Alerts -->
+    <div class="section">
+        <div class="section-title">⚠️ 活跃预警</div>
+        <div class="alert-list" id="activeAlerts"></div>
+    </div>
+</div>
+
+<!-- Tab: Signals -->
+<div class="tab-content" id="tab-signals">
+    <div class="filter-bar" id="signalFilters">
+        <span class="filter-label">链:</span>
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="chain1">链一 · 国产替代</button>
+        <button class="filter-btn" data-filter="chain2">链二 · AI算力</button>
+        <span class="filter-label" style="margin-left:12px;">阶段:</span>
+        <button class="filter-btn active" data-filter-stage="all">全部</button>
+        <button class="filter-btn" data-filter-stage="emerging">🌱 萌发</button>
+        <button class="filter-btn" data-filter-stage="positioning">📈 建仓</button>
+        <button class="filter-btn" data-filter-stage="consensus">✅ 共识</button>
+        <button class="filter-btn" data-filter-stage="exhausted">💤 耗尽</button>
+    </div>
+    <div id="signalList"></div>
+</div>
+
+<!-- Tab: News -->
+<div class="tab-content" id="tab-news">
+    <div class="iframe-wrap">
+        <iframe src="news-feed.html" id="newsIframe" loading="lazy"></iframe>
+    </div>
+</div>
+
+<!-- Tab: Themes -->
+<div class="tab-content" id="tab-themes">
+    <div class="section">
+        <div class="section-title">🎯 板块热度 TOP 20 <span style="font-size:10px;color:#484f58;font-weight:400;">（平均涨幅%，仅显示≥2只成分股的板块）</span></div>
+        <div class="theme-grid" id="themeGrid"></div>
+    </div>
+    <div class="section">
+        <div class="section-title">📊 板块涨跌分布</div>
+        <div class="heat-list" id="allSectorsHeat"></div>
+    </div>
+</div>
+
+<!-- Tab: Health -->
+<div class="tab-content" id="tab-health">
+    <div class="section">
+        <div class="section-title">🔧 管线组件状态</div>
+        <div style="overflow-x:auto;">
+            <table class="health-table" id="healthTable">
+                <thead><tr><th>组件</th><th>状态</th><th>最后运行</th><th>说明</th></tr></thead>
+                <tbody id="healthBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">📋 活跃叙事</div>
+        <div class="alert-list" id="activeNarratives"></div>
+    </div>
+    <div class="section">
+        <div class="section-title">⚠️ 关键风险</div>
+        <div class="alert-list" id="keyRisks"></div>
+    </div>
+</div>
+
+</div><!-- /main -->
+
+<div class="footer">
+    🦉 Mimo 投研仪表盘 · 数据自动更新 · <span id="footerDate"></span>
+</div>
+
+<script>
+// ===== Navigation =====
+document.querySelectorAll('.nav-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+        if (tab.dataset.tab === 'news') {
+            const iframe = document.getElementById('newsIframe');
+            if (!iframe.src) iframe.src = 'news-feed.html';
+        }
+    });
+});
+
+// ===== Data Loading =====
+let poolData = null, scannerData = null, briefData = null, stateData = null, signalsDailyData = null;
+
+async function loadJSON(path) {
+    try {
+        const resp = await fetch(path);
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        return await resp.json();
+    } catch(e) {
+        console.warn(`Failed to load ${path}:`, e);
+        return null;
+    }
+}
+
+async function init() {
+    document.getElementById('footerDate').textContent = new Date().toLocaleString('zh-CN',{timeZone:'Asia/Shanghai'});
+    document.getElementById('updateTime').textContent = '加载中…';
+    
+    // Load all data in parallel
+    [poolData, scannerData, briefData, stateData, signalsDailyData] = await Promise.all([
+        loadJSON('data/pool.json'),
+        loadJSON('data/scanner.json'),
+        loadJSON('data/daily-brief.json'),
+        loadJSON('../daily/state.json').catch(() => null), // try pipeline/daily/state.json
+        loadJSON('data/signals-daily.json')
+    ]);
+    
+    document.getElementById('updateTime').textContent = '最后更新: ' + 
+        new Date().toLocaleTimeString('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit'});
+    
+    renderOverview();
+    renderSignals();
+    renderThemes();
+    renderHealth();
+}
+
+// ===== Overview Tab =====
+function renderOverview() {
+    // Stats
+    const poolTotal = poolData?.total || poolData?.stocks?.length || 0;
+    const signalCount = scannerData?.signals?.length || 0;
+    const fireCount = scannerData?.signals?.filter(s => s.priority === 'fire').length || 0;
+    const alertCount = briefData?.alerts?.total_active || briefData?.alerts?.recent_count || 0;
+    
+    // Find hottest direction (highest avg_pct from pool groups)
+    let hotDir = '-';
+    if (poolData?.groups?.length) {
+        const valid = poolData.groups.filter(g => g.count >= 2);
+        if (valid.length) {
+            const top = valid.reduce((a,b) => (a.avg_pct > b.avg_pct) ? a : b);
+            hotDir = `${top.group} +${top.avg_pct.toFixed(1)}%`;
+        }
+    }
+    
+    document.getElementById('statPool').textContent = poolTotal;
+    document.getElementById('statSignals').textContent = `${signalCount} (🔥${fireCount})`;
+    document.getElementById('statHot').textContent = hotDir;
+    document.getElementById('statAlerts').textContent = alertCount;
+    
+    // Risk banner - show key risk if exists
+    const riskAlerts = briefData?.alerts?.high || [];
+    if (riskAlerts.length) {
+        const rb = document.getElementById('riskBanner');
+        rb.style.display = 'block';
+        rb.innerHTML = `<strong>⚠️ 风险提示：</strong>${riskAlerts[0].title}`;
+    }
+    
+    // Direction Heat
+    renderDirectionHeat();
+    
+    // Thesis Positions
+    renderThesisPositions();
+    
+    // Recent Fire Signals
+    renderRecentFireSignals();
+    
+    // Active Alerts
+    renderActiveAlerts();
+}
+
+function renderDirectionHeat() {
+    const container = document.getElementById('directionHeat');
+    if (!poolData?.groups?.length) {
+        container.innerHTML = '<div class="empty">暂无方向数据</div>';
+        return;
+    }
+    // Filter groups with >= 2 stocks, sort by avg_pct desc
+    const groups = poolData.groups
+        .filter(g => g.count >= 2)
+        .sort((a,b) => b.avg_pct - a.avg_pct);
+    
+    const maxAbs = Math.max(Math.abs(groups[0]?.avg_pct || 0), Math.abs(groups[groups.length-1]?.avg_pct || 0), 0.5);
+    
+    container.innerHTML = groups.map(g => {
+        const pct = g.avg_pct;
+        const absPct = Math.abs(pct);
+        const width = maxAbs > 0 ? (absPct / maxAbs * 100) : 0;
+        let cls = 'hot';
+        if (pct > 2) cls = 'hot';
+        else if (pct > 0) cls = 'warm';
+        else if (pct > -1) cls = 'cool';
+        else cls = 'cold';
+        return `<div class="heat-row">
+            <div class="heat-label">${g.group}</div>
+            <div class="heat-bar-wrap">
+                <div class="heat-bar ${cls}" style="width:${width}%"></div>
+                <div class="heat-value">${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</div>
+            </div>
+            <div class="heat-pct">${g.count}只</div>
+        </div>`;
+    }).join('');
+}
+
+function renderThesisPositions() {
+    const container = document.getElementById('thesisPositions');
+    const positions = briefData?.thesis?.positions || [];
+    document.getElementById('thesisCount').textContent = positions.length + '只';
+    
+    if (!positions.length) {
+        container.innerHTML = '<div class="empty">暂无持仓数据</div>';
+        return;
+    }
+    
+    container.innerHTML = positions.map(p => {
+        const ret = p.return_pct;
+        const retCls = ret >= 0 ? 'ret-up' : 'ret-down';
+        const ret5d = p.ret_5d;
+        const ret5dCls = ret5d >= 0 ? 'ret-up' : 'ret-down';
+        const warn = p.warnings?.length ? ' ⚠️' : '';
+        return `<div class="position-row">
+            <div class="position-name">${p.name}${warn}</div>
+            <div class="position-code">${p.code}</div>
+            <div class="position-return ${retCls}">${ret != null ? (ret >= 0 ? '+' : '') + ret.toFixed(2) + '%' : '-'}</div>
+            <div class="position-5d ${ret5dCls}">5日:${ret5d != null ? (ret5d >= 0 ? '+' : '') + ret5d.toFixed(1) + '%' : '-'}</div>
+        </div>`;
+    }).join('');
+}
+
+function renderRecentFireSignals() {
+    const container = document.getElementById('recentSignals');
+    const allSignals = scannerData?.signals || [];
+    const fireSignals = allSignals.filter(s => s.priority === 'fire').slice(0, 5);
+    document.getElementById('fireCount').textContent = allSignals.filter(s => s.priority === 'fire').length;
+    
+    if (!fireSignals.length) {
+        container.innerHTML = '<div class="empty">暂无信号</div>';
+        return;
+    }
+    
+    container.innerHTML = fireSignals.map(s => renderSignalCard(s)).join('');
+}
+
+function renderActiveAlerts() {
+    const container = document.getElementById('activeAlerts');
+    const fireAlerts = briefData?.alerts?.fire || [];
+    const highAlerts = briefData?.alerts?.high || [];
+    const combined = [...fireAlerts, ...highAlerts].slice(0, 8);
+    
+    if (!combined.length) {
+        container.innerHTML = '<div class="empty">暂无活跃预警</div>';
+        return;
+    }
+    
+    container.innerHTML = combined.map(a => {
+        const cls = a.level === 'fire' ? 'alert-fire' : 'alert-high';
+        return `<div class="alert-item ${cls}">
+            <div class="alert-date">${a.date} · ${a.source}</div>
+            <div class="alert-title">${a.title}</div>
+            ${a.impact ? `<div style="font-size:11px;color:#8b949e;margin-top:4px;">${a.impact.substring(0,150)}…</div>` : ''}
+        </div>`;
+    }).join('');
+}
+
+// ===== Signals Tab =====
+let signalChainFilter = 'all', signalStageFilter = 'all';
+
+function renderSignals() {
+    const signals = scannerData?.signals || [];
+    const container = document.getElementById('signalList');
+    
+    // Setup filter buttons
+    document.querySelectorAll('#signalFilters .filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filterGroup = btn.dataset.filter ? 'chain' : 'stage';
+            const siblings = btn.parentElement.querySelectorAll(
+                filterGroup === 'chain' ? '[data-filter]' : '[data-filter-stage]'
+            );
+            siblings.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (filterGroup === 'chain') signalChainFilter = btn.dataset.filter;
+            else signalStageFilter = btn.dataset.filterStage;
+            renderSignals();
+        });
+    });
+    
+    // Filter
+    let filtered = signals;
+    if (signalChainFilter !== 'all') {
+        filtered = filtered.filter(s => s.chain === signalChainFilter);
+    }
+    if (signalStageFilter !== 'all') {
+        filtered = filtered.filter(s => s.lifecycle === signalStageFilter);
+    }
+    
+    if (!filtered.length) {
+        container.innerHTML = '<div class="empty">无匹配信号</div>';
+        return;
+    }
+    
+    container.innerHTML = filtered.map(s => renderSignalCard(s)).join('');
+}
+
+function renderSignalCard(s) {
+    const isFire = s.priority === 'fire';
+    const tickers = s.related_tickers || [];
+    const tags = s.tags || [];
+    const lcLabel = { emerging:'🌱 萌发', positioning:'📈 建仓', consensus:'✅ 共识', exhausted:'💤 耗尽' }[s.lifecycle] || s.lifecycle;
+    const lcCls = 'badge-' + (s.lifecycle || 'consensus');
+    const chainCls = s.chain === 'chain1' ? 'badge-chain1' : 'badge-chain2';
+    const chainLabel = s.chain === 'chain1' ? '链一' : '链二';
+    
+    return `<div class="signal-card ${isFire ? 'fire-card' : ''}">
+        <div class="signal-header">
+            ${isFire ? '<span class="badge badge-fire">🔥 Fire</span>' : '<span class="badge badge-normal">📡 信号</span>'}
+            <span class="badge ${chainCls}">${chainLabel}</span>
+            <span class="badge ${lcCls}">${lcLabel}</span>
+            ${s.source_weight === 'high' ? '<span class="badge badge-source">高权重源</span>' : ''}
+        </div>
+        <div class="signal-title">${s.title}</div>
+        <div class="signal-summary">${s.summary?.substring(0,300) || ''}${(s.summary?.length || 0) > 300 ? '…' : ''}</div>
+        ${tags.length ? `<div class="signal-meta">🏷️ ${tags.join(' · ')}</div>` : ''}
+        ${tickers.length ? `<div class="signal-tickers">${tickers.map(t => `<span class="ticker-tag">${t}</span>`).join('')}</div>` : ''}
+    </div>`;
+}
+
+// ===== Themes Tab =====
+function renderThemes() {
+    // Theme Grid - Top 20 groups by avg_pct
+    const grid = document.getElementById('themeGrid');
+    if (!poolData?.groups?.length) {
+        grid.innerHTML = '<div class="empty">暂无板块数据</div>';
+        return;
+    }
+    
+    const groups = poolData.groups
+        .filter(g => g.count >= 2)
+        .sort((a,b) => b.avg_pct - a.avg_pct)
+        .slice(0, 20);
+    
+    grid.innerHTML = groups.map(g => {
+        const pct = g.avg_pct;
+        const absPct = Math.abs(pct);
+        const maxW = 8; // max bar width reference
+        const width = Math.min(100, absPct / maxW * 100);
+        const color = pct > 0 ? 
+            (pct > 2 ? '#f85149' : '#e3b341') : 
+            (pct > -1 ? '#58a6ff' : '#484f58');
+        return `<div class="theme-card">
+            <div class="theme-name">${g.group} <span class="theme-count">(${g.count}只)</span></div>
+            <div class="theme-bar-wrap">
+                <div class="theme-bar" style="width:${width}%;background:${color};"></div>
+            </div>
+            <div class="theme-meta">
+                <span>${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</span>
+                <span>${pct > 2 ? '🔥 热' : pct > 0 ? '🟡 温' : pct > -1 ? '🔵 凉' : '❄️ 冷'}</span>
+            </div>
+        </div>`;
+    }).join('');
+    
+    // All sectors heat
+    const allHeat = document.getElementById('allSectorsHeat');
+    const allGroups = poolData.groups
+        .filter(g => g.count >= 2)
+        .sort((a,b) => b.avg_pct - a.avg_pct);
+    
+    const maxAbsAll = Math.max(Math.abs(allGroups[0]?.avg_pct || 0), Math.abs(allGroups[allGroups.length-1]?.avg_pct || 0), 0.5);
+    
+    allHeat.innerHTML = allGroups.map(g => {
+        const pct = g.avg_pct;
+        const width = maxAbsAll > 0 ? (Math.abs(pct) / maxAbsAll * 100) : 0;
+        let cls = pct > 2 ? 'hot' : pct > 0 ? 'warm' : pct > -1 ? 'cool' : 'cold';
+        return `<div class="heat-row">
+            <div class="heat-label">${g.group}</div>
+            <div class="heat-bar-wrap">
+                <div class="heat-bar ${cls}" style="width:${width}%"></div>
+                <div class="heat-value">${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</div>
+            </div>
+            <div class="heat-pct">${g.count}只</div>
+        </div>`;
+    }).join('');
+}
+
+// ===== Health Tab =====
+function renderHealth() {
+    // Health table
+    const body = document.getElementById('healthBody');
+    
+    // Try to get component status from multiple sources
+    const components = [];
+    const healthMap = {};
+    
+    // From state.json
+    if (stateData?.components) {
+        Object.entries(stateData.components).forEach(([name, info]) => {
+            healthMap[name] = info;
+        });
+    }
+    
+    // Build component list
+    const knownComponents = [
+        { id: 'scanner', name: 'Scanner 扫描', desc: '多源信号扫描' },
+        { id: 'analyst', name: 'Analyst 分析', desc: '信号深度验证分析' },
+        { id: 'pool', name: 'Pool 池子', desc: '标的池更新与方向统计' },
+        { id: 'page_generator', name: 'Page Generator', desc: '页面生成与部署' },
+        { id: 'robot_scanner', name: 'Robot Scanner', desc: '机器人板块扫描' },
+        { id: 'theme_monitor', name: 'Theme Monitor', desc: '85组概念热度追踪' },
+        { id: 'readhub', name: 'ReadHub Crawler', desc: 'ReadHub情报爬取' },
+        { id: 'volume_analyzer', name: 'Volume Analyzer', desc: '量价分析' },
+        { id: 'archivist', name: 'Archivist 归档', desc: '历史数据归档' },
+    ];
+    
+    const now = new Date();
+    
+    body.innerHTML = knownComponents.map(c => {
+        const info = healthMap[c.id];
+        let status = 'idle', statusText = '空闲', lastRun = '-', cls = 'status-idle';
+        
+        if (info) {
+            if (info.status === 'completed' || info.status === 'success') {
+                status = 'ok'; statusText = '正常'; cls = 'status-ok';
+            } else if (info.status === 'pending') {
+                status = 'pending'; statusText = '等待中'; cls = 'status-warn';
+            } else if (info.status === 'error' || info.status === 'failed') {
+                status = 'error'; statusText = '异常'; cls = 'status-error';
+            }
+            if (info.last_run) {
+                const d = new Date(info.last_run);
+                lastRun = d.toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
+            }
+        }
+        
+        const icon = status === 'ok' ? '🟢' : status === 'pending' ? '🟡' : status === 'error' ? '🔴' : '⚪';
+        const extra = info?.signals_count ? ` (${info.signals_count}信号/${info.fire_count}🔥)` : 
+                      info?.signals_analyzed ? ` (分析${info.signals_analyzed}条)` : '';
+        
+        return `<tr>
+            <td>${icon} ${c.name}</td>
+            <td class="${cls}">${statusText}${extra}</td>
+            <td style="color:#8b949e;font-size:11px;">${lastRun}</td>
+            <td style="color:#8b949e;font-size:11px;">${c.desc}</td>
+        </tr>`;
+    }).join('');
+    
+    // Active narratives
+    const narratives = document.getElementById('activeNarratives');
+    const narrList = stateData?.context?.active_narratives || [];
+    if (narrList.length) {
+        narratives.innerHTML = narrList.map(n => 
+            `<div class="alert-item alert-info">📌 ${n}</div>`
+        ).join('');
+    } else {
+        narratives.innerHTML = '<div class="empty">暂无活跃叙事</div>';
+    }
+    
+    // Key risks
+    const risks = document.getElementById('keyRisks');
+    const riskList = stateData?.context?.key_risks || [];
+    if (riskList.length) {
+        risks.innerHTML = riskList.map(r => 
+            `<div class="alert-item alert-high">⚠️ ${r}</div>`
+        ).join('');
+    } else {
+        risks.innerHTML = '<div class="empty">暂无风险记录</div>';
+    }
+}
+
+// ===== Start =====
+init();
+</script>
+</body>
+</html>
