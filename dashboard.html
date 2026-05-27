@@ -443,7 +443,7 @@ a:hover { text-decoration:underline; }
                 <div id="overviewAlerts" style="font-size:13px;color:#c9d1d9;"></div>
             </div>
             <div class="section">
-                <div class="section-title">⭐ 今日 B1 机会 <span class="badge badge-fire" id="overviewB1Count"></span></div>
+                <div class="section-title">⭐ 近期 B1 机会 <span class="badge badge-fire" id="overviewB1Count"></span> <span id="overviewB1Date" style="font-size:10px;color:#8b949e;font-weight:400;"></span></div>
                 <div id="overviewB1List" style="max-height:300px;overflow-y:auto;"></div>
             </div>
 
@@ -868,6 +868,10 @@ function renderThesisPositions() {
     const container = document.getElementById('overviewB1List');
     const badge = document.getElementById('overviewB1Count');
     if (badge) badge.textContent = b1List.length + '个';
+    // Show date range
+    const dates = [...new Set(b1List.map(s => s[4]).filter(Boolean))].sort();
+    const dateEl = document.getElementById('overviewB1Date');
+    if (dateEl && dates.length) dateEl.textContent = `(${dates[0]}~${dates[dates.length-1]})`;
     if (!b1List.length) {
         container.innerHTML = '<div class="empty">今日无B1信号</div>';
     } else {
