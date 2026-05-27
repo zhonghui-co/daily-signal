@@ -499,6 +499,18 @@ a:hover { text-decoration:underline; }
         <div id="tpoContent"></div>
     </div>
 
+    
+    <div class="section" style="margin-top:12px;">
+        <div class="section-title">🚨 周线KDJ报警 <span style="font-size:10px;color:#8b949e;font-weight:400;">（周B1 = 一级买点 / J<0 = 二级买点 / J>80 = 一级卖点）</span></div>
+        <div class="stats-row" id="weeklyAlerts" style="margin-bottom:8px;">
+            <div class="stat-card" style="border-left:3px solid #3fb950;"><div class="stat-icon">🟢</div><div class="stat-info"><div class="stat-value" id="alertBuyL1" style="color:#3fb950;">-</div><div class="stat-label">一级买点 J<15</div></div></div>
+            <div class="stat-card" style="border-left:3px solid #2ea043;"><div class="stat-icon">🟢🟢</div><div class="stat-info"><div class="stat-value" id="alertBuyL2" style="color:#2ea043;">-</div><div class="stat-label">二级买点 J<0</div></div></div>
+            <div class="stat-card" style="border-left:3px solid #f85149;"><div class="stat-icon">🔴</div><div class="stat-info"><div class="stat-value" id="alertSellL1" style="color:#f85149;">-</div><div class="stat-label">一级卖点 J>80</div></div></div>
+            <div class="stat-card" style="border-left:3px solid #da3633;"><div class="stat-icon">🔴🔴</div><div class="stat-info"><div class="stat-value" id="alertSellL2" style="color:#da3633;">-</div><div class="stat-label">二级卖点 J>100</div></div></div>
+        </div>
+        <div id="weeklyAlertList" style="max-height:200px;overflow-y:auto;"></div>
+    </div>
+
     <!-- Active Alerts -->
     <div class="section">
         <div class="section-title">⚠️ 活跃预警</div>
@@ -715,6 +727,7 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
         if (tab.dataset.tab === 'anomalies') {
             loadAnomalies();
             loadWeeklyB1();
+    loadWeeklyAlerts();
         }
         if (tab.dataset.tab === 'trends') {
             loadTrends();
@@ -1964,6 +1977,32 @@ async function loadTrends() {
             </div>
         `).join('') || '<div class="empty">无趋势数据</div>';
     } catch(e) { console.log('Trends load err:', e); }
+}
+
+
+async function loadWeeklyAlerts() {
+    try {
+        const wd = await loadJSON('/daily-signal/data/weekly-kdj.json');
+        const items = wd.items || [];
+        const l1 = items.filter(s => s.J < 15 && s.J >= 0).length;
+        const l2 = items.filter(s => s.J < 0).length;
+        document.getElementById('alertBuyL1').textContent = l1;
+        document.getElementById('alertBuyL2').textContent = l2;
+        document.getElementById('alertSellL1').textContent = items.filter(s => s.J > 80 && s.J <= 100).length;
+        document.getElementById('alertSellL2').textContent = items.filter(s => s.J > 100).length;
+        
+        // Show L2 alerts (deepest oversold)
+        const alerts = items.filter(s => s.J < 0).sort((a,b) => a.J - b.J);
+        document.getElementById('weeklyAlertList').innerHTML = alerts.length ? alerts.map(s => 
+            `<div class="position-row">
+                <span style="color:#2ea043;font-weight:600;">🟢🟢 二级买点</span>
+                <span class="ticker-tag">${s.ts_code||''} ${s.name||''}</span>
+                <span style="font-size:11px;color:#8b949e;">${s.theme_category||''}</span>
+                <span style="font-weight:600;color:#2ea043;">J=${(s.J||0).toFixed(1)}</span>
+                <span style="font-size:10px;color:#484f58;">周收盘${(s.close||0).toFixed(2)}</span>
+            </div>`
+        ).join('') : '<div class="empty">当前无二级买点</div>';
+    } catch(e) { console.log('Alert load err:', e); }
 }
 
 // ===== Start =====
