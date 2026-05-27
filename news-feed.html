@@ -44,8 +44,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .metric-card:hover { border-color: #58a6ff; }
 .metric-label { font-size: 11px; color: #8b949e; margin-bottom: 4px; }
 .metric-value { font-size: 18px; font-weight: bold; margin-bottom: 2px; }
-.metric-change { font-size: 12px; color: #f85149; }
+.metric-change { font-size: 12px; color: #3fb950; }
 .metric-note { font-size: 10px; color: #484f58; margin-top: 2px; }
+.metric-explanation { font-size: 10px; color: #8b949e; margin-top: 4px; line-height: 1.4; font-style: italic; }
 
 /* P1: Section tabs with category filter */
 .tabs {
@@ -75,8 +76,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .news-meta { display: flex; gap: 8px; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
 .news-time { color: #8b949e; font-size: 12px; }
 .news-title { font-size: 15px; font-weight: 600; color: #e6edf3; margin-bottom: 6px; line-height: 1.4; }
+.news-title-link { color: #58a6ff; text-decoration: none; }
+.news-title-link:hover { text-decoration: underline; }
+.source-inline { font-size: 11px; color: #484f58; font-weight: 400; }
+.source-link-count { font-size: 10px; color: #8b949e; background: #21262d; padding: 1px 6px; border-radius: 4px; margin-left: 4px; }
 .news-summary { font-size: 13px; color: #8b949e; line-height: 1.5; }
 .news-tags { display: flex; gap: 6px; margin-bottom: 6px; flex-wrap: wrap; }
+
+/* P5: Impact analysis */
+.impact-row {
+    font-size: 11px; color: #d29922; margin-top: 6px; padding-top: 6px;
+    border-top: 1px solid #21262d; line-height: 1.5;
+}
 
 .signal-card { border-left: 3px solid #d32f2f; }
 .signal-header { display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; align-items: center; }
@@ -150,6 +161,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     0%, 100% { opacity: 1; }
     50% { opacity: 0.6; }
 }
+
+/* P4: Alert card improvements */
+.alert-card-header {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;
+}
+.alert-source-tag {
+    font-size: 10px; color: #484f58; margin-bottom: 4px;
+}
+
 </style>
 </head>
 <body>
@@ -163,7 +183,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     </div>
     <div class="stats">
         <div class="stat">
-            <div class="num">68</div>
+            <div class="num">69</div>
             <div class="label">24h 去重话题</div>
         </div>
         <div class="stat">
@@ -184,20 +204,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         </div>
         
         <div class="stat">
-            <div class="num">25</div>
+            <div class="num">26</div>
             <div class="label">🔬 半导体</div>
         </div>
         <div class="stat">
-            <div class="num">31</div>
+            <div class="num">30</div>
             <div class="label">🤖 AI</div>
         </div>
         <div class="stat">
-            <div class="num">11</div>
+            <div class="num">13</div>
             <div class="label">⚡ 能源</div>
         </div>
         
         <div class="stat" style="border-color:#f8514966;">
-            <div class="num" style="color:#f85149;">6</div>
+            <div class="num" style="color:#f85149;">5</div>
             <div class="label">⚠️ 供需预警</div>
         </div>
     </div>
@@ -210,33 +230,38 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
         <div class="metric-card" title="来源: SIA">
             <div class="metric-label">全球半导体销售额</div>
-            <div class="metric-value" style="color:#f85149">📈 888亿$/月</div>
+            <div class="metric-value" style="color:#3fb950">📈 888亿$/月</div>
             <div class="metric-change">+61.8% YoY</div>
             <div class="metric-note">2月数据 · SIA</div>
+            <div class="metric-explanation">💡 AI需求推动存储芯片和GPU出货量暴增 → 利好设备/材料/封测全链</div>
         </div>
         <div class="metric-card" title="来源: Goldman Sachs">
             <div class="metric-label">AI CapEx 2026E</div>
-            <div class="metric-value" style="color:#f85149">📈 $800B</div>
+            <div class="metric-value" style="color:#3fb950">📈 $800B</div>
             <div class="metric-change">史上最高</div>
             <div class="metric-note">5月预测 · Goldman Sachs</div>
+            <div class="metric-explanation">💡 全球科技巨头资本开支创历史新高 → 利好AI算力芯片/服务器/光模块</div>
         </div>
         <div class="metric-card" title="来源: 海关总署">
             <div class="metric-label">中国芯片出口</div>
-            <div class="metric-value" style="color:#f85149">📈 ~310亿$</div>
+            <div class="metric-value" style="color:#3fb950">📈 ~310亿$</div>
             <div class="metric-change">翻倍增长</div>
             <div class="metric-note">4月 · 海关总署</div>
+            <div class="metric-explanation">💡 国产芯片国际竞争力提升，出口连续翻倍 → 国产替代从进口替代走向出口扩张</div>
         </div>
         <div class="metric-card" title="来源: SEMI">
             <div class="metric-label">设备国产化率</div>
-            <div class="metric-value" style="color:#f85149">📈 ~25%</div>
+            <div class="metric-value" style="color:#3fb950">📈 ~25%</div>
             <div class="metric-change">加速提升</div>
             <div class="metric-note">2026年预估 · SEMI</div>
+            <div class="metric-explanation">💡 半导体设备国产化从个位数飙升至25% → 设备/零部件/材料国产替代空间仍巨大</div>
         </div>
         <div class="metric-card" title="来源: Gartner">
             <div class="metric-label">全球AI半导体占比</div>
-            <div class="metric-value" style="color:#f85149">📈 1/3</div>
+            <div class="metric-value" style="color:#3fb950">📈 1/3</div>
             <div class="metric-change">结构性增长</div>
             <div class="metric-note">2026年 · Gartner</div>
+            <div class="metric-explanation">💡 AI相关芯片占全球半导体市场1/3份额 → 结构性趋势不可逆，利好全产业链</div>
         </div>
     </div>
 </div>
@@ -269,50 +294,53 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         <div class="alert-panel">
             <div class="alert-panel-header">
                 ⚠️ 供应链预警 — 涨价 · 库存 · 产能
-                <span class="alert-count">1🔴 5🟠</span>
+                <span class="alert-count">1🔴 4🟠</span>
             </div>
             
             <div class="alert-card" style="border-left: 3px solid #f85149;">
-                <span class="alert-sev">🔴 库存告急</span>
-                <span class="alert-source">格隆汇</span>
-                <span class="alert-time">05/27 15:55</span>
+                <div class="alert-card-header">
+                    <span class="alert-sev" style="color:#f85149;">🔴 库存告急 · 严重</span>
+                    <span class="alert-time">05/27 15:55</span>
+                </div>
+                <div class="alert-source-tag">📰 格隆汇</div>
                 <div class="alert-title">星巴克终止旨在解决产品短缺的人工智能项目</div>
-                <div class="alert-context">...星巴克终止旨在解决产品短缺的人工智能项目 星巴克终止旨在解决产品短缺的人工智能项目。...</div>
+                <div class="alert-context">📌 星巴克终止旨在解决产品短缺的人工智能项目 星巴克终止旨在解决产品短缺的人工智能项目。</div>
             </div>
             <div class="alert-card" style="border-left: 3px solid #d29922;">
-                <span class="alert-sev">🟠 产能告急</span>
-                <span class="alert-source">财联社</span>
-                <span class="alert-time">05/27 14:50</span>
+                <div class="alert-card-header">
+                    <span class="alert-sev" style="color:#d29922;">🟠 产能告急 · 警告</span>
+                    <span class="alert-time">05/27 14:50</span>
+                </div>
+                <div class="alert-source-tag">📰 财联社</div>
                 <div class="alert-title">深科技回应股价「抢跑」质疑：一直有扩产计划，不是突然放出来的利好消息</div>
-                <div class="alert-context">...技回应股价「抢跑」质疑：一直有扩产计划，不是突然放出来的利好消息 深科技因子公司拟扩大高端存储...</div>
+                <div class="alert-context">📌 技回应股价「抢跑」质疑：一直有扩产计划，不是突然放出来的利好消息 深科技因子公司拟扩大高端存储</div>
             </div>
             <div class="alert-card" style="border-left: 3px solid #d29922;">
-                <span class="alert-sev">🟠 涨价</span>
-                <span class="alert-source">界面</span>
-                <span class="alert-time">05/27 01:56</span>
+                <div class="alert-card-header">
+                    <span class="alert-sev" style="color:#d29922;">🟠 涨价 · 警告</span>
+                    <span class="alert-time">05/27 01:56</span>
+                </div>
+                <div class="alert-source-tag">📰 界面</div>
                 <div class="alert-title">卢伟冰：小米不会把内存涨价成本转嫁给消费者</div>
-                <div class="alert-context">...卢伟冰：小米不会把内存涨价成本转嫁给消费者 卢伟冰在小米财报电话会上表示，尽管行业承压...</div>
+                <div class="alert-context">📌 卢伟冰：小米不会把内存涨价成本转嫁给消费者 卢伟冰在小米财报电话会上表示，尽管行业承压</div>
             </div>
             <div class="alert-card" style="border-left: 3px solid #d29922;">
-                <span class="alert-sev">🟠 涨价</span>
-                <span class="alert-source">白鲸出海</span>
-                <span class="alert-time">05/26 21:45</span>
+                <div class="alert-card-header">
+                    <span class="alert-sev" style="color:#d29922;">🟠 涨价 · 警告</span>
+                    <span class="alert-time">05/26 21:45</span>
+                </div>
+                <div class="alert-source-tag">📰 白鲸出海</div>
                 <div class="alert-title">Omdia：2026 年开局疲弱，中东智能手机市场预计将下滑 22%</div>
-                <div class="alert-context">...者谨慎、全球内存成本通胀致手机价格上涨促销空间压缩，以及季度末地缘政治紧张影响供应链和消费者信心。...</div>
+                <div class="alert-context">📌 者谨慎、全球内存成本通胀致手机价格上涨促销空间压缩，以及季度末地缘政治紧张影响供应链和消费者信心。</div>
             </div>
             <div class="alert-card" style="border-left: 3px solid #d29922;">
-                <span class="alert-sev">🟠 涨价</span>
-                <span class="alert-source">财联社</span>
-                <span class="alert-time">05/26 20:50</span>
+                <div class="alert-card-header">
+                    <span class="alert-sev" style="color:#d29922;">🟠 涨价 · 警告</span>
+                    <span class="alert-time">05/26 20:50</span>
+                </div>
+                <div class="alert-source-tag">📰 财联社</div>
                 <div class="alert-title">瑞银大幅上调美光目标价至华尔街最高 料其市值达 1.8 万亿美元</div>
-                <div class="alert-context">...股价将较约 800 美元的盘前价格上涨逾一倍，对应市值达 1.8 万亿美元，将巩固其全球最大公司及...</div>
-            </div>
-            <div class="alert-card" style="border-left: 3px solid #d29922;">
-                <span class="alert-sev">🟠 涨价</span>
-                <span class="alert-source">金融界</span>
-                <span class="alert-time">05/26 18:15</span>
-                <div class="alert-title">小米集团：第一季度新车交付量达到 80856 辆，同比增长 6.6%</div>
-                <div class="alert-context">...。受车辆购置税补贴及核心零部件价格上涨影响，该业务分部毛利率 20.1%，经营亏损 31 亿元。一...</div>
+                <div class="alert-context">📌 股价将较约 800 美元的盘前价格上涨逾一倍，对应市值达 1.8 万亿美元，将巩固其全球最大公司及</div>
             </div>
         </div>
     
@@ -326,9 +354,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="signal-fire">🔥 </span>
                 <span class="badge badge-chain1">chain1</span> <span class="badge badge-consensus">consensus</span> <span class="badge badge-evolution">📈 变量更新</span>
             </div>
-            <div class="signal-title">🔥 日经亚洲三连击τ定律国际验证深化——华为新麒麟芯片克服美国制裁技术逼近TSMC/Intel</div>
+            <div class="signal-title"><a href="https://asia.nikkei.com/spotlight/huawei-crackdown/huawei-says-new-kirin-chip-for-phones-overcomes-us-clampdown" target="_blank" rel="noopener" class="news-title-link">🔥 日经亚洲三连击τ定律国际验证深化——华为新麒麟芯片克服美国制裁技术逼近TSMC/Intel</a> <span class="source-link-count">+2来源</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 制程</span><span class="badge badge-tech">🔬 封装</span><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             <div class="signal-summary">Nikkei Asia 5/25报道华为新麒麟芯片克服美国制裁取得重大突破，技术能力逼近TSMC和Intel。这是48h内日经亚洲第三篇华为芯片报道（5/24何庭波τ定律人物深度+5/25 Kirin突破+SK海力士HBM亚洲三巨头），international media从单篇→持续campaign→常态化覆盖三阶跃迁。τ定律叙事的国际验证从'一次报道'升级为'连续follow-up'状态——国</div>
+            <div class="impact-row">🎯 🔬 技术突破信号 · ⚠️ 制裁风险 · → 利好国产半导体设备/材料/封测链</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 相关标的：</span><span class="beneficiary-item">688981.SH</span><span class="beneficiary-item">002371.SZ</span><span class="beneficiary-item">688012.SH</span><span class="beneficiary-item">688072.SH</span>
@@ -339,9 +368,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="signal-fire">🔥 </span>
                 <span class="badge badge-chain2">chain2</span> <span class="badge badge-positioning">positioning</span> <span class="badge badge-evolution">📈 变量更新</span>
             </div>
-            <div class="signal-title">🔥 Goldman Sachs PB对冲基金半导体获利了结信号——与all in AI形成双向对立</div>
+            <div class="signal-title"><a href="https://www.cnbc.com/2026/05/25/hedge-mutual-funds-semiconductors-software-goldman-.html" target="_blank" rel="noopener" class="news-title-link">🔥 Goldman Sachs PB对冲基金半导体获利了结信号——与all in AI形成双向对立</a> <span class="source-link-count">+2来源</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             <div class="signal-summary">CNBC 15h前报道高盛PB数据：对冲基金all in AI半导体仓位创历史最高+从软件轮动至硬件。但Goldman Sachs Insights 3天前另一篇报告指出：半导体股票强劲反弹后，对冲基金客户出现获利了结(taking profits on semiconductors)，虽然科技股继续创新高但'certain types'对冲基金正在profit-taking+rebalancin</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 相关标的：</span><span class="beneficiary-item">688981.SH</span><span class="beneficiary-item">688256.SH</span><span class="beneficiary-item">002371.SZ</span><span class="beneficiary-item">688041.SH</span>
@@ -355,6 +385,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
             <div class="signal-title">🔥 盛视科技签订60亿算力产业合作协议——远超公司市值的算力服务跨界</div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             <div class="signal-summary">盛视科技(002990.SZ)全资子公司与某公司签署《算力产业合作协议》，围绕算电协同、AIDC智能算力中心运营、算力产业资源整合、算力服务采购交付四大维度深度合作，整体合作业务体量折合约60亿元。盛视科技此前主营智慧口岸/智能交通，当前市值约50亿——60亿合同额超公司市值。公司公告称此为'布局算力服务业务的重要里程碑'，算力服务将成为'业绩增长的全新引擎'。16to22窗新鲜出炉(<8h)，媒</div>
+            <div class="impact-row">🎯 🔬 技术突破信号 · 🏭 产业化加速 · → 利好AI算力芯片/服务器/光模块</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 相关标的：</span><span class="beneficiary-item">002990.SZ</span>
@@ -365,9 +396,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="signal-fire">🔥 </span>
                 <span class="badge badge-chain2">chain2</span> <span class="badge badge-positioning">positioning</span> <span class="badge badge-evolution">📈 变量更新</span>
             </div>
-            <div class="signal-title">🔥 深科技14.7亿扩充高端存储封测——封测扩产三线共振（深科技+长电+通富=158.7亿）</div>
+            <div class="signal-title"><a href="https://www.stcn.com/article/detail/3908151.html" target="_blank" rel="noopener" class="news-title-link">🔥 深科技14.7亿扩充高端存储封测——封测扩产三线共振（深科技+长电+通富=158.7亿）</a></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 封装</span><span class="badge badge-tech">🔬 存储</span><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             <div class="signal-summary">深科技(000021.SZ)子公司深圳沛顿+合肥沛顿存储拟投资14.7亿扩充高端存储芯片封测产能，达产后月增封装产能3380万颗晶粒+测试800万颗。配合此前长电科技100亿固投(先进封装)+通富微电44亿定增(存储封测)+伟测科技20亿可转债，封测链条总投资达158.7亿+。三线共振背景：长鑫DDR5进入Corsair全球供应链+AI HBM需求缺口50-60%+华为τ定律将先进封装推向C位。深</div>
+            <div class="impact-row">🎯 📈 产能扩张期 · → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 相关标的：</span><span class="beneficiary-item">000021.SZ</span><span class="beneficiary-item">600584.SH</span><span class="beneficiary-item">002156.SZ</span><span class="beneficiary-item">688213.SH</span>
@@ -378,9 +410,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="signal-fire">🔥 </span>
                 <span class="badge badge-chain1">chain1</span> <span class="badge badge-positioning">positioning</span> <span class="badge badge-evolution">📈 变量更新</span>
             </div>
-            <div class="signal-title">🔥 中国芯片出口翻倍至310亿美元——半导体/AI产品贡献出口增长一半，制裁反向加速全球竞争力</div>
+            <div class="signal-title"><a href="https://www.benzinga.com/markets/tech/26/05/52738788/chinas-chip-exports-double-to-31-billion-as-us-restrictions-fuel-ai-demand" target="_blank" rel="noopener" class="news-title-link">🔥 中国芯片出口翻倍至310亿美元——半导体/AI产品贡献出口增长一半，制裁反向加速全球竞争力</a> <span class="source-link-count">+2来源</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             <div class="signal-summary">Benzinga 5/22报道中国芯片出口翻倍至310亿美元，Goldman Sachs + Nomura估算半导体/计算机/AI相关产品贡献了中国4月出口增长的一半。制裁反向效应：美国出口管制本意限制中国芯片产业，实际加速了中国半导体出口竞争力提升。36氪同期深度报道：国产芯片12年间从0→22%全球份额，成熟制程产能已领先，14nm以下突破为下一阶段。链1从'进口替代(减少进口)'→'出口竞争</div>
+            <div class="impact-row">🎯 🔬 技术突破信号 · ⚠️ 制裁风险 · → 利好国产半导体设备/材料/封测链</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 相关标的：</span><span class="beneficiary-item">688981.SH</span><span class="beneficiary-item">002371.SZ</span><span class="beneficiary-item">603986.SH</span>
@@ -394,6 +427,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
             <div class="signal-title">瑞银大幅上调美光目标价至1625美元/1.8万亿美元市值——AI存储需求远超共识预期</div>
             <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             <div class="signal-summary">瑞银将美光目标价从535美元大幅上调至1625美元（华尔街最高），对应市值1.8万亿美元。分析师认为AI推动存储结构性变化迹象显现，美光估值将继续上修。美光盘前+7%，带动美股半导体普涨（AMD/高通+3%、ARM/台积电+2%）。此目标价隐含HBM/AI存储需求增速远超当前市场共识——1.8万亿美元市值=当前市值~2x。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 相关标的：</span><span class="beneficiary-item">603986.SH</span><span class="beneficiary-item">688525.SH</span><span class="beneficiary-item">000021.SZ</span><span class="beneficiary-item">002156.SZ</span>
@@ -404,9 +438,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="signal-fire"></span>
                 <span class="badge badge-chain1">chain1</span> <span class="badge badge-positioning">positioning</span> <span class="badge badge-evolution">📈 变量更新</span>
             </div>
-            <div class="signal-title">光刻胶国产替代深度研报出炉——南大光电ArF率先突破+政府工作报告写入双催化</div>
+            <div class="signal-title"><a href="https://finance.sina.com.cn/roll/2026-05-25/doc-inhzcati5115289.shtml" target="_blank" rel="noopener" class="news-title-link">光刻胶国产替代深度研报出炉——南大光电ArF率先突破+政府工作报告写入双催化</a> <span class="source-link-count">+2来源</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 制程</span><span class="badge badge-tech">🔬 材料</span><span class="badge badge-15">集成电路</span></div>
             <div class="signal-summary">新浪财经5/25发布光刻胶深度研报：全球市场日本企业(TOK/JSR/信越/富士)占80%，国内彤程新材产品线最全(覆盖g线到ArF)、南大光电ArF率先突破(2025年收入突破2000万)。配合此前政府工作报告写入加速光刻胶国产化+大基金三期18%约288亿注资+超长期国债低息贷款，光刻胶为材料环节最强政策催化方向。36氪同步报道：光刻胶国产化率仅3%，硅晶圆国产使用率目标70%。</div>
+            <div class="impact-row">🎯 🔬 技术突破信号 · 🇨🇳 国产替代加速 · → 利好国产半导体设备/材料/封测链</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 相关标的：</span><span class="beneficiary-item">300346.SZ</span><span class="beneficiary-item">603650.SH</span><span class="beneficiary-item">688300.SH</span>
@@ -420,6 +455,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
             <div class="signal-title">晶方科技分拆荷兰子公司Anteryon至阿姆斯特丹上市——中国半导体企业国际化新范式</div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-15">集成电路</span></div>
             <div class="signal-summary">晶方科技(603005.SH)拟分拆子公司Anteryon至阿姆斯特丹交易所上市。Anteryon为荷兰光学半导体子公司，分拆完成后晶方科技仍保持控制权。这是中国半导体企业首次将欧洲子公司推向公开市场——不同于海外并购，而是反向将海外资产证券化。方案尚需股东会+阿姆斯特丹交易所批准。同期思特威+紫光展锐联合布局MicroLED光互连，中国半导体企业国际化进入'资产证券化+战略合作'多线程阶段。</div>
+            <div class="impact-row">🎯 🔬 技术突破信号 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 相关标的：</span><span class="beneficiary-item">603005.SH</span>
@@ -428,18 +464,172 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     
     <!-- News -->
     <div class="section-label" style="color:#58a6ff; margin-top:24px;">
-        📰 24h 情报流 (68 去重话题 | 68 原始文章)
+        📰 24h 情报流 (69 去重话题 | 69 原始文章)
     </div>
     
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
+            <div class="news-meta">
+                <span class="news-time">05/27 18:55</span>
+                <span class="badge badge-source">财联社</span>
+            </div>
+            <div class="news-title">云南能投：获得会泽县紧风口风电场项目开发权 <span class="source-inline">(财联社)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">⚡ 其他</span></div>
+            
+            <div class="news-summary">云南能投获得会泽县紧风口风电场项目开发权，该项目列入云南省 2025 年第三批新能源项目开发建设清单，预计总装机容量 30MW，工程建设总工期 10 个月，有利于提升公司新能源装机规模和经营业绩，但实施尚需获得政府核准及相关审批，存在不确定性。</div>
+            <div class="impact-row">🎯 → 利好新能源/储能/电池产业链</div>
+            
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
+            <div class="news-meta">
+                <span class="news-time">05/27 18:55</span>
+                <span class="badge badge-source">格隆汇</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
+            </div>
+            <div class="news-title">花旗：先进封装设备提供商将受益于华为的新芯片设计方法 <span class="source-inline">(格隆汇)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">🔬 封装</span><span class="badge badge-15">集成电路</span></div>
+            
+            <div class="news-summary">花旗分析师认为，先进封装设备和服务提供商可能成为华为新芯片设计方法的主要受益者，尤其是混合键合设备制造商，以及随着封装复杂性上升的外包芯片组装和测试提供商。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
+            
+            <div class="beneficiary-row">
+                <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">长电科技(600584.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span><span class="beneficiary-item">中芯国际(688981.SH)</span><span class="beneficiary-item">深科技(000021.SZ)</span>
+            </div>
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
+            <div class="news-meta">
+                <span class="news-time">05/27 18:31</span>
+                <span class="badge badge-source">快科技</span>
+            </div>
+            <div class="news-title">小米推出米家电动直柄螺丝刀：三档扭力可调，2000mAh 大电池 <span class="source-inline">(快科技)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">⚡ 其他</span></div>
+            
+            <div class="news-summary">小米推出米家电动直柄螺丝刀，下周三开启众筹，众筹价 99 元。该产品支持三档扭力调节，电动模式最大扭矩 4N・m，手动模式 8N・m。配备 2000mAh 电池，满电可拧约 600 颗螺丝。采用批头卡座磁吸（含 9 个长批头、9 个短批头），支持一体收纳、随时充磁，自带环形 LED 灯，可一键切换正反转，支持 Type-C 充电。</div>
+            <div class="impact-row">🎯 → 利好新能源/储能/电池产业链</div>
+            
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
+            <div class="news-meta">
+                <span class="news-time">05/27 18:31</span>
+                <span class="badge badge-source">财联社</span>
+            </div>
+            <div class="news-title">胜通能源：七腾机器人要约收购期限届满 股票停牌 <span class="source-inline">(财联社)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">🤖 具身智能</span><span class="badge badge-tech">⚡ 其他</span><span class="badge badge-15">AI算力</span></div>
+            
+            <div class="news-summary">胜通能源公告，七腾机器人向公司全体股东发出的部分要约收购期限已于 2026 年 5 月 27 日届满，要约价格 13.28 元 / 股，收购股份数量 42,336,000 股，占公司总股本 15%。因要约收购结果需进一步确认，公司股票自 2026 年 5 月 28 日上午开市起停牌，将根据收购完成后股权分布是否具备上市条件等情况，于要约收购结果公告日复牌或继</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 利好新能源/储能/电池产业链 · → 关注算力芯片/光模块/服务器</div>
+            
+            <div class="beneficiary-row">
+                <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">奥比中光(688322.SH)</span><span class="beneficiary-item">埃斯顿(002747.SZ)</span>
+            </div>
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
+            <div class="news-meta">
+                <span class="news-time">05/27 18:31</span>
+                <span class="badge badge-source">财联社</span>
+            </div>
+            <div class="news-title">香农芯创：预计 2026 年海普存储的收入会有显著增长 <span class="source-inline">(财联社)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-15">集成电路</span></div>
+            
+            <div class="news-summary">香农芯创表示与 SK 海力士合作稳定，企业级 SSD 已与国内主流算力设备厂商完成验证对接并实现规模销售。存储芯片市场短期供需缺口难缓解，Q2 景气度较高。海普存储作为公司自研重点品牌，聚焦国内一线自主算力生态提供国产化、定制化企业级存储产品，公司将战略资源向其倾斜，受益行业景气度，预计 2026 年收入显著增长。</div>
+            <div class="impact-row">🎯 🇨🇳 国产替代加速 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
+            
+            <div class="beneficiary-row">
+                <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">寒武纪(688256.SH)</span><span class="beneficiary-item">海光信息(688041.SH)</span><span class="beneficiary-item">兆易创新(603986.SH)</span><span class="beneficiary-item">佰维存储(688525.SH)</span>
+            </div>
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
+            <div class="news-meta">
+                <span class="news-time">05/27 18:30</span>
+                <span class="badge badge-source">财联社</span>
+            </div>
+            <div class="news-title">沃格光电：公司在泛半导体领域的业务尚处于早期阶段 <span class="source-inline">(财联社)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-15">集成电路</span></div>
+            
+            <div class="news-summary">沃格光电公告称，公司泛半导体领域业务尚处早期阶段，相关产品技术在研发或送样验证中，未形成规模化量产，营收占比极低且经营主体亏损，该业务产业化进程、订单规模及经营效益存在较大不确定性，提醒投资者注意风险。</div>
+            <div class="impact-row">🎯 🏭 产业化加速 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
+            
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
+            <div class="news-meta">
+                <span class="news-time">05/27 18:27</span>
+                <span class="badge badge-source">界面</span>
+            </div>
+            <div class="news-title">恒生港美科技指数将纳入 SpaceX <span class="source-inline">(界面)</span></div>
+            <div class="news-tags"></div>
+            
+            <div class="news-summary">恒生指数公司公告，恒生港美科技指数编算方法将更新，新增太空探索技术公司（SpaceX）至指定美国成分股名单。8 只美国上市成分股比重将于 SpaceX 第 7 个交易日收市后重新计算至等权重，新增成分股和更新后的成分股比重将于其第 11 个交易日生效，上述变更以 SpaceX 确认上市作实。</div>
+            
+            
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
+            <div class="news-meta">
+                <span class="news-time">05/27 18:26</span>
+                <span class="badge badge-source">界面</span>
+            </div>
+            <div class="news-title">腾讯文档裁员取消北京办公地 <span class="source-inline">(界面)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
+            
+            <div class="news-summary">腾讯文档因聚焦 AI 业务布局、提升团队协作效率，将北京团队办公重心统一划归深圳，对部分异地人员架构做出调整，企业已和相关员工充分沟通，同步开放京深等地内部转岗渠道，相关安置将充分尊重员工个人意愿。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
+            
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
+            <div class="news-meta">
+                <span class="news-time">05/27 17:55</span>
+                <span class="badge badge-source">凤凰科技</span>
+            </div>
+            <div class="news-title">OpenAI 斥巨资在新加坡建实验室，开启首个海外 AI 大本营 <span class="source-inline">(凤凰科技)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
+            <div class="quant-row">📊 2.34亿</div>
+            <div class="news-summary">人工智能巨头 OpenAI 与新加坡政府签署多年期合作协议，承诺投入超 2.34 亿美元在新加坡设立美国本土以外首个应用人工智能实验室。该实验室将聚焦三大方向：帮助当地公共和私营机构部署前沿 AI、培养本地 AI 人才、推动 AI 技术惠及民众与企业。OpenAI 计划与当地教育部和政府科技局合作开发 AI 教育工具并开设新加坡版 OpenAI 学院，预计未</div>
+            <div class="impact-row">🎯 🏭 产业化加速 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
+            
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
+            <div class="news-meta">
+                <span class="news-time">05/27 17:45</span>
+                <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
+            </div>
+            <div class="news-title">德福科技：拟 31 亿元投建年产 5 万吨高端 AI 电子电路铜箔项目 <span class="source-inline">(财联社)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
+            <div class="quant-row">📊 31亿 · 21亿 · 10亿</div>
+            <div class="news-summary">德福科技拟投资约 31 亿元（含固定资产投资约 21 亿元、后期运营流动资金支持 10 亿元），在全资子公司琥珀新材内建设年产 5 万吨高端 AI 电子电路铜箔项目，项目分两期各建设年产 2.5 万吨铜箔项目。该投资事项尚需股东会审议批准，项目实施存在审批、资金、产能消化等风险。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
+            
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
+            <div class="news-meta">
+                <span class="news-time">05/27 17:45</span>
+                <span class="badge badge-source">电商报</span>
+            </div>
+            <div class="news-title">巴基斯坦与阿里达成多项合作，加速巴基斯坦数字经济与 AI 发展 <span class="source-inline">(电商报)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
+            
+            <div class="news-summary">巴基斯坦与阿里巴巴宣布在 AI 基础设施、医疗 AI 科技、中小企业发展、人才培养、电子支付等领域达成多项合作。巴基斯坦总理夏巴兹・谢里夫和阿里巴巴集团主席蔡崇信出席签约仪式。阿里旗下业务与巴方机构签约，将为巴中小企业提供 AI 和数字化培训，推动企业入驻并设立「巴基斯坦馆」，拓展数字支付业务。助力建设本地化云基础设施和 AI 应用，提供医疗 AI 技术，合</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
+            
+        </div>
+        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
+            <div class="news-meta">
+                <span class="news-time">05/27 17:40</span>
+                <span class="badge badge-source">格隆汇</span>
+            </div>
+            <div class="news-title">潍柴动力：一季度公司数据中心用发动机销售超 500 台，同比大幅增长超 240% <span class="source-inline">(格隆汇)</span></div>
+            <div class="news-tags"><span class="badge badge-tech">⚡ 其他</span></div>
+            
+            <div class="news-summary">潍柴动力在数据中心电力能源领域拥有覆盖多种燃料类型和技术路线的产品组合，可满足备用发电、持续发电等需求。全球相关市场规模高速增长，公司已切入国内外高端市场，销量高速增长，2026 年一季度数据中心用发动机销售超 500 台，同比大幅增长超 240%。</div>
+            <div class="impact-row">🎯 → 利好新能源/储能/电池产业链</div>
+            
+        </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
             <div class="news-meta">
                 <span class="news-time">05/27 16:50</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">快手 Q1 总收入 337 亿元，核心商业收入同比增长 10.7%</div>
+            <div class="news-title">快手 Q1 总收入 337 亿元，核心商业收入同比增长 10.7% <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             <div class="quant-row">📊 337亿 · 34亿 · 4.13亿</div>
             <div class="news-summary">2026 年第一季度，快手总营业收入 337 亿元，核心商业收入同比增长 10.7%，经调整净利润 34 亿元。应用平均日活跃用户 4.13 亿、月活跃用户 7.72 亿，均创历史新高。同时，快手持续深化 AI 战略布局，推动主营业务经营效率提升。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -447,10 +637,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 16:50</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">可灵 AI 一季度营收同比增长超 300%，3 月 ARR 近 5 亿美元</div>
+            <div class="news-title">可灵 AI 一季度营收同比增长超 300%，3 月 ARR 近 5 亿美元 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             <div class="quant-row">📊 5亿 · 6.5亿</div>
             <div class="news-summary">快手 2026 年第一季度业绩显示，可灵 AI 商业化进程加速。该季度可灵 AI 营业收入超 6.5 亿元，同比增长超 300%。3 月年化收入运行率近 5 亿美元。此前 2 月，可灵 AI 已上线可灵 3.0 系列模型，进一步迭代模型能力、产品体系和应用场景。</div>
+            <div class="impact-row">🎯 🏭 产业化加速 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -458,10 +649,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 16:41</span>
                 <span class="badge badge-source">格隆汇</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
             </div>
-            <div class="news-title">机构：标普 500 指数有望创下自 2021 年以来最强劲的盈利增长</div>
+            <div class="news-title">机构：标普 500 指数有望创下自 2021 年以来最强劲的盈利增长 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-tech">⚡ 其他</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">随着增长动能从人工智能驱动的涨幅扩展至美国大多数企业，标普 500 指数有望实现五年来最强劲的盈利增长。该基准指数中约 93% 的企业已公布财报，83% 的公司业绩超出分析师预期，为 2021 年以来最高水平。各行业均呈增长态势（医疗保健板块除外），能源和科技板块的强劲表现抵消了因伊朗战争导致油价上涨引发的消费者信心疲软，通信服务和非必需消费品板块表现最为亮</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 利好新能源/储能/电池产业链 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力,集成电路">
@@ -469,10 +661,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 16:35</span>
                 <span class="badge badge-source">金融界</span>
             </div>
-            <div class="news-title">三星芯片员工奖金 100 倍差距引发其他部门强烈不满</div>
+            <div class="news-title">三星芯片员工奖金 100 倍差距引发其他部门强烈不满 <span class="source-inline">(金融界)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             <div class="quant-row">📊 6亿</div>
             <div class="news-summary">三星电子与最大工会达成初步协议，将部分 AI 热潮带来的利润以股票和现金形式作为奖金分配给员工，避免了罢工。但协议引发内部不满，存储芯片部门员工可获约 6 亿韩元奖金，而智能手机等部门员工仅 600 万韩元，差距达 100 倍。其他部门员工认为被排除在外，部分人佩戴黑丝带抗议，较小工会已申请法院禁令试图阻止协议，并寻求推翻该协议，其会员人数也大幅增加。分歧还</div>
+            <div class="impact-row">🎯 ⚠️ 制裁风险 · → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">兆易创新(603986.SH)</span><span class="beneficiary-item">佰维存储(688525.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span>
@@ -483,10 +676,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 16:30</span>
                 <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → production</span>
             </div>
-            <div class="news-title">三星电子工会就临时薪资协议启动投票</div>
+            <div class="news-title">三星电子工会就临时薪资协议启动投票 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"></div>
             
             <div class="news-summary">韩国三星电子工会 22 日开始就临时薪资协议进行电子投票，投票持续至 5 月 27 日上午 10 时，约 8.9 万名工会成员参与。协议生效需参与投票人数超全部成员半数且多数支持，否则劳资双方需重新谈判。</div>
+            
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -494,10 +688,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 15:55</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">星巴克终止旨在解决产品短缺的人工智能项目</div>
+            <div class="news-title">星巴克终止旨在解决产品短缺的人工智能项目 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">星巴克终止旨在解决产品短缺的人工智能项目。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -505,10 +700,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 15:55</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">SpaceX：目前瞄准美国中部时间 18:30 进行星舰发射</div>
+            <div class="news-title">SpaceX：目前瞄准美国中部时间 18:30 进行星舰发射 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"></div>
             
             <div class="news-summary">SpaceX 目前瞄准美国中部时间 18:30（北京时间 07:30）进行星舰发射。</div>
+            
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -516,10 +712,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 15:50</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">腾讯会议推出「声链」功能：解决同时开麦啸叫问题</div>
+            <div class="news-title">腾讯会议推出「声链」功能：解决同时开麦啸叫问题 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">腾讯会议推出「声链」功能，可解决同一会议室多设备同时开麦的啸叫问题并自动识别发言人。其核心是腾讯天籁实验室的「跨设备 AI 回声消除技术」，通过对各设备音频回声消除、统一传输至声链中心进行混音对齐后上传会议系统，以纯软件方案实现清晰流畅的音频体验。用户可升级至最新版本体验。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -527,10 +724,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 15:45</span>
                 <span class="badge badge-source">格隆汇</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
             </div>
-            <div class="news-title">华峰测控：股东拟询价转让 1% 公司股份</div>
+            <div class="news-title">华峰测控：股东拟询价转让 1% 公司股份 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"></div>
             
             <div class="news-summary">华峰测控股东中国时代远望科技有限公司拟通过询价转让方式转让 135.56 万股（占总股本 1.00%），转让原因为自身资金需求，受让方受让后 6 个月内不得转让。</div>
+            
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -538,10 +736,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 15:41</span>
                 <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → production</span>
             </div>
-            <div class="news-title">微软和安永将联合投资超 10 亿美元 帮助客户启动重大 AI 项目</div>
+            <div class="news-title">微软和安永将联合投资超 10 亿美元 帮助客户启动重大 AI 项目 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-tech">⚡ 其他</span><span class="badge badge-15">AI算力</span></div>
             <div class="quant-row">📊 10亿</div>
             <div class="news-summary">微软与安永计划投入超 10 亿美元协助客户启动重大 AI 项目，帮助企业将 AI 项目从试点阶段发展为大规模项目以获得投资回报，初期重点聚焦财务、税务、人力资源及供应链相关业务领域，涉及金融服务、工业、能源、消费与零售、政府及医疗保健行业。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 利好新能源/储能/电池产业链 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -549,10 +748,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 14:55</span>
                 <span class="badge badge-source">钛媒体</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
             </div>
-            <div class="news-title">阻止逾 22 亿美元潜在欺诈交易，苹果公布 App Store 2025 年安全防护成绩单</div>
+            <div class="news-title">阻止逾 22 亿美元潜在欺诈交易，苹果公布 App Store 2025 年安全防护成绩单 <span class="source-inline">(钛媒体)</span></div>
             <div class="news-tags"></div>
             <div class="quant-row">📊 22亿 · 8.5亿 · 11亿</div>
             <div class="news-summary">苹果在年度开发者大会召开前夕分享报告，介绍 App Store 依托多重防护机制服务用户与开发者。报告称 App Store 为全球性平台，每周超 8.5 亿人次访问 175 个商店，安全防护需持续优化创新，并公布核心防护数据，包括拦截潜在欺诈交易挽回超 22 亿美元损失，驳回超 200 万款问题应用上架申请，拦截 11 亿个虚假用户账号注册，封禁 4040</div>
+            
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
@@ -560,10 +760,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 14:50</span>
                 <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: expansion → rumor</span>
             </div>
-            <div class="news-title">深科技回应股价「抢跑」质疑：一直有扩产计划，不是突然放出来的利好消息</div>
+            <div class="news-title">深科技回应股价「抢跑」质疑：一直有扩产计划，不是突然放出来的利好消息 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 封装</span><span class="badge badge-tech">🔬 存储</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">深科技因子公司拟扩大高端存储芯片封测产能公告披露前一日股价尾盘大幅拉升引发消息提前泄露猜测，公司证券部回应称扩产计划已持续释放三四个月，并非突然放出的利好消息。</div>
+            <div class="impact-row">🎯 📈 产能扩张期 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">长电科技(600584.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span><span class="beneficiary-item">中芯国际(688981.SH)</span><span class="beneficiary-item">深科技(000021.SZ)</span>
@@ -574,10 +775,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 14:40</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">OpenAI 和 Google 加大在新加坡的人工智能投资力度</div>
+            <div class="news-title">OpenAI 和 Google 加大在新加坡的人工智能投资力度 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">OpenAI 和 Google 加大在新加坡的人工智能投资力度。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -585,10 +787,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 14:10</span>
                 <span class="badge badge-source">创业邦</span>
             </div>
-            <div class="news-title">睿心医疗完成近亿元 D 轮融资</div>
+            <div class="news-title">睿心医疗完成近亿元 D 轮融资 <span class="source-inline">(创业邦)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 具身智能</span><span class="badge badge-tech">🤖 AI应用</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">深圳睿心智能医疗科技有限公司完成近亿元 D 轮融资，由广州健康产投领投、越富基金跟投，融资将用于公司管线发展、业务增长及海外市场拓展，深化 AI 驱动的血管介入手术机器人体系布局，打造 AI+ 机器人诊疗一体化平台。该公司聚焦心血管精准诊疗赛道，构建了心脑血管疾病一体化智能诊疗平台，拥有 AngioQFA、睿心分数（CTFFR）、心腔内超声 ICE 等核心产</div>
+            <div class="impact-row">🎯 🏭 产业化加速 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">奥比中光(688322.SH)</span><span class="beneficiary-item">埃斯顿(002747.SZ)</span>
@@ -599,10 +802,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 13:15</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">鹏鼎控股：不涉及半导体和芯片业务</div>
+            <div class="news-title">鹏鼎控股：不涉及半导体和芯片业务 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">鹏鼎控股主要从事各类印制电路板的研发、设计、制造、销售与服务，主要产品包括 FPC、SMA、SLP、HDI、RPCB、Rigid Flex 等，不涉及半导体和芯片业务。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力,集成电路">
@@ -610,10 +814,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 13:10</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">高盛因强劲的盈利前景将标普 500 指数年末目标上调至 8000 点</div>
+            <div class="news-title">高盛因强劲的盈利前景将标普 500 指数年末目标上调至 8000 点 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">高盛将标普 500 指数 2026 年底预测值从 7600 点上调至 8000 点，较最近收盘价高出 6.4%，理由是企业盈利持续强劲。同时将 2026 年该指数每股收益预期上调至 340 美元（同比增 24%），2027 年上调至 385 美元（进一步增 13%）。高盛称盈利增长是推动指数整体回报的主要动力且未来将持续，此举加剧了券商看涨预期浪潮。此前瑞银</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力,集成电路">
@@ -621,10 +826,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 12:50</span>
                 <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
             </div>
-            <div class="news-title">小米 YU7 标准版汽车正式开启交付：家族设计 + 蛟龙底盘，23.35 万元起</div>
+            <div class="news-title">小米 YU7 标准版汽车正式开启交付：家族设计 + 蛟龙底盘，23.35 万元起 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 碳化硅</span><span class="badge badge-tech">🤖 自动驾驶</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">小米汽车今日宣布小米 YU7 标准版正式开启交付，售价 23.35 万元起，现车最快 2 小时可提。该车采用家族设计，续航长充电快，搭载小米蛟龙底盘等配置，标配天际屏、752V 碳化硅高压平台、超级电机 V6s Plus、前双叉臂 + 后五连杆独立悬架、前四活塞固定卡钳、天幕玻璃双层镀银 + 前风挡三层镀银，以及激光雷达、4D 毫米波雷达、700TOPS 辅</div>
+            <div class="impact-row">🎯 🏭 产业化加速 · → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">天岳先进(688234.SH)</span><span class="beneficiary-item">寒武纪(688256.SH)</span><span class="beneficiary-item">海光信息(688041.SH)</span>
@@ -635,10 +841,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 12:45</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">协鑫能科：目前阶段公司算力相关收入占总营收比重较低</div>
+            <div class="news-title">协鑫能科：目前阶段公司算力相关收入占总营收比重较低 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"></div>
             
             <div class="news-summary">协鑫能科表示目前算力相关收入占总营收比重较低，归入其它业务分类营收中。</div>
+            
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">寒武纪(688256.SH)</span><span class="beneficiary-item">海光信息(688041.SH)</span>
@@ -649,10 +856,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 12:30</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">机构：2026 年第一季度全球 DRAM 营收逼近千亿美元</div>
+            <div class="news-title">机构：2026 年第一季度全球 DRAM 营收逼近千亿美元 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             <div class="quant-row">📊 ↑80% · ↑50%</div>
             <div class="news-summary">2026 年第一季度全球 DRAM 营收环比增长 80% 创历史新高，主要受市场需求强劲、存储价格走强以及 HBM 和 AI 数据中心基础设施中 LPDDR5 应用占比提升推动。三星存储业务领先，SK 海力士与美光分列二、三位。预计第二季度价格将继续环比增长 50%（包括 HBM 及标准型 DRAM）。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">佰维存储(688525.SH)</span><span class="beneficiary-item">兆易创新(603986.SH)</span><span class="beneficiary-item">深科技(000021.SZ)</span><span class="beneficiary-item">通富微电(002156.SZ)</span>
@@ -663,10 +871,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 12:15</span>
                 <span class="badge badge-source">界面</span>
             </div>
-            <div class="news-title">港股午评：恒指跌 0.85%，科技黄金保险齐跌，芯片半导体继续强劲</div>
+            <div class="news-title">港股午评：恒指跌 0.85%，科技黄金保险齐跌，芯片半导体继续强劲 <span class="source-inline">(界面)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">5 月 27 日，港股三大指数盘初小幅冲高后持续走弱，恒生指数跌 0.85%，国企指数跌 1.02%，恒生科技指数跌 0.25%。权重科技股多数低迷，阿里巴巴跌近 3%，小米、京东跌超 2%。芯片半导体股维持强势，兆易创新、中芯国际齐涨，纸业股拉升，玖龙纸业大涨超 9%。黄金股再度低迷，保险股、汽车股、重型机械股纷纷下跌。</div>
+            <div class="impact-row">🎯 📊 市场情绪高涨 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力,集成电路">
@@ -674,10 +883,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 12:05</span>
                 <span class="badge badge-source">电商报</span>
             </div>
-            <div class="news-title">高通与字节跳动达成 AI 芯片供应协议，共同发力 AI 智能体基础设施</div>
+            <div class="news-title">高通与字节跳动达成 AI 芯片供应协议，共同发力 AI 智能体基础设施 <span class="source-inline">(电商报)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 碳化硅</span><span class="badge badge-tech">🤖 算力芯片</span><span class="badge badge-tech">🤖 AI应用</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             <div class="quant-row">📊 2000亿</div>
             <div class="news-summary">高通与字节跳动达成 AI 芯片供应合作协议，高通将为字节跳动提供数百万颗定制化 ASIC 芯片以支撑其数据中心 AI 工作负载及智能体软件基础设施，并助力字节跳动将自研芯片设计转化为量产产品。双方合作在合规框架下运行，有助于字节跳动降低对单一 GPU 供应商的依赖。此次合作是高通向 AI 数据中心基础设施领域转型的重要举措，也为字节跳动 2026 年计划投入</div>
+            <div class="impact-row">🎯 🏭 产业化加速 · → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">天岳先进(688234.SH)</span><span class="beneficiary-item">寒武纪(688256.SH)</span><span class="beneficiary-item">海光信息(688041.SH)</span>
@@ -688,10 +898,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 11:50</span>
                 <span class="badge badge-source">IT 之家</span> <span class="badge badge-evolution">📌 状态更新: unknown → production</span>
             </div>
-            <div class="news-title">四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性</div>
+            <div class="news-title">四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性 <span class="source-inline">(IT 之家)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 大模型</span><span class="badge badge-15">AI算力</span></div>
             <div class="quant-row">📊 34亿 · ↑9%</div>
             <div class="news-summary">Uber 在 2026 年仅四个月就耗尽全年人工智能预算，公司开始质疑投入是否产生实质回报。总裁兼首席运营官安德鲁・麦克唐纳表示，未发现 Claude Code 的词元使用量激增与面向用户推出更实用功能之间存在关联，称目前难以证实二者联系，相信未来会逐渐明朗。2025 年 Uber 研发投入达 34 亿美元，较上年增长 9%。首席执行官达拉・霍斯劳沙希曾表示</div>
+            <div class="impact-row">🎯 🏭 产业化加速 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -699,10 +910,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 11:00</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">富时罗素：SpaceX 将独立接受指数纳入审核</div>
+            <div class="news-title">富时罗素：SpaceX 将独立接受指数纳入审核 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"></div>
             
             <div class="news-summary">富时罗素：SpaceX 将独立接受指数纳入审核。</div>
+            
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="新型电池">
@@ -710,10 +922,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 10:58</span>
                 <span class="badge badge-source">格隆汇</span> <span class="badge badge-evolution">📌 状态更新: unknown → production</span>
             </div>
-            <div class="news-title">SpaceX 获美国军方 22.9 亿美元卫星通信网络合同</div>
+            <div class="news-title">SpaceX 获美国军方 22.9 亿美元卫星通信网络合同 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">⚡ 光伏</span><span class="badge badge-15">新型电池</span></div>
             <div class="quant-row">📊 22.9亿</div>
             <div class="news-summary">美国太空部队周二授予 SpaceX 公司一份价值 22.9 亿美元的合同，用于建设空间数据网络（SDN）骨干网。该网络为弹性扩散型低地球轨道卫星星座，将提供高容量、低延迟数据传输，支持导弹预警跟踪数据近乎实时传输至拦截器，是「金穹」导弹防御计划基石，需在 2027 年底前交付可运行原型系统。其将与太空发展局传输层协同，为国防部任务提供关键数据传输，太空部队计</div>
+            <div class="impact-row">🎯 🏭 产业化加速 · → 利好新能源/储能/电池产业链 · → 关注固态电池/钠电池链</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -721,10 +934,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 10:58</span>
                 <span class="badge badge-source">金融界</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
             </div>
-            <div class="news-title">苹果、谷歌呼吁在加拿大《网络安全法案》中引入司法监督</div>
+            <div class="news-title">苹果、谷歌呼吁在加拿大《网络安全法案》中引入司法监督 <span class="source-inline">(金融界)</span></div>
             <div class="news-tags"></div>
             
             <div class="news-summary">苹果和谷歌母公司 Alphabet 周二推动修改加拿大议会审议的网络安全法案 C-22，旨在对企业所称的「可能出现的秘密命令」增加司法监督，这些命令旨在破解其软件和设备的加密。该法案与英澳已颁布措施类似，旨在赋予执法官员访问加密数据的权限，加拿大当局称有助于更早调查安全威胁并采取更迅速行动。苹果、谷歌和 Meta Platforms 反对该法案，认为其可能导</div>
+            
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -732,10 +946,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 10:45</span>
                 <span class="badge badge-source">界面</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
             </div>
-            <div class="news-title">最高法：研究制定涉 AI 案件和数据产权司法保护规范性文件</div>
+            <div class="news-title">最高法：研究制定涉 AI 案件和数据产权司法保护规范性文件 <span class="source-inline">(界面)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">最高法将依法平等保护各类市场主体合法权益，着力解决干预经济纠纷等问题，健全防范纠正冤错案件机制。加快出台公司法司法解释，平衡公司各方利益，完善执行信用惩戒与修复机制。巩固涉外审判优势，打造知识产权、国际商事争端解决优选地。研究虚拟货币等新型案件裁判规则，制定涉内幕交易、操纵市场民事赔偿司法解释。针对数字经济新业态，研究制定涉人工智能案件和数据产权司法保护规范</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
@@ -743,10 +958,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 10:30</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">消息称三星计划在越南投建一座价值 15 亿美元的存储芯片测试工厂</div>
+            <div class="news-title">消息称三星计划在越南投建一座价值 15 亿美元的存储芯片测试工厂 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 封装</span><span class="badge badge-tech">🔬 存储</span><span class="badge badge-15">集成电路</span></div>
             <div class="quant-row">📊 15亿 · 25亿</div>
             <div class="news-summary">三星向越南申请环境许可证以建设新工厂，计划投资 15 亿美元建设存储芯片测试工厂，预计 2027 年 11 月运营，还考虑追加 25 亿美元投资。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">兆易创新(603986.SH)</span><span class="beneficiary-item">佰维存储(688525.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span>
@@ -757,10 +973,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 10:10</span>
                 <span class="badge badge-source">快科技</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
             </div>
-            <div class="news-title">朱一明 11 天套现超 21 亿元</div>
+            <div class="news-title">朱一明 11 天套现超 21 亿元 <span class="source-inline">(快科技)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-15">集成电路</span></div>
             <div class="quant-row">📊 21亿 · 3689亿 · 25.72亿</div>
             <div class="news-summary">6 月 26 日晚，兆易创新发布公告称，公司控股股东、董事长朱一明于 2026 年 5 月 11 日至 5 月 25 日期间，通过集中竞价和大宗交易方式累计减持公司股份 632.99 万股，占公司总股本的 0.90%。本次权益变动后，朱一明及其一致行动人香港赢富得有限公司的合计持股比例由 7.90% 减少至 7.00%，触及 1% 刻度线。本次减持为履行此前</div>
+            <div class="impact-row">🎯 📊 市场情绪高涨 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">兆易创新(603986.SH)</span><span class="beneficiary-item">佰维存储(688525.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span>
@@ -771,10 +988,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 10:10</span>
                 <span class="badge badge-source">虎嗅网</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
             </div>
-            <div class="news-title">外观设计引争议，法拉利首款纯电车型 Luce 发布后股价大跌</div>
+            <div class="news-title">外观设计引争议，法拉利首款纯电车型 Luce 发布后股价大跌 <span class="source-inline">(虎嗅网)</span></div>
             <div class="news-tags"><span class="badge badge-tech">⚡ 其他</span></div>
             
             <div class="news-summary">法拉利正式推出旗下首款纯电动车型 Luce，由前苹果首席设计官乔纳森・伊夫设计，风格简约，与燃油跑车设计大相径庭。该车起售价 64 万美元，搭载 122 千瓦时电池，续航 530 公里，四台电机，零百加速 2.5 秒，最高时速超 310 公里。作为品牌首款五座、第二款四门车型，定位顶级富豪家庭。新车发布引发两极评价，部分分析师质疑其是否传承跑车基因，导致米兰</div>
+            <div class="impact-row">🎯 → 利好新能源/储能/电池产业链</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="新型电池,集成电路">
@@ -782,10 +1000,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 09:50</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">创业板指涨逾 1% 光伏领涨</div>
+            <div class="news-title">创业板指涨逾 1% 光伏领涨 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-tech">⚡ 光伏</span><span class="badge badge-15">新型电池</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">指数分化，创业板指拉升涨逾 1.00%，沪指跌 0.08%，深成指涨 0.26%。光伏、电力、芯片等方向涨幅居前，沪深京三市上涨个股近 2600 只。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 利好新能源/储能/电池产业链 · → 关注固态电池/钠电池链</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -793,10 +1012,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 09:45</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">郑州「十五五」规划纲要：积极创建超硬材料领域国家制造业创新中心 打造培育钻石之都</div>
+            <div class="news-title">郑州「十五五」规划纲要：积极创建超硬材料领域国家制造业创新中心 打造培育钻石之都 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">⚡ 其他</span></div>
             
             <div class="news-summary">郑州市「十五五」规划纲要提出，实施产业创新工程，强化战略性新兴产业支柱作用，打造新一代信息技术、新能源及智能网联汽车 2 个万亿级和高端装备、新材料、生物医药、节能环保 4 个千亿级产业集群。其中，将统筹电子信息全链条发展，构建新能源汽车产业体系，建设高端装备产业基地，巩固提升材料优势，积极创建超硬材料领域国家制造业创新中心，打造培育钻石之都，同时发展生物医</div>
+            <div class="impact-row">🎯 → 利好新能源/储能/电池产业链</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力,集成电路">
@@ -804,10 +1024,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 09:30</span>
                 <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
             </div>
-            <div class="news-title">AI 眼镜新品频发，产业链追「光」逐「芯」</div>
+            <div class="news-title">AI 眼镜新品频发，产业链追「光」逐「芯」 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">AI 眼镜市场热度升温，厂商密集发布新品，谷歌亦预告秋季推出首款 AI 眼镜。A 股 AI 眼镜产业链加速布局，光学部件（近半成本，Micro LED 为重点方向）和主控芯片（成本占比两至三成）成核心环节，相关公司纷纷卡位。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -815,10 +1036,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 09:10</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">智谱等在上海成立人工智能产业创投合伙企业</div>
+            <div class="news-title">智谱等在上海成立人工智能产业创投合伙企业 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">上海智谱国泰海通人工智能产业创业投资合伙企业（有限合伙）近日成立，经营范围为创业投资（限投资未上市企业），由智谱全资子公司北京智谱未来科技有限公司、国泰海通全资子公司国泰君安创新投资有限公司等共同出资。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -826,10 +1048,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 05:25</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">马斯克据悉曾与同事讨论 SpaceX 与特斯拉合并事宜</div>
+            <div class="news-title">马斯克据悉曾与同事讨论 SpaceX 与特斯拉合并事宜 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"></div>
             
             <div class="news-summary">马斯克曾与同事讨论将特斯拉与 SpaceX 合并的可能性。</div>
+            
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -837,10 +1060,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 03:45</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">俄法院裁定：欧洲清算银行立即向俄央行赔偿约 2000 亿欧元</div>
+            <div class="news-title">俄法院裁定：欧洲清算银行立即向俄央行赔偿约 2000 亿欧元 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"></div>
             <div class="quant-row">📊 2000亿</div>
             <div class="news-summary">俄罗斯莫斯科仲裁法院批准俄央行申请，将对欧洲清算银行约 2000 亿欧元的追偿判决转为「立即执行」，跳过上诉等待期。但因被冻结资产在欧盟制裁框架下维持现状，实际追回取决于欧盟立场。</div>
+            <div class="impact-row">🎯 ⚠️ 制裁风险</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -848,10 +1072,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 01:56</span>
                 <span class="badge badge-source">电商报</span>
             </div>
-            <div class="news-title">字节跳动向 Seed 员工开放「豆包股」认购权</div>
+            <div class="news-title">字节跳动向 Seed 员工开放「豆包股」认购权 <span class="source-inline">(电商报)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 大模型</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">字节跳动首次针对特定业务单元发行股权，为旗下 Seed 人工智能部门员工提供与该部门挂钩的低价股票期权「豆包股」，当前认购价为每股 13 美元。该「豆包长期激励计划」始于 2025 年四季度，初期估值参考业务投入成本，未来将结合豆包及大模型 toB 业务发展重新估值，以加强对大模型人才的长期吸引和激励。此外，字节此前已为 Seed 部门核心技术员工实施期权增</div>
+            <div class="impact-row">🎯 🔬 技术突破信号 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
@@ -859,10 +1084,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 01:56</span>
                 <span class="badge badge-source">界面</span>
             </div>
-            <div class="news-title">卢伟冰：小米不会把内存涨价成本转嫁给消费者</div>
+            <div class="news-title">卢伟冰：小米不会把内存涨价成本转嫁给消费者 <span class="source-inline">(界面)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">卢伟冰在小米财报电话会上表示，尽管行业承压，小米手机全球市场份额连续 23 个季度稳居前三，手机均价及海外均价均创历史新高，手机毛利率超出市场预期。面对存储涨价周期，小米不会把内存成本上涨转移给消费者，将通过产品矩阵升级和软件优化在规模和利润中取得平衡。</div>
+            <div class="impact-row">🎯 💰 涨价周期 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">兆易创新(603986.SH)</span><span class="beneficiary-item">佰维存储(688525.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span>
@@ -873,10 +1099,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 01:55</span>
                 <span class="badge badge-source">快科技</span>
             </div>
-            <div class="news-title">蚂蚁集团：Token 消耗将迎来指数级增长 预计 2030 年消耗量增长超 300 倍</div>
+            <div class="news-title">蚂蚁集团：Token 消耗将迎来指数级增长 预计 2030 年消耗量增长超 300 倍 <span class="source-inline">(快科技)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 大模型</span><span class="badge badge-tech">🤖 AI应用</span><span class="badge badge-15">AI算力</span></div>
             <div class="quant-row">📊 400万亿 · 100万亿 · 21100万亿</div>
             <div class="news-summary">今日支付宝举行 AI 支付生态大会，蚂蚁集团研究院院长庄蹯表示 Token、数据和工具是智能体的重要生产要素，预测 2030 年 Token 消耗量将增长超 300 倍，活跃智能体达 22 亿，年执行任务 400 万亿次。另据《全国数据资源调查报告（2025 年）》显示，2025 年全国日均 Token 调用量从年初超万亿增长到年末 100 万亿，全年累计约</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -884,10 +1111,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 01:54</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">OpenAI 广告新策略：从小客户切入，谋求规模化发展</div>
+            <div class="news-title">OpenAI 广告新策略：从小客户切入，谋求规模化发展 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 大模型</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">OpenAI 在 ChatGPT 上线广告业务后，正拓展业务版图，推出面向中小企业营销人员的服务，包括挖掘本地小型商户客户及上线转化类广告等定制功能，开始与 Meta、谷歌等广告巨头展开竞争，追赶其成熟能力。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -895,10 +1123,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 01:45</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">SpaceX IPO「磁场效应」持续发酵 美股商业航天板块盘前飙升</div>
+            <div class="news-title">SpaceX IPO「磁场效应」持续发酵 美股商业航天板块盘前飙升 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"></div>
             <div class="quant-row">📊 ↑16% · ↑18% · ↑8%</div>
             <div class="news-summary">受 SpaceX 上市乐观情绪提振，美股商业航天板块盘前延续涨势，Momentus 飙升 80%，Redwire 上涨 16%，MDA Space 上涨 18%，Firefly Aerospace 上涨 8%，Voyager Technologies 涨 7.6%，Intuitive Machines 涨 10%，York Space Systems 涨 7</div>
+            <div class="impact-row">🎯 📊 市场情绪高涨</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -906,10 +1135,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 00:25</span>
                 <span class="badge badge-source">格隆汇</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
             </div>
-            <div class="news-title">马斯克：星链战时收费暴涨 5 倍，五角大楼被迫买单</div>
+            <div class="news-title">马斯克：星链战时收费暴涨 5 倍，五角大楼被迫买单 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"></div>
             <div class="quant-row">📊 5亿 · 1亿</div>
             <div class="news-summary">美伊战争期间，SpaceX 以星链网络不可替代性为由，将用于自杀式无人机的卫星连接费用从每月约 5000 美元大幅提至 25000 美元，五角大楼最终妥协。这一争议暴露了美国军事体系对单一商业供应商的深度依赖。SpaceX 认为无人机使用条件接近航空级服务，而军方则认为其使用时间短不应适用该高价。马斯克曾公开表示商业星链用于武器系统违反服务条款，加剧双方矛盾</div>
+            <div class="impact-row">🎯 📊 市场情绪高涨</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力,集成电路">
@@ -917,10 +1147,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/27 00:05</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">美国银行上调苹果公司目标价 认为智能体 AI 带来巨大机遇</div>
+            <div class="news-title">美国银行上调苹果公司目标价 认为智能体 AI 带来巨大机遇 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-tech">🤖 AI应用</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             <div class="quant-row">📊 150亿 · 300亿 · 400亿</div>
             <div class="news-summary">苹果公司周二股价上涨，此前美国银行将其目标价从 330 美元上调至 380 美元并维持「买入」评级。分析师认为苹果在智能体 AI 领域机遇巨大，若 AI 助手成为新入口，公司将对相关方拥有较大影响力，同时指出短期内存在执行风险，将 Siri 打造为 AI 执行层至关重要。分析师预估，基准情境下智能体 Siri 有望在 2030 财年带来 150 亿至 300</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力,集成电路">
@@ -928,10 +1159,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 23:25</span>
                 <span class="badge badge-source">格隆汇</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
             </div>
-            <div class="news-title">昇腾 310 等 9 款芯片通过「安全可靠测评」</div>
+            <div class="news-title">昇腾 310 等 9 款芯片通过「安全可靠测评」 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-tech">🤖 算力芯片</span><span class="badge badge-tech">🤖 推理</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">5 月 26 日，根据《安全可靠测评工作指南 V3.0》要求，相关测评中心公布了 AI 训练推理芯片和数据库安全可靠测评结果，其中海思半导体昇腾 310、平头哥真武 M530 等 9 款 AI 训练推理芯片获得「I 级」安全可靠等级。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
@@ -939,10 +1171,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 22:45</span>
                 <span class="badge badge-source">界面</span>
             </div>
-            <div class="news-title">美光科技总市值突破 1 万亿美元 年内累计涨幅达 210%</div>
+            <div class="news-title">美光科技总市值突破 1 万亿美元 年内累计涨幅达 210% <span class="source-inline">(界面)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-15">集成电路</span></div>
             <div class="quant-row">📊 1万亿 · 10000亿 · ↑18%</div>
             <div class="news-summary">5 月 26 日，美光科技股价上涨 18% 至 886 美元 / 股，创历史新高，总市值达 10000 亿美元，今年以来累计涨幅 210%，成为全球半导体行业又一万亿美元市值企业。瑞银今日将其目标价从 535 美元上调至 1625 美元，为华尔街最高水平。</div>
+            <div class="impact-row">🎯 🔬 技术突破信号 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
@@ -950,10 +1183,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 22:25</span>
                 <span class="badge badge-source">界面</span>
             </div>
-            <div class="news-title">纳指高开 0.94%，美光科技涨超 11% 创新高</div>
+            <div class="news-title">纳指高开 0.94%，美光科技涨超 11% 创新高 <span class="source-inline">(界面)</span></div>
             <div class="news-tags"></div>
             <div class="quant-row">📊 ↑395.4%</div>
             <div class="news-summary">5 月 26 日美股三大指数集体高开，纳指涨 0.94%，标普 500 指数涨 0.62%，道指涨 0.24%。特朗普公开「点赞」美光，存储概念股集体上涨，美光科技涨超 11% 创新高，慧荣科技、闪迪、西部数据涨近 4%，希捷科技涨超 1%。小马智行涨超 11%，其一季度 Robotaxi 业务收入同比增长 395.4% 创下单季新高，并上调全年收入与车队规</div>
+            
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">兆易创新(603986.SH)</span><span class="beneficiary-item">佰维存储(688525.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span>
@@ -964,10 +1198,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 22:25</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">亚洲业务布局半导体股集体走强，联电 ADR 涨 16%、ACM 研究涨 14%</div>
+            <div class="news-title">亚洲业务布局半导体股集体走强，联电 ADR 涨 16%、ACM 研究涨 14% <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">在亚洲市场有业务布局的半导体公司股价上涨，联华电子 ADR 涨 16%，ACM 研究涨 14%，Power Integrations 涨 18%，Wolfspeed 涨 9.1%，纳微半导体公司涨 11%。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
@@ -975,10 +1210,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 21:45</span>
                 <span class="badge badge-source">白鲸出海</span>
             </div>
-            <div class="news-title">Omdia：2026 年开局疲弱，中东智能手机市场预计将下滑 22%</div>
+            <div class="news-title">Omdia：2026 年开局疲弱，中东智能手机市场预计将下滑 22% <span class="source-inline">(白鲸出海)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-15">集成电路</span></div>
             <div class="quant-row">📊 ↑73% · 34%</div>
             <div class="news-summary">2026 年第一季度中东智能手机市场（不含土耳其）同比下降 6% 至 1100 万部。主要因零售动销疲软、消费者谨慎、全球内存成本通胀致手机价格上涨促销空间压缩，以及季度末地缘政治紧张影响供应链和消费者信心。厂商中，三星以 34% 市场份额领先，荣耀同比增长 73% 首次成为第二，传音、小米因入门级市场压力同比下降 32%、28%，苹果在高端市场保持韧性。O</div>
+            <div class="impact-row">🎯 🔬 技术突破信号 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力,新型电池">
@@ -986,10 +1222,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 21:30</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">欣旺达动力获新一轮 16.8 亿元股权融资 国资矩阵联合产业龙头参投</div>
+            <div class="news-title">欣旺达动力获新一轮 16.8 亿元股权融资 国资矩阵联合产业龙头参投 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-tech">⚡ 储能</span><span class="badge badge-tech">⚡ 固态电池</span><span class="badge badge-15">AI算力</span><span class="badge badge-15">新型电池</span></div>
             <div class="quant-row">📊 16.8亿</div>
             <div class="news-summary">欣旺达动力科技近日完成 16.8 亿元股权融资，投资方包括国有大行、地方国资、锂电产业链龙头及专业金融机构。资金将用于储能生产基地建设、固态电池和钠离子电池等技术研发及优化资本结构，以支撑产能升级、技术迭代，满足 AIDC 等新兴场景对储能电池的需求。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 利好新能源/储能/电池产业链 · → 关注算力芯片/光模块/服务器</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">盛视科技(002990.SZ)</span><span class="beneficiary-item">寒武纪(688256.SH)</span>
@@ -1000,10 +1237,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 21:05</span>
                 <span class="badge badge-source">格隆汇</span> <span class="badge badge-evolution">📌 状态更新: confirmed → rumor</span>
             </div>
-            <div class="news-title">长电科技：近期股价短期涨幅较大，不涉及应披露而未披露重大事项</div>
+            <div class="news-title">长电科技：近期股价短期涨幅较大，不涉及应披露而未披露重大事项 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 封装</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">长电科技公告股票交易异常波动，公司自查及向控股股东、实际控制人核实后，确认不存在应披露而未披露的重大事项，生产经营正常，未发现媒体报道或市场传闻对股价有重大影响。公司提示近期股价短期涨幅较大可能存在下跌风险，滚动市盈率高于行业平均水平，集成电路先进封测行业存在多重不确定性。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">长电科技(600584.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span><span class="beneficiary-item">中芯国际(688981.SH)</span><span class="beneficiary-item">深科技(000021.SZ)</span>
@@ -1014,10 +1252,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 20:50</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">瑞银大幅上调美光目标价至华尔街最高 料其市值达 1.8 万亿美元</div>
+            <div class="news-title">瑞银大幅上调美光目标价至华尔街最高 料其市值达 1.8 万亿美元 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             <div class="quant-row">📊 1.8万亿 · ↑6.5%</div>
             <div class="news-summary">美光科技盘前上涨 6.5%，瑞银将其目标价从 535 美元上调至 1625 美元（华尔街最高），意味着股价将较约 800 美元的盘前价格上涨逾一倍，对应市值达 1.8 万亿美元，将巩固其全球最大公司及 AI 交易重要公司地位。分析师认为，随着 AI 推动存储领域结构性变化迹象显现，美光估值将继续上修。</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">兆易创新(603986.SH)</span><span class="beneficiary-item">佰维存储(688525.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span>
@@ -1028,10 +1267,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 20:50</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">仕佳光子：终止购买福可喜玛通讯公司事项</div>
+            <div class="news-title">仕佳光子：终止购买福可喜玛通讯公司事项 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"></div>
             
             <div class="news-summary">仕佳光子决定终止发行股份及支付现金购买东莞福可喜玛通讯科技有限公司股权并募集配套资金事项，因交易各方未能就交易方案、交易价格、业绩承诺等关键事项达成一致。公司承诺自披露之日起至少 1 个月内不再筹划重大资产重组，目前生产经营正常，本次终止不会对财务状况造成重大不利影响。</div>
+            
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
@@ -1039,10 +1279,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 20:50</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">美团推出「跑腿 Skill」，可对接各大 AI 助手实现「一句话点单」</div>
+            <div class="news-title">美团推出「跑腿 Skill」，可对接各大 AI 助手实现「一句话点单」 <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
             
             <div class="news-summary">美团推出「跑腿 Skill」，可对接各大 AI 助手，用户通过自然语言输入命令即可让 AI 助手调用美团跑腿完成下单，系统自动完成场景识别、地址匹配、价格预估与订单提交，将多步操作压缩为一步。该 Skill 采用零开发接入方式，安装后即可使用，兼容 OpenClaw 本地版、云部署版及各类第三方客户端，代码已在 GitHub 开源。用户用日常语言说清需求，A</div>
+            <div class="impact-row">🎯 → 利好AI算力芯片/服务器/光模块 · → 关注算力芯片/光模块/服务器</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
@@ -1050,10 +1291,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 20:31</span>
                 <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
             </div>
-            <div class="news-title">佰维存储：拟与关联方继续共同投资行云集成电路</div>
+            <div class="news-title">佰维存储：拟与关联方继续共同投资行云集成电路 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 存储</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">佰维存储公告，公司全资子公司海南南佰算拟与关联方徐林仙、何瀚继续共同向北京行云集成电路有限公司增资，分别增资 1000 万元、595 万元、405 万元。本次增资完成后，海南南佰算、徐林仙、何瀚分别持有行云 1.7141%、0.6387%、0.7570% 股权。本次交易构成关联交易，关联交易金额为 1000 万元，不构成重大资产重组。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
             <div class="beneficiary-row">
                 <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">兆易创新(603986.SH)</span><span class="beneficiary-item">佰维存储(688525.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span>
@@ -1064,10 +1306,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 20:15</span>
                 <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: production → confirmed</span>
             </div>
-            <div class="news-title">甬矽电子：2.5D 封装产品线目前正在与客户送样验证中，尚未实现量产</div>
+            <div class="news-title">甬矽电子：2.5D 封装产品线目前正在与客户送样验证中，尚未实现量产 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 封装</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">甬矽电子股票连续 3 个交易日收盘价格涨幅偏离值累计达 30%，属于交易异常波动。公司 2.5D 封装产品线（HCOS 产品系列）目前正在与客户送样验证中，尚未实现量产，2025 年度该产品线收入 194.97 万元，为工程开发费确认收入，占全年营业收入比例极低，目前对公司业绩不具有重大影响。</div>
+            <div class="impact-row">🎯 🏭 产业化加速 · → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="新型电池">
@@ -1075,10 +1318,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 20:10</span>
                 <span class="badge badge-source">财联社</span>
             </div>
-            <div class="news-title">国家能源局召开民营企业座谈会</div>
+            <div class="news-title">国家能源局召开民营企业座谈会 <span class="source-inline">(财联社)</span></div>
             <div class="news-tags"><span class="badge badge-tech">⚡ 光伏</span><span class="badge badge-15">新型电池</span></div>
             
             <div class="news-summary">国家能源局 5 月 25 日召开能源领域民营企业座谈会，围绕强化企业科技创新主体地位听取意见建议，来自风电、太阳能等领域的企业负责人参会。国家能源局局长王宏志表示，将研究解决企业反映的困难问题，希望民营企业争做能源领域科技创新生力军，参与能源项目投资建设，创新引领新业态新模式发展。下一步，国家发展改革委、国家能源局将完善政策支撑，强化创新要素供给，营造良好生</div>
+            <div class="impact-row">🎯 → 利好新能源/储能/电池产业链 · → 关注固态电池/钠电池链</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
@@ -1086,10 +1330,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 20:10</span>
                 <span class="badge badge-source">格隆汇</span>
             </div>
-            <div class="news-title">美股异动丨半导体股盘前普涨 美光科技涨近 7%</div>
+            <div class="news-title">美股异动丨半导体股盘前普涨 美光科技涨近 7% <span class="source-inline">(格隆汇)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">5 月 26 日，美光科技盘前涨近 7%，AMD、高通涨近 3%，ARM、台积电涨近 2%。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 关注设备/材料/封测标的</div>
             
         </div>
         <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
@@ -1097,149 +1342,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
                 <span class="news-time">05/26 20:10</span>
                 <span class="badge badge-source">界面</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
             </div>
-            <div class="news-title">新亚制程：业务不涉及半导体的设计、制造、封装等</div>
+            <div class="news-title">新亚制程：业务不涉及半导体的设计、制造、封装等 <span class="source-inline">(界面)</span></div>
             <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-tech">⚡ 其他</span><span class="badge badge-15">集成电路</span></div>
             
             <div class="news-summary">新亚制程发布股票交易异常波动公告称，有媒体及投资者将「5 月 25 日华为发表韬（τ）定律」与公司业务关联，公司主要从事锂离子电池材料制造、化工材料电子胶制造、电子信息产品销售服务业务，不涉及半导体设计、制造、封装等，与该客户合作也不涉及半导体及相关产品的研发、设计和制造环节。</div>
-            
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
-            <div class="news-meta">
-                <span class="news-time">05/26 19:55</span>
-                <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
-            </div>
-            <div class="news-title">霍尼韦尔旗下量子计算公司 Quantinuum 计划通过 IPO 募资至多 10.5 亿美元</div>
-            <div class="news-tags"><span class="badge badge-tech">🔬 其他</span><span class="badge badge-15">集成电路</span></div>
-            <div class="quant-row">📊 10.5亿</div>
-            <div class="news-summary">霍尼韦尔旗下量子计算公司 Quantinuum 已提交 IPO 申请，拟发行 2100 万股股份，预计发行价格区间为每股 45 至 50 美元，若按发行价区间上限计算，募资规模将达 10.5 亿美元。</div>
-            
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
-            <div class="news-meta">
-                <span class="news-time">05/26 19:55</span>
-                <span class="badge badge-source">格隆汇</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
-            </div>
-            <div class="news-title">国家能源局召开全国「人工智能 +」能源现场推进会</div>
-            <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-tech">⚡ 其他</span><span class="badge badge-15">AI算力</span></div>
-            
-            <div class="news-summary">5 月 26 日，国家能源局在深圳召开全国「人工智能 +」能源现场推进会，解读部署相关行动方案，发布发展报告和 51 个高价值场景，25 家企业签署倡议书。会议强调人工智能是建设能源强国、发展能源新质生产力的重要引擎，要深化场景开放、突破关键技术、促进算力电力协同，营造良好氛围，推动形成双向赋能、融合发展新格局。</div>
-            
-            <div class="beneficiary-row">
-                <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">寒武纪(688256.SH)</span><span class="beneficiary-item">海光信息(688041.SH)</span>
-            </div>
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
-            <div class="news-meta">
-                <span class="news-time">05/26 19:55</span>
-                <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
-            </div>
-            <div class="news-title">ST 得润：未与英伟达、华为开展业务合作</div>
-            <div class="news-tags"><span class="badge badge-tech">🤖 算力芯片</span><span class="badge badge-15">AI算力</span></div>
-            
-            <div class="news-summary">ST 得润 (002055) 因股票连续三个交易日收盘价格涨幅偏离值累计达 12% 以上，发布交易异常波动公告。经核查，公司未与英伟达、华为开展业务合作。高速传输连接器产品主要应用于计算机及外围设备领域，在服务器等新兴领域的应用尚在拓展，相关业务营收占比极低（不到 1%），短期内对经营业绩贡献有限，未来订单及业务发展存在不确定性。</div>
-            
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
-            <div class="news-meta">
-                <span class="news-time">05/26 19:50</span>
-                <span class="badge badge-source">格隆汇</span>
-            </div>
-            <div class="news-title">韩国金融监督院称三星成韩国负债最多企业集团</div>
-            <div class="news-tags"></div>
-            <div class="quant-row">📊 386.9万亿 · 2550亿 · ↑4.1%</div>
-            <div class="news-summary">韩国金融监管机构称，三星已成为韩国负债最多的企业集团，2025 年底总负债超过 SK 集团。SK 集团落至第三，现代汽车第二，乐天第四，LG 第五。共有 42 家企业集团被认定为高负债企业，较上一年增加 1 家。截至去年底，这些集团银行信贷未偿余额为 386.9 万亿韩元（2550 亿美元），同比增长 4.1%。</div>
-            
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
-            <div class="news-meta">
-                <span class="news-time">05/26 19:30</span>
-                <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
-            </div>
-            <div class="news-title">晶方科技：拟分拆子公司 Anteryon 至阿姆斯特丹交易所上市</div>
-            <div class="news-tags"></div>
-            
-            <div class="news-summary">晶方科技拟分拆子公司 Anteryon 至阿姆斯特丹交易所上市，分拆完成后不会影响公司对其控制权。相关议案已获董事会审议通过，但尚需取得股东会及 Anteryon 内部决策机构批准、阿姆斯特丹交易所及相关部门批准等，存在不确定性，敬请投资者注意风险。</div>
-            
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="">
-            <div class="news-meta">
-                <span class="news-time">05/26 19:10</span>
-                <span class="badge badge-source">界面</span> <span class="badge badge-evolution">📌 状态更新: unknown → confirmed</span>
-            </div>
-            <div class="news-title">鸿蒙智行起诉自媒体「圈内人」，要求赔偿 200 万</div>
-            <div class="news-tags"><span class="badge badge-tech">⚡ 其他</span></div>
-            
-            <div class="news-summary">5 月 26 日，鸿蒙智行起诉自媒体「圈内人 Xm_」及其矩阵账号名誉侵权，要求停止侵权、消除影响并赔偿 200 万元。该自媒体被指长期在多平台发布针对鸿蒙智行的不实信息和侮辱性言论，恶意剪辑视频、夸大负面话题。此前 5 月 18 日，鸿蒙智行公布两起维权案进展：起诉「我是大彬同学」案二审维持原判，获赔 150 万元。起诉「骠骑尉 — 松亭先生」案一审胜诉，</div>
-            
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="集成电路">
-            <div class="news-meta">
-                <span class="news-time">05/26 18:50</span>
-                <span class="badge badge-source">财联社</span> <span class="badge badge-evolution">📌 状态更新: unknown → rumor</span>
-            </div>
-            <div class="news-title">深科技：子公司拟 14.7 亿元扩大高端存储芯片封测产能</div>
-            <div class="news-tags"><span class="badge badge-tech">🔬 封装</span><span class="badge badge-tech">🔬 存储</span><span class="badge badge-15">集成电路</span></div>
-            <div class="quant-row">📊 14.7亿 · 500万颗 · 800万颗</div>
-            <div class="news-summary">深科技公告，公司全资子公司深圳沛顿及控股子公司合肥沛顿存储拟实施高端存储芯片封测产能扩充项目，计划总投资 14.7 亿元，用于购置设备、厂房装修及配套动力设施等。项目建成达产后，深圳沛顿预计每月增加封装产能 500 万颗晶粒及测试产能 800 万颗芯片。合肥沛顿存储预计每月增加封装产能 2880 万颗晶粒。</div>
-            
-            <div class="beneficiary-row">
-                <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">长电科技(600584.SH)</span><span class="beneficiary-item">通富微电(002156.SZ)</span><span class="beneficiary-item">中芯国际(688981.SH)</span><span class="beneficiary-item">深科技(000021.SZ)</span>
-            </div>
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
-            <div class="news-meta">
-                <span class="news-time">05/26 18:50</span>
-                <span class="badge badge-source">财联社</span>
-            </div>
-            <div class="news-title">双星新材：MLCC 产品的营业收入占公司整体营业收入比例未达 1%</div>
-            <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
-            
-            <div class="news-summary">双星新材公告股票交易异常波动，公司 MLCC 产品营收占比未达 1%，其离型膜暂未应用于 AI 算力服务器，该业务短期内对公司业绩影响较小，提醒投资者注意风险。</div>
-            
-            <div class="beneficiary-row">
-                <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">寒武纪(688256.SH)</span><span class="beneficiary-item">海光信息(688041.SH)</span>
-            </div>
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
-            <div class="news-meta">
-                <span class="news-time">05/26 18:50</span>
-                <span class="badge badge-source">格隆汇</span> <span class="badge badge-evolution">📌 状态更新: unknown → production</span>
-            </div>
-            <div class="news-title">盛视科技：全资子公司签署 60 亿元算力产业合作协议</div>
-            <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
-            <div class="quant-row">📊 60亿</div>
-            <div class="news-summary">盛视科技全资子公司近日与某公司签署《算力产业合作协议》，双方围绕算电协同、AIDC 智能算力中心运营、算力产业资源整合、算力服务采购交付四大核心维度开展深度战略合作，本次整体合作对应的业务体量折算合计约人民币 60 亿元。本次合作协议的签署是公司布局算力服务业务的重要里程碑，为公司算力服务业务增长提供有力支撑，推动算力服务业务成为公司业绩增长的全新引擎。</div>
-            
-            <div class="beneficiary-row">
-                <span class="beneficiary-label">🎯 可能受益：</span><span class="beneficiary-item">盛视科技(002990.SZ)</span><span class="beneficiary-item">寒武纪(688256.SH)</span><span class="beneficiary-item">海光信息(688041.SH)</span>
-            </div>
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
-            <div class="news-meta">
-                <span class="news-time">05/26 18:15</span>
-                <span class="badge badge-source">金融界</span> <span class="badge badge-evolution">✅→🏭 确认量产</span>
-            </div>
-            <div class="news-title">小米集团：第一季度新车交付量达到 80856 辆，同比增长 6.6%</div>
-            <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
-            <div class="quant-row">📊 199亿 · 190亿 · 31亿</div>
-            <div class="news-summary">小米集团 2026 年第一季度智能电动汽车及 AI 等创新业务分部收入 199 亿元，同比增长 6.9%，其中智能电动汽车收入 190 亿元。受车辆购置税补贴及核心零部件价格上涨影响，该业务分部毛利率 20.1%，经营亏损 31 亿元。一季度新车交付 80856 辆，同比增长 6.6%。</div>
-            
-        </div>
-        <div class="news-card" data-chain="" data-lifecycle="" data-priority="" data-tags="AI算力">
-            <div class="news-meta">
-                <span class="news-time">05/26 17:50</span>
-                <span class="badge badge-source">界面</span>
-            </div>
-            <div class="news-title">小米 Q1 财报：手机 ASP 同比提升 8.2% 创新高 核心业务经营利润环比涨近 2 倍</div>
-            <div class="news-tags"><span class="badge badge-tech">🤖 其他</span><span class="badge badge-15">AI算力</span></div>
-            <div class="quant-row">📊 991亿 · 61亿 · 793亿</div>
-            <div class="news-summary">2026 年第一季度，小米集团营业收入 991 亿元，经调整净利润 61 亿元，均略高于市场预期。核心业务经营利润环比增长近 2 倍。手机 ×AIoT 分部收入 793 亿元，智能手机出货量连续 23 个季度全球前三，全球平均售价同比提升 8.2% 创历史新高。智能电动汽车及 AI 等创新业务分部收入 199 亿元，同比增长 6.9%。</div>
+            <div class="impact-row">🎯 → 利好国产半导体设备/材料/封测链 · → 利好新能源/储能/电池产业链 · → 关注设备/材料/封测标的</div>
             
         </div>
 </div>
 
 <div class="footer">
-    Mimo 🦉 · 自动生成 · 2026-05-27 17:48 CST · 
+    Mimo 🦉 · 自动生成 · 2026-05-27 20:08 CST · 
     <a href="https://zhonghui-co.github.io/daily-signal/">daily-signal</a>
     &nbsp;|&nbsp; P0 增量去重 / P1 技术分类 / P2 增长面板 / P3 产业链
 </div>
