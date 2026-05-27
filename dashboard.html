@@ -260,6 +260,66 @@ a:hover { text-decoration:underline; }
     .theme-grid { grid-template-columns:1fr; }
     .two-col { grid-template-columns:1fr; }
 }
+
+/* ===== Portfolio Cards ===== */
+.portfolio-summary { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-bottom:16px; }
+.pf-summary-card {
+    background:#161b22; border:1px solid #30363d; border-radius:8px;
+    padding:10px 14px; text-align:center;
+}
+.pf-summary-val { font-size:20px; font-weight:bold; color:#e6edf3; }
+.pf-summary-val.up { color:#f85149; }
+.pf-summary-val.down { color:#3fb950; }
+.pf-summary-label { font-size:11px; color:#8b949e; margin-top:2px; }
+
+.portfolio-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; }
+.pf-card {
+    background:#161b22; border:1px solid #30363d; border-radius:10px;
+    padding:14px 16px; transition:border-color 0.2s;
+}
+.pf-card:hover { border-color:#58a6ff; }
+.pf-card.stop-triggered { border-left:3px solid #f85149; background:rgba(218,54,51,0.06); }
+.pf-card.near-stop { border-left:3px solid #d29922; background:rgba(210,153,34,0.05); }
+.pf-card.take-profit { border-left:3px solid #3fb950; }
+.pf-card.no-data { opacity:0.5; }
+.pf-header { display:flex; align-items:center; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+.pf-name { font-size:14px; font-weight:600; color:#e6edf3; }
+.pf-code { font-size:10px; color:#8b949e; font-family:monospace; }
+.pf-direction { font-size:10px; background:rgba(31,111,235,0.12); color:#58a6ff; padding:2px 6px; border-radius:3px; }
+.pf-price-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.pf-price { font-size:22px; font-weight:bold; color:#e6edf3; }
+.pf-change { font-size:14px; font-weight:600; }
+.pf-change.up { color:#f85149; }
+.pf-change.down { color:#3fb950; }
+.pf-indicators { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-bottom:8px; font-size:11px; }
+.pf-ind { text-align:center; padding:4px; background:#0d1117; border-radius:4px; }
+.pf-ind-label { color:#484f58; font-size:9px; }
+.pf-ind-val { color:#c9d1d9; font-weight:600; font-size:12px; }
+.pf-stop-row { display:flex; justify-content:space-between; align-items:center; font-size:11px; margin-bottom:8px; padding:6px 8px; background:#0d1117; border-radius:4px; }
+.pf-stop-label { color:#8b949e; }
+.pf-stop-val { font-weight:600; }
+.pf-action { padding:6px 12px; border-radius:6px; font-size:12px; font-weight:600; text-align:center; }
+.pf-action.hold { background:rgba(31,111,235,0.12); color:#58a6ff; }
+.pf-action.reduce { background:rgba(210,153,34,0.12); color:#d29922; }
+.pf-action.sell { background:rgba(218,54,51,0.12); color:#f85149; }
+.pf-action.tp { background:rgba(35,134,54,0.12); color:#3fb950; }
+.pf-action.unknown { background:rgba(139,148,158,0.1); color:#8b949e; }
+.pf-alerts { font-size:10px; margin-top:6px; padding-top:6px; border-top:1px solid #21262d; }
+.pf-alert-item { padding:2px 0; line-height:1.4; }
+
+/* TPO Card in Overview */
+.tpo-card {
+    background:#161b22; border:1px solid #30363d; border-radius:10px;
+    padding:14px 16px; margin-bottom:12px;
+}
+.tpo-card.warn { border-left:3px solid #d29922; }
+.tpo-card.danger { border-left:3px solid #f85149; }
+.tpo-title { font-size:13px; font-weight:600; color:#d29922; margin-bottom:8px; display:flex; align-items:center; gap:6px; }
+.tpo-item { font-size:12px; color:#c9d1d9; padding:4px 0; line-height:1.5; }
+.tpo-item .action-tag { font-size:10px; padding:1px 6px; border-radius:3px; margin-left:6px; }
+.tpo-item .action-sell { background:rgba(218,54,51,0.15); color:#f85149; }
+.tpo-item .action-watch { background:rgba(210,153,34,0.15); color:#d29922; }
+.tpo-item .action-buy { background:rgba(35,134,54,0.15); color:#3fb950; }
 </style>
 </head>
 <body>
@@ -284,7 +344,9 @@ a:hover { text-decoration:underline; }
     <button class="nav-tab" data-tab="themes">🎯 主题</button>
     <button class="nav-tab" data-tab="health">🏥 监控</button>
     <button class="nav-tab" data-tab="attrib">📈 归因</button>
+    <button class="nav-tab" data-tab="portfolio">💼 持仓</button>
     <button class="nav-tab" data-tab="anomalies">📡 异动</button>
+    <button class="nav-tab" data-tab="portfolio">💼 持仓</button>
 </div>
 
 <!-- Main Content -->
@@ -314,7 +376,11 @@ a:hover { text-decoration:underline; }
         <div>
             <!-- Thesis Positions -->
             <div class="section">
-                <div class="section-title">⭐ 今日 B1 机会 <span class="badge badge-fire" id="overviewB1Count"></span></div>
+                <div class="section">
+                <div class="section-title">📋 今日持仓提醒</div>
+                <div id="overviewAlerts" style="font-size:13px;color:#c9d1d9;"></div>
+            </div>
+            <div class="section-title">⭐ 今日 B1 机会 <span class="badge badge-fire" id="overviewB1Count"></span></div>
                 <div id="overviewB1List" style="max-height:300px;overflow-y:auto;"></div>
             </div>
 
@@ -324,6 +390,12 @@ a:hover { text-decoration:underline; }
                 <div id="recentSignals"></div>
             </div>
         </div>
+    </div>
+
+    <!-- TPO Card -->
+    <div class="tpo-card" id="tpoCard" style="display:none;">
+        <div class="tpo-title">📋 今日操作建议</div>
+        <div id="tpoContent"></div>
     </div>
 
     <!-- Active Alerts -->
@@ -415,6 +487,19 @@ a:hover { text-decoration:underline; }
     </div>
 </div>
 
+
+<!-- Tab: 持仓 -->
+<div class="tab-content" id="tab-portfolio">
+    <div class="section">
+        <div class="section-title">💼 我的持仓 <span id="portfolioSummary" style="font-size:10px;color:#8b949e;font-weight:400;"></span></div>
+        <div class="stats-row" id="portfolioStats"></div>
+    </div>
+    <div class="section">
+        <div class="section-title">📊 持仓详情</div>
+        <div id="portfolioList"></div>
+    </div>
+</div>
+
 <!-- Tab: 异动 -->
 <div class="tab-content" id="tab-anomalies">
     <div class="section">
@@ -447,6 +532,23 @@ a:hover { text-decoration:underline; }
     </div>
 </div>
 
+<!-- Tab: Portfolio -->
+<div class="tab-content" id="tab-portfolio">
+    <div class="section">
+        <div class="section-title">📊 持仓概览</div>
+        <div class="portfolio-summary" id="portfolioSummary">
+            <div class="pf-summary-card"><div class="pf-summary-val" id="pfAvgPnl">-</div><div class="pf-summary-label">均盈亏%</div></div>
+            <div class="pf-summary-card"><div class="pf-summary-val" id="pfActive">-</div><div class="pf-summary-label">持仓数</div></div>
+            <div class="pf-summary-card"><div class="pf-summary-val" id="pfNearStop">-</div><div class="pf-summary-label">接近止损</div></div>
+            <div class="pf-summary-card"><div class="pf-summary-val" id="pfTriggered" style="color:#f85149">-</div><div class="pf-summary-label">触发止损</div></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">💼 持仓明细 <span style="font-size:10px;color:#484f58;font-weight:400;" id="pfUpdateTime"></span></div>
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+</div>
+
 </div><!-- /main -->
 
 <div class="footer">
@@ -469,7 +571,7 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
 });
 
 // ===== Data Loading =====
-let poolData = null, scannerData = null, briefData = null, stateData = null, signalsDailyData = null, attribData = null, tickerNameMap = {};
+let poolData = null, scannerData = null, briefData = null, stateData = null, signalsDailyData = null, attribData = null, portfolioData = null, tickerNameMap = {};
 
 // Build ticker-to-name mapping from pool.json
 function buildTickerNameMap() {
@@ -550,13 +652,14 @@ async function init() {
     document.getElementById('updateTime').textContent = '加载中…';
     
     // Load all data in parallel
-    [poolData, scannerData, briefData, stateData, signalsDailyData, attribData] = await Promise.all([
+    [poolData, scannerData, briefData, stateData, signalsDailyData, attribData, portfolioData] = await Promise.all([
         loadJSON('data/pool.json'),
         loadJSON('data/scanner.json'),
         loadJSON('data/daily-brief.json'),
         loadJSON('../daily/state.json').catch(() => null),
         loadJSON('data/signals-daily.json'),
-        loadJSON('data/attributions.json')
+        loadJSON('data/attributions.json'),
+        loadJSON('data/portfolio-status.json')
     ]);
     
     document.getElementById('updateTime').textContent = '最后更新: ' + 
@@ -566,6 +669,7 @@ async function init() {
     buildTickerNameMap();
     
     renderOverview();
+    renderPortfolio();
     renderSignals();
     renderThemes();
     renderHealth();
@@ -1009,6 +1113,59 @@ function renderHealth() {
     }
 }
 
+
+// ===== 持仓 Tab =====
+async function loadPortfolio() {
+    try {
+        const ps = await loadJSON('/daily-signal/data/portfolio-status.json');
+        if (!ps?.positions?.length) { document.getElementById('portfolioList').innerHTML = '<div class="empty">无持仓数据</div>'; return; }
+        
+        const totalPnl = ps.positions.reduce((s,p) => s + (p.pnl_pct||0), 0) / ps.positions.length;
+        const pnlCls = totalPnl >= 0 ? 'ret-up' : 'ret-down';
+        document.getElementById('portfolioSummary').textContent = `均盈亏 ${totalPnl>=0?'+':''}${totalPnl.toFixed(1)}% | 更新: ${ps.updated?.substring(11,16)||'?'}`;
+        
+        document.getElementById('portfolioStats').innerHTML = ps.positions.map(p => {
+            const pCls = (p.pnl_pct||0) >= 0 ? 'ret-up' : 'ret-down';
+            const nearStop = p.status === 'near_stop' || p.status === 'stop_triggered';
+            const border = nearStop ? 'border:2px solid #f85149;' : '';
+            return `<div class="stat-card" style="${border}">
+                <div class="stat-icon">${nearStop?'⚠️':'📈'}</div>
+                <div class="stat-info">
+                    <div class="stat-value" style="color:${(p.pnl_pct||0)>=0?'#f85149':'#3fb950'}">${(p.pnl_pct||0)>=0?'+':''}${(p.pnl_pct||0).toFixed(1)}%</div>
+                    <div class="stat-label">${p.name}</div>
+                </div>
+            </div>`;
+        }).join('');
+        
+        document.getElementById('portfolioList').innerHTML = ps.positions.map(p => {
+            const pCls = (p.pnl_pct||0) >= 0 ? 'ret-up' : 'ret-down';
+            const stopInfo = p.stop_price ? `止损:¥${p.stop_price}` : (p.stop_type === 'BBI' ? '止损:BBI' : '止损:未设');
+            const nearStop = p.status === 'near_stop' || p.status === 'stop_triggered';
+            const actionColor = p.action === '清仓' ? '#f85149' : p.action === '减仓' ? '#d29922' : '#3fb950';
+            const alerts = p.alerts?.length ? p.alerts.map(a => `<span style="color:#f85149;font-size:11px;">⚠️${a}</span>`).join(' ') : '';
+            return `<div class="signal-card" style="margin-bottom:12px;${nearStop?'border-left:3px solid #f85149;':''}">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+                    <div>
+                        <span style="font-weight:600;color:#e6edf3;font-size:15px;">${p.name}</span>
+                        <span style="font-size:11px;color:#8b949e;margin-left:8px;">${p.code}</span>
+                        <span style="font-size:11px;color:#58a6ff;margin-left:8px;">${p.direction||''}</span>
+                    </div>
+                    <span class="${pCls}" style="font-size:18px;font-weight:bold;">${(p.pnl_pct||0)>=0?'+':''}${(p.pnl_pct||0).toFixed(1)}%</span>
+                </div>
+                <div class="signal-meta" style="margin-top:8px;">
+                    <span>成本: ¥${(p.cost||0).toFixed(2)}</span>
+                    <span>现价: ¥${(p.current_price||0).toFixed(2)}</span>
+                    <span>${stopInfo}</span>
+                    <span>白线: ${(p.white||0).toFixed(2)}</span>
+                    <span>黄线: ${(p.yellow||0).toFixed(2)}</span>
+                    <span style="color:${actionColor};font-weight:600;">→ ${p.action||'持有'}</span>
+                    ${alerts}
+                </div>
+            </div>`;
+        }).join('');
+    } catch(e) { console.log('Portfolio load err:', e); }
+}
+
 // ===== 异动 Tab (Trending-China data) =====
 async function loadAnomalies() {
     try {
@@ -1068,6 +1225,164 @@ async function loadAnomalies() {
     } catch(e) {
         console.error('Anomalies load error:', e);
     }
+}
+
+// ===== Portfolio Tab =====
+function renderPortfolio() {
+    const ps = portfolioData;
+    const summary = ps?.summary || {};
+    const positions = ps?.positions || [];
+    
+    // Update time
+    const ut = document.getElementById('pfUpdateTime');
+    if (ut) ut.textContent = ps?.updated_display ? `· 更新于 ${ps.updated_display}` : '';
+    
+    // Summary cards
+    const avgPnl = summary.avg_pnl_pct;
+    const avgEl = document.getElementById('pfAvgPnl');
+    if (avgPnl !== undefined && avgPnl !== null) {
+        avgEl.textContent = (avgPnl >= 0 ? '+' : '') + avgPnl.toFixed(1) + '%';
+        avgEl.className = 'pf-summary-val ' + (avgPnl >= 0 ? 'up' : 'down');
+    } else {
+        avgEl.textContent = '-';
+        avgEl.className = 'pf-summary-val';
+    }
+    
+    document.getElementById('pfActive').textContent = summary.active_count || summary.positions_count || 0;
+    document.getElementById('pfNearStop').textContent = summary.near_stop_count || 0;
+    document.getElementById('pfTriggered').textContent = summary.triggered_count || 0;
+    
+    // Position cards
+    const grid = document.getElementById('portfolioGrid');
+    if (!positions.length) {
+        grid.innerHTML = '<div class="empty">暂无持仓数据<br><span style="font-size:11px;">请配置 portfolio.json 并运行 portfolio_monitor.py</span></div>';
+    } else {
+        grid.innerHTML = positions.map(p => {
+            const pnl = p.pnl_pct;
+            const status = p.status || 'holding';
+            const cost = typeof p.stop_loss === 'number' ? p.stop_loss : (p.stop_price || p.yellow || null);
+            
+            // Card class
+            let cardCls = '';
+            if (status === 'stop_triggered') cardCls = 'stop-triggered';
+            else if (status === 'near_stop') cardCls = 'near-stop';
+            else if (status === 'take_profit') cardCls = 'take-profit';
+            else if (status === 'no_data') cardCls = 'no-data';
+            
+            // Action class
+            let actionCls = 'hold', actionLabel = p.action || '持有';
+            if (actionLabel === '清仓') actionCls = 'sell';
+            else if (actionLabel === '减仓') actionCls = 'reduce';
+            else if (actionLabel.includes('止盈') || actionLabel.includes('减仓1/3')) actionCls = 'tp';
+            else if (actionLabel === '无法计算') actionCls = 'unknown';
+            
+            // Alerts
+            let alertsHtml = '';
+            if (p.alerts && p.alerts.length) {
+                alertsHtml = '<div class="pf-alerts">' + p.alerts.map(a => {
+                    let aCls = 'pf-alert-item';
+                    if (a.includes('⚠️')) aCls += '';
+                    else if (a.includes('🔶')) aCls += '';
+                    else if (a.includes('💰')) aCls += '';
+                    return `<div class="${aCls}" style="color:${a.includes('⚠️')?'#f85149':a.includes('🔶')?'#d29922':a.includes('💰')?'#3fb950':'#8b949e'}">${a}</div>`;
+                }).join('') + '</div>';
+            }
+            
+            return `<div class="pf-card ${cardCls}">
+                <div class="pf-header">
+                    <span class="pf-name">${p.name}</span>
+                    <span class="pf-code">${p.code}</span>
+                    ${p.direction ? `<span class="pf-direction">${p.direction}</span>` : ''}
+                </div>
+                <div class="pf-price-row">
+                    <span class="pf-price">${p.current_price != null ? p.current_price.toFixed(2) : 'N/A'}</span>
+                    <span class="pf-change${pnl >= 0 ? ' up' : ' down'}">${pnl != null ? (pnl >= 0 ? '+' : '') + pnl.toFixed(1) + '%' : 'N/A'}</span>
+                </div>
+                <div class="pf-indicators">
+                    <div class="pf-ind"><div class="pf-ind-label">白线</div><div class="pf-ind-val">${p.white != null ? p.white.toFixed(2) : '-'}</div></div>
+                    <div class="pf-ind"><div class="pf-ind-label">黄线</div><div class="pf-ind-val">${p.yellow != null ? p.yellow.toFixed(2) : '-'}</div></div>
+                    <div class="pf-ind"><div class="pf-ind-label">BBI</div><div class="pf-ind-val">${p.bbi != null ? p.bbi.toFixed(2) : '-'}</div></div>
+                </div>
+                <div class="pf-stop-row">
+                    <span class="pf-stop-label">成本: <b>${p.cost.toFixed(2)}</b></span>
+                    <span class="pf-stop-label">止损: <b style="color:${status==='stop_triggered'?'#f85149':'#e6edf3'}">${p.stop_price != null ? p.stop_price.toFixed(2) : (typeof p.stop_loss === 'string' ? p.stop_loss : '-')}</b></span>
+                    ${p.stop_distance_pct != null ? `<span class="pf-stop-label">距止损: <b style="color:${p.stop_distance_pct <= 3 ? '#f85149' : p.stop_distance_pct <= 8 ? '#d29922' : '#3fb950'}">${p.stop_distance_pct.toFixed(1)}%</b></span>` : ''}
+                </div>
+                <div class="pf-action ${actionCls}">${actionLabel}</div>
+                ${alertsHtml}
+            </div>`;
+        }).join('');
+    }
+    
+    // Render TPO card in overview
+    renderTPO();
+}
+
+function renderTPO() {
+    const tpoCard = document.getElementById('tpoCard');
+    const tpoContent = document.getElementById('tpoContent');
+    const positions = portfolioData?.positions || [];
+    const summary = portfolioData?.summary || {};
+    
+    // Collect all alerts and triggered/near-stop positions
+    let tpoItems = [];
+    
+    positions.forEach(p => {
+        if (p.status === 'stop_triggered') {
+            tpoItems.push({
+                level: 'danger',
+                text: `<b>${p.name}</b> (${p.code}) <span style="color:#f85149;">触发止损！</span>当前${p.current_price}，建议${p.action}`,
+            });
+        } else if (p.status === 'near_stop') {
+            const dist = p.stop_distance_pct != null ? `距止损${p.stop_distance_pct}% ` : '';
+            tpoItems.push({
+                level: 'warn',
+                text: `<b>${p.name}</b> ${dist}当前${p.current_price}，白${p.white} 黄${p.yellow}，<span class="action-tag action-watch">关注</span>`,
+            });
+        } else if (p.alerts && p.alerts.length) {
+            // Non-critical alerts
+            p.alerts.forEach(a => {
+                if (a.includes('死叉')) {
+                    tpoItems.push({
+                        level: 'warn',
+                        text: `<b>${p.name}</b> ${a} <span class="action-tag action-watch">关注</span>`,
+                    });
+                }
+            });
+        }
+    });
+    
+    // Add top alerts from summary
+    if (tpoItems.length === 0 && summary.top_alerts && summary.top_alerts.length) {
+        summary.top_alerts.forEach(a => {
+            tpoItems.push({ level: 'warn', text: a });
+        });
+    }
+    
+    // Add status-less positions at risk
+    if (tpoItems.length === 0) {
+        positions.forEach(p => {
+            if (p.status === 'holding' && p.pnl_pct != null && p.pnl_pct < -5) {
+                tpoItems.push({
+                    level: 'warn',
+                    text: `<b>${p.name}</b> 浮亏${Math.abs(p.pnl_pct).toFixed(1)}%，成本${p.cost} → 当前${p.current_price} <span class="action-tag action-watch">评估</span>`,
+                });
+            }
+        });
+    }
+    
+    if (tpoItems.length === 0) {
+        tpoCard.style.display = 'none';
+        return;
+    }
+    
+    const hasDanger = tpoItems.some(i => i.level === 'danger');
+    tpoCard.className = 'tpo-card ' + (hasDanger ? 'danger' : 'warn');
+    tpoCard.style.display = 'block';
+    
+    tpoContent.innerHTML = tpoItems.slice(0, 3).map(i => 
+        `<div class="tpo-item">${i.text}</div>`
+    ).join('');
 }
 
 // ===== Start =====
