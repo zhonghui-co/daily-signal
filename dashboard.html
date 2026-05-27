@@ -791,9 +791,11 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
             if (!iframe.src) iframe.src = 'news-feed.html';
         }
         if (tab.dataset.tab === 'chains') {
+            document.querySelector('.main').style.maxWidth = '1200px';
             loadChains();
         }
         if (tab.dataset.tab === 'alerts') {
+            document.querySelector('.main').style.maxWidth = '100%';
             loadAlerts();
         }
         if (tab.dataset.tab === 'backtest') {
