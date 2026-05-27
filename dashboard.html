@@ -712,6 +712,7 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
         }
         if (tab.dataset.tab === 'anomalies') {
             loadAnomalies();
+    loadWeeklyB1();
         }
     });
 });
@@ -1874,6 +1875,26 @@ function renderInflectionPoints(points) {
             }).join('')}</tbody>
         </table>
     `;
+}
+
+
+// ===== 周B1 信号 =====
+async function loadWeeklyB1() {
+    try {
+        const wd = await loadJSON('/daily-signal/data/weekly-kdj.json');
+        document.getElementById('weeklyB1Count').textContent = `(${wd.count||0}只 J<${wd.threshold||15})`;
+        const items = wd.items || [];
+        document.getElementById('weeklyB1List').innerHTML = items.length ? items.map(s => 
+            `<div class="anomaly-row">
+                <span class="badge" style="background:rgba(210,153,34,0.15);color:#d29922;font-size:10px;margin-right:6px;">周B1</span>
+                <span class="ticker-tag">${s.ts_code||''} ${s.name||''}</span>
+                <span style="font-size:10px;color:#8b949e;">${s.theme_category||''}</span>
+                <span style="font-size:11px;color:#d29922;font-weight:600;">J=${(s.J||0).toFixed(1)}</span>
+                <span style="font-size:10px;color:#8b949e;">周收盘${(s.close||0).toFixed(1)}</span>
+                <span style="font-size:10px;color:#484f58;">${s.week_end||''}</span>
+            </div>`
+        ).join('') : '<div class="empty">无周B1信号</div>';
+    } catch(e) { console.log('Weekly B1 load err:', e); }
 }
 
 // ===== Start =====
