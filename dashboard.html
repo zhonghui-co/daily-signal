@@ -158,6 +158,40 @@ a:hover { text-decoration:underline; }
 .status-error { color:#f85149; }
 .status-idle { color:#484f58; }
 
+/* ===== Attribution ===== */
+.attr-item {
+    background:#161b22; border:1px solid #30363d; border-radius:8px;
+    padding:12px; margin-bottom:8px; transition:border-color 0.2s;
+}
+.attr-item:hover { border-color:#58a6ff; }
+.attr-item.unattributed { border-left:3px solid #f85149; background:rgba(218,54,51,0.06); }
+.attr-item.high-conf { border-left:3px solid #3fb950; }
+.attr-item.medium-conf { border-left:3px solid #d29922; }
+.attr-header { display:flex; align-items:center; gap:8px; margin-bottom:4px; flex-wrap:wrap; }
+.attr-name { font-weight:600; color:#e6edf3; font-size:13px; }
+.attr-code { font-size:10px; color:#8b949e; font-family:monospace; }
+.attr-pct { font-size:14px; font-weight:700; }
+.attr-pct.up { color:#3fb950; }
+.attr-pct.down { color:#f85149; }
+.attr-catalyst { font-size:12px; color:#8b949e; line-height:1.5; margin-top:6px; white-space:pre-wrap; }
+.attr-source { font-size:10px; color:#484f58; margin-top:4px; }
+.attr-need-review { 
+    color:#f85149; font-size:11px; font-weight:600; 
+    display:inline-flex; align-items:center; gap:4px;
+}
+.attr-conf-badge { font-size:10px; padding:1px 6px; border-radius:10px; }
+.attr-conf-high { background:rgba(35,134,54,0.15); color:#3fb950; border:1px solid rgba(35,134,54,0.3); }
+.attr-conf-medium { background:rgba(210,153,34,0.15); color:#d29922; border:1px solid rgba(210,153,34,0.3); }
+.attr-conf-low { background:rgba(139,148,158,0.15); color:#8b949e; border:1px solid rgba(139,148,158,0.3); }
+.attr-conf-null { background:rgba(218,54,51,0.15); color:#f85149; border:1px solid rgba(218,54,51,0.3); }
+.attr-summary-row { display:flex; gap:16px; margin-bottom:16px; flex-wrap:wrap; }
+.attr-summary-card {
+    background:#161b22; border:1px solid #30363d; border-radius:8px;
+    padding:12px 16px; min-width:120px; text-align:center;
+}
+.attr-summary-val { font-size:22px; font-weight:bold; color:#e6edf3; }
+.attr-summary-label { font-size:11px; color:#8b949e; margin-top:2px; }
+
 /* ===== Theme Cards ===== */
 .theme-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:10px; }
 .theme-card {
@@ -239,6 +273,7 @@ a:hover { text-decoration:underline; }
     <button class="nav-tab" data-tab="news">📰 情报</button>
     <button class="nav-tab" data-tab="themes">🎯 主题</button>
     <button class="nav-tab" data-tab="health">🏥 监控</button>
+    <button class="nav-tab" data-tab="attrib">📈 归因</button>
 </div>
 
 <!-- Main Content -->
@@ -344,6 +379,31 @@ a:hover { text-decoration:underline; }
     </div>
 </div>
 
+<!-- Tab: Attribution -->
+<div class="tab-content" id="tab-attrib">
+    <div class="section">
+        <div class="section-title">📊 归因概览</div>
+        <div class="attr-summary-row" id="attrSummary">
+            <div class="attr-summary-card"><div class="attr-summary-val" id="attrTotal">-</div><div class="attr-summary-label">异动总数</div></div>
+            <div class="attr-summary-card"><div class="attr-summary-val" id="attrOK" style="color:#3fb950">-</div><div class="attr-summary-label">已归因</div></div>
+            <div class="attr-summary-card"><div class="attr-summary-val" id="attrNeed" style="color:#f85149">-</div><div class="attr-summary-label">需人工确认</div></div>
+            <div class="attr-summary-card"><div class="attr-summary-val" id="attrConfHigh" style="color:#3fb950">-</div><div class="attr-summary-label">高置信度</div></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">🔥 异动归因详情 <span style="font-size:10px;color:#484f58;font-weight:400;">（|涨跌幅|≥5%，按涨跌幅排序）</span></div>
+        <div class="filter-bar">
+            <span class="filter-label">置信度:</span>
+            <button class="filter-btn active" data-attr="all">全部</button>
+            <button class="filter-btn" data-attr="high">🟢 高</button>
+            <button class="filter-btn" data-attr="medium">🟡 中</button>
+            <button class="filter-btn" data-attr="low">⚪ 低</button>
+            <button class="filter-btn" data-attr="unattributed">🔴 未归因</button>
+        </div>
+        <div id="attributionList"></div>
+    </div>
+</div>
+
 </div><!-- /main -->
 
 <div class="footer">
@@ -366,7 +426,7 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
 });
 
 // ===== Data Loading =====
-let poolData = null, scannerData = null, briefData = null, stateData = null, signalsDailyData = null;
+let poolData = null, scannerData = null, briefData = null, stateData = null, signalsDailyData = null, attribData = null;
 
 async function loadJSON(path) {
     try {
@@ -384,12 +444,13 @@ async function init() {
     document.getElementById('updateTime').textContent = '加载中…';
     
     // Load all data in parallel
-    [poolData, scannerData, briefData, stateData, signalsDailyData] = await Promise.all([
+    [poolData, scannerData, briefData, stateData, signalsDailyData, attribData] = await Promise.all([
         loadJSON('data/pool.json'),
         loadJSON('data/scanner.json'),
         loadJSON('data/daily-brief.json'),
-        loadJSON('../daily/state.json').catch(() => null), // try pipeline/daily/state.json
-        loadJSON('data/signals-daily.json')
+        loadJSON('../daily/state.json').catch(() => null),
+        loadJSON('data/signals-daily.json'),
+        loadJSON('data/attributions.json')
     ]);
     
     document.getElementById('updateTime').textContent = '最后更新: ' + 
@@ -399,6 +460,7 @@ async function init() {
     renderSignals();
     renderThemes();
     renderHealth();
+    renderAttributions();
 }
 
 // ===== Overview Tab =====
@@ -655,6 +717,79 @@ function renderThemes() {
             <div class="heat-pct">${g.count}只</div>
         </div>`;
     }).join('');
+}
+
+// ===== Attribution Tab =====
+let attrConfFilter = 'all';
+
+function renderAttributions() {
+    const items = attribData?.items || [];
+    const total = attribData?.total || 0;
+    const attributed = attribData?.attributed || 0;
+    const unattributed = attribData?.unattributed || 0;
+    
+    // Summary cards
+    document.getElementById('attrTotal').textContent = total;
+    document.getElementById('attrOK').textContent = attributed;
+    document.getElementById('attrNeed').textContent = unattributed;
+    document.getElementById('attrConfHigh').textContent = items.filter(i => i.confidence === 'high').length;
+    
+    // Filter buttons
+    document.querySelectorAll('#tab-attrib .filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('#tab-attrib .filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            attrConfFilter = btn.dataset.attr;
+            renderAttributionList(items);
+        });
+    });
+    
+    renderAttributionList(items);
+}
+
+function renderAttributionList(items) {
+    const container = document.getElementById('attributionList');
+    
+    let filtered = [...items];
+    if (attrConfFilter !== 'all') {
+        filtered = filtered.filter(i => i.confidence === attrConfFilter);
+    }
+    
+    // Sort by absolute pct change
+    filtered.sort((a, b) => Math.abs(b.pct_change) - Math.abs(a.pct_change));
+    
+    // Show top 50 for performance
+    const displayed = filtered.slice(0, 50);
+    
+    if (!displayed.length) {
+        container.innerHTML = '<div class="empty">无匹配归因记录</div>';
+        return;
+    }
+    
+    container.innerHTML = displayed.map(item => {
+        const pct = item.pct_change;
+        const isUp = pct >= 0;
+        const conf = item.confidence;
+        const confLabel = { high: '高置信', medium: '中置信', low: '低置信', unattributed: '需确认' }[conf] || conf;
+        const confCls = 'attr-conf-' + (conf === 'unattributed' ? 'null' : conf);
+        const itemCls = conf === 'unattributed' ? 'unattributed' : (conf === 'high' ? 'high-conf' : 'medium-conf');
+        
+        return `<div class="attr-item ${itemCls}">
+            <div class="attr-header">
+                <span class="attr-name">${item.ticker_name || '?'}</span>
+                <span class="attr-code">${item.ticker}</span>
+                <span class="attr-pct ${isUp ? 'up' : 'down'}">${isUp ? '+' : ''}${pct.toFixed(2)}%</span>
+                <span class="attr-conf-badge ${confCls}">${confLabel}</span>
+                ${conf === 'unattributed' ? '<span class="attr-need-review">⚠️ 需人工确认</span>' : ''}
+            </div>
+            ${item.catalyst ? `<div class="attr-catalyst">${item.catalyst}</div>` : ''}
+            ${item.group ? `<div class="attr-source">板块：${item.group}${item.sub_theme ? ' / ' + item.sub_theme : ''}${item.driver ? ' · 驱动：' + item.driver : ''}</div>` : ''}
+        </div>`;
+    }).join('');
+    
+    if (filtered.length > 50) {
+        container.innerHTML += `<div style="text-align:center;padding:10px;font-size:12px;color:#8b949e;">显示前50条，共${filtered.length}条记录</div>`;
+    }
 }
 
 // ===== Health Tab =====
