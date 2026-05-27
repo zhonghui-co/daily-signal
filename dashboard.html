@@ -1793,48 +1793,39 @@ async function loadChains() {
         const chainCls = key === 'chain1' ? 'badge-chain1' : 'badge-chain2';
         
         const linkRows = links.map(link => {
-            // Determine dot color
-            let dotCls = 'green';
-            if (link.level === '走出来') dotCls = 'green';
-            else if (link.level === '临界点') dotCls = 'orange';
-            else if (link.level === '空白') dotCls = 'red';
+            let bg, border, dotColor;
+            if (link.level === '走出来') { bg = 'rgba(35,134,54,0.06)'; border = '#3fb950'; dotColor = '#3fb950'; }
+            else if (link.level === '临界点') { bg = 'rgba(210,153,34,0.06)'; border = '#d29922'; dotColor = '#d29922'; }
+            else if (link.level === '空白') { bg = 'rgba(218,54,51,0.06)'; border = '#f85149'; dotColor = '#f85149'; }
+            else { bg = '#161b22'; border = '#30363d'; dotColor = '#8b949e'; }
             
-            // Status badge
-            let statusCls = 'driven', statusLabel = link.status || '';
-            if (link.status === '业绩驱动') { statusCls = 'driven'; }
-            else if (link.status === '炒预期') { statusCls = 'spec'; }
-            else if (link.status === '致命短板') { statusCls = 'gap'; }
+            const statusLabel = link.status || '';
+            const statusColor = {'业绩驱动':'#3fb950', '炒预期':'#d29922', '致命短板':'#f85149'}[statusLabel] || '#8b949e';
             
-            // Tickers display with names from pool
             const tickers = link.tickers || [];
-            let tickerHtml = '';
-            if (tickers.length) {
-                tickerHtml = tickers.map(t => {
-                    const name = getNameForTicker(t);
-                    const display = name ? `${t} ${name}` : t;
-                    return `<span style="font-family:monospace;background:rgba(31,111,235,0.08);padding:1px 4px;border-radius:2px;">${display}</span>`;
-                }).join(' ');
-            } else {
-                tickerHtml = '<span style="color:#484f58;">无标的</span>';
-            }
+            const tickerStr = tickers.length ? tickers.map(t => getNameForTicker(t) ? `${t} ${getNameForTicker(t)}` : t).join(' ') : '无标的';
             
-            // Self-sufficiency rate
-            const rateHtml = link.self_rate ? `<span class="chain-link-rate">国产化${link.self_rate}</span>` : '<span class="chain-link-rate"></span>';
+            const rateStr = link.self_rate ? `国产化率 ${link.self_rate}` : '';
+            const missingStr = link.missing || '';
             
-            return `<div class="chain-link-row">
-                <span class="chain-link-dot ${dotCls}"></span>
-                <span class="chain-link-name">${link.name}</span>
-                ${rateHtml}
-                <span class="chain-link-status ${statusCls}">${statusLabel}</span>
-                <span class="chain-link-tickers">${tickerHtml}</span>
-                <span class="chain-link-note" title="${link.note}">${link.note}</span>
-                <span class="chain-link-missing" title="${link.missing||''}">${link.missing ? '⚠ '+link.missing : ''}</span>
+            return `<div style="background:${bg};border-left:4px solid ${border};border-radius:8px;padding:10px 14px;margin-bottom:6px;">
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <span style="font-weight:600;color:#e6edf3;font-size:13px;min-width:100px;">${link.name}</span>
+                    ${rateStr ? `<span style="font-size:10px;color:#8b949e;background:#21262d;padding:2px 6px;border-radius:4px;">${rateStr}</span>` : ''}
+                    <span style="font-size:11px;font-weight:600;color:${statusColor};padding:2px 8px;border-radius:4px;border:1px solid ${statusColor}33;">${statusLabel}</span>
+                    <span style="font-size:10px;color:#58a6ff;font-family:monospace;">${tickerStr}</span>
+                </div>
+                <div style="margin-top:6px;font-size:11px;color:#8b949e;">${link.note}</div>
+                ${missingStr ? `<div style="margin-top:4px;font-size:11px;color:#d29922;">⚠ 缺：${missingStr}</div>` : ''}
             </div>`;
         }).join('');
         
         return `<div class="chain-card">
             <h3>${chainIcon} <span class="badge ${chainCls}">${key === 'chain1' ? '链一' : '链二'}</span> ${chain.name}</h3>
             <div class="chain-desc">${chain.description}</div>
+            <div style="display:flex;gap:16px;margin:10px 0;font-size:11px;">
+                <span>🟢 业绩驱动</span><span>🟡 炒预期</span><span>🔴 致命短板</span><span>🟠 临界点</span>
+            </div>
             ${linkRows}
         </div>`;
     }).join('');
