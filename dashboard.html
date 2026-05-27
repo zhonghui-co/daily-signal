@@ -1509,11 +1509,12 @@ async function loadAnomalies() {
         // B2/B3
         const b2 = recentB2;
         const b3 = recentB3;
-        const b2b3 = [...b2.map(s=>({data:s,type:'B2'})), ...b3.map(s=>({data:s,type:'B3'}))];
+        const b2b3 = [...b2.map(s=>({...s,type:'B2'})), ...b3.map(s=>({...s,type:'B3'}))];
         document.getElementById('b2b3Count').textContent = `(B2:${b2.length} B3:${b3.length})`;
         document.getElementById('b2b3List').innerHTML = b2b3.length ? b2b3.map(s => {
-            const code = s.data[0]||'', name = s.data[1]||'', dir = s.data[2]||'', date = s.data[4]||'';
-            return `<div class="anomaly-row"><span class="badge" style="background:${s.type==='B2'?'rgba(88,166,255,0.15)':'rgba(163,113,247,0.15)'};color:${s.type==='B2'?'#58a6ff':'#a371f7'};font-size:10px;margin-right:6px;">${s.type}</span><span class="ticker-tag">${code} ${name}</span><span class="anomaly-dir">${dir}</span><span style="font-size:11px;color:#8b949e;">${date}</span></div>`;
+            const code = s.code||'', name = s.name||'', dir = s.ff||'', date = s.date||'', pct = s.pct||0;
+            const mf = s.moneyflow?.label || '';
+            return `<div class="anomaly-row"><span class="badge" style="background:${s.type==='B2'?'rgba(88,166,255,0.15)':'rgba(163,113,247,0.15)'};color:${s.type==='B2'?'#58a6ff':'#a371f7'};font-size:10px;margin-right:6px;">${s.type}${s.pattern?'·'+s.pattern:''}</span><span class="ticker-tag">${code} ${name}</span><span class="anomaly-dir">${dir}</span><span style="font-size:11px;color:#8b949e;">${date}</span><span style="font-size:11px;color:${(pct||0)>=0?'#f85149':'#3fb950'};">${(pct||0)>=0?'+':''}${pct}%</span>${mf?`<span style="font-size:10px;color:${mf.includes('流出')?'#3fb950':'#d29922'};">${mf}</span>`:''}</div>`;
         }).join('') : '<div class="empty">无B2/B3信号</div>';
         
         // Washout signals
