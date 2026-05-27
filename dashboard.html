@@ -1425,8 +1425,8 @@ async function loadAnomalies() {
         b1.sort((a,b) => (b[4]||'').localeCompare(a[4]||''));
         document.getElementById('b1Count').textContent = `(${b1.length}个)`;
         document.getElementById('b1List').innerHTML = b1.length ? b1.map(s => {
-            const code = s[0]||'', name = s[1]||'', dir = s[2]||'', date = s[4]||'', price = s[5], jval = s[6];
-            return `<div class="anomaly-row"><span class="ticker-tag">${code} ${name}</span><span class="anomaly-dir">${dir}</span><span style="font-size:11px;color:#8b949e;">${date}</span><span style="font-size:11px;color:#d29922;">J=${jval!=null?jval.toFixed(1):'?'}</span></div>`;
+            const code = s.code||s[0]||'', name = s.name||s[1]||'', dir = s.ff||s[2]||'', date = s.date||s[4]||'', jval = s.j||s[6];
+            return `<div class="anomaly-row"><span class="ticker-tag">${code} ${name}</span><span class="anomaly-dir">${dir}</span><span style="font-size:11px;color:#8b949e;">${date}</span><span style="font-size:11px;color:#d29922;">J=${jval!=null?(+jval).toFixed(1):'?'}</span></div>`;
         }).join('') : '<div class="empty">无B1信号</div>';
         
         // B2/B3
