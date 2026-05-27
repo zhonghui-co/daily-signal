@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T20:06:55.044552",
+  "generated_at": "2026-05-27T20:38:29.529550",
   "stats": {
     "total": 150,
     "by_source": {
@@ -22,12 +22,12 @@
       "chain2": 4,
       "unclassified": 83,
       "chain8": 1,
-      "国产软件与信创": 3,
+      "国产软件与信创": 2,
       "高端装备(工业母机)": 2,
-      "具身智能/机器人": 6,
+      "具身智能/机器人": 7,
       "生物医药与器械": 1,
-      "新能源(光风储电)": 5,
-      "集成电路": 6,
+      "新能源(光风储电)": 4,
+      "集成电路": 7,
       "商业航天与低空": 2,
       "新材料": 4,
       "人工智能(AI算力)": 1,
@@ -47,45 +47,1515 @@
       "b1": 30
     }
   },
+  "top_10": [
+    {
+      "id": "SIG-3d12748c32c3",
+      "timestamp": "20260521T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "国产软件与信创",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 新致软件(688590) 国产软件与信创",
+      "summary": "B1=16.32 B2=15.87 B3=15.85 | +-2.8% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "688590",
+          "name": "新致软件"
+        }
+      ],
+      "metrics": {
+        "b1_price": 16.32,
+        "b2_price": 15.87,
+        "b3_price": 15.85,
+        "pct_from_b1": -2.8
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-5eec74fa6f31",
+      "timestamp": "20260520T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "高端装备(工业母机)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 秦川机床(000837) 高端装备(工业母机)",
+      "summary": "B1=12.39 B2=11.65 B3=11.61 | +-6.0% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "000837",
+          "name": "秦川机床"
+        }
+      ],
+      "metrics": {
+        "b1_price": 12.39,
+        "b2_price": 11.65,
+        "b3_price": 11.61,
+        "pct_from_b1": -6.0
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-e6b21c6cc8ff",
+      "timestamp": "20260520T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 巨轮智能(002031) 具身智能/机器人",
+      "summary": "B1=7.54 B2=6.93 B3=6.89 | +-8.1% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "002031",
+          "name": "巨轮智能"
+        }
+      ],
+      "metrics": {
+        "b1_price": 7.54,
+        "b2_price": 6.93,
+        "b3_price": 6.89,
+        "pct_from_b1": -8.1
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6659ef376393",
+      "timestamp": "20260520T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 瑞鹄模具(002997) 具身智能/机器人",
+      "summary": "B1=32.80 B2=32.83 B3=32.78 | +0.1% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "002997",
+          "name": "瑞鹄模具"
+        }
+      ],
+      "metrics": {
+        "b1_price": 32.8,
+        "b2_price": 32.83,
+        "b3_price": 32.78,
+        "pct_from_b1": 0.1
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-07914b9c9fbb",
+      "timestamp": "20260520T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "高端装备(工业母机)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 维宏股份(300508) 高端装备(工业母机)",
+      "summary": "B1=48.96 B2=39.60 B3=39.20 | +-19.1% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300508",
+          "name": "维宏股份"
+        }
+      ],
+      "metrics": {
+        "b1_price": 48.96,
+        "b2_price": 39.6,
+        "b3_price": 39.2,
+        "pct_from_b1": -19.1
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-8abf30cccb08",
+      "timestamp": "20260519T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "生物医药与器械",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 三力制药(603439) 生物医药与器械",
+      "summary": "B1=12.51 B2=11.61 B3=11.55 | +-7.2% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "603439",
+          "name": "三力制药"
+        }
+      ],
+      "metrics": {
+        "b1_price": 12.51,
+        "b2_price": 11.61,
+        "b3_price": 11.55,
+        "pct_from_b1": -7.2
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-95a6b6cd7d98",
+      "timestamp": "20260518T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "新能源(光风储电)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 可立克(002782) 新能源(光风储电)",
+      "summary": "B1=25.08 B2=22.22 B3=22.16 | +-11.4% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "002782",
+          "name": "可立克"
+        }
+      ],
+      "metrics": {
+        "b1_price": 25.08,
+        "b2_price": 22.22,
+        "b3_price": 22.16,
+        "pct_from_b1": -11.4
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-98861bee1ee4",
+      "timestamp": "20260518T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "集成电路",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 英杰电气(300820) 集成电路",
+      "summary": "B1=66.67 B2=51.21 B3=50.81 | +-23.2% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300820",
+          "name": "英杰电气"
+        }
+      ],
+      "metrics": {
+        "b1_price": 66.67,
+        "b2_price": 51.21,
+        "b3_price": 50.81,
+        "pct_from_b1": -23.2
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-1f2477822c10",
+      "timestamp": "20260515T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 汇川技术(300124) 具身智能/机器人",
+      "summary": "B1=77.32 B2=70.85 B3=70.55 | +-8.4% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300124",
+          "name": "汇川技术"
+        }
+      ],
+      "metrics": {
+        "b1_price": 77.32,
+        "b2_price": 70.85,
+        "b3_price": 70.55,
+        "pct_from_b1": -8.4
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-2479fe93b4fe",
+      "timestamp": "20260515T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "商业航天与低空",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 恒宇信通(300965) 商业航天与低空",
+      "summary": "B1=78.01 B2=60.55 B3=59.80 | +-22.4% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300965",
+          "name": "恒宇信通"
+        }
+      ],
+      "metrics": {
+        "b1_price": 78.01,
+        "b2_price": 60.55,
+        "b3_price": 59.8,
+        "pct_from_b1": -22.4
+      },
+      "source_urls": []
+    }
+  ],
   "signals": [
     {
-      "id": "SIG-385aa2334368",
+      "id": "SIG-3d12748c32c3",
+      "timestamp": "20260521T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "国产软件与信创",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 新致软件(688590) 国产软件与信创",
+      "summary": "B1=16.32 B2=15.87 B3=15.85 | +-2.8% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "688590",
+          "name": "新致软件"
+        }
+      ],
+      "metrics": {
+        "b1_price": 16.32,
+        "b2_price": 15.87,
+        "b3_price": 15.85,
+        "pct_from_b1": -2.8
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-5eec74fa6f31",
+      "timestamp": "20260520T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "高端装备(工业母机)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 秦川机床(000837) 高端装备(工业母机)",
+      "summary": "B1=12.39 B2=11.65 B3=11.61 | +-6.0% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "000837",
+          "name": "秦川机床"
+        }
+      ],
+      "metrics": {
+        "b1_price": 12.39,
+        "b2_price": 11.65,
+        "b3_price": 11.61,
+        "pct_from_b1": -6.0
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-e6b21c6cc8ff",
+      "timestamp": "20260520T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 巨轮智能(002031) 具身智能/机器人",
+      "summary": "B1=7.54 B2=6.93 B3=6.89 | +-8.1% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "002031",
+          "name": "巨轮智能"
+        }
+      ],
+      "metrics": {
+        "b1_price": 7.54,
+        "b2_price": 6.93,
+        "b3_price": 6.89,
+        "pct_from_b1": -8.1
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6659ef376393",
+      "timestamp": "20260520T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 瑞鹄模具(002997) 具身智能/机器人",
+      "summary": "B1=32.80 B2=32.83 B3=32.78 | +0.1% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "002997",
+          "name": "瑞鹄模具"
+        }
+      ],
+      "metrics": {
+        "b1_price": 32.8,
+        "b2_price": 32.83,
+        "b3_price": 32.78,
+        "pct_from_b1": 0.1
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-07914b9c9fbb",
+      "timestamp": "20260520T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "高端装备(工业母机)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 维宏股份(300508) 高端装备(工业母机)",
+      "summary": "B1=48.96 B2=39.60 B3=39.20 | +-19.1% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300508",
+          "name": "维宏股份"
+        }
+      ],
+      "metrics": {
+        "b1_price": 48.96,
+        "b2_price": 39.6,
+        "b3_price": 39.2,
+        "pct_from_b1": -19.1
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-8abf30cccb08",
+      "timestamp": "20260519T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "生物医药与器械",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 三力制药(603439) 生物医药与器械",
+      "summary": "B1=12.51 B2=11.61 B3=11.55 | +-7.2% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "603439",
+          "name": "三力制药"
+        }
+      ],
+      "metrics": {
+        "b1_price": 12.51,
+        "b2_price": 11.61,
+        "b3_price": 11.55,
+        "pct_from_b1": -7.2
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-95a6b6cd7d98",
+      "timestamp": "20260518T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "新能源(光风储电)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 可立克(002782) 新能源(光风储电)",
+      "summary": "B1=25.08 B2=22.22 B3=22.16 | +-11.4% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "002782",
+          "name": "可立克"
+        }
+      ],
+      "metrics": {
+        "b1_price": 25.08,
+        "b2_price": 22.22,
+        "b3_price": 22.16,
+        "pct_from_b1": -11.4
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-98861bee1ee4",
+      "timestamp": "20260518T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "集成电路",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 英杰电气(300820) 集成电路",
+      "summary": "B1=66.67 B2=51.21 B3=50.81 | +-23.2% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300820",
+          "name": "英杰电气"
+        }
+      ],
+      "metrics": {
+        "b1_price": 66.67,
+        "b2_price": 51.21,
+        "b3_price": 50.81,
+        "pct_from_b1": -23.2
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-1f2477822c10",
+      "timestamp": "20260515T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 汇川技术(300124) 具身智能/机器人",
+      "summary": "B1=77.32 B2=70.85 B3=70.55 | +-8.4% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300124",
+          "name": "汇川技术"
+        }
+      ],
+      "metrics": {
+        "b1_price": 77.32,
+        "b2_price": 70.85,
+        "b3_price": 70.55,
+        "pct_from_b1": -8.4
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-2479fe93b4fe",
+      "timestamp": "20260515T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "商业航天与低空",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 恒宇信通(300965) 商业航天与低空",
+      "summary": "B1=78.01 B2=60.55 B3=59.80 | +-22.4% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300965",
+          "name": "恒宇信通"
+        }
+      ],
+      "metrics": {
+        "b1_price": 78.01,
+        "b2_price": 60.55,
+        "b3_price": 59.8,
+        "pct_from_b1": -22.4
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-31f86a7f541a",
+      "timestamp": "20260515T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "新能源(光风储电)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 京能电力(600578) 新能源(光风储电)",
+      "summary": "B1=7.01 B2=5.33 B3=5.32 | +-24.0% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "600578",
+          "name": "京能电力"
+        }
+      ],
+      "metrics": {
+        "b1_price": 7.01,
+        "b2_price": 5.33,
+        "b3_price": 5.32,
+        "pct_from_b1": -24.0
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-4a759f0b6ff2",
+      "timestamp": "20260515T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 亿嘉和(603666) 具身智能/机器人",
+      "summary": "B1=30.60 B2=28.79 B3=28.70 | +-5.9% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "603666",
+          "name": "亿嘉和"
+        }
+      ],
+      "metrics": {
+        "b1_price": 30.6,
+        "b2_price": 28.79,
+        "b3_price": 28.7,
+        "pct_from_b1": -5.9
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-62446c121eca",
+      "timestamp": "20260515T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "新能源(光风储电)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 华体科技(603679) 新能源(光风储电)",
+      "summary": "B1=17.86 B2=15.27 B3=15.17 | +-14.5% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "603679",
+          "name": "华体科技"
+        }
+      ],
+      "metrics": {
+        "b1_price": 17.86,
+        "b2_price": 15.27,
+        "b3_price": 15.17,
+        "pct_from_b1": -14.5
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-68ee8e0e7804",
+      "timestamp": "20260515T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "集成电路",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 美芯晟(688458) 集成电路",
+      "summary": "B1=44.58 B2=38.18 B3=38.03 | +-14.4% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "688458",
+          "name": "美芯晟"
+        }
+      ],
+      "metrics": {
+        "b1_price": 44.58,
+        "b2_price": 38.18,
+        "b3_price": 38.03,
+        "pct_from_b1": -14.4
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-7c828ba26fc4",
+      "timestamp": "20260515T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "新材料",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 金博股份(688598) 新材料",
+      "summary": "B1=32.10 B2=26.11 B3=26.04 | +-18.7% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "688598",
+          "name": "金博股份"
+        }
+      ],
+      "metrics": {
+        "b1_price": 32.1,
+        "b2_price": 26.11,
+        "b3_price": 26.04,
+        "pct_from_b1": -18.7
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-538984c12849",
+      "timestamp": "20260514T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 天奇股份(002009) 具身智能/机器人",
+      "summary": "B1=27.56 B2=24.85 B3=24.85 | +-9.8% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "002009",
+          "name": "天奇股份"
+        }
+      ],
+      "metrics": {
+        "b1_price": 27.56,
+        "b2_price": 24.85,
+        "b3_price": 24.85,
+        "pct_from_b1": -9.8
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-c9ba2439f1ae",
+      "timestamp": "20260514T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "新材料",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 泰和新材(002254) 新材料",
+      "summary": "B1=14.91 B2=11.50 B3=11.46 | +-22.9% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "002254",
+          "name": "泰和新材"
+        }
+      ],
+      "metrics": {
+        "b1_price": 14.91,
+        "b2_price": 11.5,
+        "b3_price": 11.46,
+        "pct_from_b1": -22.9
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-24f5f64ea264",
+      "timestamp": "20260514T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "集成电路",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 晶盛机电(300316) 集成电路",
+      "summary": "B1=55.04 B2=45.40 B3=45.10 | +-17.5% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300316",
+          "name": "晶盛机电"
+        }
+      ],
+      "metrics": {
+        "b1_price": 55.04,
+        "b2_price": 45.4,
+        "b3_price": 45.1,
+        "pct_from_b1": -17.5
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-7af8a15ab25f",
+      "timestamp": "20260514T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "新材料",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 电工合金(300697) 新材料",
+      "summary": "B1=16.84 B2=16.37 B3=16.37 | +-2.8% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300697",
+          "name": "电工合金"
+        }
+      ],
+      "metrics": {
+        "b1_price": 16.84,
+        "b2_price": 16.37,
+        "b3_price": 16.37,
+        "pct_from_b1": -2.8
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-4a1ef88c4f55",
+      "timestamp": "20260514T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "集成电路",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 骏鼎达(301538) 集成电路",
+      "summary": "B1=102.62 B2=81.49 B3=81.31 | +-20.6% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "301538",
+          "name": "骏鼎达"
+        }
+      ],
+      "metrics": {
+        "b1_price": 102.62,
+        "b2_price": 81.49,
+        "b3_price": 81.31,
+        "pct_from_b1": -20.6
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-898d806ae108",
+      "timestamp": "20260514T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "集成电路",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 聚辰股份(688123) 集成电路",
+      "summary": "B1=171.70 B2=131.47 B3=130.71 | +-23.4% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "688123",
+          "name": "聚辰股份"
+        }
+      ],
+      "metrics": {
+        "b1_price": 171.7,
+        "b2_price": 131.47,
+        "b3_price": 130.71,
+        "pct_from_b1": -23.4
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-2e9f9c889eb3",
+      "timestamp": "20260514T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "新能源(光风储电)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 晶科能源(688223) 新能源(光风储电)",
+      "summary": "B1=7.37 B2=6.87 B3=6.85 | +-6.8% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "688223",
+          "name": "晶科能源"
+        }
+      ],
+      "metrics": {
+        "b1_price": 7.37,
+        "b2_price": 6.87,
+        "b3_price": 6.85,
+        "pct_from_b1": -6.8
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-a0a41e796b04",
+      "timestamp": "20260513T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 埃斯顿(002747) 具身智能/机器人",
+      "summary": "B1=24.20 B2=21.99 B3=21.94 | +-9.1% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "002747",
+          "name": "埃斯顿"
+        }
+      ],
+      "metrics": {
+        "b1_price": 24.2,
+        "b2_price": 21.99,
+        "b3_price": 21.94,
+        "pct_from_b1": -9.1
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-bad0eb3ac662",
+      "timestamp": "20260513T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "国产软件与信创",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 汉邦高科(300449) 国产软件与信创",
+      "summary": "B1=12.06 B2=7.85 B3=7.80 | +-34.9% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300449",
+          "name": "汉邦高科"
+        }
+      ],
+      "metrics": {
+        "b1_price": 12.06,
+        "b2_price": 7.85,
+        "b3_price": 7.8,
+        "pct_from_b1": -34.9
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-2524b66d913e",
+      "timestamp": "20260513T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "新材料",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 广信材料(300537) 新材料",
+      "summary": "B1=26.41 B2=23.49 B3=23.45 | +-11.1% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300537",
+          "name": "广信材料"
+        }
+      ],
+      "metrics": {
+        "b1_price": 26.41,
+        "b2_price": 23.49,
+        "b3_price": 23.45,
+        "pct_from_b1": -11.1
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-feb8e647c92f",
+      "timestamp": "20260513T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "人工智能(AI算力)",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 士兰微(600460) 人工智能(AI算力)",
+      "summary": "B1=31.51 B2=28.50 B3=28.40 | +-9.6% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "600460",
+          "name": "士兰微"
+        }
+      ],
+      "metrics": {
+        "b1_price": 31.51,
+        "b2_price": 28.5,
+        "b3_price": 28.4,
+        "pct_from_b1": -9.6
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-78a5f4a6f4ac",
+      "timestamp": "20260513T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "集成电路",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 三安光电(600703) 集成电路",
+      "summary": "B1=16.84 B2=14.48 B3=14.47 | +-14.0% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "600703",
+          "name": "三安光电"
+        }
+      ],
+      "metrics": {
+        "b1_price": 16.84,
+        "b2_price": 14.48,
+        "b3_price": 14.47,
+        "pct_from_b1": -14.0
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-9ab376ef509f",
+      "timestamp": "20260513T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "商业航天与低空",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 迈信林(688685) 商业航天与低空",
+      "summary": "B1=56.40 B2=47.56 B3=47.40 | +-15.7% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "688685",
+          "name": "迈信林"
+        }
+      ],
+      "metrics": {
+        "b1_price": 56.4,
+        "b2_price": 47.56,
+        "b3_price": 47.4,
+        "pct_from_b1": -15.7
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-4a67b3927d42",
+      "timestamp": "20260513T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "集成电路",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 灿芯股份(688691) 集成电路",
+      "summary": "B1=120.48 B2=112.25 B3=111.90 | +-6.8% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "688691",
+          "name": "灿芯股份"
+        }
+      ],
+      "metrics": {
+        "b1_price": 120.48,
+        "b2_price": 112.25,
+        "b3_price": 111.9,
+        "pct_from_b1": -6.8
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-c1d6b2e36a5b",
+      "timestamp": "20260512T15:00:00+08:00",
+      "source": "b1b2b3",
+      "type": "b1",
+      "direction": "具身智能/机器人",
+      "chain": "",
+      "lifecycle": "emerging",
+      "title": "🔵 B1: 瑞凌股份(300154) 具身智能/机器人",
+      "summary": "B1=10.24 B2=8.85 B3=8.80 | +-13.6% from B1",
+      "priority": "b1",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 62,
+      "tickers": [
+        {
+          "code": "300154",
+          "name": "瑞凌股份"
+        }
+      ],
+      "metrics": {
+        "b1_price": 10.24,
+        "b2_price": 8.85,
+        "b3_price": 8.8,
+        "pct_from_b1": -13.6
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-7821f261e50a",
       "timestamp": "2026-05-26T22:30:00+08:00",
       "source": "scanner",
       "type": "fire",
-      "direction": "chain1",
-      "chain": "chain1",
-      "lifecycle": "consensus",
-      "title": "🔥 日经亚洲三连击τ定律国际验证深化——华为新麒麟芯片克服美国制裁技术逼近TSMC/Intel",
-      "summary": "Nikkei Asia 5/25报道华为新麒麟芯片克服美国制裁取得重大突破，技术能力逼近TSMC和Intel。这是48h内日经亚洲第三篇华为芯片报道（5/24何庭波τ定律人物深度+5/25 Kirin突破+SK海力士HBM亚洲三巨头），international media从单篇→持续campaign→常态化覆盖三阶跃迁。τ定律叙事的国际验证从'一次报道'升级为'连续follow-up'状态——国际媒体对中国半导体不再是一次性猎奇而是持续性跟踪。券商(招商/国盛/华泰/中信)纷纷发布τ定律专题研报，先进封装/代工/设备/EDA/CPO全面受益。",
+      "direction": "chain2",
+      "chain": "chain2",
+      "lifecycle": "emerging",
+      "title": "🔥 盛视科技签订60亿算力产业合作协议——远超公司市值的算力服务跨界",
+      "summary": "盛视科技(002990.SZ)全资子公司与某公司签署《算力产业合作协议》，围绕算电协同、AIDC智能算力中心运营、算力产业资源整合、算力服务采购交付四大维度深度合作，整体合作业务体量折合约60亿元。盛视科技此前主营智慧口岸/智能交通，当前市值约50亿——60亿合同额超公司市值。公司公告称此为'布局算力服务业务的重要里程碑'，算力服务将成为'业绩增长的全新引擎'。16to22窗新鲜出炉(<8h)，媒体覆盖极少。",
       "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "type": "margin",
+        "margin_by_ticker": {
+          "002990.SZ": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          }
+        }
+      },
+      "_score": 52,
       "tickers": [
         {
-          "code": "688981.SH",
-          "name": "中芯国际"
-        },
-        {
-          "code": "002371.SZ",
-          "name": "北方华创"
-        },
-        {
-          "code": "688012.SH",
-          "name": "中微公司"
-        },
-        {
-          "code": "688072.SH",
-          "name": "拓荆科技"
-        },
-        {
-          "code": "688256.SH",
-          "name": "寒武纪"
+          "code": "002990.SZ",
+          "name": "盛视科技"
         }
       ],
       "metrics": {},
-      "source_urls": [
-        "https://asia.nikkei.com/spotlight/huawei-crackdown/huawei-says-new-kirin-chip-for-phones-overcomes-us-clampdown",
-        "https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-nvidia-and-asia-s-three-chip-giants-cash-in-on-ai-gold-rush"
-      ]
+      "source_urls": []
+    },
+    {
+      "id": "SIG-074edaa62e9f",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "emerging",
+      "title": "晶方科技分拆荷兰子公司Anteryon至阿姆斯特丹上市——中国半导体企业国际化新范式",
+      "summary": "晶方科技(603005.SH)拟分拆子公司Anteryon至阿姆斯特丹交易所上市。Anteryon为荷兰光学半导体子公司，分拆完成后晶方科技仍保持控制权。这是中国半导体企业首次将欧洲子公司推向公开市场——不同于海外并购，而是反向将海外资产证券化。方案尚需股东会+阿姆斯特丹交易所批准。同期思特威+紫光展锐联合布局MicroLED光互连，中国半导体企业国际化进入'资产证券化+战略合作'多线程阶段。",
+      "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 52,
+      "tickers": [
+        {
+          "code": "603005.SH",
+          "name": ""
+        }
+      ],
+      "metrics": {},
+      "source_urls": []
     },
     {
       "id": "SIG-f19cbfc12400",
@@ -98,6 +1568,45 @@
       "title": "🔥 Goldman Sachs PB对冲基金半导体获利了结信号——与all in AI形成双向对立",
       "summary": "CNBC 15h前报道高盛PB数据：对冲基金all in AI半导体仓位创历史最高+从软件轮动至硬件。但Goldman Sachs Insights 3天前另一篇报告指出：半导体股票强劲反弹后，对冲基金客户出现获利了结(taking profits on semiconductors)，虽然科技股继续创新高但'certain types'对冲基金正在profit-taking+rebalancing。双向信号：all in AI是长期趋势（right）但短期超买获利了结为战术撤退信号。与今日A股科创50跌超2%+半导体领跌形成中美共振——对冲基金是对A股半导体情绪的前瞻指标。",
       "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "type": "margin",
+        "margin_by_ticker": {
+          "688981.SH": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +6.8%",
+            "rzye_current": 13993742398.0,
+            "rzye_pct_change": 6.8
+          },
+          "688256.SH": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +4.1%",
+            "rzye_current": 25938896813.0,
+            "rzye_pct_change": 4.1
+          },
+          "002371.SZ": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +23.3%",
+            "rzye_current": 3698911169.0,
+            "rzye_pct_change": 23.3
+          },
+          "688041.SH": {
+            "status": "stable",
+            "label": "融资余额平稳",
+            "detail": "5日变化 +1.8%",
+            "rzye_current": 11579545347.0,
+            "rzye_pct_change": 1.8
+          }
+        }
+      },
+      "_score": 42,
       "tickers": [
         {
           "code": "688981.SH",
@@ -123,26 +1632,6 @@
       ]
     },
     {
-      "id": "SIG-7821f261e50a",
-      "timestamp": "2026-05-26T22:30:00+08:00",
-      "source": "scanner",
-      "type": "fire",
-      "direction": "chain2",
-      "chain": "chain2",
-      "lifecycle": "emerging",
-      "title": "🔥 盛视科技签订60亿算力产业合作协议——远超公司市值的算力服务跨界",
-      "summary": "盛视科技(002990.SZ)全资子公司与某公司签署《算力产业合作协议》，围绕算电协同、AIDC智能算力中心运营、算力产业资源整合、算力服务采购交付四大维度深度合作，整体合作业务体量折合约60亿元。盛视科技此前主营智慧口岸/智能交通，当前市值约50亿——60亿合同额超公司市值。公司公告称此为'布局算力服务业务的重要里程碑'，算力服务将成为'业绩增长的全新引擎'。16to22窗新鲜出炉(<8h)，媒体覆盖极少。",
-      "priority": "fire",
-      "tickers": [
-        {
-          "code": "002990.SZ",
-          "name": "盛视科技"
-        }
-      ],
-      "metrics": {},
-      "source_urls": []
-    },
-    {
       "id": "SIG-32a3fc02b56f",
       "timestamp": "2026-05-26T22:30:00+08:00",
       "source": "scanner",
@@ -153,6 +1642,41 @@
       "title": "🔥 深科技14.7亿扩充高端存储封测——封测扩产三线共振（深科技+长电+通富=158.7亿）",
       "summary": "深科技(000021.SZ)子公司深圳沛顿+合肥沛顿存储拟投资14.7亿扩充高端存储芯片封测产能，达产后月增封装产能3380万颗晶粒+测试800万颗。配合此前长电科技100亿固投(先进封装)+通富微电44亿定增(存储封测)+伟测科技20亿可转债，封测链条总投资达158.7亿+。三线共振背景：长鑫DDR5进入Corsair全球供应链+AI HBM需求缺口50-60%+华为τ定律将先进封装推向C位。深科技为长鑫核心封测合作伙伴，扩产直接挂钩长鑫5/27 IPO上会。",
       "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "type": "margin",
+        "margin_by_ticker": {
+          "000021.SZ": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "600584.SH": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +26.8%",
+            "rzye_current": 6497596582.0,
+            "rzye_pct_change": 26.8
+          },
+          "002156.SZ": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +8.1%",
+            "rzye_current": 5074146531.0,
+            "rzye_pct_change": 8.1
+          },
+          "688213.SH": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          }
+        }
+      },
+      "_score": 42,
       "tickers": [
         {
           "code": "000021.SZ",
@@ -187,6 +1711,38 @@
       "title": "🔥 中国芯片出口翻倍至310亿美元——半导体/AI产品贡献出口增长一半，制裁反向加速全球竞争力",
       "summary": "Benzinga 5/22报道中国芯片出口翻倍至310亿美元，Goldman Sachs + Nomura估算半导体/计算机/AI相关产品贡献了中国4月出口增长的一半。制裁反向效应：美国出口管制本意限制中国芯片产业，实际加速了中国半导体出口竞争力提升。36氪同期深度报道：国产芯片12年间从0→22%全球份额，成熟制程产能已领先，14nm以下突破为下一阶段。链1从'进口替代(减少进口)'→'出口竞争力(增加出口)'质变——制裁不仅没能压制中国半导体，反而催生了具备全球竞争力的半导体出口产业。",
       "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "type": "margin",
+        "margin_by_ticker": {
+          "688981.SH": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +6.8%",
+            "rzye_current": 13993742398.0,
+            "rzye_pct_change": 6.8
+          },
+          "002371.SZ": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +23.3%",
+            "rzye_current": 3698911169.0,
+            "rzye_pct_change": 23.3
+          },
+          "603986.SH": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +11.6%",
+            "rzye_current": 16779016905.0,
+            "rzye_pct_change": 11.6
+          }
+        }
+      },
+      "_score": 42,
       "tickers": [
         {
           "code": "688981.SH",
@@ -208,1706 +1764,6 @@
       ]
     },
     {
-      "id": "SIG-ed06ab31aad3",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 高通+字节数百万颗ASIC协议——AI算力供给GPU-only→ASIC+GPU双结构质变 (emerging/under_priced⭐)",
-      "summary": "Bloomberg→Reuters→Yahoo Finance五源确认。字节将采购数百万颗高通ASIC支撑AI Agent软件，2026年AI基础设施投入2000亿元。中国AI算力供给结构质变→降低制裁集中度风险。首次定价窗口48-72h，0%定价。传导:先进封装(长电/通富/深科技)→晶圆代工(SMIC)→国产AI芯片TAM扩大(寒武纪/海光但竞争加剧)。风险:若美方视此为'绕开制裁'→可能触发新管制。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-af10f1773e1c",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 长鑫HBM3年底量产dual_confirmed——国产HBM 0→1年度级别战略突破 (positioning/partially_priced, strong backing)",
-      "summary": "Nikkei Asia多篇CXMT深度+Tom's Hardware/Digital Today Korea国际验证+中信证券国内验证。长鑫HBM3年底量产(月产6万片)、12英寸15万片月产、90% DDR5切换。三星罢工暂缓但HBM短缺未变。200亿IPO募资→设备采购订单(Naura/AMEC)。strong backing(大基金三期+国家队ETF+招投标三匹配)。风险:DigiTimes 4月报道时间表可能推迟。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-492bc33b2232",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 τ定律国际定价三阶跃迁完成dual_confirmed——DigiTimes首推'Huawei Tau Law'专题系列(Series 1&2) (positioning/partially_priced)",
-      "summary": "Nikkei五连击+DigiTimes首次专题系列→国际定价从'偶然关注'→'常态化报道'→'系统性研究'仅3天完成。DigiTimes Series 2聚焦先进封装/光互联/EDA→细化τ定律受益方向。IC排名佐证:北方华创设备#6(+1)+中微#10(新进)+韦尔#9(新进)。国内券商密集覆盖接近consensus,国际资金定价2-4周窗口开启。设备/材料滞后SMIC 40pp+→补涨空间最大。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-d81fa0f0c21f",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔴 四大背离确认:①双高权重源对立深化(Nikkei bullish vs Goldman bearish) ②产业资本套现 vs 产业基本面向 ③核心标的普跌 vs 信号面10fire ④高通ASIC竞争 vs TAM扩大",
-      "summary": "四大背离→短期(2-4周)震荡消化→中期方向取决于:①GS PB是否连续3周以上净卖出 ②长鑫今日上会结果 ③τ定律能否持续吸引国际资金。当前最佳策略:持有τ定律核心受益(设备/封测)不追高,等待缩量企稳信号。设备/材料(北方华创/中微/南大光电)为最佳补涨方向。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-4d5d547cfee1",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 宇树科技6月1日科创板IPO上会——A股人形机器人第一股即将诞生 (emerging)",
-      "summary": "募资42亿，超20亿投入具身智能模型研发。人形机器人公司首次进入A股→定价框架从'概念炒作'→'真实投资标的'切换。绿的谐波/兆威机电/鸣志电器/柯力传感/奥比中光全线受益。距6/1上会仅5天，首次定价窗口开启。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-0964b9471e0a",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 特斯拉Optimus V3精确时间锚：6月发布+7-8月弗里蒙特量产100万台——中国供应链占60-70% (positioning)",
-      "summary": "时间线从'下半年'模糊→6月/7-8月精确锚。100万台产能→减速器2000-4000万个+电机1000万+个TAM。三花智控/拓普集团/鸣志电器/绿的谐波/双环传动已审厂锁定。6月发布若超预期→Q3零部件订单提前释放。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-6041ac597821",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 华威科电子皮肤千万片级基地动工+订单增300%——传感细分进入规模化拐点 (emerging)",
-      "summary": "电子皮肤从实验室→千万片工业化量产，单位成本大幅下降。订单+300%→灵巧手2026年出货3-4万套。柯力传感(六维力)/奥比中光(3D视觉)/奥普特(机器视觉)受益传感TAM扩展。0券商覆盖，0%定价。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-6ca1c317f27e",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "周三机器人全日6信号/5fire——量产基础设施+IPO融资+海外量产锚+产能指引+传感细分+芯片架构六线推进",
-      "summary": "早间(10:40):佛山量产线+优必选万台+类脑芯片→下午(16:40):宇树IPO+Optimus精确时间表+电子皮肤拐点。与半导体链τ定律形成最强双线共振日:宇树6/1上会↔长鑫5/27上会(今日即期)。机器人链从叙事→基础设施→融资→订单四层验证闭环。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-80508a616728",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 高通+字节跳动数百万颗定制ASIC芯片协议——中国AI算力供给从GPU-only→ASIC+GPU双结构 (chain2, emerging)",
-      "summary": "高通为字节提供数百万颗定制ASIC支撑AI数据中心，字节2026年AI基础设施投入2000亿元。中国AI算力供给结构从单一NVIDIA GPU→高通ASIC+国产GPU双引擎，降低供应集中度风险。寒武纪/海光面临竞争加剧但TAM同步扩大。ReadHub独家<9h，0券商覆盖，0%定价。potential首次定价窗口48-72h。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-7b0f6f0422f5",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 长鑫HBM3年底量产+12英寸月产能15万片+三星罢工HBM缺口——国产存储HBM从0→1质变 (chain1, positioning, high weight)",
-      "summary": "中信证券研报:长鑫2026年底HBM3量产(月产6万片占20%)，12英寸月产15万片，90%切换DDR5。中国基金报:HBM2已送样。三星罢工暂缓但HBM供给硬短缺未变(缺口3-4%)。长鑫跳过HBM2E直攻HBM3/3E→国产存储从DDR5品牌突破→HBM战略突破。200亿IPO募资用于设备采购→北方华创/中微/中科仪受益。全线共振标的:兆易创新/深科技/通富微电/长电科技。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-73e5ae888c16",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 高盛三重验证——AI CapEx上调至$800B + PB获利了结近一年最快 + 标普500目标8000点 (chain2, positioning, high weight)",
-      "summary": "Benzinga(18h): Goldman lifts 2026 AI CapEx to $800B。Hedgeweek(5d): GS PB对冲基金以近一年最快速度净卖出半导体。Goldman Insights(3d): 定性为风险管理和组合再平衡。双信号并存→中期方向看多但短期波动加大。A股设备/封测相对独立于美股半导体获利了结→tau定律受益方可能在回调中相对抗跌。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-8a21e5c5376d",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列 (chain1, positioning, high weight)",
-      "summary": "Nikkei Asia(1d前)第五篇何庭波人物深度。DigiTimes(1d前)推出'Huawei Tau Law series 1'专题——台湾产业界首次系统性接纳τ定律为分析框架。从单篇→五篇campaign→DigiTimes专题系列=国际定价从'偶然关注'→'常态化报道'→'系统性研究'三阶跃迁完成。AMD+NVIDIA同步加深台湾半导体生态投资→以行动确认τ定律时代的产业重构。国内券商密集覆盖但国际资金定价仍在进行中。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-d5f8668daafa",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 DRAM Q1全球营收近千亿美元环比+80%创历史新高——存储超级周期最强量化验证 (chain2, positioning)",
-      "summary": "Q1 DRAM营收环比+80%创历史新高，HBM+LPDDR5占比提升驱动。Q2价格预计继续环比+50%。将WSTS Q1半导体+79%超级周期数据在DRAM维度进一步验证。美光+18%市值突破1万亿美元(UBS目标535→1625)。A股存储链(兆易创新/江波龙/佰维存储)仍在定价DRAM超级周期。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-c0f7ceecd1ea",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "周三16:30下午8信号/5fire——双窗口覆盖，全日累计~10独特信号/10fire。核心变量:长鑫上会结果",
-      "summary": "下午5fire全新催化:①高通+字节ASIC→链2供给结构质变(emerging) ②长鑫HBM3年底量产→链1存储HBM 0→1(多源验证) ③GS三重验证→资金面分歧深化(AI CapEx $800B vs 获利了结) ④τ定律六连击→国际媒体系统化研究 ⑤DRAM Q1环比+80%→存储细分验证。与早间5fire(昇腾认证/长鑫上会/τ四连击/DigiTimes终端自研/WSTS超级周期)形成双窗口互补。全日核心关注:①长鑫上会结果(过会=全线共振确认，暂缓=短期回调) ②减持潮是否扩大 ③GS PB获利了结是否持续→若持续2-4周=风险升级。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "hours"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-b6d3abef57ab",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 佛山建成全球首条人形机器人量产线——30分钟/台节拍，量产从'预期'→'产线运行'质变 (emerging)",
-      "summary": "全球第一条人形机器人标准化产线投产，智元/宇树出货突破万台。供应链订单可见度从季度级→月度级，核心零部件需求从远期期权→产能爬坡实单。精密传动+结构件+整机全链受益。0券商覆盖，emerging首次定价窗口48-72h。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-83532b359327",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 优必选2026年工业人形机器人产能达万台规模——500台→10000台，20倍量级跃升 (positioning)",
-      "summary": "首个头部厂商给出万台产能明确指引。如果优必选能做到万台，智元/宇树/特斯拉产能指引可能上修。减速器12.5-25万个+电机175万+个TAM获实证支撑。精密传动+结构件+电机驱动受益。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-24bd6e28245c",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "周三10:40机器人扫描:3信号/2fire——佛山全球首条量产线投产+优必选万台产能，与半导体τ定律形成双线共振",
-      "summary": "核心增量:①佛山产线(emerging)→量产基础设施建设落地，与半年前仅'预期'完全不同；②优必选万台产能(positioning)→全行业产能锚上修。与今日scanner早间半导体8信号/5fire形成双线共振——中国制造能力同时在芯片(τ定律)和机器人(量产线)两个维度突破。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-bd8dfd0f9bc5",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 昇腾310等9款AI芯片通过国家「安全可靠测评」I级——国产AI芯片从市场认可→政府安全背书质变 (chain2, emerging, high weight)",
-      "summary": "华为海思昇腾310、平头哥真武M530等9款获I级最高认证。为信创采购建立制度性合规壁垒→政企AI算力国产化加速。对寒武纪/海光/华为昇腾=政策最高级别背书。ReadHub独家<18h,0券商覆盖,0%定价。potential首次定价窗口48-72h。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-07da32894553",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 长鑫科技今日(5/27)科创板IPO上会——即期二值催化剂,过会与否为今日最大变量 (chain1, positioning, high weight)",
-      "summary": "Q1营收508亿+719%/净利247.6亿扭亏。过会→估值锚(3000-5000亿)+封测链设备采购加速+长江存储接力IPO;暂缓→前两日追涨资金短线回调。结果盘后公布→影响明日开盘。全线共振标的:SMIC/长电/通富/深科技/北方华创/中微。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "hours"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-de0c20ca7301",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 Nikkei Asia连续4天华为芯片深度报道——τ定律国际媒体从单篇→campaign→常态化跟踪三阶跃迁完成 (chain1, positioning, high weight)",
-      "summary": "5/24何庭波ISCAS主旨→5/25麒麟突破→5/25三巨头→5/26何庭波人物深度,48h四篇campaign。国际定价从'偶然关注'→'常态化跟踪'。国内券商密集覆盖(部分priced)但国际资金对τ定律的定价仍在进行中。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-78e5c88078f4",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 DigiTimes:小米/BYD/蔚来芯片自研崛起+TSMC承诺加薪——终端芯片需求新增量+全球代工供给稳定 (chain1, emerging, high weight)",
-      "summary": "DigiTimes 5/26(18h前)双篇:中国终端厂商从芯片消费者→设计+定制者,手机(小米)+汽车(BYD/蔚来)双线自研芯片新增需求;TSMC承诺2026加速奖金回应罢工→供给稳定性。链1需求结构从纯代工→终端自研+代工双引擎。0% A股定价。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-6982a2010ee4",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 WSTS Q1全球半导体2990亿美元+79%创40年纪录+北方华创营收400亿断层领跑——超级周期量化+设备龙头实证锚 (chain2, positioning, high weight)",
-      "summary": "WSTS:Q1环比+25%创40年最高单季增速。集微报告(17h):北方华创2025年营收近400亿断层领跑,三年CAGR~40%,A股唯一全球第一梯队设备商。设备板块估值可从'国产替代概念'→'全球第六设备商'重新锚定。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-2cfabee4bd9a",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "周三10:30早间8信号/5fire——五日内超密集信号堆叠持续:周三核心变量=长鑫上会结果+缩量企稳验证",
-      "summary": "5fire全新催化:昇腾国家认证(emerging)+长鑫今日上会(hours级)+Nikkei四连击(positioning)+DigiTimes终端自研(emerging)+WSTS超级周期量化(positioning)。与周二全日22信号/14fire形成五日内第三层共振——周一重度定价→周二板块回调+分化→周三缩量企稳+长鑫上会二值结果。核心关注:①若缩量企稳(3万亿以下)+长鑫过会→情绪转折确认 ②若继续放量下跌+长鑫暂缓→短期内需警惕risk-off。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "hours"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-7db8e0c80ecc",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "⭐ 中国芯片出口翻倍至310亿美元——最大定价错误:国产替代从1.0(内循环)→2.0(外循环)质变 (under_priced, dual_confirmed, strong backing)",
-      "summary": "芯片出口翻倍+半导体/AI产品贡献出口增长一半(Goldman+Nomura背书)。市场仍在用'国产替代'(减少进口)框架估值→未切换至'全球出口竞争力'框架。估值框架切换后中国半导体估值倍数应显著提升(参考日本1980s半导体出口崛起)。2-5天内中文财经媒体可能跟进报道→首次定价窗口开启。strong backing(大基金+国家队ETF+bidding)全匹配。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-074b23ec24a9",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 τ定律国际验证三连击——日经亚洲48h三篇华为芯片深度报道,国际媒体从偶然关注→常态化跟踪 (dual_confirmed, partially_priced)",
-      "summary": "Nikkei Asia 5/24何庭波人物→5/25 Kirin突破→5/26亚洲三巨头,48h三篇campaign。券商(招商/国盛/华泰/中信)密集发布τ定律专题。IC排名佐证:北方华创设备#6(+1)+中微#10(新进)+韦尔股份IC设计#9(新进)。dual_confirmed(Nikkei+IC排名)。国内定价较充分(长电涨停)但国际资金对τ定律的定价尚未完成。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-f9d9d876ccc8",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 深科技14.7亿+封测扩产三线158.7亿闭环——长鑫5/27 IPO上会为明日即期催化剂 (strong backing, partially_priced)",
-      "summary": "深科技(沛顿)14.7亿+长电100亿+通富44亿+伟测20亿=封测扩产158.7亿+系统化。三驱动:长鑫DDR5全球化+AI HBM缺口50-60%+τ定律推先进封装。长电/通富已部分定价但深科技扩产为边际新增量。明日长鑫IPO上会为封测链最大即期催化剂——过会=封测扩产预期进一步强化。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-85007e076e37",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔴 三大背离:①双高权重源首次对立(Nikkei bullish vs Goldman profit-taking) ②板块内冰火两重天(封测涨停vs消费暴跌) ③链1资金共识>链2",
-      "summary": "背离①:短期(2-4周)震荡消化→中期方向不变;背离②:资金从广义半导体向τ定律核心受益方向集中→健康轮动;背离③:短期链1(先进封装/设备/材料)可能跑赢链2(AI算力)。关键验证:周三缩量企稳(3万亿以下)+长鑫5/27上会结果。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-d59344ac0a01",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 中国芯片出口翻倍至310亿美元——制裁反向加速全球竞争力，链1从自主化→全球化质变 (chain1, positioning, high weight)",
-      "summary": "Benzinga 5/22报道中国芯片出口翻倍至310亿美元，Goldman+Nomura估半导体/AI产品贡献出口增长一半。链1从进口替代1.0(减少进口依赖)→全球竞争2.0(参与全球出口)质变。制裁最大讽刺——美国出口管制创造了中国芯片出口产业。2-5天内中文媒体可能跟进，首次定价窗口尚未开始。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-903cbc5c150b",
-      "timestamp": "2026-05-25T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 人形机器人一级市场融资结构性分化——明星项目停掉业务,无真实交付企业融资冻结 (emerging)",
-      "summary": "行业洗牌从销售端(5/24'卖不动租得火'')→融资端双线验证。明星项目停掉人形机器人业务+无交付企业连TS拿不到→客户和供应商加速向头部集中→绿的谐波/双环传动/三花智控/拓普集团/汇川技术订单确定性+议价能力双重提升。纯概念整机标的估值承压。0%定价。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-6020b5f138f0",
-      "timestamp": "2026-05-25T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 国家电网68亿具身智能集采回溯补录——500台人形机器人25亿,Q3规模化采购窗口7-9月 (positioning)",
-      "summary": "国内首个央企级大规模机器人采购。500台人形机器人单价500万/台→特种作业场景支付意愿超预期。Q3规模化采购临近→整机+供应链订单可见度↑。绿的谐波/双环传动/中大力德/兆威机电/鸣志电器受益。4月已报道但前序scanner遗漏,Q3为新增时间催化。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-ed7ea1f2ef68",
-      "timestamp": "2026-05-25T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 物理AI'ChatGPT时刻'叙事升级——黄仁勋断言已到+孙宇晨10亿美元布局八大方向 (emerging)",
-      "summary": "AI巨头CEO首次将物理AI与ChatGPT时刻类比→人形机器人从具身智能→物理AI叙事升级,TAM预期上修。孙宇晨10亿美元入局→新资本流派进入。精密传动/结构件/电机驱动标的池整体受益,0%定价。与半导体链2 AI资本叙事形成跨链共振。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-d183dd7fbe6f",
-      "timestamp": "2026-05-25T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "⚠️ 量产窗口估值错位风险——二级溢价显著领先产业基本面,竞争加剧或引发价格战 (positioning)",
-      "summary": "二级估值已提前price in 2027-2028商业化预期,但产业仍处小规模验证阶段。与上午'融资结构性分化'形成完整逻辑闭环:融资降温+估值透支+竞争白热化→头部供应链(绿的/双环/三花/拓普)受益逻辑成立但短期追高风险上升。价格战/份额洗牌可能压缩供应链利润率。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-80d649312113",
-      "timestamp": "2026-05-25T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 华为正式发表「τ定律」——中国首次在全球半导体领域提出产业发展新原则 (chain1, emerging)",
-      "summary": "何庭波在2026国际电路与系统研讨会主旨演讲发表。6年381款芯片量产，逻辑折叠麒麟芯片秋季发布。链1从「追赶替代」→「定义规则」质变。τ定律类比摩尔定律的产业叙事价值远超单一产品突破。传导:SMIC(代工)/北方华创(设备)/寒武纪(设计)。市场0%认知。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-5d5518fe2451",
-      "timestamp": "2026-05-25T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 HBM分离封装+光互联新架构——GPU-HBM拆分独立封装打破内存墙 (chain2, emerging)",
-      "summary": "光互联取代电互联连接GPU-HBM，新架构可围绕GPU环形排列更多HBM。Celestial AI已有光子互联模块技术验证。光模块/硅光芯片需求将从数据中心互联扩展到芯片间通信。传导:长电/通富(先进封装)+中际旭创/天孚通信(光互联)。<24h最新报道。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "months"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-a21373194c5e",
-      "timestamp": "2026-05-25T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 长鑫存储Q1营收508亿+719%扭亏为盈——国产DRAM龙头财务质变 (chain1, positioning)",
-      "summary": "科创板IPO招股书更新数据:Q1营收508亿(+719%)/净利247.6亿扭亏。配合Corsair DDR5+AI HBM挤占三大厂产能→长鑫历史性窗口。国产存储从'品牌突破'→'财务质变'三阶跃迁完成。传导:兆易创新/深科技/通富微电。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-d134a79af2a7",
-      "timestamp": "2026-05-25T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 DeepSeek宕机算力黑洞+AMD苏姿丰访华——国产算力瓶颈热搜实锤+竞争格局重塑 (chain2, positioning)",
-      "summary": "DeepSeek频繁宕机暴露算力供需严重失衡（日活↑但算力储备↓+MoE调度复杂+芯片出口管制）。AMD苏姿丰趁NVIDIA尴尬窗口在上海建CUDA之外第二生态。国产AI芯片格局从'寒武纪vs海光'扩展为'寒武纪+海光 vs AMD+国产GPU'。传导:寒武纪/海光/SMIC。寒武纪传导链断裂第三周——此为最新打破催化剂。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-cd1d453b9ac8",
-      "timestamp": "2026-05-24T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "📊 分析师③晚间分析完成:8信号全验证(6 confirmed+2 partial),3 not_priced⭐周一首次定价,2 strong+6 moderate backing",
-      "summary": "晚间新增:①a7全国算力网12项标准(confirmed)→AI算力基建从粗放→精细 ②a8 Q1全球AI融资2420亿美元/国内1100亿+185%(partial→趋势确认数据待验证)。三星罢工和解为本周最大变量→基于罢工的交易逻辑需重评估。链一周末三线共振(砺算GPU+华为DoB+长鑫DDR5)→2026年以来最强。3 not_priced+15条fire周一超密集定价→成交量3.5万亿+为关键阈值。最大风险:利好超密集→高开低走 台积电辟谣→a1归零 寒武纪传导断裂持续 存储利好多已兑现。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-36482ae7de11",
-      "timestamp": "2026-05-24T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "周日全天8信号/5fire——链1三fire(台积电罢工/砺算GPU/华为DoB)+链2六信号。周一15条fire超密集定价窗口",
-      "summary": "链1从'代工单线'→'GPU消费端+存储封装端+DRAM品牌端'三线共振。链2新增算力网标准+AI融资量化(1100亿+185%)强化需求确定性。全球云厂商AI CapEx 8300亿美元+79%为链2最强量化锚。三星罢工和解降低HBM供给风险但存储涨价趋势未变。周一15条fire(上周10+今日5)→成交量3.5万亿+为关键。最大风险:①利好超密集→高开低走 ②台积电周一辟谣→a1归零 ③寒武纪/海光传导断裂持续第三周",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-41b55b66f5b4",
-      "timestamp": "2026-05-24T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 砺算LX 7G100国产显卡创始版秒空——48小时预约3万/首批1000份秒空,国产消费级GPU首次供不应求 (emerging)",
-      "summary": "国产GPU替代从'政策驱动'→'消费者用钱包投票'质变。48小时3万预约+首批秒空为历史首次。周一0%定价窗口。传导:景嘉微/龙芯中科/寒武纪(国产GPU生态链)",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-e8d87bd1624c",
-      "timestamp": "2026-05-24T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 华为DoB封装突破制裁——122TB SSD量产/36层堆叠绕开3D NAND层数限制 (emerging)",
-      "summary": "制裁可规避性从理论→量产验证。DoB技术将堆叠从16层→36层,容量密度+33%。配合长鑫DDR5(5/23)→链1存储链双线共振。周一0%定价。传导:兆易创新/深科技/江波龙",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-4b98ab89aa91",
-      "timestamp": "2026-05-24T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "📊 分析师周日分析完成:5信号(3 confirmed+2 partial),3 not_priced⭐,2 strong backing。周一14条fire超密集定价窗口",
-      "summary": "核心增量:①台积电罢工风险(a1)双链最强催化→对赌周一官方回应 ②Anthropic-SpaceX 450亿美元/22万GPU获SEC S-1确证→链2需求端最强验证 ③AMD 2nm量产→制程军备竞赛加速 ④太极HBM第二极→封测格局重塑 ⑤28nm DUV量产切换。周一14条fire(上周10条+今日4条)信号等待首次定价→成交量3.5万亿+为关键阈值。最大定价缺口:SMIC 406亿并购+3.23%(vs长电+9.04%)。三大背离:中微连续2日逆跌/寒武纪海光传导断裂/SMIC定价滞后。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-921bbb48d7b2",
-      "timestamp": "2026-05-24T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 2026年国内人形机器人出货量预测6.25万台(+247%)——行业TAM首次量化锚定 (positioning)",
-      "summary": "2025年1.8万台→2026年6.25万台。减速器需求12.5-25万个+电机175万+个=供应链企业收入贡献从'远期期权'变为'12个月内可验证'。精密传动/电机/传感器TAM首次获量化,估值锚从想象空间切换至订单乘数。绿的谐波/双环传动/中大力德/兆威机电/鸣志电器受益",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-027965098f62",
-      "timestamp": "2026-05-23T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "长鑫CXMT DDR5首获Corsair采用——中国DRAM首次进入全球消费品牌供应链,国产存储0→1质变 (not_priced)",
-      "summary": "年度级别存储信号。五大国际科技媒体确认。Corsair Vengeance DDR5搭载CXMT颗粒,性能与三星/SK海力士持平。AI HBM挤占+三星罢工=全球DRAM供给缺口至少至2028。传导:兆易创新/深科技/通富微电→周一0%定价首次窗口",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-54028f3425ef",
-      "timestamp": "2026-05-23T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "范式Q1 Token调用量6x+7万AI模型完成国产芯片适配——AI推理最强量化验证+国产AI芯片生态里程碑 (partially_priced)",
-      "summary": "范式Q1收入14.58亿+35.4%,API Token调用量超2025全年40%+Agentic AI订单+100%。信创模盒70,000+模型国产芯片适配=完成全年目标70%+。配合寒武纪30万颗=双信号共振。港股部分定价,A股尚未定价→周一首次定价窗口",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-76ccea987404",
-      "timestamp": "2026-05-23T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "周一超密集定价窗口:13条信号同时等待首次定价——成交量是核心变量",
-      "summary": "上午8条+下午5条=13条已验证信号指向周一首次定价。3条not_priced+2条partially_priced。周五成交额2.93万亿(-16.5%缩量反弹)→需回升至3.5万亿+才能支撑多重定价。若成交量不足,利好集中兑现→冲高回落风险。SMIC为最大定价缺口(406亿并购+3.23%)",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-ae8d8f0b91d6",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "💡 设备/材料环节tau定律补涨窗口——北方华创/中微/南大光电滞后SMIC 40pp+，光刻胶获政府工作报告写入",
-      "summary": "设备(北方华创/中微)涨幅~16% vs SMIC+35%: 40pp+估值缺口。光刻胶获2026年政府工作报告写入+大基金三期18%(~288亿)注资+超长期国债低息贷款: 政策最高级别背书。材料环节为tau定律最后补涨: 回调中回撤风险最低。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-7b43ccff5ed4",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 壁仞科技恒生综合指数纳入(6/8生效)+高盛Buy 101% CAGR——国产AI芯片港股通通道打开",
-      "summary": "恒生指数公司5/22公告+高盛2/10首次覆盖Buy: 双高权重源验证。6/8生效前~2周建仓窗口+港股通预期: 内地资金配置国产GPU新通道。壁仞vs寒武纪PS折价: 相对价值修复空间。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-40ee068a911a",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔥 光刻胶获政府工作报告写入+大基金三期注资——材料环节最强政策催化，为tau定律最后补涨方向",
-      "summary": "2026年政府工作报告写入加速半导体光刻胶国产化+大基金三期18%约288亿注资: 政策最高级别背书。南大光电ArF稳定供货/晶瑞KrF进入验证。材料涨幅仅个位数vs制造+35%: 可能在回调中逆势补涨。strong backing。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-37cc12291f0c",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "fire",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "📊 分析师⑥下午分析:7信号全验证+1 under_priced+2 strong backing——tau定律48h完整周期+设备/材料补涨窗口+Goldman三线闭环",
-      "summary": "7信号全验证(7 confirmed)。1 under_priced(MicroLED光互连)+4 partially_priced+2 fully_priced。2 strong+3 moderate+2 weak backing。核心配置建议:①SMIC/寒武纪已fully_priced: 不追高等待缩量企稳 ②设备/材料滞后40pp+: 北方华创/中微/南大光电补涨方向 ③光刻胶政府工作报告写入: 最强政策催化材料方向 ④壁仞港股通6/8前建仓窗口 ⑤MicroLED光互连emerging: 观察池。最大风险:周三方向选择+长鑫上会+减持执行+tau定律制裁风险。",
-      "priority": "fire",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-3d12748c32c3",
-      "timestamp": "20260521T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "国产软件与信创",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 新致软件(688590) 国产软件与信创",
-      "summary": "B1=16.32 B2=15.87 B3=15.85 | +-2.8% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "688590",
-          "name": "新致软件"
-        }
-      ],
-      "metrics": {
-        "b1_price": 16.32,
-        "b2_price": 15.87,
-        "b3_price": 15.85,
-        "pct_from_b1": -2.8
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-5eec74fa6f31",
-      "timestamp": "20260520T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "高端装备(工业母机)",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 秦川机床(000837) 高端装备(工业母机)",
-      "summary": "B1=12.39 B2=11.65 B3=11.61 | +-6.0% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "000837",
-          "name": "秦川机床"
-        }
-      ],
-      "metrics": {
-        "b1_price": 12.39,
-        "b2_price": 11.65,
-        "b3_price": 11.61,
-        "pct_from_b1": -6.0
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-e6b21c6cc8ff",
-      "timestamp": "20260520T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "具身智能/机器人",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 巨轮智能(002031) 具身智能/机器人",
-      "summary": "B1=7.54 B2=6.93 B3=6.89 | +-8.1% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "002031",
-          "name": "巨轮智能"
-        }
-      ],
-      "metrics": {
-        "b1_price": 7.54,
-        "b2_price": 6.93,
-        "b3_price": 6.89,
-        "pct_from_b1": -8.1
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-6659ef376393",
-      "timestamp": "20260520T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "具身智能/机器人",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 瑞鹄模具(002997) 具身智能/机器人",
-      "summary": "B1=32.80 B2=32.83 B3=32.78 | +0.1% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "002997",
-          "name": "瑞鹄模具"
-        }
-      ],
-      "metrics": {
-        "b1_price": 32.8,
-        "b2_price": 32.83,
-        "b3_price": 32.78,
-        "pct_from_b1": 0.1
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-07914b9c9fbb",
-      "timestamp": "20260520T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "高端装备(工业母机)",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 维宏股份(300508) 高端装备(工业母机)",
-      "summary": "B1=48.96 B2=39.60 B3=39.20 | +-19.1% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "300508",
-          "name": "维宏股份"
-        }
-      ],
-      "metrics": {
-        "b1_price": 48.96,
-        "b2_price": 39.6,
-        "b3_price": 39.2,
-        "pct_from_b1": -19.1
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-8abf30cccb08",
-      "timestamp": "20260519T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "生物医药与器械",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 三力制药(603439) 生物医药与器械",
-      "summary": "B1=12.51 B2=11.61 B3=11.55 | +-7.2% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "603439",
-          "name": "三力制药"
-        }
-      ],
-      "metrics": {
-        "b1_price": 12.51,
-        "b2_price": 11.61,
-        "b3_price": 11.55,
-        "pct_from_b1": -7.2
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-95a6b6cd7d98",
-      "timestamp": "20260518T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "新能源(光风储电)",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 可立克(002782) 新能源(光风储电)",
-      "summary": "B1=25.08 B2=22.22 B3=22.16 | +-11.4% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "002782",
-          "name": "可立克"
-        }
-      ],
-      "metrics": {
-        "b1_price": 25.08,
-        "b2_price": 22.22,
-        "b3_price": 22.16,
-        "pct_from_b1": -11.4
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-941124f2f12d",
-      "timestamp": "20260518T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "新能源(光风储电)",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: ST合纵(300477) 新能源(光风储电)",
-      "summary": "B1=2.79 B2=2.76 B3=2.76 | +-1.1% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "300477",
-          "name": "ST合纵"
-        }
-      ],
-      "metrics": {
-        "b1_price": 2.79,
-        "b2_price": 2.76,
-        "b3_price": 2.76,
-        "pct_from_b1": -1.1
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-98861bee1ee4",
-      "timestamp": "20260518T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "集成电路",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 英杰电气(300820) 集成电路",
-      "summary": "B1=66.67 B2=51.21 B3=50.81 | +-23.2% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "300820",
-          "name": "英杰电气"
-        }
-      ],
-      "metrics": {
-        "b1_price": 66.67,
-        "b2_price": 51.21,
-        "b3_price": 50.81,
-        "pct_from_b1": -23.2
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-11963079a0a4",
-      "timestamp": "20260518T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "国产软件与信创",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: *ST高科(600730) 国产软件与信创",
-      "summary": "B1=13.07 B2=10.07 B3=9.99 | +-23.0% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "600730",
-          "name": "*ST高科"
-        }
-      ],
-      "metrics": {
-        "b1_price": 13.07,
-        "b2_price": 10.07,
-        "b3_price": 9.99,
-        "pct_from_b1": -23.0
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-1f2477822c10",
-      "timestamp": "20260515T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "具身智能/机器人",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 汇川技术(300124) 具身智能/机器人",
-      "summary": "B1=77.32 B2=70.85 B3=70.55 | +-8.4% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "300124",
-          "name": "汇川技术"
-        }
-      ],
-      "metrics": {
-        "b1_price": 77.32,
-        "b2_price": 70.85,
-        "b3_price": 70.55,
-        "pct_from_b1": -8.4
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-2479fe93b4fe",
-      "timestamp": "20260515T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "商业航天与低空",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 恒宇信通(300965) 商业航天与低空",
-      "summary": "B1=78.01 B2=60.55 B3=59.80 | +-22.4% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "300965",
-          "name": "恒宇信通"
-        }
-      ],
-      "metrics": {
-        "b1_price": 78.01,
-        "b2_price": 60.55,
-        "b3_price": 59.8,
-        "pct_from_b1": -22.4
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-31f86a7f541a",
-      "timestamp": "20260515T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "新能源(光风储电)",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 京能电力(600578) 新能源(光风储电)",
-      "summary": "B1=7.01 B2=5.33 B3=5.32 | +-24.0% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "600578",
-          "name": "京能电力"
-        }
-      ],
-      "metrics": {
-        "b1_price": 7.01,
-        "b2_price": 5.33,
-        "b3_price": 5.32,
-        "pct_from_b1": -24.0
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-4a759f0b6ff2",
-      "timestamp": "20260515T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "具身智能/机器人",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 亿嘉和(603666) 具身智能/机器人",
-      "summary": "B1=30.60 B2=28.79 B3=28.70 | +-5.9% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "603666",
-          "name": "亿嘉和"
-        }
-      ],
-      "metrics": {
-        "b1_price": 30.6,
-        "b2_price": 28.79,
-        "b3_price": 28.7,
-        "pct_from_b1": -5.9
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-62446c121eca",
-      "timestamp": "20260515T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "新能源(光风储电)",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 华体科技(603679) 新能源(光风储电)",
-      "summary": "B1=17.86 B2=15.27 B3=15.17 | +-14.5% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "603679",
-          "name": "华体科技"
-        }
-      ],
-      "metrics": {
-        "b1_price": 17.86,
-        "b2_price": 15.27,
-        "b3_price": 15.17,
-        "pct_from_b1": -14.5
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-68ee8e0e7804",
-      "timestamp": "20260515T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "集成电路",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 美芯晟(688458) 集成电路",
-      "summary": "B1=44.58 B2=38.18 B3=38.03 | +-14.4% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "688458",
-          "name": "美芯晟"
-        }
-      ],
-      "metrics": {
-        "b1_price": 44.58,
-        "b2_price": 38.18,
-        "b3_price": 38.03,
-        "pct_from_b1": -14.4
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-7c828ba26fc4",
-      "timestamp": "20260515T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "新材料",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 金博股份(688598) 新材料",
-      "summary": "B1=32.10 B2=26.11 B3=26.04 | +-18.7% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "688598",
-          "name": "金博股份"
-        }
-      ],
-      "metrics": {
-        "b1_price": 32.1,
-        "b2_price": 26.11,
-        "b3_price": 26.04,
-        "pct_from_b1": -18.7
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-538984c12849",
-      "timestamp": "20260514T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "具身智能/机器人",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 天奇股份(002009) 具身智能/机器人",
-      "summary": "B1=27.56 B2=24.85 B3=24.85 | +-9.8% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "002009",
-          "name": "天奇股份"
-        }
-      ],
-      "metrics": {
-        "b1_price": 27.56,
-        "b2_price": 24.85,
-        "b3_price": 24.85,
-        "pct_from_b1": -9.8
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-c9ba2439f1ae",
-      "timestamp": "20260514T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "新材料",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 泰和新材(002254) 新材料",
-      "summary": "B1=14.91 B2=11.50 B3=11.46 | +-22.9% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "002254",
-          "name": "泰和新材"
-        }
-      ],
-      "metrics": {
-        "b1_price": 14.91,
-        "b2_price": 11.5,
-        "b3_price": 11.46,
-        "pct_from_b1": -22.9
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-24f5f64ea264",
-      "timestamp": "20260514T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "集成电路",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 晶盛机电(300316) 集成电路",
-      "summary": "B1=55.04 B2=45.40 B3=45.10 | +-17.5% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "300316",
-          "name": "晶盛机电"
-        }
-      ],
-      "metrics": {
-        "b1_price": 55.04,
-        "b2_price": 45.4,
-        "b3_price": 45.1,
-        "pct_from_b1": -17.5
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-7af8a15ab25f",
-      "timestamp": "20260514T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "新材料",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 电工合金(300697) 新材料",
-      "summary": "B1=16.84 B2=16.37 B3=16.37 | +-2.8% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "300697",
-          "name": "电工合金"
-        }
-      ],
-      "metrics": {
-        "b1_price": 16.84,
-        "b2_price": 16.37,
-        "b3_price": 16.37,
-        "pct_from_b1": -2.8
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-4a1ef88c4f55",
-      "timestamp": "20260514T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "集成电路",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 骏鼎达(301538) 集成电路",
-      "summary": "B1=102.62 B2=81.49 B3=81.31 | +-20.6% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "301538",
-          "name": "骏鼎达"
-        }
-      ],
-      "metrics": {
-        "b1_price": 102.62,
-        "b2_price": 81.49,
-        "b3_price": 81.31,
-        "pct_from_b1": -20.6
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-898d806ae108",
-      "timestamp": "20260514T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "集成电路",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 聚辰股份(688123) 集成电路",
-      "summary": "B1=171.70 B2=131.47 B3=130.71 | +-23.4% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "688123",
-          "name": "聚辰股份"
-        }
-      ],
-      "metrics": {
-        "b1_price": 171.7,
-        "b2_price": 131.47,
-        "b3_price": 130.71,
-        "pct_from_b1": -23.4
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-2e9f9c889eb3",
-      "timestamp": "20260514T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "新能源(光风储电)",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 晶科能源(688223) 新能源(光风储电)",
-      "summary": "B1=7.37 B2=6.87 B3=6.85 | +-6.8% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "688223",
-          "name": "晶科能源"
-        }
-      ],
-      "metrics": {
-        "b1_price": 7.37,
-        "b2_price": 6.87,
-        "b3_price": 6.85,
-        "pct_from_b1": -6.8
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-a0a41e796b04",
-      "timestamp": "20260513T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "具身智能/机器人",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 埃斯顿(002747) 具身智能/机器人",
-      "summary": "B1=24.20 B2=21.99 B3=21.94 | +-9.1% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "002747",
-          "name": "埃斯顿"
-        }
-      ],
-      "metrics": {
-        "b1_price": 24.2,
-        "b2_price": 21.99,
-        "b3_price": 21.94,
-        "pct_from_b1": -9.1
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-bad0eb3ac662",
-      "timestamp": "20260513T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "国产软件与信创",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 汉邦高科(300449) 国产软件与信创",
-      "summary": "B1=12.06 B2=7.85 B3=7.80 | +-34.9% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "300449",
-          "name": "汉邦高科"
-        }
-      ],
-      "metrics": {
-        "b1_price": 12.06,
-        "b2_price": 7.85,
-        "b3_price": 7.8,
-        "pct_from_b1": -34.9
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-2524b66d913e",
-      "timestamp": "20260513T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "新材料",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 广信材料(300537) 新材料",
-      "summary": "B1=26.41 B2=23.49 B3=23.45 | +-11.1% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "300537",
-          "name": "广信材料"
-        }
-      ],
-      "metrics": {
-        "b1_price": 26.41,
-        "b2_price": 23.49,
-        "b3_price": 23.45,
-        "pct_from_b1": -11.1
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-feb8e647c92f",
-      "timestamp": "20260513T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "人工智能(AI算力)",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 士兰微(600460) 人工智能(AI算力)",
-      "summary": "B1=31.51 B2=28.50 B3=28.40 | +-9.6% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "600460",
-          "name": "士兰微"
-        }
-      ],
-      "metrics": {
-        "b1_price": 31.51,
-        "b2_price": 28.5,
-        "b3_price": 28.4,
-        "pct_from_b1": -9.6
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-78a5f4a6f4ac",
-      "timestamp": "20260513T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "集成电路",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 三安光电(600703) 集成电路",
-      "summary": "B1=16.84 B2=14.48 B3=14.47 | +-14.0% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "600703",
-          "name": "三安光电"
-        }
-      ],
-      "metrics": {
-        "b1_price": 16.84,
-        "b2_price": 14.48,
-        "b3_price": 14.47,
-        "pct_from_b1": -14.0
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-9ab376ef509f",
-      "timestamp": "20260513T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "商业航天与低空",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 迈信林(688685) 商业航天与低空",
-      "summary": "B1=56.40 B2=47.56 B3=47.40 | +-15.7% from B1",
-      "priority": "b1",
-      "tickers": [
-        {
-          "code": "688685",
-          "name": "迈信林"
-        }
-      ],
-      "metrics": {
-        "b1_price": 56.4,
-        "b2_price": 47.56,
-        "b3_price": 47.4,
-        "pct_from_b1": -15.7
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-af14b79c6a97",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "high",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "⚠️ 五大风险:①减持潮是否扩大 ②GS PB获利了结是否趋势化 ③高通ASIC合规风险 ④长鑫上会结果 ⑤寒武纪/海光传导断裂持续第六周",
-      "summary": "①若其他半导体龙头跟风减持→系统性回调。②下周GS PB数据为关键验证(连续3周净卖出=红色警报)。③若美方干预高通ASIC=deal信号反转。④长鑫上会结果盘后公布→明日开盘方向决定。⑤寒武纪-5%今日→传导断裂未修复→链二资金流向封测/存储/光模块而非独立GPU。",
-      "priority": "high",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-38d08898eff1",
-      "timestamp": "2026-05-27T16:30:00+08:00",
-      "source": "pool",
-      "type": "high",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "⚠️ 减持潮蔓延——兆易创新朱一明11天套现21亿+华峰测控股东减持1% (chain1, exhausted)",
-      "summary": "兆易创新近一年+358%，董事长减持0.90%套现25.72亿。华峰测控股东询价转让1%。澜起250.08元减持已落地。存储/设备龙头三连击减持→产业资本在超级周期顶部兑现。与长鑫HBM3量产+IPO上会形成对立信号→产业资本套现 vs 产业基本面向上。不改中期方向但增加短期回调压力。",
-      "priority": "high",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-c47287264f25",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "high",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "⚠️ 高盛PB双向信号——对冲基金月度净卖出半导体(2024年首次) vs all in AI,资金面多空对峙 (single_sourced, under_priced风险)",
-      "summary": "Goldman Sachs PB数据:半导体及设备为过去一个月最净卖出美股子板块,但对冲基金持仓仍处高位。Goldman定性为'战术获利了结'非'AI叙事反转'。目前市场只关注all in AI叙事,获利了结风险未充分定价。如果2-4周内对冲基金持续净卖出→风险从战术调整升级为趋势转变。回调=加仓机会(如果τ定律中期方向正确)。",
-      "priority": "high",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-b7e03fea2035",
-      "timestamp": "2026-05-26T16:30:00+08:00",
-      "source": "pool",
-      "type": "high",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "🔴 三大风险:①对冲基金获利了结趋势化 ②盛视/晶方两emerging信号未验证 ③长鑫上会结果+减持执行+tau定律制裁加码",
-      "summary": "①如果2-4周内对冲基金持续净卖出→风险从战术升级为趋势转变;②盛视科技60亿+晶方科技Anteryon分拆均未找到公告原文→48h内需官方确认;③长鑫5/27上会(过会=催化剂兑现/暂缓=封测回调)+澜起减持已落地+中微60亿待执行+tau定律可能触发美国新制裁。",
-      "priority": "high",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "days"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-8c527ec98712",
-      "timestamp": "2026-05-23T16:30:00+08:00",
-      "source": "pool",
-      "type": "high",
-      "direction": "",
-      "chain": "",
-      "lifecycle": "",
-      "title": "三星罢工5/21-6/7(18天)→HBM产能直接受损+KeyBanc下调VR产量至6,000台——供给收缩可能被误读为需求减弱",
-      "summary": "全球存储供给缺口23年最大→长鑫/长江份额扩张获历史性窗口。但市场可能误读VR产量下调为需求减弱引发AI板块抛售。需区分供给瓶颈(利好国产替代)vs需求下滑(利空全板块)",
-      "priority": "high",
-      "tickers": [],
-      "metrics": {
-        "timeframe": "weeks"
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-d88ccbd077ca",
-      "timestamp": "2026-05-26T22:30:00+08:00",
-      "source": "scanner",
-      "type": "normal",
-      "direction": "chain2",
-      "chain": "chain2",
-      "lifecycle": "consensus",
-      "title": "瑞银大幅上调美光目标价至1625美元/1.8万亿美元市值——AI存储需求远超共识预期",
-      "summary": "瑞银将美光目标价从535美元大幅上调至1625美元（华尔街最高），对应市值1.8万亿美元。分析师认为AI推动存储结构性变化迹象显现，美光估值将继续上修。美光盘前+7%，带动美股半导体普涨（AMD/高通+3%、ARM/台积电+2%）。此目标价隐含HBM/AI存储需求增速远超当前市场共识——1.8万亿美元市值=当前市值~2x。",
-      "priority": "normal",
-      "tickers": [
-        {
-          "code": "603986.SH",
-          "name": "兆易创新"
-        },
-        {
-          "code": "688525.SH",
-          "name": "佰维存储"
-        },
-        {
-          "code": "000021.SZ",
-          "name": ""
-        },
-        {
-          "code": "002156.SZ",
-          "name": "通富微电"
-        }
-      ],
-      "metrics": {},
-      "source_urls": []
-    },
-    {
       "id": "SIG-ec30c3bd09e8",
       "timestamp": "2026-05-26T22:30:00+08:00",
       "source": "scanner",
@@ -1918,6 +1774,17 @@
       "title": "光刻胶国产替代深度研报出炉——南大光电ArF率先突破+政府工作报告写入双催化",
       "summary": "新浪财经5/25发布光刻胶深度研报：全球市场日本企业(TOK/JSR/信越/富士)占80%，国内彤程新材产品线最全(覆盖g线到ArF)、南大光电ArF率先突破(2025年收入突破2000万)。配合此前政府工作报告写入加速光刻胶国产化+大基金三期18%约288亿注资+超长期国债低息贷款，光刻胶为材料环节最强政策催化方向。36氪同步报道：光刻胶国产化率仅3%，硅晶圆国产使用率目标70%。",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 42,
       "tickers": [
         {
           "code": "300346.SZ",
@@ -1939,23 +1806,988 @@
       ]
     },
     {
-      "id": "SIG-074edaa62e9f",
-      "timestamp": "2026-05-26T22:30:00+08:00",
-      "source": "scanner",
-      "type": "normal",
+      "id": "SIG-9d085d42bdcf",
+      "timestamp": "2026-05-27T01:50:11.179Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 创业板指涨逾 1% 光伏领涨",
+      "summary": "指数分化，创业板指拉升涨逾 1.00%，沪指跌 0.08%，深成指涨 0.26%。光伏、电力、芯片等方向涨幅居前，沪深京三市上涨个股近 2600 只。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片",
+          "创业板"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-e9ab52ce3c9e",
+      "timestamp": "2026-05-27T01:45:37.456Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 郑州「十五五」规划纲要：积极创建超硬材料领域国家制造业创新中心 打造培育钻石之都",
+      "summary": "郑州市「十五五」规划纲要提出，实施产业创新工程，强化战略性新兴产业支柱作用，打造新一代信息技术、新能源及智能网联汽车 2 个万亿级和高端装备、新材料、生物医药、节能环保 4 个千亿级产业集群。其中，将统筹电子信息全链条发展，构建新能源汽车产业体系，建设高端装备产业基地，巩固提升材料优势，积极创建超硬材料领域国家制造业创新中心，打造培育钻石之都，同时发展生物医药和节能环保产业。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "材料"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-143f54ea2faf",
+      "timestamp": "2026-05-27T01:30:48.721Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 AI 眼镜新品频发，产业链追「光」逐「芯」",
+      "summary": "AI 眼镜市场热度升温，厂商密集发布新品，谷歌亦预告秋季推出首款 AI 眼镜。A 股 AI 眼镜产业链加速布局，光学部件（近半成本，Micro LED 为重点方向）和主控芯片（成本占比两至三成）成核心环节，相关公司纷纷卡位。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-4779aa51afc5",
+      "timestamp": "2026-05-27T01:10:41.609Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 智谱等在上海成立人工智能产业创投合伙企业",
+      "summary": "上海智谱国泰海通人工智能产业创业投资合伙企业（有限合伙）近日成立，经营范围为创业投资（限投资未上市企业），由智谱全资子公司北京智谱未来科技有限公司、国泰海通全资子公司国泰君安创新投资有限公司等共同出资。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-92de68b1d66c",
+      "timestamp": "2026-05-26T17:56:20.786Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 字节跳动向 Seed 员工开放「豆包股」认购权",
+      "summary": "字节跳动首次针对特定业务单元发行股权，为旗下 Seed 人工智能部门员工提供与该部门挂钩的低价股票期权「豆包股」，当前认购价为每股 13 美元。该「豆包长期激励计划」始于 2025 年四季度，初期估值参考业务投入成本，未来将结合豆包及大模型 toB 业务发展重新估值，以加强对大模型人才的长期吸引和激励。此外，字节此前已为 Seed 部门核心技术员工实施期权增发，按绩效与职级分档，员工每月可拿到约 9 万、11 万、13 万元人民币价值的字节期权，按月归属，首批连续发放 18 个月，最高可达百万元级别。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能",
+          "字节"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-9a024f96118c",
+      "timestamp": "2026-05-26T17:55:38.831Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 蚂蚁集团：Token 消耗将迎来指数级增长 预计 2030 年消耗量增长超 300 倍",
+      "summary": "今日支付宝举行 AI 支付生态大会，蚂蚁集团研究院院长庄蹯表示 Token、数据和工具是智能体的重要生产要素，预测 2030 年 Token 消耗量将增长超 300 倍，活跃智能体达 22 亿，年执行任务 400 万亿次。另据《全国数据资源调查报告（2025 年）》显示，2025 年全国日均 Token 调用量从年初超万亿增长到年末 100 万亿，全年累计约 21100 万亿。Token 是人工智能大模型拆分数据后的最小信息载体。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-598114727146",
+      "timestamp": "2026-05-26T17:45:28.328Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 SpaceX IPO「磁场效应」持续发酵 美股商业航天板块盘前飙升",
+      "summary": "受 SpaceX 上市乐观情绪提振，美股商业航天板块盘前延续涨势，Momentus 飙升 80%，Redwire 上涨 16%，MDA Space 上涨 18%，Firefly Aerospace 上涨 8%，Voyager Technologies 涨 7.6%，Intuitive Machines 涨 10%，York Space Systems 涨 7.8%，AST SpaceMobile 涨 6.5%，Rocket Lab 涨 5.6%.",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "商业航天"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-cfe6c278d656",
+      "timestamp": "2026-05-26T16:25:14.862Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 马斯克：星链战时收费暴涨 5 倍，五角大楼被迫买单",
+      "summary": "美伊战争期间，SpaceX 以星链网络不可替代性为由，将用于自杀式无人机的卫星连接费用从每月约 5000 美元大幅提至 25000 美元，五角大楼最终妥协。这一争议暴露了美国军事体系对单一商业供应商的深度依赖。SpaceX 认为无人机使用条件接近航空级服务，而军方则认为其使用时间短不应适用该高价。马斯克曾公开表示商业星链用于武器系统违反服务条款，加剧双方矛盾。分析人士指出，SpaceX 因拥有庞大商业市场，在谈判中底气远超传统军工企业，而五角大楼缺乏替代选项。此外，SpaceX 还就向伊朗平民提供直连蜂窝服务开价 5 亿美元启动费加每月 1 亿美元运营费。此次定价争议发生在 SpaceX 即将",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "无人机",
+          "卫星"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-cd0f88ca8e1f",
+      "timestamp": "2026-05-26T15:25:13.777Z",
+      "source": "readhub",
+      "type": "signal",
       "direction": "chain1",
       "chain": "chain1",
       "lifecycle": "emerging",
-      "title": "晶方科技分拆荷兰子公司Anteryon至阿姆斯特丹上市——中国半导体企业国际化新范式",
-      "summary": "晶方科技(603005.SH)拟分拆子公司Anteryon至阿姆斯特丹交易所上市。Anteryon为荷兰光学半导体子公司，分拆完成后晶方科技仍保持控制权。这是中国半导体企业首次将欧洲子公司推向公开市场——不同于海外并购，而是反向将海外资产证券化。方案尚需股东会+阿姆斯特丹交易所批准。同期思特威+紫光展锐联合布局MicroLED光互连，中国半导体企业国际化进入'资产证券化+战略合作'多线程阶段。",
+      "title": "📰 昇腾 310 等 9 款芯片通过「安全可靠测评」",
+      "summary": "5 月 26 日，根据《安全可靠测评工作指南 V3.0》要求，相关测评中心公布了 AI 训练推理芯片和数据库安全可靠测评结果，其中海思半导体昇腾 310、平头哥真武 M530 等 9 款 AI 训练推理芯片获得「I 级」安全可靠等级。",
       "priority": "normal",
-      "tickers": [
-        {
-          "code": "603005.SH",
-          "name": ""
-        }
-      ],
-      "metrics": {},
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "半导体",
+          "芯片"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-5c5e0306632e",
+      "timestamp": "2026-05-26T14:45:34.188Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "emerging",
+      "title": "📰 美光科技总市值突破 1 万亿美元 年内累计涨幅达 210%",
+      "summary": "5 月 26 日，美光科技股价上涨 18% 至 886 美元 / 股，创历史新高，总市值达 10000 亿美元，今年以来累计涨幅 210%，成为全球半导体行业又一万亿美元市值企业。瑞银今日将其目标价从 535 美元上调至 1625 美元，为华尔街最高水平。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "半导体"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-f4ed456c1963",
+      "timestamp": "2026-05-26T14:25:15.422Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "emerging",
+      "title": "📰 亚洲业务布局半导体股集体走强，联电 ADR 涨 16%、ACM 研究涨 14%",
+      "summary": "在亚洲市场有业务布局的半导体公司股价上涨，联华电子 ADR 涨 16%，ACM 研究涨 14%，Power Integrations 涨 18%，Wolfspeed 涨 9.1%，纳微半导体公司涨 11%。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "半导体"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6c611318ddf9",
+      "timestamp": "2026-05-27T10:55:14.865Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 花旗：先进封装设备提供商将受益于华为的新芯片设计方法",
+      "summary": "花旗分析师认为，先进封装设备和服务提供商可能成为华为新芯片设计方法的主要受益者，尤其是混合键合设备制造商，以及随着封装复杂性上升的外包芯片组装和测试提供商。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片",
+          "封装",
+          "先进封装",
+          "设备"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-ffd9ad42c74c",
+      "timestamp": "2026-05-27T10:31:06.710Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 胜通能源：七腾机器人要约收购期限届满 股票停牌",
+      "summary": "胜通能源公告，七腾机器人向公司全体股东发出的部分要约收购期限已于 2026 年 5 月 27 日届满，要约价格 13.28 元 / 股，收购股份数量 42,336,000 股，占公司总股本 15%。因要约收购结果需进一步确认，公司股票自 2026 年 5 月 28 日上午开市起停牌，将根据收购完成后股权分布是否具备上市条件等情况，于要约收购结果公告日复牌或继续停牌。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "机器人"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-c25edba39456",
+      "timestamp": "2026-05-27T10:31:06.692Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 香农芯创：预计 2026 年海普存储的收入会有显著增长",
+      "summary": "香农芯创表示与 SK 海力士合作稳定，企业级 SSD 已与国内主流算力设备厂商完成验证对接并实现规模销售。存储芯片市场短期供需缺口难缓解，Q2 景气度较高。海普存储作为公司自研重点品牌，聚焦国内一线自主算力生态提供国产化、定制化企业级存储产品，公司将战略资源向其倾斜，受益行业景气度，预计 2026 年收入显著增长。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片",
+          "算力",
+          "存储芯片",
+          "设备"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-3e3f8ffbca36",
+      "timestamp": "2026-05-27T10:30:58.954Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "emerging",
+      "title": "📰 沃格光电：公司在泛半导体领域的业务尚处于早期阶段",
+      "summary": "沃格光电公告称，公司泛半导体领域业务尚处早期阶段，相关产品技术在研发或送样验证中，未形成规模化量产，营收占比极低且经营主体亏损，该业务产业化进程、订单规模及经营效益存在较大不确定性，提醒投资者注意风险。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "半导体"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-e7834443397a",
+      "timestamp": "2026-05-27T09:55:39.412Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 OpenAI 斥巨资在新加坡建实验室，开启首个海外 AI 大本营",
+      "summary": "人工智能巨头 OpenAI 与新加坡政府签署多年期合作协议，承诺投入超 2.34 亿美元在新加坡设立美国本土以外首个应用人工智能实验室。该实验室将聚焦三大方向：帮助当地公共和私营机构部署前沿 AI、培养本地 AI 人才、推动 AI 技术惠及民众与企业。OpenAI 计划与当地教育部和政府科技局合作开发 AI 教育工具并开设新加坡版 OpenAI 学院，预计未来几年为新加坡创造超 200 个技术岗位，涵盖技术专家与工程师，助力新加坡成为其全球前沿部署工程师重要枢纽，标志着 OpenAI 在东南亚及全球商业化落地迈出关键一步。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-203b123ce14b",
+      "timestamp": "2026-05-27T09:45:42.356Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 巴基斯坦与阿里达成多项合作，加速巴基斯坦数字经济与 AI 发展",
+      "summary": "巴基斯坦与阿里巴巴宣布在 AI 基础设施、医疗 AI 科技、中小企业发展、人才培养、电子支付等领域达成多项合作。巴基斯坦总理夏巴兹・谢里夫和阿里巴巴集团主席蔡崇信出席签约仪式。阿里旗下业务与巴方机构签约，将为巴中小企业提供 AI 和数字化培训，推动企业入驻并设立「巴基斯坦馆」，拓展数字支付业务。助力建设本地化云基础设施和 AI 应用，提供医疗 AI 技术，合作培养 AI 人才。夏巴兹总理赞赏阿里贡献，蔡崇信表示将推动新技术普及，促进创新和包容性增长。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "数字经济",
+          "阿里"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-14ad42a0e0c6",
+      "timestamp": "2026-05-27T08:41:07.822Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 机构：标普 500 指数有望创下自 2021 年以来最强劲的盈利增长",
+      "summary": "随着增长动能从人工智能驱动的涨幅扩展至美国大多数企业，标普 500 指数有望实现五年来最强劲的盈利增长。该基准指数中约 93% 的企业已公布财报，83% 的公司业绩超出分析师预期，为 2021 年以来最高水平。各行业均呈增长态势（医疗保健板块除外），能源和科技板块的强劲表现抵消了因伊朗战争导致油价上涨引发的消费者信心疲软，通信服务和非必需消费品板块表现最为亮眼，材料和工业板块也超出预期。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "通信",
+          "人工智能",
+          "材料"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-80e826af1183",
+      "timestamp": "2026-05-27T08:35:21.664Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "emerging",
+      "title": "📰 三星芯片员工奖金 100 倍差距引发其他部门强烈不满",
+      "summary": "三星电子与最大工会达成初步协议，将部分 AI 热潮带来的利润以股票和现金形式作为奖金分配给员工，避免了罢工。但协议引发内部不满，存储芯片部门员工可获约 6 亿韩元奖金，而智能手机等部门员工仅 600 万韩元，差距达 100 倍。其他部门员工认为被排除在外，部分人佩戴黑丝带抗议，较小工会已申请法院禁令试图阻止协议，并寻求推翻该协议，其会员人数也大幅增加。分歧还存在于半导体部门内部，亏损业务员工奖金远少于存储部门。三星 CEO 希望结束冲突，会长李在镕称员工是「大家庭」，但内部不满情绪仍存，奖金分配不公成为争议焦点。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "半导体",
+          "芯片",
+          "存储芯片"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-67244af6c0b8",
+      "timestamp": "2026-05-27T07:55:19.913Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 星巴克终止旨在解决产品短缺的人工智能项目",
+      "summary": "星巴克终止旨在解决产品短缺的人工智能项目。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-c40b431f2da4",
+      "timestamp": "2026-05-27T07:50:33.719Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 腾讯会议推出「声链」功能：解决同时开麦啸叫问题",
+      "summary": "腾讯会议推出「声链」功能，可解决同一会议室多设备同时开麦的啸叫问题并自动识别发言人。其核心是腾讯天籁实验室的「跨设备 AI 回声消除技术」，通过对各设备音频回声消除、统一传输至声链中心进行混音对齐后上传会议系统，以纯软件方案实现清晰流畅的音频体验。用户可升级至最新版本体验。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "设备"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-2b16799d4620",
+      "timestamp": "2026-05-27T06:50:36.274Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 深科技回应股价「抢跑」质疑：一直有扩产计划，不是突然放出来的利好消息",
+      "summary": "深科技因子公司拟扩大高端存储芯片封测产能公告披露前一日股价尾盘大幅拉升引发消息提前泄露猜测，公司证券部回应称扩产计划已持续释放三四个月，并非突然放出的利好消息。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片",
+          "封测",
+          "存储芯片"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6fde554ae627",
+      "timestamp": "2026-05-27T06:40:59.959Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 OpenAI 和 Google 加大在新加坡的人工智能投资力度",
+      "summary": "OpenAI 和 Google 加大在新加坡的人工智能投资力度。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-778956f1a5e4",
+      "timestamp": "2026-05-27T06:10:23.792Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 睿心医疗完成近亿元 D 轮融资",
+      "summary": "深圳睿心智能医疗科技有限公司完成近亿元 D 轮融资，由广州健康产投领投、越富基金跟投，融资将用于公司管线发展、业务增长及海外市场拓展，深化 AI 驱动的血管介入手术机器人体系布局，打造 AI+ 机器人诊疗一体化平台。该公司聚焦心血管精准诊疗赛道，构建了心脑血管疾病一体化智能诊疗平台，拥有 AngioQFA、睿心分数（CTFFR）、心腔内超声 ICE 等核心产品，其中 AngioQFA 已与蓝帆医疗达成全球战略合作，睿心分数正与讯飞影联推动临床落地。未来，公司将持续深耕心血管精准诊疗领域，加速相关产品商业化进程，助力国内心血管疾病诊疗升级。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "机器人"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-15d3e7571c76",
+      "timestamp": "2026-05-27T05:15:30.602Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "emerging",
+      "title": "📰 鹏鼎控股：不涉及半导体和芯片业务",
+      "summary": "鹏鼎控股主要从事各类印制电路板的研发、设计、制造、销售与服务，主要产品包括 FPC、SMA、SLP、HDI、RPCB、Rigid Flex 等，不涉及半导体和芯片业务。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "半导体",
+          "芯片"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6d1b9f12e84d",
+      "timestamp": "2026-05-27T05:10:22.513Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "emerging",
+      "title": "📰 高盛因强劲的盈利前景将标普 500 指数年末目标上调至 8000 点",
+      "summary": "高盛将标普 500 指数 2026 年底预测值从 7600 点上调至 8000 点，较最近收盘价高出 6.4%，理由是企业盈利持续强劲。同时将 2026 年该指数每股收益预期上调至 340 美元（同比增 24%），2027 年上调至 385 美元（进一步增 13%）。高盛称盈利增长是推动指数整体回报的主要动力且未来将持续，此举加剧了券商看涨预期浪潮。此前瑞银 GWM 也因人工智能驱动盈利有望抵消通胀压力及伊朗冲突供应风险而上调展望，瑞银认为人工智能基础设施受益者将推动今年指数约一半盈利增长，尽管消费疲软和成本上升有风险，但强劲 AI 投资将抵消压力。高盛分析师还指出，尽管标普 500 指数盈利",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "半导体",
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-f39bcce400aa",
+      "timestamp": "2026-05-27T04:50:23.514Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": "chain8",
+      "chain": "chain8",
+      "lifecycle": "emerging",
+      "title": "📰 小米 YU7 标准版汽车正式开启交付：家族设计 + 蛟龙底盘，23.35 万元起",
+      "summary": "小米汽车今日宣布小米 YU7 标准版正式开启交付，售价 23.35 万元起，现车最快 2 小时可提。该车采用家族设计，续航长充电快，搭载小米蛟龙底盘等配置，标配天际屏、752V 碳化硅高压平台、超级电机 V6s Plus、前双叉臂 + 后五连杆独立悬架、前四活塞固定卡钳、天幕玻璃双层镀银 + 前风挡三层镀银，以及激光雷达、4D 毫米波雷达、700TOPS 辅助驾驶算力。首销期下定可享 5 年低息，加送 3000 元车漆选装券，到店试驾可领取 1:64 合金车模。雷军表示，此次推出的标准版是三年前规划完成、上市前最后一刻被取消的版本，去年取消标准版是错误决定。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "算力",
+          "碳化硅",
+          "电机"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-f1f0a0b0782f",
+      "timestamp": "2026-05-27T04:45:26.046Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 协鑫能科：目前阶段公司算力相关收入占总营收比重较低",
+      "summary": "协鑫能科表示目前算力相关收入占总营收比重较低，归入其它业务分类营收中。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "算力"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6d0a5f6f4306",
+      "timestamp": "2026-05-27T04:30:54.711Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 机构：2026 年第一季度全球 DRAM 营收逼近千亿美元",
+      "summary": "2026 年第一季度全球 DRAM 营收环比增长 80% 创历史新高，主要受市场需求强劲、存储价格走强以及 HBM 和 AI 数据中心基础设施中 LPDDR5 应用占比提升推动。三星存储业务领先，SK 海力士与美光分列二、三位。预计第二季度价格将继续环比增长 50%（包括 HBM 及标准型 DRAM）。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "HBM",
+          "DRAM"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-1de822d445f7",
+      "timestamp": "2026-05-27T04:15:40.435Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "emerging",
+      "title": "📰 港股午评：恒指跌 0.85%，科技黄金保险齐跌，芯片半导体继续强劲",
+      "summary": "5 月 27 日，港股三大指数盘初小幅冲高后持续走弱，恒生指数跌 0.85%，国企指数跌 1.02%，恒生科技指数跌 0.25%。权重科技股多数低迷，阿里巴巴跌近 3%，小米、京东跌超 2%。芯片半导体股维持强势，兆易创新、中芯国际齐涨，纸业股拉升，玖龙纸业大涨超 9%。黄金股再度低迷，保险股、汽车股、重型机械股纷纷下跌。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "半导体",
+          "芯片",
+          "中芯",
+          "阿里"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-3eabdb5bff95",
+      "timestamp": "2026-05-27T04:05:16.285Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 高通与字节跳动达成 AI 芯片供应协议，共同发力 AI 智能体基础设施",
+      "summary": "高通与字节跳动达成 AI 芯片供应合作协议，高通将为字节跳动提供数百万颗定制化 ASIC 芯片以支撑其数据中心 AI 工作负载及智能体软件基础设施，并助力字节跳动将自研芯片设计转化为量产产品。双方合作在合规框架下运行，有助于字节跳动降低对单一 GPU 供应商的依赖。此次合作是高通向 AI 数据中心基础设施领域转型的重要举措，也为字节跳动 2026 年计划投入 2000 亿元人民币的 AI 基础设施布局提供算力支撑，双方合作从消费级 AI 硬件领域提升至底层算力支撑层面。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片",
+          "算力",
+          "GPU",
+          "字节"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6b9b6d258e16",
+      "timestamp": "2026-05-27T03:50:26.362Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性",
+      "summary": "Uber 在 2026 年仅四个月就耗尽全年人工智能预算，公司开始质疑投入是否产生实质回报。总裁兼首席运营官安德鲁・麦克唐纳表示，未发现 Claude Code 的词元使用量激增与面向用户推出更实用功能之间存在关联，称目前难以证实二者联系，相信未来会逐渐明朗。2025 年 Uber 研发投入达 34 亿美元，较上年增长 9%。首席执行官达拉・霍斯劳沙希曾表示公司正通过缩减人员招聘规模承担不断增加的人工智能相关投入。麦克唐纳称不得不权衡词元使用量、相关成本与人员编制的关系，若无法明确证明投入能转化为向用户交付的实用功能与服务，这种权衡更难证明其合理性。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-d12c2c5afdfa",
+      "timestamp": "2026-05-27T02:58:58.639Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 SpaceX 获美国军方 22.9 亿美元卫星通信网络合同",
+      "summary": "美国太空部队周二授予 SpaceX 公司一份价值 22.9 亿美元的合同，用于建设空间数据网络（SDN）骨干网。该网络为弹性扩散型低地球轨道卫星星座，将提供高容量、低延迟数据传输，支持导弹预警跟踪数据近乎实时传输至拦截器，是「金穹」导弹防御计划基石，需在 2027 年底前交付可运行原型系统。其将与太空发展局传输层协同，为国防部任务提供关键数据传输，太空部队计划夏季确定更多承包商负责卫星建造及其他网络组件。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "卫星",
+          "通信"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-3730075bf304",
+      "timestamp": "2026-05-27T02:58:24.640Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 苹果、谷歌呼吁在加拿大《网络安全法案》中引入司法监督",
+      "summary": "苹果和谷歌母公司 Alphabet 周二推动修改加拿大议会审议的网络安全法案 C-22，旨在对企业所称的「可能出现的秘密命令」增加司法监督，这些命令旨在破解其软件和设备的加密。该法案与英澳已颁布措施类似，旨在赋予执法官员访问加密数据的权限，加拿大当局称有助于更早调查安全威胁并采取更迅速行动。苹果、谷歌和 Meta Platforms 反对该法案，认为其可能导致当局发出秘密命令要求在服务或设备中植入后门且无需披露。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "设备"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-e51e12e17c4b",
+      "timestamp": "2026-05-27T02:45:29.155Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 最高法：研究制定涉 AI 案件和数据产权司法保护规范性文件",
+      "summary": "最高法将依法平等保护各类市场主体合法权益，着力解决干预经济纠纷等问题，健全防范纠正冤错案件机制。加快出台公司法司法解释，平衡公司各方利益，完善执行信用惩戒与修复机制。巩固涉外审判优势，打造知识产权、国际商事争端解决优选地。研究虚拟货币等新型案件裁判规则，制定涉内幕交易、操纵市场民事赔偿司法解释。针对数字经济新业态，研究制定涉人工智能案件和数据产权司法保护规范性文件，完善数据权属、交易及 AI 生成等裁判规则，助力数据要素基础制度体系完善和数据市场建设。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "数字经济",
+          "数据要素",
+          "人工智能"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-e427af6145ee",
+      "timestamp": "2026-05-27T02:30:45.227Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 消息称三星计划在越南投建一座价值 15 亿美元的存储芯片测试工厂",
+      "summary": "三星向越南申请环境许可证以建设新工厂，计划投资 15 亿美元建设存储芯片测试工厂，预计 2027 年 11 月运营，还考虑追加 25 亿美元投资。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片",
+          "存储芯片"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-df314b928764",
+      "timestamp": "2026-05-27T02:10:33.419Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 朱一明 11 天套现超 21 亿元",
+      "summary": "6 月 26 日晚，兆易创新发布公告称，公司控股股东、董事长朱一明于 2026 年 5 月 11 日至 5 月 25 日期间，通过集中竞价和大宗交易方式累计减持公司股份 632.99 万股，占公司总股本的 0.90%。本次权益变动后，朱一明及其一致行动人香港赢富得有限公司的合计持股比例由 7.90% 减少至 7.00%，触及 1% 刻度线。本次减持为履行此前披露的股份减持计划，尚未实施完毕。兆易创新是国内存储芯片领域龙头企业，近一年股价大涨 358%，目前市值 3689 亿元。按 5 月 11 日至 5 月 25 日期间股票均价 406.38 元计算，朱一明 11 个交易日或已套现 25.72",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "芯片",
+          "存储芯片",
+          "长鑫"
+        ]
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-b3563b620410",
+      "timestamp": "2026-05-27T02:10:33.417Z",
+      "source": "readhub",
+      "type": "signal",
+      "direction": null,
+      "chain": null,
+      "lifecycle": "emerging",
+      "title": "📰 外观设计引争议，法拉利首款纯电车型 Luce 发布后股价大跌",
+      "summary": "法拉利正式推出旗下首款纯电动车型 Luce，由前苹果首席设计官乔纳森・伊夫设计，风格简约，与燃油跑车设计大相径庭。该车起售价 64 万美元，搭载 122 千瓦时电池，续航 530 公里，四台电机，零百加速 2.5 秒，最高时速超 310 公里。作为品牌首款五座、第二款四门车型，定位顶级富豪家庭。新车发布引发两极评价，部分分析师质疑其是否传承跑车基因，导致米兰股市早盘法拉利股价一度大跌 8%，后收窄至 6%。",
+      "priority": "normal",
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
+      "tickers": [],
+      "metrics": {
+        "keywords": [
+          "基因",
+          "电机"
+        ]
+      },
       "source_urls": []
     },
     {
@@ -1969,6 +2801,17 @@
       "title": "📉 周KDJ超卖: 浙江医药(600216.SH) J=-11.9",
       "summary": "周线KDJ超卖 | K=6.8 D=16.2 J=-11.9 | 周涨跌=-3.9%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "600216.SH",
@@ -1994,6 +2837,17 @@
       "title": "📉 周KDJ超卖: 百川股份(002455.SZ) J=-11.2",
       "summary": "周线KDJ超卖 | K=8.5 D=18.4 J=-11.2 | 周涨跌=-2.9%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "002455.SZ",
@@ -2019,6 +2873,17 @@
       "title": "📉 周KDJ超卖: 中关村(000931.SZ) J=-11.1",
       "summary": "周线KDJ超卖 | K=19.1 D=34.2 J=-11.1 | 周涨跌=-2.5%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "000931.SZ",
@@ -2044,6 +2909,17 @@
       "title": "📉 周KDJ超卖: 长城汽车(601633.SH) J=-10.6",
       "summary": "周线KDJ超卖 | K=13.2 D=25.1 J=-10.6 | 周涨跌=-7.2%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "601633.SH",
@@ -2069,6 +2945,17 @@
       "title": "📉 周KDJ超卖: 亿帆医药(002019.SZ) J=-9.3",
       "summary": "周线KDJ超卖 | K=6.2 D=14.0 J=-9.3 | 周涨跌=-5.4%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "002019.SZ",
@@ -2094,6 +2981,17 @@
       "title": "📉 周KDJ超卖: 百利天恒(688506.SH) J=-8.9",
       "summary": "周线KDJ超卖 | K=18.5 D=32.2 J=-8.9 | 周涨跌=-6.6%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "688506.SH",
@@ -2119,6 +3017,17 @@
       "title": "📉 周KDJ超卖: 润都股份(002923.SZ) J=-8.9",
       "summary": "周线KDJ超卖 | K=9.8 D=19.1 J=-8.9 | 周涨跌=-5.2%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "002923.SZ",
@@ -2144,6 +3053,17 @@
       "title": "📉 周KDJ超卖: 康弘药业(002773.SZ) J=-8.7",
       "summary": "周线KDJ超卖 | K=7.4 D=15.5 J=-8.7 | 周涨跌=-4.5%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "002773.SZ",
@@ -2169,6 +3089,17 @@
       "title": "📉 周KDJ超卖: 华润三九(000999.SZ) J=-8.3",
       "summary": "周线KDJ超卖 | K=3.9 D=10.0 J=-8.3 | 周涨跌=-2.0%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "000999.SZ",
@@ -2194,6 +3125,17 @@
       "title": "📉 周KDJ超卖: 吉贝尔(688566.SH) J=-7.9",
       "summary": "周线KDJ超卖 | K=16.9 D=29.3 J=-7.9 | 周涨跌=-1.3%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "688566.SH",
@@ -2219,6 +3161,17 @@
       "title": "📉 周KDJ超卖: 华东医药(000963.SZ) J=-7.7",
       "summary": "周线KDJ超卖 | K=12.4 D=22.5 J=-7.7 | 周涨跌=-6.7%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "000963.SZ",
@@ -2244,6 +3197,17 @@
       "title": "📉 周KDJ超卖: 丽珠集团(000513.SZ) J=-6.6",
       "summary": "周线KDJ超卖 | K=9.7 D=17.8 J=-6.6 | 周涨跌=-0.3%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "000513.SZ",
@@ -2269,6 +3233,17 @@
       "title": "📉 周KDJ超卖: ST南都(300068.SZ) J=-5.9",
       "summary": "周线KDJ超卖 | K=4.1 D=9.1 J=-5.9 | 周涨跌=-0.4%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "300068.SZ",
@@ -2294,6 +3269,17 @@
       "title": "📉 周KDJ超卖: 北陆药业(300016.SZ) J=-5.2",
       "summary": "周线KDJ超卖 | K=16.7 D=27.7 J=-5.2 | 周涨跌=-3.1%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "300016.SZ",
@@ -2319,6 +3305,17 @@
       "title": "📉 周KDJ超卖: 键凯科技(688356.SH) J=-3.6",
       "summary": "周线KDJ超卖 | K=24.2 D=38.1 J=-3.6 | 周涨跌=-9.5%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "688356.SH",
@@ -2344,6 +3341,17 @@
       "title": "📉 周KDJ超卖: 睿智医药(300149.SZ) J=-3.4",
       "summary": "周线KDJ超卖 | K=17.9 D=28.6 J=-3.4 | 周涨跌=-4.7%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "300149.SZ",
@@ -2369,6 +3377,17 @@
       "title": "📉 周KDJ超卖: 荣昌生物(688331.SH) J=-3.3",
       "summary": "周线KDJ超卖 | K=34.7 D=53.7 J=-3.3 | 周涨跌=1.8%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "688331.SH",
@@ -2394,6 +3413,17 @@
       "title": "📉 周KDJ超卖: 哈工智能(000584.SZ) J=-1.8",
       "summary": "周线KDJ超卖 | K=3.2 D=5.7 J=-1.8 | 周涨跌=16.0%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "000584.SZ",
@@ -2419,6 +3449,17 @@
       "title": "📉 周KDJ超卖: 复星医药(600196.SH) J=-1.7",
       "summary": "周线KDJ超卖 | K=22.6 D=34.8 J=-1.7 | 周涨跌=-3.0%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "600196.SH",
@@ -2444,6 +3485,17 @@
       "title": "📉 周KDJ超卖: 三峡能源(600905.SH) J=-1.2",
       "summary": "周线KDJ超卖 | K=9.7 D=15.2 J=-1.2 | 周涨跌=0.0%",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "买入信号次日无法当日止损",
+        "suggestion": "次日开盘观察竞价"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 35,
       "tickers": [
         {
           "code": "600905.SH",
@@ -2459,157 +3511,1642 @@
       "source_urls": []
     },
     {
-      "id": "SIG-9d085d42bdcf",
-      "timestamp": "2026-05-27T01:50:11.179Z",
-      "source": "readhub",
-      "type": "signal",
-      "direction": null,
-      "chain": null,
-      "lifecycle": "emerging",
-      "title": "📰 创业板指涨逾 1% 光伏领涨",
-      "summary": "指数分化，创业板指拉升涨逾 1.00%，沪指跌 0.08%，深成指涨 0.26%。光伏、电力、芯片等方向涨幅居前，沪深京三市上涨个股近 2600 只。",
+      "id": "SIG-385aa2334368",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "fire",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "consensus",
+      "title": "🔥 日经亚洲三连击τ定律国际验证深化——华为新麒麟芯片克服美国制裁技术逼近TSMC/Intel",
+      "summary": "Nikkei Asia 5/25报道华为新麒麟芯片克服美国制裁取得重大突破，技术能力逼近TSMC和Intel。这是48h内日经亚洲第三篇华为芯片报道（5/24何庭波τ定律人物深度+5/25 Kirin突破+SK海力士HBM亚洲三巨头），international media从单篇→持续campaign→常态化覆盖三阶跃迁。τ定律叙事的国际验证从'一次报道'升级为'连续follow-up'状态——国际媒体对中国半导体不再是一次性猎奇而是持续性跟踪。券商(招商/国盛/华泰/中信)纷纷发布τ定律专题研报，先进封装/代工/设备/EDA/CPO全面受益。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "type": "margin",
+        "margin_by_ticker": {
+          "688981.SH": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +6.8%",
+            "rzye_current": 13993742398.0,
+            "rzye_pct_change": 6.8
+          },
+          "002371.SZ": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +23.3%",
+            "rzye_current": 3698911169.0,
+            "rzye_pct_change": 23.3
+          },
+          "688012.SH": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +15.4%",
+            "rzye_current": 5623309448.0,
+            "rzye_pct_change": 15.4
+          },
+          "688072.SH": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +12.1%",
+            "rzye_current": 1924773508.0,
+            "rzye_pct_change": 12.1
+          },
+          "688256.SH": {
+            "status": "warning",
+            "label": "⚠️ 杠杆资金快速推高",
+            "detail": "5日融资余额变化 +4.1%",
+            "rzye_current": 25938896813.0,
+            "rzye_pct_change": 4.1
+          }
+        }
+      },
+      "_score": 32,
+      "tickers": [
+        {
+          "code": "688981.SH",
+          "name": "中芯国际"
+        },
+        {
+          "code": "002371.SZ",
+          "name": "北方华创"
+        },
+        {
+          "code": "688012.SH",
+          "name": "中微公司"
+        },
+        {
+          "code": "688072.SH",
+          "name": "拓荆科技"
+        },
+        {
+          "code": "688256.SH",
+          "name": "寒武纪"
+        }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://asia.nikkei.com/spotlight/huawei-crackdown/huawei-says-new-kirin-chip-for-phones-overcomes-us-clampdown",
+        "https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-nvidia-and-asia-s-three-chip-giants-cash-in-on-ai-gold-rush"
+      ]
+    },
+    {
+      "id": "SIG-d88ccbd077ca",
+      "timestamp": "2026-05-26T22:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain2",
+      "chain": "chain2",
+      "lifecycle": "consensus",
+      "title": "瑞银大幅上调美光目标价至1625美元/1.8万亿美元市值——AI存储需求远超共识预期",
+      "summary": "瑞银将美光目标价从535美元大幅上调至1625美元（华尔街最高），对应市值1.8万亿美元。分析师认为AI推动存储结构性变化迹象显现，美光估值将继续上修。美光盘前+7%，带动美股半导体普涨（AMD/高通+3%、ARM/台积电+2%）。此目标价隐含HBM/AI存储需求增速远超当前市场共识——1.8万亿美元市值=当前市值~2x。",
       "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 32,
+      "tickers": [
+        {
+          "code": "603986.SH",
+          "name": "兆易创新"
+        },
+        {
+          "code": "688525.SH",
+          "name": "佰维存储"
+        },
+        {
+          "code": "000021.SZ",
+          "name": ""
+        },
+        {
+          "code": "002156.SZ",
+          "name": "通富微电"
+        }
+      ],
+      "metrics": {},
+      "source_urls": []
+    },
+    {
+      "id": "SIG-ed06ab31aad3",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 高通+字节数百万颗ASIC协议——AI算力供给GPU-only→ASIC+GPU双结构质变 (emerging/under_priced⭐)",
+      "summary": "Bloomberg→Reuters→Yahoo Finance五源确认。字节将采购数百万颗高通ASIC支撑AI Agent软件，2026年AI基础设施投入2000亿元。中国AI算力供给结构质变→降低制裁集中度风险。首次定价窗口48-72h，0%定价。传导:先进封装(长电/通富/深科技)→晶圆代工(SMIC)→国产AI芯片TAM扩大(寒武纪/海光但竞争加剧)。风险:若美方视此为'绕开制裁'→可能触发新管制。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
       "tickers": [],
       "metrics": {
-        "keywords": [
-          "芯片",
-          "创业板"
-        ]
+        "timeframe": "days"
       },
       "source_urls": []
     },
     {
-      "id": "SIG-e9ab52ce3c9e",
-      "timestamp": "2026-05-27T01:45:37.456Z",
-      "source": "readhub",
-      "type": "signal",
-      "direction": null,
-      "chain": null,
-      "lifecycle": "emerging",
-      "title": "📰 郑州「十五五」规划纲要：积极创建超硬材料领域国家制造业创新中心 打造培育钻石之都",
-      "summary": "郑州市「十五五」规划纲要提出，实施产业创新工程，强化战略性新兴产业支柱作用，打造新一代信息技术、新能源及智能网联汽车 2 个万亿级和高端装备、新材料、生物医药、节能环保 4 个千亿级产业集群。其中，将统筹电子信息全链条发展，构建新能源汽车产业体系，建设高端装备产业基地，巩固提升材料优势，积极创建超硬材料领域国家制造业创新中心，打造培育钻石之都，同时发展生物医药和节能环保产业。",
-      "priority": "normal",
+      "id": "SIG-af10f1773e1c",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 长鑫HBM3年底量产dual_confirmed——国产HBM 0→1年度级别战略突破 (positioning/partially_priced, strong backing)",
+      "summary": "Nikkei Asia多篇CXMT深度+Tom's Hardware/Digital Today Korea国际验证+中信证券国内验证。长鑫HBM3年底量产(月产6万片)、12英寸15万片月产、90% DDR5切换。三星罢工暂缓但HBM短缺未变。200亿IPO募资→设备采购订单(Naura/AMEC)。strong backing(大基金三期+国家队ETF+招投标三匹配)。风险:DigiTimes 4月报道时间表可能推迟。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
       "tickers": [],
       "metrics": {
-        "keywords": [
-          "材料"
-        ]
+        "timeframe": "weeks"
       },
       "source_urls": []
     },
     {
-      "id": "SIG-143f54ea2faf",
-      "timestamp": "2026-05-27T01:30:48.721Z",
-      "source": "readhub",
-      "type": "signal",
-      "direction": null,
-      "chain": null,
-      "lifecycle": "emerging",
-      "title": "📰 AI 眼镜新品频发，产业链追「光」逐「芯」",
-      "summary": "AI 眼镜市场热度升温，厂商密集发布新品，谷歌亦预告秋季推出首款 AI 眼镜。A 股 AI 眼镜产业链加速布局，光学部件（近半成本，Micro LED 为重点方向）和主控芯片（成本占比两至三成）成核心环节，相关公司纷纷卡位。",
-      "priority": "normal",
+      "id": "SIG-492bc33b2232",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 τ定律国际定价三阶跃迁完成dual_confirmed——DigiTimes首推'Huawei Tau Law'专题系列(Series 1&2) (positioning/partially_priced)",
+      "summary": "Nikkei五连击+DigiTimes首次专题系列→国际定价从'偶然关注'→'常态化报道'→'系统性研究'仅3天完成。DigiTimes Series 2聚焦先进封装/光互联/EDA→细化τ定律受益方向。IC排名佐证:北方华创设备#6(+1)+中微#10(新进)+韦尔#9(新进)。国内券商密集覆盖接近consensus,国际资金定价2-4周窗口开启。设备/材料滞后SMIC 40pp+→补涨空间最大。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
       "tickers": [],
       "metrics": {
-        "keywords": [
-          "芯片"
-        ]
+        "timeframe": "weeks"
       },
       "source_urls": []
     },
     {
-      "id": "SIG-4779aa51afc5",
-      "timestamp": "2026-05-27T01:10:41.609Z",
-      "source": "readhub",
-      "type": "signal",
-      "direction": null,
-      "chain": null,
-      "lifecycle": "emerging",
-      "title": "📰 智谱等在上海成立人工智能产业创投合伙企业",
-      "summary": "上海智谱国泰海通人工智能产业创业投资合伙企业（有限合伙）近日成立，经营范围为创业投资（限投资未上市企业），由智谱全资子公司北京智谱未来科技有限公司、国泰海通全资子公司国泰君安创新投资有限公司等共同出资。",
-      "priority": "normal",
+      "id": "SIG-d81fa0f0c21f",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔴 四大背离确认:①双高权重源对立深化(Nikkei bullish vs Goldman bearish) ②产业资本套现 vs 产业基本面向 ③核心标的普跌 vs 信号面10fire ④高通ASIC竞争 vs TAM扩大",
+      "summary": "四大背离→短期(2-4周)震荡消化→中期方向取决于:①GS PB是否连续3周以上净卖出 ②长鑫今日上会结果 ③τ定律能否持续吸引国际资金。当前最佳策略:持有τ定律核心受益(设备/封测)不追高,等待缩量企稳信号。设备/材料(北方华创/中微/南大光电)为最佳补涨方向。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
       "tickers": [],
       "metrics": {
-        "keywords": [
-          "人工智能"
-        ]
+        "timeframe": "weeks"
       },
       "source_urls": []
     },
     {
-      "id": "SIG-92de68b1d66c",
-      "timestamp": "2026-05-26T17:56:20.786Z",
-      "source": "readhub",
-      "type": "signal",
-      "direction": null,
-      "chain": null,
-      "lifecycle": "emerging",
-      "title": "📰 字节跳动向 Seed 员工开放「豆包股」认购权",
-      "summary": "字节跳动首次针对特定业务单元发行股权，为旗下 Seed 人工智能部门员工提供与该部门挂钩的低价股票期权「豆包股」，当前认购价为每股 13 美元。该「豆包长期激励计划」始于 2025 年四季度，初期估值参考业务投入成本，未来将结合豆包及大模型 toB 业务发展重新估值，以加强对大模型人才的长期吸引和激励。此外，字节此前已为 Seed 部门核心技术员工实施期权增发，按绩效与职级分档，员工每月可拿到约 9 万、11 万、13 万元人民币价值的字节期权，按月归属，首批连续发放 18 个月，最高可达百万元级别。",
-      "priority": "normal",
+      "id": "SIG-af14b79c6a97",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⚠️ 五大风险:①减持潮是否扩大 ②GS PB获利了结是否趋势化 ③高通ASIC合规风险 ④长鑫上会结果 ⑤寒武纪/海光传导断裂持续第六周",
+      "summary": "①若其他半导体龙头跟风减持→系统性回调。②下周GS PB数据为关键验证(连续3周净卖出=红色警报)。③若美方干预高通ASIC=deal信号反转。④长鑫上会结果盘后公布→明日开盘方向决定。⑤寒武纪-5%今日→传导断裂未修复→链二资金流向封测/存储/光模块而非独立GPU。",
+      "priority": "high",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
       "tickers": [],
       "metrics": {
-        "keywords": [
-          "人工智能",
-          "字节"
-        ]
+        "timeframe": "days"
       },
       "source_urls": []
     },
     {
-      "id": "SIG-9a024f96118c",
-      "timestamp": "2026-05-26T17:55:38.831Z",
-      "source": "readhub",
-      "type": "signal",
-      "direction": null,
-      "chain": null,
-      "lifecycle": "emerging",
-      "title": "📰 蚂蚁集团：Token 消耗将迎来指数级增长 预计 2030 年消耗量增长超 300 倍",
-      "summary": "今日支付宝举行 AI 支付生态大会，蚂蚁集团研究院院长庄蹯表示 Token、数据和工具是智能体的重要生产要素，预测 2030 年 Token 消耗量将增长超 300 倍，活跃智能体达 22 亿，年执行任务 400 万亿次。另据《全国数据资源调查报告（2025 年）》显示，2025 年全国日均 Token 调用量从年初超万亿增长到年末 100 万亿，全年累计约 21100 万亿。Token 是人工智能大模型拆分数据后的最小信息载体。",
-      "priority": "normal",
+      "id": "SIG-4d5d547cfee1",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 宇树科技6月1日科创板IPO上会——A股人形机器人第一股即将诞生 (emerging)",
+      "summary": "募资42亿，超20亿投入具身智能模型研发。人形机器人公司首次进入A股→定价框架从'概念炒作'→'真实投资标的'切换。绿的谐波/兆威机电/鸣志电器/柯力传感/奥比中光全线受益。距6/1上会仅5天，首次定价窗口开启。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
       "tickers": [],
       "metrics": {
-        "keywords": [
-          "人工智能"
-        ]
+        "timeframe": "days"
       },
       "source_urls": []
     },
     {
-      "id": "SIG-598114727146",
-      "timestamp": "2026-05-26T17:45:28.328Z",
-      "source": "readhub",
-      "type": "signal",
-      "direction": null,
-      "chain": null,
-      "lifecycle": "emerging",
-      "title": "📰 SpaceX IPO「磁场效应」持续发酵 美股商业航天板块盘前飙升",
-      "summary": "受 SpaceX 上市乐观情绪提振，美股商业航天板块盘前延续涨势，Momentus 飙升 80%，Redwire 上涨 16%，MDA Space 上涨 18%，Firefly Aerospace 上涨 8%，Voyager Technologies 涨 7.6%，Intuitive Machines 涨 10%，York Space Systems 涨 7.8%，AST SpaceMobile 涨 6.5%，Rocket Lab 涨 5.6%.",
-      "priority": "normal",
+      "id": "SIG-0964b9471e0a",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 特斯拉Optimus V3精确时间锚：6月发布+7-8月弗里蒙特量产100万台——中国供应链占60-70% (positioning)",
+      "summary": "时间线从'下半年'模糊→6月/7-8月精确锚。100万台产能→减速器2000-4000万个+电机1000万+个TAM。三花智控/拓普集团/鸣志电器/绿的谐波/双环传动已审厂锁定。6月发布若超预期→Q3零部件订单提前释放。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
       "tickers": [],
       "metrics": {
-        "keywords": [
-          "商业航天"
-        ]
+        "timeframe": "weeks"
       },
       "source_urls": []
     },
     {
-      "id": "SIG-cfe6c278d656",
-      "timestamp": "2026-05-26T16:25:14.862Z",
-      "source": "readhub",
-      "type": "signal",
-      "direction": null,
-      "chain": null,
-      "lifecycle": "emerging",
-      "title": "📰 马斯克：星链战时收费暴涨 5 倍，五角大楼被迫买单",
-      "summary": "美伊战争期间，SpaceX 以星链网络不可替代性为由，将用于自杀式无人机的卫星连接费用从每月约 5000 美元大幅提至 25000 美元，五角大楼最终妥协。这一争议暴露了美国军事体系对单一商业供应商的深度依赖。SpaceX 认为无人机使用条件接近航空级服务，而军方则认为其使用时间短不应适用该高价。马斯克曾公开表示商业星链用于武器系统违反服务条款，加剧双方矛盾。分析人士指出，SpaceX 因拥有庞大商业市场，在谈判中底气远超传统军工企业，而五角大楼缺乏替代选项。此外，SpaceX 还就向伊朗平民提供直连蜂窝服务开价 5 亿美元启动费加每月 1 亿美元运营费。此次定价争议发生在 SpaceX 即将",
-      "priority": "normal",
+      "id": "SIG-6041ac597821",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 华威科电子皮肤千万片级基地动工+订单增300%——传感细分进入规模化拐点 (emerging)",
+      "summary": "电子皮肤从实验室→千万片工业化量产，单位成本大幅下降。订单+300%→灵巧手2026年出货3-4万套。柯力传感(六维力)/奥比中光(3D视觉)/奥普特(机器视觉)受益传感TAM扩展。0券商覆盖，0%定价。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
       "tickers": [],
       "metrics": {
-        "keywords": [
-          "无人机",
-          "卫星"
-        ]
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6ca1c317f27e",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "周三机器人全日6信号/5fire——量产基础设施+IPO融资+海外量产锚+产能指引+传感细分+芯片架构六线推进",
+      "summary": "早间(10:40):佛山量产线+优必选万台+类脑芯片→下午(16:40):宇树IPO+Optimus精确时间表+电子皮肤拐点。与半导体链τ定律形成最强双线共振日:宇树6/1上会↔长鑫5/27上会(今日即期)。机器人链从叙事→基础设施→融资→订单四层验证闭环。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-80508a616728",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 高通+字节跳动数百万颗定制ASIC芯片协议——中国AI算力供给从GPU-only→ASIC+GPU双结构 (chain2, emerging)",
+      "summary": "高通为字节提供数百万颗定制ASIC支撑AI数据中心，字节2026年AI基础设施投入2000亿元。中国AI算力供给结构从单一NVIDIA GPU→高通ASIC+国产GPU双引擎，降低供应集中度风险。寒武纪/海光面临竞争加剧但TAM同步扩大。ReadHub独家<9h，0券商覆盖，0%定价。potential首次定价窗口48-72h。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-7b0f6f0422f5",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 长鑫HBM3年底量产+12英寸月产能15万片+三星罢工HBM缺口——国产存储HBM从0→1质变 (chain1, positioning, high weight)",
+      "summary": "中信证券研报:长鑫2026年底HBM3量产(月产6万片占20%)，12英寸月产15万片，90%切换DDR5。中国基金报:HBM2已送样。三星罢工暂缓但HBM供给硬短缺未变(缺口3-4%)。长鑫跳过HBM2E直攻HBM3/3E→国产存储从DDR5品牌突破→HBM战略突破。200亿IPO募资用于设备采购→北方华创/中微/中科仪受益。全线共振标的:兆易创新/深科技/通富微电/长电科技。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-73e5ae888c16",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 高盛三重验证——AI CapEx上调至$800B + PB获利了结近一年最快 + 标普500目标8000点 (chain2, positioning, high weight)",
+      "summary": "Benzinga(18h): Goldman lifts 2026 AI CapEx to $800B。Hedgeweek(5d): GS PB对冲基金以近一年最快速度净卖出半导体。Goldman Insights(3d): 定性为风险管理和组合再平衡。双信号并存→中期方向看多但短期波动加大。A股设备/封测相对独立于美股半导体获利了结→tau定律受益方可能在回调中相对抗跌。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-8a21e5c5376d",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 τ定律国际媒体六连击——Nikkei第五篇何庭波人物深度+DigiTimes首次推出'华为τ定律'专题系列 (chain1, positioning, high weight)",
+      "summary": "Nikkei Asia(1d前)第五篇何庭波人物深度。DigiTimes(1d前)推出'Huawei Tau Law series 1'专题——台湾产业界首次系统性接纳τ定律为分析框架。从单篇→五篇campaign→DigiTimes专题系列=国际定价从'偶然关注'→'常态化报道'→'系统性研究'三阶跃迁完成。AMD+NVIDIA同步加深台湾半导体生态投资→以行动确认τ定律时代的产业重构。国内券商密集覆盖但国际资金定价仍在进行中。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-d5f8668daafa",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 DRAM Q1全球营收近千亿美元环比+80%创历史新高——存储超级周期最强量化验证 (chain2, positioning)",
+      "summary": "Q1 DRAM营收环比+80%创历史新高，HBM+LPDDR5占比提升驱动。Q2价格预计继续环比+50%。将WSTS Q1半导体+79%超级周期数据在DRAM维度进一步验证。美光+18%市值突破1万亿美元(UBS目标535→1625)。A股存储链(兆易创新/江波龙/佰维存储)仍在定价DRAM超级周期。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-38d08898eff1",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⚠️ 减持潮蔓延——兆易创新朱一明11天套现21亿+华峰测控股东减持1% (chain1, exhausted)",
+      "summary": "兆易创新近一年+358%，董事长减持0.90%套现25.72亿。华峰测控股东询价转让1%。澜起250.08元减持已落地。存储/设备龙头三连击减持→产业资本在超级周期顶部兑现。与长鑫HBM3量产+IPO上会形成对立信号→产业资本套现 vs 产业基本面向上。不改中期方向但增加短期回调压力。",
+      "priority": "high",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-c0f7ceecd1ea",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "周三16:30下午8信号/5fire——双窗口覆盖，全日累计~10独特信号/10fire。核心变量:长鑫上会结果",
+      "summary": "下午5fire全新催化:①高通+字节ASIC→链2供给结构质变(emerging) ②长鑫HBM3年底量产→链1存储HBM 0→1(多源验证) ③GS三重验证→资金面分歧深化(AI CapEx $800B vs 获利了结) ④τ定律六连击→国际媒体系统化研究 ⑤DRAM Q1环比+80%→存储细分验证。与早间5fire(昇腾认证/长鑫上会/τ四连击/DigiTimes终端自研/WSTS超级周期)形成双窗口互补。全日核心关注:①长鑫上会结果(过会=全线共振确认，暂缓=短期回调) ②减持潮是否扩大 ③GS PB获利了结是否持续→若持续2-4周=风险升级。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "hours"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-b6d3abef57ab",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 佛山建成全球首条人形机器人量产线——30分钟/台节拍，量产从'预期'→'产线运行'质变 (emerging)",
+      "summary": "全球第一条人形机器人标准化产线投产，智元/宇树出货突破万台。供应链订单可见度从季度级→月度级，核心零部件需求从远期期权→产能爬坡实单。精密传动+结构件+整机全链受益。0券商覆盖，emerging首次定价窗口48-72h。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-83532b359327",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 优必选2026年工业人形机器人产能达万台规模——500台→10000台，20倍量级跃升 (positioning)",
+      "summary": "首个头部厂商给出万台产能明确指引。如果优必选能做到万台，智元/宇树/特斯拉产能指引可能上修。减速器12.5-25万个+电机175万+个TAM获实证支撑。精密传动+结构件+电机驱动受益。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-24bd6e28245c",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "周三10:40机器人扫描:3信号/2fire——佛山全球首条量产线投产+优必选万台产能，与半导体τ定律形成双线共振",
+      "summary": "核心增量:①佛山产线(emerging)→量产基础设施建设落地，与半年前仅'预期'完全不同；②优必选万台产能(positioning)→全行业产能锚上修。与今日scanner早间半导体8信号/5fire形成双线共振——中国制造能力同时在芯片(τ定律)和机器人(量产线)两个维度突破。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-bd8dfd0f9bc5",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 昇腾310等9款AI芯片通过国家「安全可靠测评」I级——国产AI芯片从市场认可→政府安全背书质变 (chain2, emerging, high weight)",
+      "summary": "华为海思昇腾310、平头哥真武M530等9款获I级最高认证。为信创采购建立制度性合规壁垒→政企AI算力国产化加速。对寒武纪/海光/华为昇腾=政策最高级别背书。ReadHub独家<18h,0券商覆盖,0%定价。potential首次定价窗口48-72h。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-07da32894553",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 长鑫科技今日(5/27)科创板IPO上会——即期二值催化剂,过会与否为今日最大变量 (chain1, positioning, high weight)",
+      "summary": "Q1营收508亿+719%/净利247.6亿扭亏。过会→估值锚(3000-5000亿)+封测链设备采购加速+长江存储接力IPO;暂缓→前两日追涨资金短线回调。结果盘后公布→影响明日开盘。全线共振标的:SMIC/长电/通富/深科技/北方华创/中微。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "hours"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-de0c20ca7301",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 Nikkei Asia连续4天华为芯片深度报道——τ定律国际媒体从单篇→campaign→常态化跟踪三阶跃迁完成 (chain1, positioning, high weight)",
+      "summary": "5/24何庭波ISCAS主旨→5/25麒麟突破→5/25三巨头→5/26何庭波人物深度,48h四篇campaign。国际定价从'偶然关注'→'常态化跟踪'。国内券商密集覆盖(部分priced)但国际资金对τ定律的定价仍在进行中。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-78e5c88078f4",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 DigiTimes:小米/BYD/蔚来芯片自研崛起+TSMC承诺加薪——终端芯片需求新增量+全球代工供给稳定 (chain1, emerging, high weight)",
+      "summary": "DigiTimes 5/26(18h前)双篇:中国终端厂商从芯片消费者→设计+定制者,手机(小米)+汽车(BYD/蔚来)双线自研芯片新增需求;TSMC承诺2026加速奖金回应罢工→供给稳定性。链1需求结构从纯代工→终端自研+代工双引擎。0% A股定价。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6982a2010ee4",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 WSTS Q1全球半导体2990亿美元+79%创40年纪录+北方华创营收400亿断层领跑——超级周期量化+设备龙头实证锚 (chain2, positioning, high weight)",
+      "summary": "WSTS:Q1环比+25%创40年最高单季增速。集微报告(17h):北方华创2025年营收近400亿断层领跑,三年CAGR~40%,A股唯一全球第一梯队设备商。设备板块估值可从'国产替代概念'→'全球第六设备商'重新锚定。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-2cfabee4bd9a",
+      "timestamp": "2026-05-27T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "周三10:30早间8信号/5fire——五日内超密集信号堆叠持续:周三核心变量=长鑫上会结果+缩量企稳验证",
+      "summary": "5fire全新催化:昇腾国家认证(emerging)+长鑫今日上会(hours级)+Nikkei四连击(positioning)+DigiTimes终端自研(emerging)+WSTS超级周期量化(positioning)。与周二全日22信号/14fire形成五日内第三层共振——周一重度定价→周二板块回调+分化→周三缩量企稳+长鑫上会二值结果。核心关注:①若缩量企稳(3万亿以下)+长鑫过会→情绪转折确认 ②若继续放量下跌+长鑫暂缓→短期内需警惕risk-off。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "hours"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-7db8e0c80ecc",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⭐ 中国芯片出口翻倍至310亿美元——最大定价错误:国产替代从1.0(内循环)→2.0(外循环)质变 (under_priced, dual_confirmed, strong backing)",
+      "summary": "芯片出口翻倍+半导体/AI产品贡献出口增长一半(Goldman+Nomura背书)。市场仍在用'国产替代'(减少进口)框架估值→未切换至'全球出口竞争力'框架。估值框架切换后中国半导体估值倍数应显著提升(参考日本1980s半导体出口崛起)。2-5天内中文财经媒体可能跟进报道→首次定价窗口开启。strong backing(大基金+国家队ETF+bidding)全匹配。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-074b23ec24a9",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 τ定律国际验证三连击——日经亚洲48h三篇华为芯片深度报道,国际媒体从偶然关注→常态化跟踪 (dual_confirmed, partially_priced)",
+      "summary": "Nikkei Asia 5/24何庭波人物→5/25 Kirin突破→5/26亚洲三巨头,48h三篇campaign。券商(招商/国盛/华泰/中信)密集发布τ定律专题。IC排名佐证:北方华创设备#6(+1)+中微#10(新进)+韦尔股份IC设计#9(新进)。dual_confirmed(Nikkei+IC排名)。国内定价较充分(长电涨停)但国际资金对τ定律的定价尚未完成。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-c47287264f25",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⚠️ 高盛PB双向信号——对冲基金月度净卖出半导体(2024年首次) vs all in AI,资金面多空对峙 (single_sourced, under_priced风险)",
+      "summary": "Goldman Sachs PB数据:半导体及设备为过去一个月最净卖出美股子板块,但对冲基金持仓仍处高位。Goldman定性为'战术获利了结'非'AI叙事反转'。目前市场只关注all in AI叙事,获利了结风险未充分定价。如果2-4周内对冲基金持续净卖出→风险从战术调整升级为趋势转变。回调=加仓机会(如果τ定律中期方向正确)。",
+      "priority": "high",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-f9d9d876ccc8",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 深科技14.7亿+封测扩产三线158.7亿闭环——长鑫5/27 IPO上会为明日即期催化剂 (strong backing, partially_priced)",
+      "summary": "深科技(沛顿)14.7亿+长电100亿+通富44亿+伟测20亿=封测扩产158.7亿+系统化。三驱动:长鑫DDR5全球化+AI HBM缺口50-60%+τ定律推先进封装。长电/通富已部分定价但深科技扩产为边际新增量。明日长鑫IPO上会为封测链最大即期催化剂——过会=封测扩产预期进一步强化。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-85007e076e37",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔴 三大背离:①双高权重源首次对立(Nikkei bullish vs Goldman profit-taking) ②板块内冰火两重天(封测涨停vs消费暴跌) ③链1资金共识>链2",
+      "summary": "背离①:短期(2-4周)震荡消化→中期方向不变;背离②:资金从广义半导体向τ定律核心受益方向集中→健康轮动;背离③:短期链1(先进封装/设备/材料)可能跑赢链2(AI算力)。关键验证:周三缩量企稳(3万亿以下)+长鑫5/27上会结果。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-b7e03fea2035",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔴 三大风险:①对冲基金获利了结趋势化 ②盛视/晶方两emerging信号未验证 ③长鑫上会结果+减持执行+tau定律制裁加码",
+      "summary": "①如果2-4周内对冲基金持续净卖出→风险从战术升级为趋势转变;②盛视科技60亿+晶方科技Anteryon分拆均未找到公告原文→48h内需官方确认;③长鑫5/27上会(过会=催化剂兑现/暂缓=封测回调)+澜起减持已落地+中微60亿待执行+tau定律可能触发美国新制裁。",
+      "priority": "high",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-d59344ac0a01",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 中国芯片出口翻倍至310亿美元——制裁反向加速全球竞争力，链1从自主化→全球化质变 (chain1, positioning, high weight)",
+      "summary": "Benzinga 5/22报道中国芯片出口翻倍至310亿美元，Goldman+Nomura估半导体/AI产品贡献出口增长一半。链1从进口替代1.0(减少进口依赖)→全球竞争2.0(参与全球出口)质变。制裁最大讽刺——美国出口管制创造了中国芯片出口产业。2-5天内中文媒体可能跟进，首次定价窗口尚未开始。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-903cbc5c150b",
+      "timestamp": "2026-05-25T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 人形机器人一级市场融资结构性分化——明星项目停掉业务,无真实交付企业融资冻结 (emerging)",
+      "summary": "行业洗牌从销售端(5/24'卖不动租得火'')→融资端双线验证。明星项目停掉人形机器人业务+无交付企业连TS拿不到→客户和供应商加速向头部集中→绿的谐波/双环传动/三花智控/拓普集团/汇川技术订单确定性+议价能力双重提升。纯概念整机标的估值承压。0%定价。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6020b5f138f0",
+      "timestamp": "2026-05-25T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 国家电网68亿具身智能集采回溯补录——500台人形机器人25亿,Q3规模化采购窗口7-9月 (positioning)",
+      "summary": "国内首个央企级大规模机器人采购。500台人形机器人单价500万/台→特种作业场景支付意愿超预期。Q3规模化采购临近→整机+供应链订单可见度↑。绿的谐波/双环传动/中大力德/兆威机电/鸣志电器受益。4月已报道但前序scanner遗漏,Q3为新增时间催化。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-ed7ea1f2ef68",
+      "timestamp": "2026-05-25T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 物理AI'ChatGPT时刻'叙事升级——黄仁勋断言已到+孙宇晨10亿美元布局八大方向 (emerging)",
+      "summary": "AI巨头CEO首次将物理AI与ChatGPT时刻类比→人形机器人从具身智能→物理AI叙事升级,TAM预期上修。孙宇晨10亿美元入局→新资本流派进入。精密传动/结构件/电机驱动标的池整体受益,0%定价。与半导体链2 AI资本叙事形成跨链共振。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-d183dd7fbe6f",
+      "timestamp": "2026-05-25T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⚠️ 量产窗口估值错位风险——二级溢价显著领先产业基本面,竞争加剧或引发价格战 (positioning)",
+      "summary": "二级估值已提前price in 2027-2028商业化预期,但产业仍处小规模验证阶段。与上午'融资结构性分化'形成完整逻辑闭环:融资降温+估值透支+竞争白热化→头部供应链(绿的/双环/三花/拓普)受益逻辑成立但短期追高风险上升。价格战/份额洗牌可能压缩供应链利润率。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-80d649312113",
+      "timestamp": "2026-05-25T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 华为正式发表「τ定律」——中国首次在全球半导体领域提出产业发展新原则 (chain1, emerging)",
+      "summary": "何庭波在2026国际电路与系统研讨会主旨演讲发表。6年381款芯片量产，逻辑折叠麒麟芯片秋季发布。链1从「追赶替代」→「定义规则」质变。τ定律类比摩尔定律的产业叙事价值远超单一产品突破。传导:SMIC(代工)/北方华创(设备)/寒武纪(设计)。市场0%认知。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-5d5518fe2451",
+      "timestamp": "2026-05-25T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 HBM分离封装+光互联新架构——GPU-HBM拆分独立封装打破内存墙 (chain2, emerging)",
+      "summary": "光互联取代电互联连接GPU-HBM，新架构可围绕GPU环形排列更多HBM。Celestial AI已有光子互联模块技术验证。光模块/硅光芯片需求将从数据中心互联扩展到芯片间通信。传导:长电/通富(先进封装)+中际旭创/天孚通信(光互联)。<24h最新报道。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "months"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-a21373194c5e",
+      "timestamp": "2026-05-25T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 长鑫存储Q1营收508亿+719%扭亏为盈——国产DRAM龙头财务质变 (chain1, positioning)",
+      "summary": "科创板IPO招股书更新数据:Q1营收508亿(+719%)/净利247.6亿扭亏。配合Corsair DDR5+AI HBM挤占三大厂产能→长鑫历史性窗口。国产存储从'品牌突破'→'财务质变'三阶跃迁完成。传导:兆易创新/深科技/通富微电。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-d134a79af2a7",
+      "timestamp": "2026-05-25T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 DeepSeek宕机算力黑洞+AMD苏姿丰访华——国产算力瓶颈热搜实锤+竞争格局重塑 (chain2, positioning)",
+      "summary": "DeepSeek频繁宕机暴露算力供需严重失衡（日活↑但算力储备↓+MoE调度复杂+芯片出口管制）。AMD苏姿丰趁NVIDIA尴尬窗口在上海建CUDA之外第二生态。国产AI芯片格局从'寒武纪vs海光'扩展为'寒武纪+海光 vs AMD+国产GPU'。传导:寒武纪/海光/SMIC。寒武纪传导链断裂第三周——此为最新打破催化剂。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-cd1d453b9ac8",
+      "timestamp": "2026-05-24T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "📊 分析师③晚间分析完成:8信号全验证(6 confirmed+2 partial),3 not_priced⭐周一首次定价,2 strong+6 moderate backing",
+      "summary": "晚间新增:①a7全国算力网12项标准(confirmed)→AI算力基建从粗放→精细 ②a8 Q1全球AI融资2420亿美元/国内1100亿+185%(partial→趋势确认数据待验证)。三星罢工和解为本周最大变量→基于罢工的交易逻辑需重评估。链一周末三线共振(砺算GPU+华为DoB+长鑫DDR5)→2026年以来最强。3 not_priced+15条fire周一超密集定价→成交量3.5万亿+为关键阈值。最大风险:利好超密集→高开低走 台积电辟谣→a1归零 寒武纪传导断裂持续 存储利好多已兑现。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-36482ae7de11",
+      "timestamp": "2026-05-24T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "周日全天8信号/5fire——链1三fire(台积电罢工/砺算GPU/华为DoB)+链2六信号。周一15条fire超密集定价窗口",
+      "summary": "链1从'代工单线'→'GPU消费端+存储封装端+DRAM品牌端'三线共振。链2新增算力网标准+AI融资量化(1100亿+185%)强化需求确定性。全球云厂商AI CapEx 8300亿美元+79%为链2最强量化锚。三星罢工和解降低HBM供给风险但存储涨价趋势未变。周一15条fire(上周10+今日5)→成交量3.5万亿+为关键。最大风险:①利好超密集→高开低走 ②台积电周一辟谣→a1归零 ③寒武纪/海光传导断裂持续第三周",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-41b55b66f5b4",
+      "timestamp": "2026-05-24T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 砺算LX 7G100国产显卡创始版秒空——48小时预约3万/首批1000份秒空,国产消费级GPU首次供不应求 (emerging)",
+      "summary": "国产GPU替代从'政策驱动'→'消费者用钱包投票'质变。48小时3万预约+首批秒空为历史首次。周一0%定价窗口。传导:景嘉微/龙芯中科/寒武纪(国产GPU生态链)",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-e8d87bd1624c",
+      "timestamp": "2026-05-24T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 华为DoB封装突破制裁——122TB SSD量产/36层堆叠绕开3D NAND层数限制 (emerging)",
+      "summary": "制裁可规避性从理论→量产验证。DoB技术将堆叠从16层→36层,容量密度+33%。配合长鑫DDR5(5/23)→链1存储链双线共振。周一0%定价。传导:兆易创新/深科技/江波龙",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-4b98ab89aa91",
+      "timestamp": "2026-05-24T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "📊 分析师周日分析完成:5信号(3 confirmed+2 partial),3 not_priced⭐,2 strong backing。周一14条fire超密集定价窗口",
+      "summary": "核心增量:①台积电罢工风险(a1)双链最强催化→对赌周一官方回应 ②Anthropic-SpaceX 450亿美元/22万GPU获SEC S-1确证→链2需求端最强验证 ③AMD 2nm量产→制程军备竞赛加速 ④太极HBM第二极→封测格局重塑 ⑤28nm DUV量产切换。周一14条fire(上周10条+今日4条)信号等待首次定价→成交量3.5万亿+为关键阈值。最大定价缺口:SMIC 406亿并购+3.23%(vs长电+9.04%)。三大背离:中微连续2日逆跌/寒武纪海光传导断裂/SMIC定价滞后。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-921bbb48d7b2",
+      "timestamp": "2026-05-24T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 2026年国内人形机器人出货量预测6.25万台(+247%)——行业TAM首次量化锚定 (positioning)",
+      "summary": "2025年1.8万台→2026年6.25万台。减速器需求12.5-25万个+电机175万+个=供应链企业收入贡献从'远期期权'变为'12个月内可验证'。精密传动/电机/传感器TAM首次获量化,估值锚从想象空间切换至订单乘数。绿的谐波/双环传动/中大力德/兆威机电/鸣志电器受益",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-027965098f62",
+      "timestamp": "2026-05-23T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "长鑫CXMT DDR5首获Corsair采用——中国DRAM首次进入全球消费品牌供应链,国产存储0→1质变 (not_priced)",
+      "summary": "年度级别存储信号。五大国际科技媒体确认。Corsair Vengeance DDR5搭载CXMT颗粒,性能与三星/SK海力士持平。AI HBM挤占+三星罢工=全球DRAM供给缺口至少至2028。传导:兆易创新/深科技/通富微电→周一0%定价首次窗口",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-54028f3425ef",
+      "timestamp": "2026-05-23T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "范式Q1 Token调用量6x+7万AI模型完成国产芯片适配——AI推理最强量化验证+国产AI芯片生态里程碑 (partially_priced)",
+      "summary": "范式Q1收入14.58亿+35.4%,API Token调用量超2025全年40%+Agentic AI订单+100%。信创模盒70,000+模型国产芯片适配=完成全年目标70%+。配合寒武纪30万颗=双信号共振。港股部分定价,A股尚未定价→周一首次定价窗口",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-76ccea987404",
+      "timestamp": "2026-05-23T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "周一超密集定价窗口:13条信号同时等待首次定价——成交量是核心变量",
+      "summary": "上午8条+下午5条=13条已验证信号指向周一首次定价。3条not_priced+2条partially_priced。周五成交额2.93万亿(-16.5%缩量反弹)→需回升至3.5万亿+才能支撑多重定价。若成交量不足,利好集中兑现→冲高回落风险。SMIC为最大定价缺口(406亿并购+3.23%)",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-8c527ec98712",
+      "timestamp": "2026-05-23T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "三星罢工5/21-6/7(18天)→HBM产能直接受损+KeyBanc下调VR产量至6,000台——供给收缩可能被误读为需求减弱",
+      "summary": "全球存储供给缺口23年最大→长鑫/长江份额扩张获历史性窗口。但市场可能误读VR产量下调为需求减弱引发AI板块抛售。需区分供给瓶颈(利好国产替代)vs需求下滑(利空全板块)",
+      "priority": "high",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-ae8d8f0b91d6",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "💡 设备/材料环节tau定律补涨窗口——北方华创/中微/南大光电滞后SMIC 40pp+，光刻胶获政府工作报告写入",
+      "summary": "设备(北方华创/中微)涨幅~16% vs SMIC+35%: 40pp+估值缺口。光刻胶获2026年政府工作报告写入+大基金三期18%(~288亿)注资+超长期国债低息贷款: 政策最高级别背书。材料环节为tau定律最后补涨: 回调中回撤风险最低。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-7b43ccff5ed4",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 壁仞科技恒生综合指数纳入(6/8生效)+高盛Buy 101% CAGR——国产AI芯片港股通通道打开",
+      "summary": "恒生指数公司5/22公告+高盛2/10首次覆盖Buy: 双高权重源验证。6/8生效前~2周建仓窗口+港股通预期: 内地资金配置国产GPU新通道。壁仞vs寒武纪PS折价: 相对价值修复空间。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-40ee068a911a",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 光刻胶获政府工作报告写入+大基金三期注资——材料环节最强政策催化，为tau定律最后补涨方向",
+      "summary": "2026年政府工作报告写入加速半导体光刻胶国产化+大基金三期18%约288亿注资: 政策最高级别背书。南大光电ArF稳定供货/晶瑞KrF进入验证。材料涨幅仅个位数vs制造+35%: 可能在回调中逆势补涨。strong backing。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-37cc12291f0c",
+      "timestamp": "2026-05-26T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "📊 分析师⑥下午分析:7信号全验证+1 under_priced+2 strong backing——tau定律48h完整周期+设备/材料补涨窗口+Goldman三线闭环",
+      "summary": "7信号全验证(7 confirmed)。1 under_priced(MicroLED光互连)+4 partially_priced+2 fully_priced。2 strong+3 moderate+2 weak backing。核心配置建议:①SMIC/寒武纪已fully_priced: 不追高等待缩量企稳 ②设备/材料滞后40pp+: 北方华创/中微/南大光电补涨方向 ③光刻胶政府工作报告写入: 最强政策催化材料方向 ④壁仞港股通6/8前建仓窗口 ⑤MicroLED光互连emerging: 观察池。最大风险:周三方向选择+长鑫上会+减持执行+tau定律制裁风险。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
       },
       "source_urls": []
     }
