@@ -284,6 +284,7 @@ a:hover { text-decoration:underline; }
     <button class="nav-tab" data-tab="themes">🎯 主题</button>
     <button class="nav-tab" data-tab="health">🏥 监控</button>
     <button class="nav-tab" data-tab="attrib">📈 归因</button>
+    <button class="nav-tab" data-tab="anomalies">📡 异动</button>
 </div>
 
 <!-- Main Content -->
@@ -411,6 +412,38 @@ a:hover { text-decoration:underline; }
             <button class="filter-btn" data-attr="unattributed">🔴 未归因</button>
         </div>
         <div id="attributionList"></div>
+    </div>
+</div>
+
+<!-- Tab: 异动 -->
+<div class="tab-content" id="tab-anomalies">
+    <div class="section">
+        <div class="section-title">📡 今日技术异动 <span id="anomalyDate" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+        <div class="stats-row" id="anomalyStats"></div>
+    </div>
+    <div class="two-col">
+        <div class="section">
+            <div class="section-title">🟢 金叉信号 <span id="goldenCount" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+            <div id="goldenList"></div>
+        </div>
+        <div class="section">
+            <div class="section-title">🔴 死叉信号 <span id="deathCount" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+            <div id="deathList"></div>
+        </div>
+    </div>
+    <div class="two-col">
+        <div class="section">
+            <div class="section-title">⭐ B1 信号 <span id="b1Count" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+            <div id="b1List"></div>
+        </div>
+        <div class="section">
+            <div class="section-title">🔥 B2/B3 信号 <span id="b2b3Count" style="font-size:10px;color:#484f58;font-weight:400;"></span></div>
+            <div id="b2b3List"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">💸 方向资金流</div>
+        <div id="flowList"></div>
     </div>
 </div>
 
@@ -969,6 +1002,67 @@ function renderHealth() {
         ).join('');
     } else {
         risks.innerHTML = '<div class="empty">暂无风险记录</div>';
+    }
+}
+
+// ===== 异动 Tab (Trending-China data) =====
+async function loadAnomalies() {
+    try {
+        const sd = await loadJSON('/daily-signal/data/signals-daily.json');
+        document.getElementById('anomalyDate').textContent = sd.date || '';
+        
+        // Stats
+        const stats = sd.stats || {};
+        document.getElementById('anomalyStats').innerHTML = [
+            {v:stats.golden||0,l:'金叉',c:'#f85149'},
+            {v:stats.death||0,l:'死叉',c:'#3fb950'},
+            {v:stats.b1||0,l:'B1',c:'#d29922'},
+            {v:stats.b2||0,l:'B2',c:'#58a6ff'},
+            {v:stats.b3||0,l:'B3',c:'#a371f7'},
+            {v:stats.wash||0,l:'洗盘',c:'#8b949e'},
+        ].map(s=>`<div class="stat-card"><div class="stat-icon">📊</div><div class="stat-info"><div class="stat-value" style="color:${s.c}">${s.v}</div><div class="stat-label">${s.l}</div></div></div>`).join('');
+        
+        // Golden crosses
+        const golden = sd.golden || [];
+        document.getElementById('goldenCount').textContent = `(${golden.length}个)`;
+        document.getElementById('goldenList').innerHTML = golden.length ? golden.map(s =>
+            `<div class="anomaly-row"><span class="ticker-tag">${s.ticker||''} ${s.name||''}</span><span class="anomaly-dir">${s.direction||''}</span><span style="font-size:11px;color:#8b949e;">${s.date||''}</span><span style="font-size:11px;color:#f85149;">${s.white!=null?`白${s.white.toFixed(1)}`:''} ${s.yellow!=null?`黄${s.yellow.toFixed(1)}`:''}</span></div>`
+        ).join('') : '<div class="empty">无金叉信号</div>';
+        
+        // Death crosses
+        const death = sd.death || [];
+        document.getElementById('deathCount').textContent = `(${death.length}个)`;
+        document.getElementById('deathList').innerHTML = death.length ? death.map(s =>
+            `<div class="anomaly-row"><span class="ticker-tag">${s.ticker||''} ${s.name||''}</span><span class="anomaly-dir">${s.direction||''}</span><span style="font-size:11px;color:#8b949e;">${s.date||''}</span></div>`
+        ).join('') : '<div class="empty">无死叉信号</div>';
+        
+        // B1 signals
+        const b1 = sd.b1 || [];
+        document.getElementById('b1Count').textContent = `(${b1.length}个)`;
+        document.getElementById('b1List').innerHTML = b1.length ? b1.map(s =>
+            `<div class="anomaly-row"><span class="ticker-tag">${s.ticker||''} ${s.name||''}</span><span class="anomaly-dir">${s.direction||''}</span><span style="font-size:11px;color:#8b949e;">${s.date||''}</span><span style="font-size:11px;color:#d29922;">J=${s.j!=null?s.j.toFixed(1):'?'}</span></div>`
+        ).join('') : '<div class="empty">无B1信号</div>';
+        
+        // B2/B3
+        const b2 = sd.b2 || [];
+        const b3 = sd.b3 || [];
+        const b2b3 = [...b2.map(s=>({...s,type:'B2'})), ...b3.map(s=>({...s,type:'B3'}))];
+        document.getElementById('b2b3Count').textContent = `(B2:${b2.length} B3:${b3.length})`;
+        document.getElementById('b2b3List').innerHTML = b2b3.length ? b2b3.map(s =>
+            `<div class="anomaly-row"><span class="badge" style="background:${s.type==='B2'?'rgba(88,166,255,0.15)':'rgba(163,113,247,0.15)'};color:${s.type==='B2'?'#58a6ff':'#a371f7'};font-size:10px;margin-right:6px;">${s.type}</span><span class="ticker-tag">${s.ticker||''} ${s.name||''}</span><span class="anomaly-dir">${s.direction||''}</span><span style="font-size:11px;color:#8b949e;">${s.date||''}</span></div>`
+        ).join('') : '<div class="empty">无B2/B3信号</div>';
+        
+        // Money flow
+        const flows = sd.flows || {};
+        const flowEntries = Object.entries(flows).sort((a,b) => (b[1]||0) - (a[1]||0));
+        document.getElementById('flowList').innerHTML = flowEntries.length ? 
+            `<div style="display:flex;flex-wrap:wrap;gap:8px;">${flowEntries.map(([dir,v]) => {
+                const isIn = v > 0;
+                return `<div class="flow-chip" style="border-left:3px solid ${isIn?'#f85149':'#3fb950'};background:#161b22;border-radius:6px;padding:8px 12px;font-size:12px;"><span style="color:#c9d1d9;">${dir}</span> <span style="color:${isIn?'#f85149':'#3fb950'};font-weight:600;">${isIn?'+':''}${(v/1e8).toFixed(1)}亿</span></div>`;
+            }).join('')}</div>`
+            : '<div class="empty">无资金流数据</div>';
+    } catch(e) {
+        console.error('Anomalies load error:', e);
     }
 }
 
