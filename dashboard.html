@@ -192,6 +192,42 @@ a:hover { text-decoration:underline; }
 .attr-summary-val { font-size:22px; font-weight:bold; color:#e6edf3; }
 .attr-summary-label { font-size:11px; color:#8b949e; margin-top:2px; }
 
+/* ===== Weekly Chart Modal ===== */
+.modal-overlay {
+    display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+    background:rgba(0,0,0,0.75); z-index:1000;
+    justify-content:center; align-items:center;
+}
+.modal-overlay.active { display:flex; }
+.modal-content {
+    background:#161b22; border:1px solid #30363d; border-radius:12px;
+    max-width:90vw; max-height:90vh; overflow:hidden;
+    position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.5);
+}
+.modal-header {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 16px; border-bottom:1px solid #21262d;
+    background:#0d1117;
+}
+.modal-title { font-size:14px; font-weight:600; color:#e6edf3; }
+.modal-close {
+    background:none; border:none; color:#8b949e; font-size:22px;
+    cursor:pointer; padding:0 4px; line-height:1;
+}
+.modal-close:hover { color:#f85149; }
+.modal-body {
+    padding:8px; display:flex; justify-content:center; align-items:center;
+    background:#0d1117; min-height:300px;
+}
+.modal-body img { max-width:100%; max-height:70vh; object-fit:contain; }
+.modal-body .modal-loading {
+    color:#8b949e; font-size:14px; padding:40px;
+}
+
+/* Alert row clickable */
+.alert-clickable { cursor:pointer; transition:all 0.15s; }
+.alert-clickable:hover { filter:brightness(1.2); transform:translateX(2px); }
+
 /* ===== Theme Cards ===== */
 .theme-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:10px; }
 .theme-card {
@@ -2037,7 +2073,7 @@ async function loadWeeklyAlerts() {
         // Show L2 alerts (deepest oversold)
         const alerts = items.filter(s => s.J < 0).sort((a,b) => a.J - b.J);
         document.getElementById('weeklyAlertList').innerHTML = alerts.length ? alerts.map(s => 
-            `<div class="position-row">
+            `<div class="position-row alert-clickable" onclick="openWeeklyChart('${s.ts_code||''}','${(s.name||'').replace(/'/g,"\\'")}')" style="cursor:pointer;" title="点击查看周线K线">
                 <span style="color:#2ea043;font-weight:600;">🟢🟢 二级买点</span>
                 <span class="ticker-tag">${s.ts_code||''} ${s.name||''}</span>
                 <span style="font-size:11px;color:#8b949e;">${s.theme_category||''}</span>
@@ -2061,7 +2097,7 @@ async function loadAlerts() {
         const buyL2 = items.filter(s => s.J < 0).sort((a,b) => a.J - b.J);
         document.getElementById('alertBuyL2Count').textContent = `(${buyL2.length}只)`;
         document.getElementById('alertBuyL2List').innerHTML = buyL2.length ? buyL2.map(s => 
-            `<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(35,134,54,0.08);border-left:3px solid #2ea043;border-radius:6px;margin-bottom:4px;flex-wrap:wrap;">
+            `<div class="alert-clickable" onclick="openWeeklyChart('${s.ts_code||''}','${(s.name||'').replace(/'/g,"\\'")}')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(35,134,54,0.08);border-left:3px solid #2ea043;border-radius:6px;margin-bottom:4px;flex-wrap:wrap;">
                 <span style="color:#2ea043;font-weight:bold;font-size:13px;">🟢🟢</span>
                 <span style="font-weight:600;color:#e6edf3;font-size:13px;min-width:90px;">${s.name||''}</span>
                 <span style="font-size:11px;color:#58a6ff;font-family:monospace;">${s.ts_code||''}</span>
@@ -2076,7 +2112,7 @@ async function loadAlerts() {
         const buyL1 = items.filter(s => s.J >= 0 && s.J < 15).sort((a,b) => a.J - b.J);
         document.getElementById('alertBuyL1Count').textContent = `(${buyL1.length}只)`;
         document.getElementById('alertBuyL1List').innerHTML = buyL1.length ? buyL1.map(s => 
-            `<div style="display:flex;align-items:center;gap:10px;padding:6px 12px;background:rgba(35,134,54,0.04);border-left:2px solid #3fb950;border-radius:6px;margin-bottom:3px;flex-wrap:wrap;">
+            `<div class="alert-clickable" onclick="openWeeklyChart('${s.ts_code||''}','${(s.name||'').replace(/'/g,"\\'")}')" style="display:flex;align-items:center;gap:10px;padding:6px 12px;background:rgba(35,134,54,0.04);border-left:2px solid #3fb950;border-radius:6px;margin-bottom:3px;flex-wrap:wrap;" title="点击查看周线K线">
                 <span style="color:#3fb950;font-size:12px;">🟢</span>
                 <span style="font-weight:600;color:#e6edf3;font-size:12px;min-width:90px;">${s.name||''}</span>
                 <span style="font-size:10px;color:#58a6ff;font-family:monospace;">${s.ts_code||''}</span>
@@ -2093,7 +2129,7 @@ async function loadAlerts() {
         document.getElementById('alertSellList').innerHTML = sell.length ? sell.map(s => {
             const lvl = s.J > 100 ? '🔴🔴' : '🔴';
             const color = s.J > 100 ? '#da3633' : '#f85149';
-            return `<div style="display:flex;align-items:center;gap:10px;padding:6px 12px;background:rgba(218,54,51,0.04);border-left:2px solid ${color};border-radius:6px;margin-bottom:3px;flex-wrap:wrap;">
+            return `<div class="alert-clickable" onclick="openWeeklyChart('${s.ts_code||''}','${(s.name||'').replace(/'/g,"\\'")}')" style="display:flex;align-items:center;gap:10px;padding:6px 12px;background:rgba(218,54,51,0.04);border-left:2px solid ${color};border-radius:6px;margin-bottom:3px;flex-wrap:wrap;" title="点击查看周线K线">
                 <span style="color:${color};font-size:12px;">${lvl}</span>
                 <span style="font-weight:600;color:#e6edf3;font-size:12px;min-width:90px;">${s.name||''}</span>
                 <span style="font-size:10px;color:#58a6ff;font-family:monospace;">${s.ts_code||''}</span>
@@ -2160,8 +2196,53 @@ async function loadBacktest() {
     } catch(e) { console.log('Backtest load err:', e); }
 }
 
+// ===== Weekly Chart Modal =====
+function openWeeklyChart(tsCode, stockName) {
+    const overlay = document.getElementById('chartModal');
+    const title = document.getElementById('chartModalTitle');
+    const body = document.getElementById('chartModalBody');
+    
+    title.textContent = stockName + '  ' + tsCode + '  周线K线图';
+    body.innerHTML = '<div class="modal-loading">⏳ 加载中…</div>';
+    overlay.classList.add('active');
+    
+    const img = new Image();
+    img.onload = function() {
+        body.innerHTML = '';
+        body.appendChild(img);
+    };
+    img.onerror = function() {
+        body.innerHTML = '<div class="modal-loading" style="color:#f85149;">⚠️ 图表加载失败（' + tsCode + '）</div>';
+    };
+    img.src = 'charts/weekly/' + tsCode + '.png';
+    img.alt = tsCode + ' 周线K线图';
+}
+
+function closeWeeklyChart() {
+    document.getElementById('chartModal').classList.remove('active');
+}
+
+// Click outside modal to close
+document.getElementById('chartModal').addEventListener('click', function(e) {
+    if (e.target === this) closeWeeklyChart();
+});
+
 // ===== Start =====
 init();
 </script>
+
+<!-- 周线K线图弹窗 -->
+<div class="modal-overlay" id="chartModal">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <span class="modal-title" id="chartModalTitle">周线K线图</span>
+            <button class="modal-close" onclick="closeWeeklyChart()">&times;</button>
+        </div>
+        <div class="modal-body" id="chartModalBody">
+            <div class="modal-loading">加载中…</div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
