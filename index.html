@@ -159,6 +159,9 @@ footer { text-align: center; padding: 24px; color: var(--text-muted); font-size:
           · Scanner {{ scanner.signals?.length || 0 }} 条
           · 🔥 紧急 {{ fireCount }} 条
         </div>
+        <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">
+          ⏱ 最后更新：{{ pool.generated || '--' }}
+        </div>
         <div style="margin-bottom:4px">
           <span class="tag tag-blue">国产替代 <span :style="{color: chain1Avg >= 0 ? 'var(--red)' : 'var(--green)'}">{{ fmtPct(chain1Avg) }}</span></span>
           <span class="tag tag-blue">AI算力 <span :style="{color: chain2Avg >= 0 ? 'var(--red)' : 'var(--green)'}">{{ fmtPct(chain2Avg) }}</span></span>
