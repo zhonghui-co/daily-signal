@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T16:49:10.238435",
+  "generated_at": "2026-05-28T16:52:44.861668",
   "week_date": "20260528",
   "filter": "J<15 + 白线>黄线",
   "summary": {
@@ -9,13 +9,24 @@
     "weak_filtered": 56
   },
   "clusters": {
-    "未分类": 120
+    "生物医药": 28,
+    "新能源(光风储电)": 18,
+    "商业航天与低空": 12,
+    "生物医药与器械": 11,
+    "国产软件与信创": 10,
+    "核电": 6,
+    "化工/材料": 4,
+    "量子信息": 4,
+    "新材料": 3,
+    "氢能": 3,
+    "新能源/电力设备": 3,
+    "未分类": 3
   },
   "golden": [
     {
       "ts_code": "688331.SH",
       "name": "荣昌生物",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -64.83,
@@ -33,7 +44,7 @@
     {
       "ts_code": "002074.SZ",
       "name": "国轩高科",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -28.86,
@@ -51,7 +62,7 @@
     {
       "ts_code": "300436.SZ",
       "name": "广生堂",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -423.85,
@@ -69,7 +80,7 @@
     {
       "ts_code": "600879.SH",
       "name": "航天电子",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -21.09,
@@ -87,7 +98,7 @@
     {
       "ts_code": "002361.SZ",
       "name": "神剑股份",
-      "theme_category": "未分类",
+      "theme_category": "化工/材料",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -22.82,
@@ -105,7 +116,7 @@
     {
       "ts_code": "002009.SZ",
       "name": "天奇股份",
-      "theme_category": "未分类",
+      "theme_category": "具身智能/机器人",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -3.44,
@@ -123,7 +134,7 @@
     {
       "ts_code": "000703.SZ",
       "name": "恒逸石化",
-      "theme_category": "未分类",
+      "theme_category": "化工/材料",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": 3.05,
@@ -141,7 +152,7 @@
     {
       "ts_code": "301005.SZ",
       "name": "超捷股份",
-      "theme_category": "未分类",
+      "theme_category": "汽车零部件",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -7.9,
@@ -159,7 +170,7 @@
     {
       "ts_code": "002455.SZ",
       "name": "百川股份",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -27.91,
@@ -177,7 +188,7 @@
     {
       "ts_code": "688063.SH",
       "name": "XD派能科",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -62.9,
@@ -195,7 +206,7 @@
     {
       "ts_code": "600343.SH",
       "name": "航天动力",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -65.31,
@@ -213,7 +224,7 @@
     {
       "ts_code": "601698.SH",
       "name": "中国卫通",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -18.72,
@@ -231,7 +242,7 @@
     {
       "ts_code": "003009.SZ",
       "name": "中天火箭",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -53.77,
@@ -249,7 +260,7 @@
     {
       "ts_code": "002460.SZ",
       "name": "赣锋锂业",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -48.11,
@@ -267,7 +278,7 @@
     {
       "ts_code": "603496.SH",
       "name": "恒为科技",
-      "theme_category": "未分类",
+      "theme_category": "具身智能/机器人",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -169.47,
@@ -285,7 +296,7 @@
     {
       "ts_code": "002923.SZ",
       "name": "润都股份",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -33.09,
@@ -303,7 +314,7 @@
     {
       "ts_code": "688375.SH",
       "name": "国博电子",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -42.9,
@@ -321,7 +332,7 @@
     {
       "ts_code": "002446.SZ",
       "name": "盛路通信",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -9.0,
@@ -339,7 +350,7 @@
     {
       "ts_code": "300699.SZ",
       "name": "光威复材",
-      "theme_category": "未分类",
+      "theme_category": "新材料",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -73.86,
@@ -357,7 +368,7 @@
     {
       "ts_code": "300725.SZ",
       "name": "药石科技",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -80.41,
@@ -375,7 +386,7 @@
     {
       "ts_code": "600118.SH",
       "name": "中国卫星",
-      "theme_category": "未分类",
+      "theme_category": "低空经济/航空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 10.29,
@@ -393,7 +404,7 @@
     {
       "ts_code": "600860.SH",
       "name": "京城股份",
-      "theme_category": "未分类",
+      "theme_category": "氢能",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -102.08,
@@ -411,7 +422,7 @@
     {
       "ts_code": "002340.SZ",
       "name": "格林美",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": 5.93,
@@ -429,7 +440,7 @@
     {
       "ts_code": "603127.SH",
       "name": "昭衍新药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -24.59,
@@ -447,7 +458,7 @@
     {
       "ts_code": "002268.SZ",
       "name": "电科网安",
-      "theme_category": "未分类",
+      "theme_category": "量子信息",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -86.2,
@@ -465,7 +476,7 @@
     {
       "ts_code": "002326.SZ",
       "name": "永太科技",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -94.27,
@@ -483,7 +494,7 @@
     {
       "ts_code": "688428.SH",
       "name": "诺诚健华",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -49.53,
@@ -501,7 +512,7 @@
     {
       "ts_code": "300720.SZ",
       "name": "海川智能",
-      "theme_category": "未分类",
+      "theme_category": "工业设备/通用机械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -44.06,
@@ -519,7 +530,7 @@
     {
       "ts_code": "600498.SH",
       "name": "烽火通信",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -20.28,
@@ -537,7 +548,7 @@
     {
       "ts_code": "002318.SZ",
       "name": "久立特材",
-      "theme_category": "未分类",
+      "theme_category": "核电",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -77.26,
@@ -555,7 +566,7 @@
     {
       "ts_code": "688180.SH",
       "name": "君实生物-U",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -34.96,
@@ -573,7 +584,7 @@
     {
       "ts_code": "300347.SZ",
       "name": "泰格医药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -62.75,
@@ -591,7 +602,7 @@
     {
       "ts_code": "688321.SH",
       "name": "微芯生物",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -129.76,
@@ -609,7 +620,7 @@
     {
       "ts_code": "688176.SH",
       "name": "亚虹医药-U",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -135.73,
@@ -627,7 +638,7 @@
     {
       "ts_code": "000990.SZ",
       "name": "诚志股份",
-      "theme_category": "未分类",
+      "theme_category": "化工/材料",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -47.02,
@@ -645,7 +656,7 @@
     {
       "ts_code": "688070.SH",
       "name": "纵横股份",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -263.06,
@@ -663,7 +674,7 @@
     {
       "ts_code": "300455.SZ",
       "name": "航天智装",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -17.13,
@@ -681,7 +692,7 @@
     {
       "ts_code": "688311.SH",
       "name": "盟升电子",
-      "theme_category": "未分类",
+      "theme_category": "集成电路",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -96.78,
@@ -699,7 +710,7 @@
     {
       "ts_code": "002151.SZ",
       "name": "北斗星通",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -20.22,
@@ -717,7 +728,7 @@
     {
       "ts_code": "600267.SH",
       "name": "海正药业",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -37.17,
@@ -735,7 +746,7 @@
     {
       "ts_code": "600216.SH",
       "name": "浙江医药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -56.53,
@@ -753,7 +764,7 @@
     {
       "ts_code": "600288.SH",
       "name": "大恒科技",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -99.28,
@@ -771,7 +782,7 @@
     {
       "ts_code": "603016.SH",
       "name": "新宏泰",
-      "theme_category": "未分类",
+      "theme_category": "新能源/电力设备",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -14.66,
@@ -789,7 +800,7 @@
     {
       "ts_code": "002366.SZ",
       "name": "融发核电",
-      "theme_category": "未分类",
+      "theme_category": "核电",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -157.17,
@@ -807,7 +818,7 @@
     {
       "ts_code": "002389.SZ",
       "name": "航天彩虹",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -137.02,
@@ -825,7 +836,7 @@
     {
       "ts_code": "002437.SZ",
       "name": "誉衡药业",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -31.2,
@@ -843,7 +854,7 @@
     {
       "ts_code": "002549.SZ",
       "name": "凯美特气",
-      "theme_category": "未分类",
+      "theme_category": "半导体零部件",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -230.53,
@@ -861,7 +872,7 @@
     {
       "ts_code": "300016.SZ",
       "name": "北陆药业",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -58.35,
@@ -879,7 +890,7 @@
     {
       "ts_code": "300051.SZ",
       "name": "琏升科技",
-      "theme_category": "未分类",
+      "theme_category": "软件与IT服务",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -39.78,
@@ -897,7 +908,7 @@
     {
       "ts_code": "300149.SZ",
       "name": "睿智医药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -36.45,
@@ -915,7 +926,7 @@
     {
       "ts_code": "300158.SZ",
       "name": "振东制药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -78.77,
@@ -933,7 +944,7 @@
     {
       "ts_code": "300204.SZ",
       "name": "舒泰神",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -82.58,
@@ -951,7 +962,7 @@
     {
       "ts_code": "300255.SZ",
       "name": "常山药业",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -36.61,
@@ -969,7 +980,7 @@
     {
       "ts_code": "300759.SZ",
       "name": "康龙化成",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -29.48,
@@ -987,7 +998,7 @@
     {
       "ts_code": "301155.SZ",
       "name": "海力风电",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 11.91,
@@ -1005,7 +1016,7 @@
     {
       "ts_code": "301196.SZ",
       "name": "唯科科技",
-      "theme_category": "未分类",
+      "theme_category": "工业设备/通用机械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -1059.75,
@@ -1023,7 +1034,7 @@
     {
       "ts_code": "600210.SH",
       "name": "紫江企业",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -123.62,
@@ -1041,7 +1052,7 @@
     {
       "ts_code": "600276.SH",
       "name": "恒瑞医药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -104.01,
@@ -1059,7 +1070,7 @@
     {
       "ts_code": "600867.SH",
       "name": "通化东宝",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -16.78,
@@ -1077,7 +1088,7 @@
     {
       "ts_code": "601012.SH",
       "name": "隆基绿能",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -23.49,
@@ -1113,7 +1124,7 @@
     {
       "ts_code": "603998.SH",
       "name": "方盛制药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -90.48,
@@ -1131,7 +1142,7 @@
     {
       "ts_code": "688106.SH",
       "name": "金宏气体",
-      "theme_category": "未分类",
+      "theme_category": "半导体材料",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -37.22,
@@ -1149,7 +1160,7 @@
     {
       "ts_code": "688223.SH",
       "name": "晶科能源",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -82.57,
@@ -1167,7 +1178,7 @@
     {
       "ts_code": "688235.SH",
       "name": "百济神州",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -159.47,
@@ -1185,7 +1196,7 @@
     {
       "ts_code": "688266.SH",
       "name": "泽璟制药-U",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -544.01,
@@ -1203,7 +1214,7 @@
     {
       "ts_code": "688316.SH",
       "name": "青云科技-U",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -181.0,
@@ -1221,7 +1232,7 @@
     {
       "ts_code": "688339.SH",
       "name": "亿华通-U",
-      "theme_category": "未分类",
+      "theme_category": "氢能",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -66.08,
@@ -1239,7 +1250,7 @@
     {
       "ts_code": "688356.SH",
       "name": "键凯科技",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -42.73,
@@ -1257,7 +1268,7 @@
     {
       "ts_code": "688506.SH",
       "name": "百利天恒",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -59.28,
@@ -1275,7 +1286,7 @@
     {
       "ts_code": "688566.SH",
       "name": "吉贝尔",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -48.6,
@@ -1293,7 +1304,7 @@
     {
       "ts_code": "688578.SH",
       "name": "艾力斯",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -180.18,
@@ -1311,7 +1322,7 @@
     {
       "ts_code": "688166.SH",
       "name": "博瑞医药",
-      "theme_category": "未分类",
+      "theme_category": "消费/医药/传媒",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 3.65,
@@ -1331,7 +1342,7 @@
     {
       "ts_code": "002792.SZ",
       "name": "通宇通讯",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -23.1,
@@ -1349,7 +1360,7 @@
     {
       "ts_code": "002733.SZ",
       "name": "雄韬股份",
-      "theme_category": "未分类",
+      "theme_category": "氢能",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -16.23,
@@ -1367,7 +1378,7 @@
     {
       "ts_code": "000878.SZ",
       "name": "云南铜业",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -53.35,
@@ -1385,7 +1396,7 @@
     {
       "ts_code": "300409.SZ",
       "name": "道氏技术",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -86.01,
@@ -1403,7 +1414,7 @@
     {
       "ts_code": "688131.SH",
       "name": "皓元医药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -70.57,
@@ -1421,7 +1432,7 @@
     {
       "ts_code": "301310.SZ",
       "name": "鑫宏业",
-      "theme_category": "未分类",
+      "theme_category": "新能源/电力设备",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -3.07,
@@ -1439,7 +1450,7 @@
     {
       "ts_code": "300450.SZ",
       "name": "先导智能",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -19.47,
@@ -1457,7 +1468,7 @@
     {
       "ts_code": "601611.SH",
       "name": "中国核建",
-      "theme_category": "未分类",
+      "theme_category": "核电",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -116.06,
@@ -1475,7 +1486,7 @@
     {
       "ts_code": "002432.SZ",
       "name": "九安医疗",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -12.21,
@@ -1493,7 +1504,7 @@
     {
       "ts_code": "603659.SH",
       "name": "璞泰来",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -76.51,
@@ -1511,7 +1522,7 @@
     {
       "ts_code": "600510.SH",
       "name": "黑牡丹",
-      "theme_category": "未分类",
+      "theme_category": "地产/基建",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 9.31,
@@ -1529,7 +1540,7 @@
     {
       "ts_code": "002603.SZ",
       "name": "以岭药业",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -92.12,
@@ -1547,7 +1558,7 @@
     {
       "ts_code": "002497.SZ",
       "name": "雅化集团",
-      "theme_category": "未分类",
+      "theme_category": "化工/材料",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": 5.59,
@@ -1565,7 +1576,7 @@
     {
       "ts_code": "603259.SH",
       "name": "药明康德",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 6.54,
@@ -1583,7 +1594,7 @@
     {
       "ts_code": "688295.SH",
       "name": "中复神鹰",
-      "theme_category": "未分类",
+      "theme_category": "新材料",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -70.07,
@@ -1601,7 +1612,7 @@
     {
       "ts_code": "688607.SH",
       "name": "康众医疗",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -218.53,
@@ -1619,7 +1630,7 @@
     {
       "ts_code": "600348.SH",
       "name": "华阳股份",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -38.45,
@@ -1637,7 +1648,7 @@
     {
       "ts_code": "300342.SZ",
       "name": "天银机电",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -42.39,
@@ -1655,7 +1666,7 @@
     {
       "ts_code": "600468.SH",
       "name": "百利电气",
-      "theme_category": "未分类",
+      "theme_category": "可控核聚变",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -46.39,
@@ -1673,7 +1684,7 @@
     {
       "ts_code": "300184.SZ",
       "name": "力源信息",
-      "theme_category": "未分类",
+      "theme_category": "消费电子/元器件",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -151.33,
@@ -1691,7 +1702,7 @@
     {
       "ts_code": "300750.SZ",
       "name": "宁德时代",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -34.72,
@@ -1709,7 +1720,7 @@
     {
       "ts_code": "002653.SZ",
       "name": "海思科",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -55.14,
@@ -1727,7 +1738,7 @@
     {
       "ts_code": "600316.SH",
       "name": "洪都航空",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -64.91,
@@ -1745,7 +1756,7 @@
     {
       "ts_code": "002826.SZ",
       "name": "易明医药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -153.84,
@@ -1763,7 +1774,7 @@
     {
       "ts_code": "688488.SH",
       "name": "艾迪药业",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -51.89,
@@ -1781,7 +1792,7 @@
     {
       "ts_code": "000881.SZ",
       "name": "中广核技",
-      "theme_category": "未分类",
+      "theme_category": "核电",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -86.76,
@@ -1799,7 +1810,7 @@
     {
       "ts_code": "688027.SH",
       "name": "国盾量子",
-      "theme_category": "未分类",
+      "theme_category": "量子信息",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -4.09,
@@ -1817,7 +1828,7 @@
     {
       "ts_code": "300520.SZ",
       "name": "科大国创",
-      "theme_category": "未分类",
+      "theme_category": "量子信息",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 6.54,
@@ -1835,7 +1846,7 @@
     {
       "ts_code": "002025.SZ",
       "name": "航天电器",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -14.82,
@@ -1853,7 +1864,7 @@
     {
       "ts_code": "300627.SZ",
       "name": "华测导航",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -97.89,
@@ -1871,7 +1882,7 @@
     {
       "ts_code": "300207.SZ",
       "name": "欣旺达",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -67.2,
@@ -1889,7 +1900,7 @@
     {
       "ts_code": "000555.SZ",
       "name": "神州信息",
-      "theme_category": "未分类",
+      "theme_category": "量子信息",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -75.49,
@@ -1907,7 +1918,7 @@
     {
       "ts_code": "002243.SZ",
       "name": "力合科创",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -173.99,
@@ -1925,7 +1936,7 @@
     {
       "ts_code": "002812.SZ",
       "name": "恩捷股份",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -24.03,
@@ -1943,7 +1954,7 @@
     {
       "ts_code": "002866.SZ",
       "name": "传艺科技",
-      "theme_category": "未分类",
+      "theme_category": "消费电子/元器件",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -28.75,
@@ -1961,7 +1972,7 @@
     {
       "ts_code": "300758.SZ",
       "name": "七彩化学",
-      "theme_category": "未分类",
+      "theme_category": "新能源(光风储电)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -17.0,
@@ -1979,7 +1990,7 @@
     {
       "ts_code": "301232.SZ",
       "name": "飞沃科技",
-      "theme_category": "未分类",
+      "theme_category": "新能源/电力设备",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 14.62,
@@ -1997,7 +2008,7 @@
     {
       "ts_code": "600875.SH",
       "name": "东方电气",
-      "theme_category": "未分类",
+      "theme_category": "核电",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -102.94,
@@ -2015,7 +2026,7 @@
     {
       "ts_code": "603308.SH",
       "name": "应流股份",
-      "theme_category": "未分类",
+      "theme_category": "核电",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 13.64,
@@ -2033,7 +2044,7 @@
     {
       "ts_code": "603590.SH",
       "name": "康辰药业",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -115.39,
@@ -2051,7 +2062,7 @@
     {
       "ts_code": "688122.SH",
       "name": "西部超导",
-      "theme_category": "未分类",
+      "theme_category": "新材料",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -49.09,
@@ -2087,7 +2098,7 @@
     {
       "ts_code": "688229.SH",
       "name": "博睿数据",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -58.71,
@@ -2105,7 +2116,7 @@
     {
       "ts_code": "688297.SH",
       "name": "中无人机",
-      "theme_category": "未分类",
+      "theme_category": "商业航天与低空",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -69.84,
@@ -2141,7 +2152,7 @@
     {
       "ts_code": "002422.SZ",
       "name": "科伦药业",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260527",
       "week_J": -165.93,
@@ -2159,7 +2170,7 @@
     {
       "ts_code": "603087.SH",
       "name": "甘李药业",
-      "theme_category": "未分类",
+      "theme_category": "生物医药",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": -34.98,
@@ -2179,7 +2190,7 @@
     {
       "ts_code": "002897.SZ",
       "name": "意华股份",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 75.15,
@@ -2198,7 +2209,7 @@
     {
       "ts_code": "300265.SZ",
       "name": "通光线缆",
-      "theme_category": "未分类",
+      "theme_category": "新能源/电力设备",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 35.7,
@@ -2217,7 +2228,7 @@
     {
       "ts_code": "300394.SZ",
       "name": "天孚通信",
-      "theme_category": "未分类",
+      "theme_category": "人工智能(AI算力)",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 28.81,
@@ -2236,7 +2247,7 @@
     {
       "ts_code": "300648.SZ",
       "name": "星云股份",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 39.11,
@@ -2255,7 +2266,7 @@
     {
       "ts_code": "301281.SZ",
       "name": "科源制药",
-      "theme_category": "未分类",
+      "theme_category": "生物医药与器械",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 31.33,
@@ -2274,7 +2285,7 @@
     {
       "ts_code": "603232.SH",
       "name": "格尔软件",
-      "theme_category": "未分类",
+      "theme_category": "国产软件与信创",
       "week": "2026-W22",
       "week_date": "20260528",
       "week_J": 16.66,
