@@ -2098,72 +2098,159 @@ async function openWeeklyChart(code, name) {
         }
         document.getElementById('chartHeader').innerHTML = '📈 ' + name + ' <span style="font-size:10px;color:#8b949e;">' + code + '</span>';
 
-        const weeks = ch.weeks.slice(-30);
-        const kdj = ch.kdj ? ch.kdj.slice(-30) : [];
-        const canvas = document.getElementById('kdjChart');
-        const ctx = canvas.getContext('2d');
-        const W = canvas.width = canvas.parentElement.clientWidth - 32;
-        const H1 = 240, H2 = 120, H = H1 + H2 + 10;
-        canvas.height = H;
+        const weeks = ch.weeks.slice(-50);
+        const kdj = ch.kdj ? (ch.kdj.length >= weeks.length ? ch.kdj.slice(-50) : ch.kdj.slice(-30).concat(new Array(Math.max(0,weeks.length-ch.kdj.length)).fill(null))) : [];
+        
+        const parent = document.getElementById('chartViewer').parentElement;
+        const W = parent.clientWidth - 48;
+        const H = parent.clientHeight - 80;
+        const ratio = 0.62;
+        const H1 = Math.floor(H * ratio), H2 = H - H1 - 20;
+
+        let canvas = document.getElementById('kdjChart');
+        if (!canvas) {
+            canvas = document.createElement('canvas');
+            canvas.id = 'kdjChart';
+            document.getElementById('chartViewer').innerHTML = '';
+            document.getElementById('chartViewer').appendChild(canvas);
+        }
+        canvas.width = W; canvas.height = H;
         canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+        const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, W, H);
+        
+        const n = weeks.length;
+        const padL = 55, padR = 10, padT = 10, padB = 25;
+        const xRange = W - padL - padR;
 
-        // Calculate ranges
-        const allPrices = weeks.flatMap(w => [w.h, w.l, w.c]);
-        const allBBI = kdj.map(k => k.yellow||0).filter(v=>v);
-        const allWhite = kdj.map(k => k.white||0).filter(v=>v);
-        const allVals = [...allPrices, ...allBBI, ...allWhite];
-        const minP = Math.min(...allVals); const maxP = Math.max(...allVals);
-        const pRange = maxP - minP || 1;
+        // Prices range
+        const allP = weeks.flatMap(w => [w.h, w.l]);
+        const bb = (kdj.filter(k=>k&&k.yellow).map(k=>k.yellow)||[]);
+        const wh = (kdj.filter(k=>k&&k.white).map(k=>k.white)||[]);
+        const allV = [...allP, ...bb, ...wh].filter(v=>v&&!isNaN(v));
+        if (!allV.length) return;
+        const minP = Math.min(...allV) * 0.98, maxP = Math.max(...allV) * 1.02;
+        const pR = (maxP - minP) || 1;
+        const yRange = H1 - padT - 5;
 
-        const allKDJ = kdj.flatMap(k => [k.K||0, k.D||0, k.J||0]).filter(v=>!isNaN(v));
-        const minKDJ = Math.min(...allKDJ); const maxKDJ = Math.max(...allKDJ);
-        const kRange = maxKDJ - minKDJ || 1;
+        function px(i) { return padL + i * xRange / (n-1); }
+        function py(v) { return padT + (maxP - v) / pR * yRange; }
 
-        function px(x) { return 40 + x * (W-50) / (weeks.length-1); }
-        function py(y) { return 15 + (1-(y-minP)/pRange) * (H1-30); }
-        function py2(y) { return H1+25 + (1-(y-minKDJ)/kRange) * (H2-20); }
+        // KDJ range
+        const allKDJ = kdj.filter(k=>k).flatMap(k => [k.K,k.D,k.J]).filter(v=>v!=null&&!isNaN(v));
+        const minKDJ = allKDJ.length ? Math.min(...allKDJ) : -20;
+        const maxKDJ = allKDJ.length ? Math.max(...allKDJ) : 120;
+        const kR = (maxKDJ - minKDJ) || 1;
+        const y2R = H2 - padB - 5;
+        const y2Base = H1 + 20;
+        function py2(v) { return y2Base + padT + (maxKDJ - v) / kR * y2R; }
+
+        // BG
+        ctx.fillStyle = '#0d1117'; ctx.fillRect(0, 0, W, H);
 
         // Grid
-        ctx.strokeStyle = '#21262d'; ctx.lineWidth = 0.5;
-        for (let i=0; i<5; i++) { const y=15+i*(H1-30)/4; ctx.beginPath(); ctx.moveTo(40,y); ctx.lineTo(W-10,y); ctx.stroke(); }
+        ctx.strokeStyle = '#161b22'; ctx.lineWidth = 0.5;
+        for (let i = 0; i < 5; i++) {
+            const y = padT + i * yRange / 4;
+            ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
+        }
+        ctx.strokeStyle = '#161b22';
+        for (let i = 0; i < 5; i++) {
+            const y = y2Base + padT + i * y2R / 4;
+            ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
+        }
+        // Separator
+        ctx.strokeStyle = '#30363d'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(padL, H1+10); ctx.lineTo(W-padR, H1+10); ctx.stroke();
 
-        // BBI (yellow line)
-        ctx.strokeStyle = '#d29922'; ctx.lineWidth = 2; ctx.beginPath();
-        kdj.forEach((k,i,wx=px(i)) => { if (k.yellow) { const wy=py(k.yellow); i==0||!kdj[i-1].yellow?ctx.moveTo(wx,wy):ctx.lineTo(wx,wy); }}); ctx.stroke();
+        // BBI (yellow_line) - draw first so it's behind candles
+        ctx.strokeStyle = '#d29922'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3]);
+        ctx.beginPath();
+        let started = false;
+        for (let i = 0; i < Math.min(n, kdj.length); i++) {
+            if (kdj[i] && kdj[i].yellow != null) {
+                const x = px(i), y = py(kdj[i].yellow);
+                if (!started) { ctx.moveTo(x, y); started = true; }
+                else ctx.lineTo(x, y);
+            }
+        }
+        ctx.stroke(); ctx.setLineDash([]);
 
         // White line
-        ctx.strokeStyle = '#e6edf3'; ctx.lineWidth = 1.5; ctx.beginPath();
-        kdj.forEach((k,i,wx=px(i)) => { if (k.white) { const wy=py(k.white); i==0||!kdj[i-1].white?ctx.moveTo(wx,wy):ctx.lineTo(wx,wy); }}); ctx.stroke();
+        ctx.strokeStyle = '#e6edf3'; ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        started = false;
+        for (let i = 0; i < Math.min(n, kdj.length); i++) {
+            if (kdj[i] && kdj[i].white != null) {
+                const x = px(i), y = py(kdj[i].white);
+                if (!started) { ctx.moveTo(x, y); started = true; }
+                else ctx.lineTo(x, y);
+            }
+        }
+        ctx.stroke();
 
         // Candles
-        const cw = Math.max(2, (W-50)/weeks.length*0.6);
-        weeks.forEach((w,i) => {
-            const x = px(i), oy = py(w.o), cy = py(w.c), hy = py(w.h), ly = py(w.l);
+        const cw = Math.max(1.5, xRange / n * 0.55);
+        weeks.forEach((w, i) => {
+            const x = px(i), o = py(w.o), c = py(w.c), h = py(w.h), l = py(w.l);
             const up = w.c >= w.o;
-            ctx.fillStyle = up ? '#da3633' : '#3fb950'; ctx.strokeStyle = ctx.fillStyle;
-            ctx.beginPath(); ctx.moveTo(x, hy); ctx.lineTo(x, ly); ctx.stroke();
-            ctx.fillRect(x-cw/2, Math.min(oy,cy), cw, Math.abs(oy-cy)||1);
+            ctx.strokeStyle = up ? '#da3633' : '#3fb950';
+            ctx.fillStyle = up ? '#da3633' : 'transparent';
+            ctx.lineWidth = 0.8;
+            ctx.beginPath(); ctx.moveTo(x, h); ctx.lineTo(x, l); ctx.stroke();
+            if (Math.abs(o - c) < 1) { ctx.fillStyle = ctx.strokeStyle; ctx.fillRect(x-cw, c-1, cw*2, 1.5); }
+            else ctx.fillRect(x-cw, Math.min(o,c), cw*2, Math.abs(o-c));
         });
 
-        // Labels (last few weeks)
-        ctx.fillStyle = '#8b949e'; ctx.font = '9px monospace'; ctx.textAlign = 'center';
-        weeks.forEach((w,i) => { if (i%4===0||i===weeks.length-1) ctx.fillText(w.d.slice(4), px(i), H1+10); });
+        // Price labels
+        ctx.fillStyle = '#8b949e'; ctx.font = '9px monospace'; ctx.textAlign = 'right';
+        for (let i = 0; i < 5; i++) {
+            const v = minP + i * pR / 4;
+            ctx.fillText(v.toFixed(v>=100?0:2), padL-4, py(v)+3);
+        }
+
+        // Week labels
+        ctx.textAlign = 'center'; ctx.font = '8px monospace';
+        weeks.forEach((w, i) => {
+            if (i % 5 === 0 || i === n-1) {
+                ctx.fillText(w.d.slice(4), px(i), H1+8);
+            }
+        });
 
         // KDJ sub-chart
-        ctx.strokeStyle = '#21262d'; ctx.beginPath(); ctx.moveTo(40,H1+10); ctx.lineTo(W-10,H1+10); ctx.stroke();
-        [[kdj.map(k=>k.K),'#8b949e'],[kdj.map(k=>k.D),'#d29922'],[kdj.map(k=>k.J),'#58a6ff']].forEach(([arr,color]) => {
+        const kdjColors = {'K':'#8b949e','D':'#d29922','J':'#58a6ff'};
+        for (const [key, color] of Object.entries(kdjColors)) {
             ctx.strokeStyle = color; ctx.lineWidth = 1; ctx.beginPath();
-            arr.forEach((v,i,wx=px(i)) => { if (v!=null) { const wy=py2(v); i==0||arr[i-1]==null?ctx.moveTo(wx,wy):ctx.lineTo(wx,wy); }}); ctx.stroke();
-        });
-        ctx.fillStyle = '#8b949e'; ctx.font = '8px'; ctx.textAlign = 'right';
-        [0,25,50,75,100].forEach(v => { const y=py2(v); ctx.fillText(v, 38, y+3); });
+            started = false;
+            for (let i = 0; i < Math.min(n, kdj.length); i++) {
+                if (kdj[i] && kdj[i][key] != null) {
+                    const x = px(i), y = py2(kdj[i][key]);
+                    if (!started) { ctx.moveTo(x, y); started = true; }
+                    else ctx.lineTo(x, y);
+                }
+            }
+            ctx.stroke();
+        }
 
-        document.getElementById('chartViewer').innerHTML = '';
-        document.getElementById('chartViewer').appendChild(canvas);
+        // KDJ reference lines + labels
+        ctx.setLineDash([2, 4]); ctx.strokeStyle = '#21262d'; ctx.lineWidth = 0.5;
+        [0, 20, 50, 80, 100].forEach(v => {
+            const y = py2(v);
+            ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
+        });
+        ctx.setLineDash([]);
+        ctx.fillStyle = '#8b949e'; ctx.textAlign = 'right'; ctx.font = '8px monospace';
+        [0, 50, 100].forEach(v => ctx.fillText(v, padL-4, py2(v)+3));
+
+        // Legend
+        const lx = W - 200, ly = y2Base + padT + 15;
+        ctx.font = '10px sans-serif';
+        [['━ K','#8b949e'],['━ D','#d29922'],['━ J','#58a6ff']].forEach(([t,c],i) => {
+            ctx.fillStyle = c; ctx.fillText(t, lx + i*60, ly);
+        });
+
     } catch(e) { console.log('Chart err:', e); }
 }
-
 
 async function loadBacktest() {
     try {
