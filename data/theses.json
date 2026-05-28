@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-27T23:05:01.054610+08:00",
+  "last_updated": "2026-05-28T17:05:00.266163+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -98,9 +98,14 @@
           "date": "2026-05-27",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -341,9 +346,38 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {
+            "latest_close": 314.36,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 39.14,
+            "ret_5d_pct": 0.63,
+            "ret_1d_pct": -0.77,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -9.97
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "9款国产AI芯片纳入政府采购安全可靠清单——政策从鼓励到强制的结构性转变",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a5",
+              "title": "字节跳动今年最高700亿美元AI基建支出→中国AI算力需求加速验证",
+              "confidence": "orange",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -618,9 +652,44 @@
           "warnings": [
             "⚠️ 从thesis以来高点回撤-28.27%"
           ]
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1391.5,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 49.28,
+            "ret_5d_pct": 8.2,
+            "ret_1d_pct": 3.84,
+            "high_since": 1410.96,
+            "low_since": 651.35,
+            "from_high_pct": -1.38
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "9款国产AI芯片纳入政府采购安全可靠清单——政策从鼓励到强制的结构性转变",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50+5.88%创历史新高后首次回调→B2/B3窗口",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "字节跳动今年最高700亿美元AI基建支出→中国AI算力需求加速验证",
+              "confidence": "orange",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -897,9 +966,44 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {
+            "latest_close": 71.44,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": 80.86,
+            "ret_5d_pct": 15.8,
+            "ret_1d_pct": -5.13,
+            "high_since": 75.3,
+            "low_since": 39.5,
+            "from_high_pct": -5.13
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，存储国产替代完成从0到1到N",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50+5.88%创历史新高后首次回调→B2/B3窗口",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "字节跳动今年最高700亿美元AI基建支出→中国AI算力需求加速验证",
+              "confidence": "orange",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1146,9 +1250,68 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {
+            "latest_close": 654.77,
+            "latest_date": "20260527",
+            "since_date": "2026-05-06",
+            "since_return_pct": 37.99,
+            "ret_5d_pct": -1.24,
+            "ret_1d_pct": -2.31,
+            "high_since": 698.19,
+            "low_since": 424.08,
+            "from_high_pct": -6.22
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，存储国产替代完成从0到1到N",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50+5.88%创历史新高后首次回调→B2/B3窗口",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "高盛：对冲基金'all in AI'仓位创历史新高同时加速止盈——牛熊拉锯",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "DigiTimes：小米/BYD/蔚来自研芯片重塑中国芯片战争格局",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为新Kirin芯片突破美国封锁性能接近台积电/英特尔→τ定律在手机SoC落地",
+              "confidence": "orange",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a10",
+              "title": "A股半导体今日低开回调：获利了结+费城半导体传导，健康回调还是趋势反转？",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台→国产替代体系化",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1388,9 +1551,62 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {
+            "latest_close": 453.12,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 45.54,
+            "ret_5d_pct": -3.51,
+            "ret_1d_pct": -0.42,
+            "high_since": 490.33,
+            "low_since": 293.5,
+            "from_high_pct": -7.59
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，存储国产替代完成从0到1到N",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50+5.88%创历史新高后首次回调→B2/B3窗口",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "DigiTimes：小米/BYD/蔚来自研芯片重塑中国芯片战争格局",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为新Kirin芯片突破美国封锁性能接近台积电/英特尔→τ定律在手机SoC落地",
+              "confidence": "orange",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a10",
+              "title": "A股半导体今日低开回调：获利了结+费城半导体传导，健康回调还是趋势反转？",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台→国产替代体系化",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1661,9 +1877,62 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {
+            "latest_close": 84.74,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 120.91,
+            "ret_5d_pct": 16.27,
+            "ret_1d_pct": -1.65,
+            "high_since": 88.19,
+            "low_since": 38.29,
+            "from_high_pct": -3.91
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，存储国产替代完成从0到1到N",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a2",
+              "title": "9款国产AI芯片纳入政府采购安全可靠清单——政策从鼓励到强制的结构性转变",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50+5.88%创历史新高后首次回调→B2/B3窗口",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "字节跳动今年最高700亿美元AI基建支出→中国AI算力需求加速验证",
+              "confidence": "orange",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a10",
+              "title": "A股半导体今日低开回调：获利了结+费城半导体传导，健康回调还是趋势反转？",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a11",
+              "title": "摩根士丹利：Big Tech hyperscalers 2024-2027投入约$2万亿AI基建→长期基准锚",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1917,9 +2186,74 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {
+            "latest_close": 153.7,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 18.28,
+            "ret_5d_pct": 17.03,
+            "ret_1d_pct": 5.12,
+            "high_since": 156.0,
+            "low_since": 91.78,
+            "from_high_pct": -1.47
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "9款国产AI芯片纳入政府采购安全可靠清单——政策从鼓励到强制的结构性转变",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50+5.88%创历史新高后首次回调→B2/B3窗口",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "高盛：对冲基金'all in AI'仓位创历史新高同时加速止盈——牛熊拉锯",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "DigiTimes：小米/BYD/蔚来自研芯片重塑中国芯片战争格局",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a8",
+              "title": "AMD 2nm转向三星→台积电先进制程垄断松动，中芯国际间接获益",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为新Kirin芯片突破美国封锁性能接近台积电/英特尔→τ定律在手机SoC落地",
+              "confidence": "orange",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a10",
+              "title": "A股半导体今日低开回调：获利了结+费城半导体传导，健康回调还是趋势反转？",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台→国产替代体系化",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -2077,9 +2411,50 @@
             "low_since": 16.61,
             "from_high_pct": -4.91
           }
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {
+            "latest_close": 30.61,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 36.96,
+            "ret_5d_pct": 10.07,
+            "ret_1d_pct": 9.05,
+            "high_since": 30.61,
+            "low_since": 16.61,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，存储国产替代完成从0到1到N",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50+5.88%创历史新高后首次回调→B2/B3窗口",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为新Kirin芯片突破美国封锁性能接近台积电/英特尔→τ定律在手机SoC落地",
+              "confidence": "orange",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台→国产替代体系化",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -2188,9 +2563,22 @@
           "date": "2026-05-27",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-28",
+          "status": "active",
+          "metrics": {},
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，存储国产替代完成从0到1到N",
+              "confidence": "orange",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-27",
+      "last_check": "2026-05-28",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     }

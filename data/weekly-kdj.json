@@ -1,7 +1,7 @@
 {
-  "date": "2026-05-27",
-  "generated_at": "2026-05-27T22:03:25.552692",
-  "count": 50,
+  "date": "2026-05-28",
+  "generated_at": "2026-05-28T16:35:21.479758",
+  "count": 68,
   "threshold": "J < 15",
   "params": "KDJ(9,3,3)",
   "items": [
@@ -21,7 +21,7 @@
     {
       "ts_code": "002455.SZ",
       "name": "百川股份",
-      "theme_category": "化工/材料",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 9.71,
       "week_chg": -2.9,
@@ -47,7 +47,7 @@
     {
       "ts_code": "601633.SH",
       "name": "长城汽车",
-      "theme_category": "新能源/整车",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 17.71,
       "week_chg": -7.23,
@@ -73,7 +73,7 @@
     {
       "ts_code": "688506.SH",
       "name": "百利天恒",
-      "theme_category": "生物医药",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 240.06,
       "week_chg": -6.6,
@@ -117,8 +117,8 @@
       "close": 24.44,
       "week_chg": -1.97,
       "K": 3.88,
-      "D": 9.96,
-      "J": -8.28,
+      "D": 9.97,
+      "J": -8.29,
       "week_high_9w": 29.52,
       "week_low_9w": 24.38
     },
@@ -149,6 +149,32 @@
       "week_low_9w": 28.92
     },
     {
+      "ts_code": "600468.SH",
+      "name": "百利电气",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 6.85,
+      "week_chg": -8.05,
+      "K": 10.35,
+      "D": 19.24,
+      "J": -7.43,
+      "week_high_9w": 10.4,
+      "week_low_9w": 6.67
+    },
+    {
+      "ts_code": "002594.SZ",
+      "name": "比亚迪",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 93.75,
+      "week_chg": -2.65,
+      "K": 25.33,
+      "D": 41.58,
+      "J": -7.18,
+      "week_high_9w": 111.82,
+      "week_low_9w": 92.61
+    },
+    {
       "ts_code": "000513.SZ",
       "name": "丽珠集团",
       "theme_category": "生物医药",
@@ -173,6 +199,19 @@
       "J": -5.86,
       "week_high_9w": 15.42,
       "week_low_9w": 4.54
+    },
+    {
+      "ts_code": "600316.SH",
+      "name": "洪都航空",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 31.15,
+      "week_chg": -4.65,
+      "K": 14.58,
+      "D": 24.63,
+      "J": -5.53,
+      "week_high_9w": 42.18,
+      "week_low_9w": 30.91
     },
     {
       "ts_code": "300016.SZ",
@@ -216,7 +255,7 @@
     {
       "ts_code": "688331.SH",
       "name": "荣昌生物",
-      "theme_category": "生物医药",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 116.7,
       "week_chg": 1.78,
@@ -227,9 +266,22 @@
       "week_low_9w": 110.2
     },
     {
+      "ts_code": "601012.SH",
+      "name": "隆基绿能",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 15.04,
+      "week_chg": -3.59,
+      "K": 12.32,
+      "D": 19.98,
+      "J": -3.02,
+      "week_high_9w": 19.4,
+      "week_low_9w": 14.73
+    },
+    {
       "ts_code": "000584.SZ",
       "name": "哈工智能",
-      "theme_category": "机器人/自动化",
+      "theme_category": "待分类",
       "week_end": "2025-07-10",
       "close": 0.29,
       "week_chg": 16.0,
@@ -253,9 +305,22 @@
       "week_low_9w": 23.3
     },
     {
+      "ts_code": "688287.SH",
+      "name": "退市观典",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 0.43,
+      "week_chg": -53.76,
+      "K": 4.51,
+      "D": 7.42,
+      "J": -1.3,
+      "week_high_9w": 4.24,
+      "week_low_9w": 0.39
+    },
+    {
       "ts_code": "600905.SH",
       "name": "三峡能源",
-      "theme_category": "电力运营",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 4.11,
       "week_chg": 0.0,
@@ -266,9 +331,22 @@
       "week_low_9w": 4.07
     },
     {
+      "ts_code": "688176.SH",
+      "name": "亚虹医药-U",
+      "theme_category": "生物医药",
+      "week_end": "2026-05-22",
+      "close": 12.39,
+      "week_chg": -0.96,
+      "K": 16.87,
+      "D": 25.79,
+      "J": -0.97,
+      "week_high_9w": 14.63,
+      "week_low_9w": 12.09
+    },
+    {
       "ts_code": "000009.SZ",
       "name": "中国宝安",
-      "theme_category": "地产/综合",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 7.76,
       "week_chg": -2.02,
@@ -281,7 +359,7 @@
     {
       "ts_code": "300347.SZ",
       "name": "泰格医药",
-      "theme_category": "生物医药",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 42.32,
       "week_chg": -9.5,
@@ -305,16 +383,42 @@
       "week_low_9w": 53.54
     },
     {
+      "ts_code": "601611.SH",
+      "name": "中国核建",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 12.38,
+      "week_chg": -4.7,
+      "K": 8.48,
+      "D": 12.8,
+      "J": -0.16,
+      "week_high_9w": 15.17,
+      "week_low_9w": 12.22
+    },
+    {
+      "ts_code": "600860.SH",
+      "name": "京城股份",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 10.29,
+      "week_chg": -4.99,
+      "K": 8.02,
+      "D": 11.88,
+      "J": 0.28,
+      "week_high_9w": 12.22,
+      "week_low_9w": 10.15
+    },
+    {
       "ts_code": "300627.SZ",
       "name": "华测导航",
-      "theme_category": "低空经济/航空",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 29.55,
-      "week_chg": -4.34,
-      "K": 13.24,
-      "D": 19.63,
-      "J": 0.46,
-      "week_high_9w": 35.88,
+      "week_chg": -2.96,
+      "K": 13.3,
+      "D": 19.67,
+      "J": 0.56,
+      "week_high_9w": 35.36,
       "week_low_9w": 29.49
     },
     {
@@ -333,7 +437,7 @@
     {
       "ts_code": "002583.SZ",
       "name": "海能达",
-      "theme_category": "通信设备",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 8.95,
       "week_chg": -6.48,
@@ -342,6 +446,19 @@
       "J": 1.19,
       "week_high_9w": 10.98,
       "week_low_9w": 8.82
+    },
+    {
+      "ts_code": "000723.SZ",
+      "name": "美锦能源",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 4.07,
+      "week_chg": 0.99,
+      "K": 8.53,
+      "D": 12.09,
+      "J": 1.41,
+      "week_high_9w": 5.23,
+      "week_low_9w": 3.91
     },
     {
       "ts_code": "000566.SZ",
@@ -357,6 +474,32 @@
       "week_low_9w": 4.23
     },
     {
+      "ts_code": "002318.SZ",
+      "name": "久立特材",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 25.35,
+      "week_chg": -6.8,
+      "K": 15.9,
+      "D": 22.99,
+      "J": 1.7,
+      "week_high_9w": 30.9,
+      "week_low_9w": 25.28
+    },
+    {
+      "ts_code": "688297.SH",
+      "name": "中无人机",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 43.21,
+      "week_chg": -3.35,
+      "K": 8.31,
+      "D": 11.54,
+      "J": 1.85,
+      "week_high_9w": 52.98,
+      "week_low_9w": 42.47
+    },
+    {
       "ts_code": "600380.SH",
       "name": "健康元",
       "theme_category": "生物医药",
@@ -370,22 +513,22 @@
       "week_low_9w": 10.08
     },
     {
-      "ts_code": "000821.SZ",
-      "name": "000821.SZ",
-      "theme_category": "",
+      "ts_code": "600862.SH",
+      "name": "中航高科",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
-      "close": 9.86,
-      "week_chg": -1.79,
-      "K": 8.04,
-      "D": 10.46,
-      "J": 3.2,
-      "week_high_9w": 13.49,
-      "week_low_9w": 9.44
+      "close": 18.97,
+      "week_chg": -5.29,
+      "K": 9.77,
+      "D": 13.45,
+      "J": 2.4,
+      "week_high_9w": 22.27,
+      "week_low_9w": 18.93
     },
     {
       "ts_code": "000768.SZ",
       "name": "中航西飞",
-      "theme_category": "航空制造",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 21.75,
       "week_chg": -8.11,
@@ -409,56 +552,56 @@
       "week_low_9w": 18.17
     },
     {
-      "ts_code": "000661.SZ",
-      "name": "长春高新",
-      "theme_category": "生物医药",
+      "ts_code": "002268.SZ",
+      "name": "电科网安",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
-      "close": 79.0,
-      "week_chg": -6.12,
-      "K": 9.64,
-      "D": 12.24,
-      "J": 4.44,
-      "week_high_9w": 90.0,
-      "week_low_9w": 78.78
+      "close": 15.17,
+      "week_chg": 0.86,
+      "K": 8.72,
+      "D": 10.95,
+      "J": 4.26,
+      "week_high_9w": 17.65,
+      "week_low_9w": 14.94
     },
     {
       "ts_code": "000625.SZ",
       "name": "长安汽车",
-      "theme_category": "新能源/整车",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 8.44,
       "week_chg": -4.85,
       "K": 5.35,
-      "D": 5.8,
-      "J": 4.45,
+      "D": 5.81,
+      "J": 4.44,
       "week_high_9w": 10.34,
       "week_low_9w": 8.3
     },
     {
-      "ts_code": "002898.SZ",
-      "name": "002898.SZ",
-      "theme_category": "",
-      "week_end": "2026-04-30",
-      "close": 8.3,
-      "week_chg": -18.55,
-      "K": 26.61,
-      "D": 37.53,
-      "J": 4.77,
-      "week_high_9w": 13.88,
-      "week_low_9w": 8.3
+      "ts_code": "000661.SZ",
+      "name": "长春高新",
+      "theme_category": "生物医药",
+      "week_end": "2026-05-22",
+      "close": 78.84,
+      "week_chg": -6.12,
+      "K": 9.66,
+      "D": 12.26,
+      "J": 4.46,
+      "week_high_9w": 89.82,
+      "week_low_9w": 78.62
     },
     {
       "ts_code": "600276.SH",
-      "name": "XD恒瑞医",
+      "name": "恒瑞医药",
       "theme_category": "生物医药",
       "week_end": "2026-05-22",
-      "close": 50.47,
-      "week_chg": -6.52,
-      "K": 26.83,
+      "close": 50.26,
+      "week_chg": -6.53,
+      "K": 26.81,
       "D": 37.6,
-      "J": 5.29,
-      "week_high_9w": 58.87,
-      "week_low_9w": 50.38
+      "J": 5.22,
+      "week_high_9w": 58.63,
+      "week_low_9w": 50.18
     },
     {
       "ts_code": "002399.SZ",
@@ -487,9 +630,22 @@
       "week_low_9w": 5.4
     },
     {
+      "ts_code": "600765.SH",
+      "name": "中航重机",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 14.97,
+      "week_chg": -4.1,
+      "K": 10.73,
+      "D": 13.23,
+      "J": 5.74,
+      "week_high_9w": 17.04,
+      "week_low_9w": 14.83
+    },
+    {
       "ts_code": "002093.SZ",
       "name": "国脉科技",
-      "theme_category": "软件与IT服务",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 7.94,
       "week_chg": -1.73,
@@ -526,6 +682,32 @@
       "week_low_9w": 2.94
     },
     {
+      "ts_code": "688311.SH",
+      "name": "盟升电子",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 31.99,
+      "week_chg": 0.31,
+      "K": 11.53,
+      "D": 13.79,
+      "J": 7.01,
+      "week_high_9w": 40.89,
+      "week_low_9w": 31.21
+    },
+    {
+      "ts_code": "600875.SH",
+      "name": "东方电气",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 36.05,
+      "week_chg": -7.73,
+      "K": 35.7,
+      "D": 49.95,
+      "J": 7.2,
+      "week_high_9w": 45.25,
+      "week_low_9w": 34.75
+    },
+    {
       "ts_code": "600867.SH",
       "name": "通化东宝",
       "theme_category": "生物医药",
@@ -541,7 +723,7 @@
     {
       "ts_code": "300207.SZ",
       "name": "欣旺达",
-      "theme_category": "新能源/电池",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 24.49,
       "week_chg": -2.82,
@@ -552,17 +734,30 @@
       "week_low_9w": 23.51
     },
     {
-      "ts_code": "600760.SH",
-      "name": "XD中航沈",
-      "theme_category": "航空制造",
+      "ts_code": "002389.SZ",
+      "name": "航天彩虹",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
-      "close": 45.44,
+      "close": 20.36,
+      "week_chg": -4.05,
+      "K": 12.42,
+      "D": 14.64,
+      "J": 7.99,
+      "week_high_9w": 23.09,
+      "week_low_9w": 20.22
+    },
+    {
+      "ts_code": "600760.SH",
+      "name": "中航沈飞",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 45.17,
       "week_chg": -3.91,
-      "K": 15.43,
-      "D": 18.83,
-      "J": 8.62,
-      "week_high_9w": 52.18,
-      "week_low_9w": 45.27
+      "K": 15.48,
+      "D": 18.92,
+      "J": 8.59,
+      "week_high_9w": 51.87,
+      "week_low_9w": 45.0
     },
     {
       "ts_code": "002038.SZ",
@@ -591,9 +786,22 @@
       "week_low_9w": 4.04
     },
     {
+      "ts_code": "600990.SH",
+      "name": "四创电子",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 20.75,
+      "week_chg": -2.21,
+      "K": 16.84,
+      "D": 19.87,
+      "J": 10.78,
+      "week_high_9w": 24.83,
+      "week_low_9w": 20.3
+    },
+    {
       "ts_code": "300759.SZ",
       "name": "康龙化成",
-      "theme_category": "生物医药",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 25.93,
       "week_chg": -2.48,
@@ -604,22 +812,22 @@
       "week_low_9w": 24.88
     },
     {
-      "ts_code": "301310.SZ",
-      "name": "鑫宏业",
-      "theme_category": "新能源/电力设备",
+      "ts_code": "000555.SZ",
+      "name": "神州信息",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
-      "close": 29.05,
-      "week_chg": -33.89,
-      "K": 44.99,
-      "D": 61.8,
-      "J": 11.37,
-      "week_high_9w": 67.3,
-      "week_low_9w": 28.44
+      "close": 13.9,
+      "week_chg": 1.02,
+      "K": 15.87,
+      "D": 17.58,
+      "J": 12.45,
+      "week_high_9w": 17.06,
+      "week_low_9w": 12.97
     },
     {
       "ts_code": "688428.SH",
       "name": "诺诚健华",
-      "theme_category": "生物医药",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 25.2,
       "week_chg": 0.08,
@@ -632,7 +840,7 @@
     {
       "ts_code": "600588.SH",
       "name": "用友网络",
-      "theme_category": "软件与IT服务",
+      "theme_category": "待分类",
       "week_end": "2026-05-22",
       "close": 10.87,
       "week_chg": -5.56,
@@ -647,13 +855,39 @@
       "name": "艾迪药业",
       "theme_category": "生物医药",
       "week_end": "2026-05-22",
-      "close": 15.27,
+      "close": 15.26,
       "week_chg": -6.32,
       "K": 34.41,
       "D": 44.42,
       "J": 14.38,
-      "week_high_9w": 20.58,
-      "week_low_9w": 14.4
+      "week_high_9w": 20.57,
+      "week_low_9w": 14.39
+    },
+    {
+      "ts_code": "603998.SH",
+      "name": "方盛制药",
+      "theme_category": "生物医药",
+      "week_end": "2026-05-22",
+      "close": 10.26,
+      "week_chg": -4.11,
+      "K": 21.36,
+      "D": 24.6,
+      "J": 14.87,
+      "week_high_9w": 11.33,
+      "week_low_9w": 10.12
+    },
+    {
+      "ts_code": "000099.SZ",
+      "name": "中信海直",
+      "theme_category": "待分类",
+      "week_end": "2026-05-22",
+      "close": 16.57,
+      "week_chg": -1.78,
+      "K": 19.17,
+      "D": 21.28,
+      "J": 14.94,
+      "week_high_9w": 18.49,
+      "week_low_9w": 16.29
     }
   ]
 }
