@@ -690,17 +690,24 @@ a:hover { text-decoration:underline; }
         <div style="overflow-y:auto;max-height:85vh;">
             <div class="section-title">🚨 KDJ双级报警 <span id="alertDate" style="font-size:10px;color:#484f58;"></span></div>
             <div id="alertCluster" style="margin-bottom:12px;"></div>
-            <div class="section-title">🔴 双超卖 (周+日J&lt;15) <span id="alertBuyL2Count"></span></div>
+            <div class="section-title">🔴 二级买点 (周J&lt;0, 白&gt;黄, 日J≤15) <span id="alertBuyL2Count"></span></div>
             <div id="alertBuyL2List"><div class="empty">加载中…</div></div>
-            <div class="section-title" style="margin-top:12px;">🟡 等日线 (仅周线J&lt;15) <span id="alertBuyL1Count"></span></div>
+            <div class="section-title" style="margin-top:12px;">🟡 一级买点 (0≤周J&lt;15, 白&gt;黄, 日J≤15) <span id="alertBuyL1Count"></span></div>
             <div id="alertBuyL1List"><div class="empty">加载中…</div></div>
-            <div class="section-title" style="margin-top:12px;">⚠️ 可能错过 (刚穿出15) <span id="alertSellCount"></span></div>
+            <div class="section-title" style="margin-top:12px;">⏳ 等日线 (周J&lt;15, 白&gt;黄, 日J&gt;15) <span id="alertWaitCount"></span></div>
+            <div id="alertWaitList"><div class="empty">加载中…</div></div>
+            <div class="section-title" style="margin-top:12px;">🟢 一级卖点 (周J&gt;90, 白&gt;黄) <span id="alertSellCount"></span></div>
             <div id="alertSellList"><div class="empty">加载中…</div></div>
+            <div class="section-title" style="margin-top:12px;">⚠️ 可能错过 (上周J&lt;15, 本周穿出, 白&gt;黄) <span id="alertMissedCount"></span></div>
+            <div id="alertMissedList"><div class="empty">加载中…</div></div>
         </div>
         <!-- 右侧：K线图 -->
         <div style="position:sticky;top:80px;height:85vh;overflow-y:auto;background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;">
             <div id="chartHeader" style="font-size:14px;font-weight:600;color:#e6edf3;margin-bottom:8px;">📈 点击左侧个股查看周线</div>
-            <div id="chartViewer" style="text-align:center;color:#8b949e;padding-top:40px;">← 点击左侧信号查看K线图</div>
+            <div id="chartViewer" style="text-align:center;color:#8b949e;padding-top:10px;">
+                <canvas id="kdjChart" style="width:100%;"></canvas>
+                <div style="font-size:10px;color:#8b949e;margin-top:5px;">K线 + BBI<i style="color:#d29922">━</i> + 白线<i style="color:#e6edf3">━</i> | 附图: KDJ(K<i style="color:#8b949e">━</i> D<i style="color:#d29922">━</i> J<i style="color:#58a6ff">━</i>)</div>
+            </div>
         </div>
     </div>
 </div>
@@ -2101,58 +2108,115 @@ async function loadAlerts() {
         if (!data) { console.warn('Alerts data not available'); return; }
         document.getElementById('alertDate').textContent = data.week_date ? '周截止 ' + data.week_date : '';
 
-        // 板块集群
         const clusters = data.clusters || {};
-        const clusterList = Object.entries(clusters).sort((a,b) => b[1]-a[1]);
-        document.getElementById('alertCluster').innerHTML = clusterList.length
-            ? clusterList.map(([cat,n]) => '<span style="display:inline-block;margin:2px 4px;padding:3px 8px;border-radius:4px;font-size:11px;background:rgba(210,153,34,0.1);color:#d29922;border:1px solid rgba(210,153,34,0.3);">🔥 ' + cat + ' ' + n + '只</span>').join('')
+        const cl = Object.entries(clusters).sort((a,b) => b[1]-a[1]);
+        document.getElementById('alertCluster').innerHTML = cl.length
+            ? cl.map(([cat,n]) => '<span style="display:inline-block;margin:2px 4px;padding:3px 8px;border-radius:4px;font-size:11px;background:rgba(210,153,34,0.1);color:#d29922;border:1px solid rgba(210,153,34,0.3);">🔥 ' + cat + ' ' + n + '只</span>').join('')
             : '<span style="color:#8b949e;">无板块集群</span>';
 
-        // 🔴 双超卖（金色窗口）
-        const golden = data.golden || [];
-        document.getElementById('alertBuyL2Count').textContent = '(' + golden.length + '只)';
-        document.getElementById('alertBuyL2List').innerHTML = golden.length ? golden.map(s => {
-            const wr = s.backtest_win_rate ? '<span style="color:#3fb950;">' + s.backtest_win_rate + '%</span>' : '<span style="color:#8b949e;">N/A</span>';
-            const ar = s.backtest_avg_return != null ? '<span style="color:#58a6ff;">' + (s.backtest_avg_return>0?'+':'') + s.backtest_avg_return + '%</span>' : '';
-            return '<div style="display:flex;align-items:center;gap:8px;padding:6px 12px;background:rgba(35,134,54,0.06);border-left:3px solid #2ea043;border-radius:6px;margin-bottom:3px;flex-wrap:wrap;font-size:12px;">' +
-                '<span style="color:#2ea043;font-weight:bold;">🔴双超卖</span>' +
-                '<span style="font-weight:600;color:#e6edf3;">' + (s.name||'') + '</span>' +
-                '<span style="color:#58a6ff;font-family:monospace;font-size:10px;">' + (s.ts_code||'') + '</span>' +
-                '<span style="color:#8b949e;font-size:10px;">' + (s.theme_category||'') + '</span>' +
-                '<span style="color:#3fb950;">周J=' + (s.week_J||0).toFixed(0) + '</span>' +
-                '<span style="color:#58a6ff;">日J=' + (s.day_J != null ? s.day_J.toFixed(0) : 'N/A') + '</span>' +
-                '回测 ' + wr + ar +
-                '</div>';
-        }).join('') : '<div class="empty">当前无双超卖信号</div>';
+        function renderList(signals, containerId, countId, color, label) {
+            document.getElementById(countId).textContent = '(' + signals.length + '只)';
+            document.getElementById(containerId).innerHTML = signals.length ? signals.map(s => {
+                const wr = s.backtest_win_rate != null ? '<span style="color:#3fb950;">' + s.backtest_win_rate + '%</span>' : '<span style="color:#8b949e;">-</span>';
+                const ar = s.backtest_avg_return != null ? '<span style="color:#58a6ff;">' + (s.backtest_avg_return>0?'+':'') + s.backtest_avg_return + '%</span>' : '<span style="color:#8b949e;">-</span>';
+                const dj = s.day_J != null ? s.day_J.toFixed(0) : '-';
+                return '<div class="alert-clickable" onclick="openWeeklyChart(\'' + (s.ts_code||'') + '\',\'' + (s.name||'').replace(/'/g,"\\'") + '\')" style="display:flex;align-items:center;gap:8px;padding:6px 12px;background:rgba(' + color + ',0.06);border-left:3px solid rgba(' + color + ',0.8);border-radius:6px;margin-bottom:3px;flex-wrap:wrap;font-size:12px;cursor:pointer;">' +
+                    '<span style="color:rgba(' + color + ',1);font-weight:bold;min-width:80px;">' + label + '</span>' +
+                    '<span style="font-weight:600;color:#e6edf3;min-width:70px;">' + (s.name||'') + '</span>' +
+                    '<span style="color:#58a6ff;font-family:monospace;font-size:10px;min-width:80px;">' + (s.ts_code||'') + '</span>' +
+                    '<span style="color:#8b949e;font-size:10px;min-width:80px;">' + (s.theme_category||'') + '</span>' +
+                    '<span style="min-width:55px;">周J=' + (s.week_J||0).toFixed(0) + '</span>' +
+                    '<span style="min-width:45px;">日J=' + dj + '</span>' +
+                    '<span style="min-width:55px;">' + wr + '</span>' +
+                    '<span style="min-width:65px;">' + ar + '</span>' +
+                    '</div>';
+            }).join('') : '<div class="empty">无' + label + '信号</div>';
+        }
 
-        // 🟡 等日线
-        const weeklyOnly = data.weekly_only || [];
-        document.getElementById('alertBuyL1Count').textContent = '(' + weeklyOnly.length + '只)';
-        document.getElementById('alertBuyL1List').innerHTML = weeklyOnly.length ? weeklyOnly.map(s => {
-            const wr = s.backtest_win_rate ? '<span style="color:#3fb950;">' + s.backtest_win_rate + '%</span>' : '<span style="color:#8b949e;">N/A</span>';
-            return '<div style="display:flex;align-items:center;gap:8px;padding:4px 12px;background:rgba(210,153,34,0.04);border-left:2px solid #d29922;border-radius:6px;margin-bottom:2px;flex-wrap:wrap;font-size:11px;">' +
-                '<span style="color:#d29922;">🟡等日线</span>' +
-                '<span style="font-weight:600;color:#e6edf3;">' + (s.name||'') + '</span>' +
-                '<span style="color:#58a6ff;font-family:monospace;font-size:10px;">' + (s.ts_code||'') + '</span>' +
-                '<span style="color:#8b949e;font-size:10px;">' + (s.theme_category||'') + '</span>' +
-                '<span>周J=' + (s.week_J||0).toFixed(0) + ' 日J=' + (s.day_J != null ? s.day_J.toFixed(0) : 'N/A') + '</span>' +
-                '回测 ' + wr +
-                '</div>';
-        }).join('') : '<div class="empty">✅ 无待确认信号</div>';
-
-        // ⚠️ 可能错过
-        const missed = data.missed || [];
-        document.getElementById('alertSellCount').textContent = '(' + missed.length + '只)';
-        document.getElementById('alertSellList').innerHTML = missed.length ? missed.map(s =>
-            '<div style="display:flex;align-items:center;gap:6px;padding:3px 10px;background:rgba(218,54,51,0.03);border-left:2px solid #f85149;border-radius:4px;margin-bottom:2px;flex-wrap:wrap;font-size:10px;">' +
-                '<span style="color:#f85149;">⚠️可能错过</span>' +
-                '<span style="color:#e6edf3;">' + (s.name||'') + '</span>' +
-                '<span style="color:#8b949e;">' + (s.theme_category||'') + '</span>' +
-                '<span>周J=' + (s.week_J||0).toFixed(0) + ' (上周=' + (s.week_prev_J||0).toFixed(0) + ')</span>' +
-                '</div>'
-        ).join('') : '<div class="empty">✅ 无错过信号</div>';
+        renderList(data.l2_buy || [], 'alertBuyL2List', 'alertBuyL2Count', '46,160,67', '🔴二级买点');
+        renderList(data.l1_buy || [], 'alertBuyL1List', 'alertBuyL1Count', '63,185,80', '🟡一级买点');
+        renderList(data.wait_daily || [], 'alertWaitList', 'alertWaitCount', '210,153,34', '⏳等日线');
+        renderList(data.l1_sell || [], 'alertSellList', 'alertSellCount', '248,81,73', '🟢一级卖点');
+        renderList(data.missed || [], 'alertMissedList', 'alertMissedCount', '139,87,42', '⚠️可能错过');
 
     } catch(e) { console.log('Alert load err:', e); }
+}
+
+async function openWeeklyChart(code, name) {
+    try {
+        const data = await loadJSON('data/kdj-double-alert.json');
+        const cd = data.chart_data || {};
+        const ch = cd[code];
+        if (!ch || !ch.weeks || ch.weeks.length < 10) {
+            document.getElementById('chartViewer').innerHTML = '<div style="color:#8b949e;padding:40px;text-align:center;">图表数据不足</div>';
+            return;
+        }
+        document.getElementById('chartHeader').innerHTML = '📈 ' + name + ' <span style="font-size:10px;color:#8b949e;">' + code + '</span>';
+
+        const weeks = ch.weeks.slice(-30);
+        const kdj = ch.kdj ? ch.kdj.slice(-30) : [];
+        const canvas = document.getElementById('kdjChart');
+        const ctx = canvas.getContext('2d');
+        const W = canvas.width = canvas.parentElement.clientWidth - 32;
+        const H1 = 240, H2 = 120, H = H1 + H2 + 10;
+        canvas.height = H;
+        canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+        ctx.clearRect(0, 0, W, H);
+
+        // Calculate ranges
+        const allPrices = weeks.flatMap(w => [w.h, w.l, w.c]);
+        const allBBI = kdj.map(k => k.yellow||0).filter(v=>v);
+        const allWhite = kdj.map(k => k.white||0).filter(v=>v);
+        const allVals = [...allPrices, ...allBBI, ...allWhite];
+        const minP = Math.min(...allVals); const maxP = Math.max(...allVals);
+        const pRange = maxP - minP || 1;
+
+        const allKDJ = kdj.flatMap(k => [k.K||0, k.D||0, k.J||0]).filter(v=>!isNaN(v));
+        const minKDJ = Math.min(...allKDJ); const maxKDJ = Math.max(...allKDJ);
+        const kRange = maxKDJ - minKDJ || 1;
+
+        function px(x) { return 40 + x * (W-50) / (weeks.length-1); }
+        function py(y) { return 15 + (1-(y-minP)/pRange) * (H1-30); }
+        function py2(y) { return H1+25 + (1-(y-minKDJ)/kRange) * (H2-20); }
+
+        // Grid
+        ctx.strokeStyle = '#21262d'; ctx.lineWidth = 0.5;
+        for (let i=0; i<5; i++) { const y=15+i*(H1-30)/4; ctx.beginPath(); ctx.moveTo(40,y); ctx.lineTo(W-10,y); ctx.stroke(); }
+
+        // BBI (yellow line)
+        ctx.strokeStyle = '#d29922'; ctx.lineWidth = 2; ctx.beginPath();
+        kdj.forEach((k,i,wx=px(i)) => { if (k.yellow) { const wy=py(k.yellow); i==0||!kdj[i-1].yellow?ctx.moveTo(wx,wy):ctx.lineTo(wx,wy); }}); ctx.stroke();
+
+        // White line
+        ctx.strokeStyle = '#e6edf3'; ctx.lineWidth = 1.5; ctx.beginPath();
+        kdj.forEach((k,i,wx=px(i)) => { if (k.white) { const wy=py(k.white); i==0||!kdj[i-1].white?ctx.moveTo(wx,wy):ctx.lineTo(wx,wy); }}); ctx.stroke();
+
+        // Candles
+        const cw = Math.max(2, (W-50)/weeks.length*0.6);
+        weeks.forEach((w,i) => {
+            const x = px(i), oy = py(w.o), cy = py(w.c), hy = py(w.h), ly = py(w.l);
+            const up = w.c >= w.o;
+            ctx.fillStyle = up ? '#da3633' : '#3fb950'; ctx.strokeStyle = ctx.fillStyle;
+            ctx.beginPath(); ctx.moveTo(x, hy); ctx.lineTo(x, ly); ctx.stroke();
+            ctx.fillRect(x-cw/2, Math.min(oy,cy), cw, Math.abs(oy-cy)||1);
+        });
+
+        // Labels (last few weeks)
+        ctx.fillStyle = '#8b949e'; ctx.font = '9px monospace'; ctx.textAlign = 'center';
+        weeks.forEach((w,i) => { if (i%4===0||i===weeks.length-1) ctx.fillText(w.d.slice(4), px(i), H1+10); });
+
+        // KDJ sub-chart
+        ctx.strokeStyle = '#21262d'; ctx.beginPath(); ctx.moveTo(40,H1+10); ctx.lineTo(W-10,H1+10); ctx.stroke();
+        [[kdj.map(k=>k.K),'#8b949e'],[kdj.map(k=>k.D),'#d29922'],[kdj.map(k=>k.J),'#58a6ff']].forEach(([arr,color]) => {
+            ctx.strokeStyle = color; ctx.lineWidth = 1; ctx.beginPath();
+            arr.forEach((v,i,wx=px(i)) => { if (v!=null) { const wy=py2(v); i==0||arr[i-1]==null?ctx.moveTo(wx,wy):ctx.lineTo(wx,wy); }}); ctx.stroke();
+        });
+        ctx.fillStyle = '#8b949e'; ctx.font = '8px'; ctx.textAlign = 'right';
+        [0,25,50,75,100].forEach(v => { const y=py2(v); ctx.fillText(v, 38, y+3); });
+
+        document.getElementById('chartViewer').innerHTML = '';
+        document.getElementById('chartViewer').appendChild(canvas);
+    } catch(e) { console.log('Chart err:', e); }
 }
 
 
