@@ -535,14 +535,22 @@ a:hover { text-decoration:underline; }
 
     
     <div class="section" style="margin-top:12px;">
-        <div class="section-title">🚨 周线KDJ报警 <span style="font-size:10px;color:#8b949e;font-weight:400;">（周B1 = 一级买点 / J<0 = 二级买点 / J>80 = 一级卖点）</span></div>
-        <div class="stats-row" id="weeklyAlerts" style="margin-bottom:8px;">
-            <div class="stat-card" style="border-left:3px solid #3fb950;"><div class="stat-icon">🟢</div><div class="stat-info"><div class="stat-value" id="alertBuyL1" style="color:#3fb950;">-</div><div class="stat-label">一级买点 J<15</div></div></div>
-            <div class="stat-card" style="border-left:3px solid #2ea043;"><div class="stat-icon">🟢🟢</div><div class="stat-info"><div class="stat-value" id="alertBuyL2" style="color:#2ea043;">-</div><div class="stat-label">二级买点 J<0</div></div></div>
-            <div class="stat-card" style="border-left:3px solid #f85149;"><div class="stat-icon">🔴</div><div class="stat-info"><div class="stat-value" id="alertSellL1" style="color:#f85149;">-</div><div class="stat-label">一级卖点 J>80</div></div></div>
-            <div class="stat-card" style="border-left:3px solid #da3633;"><div class="stat-icon">🔴🔴</div><div class="stat-info"><div class="stat-value" id="alertSellL2" style="color:#da3633;">-</div><div class="stat-label">二级卖点 J>100</div></div></div>
+        <div class="section-title">📊 板块KDJ <span id="sectorKDJDate" style="font-size:10px;color:#8b949e;font-weight:400;"></span></div>
+        <div style="overflow-x:auto;">
+            <table id="sectorKDJTable" style="width:100%;font-size:11px;border-collapse:collapse;">
+                <thead><tr style="color:#8b949e;border-bottom:1px solid #21262d;">
+                    <th style="text-align:left;padding:4px 6px;">板块</th>
+                    <th style="text-align:right;padding:4px 6px;">标的</th>
+                    <th style="text-align:right;padding:4px 6px;">均K</th>
+                    <th style="text-align:right;padding:4px 6px;">均D</th>
+                    <th style="text-align:right;padding:4px 6px;">均J</th>
+                    <th style="text-align:right;padding:4px 6px;">J<15</th>
+                    <th style="text-align:right;padding:4px 6px;">J>80</th>
+                    <th style="text-align:right;padding:4px 6px;">趋势</th>
+                </tr></thead>
+                <tbody id="sectorKDJBody"><tr><td colspan="8" class="empty">加载中…</td></tr></tbody>
+            </table>
         </div>
-        <div id="weeklyAlertList" style="max-height:200px;overflow-y:auto;"></div>
     </div>
 
     <!-- Active Alerts -->
@@ -680,15 +688,14 @@ a:hover { text-decoration:underline; }
     <div style="display:grid;grid-template-columns:3fr 7fr;gap:16px;">
         <!-- 左侧：信号列表 -->
         <div style="overflow-y:auto;max-height:85vh;">
-            <div class="section-title">🚨 周线KDJ报警 <span id="alertDate" style="font-size:10px;color:#484f58;"></span></div>
-            <div class="section-title">🟢🟢 二级买点 (J &lt; 0) <span id="alertBuyL2Count"></span></div>
+            <div class="section-title">🚨 KDJ双级报警 <span id="alertDate" style="font-size:10px;color:#484f58;"></span></div>
+            <div id="alertCluster" style="margin-bottom:12px;"></div>
+            <div class="section-title">🔴 双超卖 (周+日J&lt;15) <span id="alertBuyL2Count"></span></div>
             <div id="alertBuyL2List"><div class="empty">加载中…</div></div>
-            <div class="section-title" style="margin-top:12px;">🟢 一级买点 (0 ≤ J &lt; 15) <span id="alertBuyL1Count"></span></div>
+            <div class="section-title" style="margin-top:12px;">🟡 等日线 (仅周线J&lt;15) <span id="alertBuyL1Count"></span></div>
             <div id="alertBuyL1List"><div class="empty">加载中…</div></div>
-            <div class="section-title" style="margin-top:12px;">🔴 卖点 (J &gt; 80) <span id="alertSellCount"></span></div>
+            <div class="section-title" style="margin-top:12px;">⚠️ 可能错过 (刚穿出15) <span id="alertSellCount"></span></div>
             <div id="alertSellList"><div class="empty">加载中…</div></div>
-            <div class="section-title" style="margin-top:12px;">📊 方向可靠性</div>
-            <div id="alertReliability"></div>
         </div>
         <!-- 右侧：K线图 -->
         <div style="position:sticky;top:80px;height:85vh;overflow-y:auto;background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;">
@@ -804,7 +811,7 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
         if (tab.dataset.tab === 'anomalies') {
             loadAnomalies();
             loadWeeklyB1();
-            loadWeeklyAlerts();
+            loadSectorKDJ();
         }
         if (tab.dataset.tab === 'trends') {
             loadTrends();
@@ -2057,101 +2064,94 @@ async function loadTrends() {
 }
 
 
-async function loadWeeklyAlerts() {
+async function loadSectorKDJ() {
     try {
-        const wd = await loadJSON('data/weekly-kdj.json');
-        const items = wd.items || [];
-        const l1 = items.filter(s => s.J < 15 && s.J >= 0).length;
-        const l2 = items.filter(s => s.J < 0).length;
-        document.getElementById('alertBuyL1').textContent = l1;
-        document.getElementById('alertBuyL2').textContent = l2;
-        document.getElementById('alertSellL1').textContent = items.filter(s => s.J > 80 && s.J <= 100).length;
-        document.getElementById('alertSellL2').textContent = items.filter(s => s.J > 100).length;
-        
-        // Show L2 alerts (deepest oversold)
-        const alerts = items.filter(s => s.J < 0).sort((a,b) => a.J - b.J);
-        document.getElementById('weeklyAlertList').innerHTML = alerts.length ? alerts.map(s => 
-            `<div class="position-row alert-clickable" onclick="openWeeklyChart('${s.ts_code||''}','${(s.name||'').replace(/'/g,"\\'")}')" style="cursor:pointer;" title="点击查看周线K线">
-                <span style="color:#2ea043;font-weight:600;">🟢🟢 二级买点</span>
-                <span class="ticker-tag">${s.ts_code||''} ${s.name||''}</span>
-                <span style="font-size:11px;color:#8b949e;">${s.theme_category||''}</span>
-                <span style="font-weight:600;color:#2ea043;">J=${(s.J||0).toFixed(1)}</span>
-                <span style="font-size:10px;color:#484f58;">周收盘${(s.close||0).toFixed(2)}</span>
-            </div>`
-        ).join('') : '<div class="empty">当前无二级买点</div>';
-    } catch(e) { console.log('Alert load err:', e); }
+        const data = await loadJSON('data/sector-oversold-index.json');
+        if (!data || !data.sectors) return;
+        document.getElementById('sectorKDJDate').textContent = data.week_date ? '周截止 ' + data.week_date : '';
+        const sectors = data.sectors;
+        const rows = sectors.map(s => {
+            let bg = '', jColor = '#c9d1d9';
+            if (s.overheat) { bg = 'rgba(248,81,73,0.06)'; jColor = '#f85149'; }
+            if (s.oversold_score > 30) { bg = 'rgba(63,185,80,0.06)'; jColor = '#3fb950'; }
+            const j15 = s.below15_pct > 10 ? '<span style="color:#3fb950;font-weight:600;">' + s.below15_pct + '%</span>' : s.below15_pct + '%';
+            const j80 = s.above80_pct > 50 ? '<span style="color:#f85149;font-weight:600;">' + s.above80_pct + '%</span>' : s.above80_pct + '%';
+            const trend = s.trend_up_pct > 80 ? '<span style="color:#3fb950;">↑' + s.trend_up_pct + '%</span>' : '<span style="color:#8b949e;">' + s.trend_up_pct + '%</span>';
+            const tag = s.overheat ? ' 🔥' : (s.oversold_score > 30 ? ' 🟢' : '');
+            return '<tr style="background:' + bg + ';border-bottom:1px solid #161b22;">' +
+                '<td style="padding:3px 6px;white-space:nowrap;">' + s.category + tag + '</td>' +
+                '<td style="text-align:right;padding:3px 6px;color:#8b949e;">' + s.stock_count + '</td>' +
+                '<td style="text-align:right;padding:3px 6px;">' + s.avg_K.toFixed(0) + '</td>' +
+                '<td style="text-align:right;padding:3px 6px;">' + s.avg_D.toFixed(0) + '</td>' +
+                '<td style="text-align:right;padding:3px 6px;font-weight:600;color:' + jColor + ';">' + s.avg_J.toFixed(0) + '</td>' +
+                '<td style="text-align:right;padding:3px 6px;">' + j15 + '</td>' +
+                '<td style="text-align:right;padding:3px 6px;">' + j80 + '</td>' +
+                '<td style="text-align:right;padding:3px 6px;">' + trend + '</td>' +
+                '</tr>';
+        }).join('');
+        document.getElementById('sectorKDJBody').innerHTML = rows;
+    } catch(e) { console.log('Sector KDJ load err:', e); }
 }
 
 
-// ===== 报警 Tab =====
+// ===== 报警 Tab（kdj-double-alert.json）=====
 async function loadAlerts() {
     try {
-        const wd = await loadJSON('data/weekly-kdj.json');
-        if (!wd) { console.warn('Alerts data not available'); return; }
-        document.getElementById('alertDate').textContent = wd.date ? '周截止 ' + wd.date : '';
-        const items = wd.items || [];
-        
-        // Buy L2 (J < 0) - highest priority
-        const buyL2 = items.filter(s => s.J < 0).sort((a,b) => a.J - b.J);
-        document.getElementById('alertBuyL2Count').textContent = `(${buyL2.length}只)`;
-        document.getElementById('alertBuyL2List').innerHTML = buyL2.length ? buyL2.map(s => 
-            `<div class="alert-clickable" onclick="openWeeklyChart('${s.ts_code||''}','${(s.name||'').replace(/'/g,"\\'")}')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(35,134,54,0.08);border-left:3px solid #2ea043;border-radius:6px;margin-bottom:4px;flex-wrap:wrap;">
-                <span style="color:#2ea043;font-weight:bold;font-size:13px;">🟢🟢</span>
-                <span style="font-weight:600;color:#e6edf3;font-size:13px;min-width:90px;">${s.name||''}</span>
-                <span style="font-size:11px;color:#58a6ff;font-family:monospace;">${s.ts_code||''}</span>
-                <span style="font-size:11px;color:#8b949e;">${s.theme_category||''}</span>
-                <span style="font-weight:bold;font-size:14px;color:#2ea043;">J=${(s.J||0).toFixed(1)}</span>
-                <span style="font-size:11px;color:#8b949e;">周收${(s.close||0).toFixed(2)}</span>
-                <span style="font-size:10px;color:#484f58;">周涨${(s.week_chg||0).toFixed(1)}%</span>
-            </div>`
-        ).join('') : '<div class="empty">✅ 无二级买点</div>';
-        
-        // Buy L1 (0 <= J < 15)
-        const buyL1 = items.filter(s => s.J >= 0 && s.J < 15).sort((a,b) => a.J - b.J);
-        document.getElementById('alertBuyL1Count').textContent = `(${buyL1.length}只)`;
-        document.getElementById('alertBuyL1List').innerHTML = buyL1.length ? buyL1.map(s => 
-            `<div class="alert-clickable" onclick="openWeeklyChart('${s.ts_code||''}','${(s.name||'').replace(/'/g,"\\'")}')" style="display:flex;align-items:center;gap:10px;padding:6px 12px;background:rgba(35,134,54,0.04);border-left:2px solid #3fb950;border-radius:6px;margin-bottom:3px;flex-wrap:wrap;" title="点击查看周线K线">
-                <span style="color:#3fb950;font-size:12px;">🟢</span>
-                <span style="font-weight:600;color:#e6edf3;font-size:12px;min-width:90px;">${s.name||''}</span>
-                <span style="font-size:10px;color:#58a6ff;font-family:monospace;">${s.ts_code||''}</span>
-                <span style="font-size:10px;color:#8b949e;">${s.theme_category||''}</span>
-                <span style="font-weight:bold;font-size:13px;color:#3fb950;">J=${(s.J||0).toFixed(1)}</span>
-                <span style="font-size:10px;color:#8b949e;">周收${(s.close||0).toFixed(2)}</span>
-                <span style="font-size:10px;color:#484f58;">周涨${(s.week_chg||0).toFixed(1)}%</span>
-            </div>`
-        ).join('') : '<div class="empty">✅ 无一级买点</div>';
-        
-        // Sell signals
-        const sell = items.filter(s => s.J > 80).sort((a,b) => b.J - a.J);
-        document.getElementById('alertSellCount').textContent = `(${sell.length}只)`;
-        document.getElementById('alertSellList').innerHTML = sell.length ? sell.map(s => {
-            const lvl = s.J > 100 ? '🔴🔴' : '🔴';
-            const color = s.J > 100 ? '#da3633' : '#f85149';
-            return `<div class="alert-clickable" onclick="openWeeklyChart('${s.ts_code||''}','${(s.name||'').replace(/'/g,"\\'")}')" style="display:flex;align-items:center;gap:10px;padding:6px 12px;background:rgba(218,54,51,0.04);border-left:2px solid ${color};border-radius:6px;margin-bottom:3px;flex-wrap:wrap;" title="点击查看周线K线">
-                <span style="color:${color};font-size:12px;">${lvl}</span>
-                <span style="font-weight:600;color:#e6edf3;font-size:12px;min-width:90px;">${s.name||''}</span>
-                <span style="font-size:10px;color:#58a6ff;font-family:monospace;">${s.ts_code||''}</span>
-                <span style="font-size:10px;color:#8b949e;">${s.theme_category||''}</span>
-                <span style="font-weight:bold;font-size:13px;color:${color};">J=${(s.J||0).toFixed(1)}</span>
-                <span style="font-size:10px;color:#8b949e;">周收${(s.close||0).toFixed(2)}</span>
-            </div>`;
-        }).join('') : '<div class="empty">✅ 无卖点</div>';
-        
-        // Reliability reference
-        document.getElementById('alertReliability').innerHTML = [
-            {d:'集成电路',wl1:'74.9%',wl2:'75.7%',ok:true},
-            {d:'工业母机',wl1:'70.5%',wl2:'77.9%',ok:true},
-            {d:'低空经济',wl1:'68.8%',wl2:'81.8%',ok:true},
-            {d:'机器人',wl1:'64.6%',wl2:'—',ok:true},
-            {d:'新材料',wl1:'62.7%',wl2:'61.6%',ok:true},
-            {d:'新能源',wl1:'—',wl2:'—',ok:null},
-            {d:'生物医药',wl1:'46.5%',wl2:'41.7%',ok:false},
-            {d:'核电',wl1:'<50%',wl2:'—',ok:false},
-        ].map(d => 
-            `<span style="display:inline-block;margin:2px 4px;padding:3px 8px;border-radius:4px;font-size:11px;background:${d.ok===true?'rgba(35,134,54,0.1)':d.ok===false?'rgba(218,54,51,0.1)':'#161b22'};color:${d.ok===true?'#3fb950':d.ok===false?'#f85149':'#8b949e'};border:1px solid ${d.ok===true?'rgba(35,134,54,0.3)':d.ok===false?'rgba(218,54,51,0.3)':'#30363d'};">
-                ${d.ok===true?'✅':d.ok===false?'⚠️':'❓'} ${d.d} L1:${d.wl1} L2:${d.wl2}
-            </span>`
-        ).join('');
+        const data = await loadJSON('data/kdj-double-alert.json');
+        if (!data) { console.warn('Alerts data not available'); return; }
+        document.getElementById('alertDate').textContent = data.week_date ? '周截止 ' + data.week_date : '';
+
+        // 板块集群
+        const clusters = data.clusters || {};
+        const clusterList = Object.entries(clusters).sort((a,b) => b[1]-a[1]);
+        document.getElementById('alertCluster').innerHTML = clusterList.length
+            ? clusterList.map(([cat,n]) => '<span style="display:inline-block;margin:2px 4px;padding:3px 8px;border-radius:4px;font-size:11px;background:rgba(210,153,34,0.1);color:#d29922;border:1px solid rgba(210,153,34,0.3);">🔥 ' + cat + ' ' + n + '只</span>').join('')
+            : '<span style="color:#8b949e;">无板块集群</span>';
+
+        // 🔴 双超卖（金色窗口）
+        const golden = data.golden || [];
+        document.getElementById('alertBuyL2Count').textContent = '(' + golden.length + '只)';
+        document.getElementById('alertBuyL2List').innerHTML = golden.length ? golden.map(s => {
+            const wr = s.backtest_win_rate ? '<span style="color:#3fb950;">' + s.backtest_win_rate + '%</span>' : '<span style="color:#8b949e;">N/A</span>';
+            const ar = s.backtest_avg_return != null ? '<span style="color:#58a6ff;">' + (s.backtest_avg_return>0?'+':'') + s.backtest_avg_return + '%</span>' : '';
+            return '<div style="display:flex;align-items:center;gap:8px;padding:6px 12px;background:rgba(35,134,54,0.06);border-left:3px solid #2ea043;border-radius:6px;margin-bottom:3px;flex-wrap:wrap;font-size:12px;">' +
+                '<span style="color:#2ea043;font-weight:bold;">🔴双超卖</span>' +
+                '<span style="font-weight:600;color:#e6edf3;">' + (s.name||'') + '</span>' +
+                '<span style="color:#58a6ff;font-family:monospace;font-size:10px;">' + (s.ts_code||'') + '</span>' +
+                '<span style="color:#8b949e;font-size:10px;">' + (s.theme_category||'') + '</span>' +
+                '<span style="color:#3fb950;">周J=' + (s.week_J||0).toFixed(0) + '</span>' +
+                '<span style="color:#58a6ff;">日J=' + (s.day_J != null ? s.day_J.toFixed(0) : 'N/A') + '</span>' +
+                '回测 ' + wr + ar +
+                '</div>';
+        }).join('') : '<div class="empty">当前无双超卖信号</div>';
+
+        // 🟡 等日线
+        const weeklyOnly = data.weekly_only || [];
+        document.getElementById('alertBuyL1Count').textContent = '(' + weeklyOnly.length + '只)';
+        document.getElementById('alertBuyL1List').innerHTML = weeklyOnly.length ? weeklyOnly.map(s => {
+            const wr = s.backtest_win_rate ? '<span style="color:#3fb950;">' + s.backtest_win_rate + '%</span>' : '<span style="color:#8b949e;">N/A</span>';
+            return '<div style="display:flex;align-items:center;gap:8px;padding:4px 12px;background:rgba(210,153,34,0.04);border-left:2px solid #d29922;border-radius:6px;margin-bottom:2px;flex-wrap:wrap;font-size:11px;">' +
+                '<span style="color:#d29922;">🟡等日线</span>' +
+                '<span style="font-weight:600;color:#e6edf3;">' + (s.name||'') + '</span>' +
+                '<span style="color:#58a6ff;font-family:monospace;font-size:10px;">' + (s.ts_code||'') + '</span>' +
+                '<span style="color:#8b949e;font-size:10px;">' + (s.theme_category||'') + '</span>' +
+                '<span>周J=' + (s.week_J||0).toFixed(0) + ' 日J=' + (s.day_J != null ? s.day_J.toFixed(0) : 'N/A') + '</span>' +
+                '回测 ' + wr +
+                '</div>';
+        }).join('') : '<div class="empty">✅ 无待确认信号</div>';
+
+        // ⚠️ 可能错过
+        const missed = data.missed || [];
+        document.getElementById('alertSellCount').textContent = '(' + missed.length + '只)';
+        document.getElementById('alertSellList').innerHTML = missed.length ? missed.map(s =>
+            '<div style="display:flex;align-items:center;gap:6px;padding:3px 10px;background:rgba(218,54,51,0.03);border-left:2px solid #f85149;border-radius:4px;margin-bottom:2px;flex-wrap:wrap;font-size:10px;">' +
+                '<span style="color:#f85149;">⚠️可能错过</span>' +
+                '<span style="color:#e6edf3;">' + (s.name||'') + '</span>' +
+                '<span style="color:#8b949e;">' + (s.theme_category||'') + '</span>' +
+                '<span>周J=' + (s.week_J||0).toFixed(0) + ' (上周=' + (s.week_prev_J||0).toFixed(0) + ')</span>' +
+                '</div>'
+        ).join('') : '<div class="empty">✅ 无错过信号</div>';
+
     } catch(e) { console.log('Alert load err:', e); }
 }
 
