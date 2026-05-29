@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-28T17:05:00.266163+08:00",
+  "last_updated": "2026-05-29T23:05:01.034738+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -103,9 +103,14 @@
           "date": "2026-05-28",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -375,9 +380,32 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {
+            "latest_close": 314.36,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 39.14,
+            "ret_5d_pct": 0.63,
+            "ret_1d_pct": -0.77,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -9.97
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -687,9 +715,32 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1391.5,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 49.28,
+            "ret_5d_pct": 8.2,
+            "ret_1d_pct": 3.84,
+            "high_since": 1410.96,
+            "low_since": 651.35,
+            "from_high_pct": -1.38
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1001,9 +1052,62 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {
+            "latest_close": 69.3,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 75.44,
+            "ret_5d_pct": 9.36,
+            "ret_1d_pct": -3.0,
+            "high_since": 75.3,
+            "low_since": 39.5,
+            "from_high_pct": -7.97
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，Q1营收508亿同比+719%扭亏为盈",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a5",
+              "title": "字节跳动今年最高700亿美元AI基建支出，明年或提升至1000亿美元",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a6",
+              "title": "SEMI预测玻璃基板2028年进入早期生产，CAGR 67.2%推动先进封装材料革命",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a7",
+              "title": "DigiTimes：小米/BYD/蔚来自研芯片重塑中国芯片战争格局",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a11",
+              "title": "摩根士丹利：Big Tech hyperscalers 2024-2027年投入$2万亿AI基建",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1309,9 +1413,62 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {
+            "latest_close": 659.0,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 38.88,
+            "ret_5d_pct": -1.49,
+            "ret_1d_pct": 0.65,
+            "high_since": 698.19,
+            "low_since": 424.08,
+            "from_high_pct": -5.61
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，Q1营收508亿同比+719%扭亏为盈",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50创历史新高后首次回调",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "高盛：对冲基金半导体仓位创历史新高+止盈近一年最快→牛熊拉锯",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a6",
+              "title": "SEMI预测玻璃基板2028年进入早期生产，CAGR 67.2%推动先进封装材料革命",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为宣布新Kirin芯片突破美国封锁，性能接近台积电/英特尔",
+              "confidence": "red",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1604,9 +1761,62 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {
+            "latest_close": 303.86,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 45.54,
+            "ret_5d_pct": -3.51,
+            "ret_1d_pct": -0.42,
+            "high_since": 328.82,
+            "low_since": 196.82,
+            "from_high_pct": -7.59
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，Q1营收508亿同比+719%扭亏为盈",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50创历史新高后首次回调",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "高盛：对冲基金半导体仓位创历史新高+止盈近一年最快→牛熊拉锯",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a6",
+              "title": "SEMI预测玻璃基板2028年进入早期生产，CAGR 67.2%推动先进封装材料革命",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为宣布新Kirin芯片突破美国封锁，性能接近台积电/英特尔",
+              "confidence": "red",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1930,9 +2140,74 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {
+            "latest_close": 84.74,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 120.91,
+            "ret_5d_pct": 16.27,
+            "ret_1d_pct": -1.65,
+            "high_since": 88.19,
+            "low_since": 38.29,
+            "from_high_pct": -3.91
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，Q1营收508亿同比+719%扭亏为盈",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50创历史新高后首次回调",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "字节跳动今年最高700亿美元AI基建支出，明年或提升至1000亿美元",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a6",
+              "title": "SEMI预测玻璃基板2028年进入早期生产，CAGR 67.2%推动先进封装材料革命",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a7",
+              "title": "DigiTimes：小米/BYD/蔚来自研芯片重塑中国芯片战争格局",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a10",
+              "title": "A股半导体'回调'真相：板块内轮动而非撤退——设备/材料大面积暴涨",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a11",
+              "title": "摩根士丹利：Big Tech hyperscalers 2024-2027年投入$2万亿AI基建",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -2251,9 +2526,62 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {
+            "latest_close": 153.7,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 18.28,
+            "ret_5d_pct": 17.03,
+            "ret_1d_pct": 5.12,
+            "high_since": 156.0,
+            "low_since": 91.78,
+            "from_high_pct": -1.47
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50创历史新高后首次回调",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "高盛：对冲基金半导体仓位创历史新高+止盈近一年最快→牛熊拉锯",
+              "confidence": "yellow",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a7",
+              "title": "DigiTimes：小米/BYD/蔚来自研芯片重塑中国芯片战争格局",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a8",
+              "title": "DigiTimes：AMD 2nm转向三星，台积电首次面临真正竞争对手",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为宣布新Kirin芯片突破美国封锁，性能接近台积电/英特尔",
+              "confidence": "red",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -2452,9 +2780,50 @@
               "lifecycle": "positioning"
             }
           ]
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {
+            "latest_close": 30.61,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 36.96,
+            "ret_5d_pct": 10.07,
+            "ret_1d_pct": 9.05,
+            "high_since": 30.61,
+            "low_since": 16.61,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，Q1营收508亿同比+719%扭亏为盈",
+              "confidence": "red",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律从叙事到定价催化剂：科创50创历史新高后首次回调",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为宣布新Kirin芯片突破美国封锁，性能接近台积电/英特尔",
+              "confidence": "red",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -2576,9 +2945,14 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-05-29",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-28",
+      "last_check": "2026-05-29",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     }
