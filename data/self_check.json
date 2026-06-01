@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-06-01T11:06:58.760876+08:00",
+  "health_score": 50,
+  "summary": {
+    "total_checks": 24,
+    "ok": 14,
+    "warn": 10,
+    "error": 0
+  },
+  "issues": [
+    {
+      "level": "warn",
+      "item": "Scanner信号",
+      "msg": "scanner.json 97小时未更新 (阈值28h)"
+    },
+    {
+      "level": "warn",
+      "item": "日度信号",
+      "msg": "signals-daily.json 67小时未更新 (阈值28h)"
+    },
+    {
+      "level": "warn",
+      "item": "归因数据",
+      "msg": "attributions.json 60小时未更新 (阈值28h)"
+    },
+    {
+      "level": "warn",
+      "item": "主题数据",
+      "msg": "theme-data.json 60小时未更新 (阈值28h)"
+    },
+    {
+      "level": "warn",
+      "item": "持仓状态",
+      "msg": "portfolio-status.json 60小时未更新 (阈值28h)"
+    },
+    {
+      "level": "warn",
+      "item": "KDJ双级报警",
+      "msg": "kdj-double-alert.json 60小时未更新 (阈值28h)"
+    },
+    {
+      "level": "warn",
+      "item": "板块KDJ",
+      "msg": "sector-oversold-index.json 60小时未更新 (阈值28h)"
+    },
+    {
+      "level": "warn",
+      "item": "龙虎榜",
+      "msg": "最近龙虎榜数据 109小时未更新 (lhb-2026-05-27.json)"
+    },
+    {
+      "level": "warn",
+      "item": "大宗交易",
+      "msg": "最近大宗交易数据 109小时未更新 (block_trade-2026-05-27.json)"
+    },
+    {
+      "level": "warn",
+      "item": "北向资金",
+      "msg": "最近北向资金数据 67小时未更新 (northbound-2026-05-29.json)"
+    }
+  ]
+}
