@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mimo 每日信号追踪</title>
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --bg-sidebar: #0a0f1a; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+  --header-h: 44px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); font-size: 0.88rem; line-height: 1.55; overflow: hidden; height: 100vh; }
+
+/* Header */
+#app-header { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); padding: 0 16px; background: var(--bg-card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; flex-shrink: 0; }
+#app-header .brand { font-size: 1rem; font-weight: 700; color: var(--text-heading); white-space: nowrap; }
+#app-header .brand .sub { font-size: 0.68rem; color: var(--text-muted); font-weight: 400; margin-left: 6px; }
+#app-header .nav { display: flex; gap: 1px; }
+#app-header .nav a { color: var(--text-muted); text-decoration: none; font-size: 0.76rem; padding: 5px 12px; border-radius: 4px; transition: all .15s; font-weight: 500; }
+#app-header .nav a:hover { color: var(--accent); background: rgba(56,189,248,0.08); }
+#app-header .nav a.active { color: var(--accent); background: rgba(56,189,248,0.12); }
+
+/* Layout */
+#app { display: flex; flex-direction: column; height: 100vh; }
+.main-layout { display: flex; flex: 1; overflow: hidden; }
+.sidebar { width: 310px; min-width: 310px; background: var(--bg-sidebar); border-right: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
+.sidebar-header { padding: 10px 14px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.sidebar-header .title { font-size: 0.82rem; color: var(--text-heading); font-weight: 600; }
+.sidebar-header .stats { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; display: flex; gap: 8px; }
+.sidebar-header .stats .up { color: var(--red); }
+.sidebar-header .stats .down { color: var(--green); }
+.sidebar-list { flex: 1; overflow-y: auto; padding: 2px 0; }
+.stock-row { display: flex; align-items: center; padding: 3px 14px; font-size: 0.74rem; transition: background .1s; gap: 6px; cursor: pointer; }
+.stock-row:hover { background: rgba(56,189,248,0.06); }
+.stock-row .name { color: var(--text); text-decoration: none; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.stock-row .group-tag { font-size: 0.6rem; color: var(--text-muted); white-space: nowrap; max-width: 60px; overflow: hidden; text-overflow: ellipsis; }
+.stock-row .pct { font-size: 0.72rem; font-weight: 600; min-width: 50px; text-align: right; font-variant-numeric: tabular-nums; }
+.stock-row .pct.up { color: var(--red); }
+.stock-row .pct.down { color: var(--green); }
+
+/* Content */
+.content { flex: 1; overflow-y: auto; padding: 14px 20px 36px; min-width: 0; }
+.content .date-tag { display: inline-flex; align-items: center; gap: 4px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.73rem; color: var(--text-muted); margin-bottom: 14px; }
+
+/* Cards */
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h3 { color: var(--text-heading); font-size: 0.95rem; }
+.card-header .meta { font-size: 0.72rem; color: var(--text-muted); }
+h2 { font-size: 1rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.88rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+
+/* Tags */
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.68rem; font-weight: 600; margin-right: 3px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.tag-sm { display: inline-block; padding: 1px 5px; border-radius: 3px; font-size: 0.65rem; font-weight: 500; margin-right: 2px; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 5px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 4px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+
+.block { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 6px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.8rem; color: #a5b4fc; }
+.alert { border-left: 3px solid var(--red); padding: 4px 10px; margin: 3px 0; background: rgba(239,68,68,0.05); font-size: 0.78rem; color: #fca5a5; }
+.alert.title { font-weight: 600; }
+
+.conduction-step { display: flex; gap: 6px; align-items: flex-start; padding: 3px 0; font-size: 0.8rem; }
+.conduction-step .num { min-width: 18px; color: var(--accent); font-weight: 600; font-size: 0.75rem; }
+.conduction-step .body { flex: 1; }
+.conduction-step .tickers { font-size: 0.7rem; color: var(--accent); margin-top: 2px; font-family: monospace; }
+
+.ticker-link { color: var(--accent); text-decoration: none; }
+.ticker-link:hover { text-decoration: underline; }
+
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.7rem; border-top: 1px solid var(--border); margin-top: 20px; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+
+/* Loading */
+.loading { display: flex; align-items: center; justify-content: center; height: 200px; color: var(--text-muted); font-size: 0.85rem; }
+.loading::before { content: ""; width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .6s linear infinite; margin-right: 8px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .content { padding: 10px; }
+  .two-col { grid-template-columns: 1fr; }
+  #app-header .nav a { padding: 4px 8px; font-size: 0.72rem; }
+}
+
+/* Section nav */
+.section-nav { display: flex; gap: 0; margin-bottom: 12px; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; width: fit-content; }
+.section-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.72rem; padding: 4px 10px; background: rgba(30,58,95,0.15); transition: all .15s; border-right: 1px solid var(--border); }
+.section-nav a:last-child { border-right: none; }
+.section-nav a:hover { color: var(--accent); background: rgba(56,189,248,0.1); }
+.section-nav a.active { color: var(--accent); background: rgba(56,189,248,0.15); }
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="app-header">
+    <div class="brand">🦉 Mimo 每日信号<span class="sub">| {{ pool.date || '--' }} · 池子 {{ pool.total || '--' }}只</span></div>
+    <div class="nav">
+      <a href="index.html" class="active">📊 日报</a>
+      <a href="reports.html">📅 历史</a>
+      <a href="weekly/">📈 周报</a>
+      <a href="meta/chain-log.html">🔗 链条</a>
+      <a href="meta/factor-map.html">🧩 因子</a>
+    </div>
+  </header>
+
+  <div class="main-layout">
+    <!-- Left: Stock Pool -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="title">📋 股票池</div>
+        <div class="stats">
+          <span class="up">↑{{ pool.up }}</span>
+          <span class="down">↓{{ pool.down }}</span>
+          <span>{{ pool.total }}只</span>
+        </div>
+      </div>
+      <div class="sidebar-list" v-if="pool.stocks">
+        <div class="stock-row" v-for="s in pool.stocks" :key="s.code"
+             @click="openStock(s.code)">
+          <span class="name" :title="s.name">{{ s.name }}</span>
+          <span class="group-tag" :title="s.group">{{ s.group }}</span>
+          <span class="pct" :class="s.pct > 0 ? 'up' : s.pct < 0 ? 'down' : ''">{{ fmtPct(s.pct) }}</span>
+        </div>
+      </div>
+      <div class="loading" v-else>加载中...</div>
+    </aside>
+
+    <!-- Right: Daily Signal -->
+    <main class="content" v-if="scanner.signals">
+      <div class="date-tag">{{ scanner.date }} · {{ scanner.run_at }} · 信号 {{ analyst.signals?.length || 0 }} 条</div>
+
+      <!-- Overview -->
+      <div class="card">
+        <div class="card-header">
+          <h3>📊 今日概览</h3>
+        </div>
+        <div style="font-size:0.85rem;margin-bottom:6px">
+          <strong>信号 {{ analyst.signals?.length || 0 }} 条</strong>
+          · Scanner {{ scanner.signals?.length || 0 }} 条
+          · 🔥 紧急 {{ fireCount }} 条
+        </div>
+        <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">
+          ⏱ 最后更新：{{ pool.generated || '--' }}
+        </div>
+        <div style="margin-bottom:4px">
+          <span class="tag tag-blue">国产替代 <span :style="{color: chain1Avg >= 0 ? 'var(--red)' : 'var(--green)'}">{{ fmtPct(chain1Avg) }}</span></span>
+          <span class="tag tag-blue">AI算力 <span :style="{color: chain2Avg >= 0 ? 'var(--red)' : 'var(--green)'}">{{ fmtPct(chain2Avg) }}</span></span>
+        </div>
+        <div>
+          <span class="tag tag-purple" v-for="g in pool.groups" :key="g.group">
+            {{ g.group }} <span :style="{color: g.avg_pct >= 0 ? 'var(--red)' : 'var(--green)'}">{{ fmtPct(g.avg_pct) }}</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Capital Flow Summary -->
+      <div class="card" style="border-left:3px solid var(--amber)" v-if="capitalSummary">
+        <div class="card-header"><h3>💰 资金面</h3></div>
+        <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.6">{{ capitalSummary }}</div>
+      </div>
+
+      <!-- IPO Calendar -->
+      <div class="card" style="border-left:3px solid var(--green)" v-if="ipos.length">
+        <div class="card-header"><h3>🆕 近期上市</h3></div>
+        <div class="table-wrap"><table>
+          <tr><th>日期</th><th>代码</th><th>名称</th><th>发行价</th><th>PE</th><th>发行量(万股)</th></tr>
+          <tr v-for="ipo in ipos" :key="ipo.code">
+            <td>{{ ipo.ipo_date }}</td>
+            <td><code style="font-size:0.72rem">{{ ipo.code }}</code></td>
+            <td><strong>{{ ipo.name }}</strong></td>
+            <td>{{ ipo.price > 0 ? ipo.price.toFixed(2) : '--' }}</td>
+            <td>{{ ipo.pe > 0 ? ipo.pe.toFixed(1) : '--' }}</td>
+            <td>{{ ipo.amount > 0 ? ipo.amount : '--' }}</td>
+          </tr>
+        </table></div>
+      </div>
+
+      <!-- Scanner -->
+      <h2 class="chain-h2">📡 Scanner 催化扫描</h2>
+
+      <div class="two-col" v-if="chain1Signals.length">
+        <div class="table-wrap">
+          <table>
+            <tr><th colspan="3">🔗 双链共振</th></tr>
+            <tr><th>条目</th><th>变量变化</th><th>优先级</th></tr>
+            <tr v-for="s in dualChainSignals" :key="s.id">
+              <td>{{ s.title }}</td>
+              <td style="font-size:0.72rem">{{ s.variable_change }}</td>
+              <td><span :class="['tag', s.priority === 'fire' ? 'tag-red' : 'tag-yellow']">{{ s.priority === 'fire' ? '🔥 紧急' : '📡 监控' }}</span></td>
+            </tr>
+            <tr v-if="!dualChainSignals.length"><td colspan="3" style="color:var(--text-muted);text-align:center">—</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="table-wrap">
+          <table>
+            <tr><th colspan="3">链一 · 国产替代</th></tr>
+            <tr><th>条目</th><th>变量变化</th><th>优先级</th></tr>
+            <tr v-for="s in chain1Signals" :key="s.id">
+              <td>{{ s.title }}</td>
+              <td style="font-size:0.72rem">{{ s.variable_change }}</td>
+              <td><span :class="['tag', s.priority === 'fire' ? 'tag-red' : 'tag-yellow']">{{ s.priority === 'fire' ? '🔥 紧急' : '📡 监控' }}</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tr><th colspan="3">链二 · AI算力</th></tr>
+            <tr><th>条目</th><th>变量变化</th><th>优先级</th></tr>
+            <tr v-for="s in chain2Signals" :key="s.id">
+              <td>{{ s.title }}</td>
+              <td style="font-size:0.72rem">{{ s.variable_change }}</td>
+              <td><span :class="['tag', s.priority === 'fire' ? 'tag-red' : 'tag-yellow']">{{ s.priority === 'fire' ? '🔥 紧急' : '📡 监控' }}</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <p style="font-size:0.68rem;color:var(--text-muted);margin-top:4px">
+        <span v-for="(url, i) in sourceUrls" :key="i">
+          <span v-if="i > 0"> · </span>
+          <a :href="url" class="ticker-link">{{ url.substring(0, 50) }}{{ url.length > 50 ? '...' : '' }}</a>
+        </span>
+      </p>
+
+      <!-- Analyst -->
+      <h2 class="chain-h2">🔬 Analyst 深度分析</h2>
+
+      <div v-for="sig in analyst.signals" :key="sig.id" style="margin-bottom:14px">
+        <h2 style="font-size:1.05rem;margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--border);color:var(--text-heading)">#{{ sig.id.substring(1) }} {{ sig.title }}</h2>
+        <p style="color:var(--text-muted);font-size:0.73rem;margin-bottom:6px">
+          链{{ sig.chain === 'chain1' ? '一' : sig.chain === 'chain2' ? '二' : '一+二' }} ·
+          <span :class="['tag', sig.verification === 'confirmed' ? 'tag-green' : 'tag-yellow']">{{ sig.verification === 'confirmed' ? '🟢 已确认' : '🟡 部分确认' }}</span>
+          · {{ sig.confidence === 'green' ? '🟢' : sig.confidence === 'yellow' ? '🟡' : '🔴' }} {{ sig.confidence === 'green' ? '高置信' : sig.confidence === 'yellow' ? '中置信' : '低置信' }}
+          · {{ timeframeLabel(sig.timeframe) }}
+          <span v-if="sig.capital_backing">
+            · 💰 资金面：
+            <span :class="['tag', sig.capital_backing.level === 'strong' ? 'tag-green' : sig.capital_backing.level === 'moderate' ? 'tag-yellow' : 'tag-red']">
+              {{ sig.capital_backing.level === 'strong' ? '强支撑' : sig.capital_backing.level === 'moderate' ? '有支撑' : '弱支撑' }}
+            </span>
+            <span class="tag-sm tag-red" v-if="sig.capital_backing.big_fund">大基金</span>
+            <span class="tag-sm tag-blue" v-if="sig.capital_backing.national_team_etf">国家队ETF</span>
+            <span class="tag-sm tag-green" v-if="sig.capital_backing.recent_bidding">近期中标</span>
+          </span>
+        </p>
+
+        <div class="block"><strong>变量：</strong>{{ sig.three_questions?.variable }}</div>
+        <div class="block"><strong>量级：</strong>{{ sig.three_questions?.magnitude }}</div>
+        <div class="block"><strong>持续性：</strong>{{ sig.three_questions?.sustainability }}</div>
+
+        <p style="font-size:0.76rem;color:var(--text-muted);font-weight:600;margin:8px 0 4px">传导链</p>
+        <div class="conduction-step" v-for="step in (sig.conduction_chain || [])" :key="step.step">
+          <span class="num">{{ step.step }}</span>
+          <span class="body">
+            <strong>{{ step.factor }}</strong> → {{ step.sector }}<br>
+            <span style="color:var(--text-muted);font-size:0.72rem">{{ step.rationale }}</span><br>
+            <span class="tickers">
+              <span v-for="(tk, i) in (step.tickers || [])" :key="tk">
+                <a :href="'stocks/' + tk + '.html'" class="ticker-link" style="font-size:0.7rem">{{ tickerName(tk) }}</a><span v-if="i < (step.tickers||[]).length - 1">, </span>
+              </span>
+            </span>
+          </span>
+        </div>
+
+        <div class="alert" v-for="(alert, idx) in (sig.alerts || [])" :key="idx">
+          <template v-if="typeof alert === 'string'">
+            <span :class="['tag', alert.startsWith('⚠️') || alert.includes('风险') ? 'tag-red' : 'tag-blue', 'tag-sm']">{{ alert.startsWith('⚠️') ? '⚠' : '🔮' }}</span>
+            {{ alert }}
+          </template>
+          <template v-else>
+            <span :class="['tag', alert.level === 'high' ? 'tag-red' : 'tag-yellow', 'tag-sm']">{{ alert.level === 'high' ? '⚠' : 'ℹ' }}</span>
+            <strong>{{ alert.title }}</strong><br>
+            <span style="font-size:0.72rem;color:var(--text-muted)">{{ alert.impact }}</span>
+          </template>
+        </div>
+      </div>
+
+      <!-- Theses -->
+      <h2 class="chain-h2">📋 投资逻辑追踪</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>标的</th><th>逻辑</th><th>置信度</th><th>上次更新</th></tr>
+          </thead>
+          <tbody>
+            <tr v-for="t in theses" :key="t.id">
+              <td><a :href="'stocks/' + t.code + '.html'" class="ticker-link">{{ t.stock }}</a></td>
+              <td style="font-size:0.78rem">{{ t.thesis }}</td>
+              <td>
+                <span v-if="t.confidence === 'high'" class="tag tag-green">🟢🟢🟢</span>
+                <span v-else-if="t.confidence === 'medium'" class="tag tag-yellow">🟡🟡</span>
+                <span v-else class="tag tag-red">🔴</span>
+              </td>
+              <td style="font-size:0.7rem;color:var(--text-muted)">{{ t.since }} {{ t.status }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer>
+        🦉 Mimo · AI 管家 + 投研顾问 | 数据驱动 · Vue.js 渲染<br>
+        仅供研究参考，不构成投资建议
+      </footer>
+    </main>
+
+    <main class="content loading" v-else>加载日报数据...</main>
+  </div>
+</div>
+
+<script>
+const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      pool: {},
+      scanner: {},
+      analyst: {},
+      theses: [],
+      ipos: [],
+      tickerNames: {}
+    }
+  },
+  computed: {
+    fireCount() {
+      return (this.scanner.signals || []).filter(s => s.priority === 'fire').length;
+    },
+    chain1Signals() {
+      return (this.scanner.signals || []).filter(s => s.chain === 'chain1');
+    },
+    chain2Signals() {
+      return (this.scanner.signals || []).filter(s => s.chain === 'chain2');
+    },
+    dualChainSignals() {
+      return (this.scanner.signals || []).filter(s => s.chain === 'chain1+chain2');
+    },
+    chain1Avg() {
+      const c1 = ['半导体设备', '半导体材料', '光刻胶', '晶圆制造'];
+      const groups = (this.pool.groups || []).filter(g => c1.includes(g.group));
+      if (!groups.length) return 0;
+      const sum = groups.reduce((a, g) => a + g.avg_pct * g.count, 0);
+      const total = groups.reduce((a, g) => a + g.count, 0);
+      return total ? +(sum / total).toFixed(2) : 0;
+    },
+    chain2Avg() {
+      const c2 = ['AI芯片', '数字芯片', '光电器件', '封装测试'];
+      const groups = (this.pool.groups || []).filter(g => c2.includes(g.group));
+      if (!groups.length) return 0;
+      const sum = groups.reduce((a, g) => a + g.avg_pct * g.count, 0);
+      const total = groups.reduce((a, g) => a + g.count, 0);
+      return total ? +(sum / total).toFixed(2) : 0;
+    },
+    sourceUrls() {
+      const urls = new Set();
+      (this.scanner.signals || []).forEach(s => (s.source_urls || []).forEach(u => urls.add(u)));
+      return [...urls];
+    },
+    capitalSummary() {
+      if (!this.analyst.signals) return null;
+      const strong = this.analyst.signals.filter(s => s.capital_backing?.level === 'strong').length;
+      const moderate = this.analyst.signals.filter(s => s.capital_backing?.level === 'moderate').length;
+      if (strong + moderate === 0) return '本期信号暂无大资金面支撑，关注后续发展。';
+      let parts = [];
+      if (strong > 0) parts.push(`${strong} 条信号获强资金支撑（大基金/国家队ETF/近期中标）`);
+      if (moderate > 0) parts.push(`${moderate} 条有部分支撑`);
+      parts.push('A股是资金市，有资金背书的信号持续性强于纯消息驱动。');
+      return parts.join(' · ');
+    }
+  },
+  methods: {
+    fmtPct(v) {
+      if (v == null) return '--';
+      return (v > 0 ? '+' : '') + v.toFixed(2) + '%';
+    },
+    tickerName(code) {
+      return this.tickerNames[code] || code;
+    },
+    timeframeLabel(tf) {
+      const map = { days: '⚡ 日内', weeks: '📅 数周', months: '🗓️ 数月', structural: '🏗️ 结构性' };
+      return map[tf] || '📅 ' + tf;
+    },
+    openStock(code) {
+      window.open('stocks/' + code + '.html', '_self');
+    }
+  },
+  async mounted() {
+    try {
+      const [poolRes, scannerRes, analystRes, thesesRes] = await Promise.all([
+        fetch('data/pool.json'),
+        fetch('data/scanner.json'),
+        fetch('data/analyst.json'),
+        fetch('data/theses.json')
+      ]);
+      this.pool = await poolRes.json();
+      this.scanner = await scannerRes.json();
+      this.analyst = await analystRes.json();
+      const thesesData = await thesesRes.json();
+      this.theses = thesesData.theses || thesesData;
+      // Build ticker→name lookup
+      this.tickerNames = {};
+      (this.pool.stocks || []).forEach(s => { this.tickerNames[s.code] = s.name; });
+    } catch(e) {
+      console.error('数据加载失败:', e);
+    }
+    // IPO calendar (non-critical, separate fetch)
+    try {
+      const ipoRes = await fetch('data/ipo_calendar.json');
+      if (ipoRes.ok) {
+        const ipoData = await ipoRes.json();
+        this.ipos = ipoData.ipos || [];
+      }
+    } catch(e) {
+      // 静默失败
+    }
+  }
+}).mount('#app');
+</script>
+</body>
+</html>
