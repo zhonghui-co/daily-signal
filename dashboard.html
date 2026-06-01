@@ -513,9 +513,9 @@ async function showKDJChart(code,name){
     try{
         if(!chartCD)chartCD=await loadJSON('data/kdj-chart-data.json');
         let ch=(chartCD||{})[code];if(!ch||!ch.weeks||ch.weeks.length<5){body.innerHTML='<div class="empty">图表数据不足</div>';return}
-        let w=ch.weeks.slice(-60),k=ch.kdj?ch.kdj.slice(-60):[],fv=0;
+        let w=ch.weeks.slice(-80),k=ch.kdj?ch.kdj.slice(-80):[],fv=0;
         for(let i=0;i<Math.min(w.length,k.length);i++){if(k[i]&&k[i].white!=null&&k[i].yellow!=null){fv=i;break}}
-        w=w.slice(fv).slice(-50);k=k.slice(fv).slice(-50);let n=w.length,box=body.getBoundingClientRect();
+        w=w.slice(fv).slice(-52);k=k.slice(fv).slice(-52);let n=w.length,box=body.getBoundingClientRect();
         let W=Math.max(700,box.width-20),H=Math.max(500,window.innerHeight*.7),ratio=.62,H1=Math.floor(H*ratio),H2=H-H1-24;
         let pL=60,pR=30,pT=15,pB=28,xR=W-pL-pR;
         let allP=w.flatMap(x=>[x.h,x.l]),bb=k.filter(x=>x&&x.yellow!=null).map(x=>x.yellow);
