@@ -106,7 +106,7 @@ table.tbl{width:100%;font-size:11px;border-collapse:collapse}
 <!-- ===== 催化 ===== -->
 <div class="tab-content active" id="t-news">
 <div class="kpi-grid" id="newsKPIs"></div>
-<div class="grid-2">
+<div style="display:grid;grid-template-columns:3fr 2fr;gap:10px">
 <div><div class="section-title">🔥 Scanner 信号<span class="card-sub" id="scannerDate"></span></div><div id="scannerSignals"></div>
 <div class="section-title">🔬 Analyst 深析<span class="card-sub" id="analystDate"></span></div><div id="analystSignals"></div></div>
 <div><div class="section-title">📊 B1/B2/B3 全景</div><div id="b1b2b3Signals"></div>
@@ -135,9 +135,9 @@ table.tbl{width:100%;font-size:11px;border-collapse:collapse}
 <div style="overflow-y:auto;max-height:80vh">
 <div class="section-title">⭐ 优先关注<span class="card-sub">（综合得分 Top 15）</span></div><div id="alertPriority"></div>
 <div class="section-title">📋 全部信号<span class="card-sub" id="alertDate"></span></div><div id="alertFullList"></div></div>
-<div style="position:sticky;top:80px;height:80vh;overflow:hidden;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px">
+<div style="position:sticky;top:80px;height:80vh;overflow:hidden;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px" id="chartPanel">
 <div id="chartHead" style="font-size:13px;font-weight:600;color:#e6edf3;margin-bottom:6px">📈 点击左侧查看周线图</div>
-<div id="chartView" style="width:100%;height:calc(100% - 30px)"><canvas id="kdjCanvas" style="display:block;width:100%;height:100%"></canvas></div></div></div></div>
+<div id="chartView" style="width:100%;height:calc(100% - 30px)"><canvas id="kdjCanvas" style="display:none;width:100%;height:100%"></canvas></div></div></div></div>
 
 <!-- ===== 归因 ===== -->
 <div class="tab-content" id="t-attrib">
@@ -148,9 +148,6 @@ table.tbl{width:100%;font-size:11px;border-collapse:collapse}
 <div class="tab-content" id="t-portfolio">
 <div class="kpi-grid" id="pfKPIs"></div><div id="pfGrid"></div></div>
 
-<!-- Chart Modal -->
-<div class="modal-overlay" id="chartModal">
-<div class="modal-box"><div class="modal-head"><h3 id="chartTitle">📈</h3><button class="modal-close" onclick="closeChart()">✕</button></div>
 <div class="modal-body" id="chartBody"><canvas id="modalCanvas"></canvas></div></div></div>
 
 <script>
@@ -197,11 +194,11 @@ function renderScanner(sigs){
 }
 function renderAnalyst(sigs){
     let confMap={green:'🟢已确认',yellow:'🟡合理推断',grey:'🔴猜测',red:'🔴猜测'};
-    let html=sigs.slice(0,5).map(s=>{
+    let html=sigs.slice(0,3).map(s=>{
         let vn=s.verification_note||'',tq=s.three_questions||{};
         let q=(tq.variable||tq.what||'')+' | '+(tq.magnitude||tq.scale||'')+' | '+(tq.sustainability||tq.duration||'');
-        return `<div class="highlight"><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;flex-wrap:wrap"><span style="font-weight:600;font-size:11px">${s.title||s.id||'?'}</span><span class="mono" style="color:#8b949e;font-size:9px">${(s.chain||'').replace('chain1','链一').replace('chain2','链二')}</span><span style="font-size:9px;margin-left:auto;color:${s.confidence==='green'?'#3fb950':s.confidence==='yellow'?'#d29922':'#8b949e'}">${confMap[s.confidence]||s.confidence||''}</span></div><div style="font-size:10px;color:#c9d1d9">${vn}</div><div style="font-size:9px;color:#8b949e;margin-top:2px">${q}</div>${s.priced_in==='under_priced'?'<div style="margin-top:2px;font-size:9px;color:#3fb950">💡 可能被低估</div>':''}</div>`}).join('');
-    if(sigs.length>5)html+=`<div class="collapse-h" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.collapse-arrow').textContent=this.nextElementSibling.classList.contains('open')?'▼':'▶'"><span class="collapse-arrow">▶</span>更多 ${sigs.length-5} 条分析</div><div class="collapse-body">${sigs.slice(5).map(s=>{
+        return `<div class="highlight" style="margin-bottom:6px"><div style="font-size:11px;font-weight:600;color:#e6edf3;margin-bottom:2px">${s.title||s.id||'?'} <span class="mono" style="color:#8b949e;font-size:9px;font-weight:400">${(s.chain||'').replace('chain1','链一').replace('chain2','链二')}</span><span style="font-size:9px;margin-left:8px;color:${s.confidence==='green'?'#3fb950':s.confidence==='yellow'?'#d29922':'#8b949e'}">${confMap[s.confidence]||s.confidence||''}</span></div><div style="font-size:10px;color:#c9d1d9;line-height:1.4">${vn}</div><div style="font-size:9px;color:#8b949e;margin-top:2px">${q}</div>${s.priced_in==='under_priced'?'<div style="margin-top:2px;font-size:9px;color:#3fb950">💡 可能被低估</div>':''}</div>`}).join('');
+    if(sigs.length>3)html+=`<div class="collapse-h" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.collapse-arrow').textContent=this.nextElementSibling.classList.contains('open')?'▼':'▶'"><span class="collapse-arrow">▶</span>更多 ${sigs.length-5} 条分析</div><div class="collapse-body">${sigs.slice(3).map(s=>{
         let vn=s.verification_note||'';
         return `<div class="highlight"><div style="font-size:11px;font-weight:600">${s.title||s.id||'?'}</div><div style="font-size:10px;color:#c9d1d9">${vn}</div></div>`}).join('')}</div>`;
     el('analystSignals').innerHTML=html||'<div class="empty">无Analyst分析</div>';
@@ -210,7 +207,7 @@ function renderB1B2B3(){
     if(!sdD){el('b1b2b3Signals').innerHTML='<div class="empty">无数据</div>';return}
     let b1=sdD.b1||[],b2d=sdD.b2||[],b2r=sdD.b2_raw||[],b3d=sdD.b3||[],b3r=sdD.b3_raw||[],ws=sdD.washout||[];
     let html='';
-    if(b1.length)html+=`<div style="font-size:11px;font-weight:600;color:#3fb950;margin-bottom:2px">B1 超卖拐点 (${b1.length}只)</div>`+b1.slice(0,20).map(r=>`<div class="signal-row s-fire"><span class="badge b-fire">B1</span><span style="font-weight:600">${r[1]||'?'}</span><span class="mono blue">${r[0]||''}</span><span style="font-size:9px;color:#8b949e">${r[2]||''} ${r[4]||''} ${fmtPct(r[6])}</span></div>`).join('');
+    if(b1.length)html+=`<div style="font-size:11px;font-weight:600;color:#3fb950;margin-bottom:2px">B1 超卖拐点 (${b1.length}只)</div>`+b1.slice(0,20).map(r=>`<div class="signal-row s-fire"><span class="badge b-fire">B1</span><span style="font-weight:600;min-width:55px">${r[1]||'?'}</span><span class="mono blue" style="min-width:65px">${r[0]||''}</span><span class="mono" style="color:${(r[6]||0)>=0?'#da3633':'#3fb950'};min-width:40px;text-align:right">${fmtPct(r[6])}</span></div>`).join('');
     if(b2d.length)html+=`<div style="font-size:11px;font-weight:600;color:#d29922;margin:6px 0 2px">B2 确认中阳 (${b2d.length}只)</div>`+b2d.slice(0,8).map(r=>`<div class="signal-row s-high"><span class="badge b-high">B2</span><span style="font-weight:600">${r.name||'?'}</span><span class="mono blue">${r.code||''}</span><span style="font-size:9px;color:#8b949e">${r.pattern||''} ${fmtPct(r.pct)}</span></div>`).join('');
     if(b3d.length)html+=`<div style="font-size:11px;font-weight:600;color:#58a6ff;margin:6px 0 2px">B3 一致确认 (${b3d.length}只)</div>`+b3d.slice(0,8).map(r=>`<div class="signal-row s-norm"><span class="badge b-info">B3</span><span style="font-weight:600">${r.name||'?'}</span><span class="mono blue">${r.code||''}</span></div>`).join('');
     if(ws.length)html+=`<div style="font-size:11px;font-weight:600;color:#c9d1d9;margin:6px 0 2px">🧹 洗盘 (${ws.length}只)</div>`+ws.slice(0,8).map(r=>`<div class="signal-row s-norm"><span style="font-weight:600">${r[1]||'?'}</span><span class="mono blue">${r[0]||''}</span></div>`).join('');
@@ -318,21 +315,21 @@ async function loadPortfolio(){
 
 // ════════════════ KDJ Chart ════════════════
 async function showChart(code,name){
-    el('chartModal').classList.add('active');el('chartTitle').textContent='📈 '+name+'  '+code;
-    let body=el('chartBody');body.innerHTML='<div class="empty">⏳</div>';
+    el('chartHead').innerHTML='📈 '+name+' <span style="font-size:10px;color:#8b949e">'+code+'</span>';
+    let body=el('chartView');body.innerHTML='<div class="empty">⏳</div>';
     try{if(!chartCD)chartCD=await L('data/kdj-chart-data.json');let ch=(chartCD||{})[code];if(!ch||!ch.weeks||ch.weeks.length<5){body.innerHTML='<div class="empty">图表数据不足</div>';return}
     let w=ch.weeks.slice(-80),k=ch.kdj?ch.kdj.slice(-80):[],fv=0;
     for(let i=0;i<Math.min(w.length,k.length);i++){if(k[i]&&k[i].white!=null&&k[i].yellow!=null){fv=i;break}}
-    w=w.slice(fv).slice(-52);k=k.slice(fv).slice(-52);let n=w.length,box=body.getBoundingClientRect();
-    let W=Math.max(700,box.width-20),H=Math.max(500,window.innerHeight*.7),ratio=.62,H1=Math.floor(H*ratio),H2=H-H1-24;
-    let pL=60,pR=30,pT=15,pB=28,xR=W-pL-pR;
+    w=w.slice(fv).slice(-52);k=k.slice(fv).slice(-52);let n=w.length,panel=el('chartPanel');
+    let W=panel.clientWidth-20,H=panel.clientHeight-50,ratio=.62,H1=Math.floor(H*ratio),H2=H-H1-24;
+    let pL=55,pR=20,pT=15,pB=28,xR=W-pL-pR;
     let allP=w.flatMap(x=>[x.h,x.l]),bbV=k.filter(x=>x&&x.yellow!=null).map(x=>x.yellow),whV=k.filter(x=>x&&x.white!=null).map(x=>x.white),bsV=k.filter(x=>x&&x.bbi_std!=null&&x.bbi_std!==x.yellow).map(x=>x.bbi_std);
     let allV=[...allP,...bbV,...whV,...bsV].filter(v=>v!=null&&isFinite(v));if(!allV.length)return;
     let minP=Math.min(...allV)*.97,maxP=Math.max(...allV)*1.03,pRng=(maxP-minP)||1,yR=H1-pT-5;
     function px(i){return pL+i*xR/Math.max(1,n-1)}function py(v){return pT+(maxP-v)/pRng*yR}
     let allK=k.filter(x=>x).flatMap(x=>[x.K,x.D,x.J]).filter(v=>v!=null),minK=allK.length?Math.min(...allK,-10):-20,maxK=allK.length?Math.max(...allK,110):120,kRng=(maxK-minK)||1,y2R=H2-pB-5,y2B=H1+24;
     function py2(v){return y2B+pT+(maxK-v)/kRng*y2R}
-    body.innerHTML='';let cv=document.createElement('canvas');cv.width=W;cv.height=H;cv.style.display='block';cv.style.margin='0 auto';body.appendChild(cv);
+    body.innerHTML='';let cv=document.createElement('canvas');cv.id='kdjCanvas';cv.width=W;cv.height=H;cv.style.display='block';cv.style.margin='0 auto';body.appendChild(cv);
     let ctx=cv.getContext('2d');ctx.fillStyle='#0d1117';ctx.fillRect(0,0,W,H);
     // Grid
     ctx.strokeStyle='#1a1f2b';ctx.lineWidth=.5;
@@ -364,7 +361,6 @@ async function showChart(code,name){
     [['━ K','#8b949e'],['━ D','#d29922'],['━ J','#58a6ff']].forEach(([t,c],i)=>{ctx.fillStyle=c;ctx.textAlign='left';ctx.fillText(t,lx+i*70,y2B+pT+12)});
     }catch(e){body.innerHTML='<div class="empty">渲染失败</div>';console.log(e)}
 }
-function closeChart(){el('chartModal').classList.remove('active')}
 </script>
 </body>
 </html>
