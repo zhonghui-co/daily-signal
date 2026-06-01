@@ -99,8 +99,7 @@ table.tbl{width:100%;font-size:11px;border-collapse:collapse}
     <button class="nav-tab" data-t="trend">🌊 大势</button>
     <button class="nav-tab" data-t="chains">🔗 双链</button>
     <button class="nav-tab" data-t="alerts">🚨 报警</button>
-    <button class="nav-tab" data-t="attrib">📊 归因</button>
-    <button class="nav-tab" data-t="portfolio">💼 持仓</button>
+        <button class="nav-tab" data-t="portfolio">💼 持仓</button>
 </div>
 
 <!-- ===== 催化 ===== -->
@@ -139,9 +138,6 @@ table.tbl{width:100%;font-size:11px;border-collapse:collapse}
 <div id="chartHead" style="font-size:13px;font-weight:600;color:#e6edf3;margin-bottom:6px">📈 点击左侧查看周线图</div>
 <div id="chartView" style="width:100%;height:calc(100% - 30px)"><canvas id="kdjCanvas" style="display:none;width:100%;height:100%"></canvas></div></div></div></div>
 
-<!-- ===== 归因 ===== -->
-<div class="tab-content" id="t-attrib">
-<div class="card"><div class="card-title">📊 涨跌归因<span class="card-sub" id="attribDate"></span></div>
 <div style="max-height:75vh;overflow-y:auto"><div id="attribList"></div></div></div></div>
 
 <!-- ===== 持仓 ===== -->
@@ -163,7 +159,7 @@ document.querySelectorAll('.nav-tab').forEach(t=>t.addEventListener('click',()=>
     document.querySelectorAll('.nav-tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');
     document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));
     el('t-'+t.dataset.t).classList.add('active');
-    let fns={news:loadNews,trend:loadTrend,chains:loadChains,alerts:loadAlerts,attrib:loadAttrib,portfolio:loadPortfolio};
+    let fns={news:loadNews,trend:loadTrend,chains:loadChains,alerts:loadAlerts,portfolio:loadPortfolio};
     if(fns[t.dataset.t])fns[t.dataset.t]();
 }));
 
@@ -186,11 +182,27 @@ async function loadNews(){
     renderScanner(scS);renderAnalyst(anS);renderB1B2B3();renderCross();}catch(e){console.log(e)}
 }
 function renderScanner(sigs){
-    el('scannerSignals').innerHTML=sigs.length?sigs.map(s=>{
-        let cls=s.priority==='fire'?'s-fire':s.priority==='high'?'s-high':'s-norm';
-        let badge=s.priority==='fire'?'<span class="badge b-fire">🔥</span>':'<span class="badge b-info">'+(s.lifecycle||'?')+'</span>';
-        let ch=(s.chain||'').replace('chain1','链一').replace('chain2','链二');
-        return `<div class="signal-row ${cls}">${badge}<span style="font-weight:600;min-width:60px">${s.title||s.id||'?'}</span><span class="mono" style="color:#8b949e">${ch}</span><span style="color:#8b949e;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px">${s.summary||''}</span></div>`}).join(''):'<div class="empty">无Scanner信号</div>';
+    if(!sigs.length){el('scannerSignals').innerHTML='<div class="empty">无Scanner信号</div>';return}
+    let byChain={};
+    for(let s of sigs){
+        let ch=s.chain||'',key=ch.includes('chain1')&&ch.includes('chain2')?'dual':ch==='chain1'?'c1':'c2';
+        byChain[key]=byChain[key]||[];byChain[key].push(s);
+    }
+    let labels={dual:{name:'🔗 双链共振',color:'#da3633',cls:'s-fire'},
+                c1:{name:'链一 · 国产替代',color:'#58a6ff',cls:'s-norm'},
+                c2:{name:'链二 · AI算力',color:'#3fb950',cls:'s-norm'}};
+    let html='';
+    for(let[key,label]of Object.entries(labels)){
+        let arr=byChain[key]||[];
+        if(!arr.length)continue;
+        html+=`<div style="font-size:11px;font-weight:600;color:${label.color};margin:8px 0 4px">${label.name} (${arr.length}条)</div>`;
+        html+=arr.map(s=>{
+            let cls=s.priority==='fire'?'s-fire':s.priority==='high'?'s-high':'s-norm';
+            let badge=s.priority==='fire'?'<span class="badge b-fire">🔥</span>':'<span class="badge b-info">'+(s.lifecycle||'?')+'</span>';
+            let vc=s.variable_change||'';
+            return `<div class="signal-row ${cls}" style="flex-wrap:wrap"><div style="display:flex;align-items:center;gap:6px;width:100%">${badge}<span style="font-weight:600;min-width:60px;font-size:11px">${s.title||s.id||'?'}</span></div><div style="font-size:10px;color:#8b949e;margin-top:2px;padding-left:34px">${vc}</div></div>`}).join('');
+    }
+    el('scannerSignals').innerHTML=html||'<div class="empty">无Scanner信号</div>';
 }
 function renderAnalyst(sigs){
     let confMap={green:'🟢已确认',yellow:'🟡合理推断',grey:'🔴猜测',red:'🔴猜测'};
@@ -248,6 +260,14 @@ async function loadTrend(){
     // Sector KDJ
     el('kdjDate').textContent=' '+(sector?.week_date||sector?.week||'');
     let secs=sector?.sectors||[],ssort=[...secs].sort((a,b)=>(a.below15_pct||0)-(b.below15_pct||0));
+    
+    // Theses
+    try{let theses=await L('data/theses.json').catch(()=>null);let ths=theses?.theses||[];
+    if(ths.length){let thHTML='<div class="card" style="margin-top:8px"><div class="card-title">📋 投资逻辑追踪 ('+ths.length+'条)</div>'+ths.map(t=>`<div class="signal-row"><span class="mono blue" style="min-width:70px">${t.code||''}</span><span style="font-weight:600;min-width:60px;font-size:11px">${t.stock||''}</span><span style="flex:1;font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${t.thesis||''}</span><span style="font-size:9px;color:${t.confidence==='high'?'#3fb950':t.confidence==='medium'?'#d29922':'#8b949e'}">${t.confidence==='high'?'🟢':t.confidence==='medium'?'🟡':'🔴'}</span></div>`).join('')+'</div>';document.getElementById('t-trend').insertAdjacentHTML('beforeend',thHTML);}}catch(e){}
+    // Attributions
+    try{let att=await L('data/attributions.json').catch(()=>null);let items=att?.items||[];
+    if(items.length){let topAttr=items.filter(a=>Math.abs(a.pct_change||0)>3).slice(0,20);
+    let attrHTML='<div class="card" style="margin-top:8px"><div class="card-title">📊 异动归因 ('+att.attribution_date+')</div>'+topAttr.map(a=>{let p=a.pct_change||0;return`<div class="signal-row"><span class="mono blue" style="min-width:70px">${a.ticker||''}</span><span style="font-weight:600;min-width:55px;font-size:10px">${a.ticker_name||''}</span><span class="mono" style="color:${p>=0?'#da3633':'#3fb950'};min-width:42px;text-align:right">${p>0?'+':''}${p.toFixed(1)}%</span><span style="flex:1;font-size:9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${a.catalyst||''}</span></div>`}).join('')+'</div>';document.getElementById('t-trend').insertAdjacentHTML('beforeend',attrHTML);}}catch(e){}
     el('sectorKDJ').innerHTML=ssort.length?ssort.map(s=>{let b15=s.below15_pct||0;return`<tr><td>${s.category||'?'}</td><td style="text-align:right;color:#8b949e">${s.stock_count||0}</td><td style="text-align:right;font-family:monospace">${fmtN(s.avg_K)}</td><td style="text-align:right;font-family:monospace;color:${(s.avg_J||0)<20?'#3fb950':'#c9d1d9'}">${fmtN(s.avg_J)}</td><td style="text-align:right;color:${b15>30?'#3fb950':b15>15?'#d29922':'#c9d1d9'}">${b15.toFixed(0)}%</td><td style="text-align:right;font-size:9px;color:${s.status==='🔴超跌'?'#3fb950':s.status==='🟡偏弱'?'#d29922':'#8b949e'}">${s.status||'—'}</td></tr>`}).join(''):'<tr><td colspan="6" class="empty">无数据</td></tr>';
     }catch(e){console.log(e)}
 }
@@ -286,15 +306,6 @@ function renderAlertRow(s,rank,cls,badge){
     return`<div class="a-card ${cls||''}" onclick="showChart('${s.ts_code}','${name}')">${rank?'<span style="color:#8b949e;font-size:9px;min-width:16px">#'+rank+'</span>':''}<span class="badge ${badge==='B1'?'b-fire':badge==='卖'?'b-high':'b-info'}">${badge||'?'}</span><span style="font-weight:600;min-width:60px">${s.name||''}</span><span class="mono blue" style="min-width:75px">${s.ts_code||''}</span><span style="color:#8b949e;font-size:9px;min-width:70px">${s.theme_category||''}</span><span class="mono">周J:${(s.week_J||0).toFixed(0)} 日J:${dj}</span><span>胜率:${wr} 均收:${ar}</span><span class="mono" style="color:#d29922">得分:${score.toFixed(0)}</span></div>`;
 }
 
-// ════════════════ TAB: 归因 ════════════════
-async function loadAttrib(){
-    try{let att=await L('data/attributions.json').catch(()=>null);if(!att){el('attribList').innerHTML='<div class="empty">无数据</div>';return}
-    el('attribDate').textContent=att.attribution_date?' '+att.attribution_date:'';
-    let items=att.items||[];
-    el('attribList').innerHTML=items.length?items.map(a=>{let p=a.pct_change||0,up=p>0;
-        return`<div class="signal-row"><span class="mono blue" style="min-width:75px">${a.ticker||''}</span><span style="font-weight:600;min-width:65px">${a.ticker_name||''}</span><span class="mono" style="color:${up?'#da3633':'#3fb950'};min-width:48px;text-align:right">${fmtPct(p)}</span><span style="flex:1;font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${a.catalyst||''}</span><span style="font-size:9px;color:#8b949e">${a.confidence||''}</span></div>`}).join(''):'<div class="empty">无归因数据</div>';
-    }catch(e){console.log(e)}
-}
 
 // ════════════════ TAB: 持仓 ════════════════
 async function loadPortfolio(){
