@@ -702,7 +702,7 @@ a:hover { text-decoration:underline; }
             <div id="chartHeader" style="font-size:14px;font-weight:600;color:#e6edf3;margin-bottom:8px;">📈 点击左侧个股查看周线</div>
             <div id="chartViewer" style="text-align:center;color:#8b949e;padding-top:10px;">
                 <canvas id="kdjChart" style="width:100%;"></canvas>
-                <div style="font-size:10px;color:#8b949e;margin-top:5px;">K线 + BBI<i style="color:#d29922">━</i> + 白线<i style="color:#e6edf3">━</i> | 附图: KDJ(K<i style="color:#8b949e">━</i> D<i style="color:#d29922">━</i> J<i style="color:#58a6ff">━</i>)</div>
+                <div style="font-size:10px;color:#8b949e;margin-top:5px;">K线 + BBI标<i style="color:#6e7681">━</i> + 黄线<i style="color:#d29922">━</i> + 白线<i style="color:#f0f6fc">━</i> | 附图: KDJ(K<i style="color:#8b949e">━</i> D<i style="color:#d29922">━</i> J<i style="color:#58a6ff">━</i>)</div>
             </div>
         </div>
     </div>
@@ -2106,10 +2106,10 @@ async function openWeeklyChart(code, name) {
         // Align weeks with kdj data; trim from first bar that has BBI data
         let weeks = ch.weeks.slice(-60);
         let kdj = ch.kdj ? ch.kdj.slice(-60) : [];
-        // Find first index where both white and yellow lines are available
+        // Find first index where white, yellow, AND bbi_std are available
         let firstValid = 0;
         for (let i = 0; i < Math.min(weeks.length, kdj.length); i++) {
-            if (kdj[i] && kdj[i].yellow != null && kdj[i].white != null) {
+            if (kdj[i] && kdj[i].yellow != null && kdj[i].white != null && kdj[i].bbi_std != null) {
                 firstValid = i; break;
             }
         }
@@ -2142,7 +2142,8 @@ async function openWeeklyChart(code, name) {
         const allP = weeks.flatMap(w => [w.h, w.l]);
         const bb = (kdj.filter(k=>k&&k.yellow!=null).map(k=>k.yellow)||[]);
         const wh = (kdj.filter(k=>k&&k.white!=null).map(k=>k.white)||[]);
-        const allV = [...allP, ...bb, ...wh].filter(v=>v!=null&&!isNaN(v)&&isFinite(v));
+        const bs = (kdj.filter(k=>k&&k.bbi_std!=null).map(k=>k.bbi_std)||[]);
+        const allV = [...allP, ...bb, ...wh, ...bs].filter(v=>v!=null&&!isNaN(v)&&isFinite(v));
         if (!allV.length) return;
         const minP = Math.min(...allV) * 0.97, maxP = Math.max(...allV) * 1.03;
         const pR = (maxP - minP) || 1;
@@ -2177,6 +2178,19 @@ async function openWeeklyChart(code, name) {
         for (let i = 0; i < Math.min(n, kdj.length); i++) {
             if (kdj[i] && kdj[i].yellow != null) {
                 const x = px(i), y = py(kdj[i].yellow);
+                if (!started) { ctx.moveTo(x, y); started = true; }
+                else ctx.lineTo(x, y);
+            }
+        }
+        ctx.stroke(); ctx.setLineDash([]);
+
+        // ── BBI 标准线 (3,6,12,24) 灰色 ──
+        ctx.strokeStyle = '#6e7681'; ctx.lineWidth = 1.2; ctx.setLineDash([2, 4]);
+        ctx.beginPath();
+        started = false;
+        for (let i = 0; i < Math.min(n, kdj.length); i++) {
+            if (kdj[i] && kdj[i].bbi_std != null) {
+                const x = px(i), y = py(kdj[i].bbi_std);
                 if (!started) { ctx.moveTo(x, y); started = true; }
                 else ctx.lineTo(x, y);
             }
@@ -2266,10 +2280,10 @@ async function openWeeklyChart(code, name) {
         // ── Legend (main chart) ──
         const lx = padL + 8, ly = padT + 14;
         ctx.font = '10px sans-serif';
-        [['━━ 白线 EMA','#f0f6fc'], ['┅┅ 黄线 BBI','#d29922']].forEach(([t,c],i) => {
+        [['━━ 白线 EMA','#f0f6fc'], ['┅┅ BBI标','#6e7681'], ['┅┅ 黄线 BBI','#d29922']].forEach(([t,c],i) => {
             ctx.fillStyle = c;
             ctx.textAlign = 'left';
-            ctx.fillText(t, lx + i*130, ly);
+            ctx.fillText(t, lx + i*120, ly);
         });
         // KDJ legend
         const lx2 = padL + 8, ly2 = y2Base + padT + 12;
