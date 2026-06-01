@@ -2049,7 +2049,7 @@ async function loadSectorKDJ() {
 // ===== 报警 Tab（kdj-double-alert.json）=====
 async function loadAlerts() {
     try {
-        const data = await loadJSON('data/kdj-double-alert.json');
+        const data = await loadJSON('data/kdj-double-alert-lite.json');
         if (!data) { console.warn('Alerts data not available'); return; }
         document.getElementById('alertDate').textContent = data.week_date ? '周截止 ' + data.week_date : '';
 
@@ -2087,10 +2087,15 @@ async function loadAlerts() {
     } catch(e) { console.log('Alert load err:', e); }
 }
 
+let kdjChartCache = null;  // cache chart_data separately
+
 async function openWeeklyChart(code, name) {
     try {
-        const data = await loadJSON('data/kdj-double-alert.json');
-        const cd = data.chart_data || {};
+        // Load chart data on demand (cached after first load)
+        if (!kdjChartCache) {
+            kdjChartCache = await loadJSON('data/kdj-chart-data.json');
+        }
+        const cd = kdjChartCache || {};
         const ch = cd[code];
         if (!ch || !ch.weeks || ch.weeks.length < 10) {
             document.getElementById('chartViewer').innerHTML = '<div style="color:#8b949e;padding:40px;text-align:center;">图表数据不足</div>';
