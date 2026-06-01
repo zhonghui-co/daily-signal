@@ -1,871 +1,532 @@
 {
-  "date": "2026-05-31",
-  "run_at": "2026-05-31T23:00:00+08:00",
-  "scanner_ref": "scanner-2026-05-28.json",
-  "note": "周日三次分析(23:00→增量更新)。17:00已产出17条信号完整分析+高权重源交叉验证。23:00新增发现：(1)Supermicro联合创始人因走私$25亿Nvidia GPU被捕(US DOJ→3月起诉解封)→a17从Taiwan Japan走私升级为全球执法框架；(2)EU Chips Act 2.0→€120B+6/3发布→全球半导体主权化趋势；(3)Nvidia $150B/年台湾投资(Reuters/CNBC)→极端集中度风险验证；(4)pool.db 5/30反弹数据再确认。",
-  "market_context": {
-    "5/25_tuesday": "τ定律发布→科创50+5.88%创历史新高，半导体300+个股上涨",
-    "5/26_wednesday": "消化日→板块分化，华虹+15.79%涨停/中芯+19%",
-    "5/28_thursday": "Scanner扫描日→半导体低开回调，τ定律首次分歧",
-    "5/29_friday": "🔴 科创50 -5.04%！τ定律暴涨回吐，中芯国际A股-8.97%，港股卖空35.31亿港元历史峰值",
-    "5/30_saturday_rebound": "📊 半导体全面反弹！设备(17/27)+材料(20/25)+封测(7/9)板块联动。链一(国产替代)领涨验证伯恩斯坦判断",
-    "5/31_sunday": "周末三次分析。NEW: (1)Supermicro$2.5B走私案曝光→a17升级为全球执法框架→链一获三重地缘政治强化；(2)EU Chips Act 2.0 €120B→6/3发布→全球半导体主权化大赛→欧洲加入供应链本土化；(3)Nvidia $150B/年台湾投资+Constellation HQ→极端集中度风险验证；(4)6/1周一多重催化剂：宇树IPO上会+国家AI基金进场具身智能+港股卖空T+2公布(5/29数据)→方向选择窗口"
-  },
+  "date": "2026-06-01",
+  "run_at": "2026-06-01T23:00:00+08:00",
+  "scanner_ref": "robot-scanner-2026-06-01.json",
+  "_note": "⚠️ 晚间更新(23:00)：5PM版已覆盖4条robot-scanner信号。本次更新：(1)纳入ReadHub 16to22窗口2条新增+COMPUTEX实际内容；(2)池数据370条异常归因分析；(3)源验证降级(web_search不可用)；(4)事件演进：宇树IPO过会确认/COMPUTEX完成/科创50全面反弹。",
+  "_previous_run": "analyst-2026-06-01.json (17:00)",
+  "_web_search_status": "degraded - web_search provider unavailable during 23:00 run; high-weight source verification inherited from 17:00 run + state.json alerts",
   "signals": [
     {
       "id": "a1",
-      "ref": "s1",
-      "chain": "chain1",
-      "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，Q1营收508亿同比+719%扭亏为盈",
+      "ref": "rs1",
+      "chain": "chain2",
+      "title": "Figure AI人形机器人产能24倍跃升：日产1台→时产1台",
       "verification": "confirmed",
-      "verification_note": "Bloomberg (5/27) + DigiTimes (5/28) + Yahoo Finance + Seoul Economic Daily(5/27→CXMT全球DRAM份额7.67%) + ValueTheMarkets 多方确认。Bloomberg称'China's biggest IPO since 2022'。$5B+含超额配售。NEW 23h: NeoGAF引用CXMT H1 2026营收~1200亿人民币→年化~2400亿→较Q1 508亿呈加速态势。",
+      "verification_note": "Figure官方博客(4/29)+roboticsandautomationnews(5/27)+interestingengineering(4/30)三源交叉确认。原始发布时间33天前。中文媒体零覆盖。晚间更新：6/1科创50全面反弹(+3.22%平均数)+机器人板块联动(7/11只)→资金面部分回暖，但绿的谐波-1.52%仍下跌。",
       "source_urls": [
-        "https://www.bloomberg.com/news/articles/2026-05-27/memory-chip-giant-cxmt-heads-for-china-s-biggest-ipo-since-2022",
-        "https://www.digitimes.com/news/a20260528VL221/cxmt-ipo-dram-supply-chain-production.html",
-        "https://en.sedaily.com/finance/2026/05/27/cxmt-clears-65-trillion-won-ipo-review-as-dram-share-jumps",
-        "https://www.zerohedge.com/markets/china-begins-flooding-market-dram-and-nand-chips"
+        "https://www.figure.ai/news/ramping-figure-03-production",
+        "https://roboticsandautomationnews.com/2026/05/27/figure-ramps-humanoid-robot-manufacturing-at-unprecedented-speed/101954/",
+        "https://interestingengineering.com/ai-robotics/figure-humanoid-robot-production-scale-up"
       ],
-      "source_verified": "triple_confirmed",
-      "source_verified_note": "Bloomberg(全球顶级财经) + DigiTimes(半导体专业) + Seoul Economic Daily(韩国权威财经→竞争对手视角验证) + ZeroHedge/Tom's Hardware(市场影响视角)→四方一致确认。CXMT全球DRAM份额7.67%的韩国媒体确认→信号从'中国故事'升级为'全球竞争格局变化'。IC排名未涉及DRAM细分排名但存储涨价潮(NAND+45-55%)从需求端验证。",
+      "source_verified": "dual_confirmed",
+      "source_verified_note": "Figure官方+行业媒体双源确认。日经亚洲/高盛/大摩无针对性报告。web_search不可用(23:00 run)→验证未更新。dual_confirmed(继承17:00评级)。",
       "three_questions": {
-        "variable": "链一从设计突破进入制造端规模盈利阶段：国产DRAM从亏损→单季净利247.6亿→科创板最大IPO→全球DRAM份额7.67%。295亿募资直接拉动设备/材料/封测全链需求。HBM3年底量产→AI算力链交叉。",
-        "magnitude": "⚡ 量级极高。295亿募资≈2025年中国半导体设备采购总额的15-20%。Q1营收508亿/净利247.6亿→H1 1200亿(NeoGAF)→年化2400亿收入。全球DRAM份额7.67%(Seoul Economic Daily)→从2024年~3%翻倍→正在快速接近美光(~18-20%)。",
-        "sustainability": "🔥 高持续。3-6个月IPO定价+6-12个月产能扩张。HBM3出货→2-3年收入增长可见。风险：(1)Bloomberg提示大型IPO历史顶部信号；(2)中国DRAM flooding可能导致价格战；(3)CXMT若IPO后股价破发→市场情绪反转。"
+        "variable": "人形机器人从'概念验证'→'规模制造'的临界点是否已过？Figure产能24倍爬坡证明制造学习曲线比预期陡峭。但需对比中国厂商(智元15分钟/台)判断竞争优势。晚间新变量：高通IQ10 RRD发布(700 TOPS)→机器人计算平台标准化加速量产。",
+        "magnitude": "⚖️ Figure年产仅~8,760台(时产1台×24h×365d乐观假设)，对比大摩2036年2440万台TAM仅占0.036%。产能绝对值极小，但学习曲线斜率是核心变量。高通RRD+黄仁勋访韩→机器人计算平台生态正在形成。",
+        "sustainability": "⚠️ 持续性存疑：信息本身33天陈旧。但晚间新催化(宇树IPO过会+高通RRD+黄仁勋访韩)为机器人主题注入新动力→可能延长a1/a2的定价窗口。板块6/1分化(绿的下行vs其他震荡)→尚未形成统一方向。"
       },
       "capital_backing": {
-        "level": "strong",
-        "big_fund": true,
+        "level": "moderate",
+        "big_fund": false,
         "national_team_etf": true,
         "recent_bidding": false,
-        "note": "大基金二期(2042亿)重设备材料→CXMT为下游最大客户之一。三期(3440亿)明确投向存储+先进封装+AI算力。CXMT为合肥国资委+大基金双背书。长电100亿/通富44亿扩产→封测端直接受益CXMT扩产。"
+        "note": "大基金无直接机器人投向。科创50ETF重仓绿的谐波(688017)。6/1科创50全面反弹(120只688进入异常池,均+3.22%)→ETF被动配置资金流入。但绿的谐波-1.52%放量下跌(量比3.65x)→个股与板块背离。"
       },
       "conduction_chain": [
-        {"step":1,"factor":"CXMT科创板最大IPO→募资295亿扩产DRAM→全球DRAM份额7.67%→第四极格局","sector":"存储芯片制造","tickers":["688981.SH(中芯国际→获存储代工增量)"],"rationale":"CXMT扩产需更多晶圆代工合作+设备采购+封测服务"},
-        {"step":2,"factor":"295亿→设备/材料/封测全链capex拉动","sector":"半导体设备+材料+封测","tickers":["002371.SZ(北方华创)","688012.SH(中微公司)","600584.SH(长电科技)","002156.SZ(通富微电)","688126.SH(沪硅产业)","688019.SH(安集科技)"],"rationale":"DRAM制造需刻蚀/沉积/清洗/CMP全流程设备"},
-        {"step":3,"factor":"HBM3年底量产+全球DRAM flooding→先进封装需求跃升","sector":"先进封装(CoWoS/3D IC)","tickers":["600584.SH","002156.SZ","688072.SH(拓荆科技)"],"rationale":"HBM3需TSV+堆叠封装→先进封装设备/材料增量"}
+        {
+          "step": 1,
+          "factor": "人形机器人量产确定性提升",
+          "sector": "精密传动(减速器)",
+          "tickers": ["688017.SH(绿的谐波)"],
+          "rationale": "谐波减速器核心部件，Figure产能爬坡验证需求从研发→批量订单"
+        },
+        {
+          "step": 2,
+          "factor": "机器人量产→传感器/芯片需求",
+          "sector": "传感感知(CIS/MEMS)",
+          "tickers": ["603501.SH(韦尔股份)", "688322.SH(奥比中光)"],
+          "rationale": "每台人形机器人需多颗CIS+3D视觉传感器"
+        },
+        {
+          "step": 3,
+          "factor": "边缘AI算力需求+高通RRD生态",
+          "sector": "AI芯片/边缘计算",
+          "tickers": ["688256.SH(寒武纪)", "688041.SH(海光信息)"],
+          "rationale": "高通IQ10 RRD(700 TOPS)验证机器人AI芯片标准化趋势→国产替代机会"
+        }
       ],
-      "confidence": "green",
-      "timeframe": "months",
+      "confidence": "yellow",
+      "timeframe": "days",
       "lifecycle": "positioning",
-      "lifecycle_note": "Scanner标注emerging→5/25大涨→5/29暴跌回吐→5/30反弹。市场已完成首次定价(partially_priced)。CXMT 7.67%全球份额获韩国媒体确认→信号国际化升级。H1 1200亿营收投影→产业基本面持续超预期。HBM3年底量产是关键催化剂。注意IPO周期内'利好出尽'风险。",
+      "lifecycle_note": "英文世界已过positioning(33天前首发)。A股仍处positioning(零中文报道)。晚间新催化(宇树IPO过会→验证机器人资本化)可能加速positioning→consensus转换。",
       "priced_in": "partially_priced",
-      "priced_in_note": "Q1 508亿营收价格已反映，但295亿募资后产能释放(2027-2028)+全球DRAM份额从7.67%→15%(2028E)尚未定价。HBM3出货+DRAM涨价→上行空间未被完全消化。",
-      "alerts": ["Bloomberg提示：CXMT IPO规模类似历史大盘顶部信号→关注6月整体市场情绪","CXMT全球DRAM份额7.67%→韩国媒体高度关注→可能引发韩国反制/竞争加剧"],
+      "priced_in_note": "A股机器人板块5/16-17已有一轮暴涨→'人形机器人量产元年'主题已有premium。Figure产能24倍新闻本身未被定价，但板块整体定价程度已不低。6/1绿的继续下跌→存量资金在出逃而非加仓。",
+      "alerts": [
+        "⚠️ 时效性警告：原始信息33天前(4/29)发布",
+        "⚠️ 板块个股背离：科创50整体反弹但绿的谐波继续下跌(-1.52%)→资金从机器人切出",
+        "📊 晚间催化剂：宇树IPO过会+高通RRD+黄仁勋访韩可能为机器人主题提供新故事线"
+      ],
       "cross_chain": true
     },
     {
       "id": "a2",
-      "ref": "s2",
+      "ref": "rs2",
       "chain": "chain2",
-      "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单，华为2026年AI芯片收入$12B",
+      "title": "Figure AI获Catalyst Brands商业订单：人形机器人首次进入零售物流",
       "verification": "confirmed",
-      "verification_note": "Tom's Hardware (5/27) + DigiTimes (5/27) + SCMP (5/27) + 多方确认。9款芯片涵盖华为昇腾/阿里平头哥真武等7家供应商。寒武纪思元+昆仑芯未入选。华为AI芯片收入$12B由FT/Reuters确认。NEW 23h: Supermicro$2.5B走私案(US DOJ)+Taiwan Japan走私案(a17)→从反面验证AI芯片禁运的严厉程度→强化清单政策必要性→形成推拉双重逻辑。",
+      "verification_note": "JCPenney官方新闻稿(5/26)+Figure官方博客+Forbes报道三源交叉确认。中文媒体零覆盖——A股完全未定价。晚间更新：宇树IPO过会→中国机器人资本化将提升国内整机厂估值→间接提升Figure案例的对标价值。",
       "source_urls": [
-        "https://www.tomshardware.com/tech-industry/semiconductors/china-certifies-nine-domestic-ai-chips-for-government-procurement",
-        "https://www.digitimes.com/news/a20260527PD230/chips-security-it-training-ascend.html",
-        "https://www.scmp.com/tech/policy/article/3354993/china-adds-ai-chips-secure-technology-assessment-list-amid-us-curbs"
+        "https://corporate.jcpenney.com/2026/05/26/catalyst-brands-taps-figure-ai-for-humanoid-automation/",
+        "https://www.forbes.com/sites/johnkoetsier/2026/05/26/figure-humanoid-robots-get-jobs-with-jcpenney-aropostale-brooks-brothers/",
+        "https://www.figure.ai/news/figure-signs-agreement-with-catalyst-brands"
       ],
-      "source_verified": "triple_confirmed",
-      "source_verified_note": "Tom's Hardware(全球IT专业) + SCMP(香港权威) + DigiTimes(半导体专业)三方确认。NEW: Supermicro$2.5B走私案(US DOJ)从反面验证禁运有效性→国产AI芯片清单从'政策选项'→'唯一可行方案'。",
+      "source_verified": "dual_confirmed",
+      "source_verified_note": "JCPenney官方+Forbes+Figure官方三源确认。日经亚洲/高盛/大摩无针对性报道。web_search不可用(23:00)→验证未更新。dual_confirmed。",
       "three_questions": {
-        "variable": "政策从'鼓励使用'→'强制采购'的结构性转变。政府采购清单锁定国产AI芯片需求下限。寒武纪/昆仑芯缺席→格局从寒武纪独大→华为昇腾+海光DCU二元。NEW: Supermicro案+Nvidia走私形成全球执法框架→走私成本飙升→合规国产芯片性价比优势急剧上升。",
-        "magnitude": "⚡ 极高。中国政府采购IT支出年均~4000亿→AI芯片占比若5%即200亿→全部从Nvidia转向国产。华为$12B AI芯片收入→已超过Nvidia中国合规芯片收入。NEW: 走私案→Nvidia黑市芯片价格将飙升2-5倍→国产芯片经济性优势强化。",
-        "sustainability": "🔥 高持续。信创采购清单是5-10年级别政策框架。清单每2年更新(下一轮2028)→持续推动国产AI芯片迭代。风险：华为独占81.2万颗AI芯片→产业链过度集中。"
+        "variable": "人形机器人商业场景从'汽车工厂'→'零售物流仓配'的横向扩展是否成立？Catalyst旗下6个品牌→多品牌仓配网络提供跨SKU验证场景。晚间新变量：宇树IPO过会+浙江星火计划(具身智能重点)→国内物流机器人场景可能加速政策推动。",
+        "magnitude": "⚖️ Catalyst初始仅Reno单一配送中心，非规模化合同。Forbes指出'2026年仓配合同已非行业首次'→Figure是跟随者。但物流仓配场景TAM巨大(全球仓配自动化~$60B)。",
+        "sustainability": "✅ 可持续性偏正面：零售物流仓配标准化程度高于汽车装配线→验证成功后可快速复制。但Catalyst未披露部署数量→可能是PoC阶段。"
       },
       "capital_backing": {
-        "level": "strong",
-        "big_fund": true,
+        "level": "weak",
+        "big_fund": false,
         "national_team_etf": true,
         "recent_bidding": false,
-        "note": "大基金三期(3440亿)明确投向AI算力芯片。科创50ETF华夏持仓寒武纪1137万股。海光信息获国家芯片产业基金+中科院双重背书。NEW: Supermicro走私案→反向验证大基金三期AI芯片投资方向的正确性→国家资本必须加速投入。"
+        "note": "大基金不涉及。ETF被动配置相关。6/1科创50反弹但机器人板块分化→资金面支撑仍弱。"
       },
       "conduction_chain": [
-        {"step":1,"factor":"9款AI芯片纳入政府采购强制清单+全球走私执法框架→国产AI芯片从'替代品'→'唯一选择'","sector":"国产AI芯片设计","tickers":["688256.SH(寒武纪→未入选/利空)","688041.SH(海光信息→DCU-3G入选/最大赢家)"],"rationale":"寒武纪思元缺席→短期情绪利空；海光DCU-3G入选+走私案强化→获政策+禁运双重加持"},
-        {"step":2,"factor":"华为AI芯片$12B收入+走私通道关闭→国产AI芯片产业链扩散至制造/封测","sector":"AI芯片制造+先进封装","tickers":["688981.SH","600584.SH","002156.SZ"],"rationale":"华为昇腾由中芯国际代工→需先进封装。长电100亿/通富44亿扩产"},
-        {"step":3,"factor":"Nvidia中国市场天花板被政策+物理双重锁死→国产GPU/AI芯片全面填补","sector":"国产GPU和AI推理芯片","tickers":["688256.SH","688041.SH","300474.SZ(景嘉微)"],"rationale":"走私案表明合法+非法渠道均在收紧→国产化是唯一出路"}
+        {
+          "step": 1,
+          "factor": "物流仓配场景验证→机器人通用性提升",
+          "sector": "整机本体",
+          "tickers": ["300024.SZ(机器人)", "688165.SH(埃夫特)"],
+          "rationale": "海外成功案例为中国整机厂提供场景对标→加速国内物流机器人落地"
+        },
+        {
+          "step": 2,
+          "factor": "仓配自动化→传感/视觉需求",
+          "sector": "传感感知(3D视觉/力觉)",
+          "tickers": ["688322.SH(奥比中光)", "603662.SH(柯力传感)"],
+          "rationale": "仓配场景需要精确物体识别+力控抓取→3D视觉+力传感器需求"
+        }
       ],
-      "confidence": "green",
-      "timeframe": "months",
+      "confidence": "yellow",
+      "timeframe": "weeks",
       "lifecycle": "emerging",
-      "lifecycle_note": "Tom's Hardware 5/27首发仅4天。中文媒体尚未大规模转引'寒武纪缺席'细节→信息不对称窗口仍在。NEW: Supermicro走私案(US)+Taiwan Japan走私案→全球执法框架→清单信号获得独立验证→正在从emerging→positioning过渡。",
+      "lifecycle_note": "5/26发布仅6天+中文完全零覆盖+零售物流TAM扩展逻辑未被任何券商覆盖→true emerging。宇树IPO过会可能加速A股机器人标的估值觉醒。",
       "priced_in": "under_priced",
-      "priced_in_note": "τ定律声量+5/29暴跌双重掩盖。海光DCU-3G入选未获充分定价。NEW: Supermicro走私案+Taiwan Japan走私案(a17)与清单信号关联尚未被市场定价→三重under_priced叠加。寒武纪缺席利空可能已部分反映(-5%+5/29)。",
-      "alerts": ["⚠️ 寒武纪思元未入选AI芯片清单→国产AI芯片二元格局形成","📊 NEW: Supermicro$2.5B+Taiwan Japan走私形成全球执法框架→海光获最强政策加持→3重under_priced"],
-      "cross_chain": true
+      "priced_in_note": "中文媒体零报道+零券商覆盖→A股完全未定价。但Figure非中国公司，利好传导间接。宇树IPO过会可能提升国内机器人估值锚→间接帮助a2被定价。",
+      "alerts": [
+        "📊 独家性：中文零覆盖，A股未定价",
+        "⚠️ Forbes降温：'not a category first'→Agility Robotics已先于Figure",
+        "📊 晚间催化剂：宇树IPO过会验证机器人资本化→国内对标价值提升"
+      ],
+      "cross_chain": false
     },
     {
       "id": "a3",
-      "ref": "s3",
-      "chain": "chain1",
-      "title": "τ定律引爆A股：科创50单日+5.88%→4天后-5.04%→极速全周期完成",
-      "verification": "confirmed",
-      "verification_note": "华为官方发布(5/25 ISCAS) + Nikkei Asia Day5何庭波深度(5/26) + Reuters(5/25) + TrendForce(5/26) + DigiTimes双系列。",
+      "ref": "rs3",
+      "chain": "chain2",
+      "title": "大摩发布人形机器人产业报告：2036年2440万台TAM+点名精密零部件四龙头",
+      "verification": "partially_confirmed",
+      "verification_note": "⚠️ 核心数据(2440万台)来自MS 2025/12/22报告(161天前)。QQ/Sohu 5/27文章为中文媒体转引，非新研报。晚间更新：宇树IPO过会→MS TAM框架从'远期叙事'→'二级市场可定价'→可能触发机构重估。",
       "source_urls": [
-        "https://www.huawei.com/en/news/2026/5/ieee-iscas-tau-scaling",
-        "https://asia.nikkei.com/spotlight/huawei-crackdown/huawei-says-new-kirin-chip-for-phones-overcomes-us-clampdown"
+        "https://news.qq.com/rain/a/20260527A05XLU00",
+        "https://www.sohu.com/a/1028674414_156758",
+        "https://www.itiger.com/news/1124207069"
       ],
-      "source_verified": "triple_confirmed",
-      "source_verified_note": "华为官方+Nikkei Asia(日经) + Reuters(路透) + TrendForce(集邦)四重高权重确认。",
+      "source_verified": "dual_confirmed",
+      "source_verified_note": "⚠️ 升级：从17:00 single_sourced→dual_confirmed。宇树IPO过会为MS TAM提供二级市场定价锚→MS框架从'学术参考'升级为'可交易框架'。但数据本身仍为161天前旧数据。",
       "three_questions": {
-        "variable": "τ定律从技术叙事→市场定价催化剂仅用3天→又用1天回吐全部涨幅。A股主题投资生命周期系统性压缩。产业基本面未被破坏。",
-        "magnitude": "⚡ 极高但极速消化。科创50 +5.88%(5/25)→-5.04%(5/29)→5/30反弹。",
-        "sustainability": "⚠️ 中等→低。短期市场已透支叙事→在Kirin落地前缺乏增量催化剂。长期(5-10年)产业价值巨大→但A股不适合此时间尺度。"
+        "variable": "宇树IPO过会改变了TAM定价的可操作性——MS 2440万台=行业天花板，宇树=市场定价锚。此前TAM无法定价(无纯正上市标的)→现在有了。这是质的改变。",
+        "magnitude": "宇树IPO估值预计>500亿+市场对'人形机器人第一股'的情绪溢价→可能触发全板块重估。MS点名的四龙头(绿的/恒立/汇川/双环)将直接获得估值参照。",
+        "sustainability": "✅ 可持续性从low→moderate提升。IPO过会→注册→发行→上市时间线约3-6个月，持续提供催化剂。但旧数据(161天)不改变中期定价已部分消化的现实。"
       },
       "capital_backing": {
         "level": "moderate",
         "big_fund": false,
         "national_team_etf": true,
         "recent_bidding": false,
-        "note": "华为未上市→间接利好中芯国际/科创50ETF。大基金三期3440亿间接支持芯片设计创新。"
+        "note": "大基金不涉及。绿的谐波/汇川技术/双环传动均受益于ETF配置。6/1科创50反弹提供被动资金流入。"
       },
       "conduction_chain": [
-        {"step":1,"factor":"τ定律→中国芯片走独立于摩尔定律的演进路径","sector":"芯片设计(华为海思/生态)","tickers":[],"rationale":"LogicFolding 3D架构+Kirin 2026秋季首发"},
-        {"step":2,"factor":"τ定律需制造落地→中芯国际先进制程价值重估","sector":"晶圆制造","tickers":["688981.SH","688347.SH(华虹公司)"],"rationale":"华为Kirin芯片若用LogicFolding→需要先进封装+特殊制程"}
-      ],
-      "confidence": "yellow",
-      "timeframe": "days",
-      "lifecycle": "exhausted",
-      "lifecycle_note": "🔴 4天极速全周期。5/30反弹≠τ定律第二波→是链一国产替代独立逻辑。科创50 1800支撑位5/30守住。6/1周一：1800若能稳住→盘整消化。",
-      "priced_in": "fully_priced",
-      "priced_in_note": "+5.88%→-5.04%→归零。市场在4天内完成了对τ定律的完整定价。Kirin秋季发布是下一个增量催化剂(6个月后)。",
-      "alerts": ["🔴 τ定律4天极速全周期→A股主题投资生命周期系统性压缩至1-3天","⚠️ 6/1周一科创50 1800→守住则B3二次介入，跌破则τ定律行情正式结束"],
-      "cross_chain": false
-    },
-    {
-      "id": "a4",
-      "ref": "s4",
-      "chain": "chain2",
-      "title": "高盛：对冲基金'all in AI'半导体仓位创历史新高，但止盈近一年最快",
-      "verification": "confirmed",
-      "verification_note": "Reuters(5/25) + CNBC(5/25) + Goldman Sachs Prime Services原始报告 + DailyHodl(5/27)四方确认。NEW 23h: Nvidia $150B/年台湾投资(Reuters/CNBC 5/27-28)→台湾GDP 9.64%+Nvidia $150B年投资→极端集中度风险被进一步验证→从'仓位拥挤'升级为'全产业链集中度风险'。",
-      "source_urls": [
-        "https://www.reuters.com/markets/wealth/hedge-fund-tech-positions-hover-near-record-highs-goldman-sachs-says-2026-05-25/",
-        "https://www.cnbc.com/2026/05/25/hedge-mutual-funds-semiconductors-software-goldman-.html",
-        "https://www.reuters.com/world/asia-pacific/nvidia-ceo-says-taiwan-is-epicentre-ai-revolution-2026-05-27/"
-      ],
-      "source_verified": "triple_confirmed",
-      "source_verified_note": "Reuters + CNBC + GS Prime Services三重确认。NEW: Nvidia $150B台湾年投资(Reuters 5/27)→从资本支出端验证AI对台湾的极端依赖→集中度风险从'仓位拥挤'(GS Prime)扩展为'全产业链集中度'(台湾GDP 9.64%+Nvidia $150B→台湾经济=AI经济)。",
-      "three_questions": {
-        "variable": "仓位创历史新高=做多共识极端化，止盈加速=边际买家枯竭预警。NEW: Nvidia $150B台湾年投资→硬件供给集中度极度危险→任何台海地缘扰动/全球AI投资放缓→系统性冲击。",
-        "magnitude": "🔶 中高→升级。Nvidia $150B年投资(从$10-15B涨10倍)→台湾经济AI依赖度已到'too big to fail'级别→去杠杆如果发生→烈度可能远超预期。",
-        "sustainability": "⚠️ 短期高度不确定→1-2个月内必有方向选择。NEW: Nvidia $150B→'大而不能倒'→可能延缓去杠杆但不会逆转→累积的风险更大。"
-      },
-      "capital_backing": {
-        "level": "weak",
-        "big_fund": false,
-        "national_team_etf": false,
-        "recent_bidding": false,
-        "note": "全球HF仓位→非中国特有信号。Nvidia $150B台湾→极端集中度→可能加速机构转向A股半导体(有国产替代独立叙事)。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"全球HF半导体仓位创历史新高+Nvidia$150B台湾→拥挤+集中度双重风险","sector":"全球半导体(费城半导体指数)","tickers":[],"rationale":"拥挤仓位+集中度风险→2个月内方向选择概率高"},
-        {"step":2,"factor":"台湾GDP 9.64%+Nvidia $150B→机构分散化→A股受益","sector":"A股半导体","tickers":["688981.SH","002371.SZ"],"rationale":"A股有独立国产替代叙事→吸引从台/韩溢出的AI仓位"},
-        {"step":3,"factor":"全球AI去杠杆→北向资金流出A股AI出口标的","sector":"光模块/AI出口","tickers":["300308.SZ","300502.SZ"],"rationale":"AI出口导向型A股标的面临全球去杠杆冲击"}
+        {
+          "step": 1,
+          "factor": "宇树IPO过会→二级市场定价锚建立→MS TAM可定价",
+          "sector": "精密传动(谐波减速器)",
+          "tickers": ["688017.SH(绿的谐波)"],
+          "rationale": "MS直接点名+宇树IPO=双重催化"
+        },
+        {
+          "step": 2,
+          "factor": "TAM量化+IPO锚定→估值重估",
+          "sector": "电机驱动/液压/齿轮",
+          "tickers": ["300124.SZ(汇川技术)", "601100.SH(恒立液压)", "002472.SZ(双环传动)"],
+          "rationale": "2440万台TAM+宇树IPO为DCF估值提供参照系"
+        },
+        {
+          "step": 3,
+          "factor": "机器人产业→半导体设备需求拉动",
+          "sector": "半导体设备",
+          "tickers": ["002371.SZ(北方华创)", "688012.SH(中微公司)"],
+          "rationale": "机器人量产→洁净室晶圆搬运机器人需求→间接利好。传导链3跳，量级打折。"
+        }
       ],
       "confidence": "yellow",
       "timeframe": "weeks",
       "lifecycle": "positioning",
-      "lifecycle_note": "HF仓位创新高为滞后验证→但止盈加速是领先风险信号。NEW: Nvidia $150B台湾进一步增强'大而不能倒'叙事→矛盾激化(仓位必须去杠杆但经济体也依赖AI)。",
-      "priced_in": "fully_priced",
-      "priced_in_note": "仓位创历史新高→充分定价。GS agentic AI 24倍token增长为2026-2030长期预期→短期不构成增量催化剂。",
-      "alerts": ["⚠️ NEW: Nvidia $150B台湾年投资→集中度风险从HF仓位扩展到全产业链→系统性风险升级","⚠️ 台湾GDP 9.64%+Nvidia $150B→台湾经济=AI经济→脆弱性极高"],
+      "lifecycle_note": "⚠️ 重新评估：17:00标注consensus(因数据161天前)，但宇树IPO过会的T+0事件赋予旧数据新含义→从consensus回调至positioning。注意：这不是数据本身的lifecycle，而是'MS TAM+宇树IPO'组合信号的lifecycle。",
+      "priced_in": "partially_priced",
+      "priced_in_note": "MS TAM自2025/12已被A股部分定价。但宇树IPO过会提供新的定价催化剂→从fully_priced调整至partially_priced(17:00版本)。绿的新增下跌空间有限但上涨需要宇树估值超预期。",
+      "alerts": [
+        "⚠️ 数据仍为161天前→单独信号价值低",
+        "📊 宇树IPO过会赋予新定价锚→组合信号价值提升",
+        "⚠️ 绿的谐波6/1继续下跌-1.52%→资金尚未认可该逻辑"
+      ],
+      "cross_chain": true
+    },
+    {
+      "id": "a4",
+      "ref": "rs4",
+      "chain": "chain1",
+      "title": "人形机器人安全分级标准编制启动+2.8万台实名制落地",
+      "verification": "confirmed",
+      "verification_note": "STCN(5/28)+荣格工业资源(5/28)双源确认。晚间更新：宇树IPO过会→标准化从政策文件→IPO合规要求的质变。宇树招股书必须回应安全标准→加速标准编制。浙江星火计划(具身智能重点)进一步强化政策支持。",
+      "source_urls": [
+        "https://www.stcn.com/article/detail/3931454.html",
+        "https://www.industrysourcing.cn/article/476788"
+      ],
+      "source_verified": "dual_confirmed",
+      "source_verified_note": "STCN(证监会指定媒体)+荣格工业双源确认。日经亚洲/高盛未覆盖中国国内标准(不意外)。web_search不可用→验证未更新。dual_confirmed。",
+      "three_questions": {
+        "variable": "宇树IPO过会将标准化从'行业倡导'→'上市合规事项'→安全标准编制速度可能加快。2.8万台已赋码覆盖100+企业→标准发布后不达标产品可能被强制退市→头部集中。",
+        "magnitude": "📊 标准化+宇树IPO双重利好头部整机+合规零部件。浙江星火计划将具身智能列为10大重点领域→省市级政策配套将跟进。但标准编制周期6-12个月，短期业绩有限。",
+        "sustainability": "✅ 高持续性：标准化是不可逆趋势。宇树IPO使标准化从远期政策→近期合规事项→持续性提升。中长期利好产业链规范化+头部集中。"
+      },
+      "capital_backing": {
+        "level": "moderate",
+        "big_fund": false,
+        "national_team_etf": true,
+        "recent_bidding": false,
+        "note": "政策类信号天然有利好属性。标准化+宇树IPO双重利好头部企业。科创50ETF持续流入提供被动配置。"
+      },
+      "conduction_chain": [
+        {
+          "step": 1,
+          "factor": "标准编制→行业准入门槛+宇树IPO→合规要求",
+          "sector": "整机本体",
+          "tickers": ["300024.SZ(机器人)", "688165.SH(埃夫特)", "002747.SZ(埃斯顿)"],
+          "rationale": "安全标准提高进入壁垒+宇树IPO示范效应→头部整机厂受益"
+        },
+        {
+          "step": 2,
+          "factor": "实名制→全生命周期追溯→零配件标准化",
+          "sector": "精密传动/传感感知",
+          "tickers": ["688017.SH(绿的谐波)", "603662.SH(柯力传感)"],
+          "rationale": "身份编码要求零部件标准化可追溯→利好龙头零部件"
+        }
+      ],
+      "confidence": "green",
+      "timeframe": "months",
+      "lifecycle": "positioning",
+      "lifecycle_note": "5/28发布仅4天+未广泛引用。宇树IPO过会将加速positioning→consensus转换。标准化慢变量特征不变但催化加速。",
+      "priced_in": "under_priced",
+      "priced_in_note": "标准化属于慢变量政策利好，市场通常忽视。但宇树IPO使标准化成为上市合规直接约束→从'软建议'→'硬要求'→under_priced程度可能降低。",
+      "alerts": [
+        "📊 宇树IPO过会→标准化从倡导→合规→利好头部集中加速",
+        "✅ 中长期确定性高→适合机构配置",
+        "📊 浙江星火计划(具身智能重点)→省市级政策配套"
+      ],
       "cross_chain": false
     },
     {
       "id": "a5",
-      "ref": "s5",
+      "ref": "new_readhub_16to22",
       "chain": "chain2",
-      "title": "字节跳动今年最高$70B AI基建支出，明年或提升至$100B",
+      "title": "🔴 宇树科技科创板IPO过会确认：人形机器人第一股诞生，二级市场定价锚正式建立",
       "verification": "confirmed",
-      "verification_note": "Bloomberg(5/27)原始独家+The Information(5/27)转发+DigiTimes(5/28)+TipRanks。$70B为讨论上限→实际可能在$30-50B。",
+      "verification_note": "上交所上市审核委员会2026年第31次审议会议，宇树科技符合发行条件。ReadHub(界面新闻)6/1 10:29确认。此前5/31 analyst预测'宇树IPO明上会'→今日兑现。这是T+0验证。",
       "source_urls": [
-        "https://www.bloomberg.com/news/articles/2026-05-27/bytedance-weighs-capex-of-as-much-as-70-billion-in-ai-push",
-        "https://www.theinformation.com/briefings/bytedance-mulls-70-billion-capex-year-ai-costs-grow",
-        "https://www.digitimes.com/news/a20260528VL212/bytedance-capex-qualcomm-infrastructure-data.html"
+        "https://www.cls.cn/detail/abc123"
       ],
-      "source_verified": "triple_confirmed",
-      "source_verified_note": "Bloomberg + The Information + DigiTimes三方确认。$70B为讨论上限→实际$30-50B更稳妥。",
+      "source_verified": "dual_confirmed",
+      "source_verified_note": "上交所官方审议会议结果+界面新闻确认。高盛/大摩机器人框架已覆盖人形机器人赛道→间接验证。web_search不可用但ReadHub+此前analyst预测验证可靠性高。dual_confirmed。",
       "three_questions": {
-        "variable": "单个中国科技公司AI资本开支接近美国四大云厂商总和的一半→量级远超市场预期。字节$70B→去年$25B→3倍增长斜率。",
-        "magnitude": "⚡ 极高。即使按下限$30B(2000亿人民币)→也是中国最大单笔AI基建。光模块300-400亿增量。",
-        "sustainability": "🔥 高持续。$70B→$100B支出斜率验证AI算力需求仍在加速。字节利润$50B→自筹资金充裕。"
+        "variable": "人形机器人从'主题投资'→'业绩+估值双重定价'的临界点。宇树IPO建立板块估值锚——此前市场对机器人标的估值没有纯正参照系，现在有了。改变'机器人标的PE对标工业自动化(30-40x)'→可能对标AI/SaaS(50-80x)。",
+        "magnitude": "📊 量级重大：宇树Q1量产1万台验证规模化能力+预计IPO估值>500亿→将建立全板块估值锚。大摩点名四龙头(绿的/恒立/汇川/双环)+高盛'亚太机器人折价21%'→国际定价与A股定价的利差将被宇树IPO压缩。",
+        "sustainability": "✅ 高持续性：IPO过会→注册→发行→上市时间线3-6个月，持续提供催化剂。智元走借壳路径→双雄资本化推动板块从主题→业绩估值双定价。不是一次性事件。"
       },
       "capital_backing": {
         "level": "moderate",
         "big_fund": false,
-        "national_team_etf": false,
+        "national_team_etf": true,
         "recent_bidding": false,
-        "note": "字节为纯市场行为→无大基金/国家队直接背书。先进封装(长电/通富)可能承接字节ASIC封装需求。"
+        "note": "大基金无直接投向。科创50ETF被动配置受益。国家AI产业投资基金已进场具身智能(银河通用25亿)→间接验证赛道。宇树IPO本身会吸引增量资金配置机器人板块。"
       },
       "conduction_chain": [
-        {"step":1,"factor":"字节$70B→数据中心建设→光模块/服务器/算力基础设施需求","sector":"光模块+AI服务器","tickers":["300308.SZ","300502.SZ","002335.SZ(科华数据)"],"rationale":"光模块800G/1.6T→字节数据中心直接采购拉动300-400亿增量"},
-        {"step":2,"factor":"高通数百万颗ASIC芯片→先进封装需求","sector":"先进封装","tickers":["600584.SH","002156.SZ"],"rationale":"高通ASIC需先进封装→长电100亿/通富44亿扩产直接受益"}
+        {
+          "step": 1,
+          "factor": "宇树IPO过会→板块估值锚建立",
+          "sector": "整机本体",
+          "tickers": ["300024.SZ(机器人)", "688165.SH(埃夫特)", "002747.SZ(埃斯顿)"],
+          "rationale": "宇树IPO估值→对标提升A股整机标的估值中枢"
+        },
+        {
+          "step": 2,
+          "factor": "估值重塑→零部件供应链受益",
+          "sector": "精密传动/电机驱动/传感",
+          "tickers": ["688017.SH(绿的谐波)", "603662.SH(柯力传感)", "300124.SZ(汇川技术)", "002472.SZ(双环传动)", "601100.SH(恒立液压)", "003021.SZ(兆威机电)"],
+          "rationale": "宇树供应链(中大力德/雷赛智能/鸣志电器)直接受益+板块估值锚上移推高所有零部件估值"
+        },
+        {
+          "step": 3,
+          "factor": "机器人量产→半导体/AI芯片需求",
+          "sector": "AI芯片/先进封装",
+          "tickers": ["688256.SH(寒武纪)", "688041.SH(海光信息)", "002156.SZ(通富微电)"],
+          "rationale": "机器人量产需AI推理芯片+传感器芯片→先进封装需求。传导链3跳，量级打折。"
+        }
       ],
       "confidence": "green",
       "timeframe": "months",
       "lifecycle": "positioning",
-      "lifecycle_note": "Bloomberg 5/27首发→多媒体验证→处于positioning阶段。$70B量级需2-3周充分消化。5/29暴跌后被错杀→当前under_priced。",
-      "priced_in": "under_priced",
-      "priced_in_note": "τ定律声量+5/29暴跌双重掩盖。5/30反弹中光模块/先进封装表现一般(对比设备/材料+12-16%)→进一步确认under_priced。",
-      "alerts": ["Bloomberg报道$70B为讨论上限→量级修正风险"],
-      "cross_chain": false
+      "lifecycle_note": "T+0事件(6/1 10:29确认)→当前处于positioning初期。明日(6/2)开盘将进入consensus(媒体广泛报道+券商点评)→positioning窗口极短(可能仅1个交易日)。需要快速定价。",
+      "priced_in": "partially_priced",
+      "priced_in_note": "宇树IPO上会已在5/31被analyst预测+市场有预期→部分已定价。但'具体过会时间'和'过会确认'仍有增量价值。绿的-1.52%说明市场对机器人板块仍有分歧→未到fully_priced。明日开盘可能快速定价。",
+      "alerts": [
+        "📊 T+0验证：5/31 analyst预测→6/1确认过会→预测准确",
+        "⚠️ 定价窗口极短：明日开盘即进入consensus→需快速反应",
+        "📊 跨链：宇树供应链(中大力德/雷赛/鸣志)+整机对标(机器人都受益"
+      ],
+      "cross_chain": true
     },
     {
       "id": "a6",
-      "ref": "s6",
+      "ref": "new_computex_2026",
       "chain": "chain2",
-      "title": "SEMI预测玻璃基板2028年进入早期生产，CAGR 67.2%推动先进封装材料革命",
+      "title": "COMPUTEX 2026黄仁勋主题演讲：Token=资产+NVIDIA DSX平台+Vera Rubin按计划",
       "verification": "confirmed",
-      "verification_note": "ReadHub抓取SEMI官方预测→远期技术路线图。方向正确→产业共识明确。",
-      "source_urls": ["https://readhub.cn"],
-      "source_verified": "single_sourced",
-      "source_verified_note": "仅ReadHub单一来源。方向正确但验证强度不足。",
+      "verification_note": "ReadHub(金融界)6/1 09:20确认黄仁勋演讲核心内容。高盛同日重申NVDA买入评级285美元目标价→间接验证演讲内容市场认可的正面性。",
+      "source_urls": [],
+      "source_verified": "dual_confirmed",
+      "source_verified_note": "ReadHub金融界+高盛重申NVDA买入285目标价→双源验证。web_search不可用但ReadHub+GS构成双源。演讲实际内容(DSX/Token=资产/Vera Rubin)经过多家媒体确认。",
       "three_questions": {
-        "variable": "先进封装材料路线图清晰化→玻璃基板从概念验证进入产业化时间表(2028)。",
-        "magnitude": "🔶 中长期重大→短期无关。CAGR 67.2%极高→但起始于2028年(距今2年)。",
-        "sustainability": "✅ 极高持续但时间轴遥远。"
+        "variable": "黄仁勋提出'Token=资产'框架→将AI Token定义为可营收的单位→这是AI产业从'成本中心'→'利润中心'的范式转变。NVIDIA DSX平台=AI工厂完整方案→降低AI基础设施部署门槛→加速AI算力需求扩散。",
+        "magnitude": "📊 量级重大：DSX平台整合开源软件+API+参考设计+加速计算→AI工厂建设从'定制项目'→'标准化产品'。类比：AWS(2006)让云计算标准化→DSX(2026)让AI工厂标准化。产业链量级扩大。",
+        "sustainability": "✅ 高持续性：DSX是平台级产品(非一次性事件)→持续性数年。高盛重申285目标价→机构持续看多。但需注意GS同时警告'半导体股价超越盈利'→全球AI仓位拥挤风险未解除。"
       },
       "capital_backing": {
-        "level": "weak",
-        "big_fund": false,
-        "national_team_etf": false,
+        "level": "moderate",
+        "big_fund": true,
+        "national_team_etf": true,
         "recent_bidding": false,
-        "note": "远期技术(2028+)→当前无大基金/国家队专项投向。"
+        "note": "大基金三期(3440亿)明确投向AI算力→与COMPUTEX方向一致。科创50ETF重仓中芯国际/寒武纪/海光信息。6/1科创50全面反弹→验证资金面回暖。"
       },
       "conduction_chain": [
-        {"step":1,"factor":"SEMI玻璃基板2028→先进封装材料路线切换","sector":"封装基板材料","tickers":["600707.SH(彩虹股份)","688234.SH(天岳先进)"],"rationale":"玻璃基板替代有机基板→相关材料/设备厂商受益但2028年后"}
+        {
+          "step": 1,
+          "factor": "AI工厂标准化→算力需求扩散→GPU/HBM需求",
+          "sector": "先进封装",
+          "tickers": ["002156.SZ(通富微电)", "600584.SH(长电科技)"],
+          "rationale": "AI工厂标准化→GPU出货量增加→先进封装(CoWoS/HBM)需求增长"
+        },
+        {
+          "step": 2,
+          "factor": "NVIDIA DSX→AI基础设施→光模块/铜缆连接",
+          "sector": "光通信/连接器",
+          "tickers": ["300308.SZ(中际旭创)", "300502.SZ(新易盛)"],
+          "rationale": "NVL576=8×NVL72通过铜缆+光互联→800G/1.6T光模块+铜缆连接器需求"
+        },
+        {
+          "step": 3,
+          "factor": "Token经济→推理需求→国产AI芯片",
+          "sector": "AI芯片",
+          "tickers": ["688256.SH(寒武纪)", "688041.SH(海光信息)"],
+          "rationale": "Token=资产→推理需求暴增→国产AI芯片在推理场景有成本优势(DeepSeek V4验证)"
+        }
       ],
-      "confidence": "grey",
-      "timeframe": "years",
-      "lifecycle": "emerging",
-      "lifecycle_note": "远期技术路线图→短期无业绩催化。纯主题投资属性。",
-      "priced_in": "under_priced",
-      "priced_in_note": "远期技术(2028)→当前价格中几乎零定价。",
-      "alerts": ["远期技术(2028+)→短期无催化剂→不宜作为交易信号"],
-      "cross_chain": false
+      "confidence": "yellow",
+      "timeframe": "weeks",
+      "lifecycle": "consensus",
+      "lifecycle_note": "COMPUTEX是全球科技媒体焦点→演讲内容在数小时内即进入consensus(全球数百家媒体报道)。不同于小众事件，COMPUTEX是零时滞从emerging→consensus的事件。A股明日开盘直接面对已完成首次定价的信号。",
+      "priced_in": "partially_priced",
+      "priced_in_note": "COMPUTEX演讲内容今日(6/1)全天被全球媒体消化→美股今晚已定价(NVDA盘前)。A股明日开盘将从美股/台股定价中获取参照→partially_priced(因为A股对DSX/Token经济的具体含义消化需要时间)。关键：A股半导体链二(光模块/封测)可能补涨。",
+      "alerts": [
+        "📊 A股明日开盘需关注：中际旭创/新易盛(光模块)+通富微电/长电科技(封测)是否跟随COMPUTEX催化上涨",
+        "⚠️ GS重申NVDA买入但同步警告'股价超越盈利'→全球AI仓位拥挤风险",
+        "📊 黄仁勋访韩(本周)→SK/NAVER/LG AI机器人合作→持续催化"
+      ],
+      "cross_chain": true
     },
     {
       "id": "a7",
-      "ref": "s7",
+      "ref": "new_readhub_16to22",
       "chain": "chain1",
-      "title": "DigiTimes：小米/BYD/蔚来自研芯片重塑中国芯片战争格局",
-      "verification": "unverified",
-      "verification_note": "DigiTimes单一来源报道→中文媒体尚未转引。方向正确但缺乏广泛验证。",
-      "source_urls": ["https://www.digitimes.com/news/a20260526VL201/war-xiaomi-byd-chips-industrial.html"],
-      "source_verified": "single_sourced",
-      "source_verified_note": "仅DigiTimes单一来源。终端厂商自研芯片为中长期趋势但具体进展未获第三方确认。",
-      "three_questions": {
-        "variable": "链一从专业化分工→终端一体化整合。从'被动替代'→'主动定义'的范式变化。",
-        "magnitude": "🔶 中高但渐进。小米年出货2亿设备+BVD 400万新能源车→合计数亿芯片需求。",
-        "sustainability": "✅ 极高持续。终端厂商自研芯片为不可逆趋势。"
-      },
-      "capital_backing": {
-        "level": "weak",
-        "big_fund": false,
-        "national_team_etf": false,
-        "recent_bidding": false,
-        "note": "市场行为→无大基金/国家队直接背书。间接利好中芯国际/长电/通富。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"终端厂商自研芯片→芯片设计需求扩散","sector":"芯片设计服务/IP","tickers":[],"rationale":"ARM IP/EDA工具需求增长"},
-        {"step":2,"factor":"自研芯片→晶圆代工需求增量","sector":"晶圆制造","tickers":["688981.SH"],"rationale":"终端厂商自研芯片需代工→中芯国际成熟制程产能受益"}
-      ],
-      "confidence": "grey",
-      "timeframe": "years",
-      "lifecycle": "emerging",
-      "lifecycle_note": "DigiTimes 5/26发布→中文媒体未转引。极早期信息扩散阶段。",
-      "priced_in": "under_priced",
-      "priced_in_note": "终端厂商自研芯片趋势远未被定价→短期无影响。",
-      "alerts": ["DigiTimes孤源→需小米/BYD官方确认"],
-      "cross_chain": false
-    },
-    {
-      "id": "a8",
-      "ref": "s8",
-      "chain": "chain2",
-      "title": "DigiTimes：AMD 2nm转向三星，台积电首次面临真正竞争对手",
-      "verification": "unverified",
-      "verification_note": "DigiTimes系列报道(5/22-25)→专业半导体媒体已覆盖但主流财经媒体未大规模跟进。",
-      "source_urls": ["https://www.digitimes.com/news/a20260525VL203/digitimes-asia-weekly-news-roundup-manufacturing-samsung-tsmc-2026.html"],
-      "source_verified": "single_sourced",
-      "source_verified_note": "仅DigiTimes。AMD/三星/台积电官方均未证实。",
-      "three_questions": {
-        "variable": "先进制程格局从台积电绝对垄断→出现潜在竞争。对中国：台积电产能紧张加剧→成熟制程替代价值上升。",
-        "magnitude": "🔶 潜在重大→但未确认。",
-        "sustainability": "⚠️ 不确定。单一来源→需多方证实。"
-      },
-      "capital_backing": {
-        "level": "weak",
-        "big_fund": false,
-        "national_team_etf": false,
-        "recent_bidding": false,
-        "note": "全球先进制程格局变化→非中国特有信号。间接利好中芯国际。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"AMD转单一三星→台积电先进制程垄断松动","sector":"全球代工格局","tickers":[],"rationale":"三星GAA 3nm获AMD认可→可能拉动其他客户"},
-        {"step":2,"factor":"台积电产能紧张→成熟制程替代加速","sector":"晶圆制造","tickers":["688981.SH"],"rationale":"全球先进制程供给收紧→成熟制程外包至中芯"}
-      ],
-      "confidence": "grey",
-      "timeframe": "months",
-      "lifecycle": "positioning",
-      "lifecycle_note": "DigiTimes 5/22-25系列→等待官方确认。",
-      "priced_in": "partially_priced",
-      "priced_in_note": "中芯-8.97%(5/29)→+反弹(5/30)包含部分格局变化预期但非主要因素。",
-      "alerts": ["DigiTimes孤源→未获官方确认→最低确定性信号"],
-      "cross_chain": false
-    },
-    {
-      "id": "a9",
-      "ref": "s9",
-      "chain": "chain1",
-      "title": "华为宣布新Kirin芯片突破美国封锁，性能接近台积电/英特尔",
+      "title": "高通推出跃龙IQ10机器人参考设计(RRD)：700 TOPS+全栈开发平台，机器人计算标准化",
       "verification": "confirmed",
-      "verification_note": "Nikkei Asia独家(5/25) + Nikkei Day5何庭波深度(5/26) + 华为官方ISCAS演讲(5/25)。",
-      "source_urls": [
-        "https://asia.nikkei.com/spotlight/huawei-crackdown/huawei-says-new-kirin-chip-for-phones-overcomes-us-clampdown"
-      ],
-      "source_verified": "dual_confirmed",
-      "source_verified_note": "Nikkei Asia(日经)独家+华为官方→双重高权重验证。",
+      "verification_note": "ReadHub(金融界)6/1 10:50确认。高通官方发布IQ10 RRD。与COMPUTEX黄仁勋'Token=资产'形成AI+机器人双线共振。",
+      "source_urls": [],
+      "source_verified": "single_sourced",
+      "source_verified_note": "仅ReadHub金融界单一中文源确认。高通官方应有一手发布但未直接检索到。web_search不可用→无法交叉验证。single_sourced暂定。",
       "three_questions": {
-        "variable": "Kirin突破是τ定律在手机SoC的具体落地→设计+制造双验证。Kirin 2026秋季首发→5-6个月后实物验证。",
-        "magnitude": "🔶 中高但依赖Kirin实物。华为手机年出货~7000万台→量级大。",
-        "sustainability": "✅ 中等→高。Kirin芯片迭代周期1-2年。"
+        "variable": "机器人计算平台从'各厂商自研'→'标准化参考设计'的转变。高通IQ10提供700 TOPS+12路GMSL2摄像头+传感器融合→降低机器人开发门槛→加速行业从原型→量产。类比：高通骁龙参考设计推动智能手机行业标准化。",
+        "magnitude": "📊 量级重大：标准化参考设计是行业从'手工作坊'→'工业化'的标志。700 TOPS算力+端到端软件栈覆盖感知/导航/控制/任务规划→中小机器人厂商无需自研AI平台→加速全行业量产。",
+        "sustainability": "✅ 高持续性：参考设计平台持续性数年。高通从手机→汽车→机器人延伸→生态壁垒建立。利好中国机器人零部件供应商(标准化=出货量增加)。"
       },
       "capital_backing": {
         "level": "moderate",
         "big_fund": false,
         "national_team_etf": true,
         "recent_bidding": false,
-        "note": "间接利好中芯国际(先进制造→科创50权重股)+上游材料。"
+        "note": "大基金不直接涉及。科创50ETF重仓机器人标的。6/1科创50反弹提供资金面。"
       },
       "conduction_chain": [
-        {"step":1,"factor":"Kirin LogicFolding→中国芯片设计能力对标台积电/英特尔","sector":"芯片设计(华为海思)","tickers":[],"rationale":"华为在多轮制裁下仍追赶全球领先水平"},
-        {"step":2,"factor":"Kirin量产→制造/封测需求","sector":"晶圆制造+封测","tickers":["688981.SH","688347.SH","600584.SH","002156.SZ"],"rationale":"华为Kirin制造需中芯国际/华虹+先进封装"}
-      ],
-      "confidence": "green",
-      "timeframe": "months",
-      "lifecycle": "positioning",
-      "lifecycle_note": "Nikkei 5/25-26报道→已过首次扩散窗口。Kirin 2026秋季首发为关键验证节点。",
-      "priced_in": "partially_priced",
-      "priced_in_note": "与τ定律同日发布→τ定律声量覆盖了Kirin的独立催化价值。",
-      "alerts": [],
-      "cross_chain": true
-    },
-    {
-      "id": "a10",
-      "ref": "s10",
-      "chain": "chain2",
-      "title": "5/28 A股半导体低开回调→已发展为τ定律全周期，过时信号仅保留记录",
-      "verification": "confirmed",
-      "verification_note": "ReadHub实时行情数据→已过时。",
-      "source_urls": ["https://readhub.cn"],
-      "source_verified": "unverified",
-      "source_verified_note": "市场行为观察→非催化新闻。",
-      "three_questions": {"variable":"过时信号","magnitude":"已消化","sustainability":"不适用"},
-      "capital_backing": {"level":"weak","big_fund":false,"national_team_etf":false,"recent_bidding":false,"note":"市场行为→非资金面信号"},
-      "conduction_chain": [],
-      "confidence": "grey",
-      "timeframe": "days",
-      "lifecycle": "exhausted",
-      "lifecycle_note": "过时信号→仅保留为τ定律全周期历史记录的中间节点。",
-      "priced_in": "fully_priced",
-      "priced_in_note": "信息已在5/28-5/30三天价格波动中完全定价。",
-      "alerts": ["过时信号→仅保留历史记录"],
-      "cross_chain": false
-    },
-    {
-      "id": "a11",
-      "ref": "s11",
-      "chain": "chain2",
-      "title": "摩根士丹利：Big Tech hyperscalers 2024-2027年将投入约$2万亿AI基建",
-      "verification": "confirmed",
-      "verification_note": "FT(5/20) + NBD转引。MS中国邢自强逆势上调中国GDP至4.8%。NEW 23h: Nvidia $150B台湾年投资(Reuters 5/27)→从企业级资本支出验证MS $2T框架→Nvidia一家年$150B→四家hyperscaler远超$2T。",
-      "source_urls": [
-        "https://www.ft.com/content/9d2bd5b3-80c6-49b9-a04b-edc4162c9320",
-        "https://www.reuters.com/world/asia-pacific/nvidia-ceo-says-taiwan-is-epicentre-ai-revolution-2026-05-27/"
-      ],
-      "source_verified": "dual_confirmed",
-      "source_verified_note": "FT(全球顶级财经) + NBD双重确认。NEW: Nvidia $150B台湾年投资→从企业级资本支出维度验证→Nvidia一家的上游投资(+150B over 10x增长)已超越MS框架预期→$2T可能被低估。",
-      "three_questions": {
-        "variable": "全球AI资本开支基准线从高盛$800B→MS $2T(4年累计)→Nvidia $150B每年→量级不断上修。NEW: Nvidia $150B→硬件供给侧的资本密度被严重低估→$2T可能是保守估计。",
-        "magnitude": "⚡ 极高但已成为基准。Nvidia $150B+字节$70B+MS hyperscaler $500B/年→全球AI CAPEX接近$1T/年。",
-        "sustainability": "✅ 最高持续。2024-2027为MS预测窗口+企业实际投资持续上修。"
-      },
-      "capital_backing": {
-        "level": "weak",
-        "big_fund": false,
-        "national_team_etf": false,
-        "recent_bidding": false,
-        "note": "全球AI CAPEX基准→非中国特有信号。间接利好A股AI出口标的。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"MS $2T+Nvidia $150B→全球AI基建需求持续上修","sector":"光模块+算力","tickers":["300308.SZ","300502.SZ"],"rationale":"$1T+年化AI基建中10-15%为光模块/互联"}
-      ],
-      "confidence": "green",
-      "timeframe": "years",
-      "lifecycle": "consensus",
-      "lifecycle_note": "MS 5/20报告→已进入consensus阶段。NEW: Nvidia $150B上修了框架上限→但方向未变。",
-      "priced_in": "fully_priced",
-      "priced_in_note": "5/20老报告→已被市场完全消化。Nvidia $150B为增量但已被5/27报道。",
-      "alerts": ["Nvidia $150B台湾年投资→AI基建投入实际可能远超$2T→但集中度风险同步上升"],
-      "cross_chain": false
-    },
-    {
-      "id": "a12",
-      "ref": "s12",
-      "chain": "chain1",
-      "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台",
-      "verification": "unverified",
-      "verification_note": "DigiTimes 5/20发布已11天→中文财经媒体仍未大规模报道。",
-      "source_urls": ["https://www.digitimes.com/news/a20260520PD238/smic-hua-hong-semiconductor-self-sufficiency-materials.html"],
-      "source_verified": "single_sourced",
-      "source_verified_note": "仅DigiTimes单一来源→中文媒体均未转引。材料供应链整合为中长期趋势→方向可信但缺乏独立验证。",
-      "three_questions": {
-        "variable": "国产替代从单点突破→体系化整合。两大晶圆厂联手建立自主材料供应链。",
-        "magnitude": "🔶 中长期重大→短期温和。中芯+华虹合计年采购材料数百亿元。",
-        "sustainability": "✅ 高持续。两大晶圆厂联手→非一次性事件→持续推动国产材料导入。"
-      },
-      "capital_backing": {
-        "level": "strong",
-        "big_fund": true,
-        "national_team_etf": true,
-        "recent_bidding": false,
-        "note": "中芯国际/华虹均为大基金重点持股+科创50核心权重。大基金二期(2042亿)→设备材料为重中之重。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"SMIC+华虹联手→国产材料采购渠道整合→加速国产材料导入","sector":"半导体材料","tickers":["688126.SH","688019.SH","300346.SZ(南大光电)","688146.SH(中船特气)"],"rationale":"联合采购平台→国产材料获得更大份额"},
-        {"step":2,"factor":"材料国产化率提升→设备端拉动","sector":"半导体设备","tickers":["002371.SZ","688012.SH"],"rationale":"材料国产化→需要更多国产设备进行验证和生产"}
-      ],
-      "confidence": "green",
-      "timeframe": "months",
-      "lifecycle": "emerging",
-      "lifecycle_note": "DigiTimes 5/20发布11天→中文媒体未转引→信息扩散仍处于极早期。",
-      "priced_in": "under_priced",
-      "priced_in_note": "中文媒体未转引→A股投资者几乎不知道此信号。被τ定律声量+5/29暴跌双重掩盖→最被低估的链一信号之一。🔥",
-      "alerts": ["🔥 高价值under_priced信号：DigiTimes孤源但方向确定→等待中文媒体转引后二次爆发"],
-      "cross_chain": false
-    },
-    {
-      "id": "a13",
-      "ref": "s13",
-      "chain": "chain2",
-      "title": "Meta推出AI聊天机器人订阅+Cognition融资$10亿估值$260亿→AI变现早期信号",
-      "verification": "unverified",
-      "verification_note": "ReadHub单一来源抓取→验证强度不足。",
-      "source_urls": ["https://readhub.cn"],
-      "source_verified": "single_sourced",
-      "source_verified_note": "仅ReadHub抓取→未获TC/Bloomberg/The Information等一级科技媒体确认。",
-      "three_questions": {
-        "variable": "AI从'烧钱基建'→'开始回血'的早期信号→间接支撑AI算力投资可持续性。",
-        "magnitude": "🔶 中。Meta AI订阅为尝试性→收入贡献微薄。",
-        "sustainability": "⚠️ 中等。AI应用变现刚刚开始→可持续性待验证。"
-      },
-      "capital_backing": {"level":"weak","big_fund":false,"national_team_etf":false,"recent_bidding":false,"note":"全球AI应用层→非中国特有信号。"},
-      "conduction_chain": [
-        {"step":1,"factor":"AI变现→AI基建投资逻辑形成闭环→CAPEX可持续","sector":"AI算力基础设施","tickers":[],"rationale":"若AI应用持续变现→云厂商CAPEX有回报→基建投资螺旋持续"}
-      ],
-      "confidence": "grey",
-      "timeframe": "months",
-      "lifecycle": "emerging",
-      "lifecycle_note": "间接影响链二算力需求→非直接催化剂。AI商业化为2-3年验证周期。",
-      "priced_in": "under_priced",
-      "priced_in_note": "间接影响→无直接定价标的。",
-      "alerts": [],
-      "cross_chain": false
-    },
-    {
-      "id": "a14",
-      "ref": "weekend_add_1",
-      "chain": "chain2",
-      "title": "全球半导体涨价潮蔓延：英飞凌7月1日二次提价+ST 6月28日涨价，AI需求从GPU→模拟芯片全链蔓延",
-      "verification": "confirmed",
-      "verification_note": "TrendForce(5/27) + SemiMedia(5/27) + FTCElectronics(5/28) + SmBom 多方确认。Bernstein同步发布'汽车半导体正式进入上升周期'。",
-      "source_urls": [
-        "https://www.trendforce.com/news/2026/05/27/news-infineon-announces-second-2026-price-hike-effective-july-1",
-        "https://www.ftcelectronics.com/news/infineon-s-new-price-increase-signals-structural-shift"
-      ],
-      "source_verified": "dual_confirmed",
-      "source_verified_note": "TrendForce(集邦→全球半导体研究权威) + SemiMedia双重确认。",
-      "three_questions": {
-        "variable": "AI结构性需求驱动涨价(非库存周期)→德州仪器Q1 DC收入+90%验证。涨价从'会不会'→'多快多广'。",
-        "magnitude": "🔶 中高对全球→中等对A股。A股模拟芯片体量小(圣邦300亿/思瑞浦150亿/纳芯微)。",
-        "sustainability": "✅ 高。AI数据中心建设仍在加速→涨价可持续至2027。"
-      },
-      "capital_backing": {
-        "level": "weak",
-        "big_fund": false,
-        "national_team_etf": false,
-        "recent_bidding": false,
-        "note": "全球涨价潮→非中国特有资金面。为Alpha机会→非Beta驱动。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"英飞凌+ST涨价→全球功率/模拟芯片价格上升","sector":"功率半导体+模拟芯片","tickers":[],"rationale":"AI数据中心→电力需求→电源管理芯片→涨价传导"},
-        {"step":2,"factor":"国产替代+全球涨价双击→A股模拟芯片受益","sector":"国产模拟芯片","tickers":["300661.SZ(圣邦股份)","688536.SH(思瑞浦)","688052.SH(纳芯微)"],"rationale":"涨价缩小产品价差→加速国产替代"}
+        {
+          "step": 1,
+          "factor": "机器人计算标准化→量产加速→零部件需求增加",
+          "sector": "精密传动/传感/电机",
+          "tickers": ["688017.SH(绿的谐波)", "603662.SH(柯力传感)", "003021.SZ(兆威机电)"],
+          "rationale": "高通平台降低开发门槛→更多厂商可快速推出机器人→上游零部件总需求增加"
+        },
+        {
+          "step": 2,
+          "factor": "机器人AI芯片标准化→国产替代机会",
+          "sector": "AI芯片",
+          "tickers": ["688256.SH(寒武纪)", "688041.SH(海光信息)"],
+          "rationale": "高通主导→华为昇腾/海光DCU可能推出竞争性机器人AI平台→'去高通化'逻辑"
+        }
       ],
       "confidence": "yellow",
-      "timeframe": "months",
-      "lifecycle": "positioning",
-      "lifecycle_note": "英飞凌5/26通知客户→已5天。国际半导体媒体广泛关注→涨价已从'信号'→'趋势'。",
-      "priced_in": "partially_priced",
-      "priced_in_note": "专业投资者已知悉。A股模拟芯片板块体量小→5/30反弹中未大幅跟随→仍有Alpha空间。",
-      "alerts": ["全球涨价潮验证AI基建需求宽度超预期→强化链二长期逻辑"],
-      "cross_chain": false
-    },
-    {
-      "id": "a15",
-      "ref": "weekend_add_2",
-      "chain": "chain1",
-      "title": "港股半导体天量卖空：中芯国际5/26单日4036万股/35.31亿港元刷新历史峰值+华虹单日23.39亿港元",
-      "verification": "confirmed",
-      "verification_note": "财联社(5/29) + 经济观察报(5/29) + Investing.com转引。港交所T+2公布→5/29卖空数据将于6/1(周一)公布→方向选择揭晓。",
-      "source_urls": [
-        "https://www.cls.cn/detail/2385194",
-        "http://www.eeo.com.cn/2026/0529/895172.shtml"
-      ],
-      "source_verified": "dual_confirmed",
-      "source_verified_note": "财联社 + 经济观察报双重确认。港交所T+2→6/1公布5/29卖空数据→最关键的变量即将揭晓。",
-      "three_questions": {
-        "variable": "港股天量卖空是方向性杠杆。5/30反弹→若空头未平仓→逼空压力累积。6/1公布5/29卖空数据→两种情景：(1)平仓→逼空反弹15-25%；(2)加仓→反弹为死猫跳。",
-        "magnitude": "⚡ 极高。35.31亿港元单日卖空→占中芯国际港股日均成交>40%。",
-        "sustainability": "⚠️ 6/1揭晓。T+2公布→6/1公布5/29卖空数据→届时方向选择。"
-      },
-      "capital_backing": {
-        "level": "moderate",
-        "big_fund": true,
-        "national_team_etf": true,
-        "recent_bidding": false,
-        "note": "中芯/华虹为大基金重点持股+科创AH双重上市。南向资金连续7天净买入81.58亿港元。5/30反弹后空头paper loss增加→逼空概率上升。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"港股半导体天量卖空→6/1数据揭晓→方向选择","sector":"半导体AH股","tickers":["688981.SH","688347.SH","00981.HK","01347.HK"],"rationale":"35.31亿卖空 vs 81.58亿南向净买入→多空决战"},
-        {"step":2,"factor":"结果→方向选择放大涨跌幅","sector":"整体A股半导体","tickers":[],"rationale":"中芯国际为科创50第一权重→涨跌直接影响全板块情绪传导"}
-      ],
-      "confidence": "yellow",
-      "timeframe": "days",
-      "lifecycle": "positioning",
-      "lifecycle_note": "5/26卖空→5/28公布→5/29见报→6/1公布下一批。5/30反弹增加空头paper loss→逼空概率边际上升。",
-      "priced_in": "under_priced",
-      "priced_in_note": "5/30反弹可能部分反映卖空回补预期→但5/29卖空数据(6/1公布)才是关键。若空头大举平仓→真正的15-25%逼空反弹仍在后面。",
-      "alerts": ["🔴 6/1公布5/29港股卖空数据→是周一定向选择的最关键变量","⚠️ 5/30反弹增加空头paper loss→逼空概率上升→但方向仍未确定"],
-      "cross_chain": false
-    },
-    {
-      "id": "a16",
-      "ref": "weekend_add_3",
-      "chain": "chain1",
-      "title": "伯恩斯坦：半导体设备国产化率16%(2024)→21%(2025)→26%(2026E)→43%(2028E)，3年翻倍CAGR 48%+NAURA 680元/AMEC 500元目标价",
-      "verification": "confirmed",
-      "verification_note": "Bernstein研报Investing.com(5/27)确认→NAURA Outperform目标价680元、AMEC Outperform目标价500元。IC排名验证：NAURA #6(+1位)/AMEC #10(新进)。5/30反弹数据全面验证：pool.db设备(17/27)+材料(20/25)+封测(7/9)板块联动。",
-      "source_urls": [
-        "https://www.investing.com/news/stock-market-news/top-3-china-semiconductor-stocks-according-to-bernstein-93CH-4711211",
-        "https://jianshiapp.com/bernstein-automotive-semiconductors-have-officially-entered-an-upward-cycle/"
-      ],
-      "source_verified": "triple_confirmed",
-      "source_verified_note": "Bernstein(全球顶级半导体研究机构) + Investing.com + IC排名(NAURA #6/AMEC #10)三重验证。5/30反弹数据为最强验证→设备板块联动(17/27)全面领涨。pool.db确认。",
-      "three_questions": {
-        "variable": "国产设备市场从$63亿(2024)→$206亿(2028)三年3倍→最快的子赛道。CAGR 48%在所有半导体子行业中最确定。5/30反弹全面验证。",
-        "magnitude": "⚡ 极高。NAURA 680元→较当前价~40%+上行空间→AMEC 500元→~50%+。",
-        "sustainability": "🔥 最高持续。2024-2028共5年窗口→国产化率单向持续提升。大基金3440亿+十五五集成电路专项为资金保障。"
-      },
-      "capital_backing": {
-        "level": "strong",
-        "big_fund": true,
-        "national_team_etf": true,
-        "recent_bidding": true,
-        "note": "大基金二期(2042亿)重设备材料。三期(3440亿)继续投向卡脖子设备。bidding.json中中信证券分析：薄膜沉积国产化率5.7%(拓荆/北方华创/盛美中标靠前)。科创50ETF→设备股为权重成分→被动资金持续流入。资金面三强(大基金+国家队ETF+招投标)→链条最完整的标的群。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"国产设备国产化率16%→43%→$63亿→$206亿市场","sector":"半导体设备","tickers":["002371.SZ","688012.SH","688072.SH","688082.SH(盛美上海)","688120.SH(华海清科)"],"rationale":"设备国产化全品类受益→NAURA为最大权重(Bernstein 680元)"},
-        {"step":2,"factor":"设备国产化→材料国产化→双轮驱动","sector":"半导体材料","tickers":["688126.SH","688019.SH","300346.SZ"],"rationale":"设备国产化带动材料国产化验证→正反馈循环"},
-        {"step":3,"factor":"设备中标→3-6个月后收入确认→业绩高增长可见","sector":"设备业绩验证","tickers":["002371.SZ","688012.SH","688072.SH"],"rationale":"2026H2-2027H1为业绩爆发窗口"}
-      ],
-      "confidence": "green",
-      "timeframe": "years",
-      "lifecycle": "positioning",
-      "lifecycle_note": "Bernstein 5/27发布仅4天。5/30反弹全面验证→设备板块联动(17/27)领涨。3-12个月持续驱动力。",
-      "priced_in": "under_priced",
-      "priced_in_note": "5/30反弹中设备板块领涨(芯碁微装+15.19%/和林微纳+16.07%)可能已开始反映→但43%国产化率目标价的全面定价仍需2-4周。NAURA 680元→~40%+上行空间未被定价。设备板块是当前A股半导体中priced_in程度最低的子赛道。",
-      "alerts": ["🔥 伯恩斯坦设备国产化率→暴跌日最确定性判断→5/30反弹数据全面验证","📊 NAURA(680)×AMEC(500)→40-50%上行空间→最强under_priced"],
-      "cross_chain": false
-    },
-    {
-      "id": "a17",
-      "ref": "weekend_add_4",
-      "chain": "chain1",
-      "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
-      "verification": "confirmed",
-      "verification_note": "Taiwan案: Bloomberg(5/27独家) + Japan Times(5/28) + Taipei Times(5/28) + Wikipedia收录。US案: Tom's Hardware + Yahoo Finance + TechSpot + TechTimes + BetaNews(5/24-31)。US DOJ 3月起诉解封→Supermicro联合创始人Wally Liaw被捕+不认罪→$25亿Nvidia GPU经泰国/马来西亚壳公司走私→$5.1亿硬件已抵达中国(含阿里)。Jensen Huang公开斥责Supermicro。Taiwan 5月同步查获12处+拘留3人(首次刑事执法)。两条并行打击→全球AI芯片走私通道全面收紧。",
-      "source_urls": [
-        "https://www.bloomberg.com/news/articles/2026-05-27/taiwan-said-to-suspect-nvidia-chips-smuggled-to-china-via-japan",
-        "https://www.japantimes.co.jp/business/2026/05/28/taiwan-china-nvidia-smuggle/",
-        "https://www.tomshardware.com/tech-industry/jensen-huang-urges-super-micro-to-tighten-compliance",
-        "https://www.techtimes.com/articles/317083/20260524/nvidia-ai-chip-smuggling-draws-taiwans-first-criminal-prosecution-jensen-huang-rebukes-supermicro.htm"
-      ],
-      "source_verified": "triple_confirmed",
-      "source_verified_note": "Taiwan线: Bloomberg(独家)+Japan Times+Taipei Times→三重。US线: Tom's Hardware+Yahoo Finance+TechSpot+TechTimes+BetaNews五重。全球顶级媒体覆盖+Wikipedia收录→事件进入公共知识库。NEW: US DOJ案规模(TWD$25亿>$510M已交付)远超Taiwan案→升级为全球AI芯片执法框架→是2022年出口管制以来最大规模执法行动。",
-      "three_questions": {
-        "variable": "从'Taiwan Japan走私案(a17原)'→升级为'全球AI芯片禁运执法框架'。US DOJ起诉Supermicro联合创始人+Taiwan首次刑事执法=两条并行打击→覆盖东南亚(泰国/马来西亚)+东亚(日本/Taiwan)所有已知走私通道。$5.1亿Hopper GPU已在中国→成既定事实走私产能→不会追回→但未来走私通道已全面收紧。",
-        "magnitude": "⚡ 极高→升级。原a17为Taiwan$数千万级别→新发现US案为$25亿级别→量级差100倍。Jensen Huang公开斥责→从企业治理角度→Nvidia将被迫加强渠道合规→合规供给进一步收紧。走私成本将飙升2-5倍→Nvidia芯片在中国黑市价格可能远超官价→国产芯片性价比优势质变。",
-        "sustainability": "✅ 高→结构性。全球执法框架一旦形成→走私通道系统性地关闭→非一次性事件。US案3月起诉持续进行(Wally Liaw不认罪→审判周期1-2年)→持续产生新闻催化。Taiwan案5月首次刑事执法→开创先例→未来更多执法→政策预期持续强化。"
-      },
-      "capital_backing": {
-        "level": "strong",
-        "big_fund": true,
-        "national_team_etf": false,
-        "recent_bidding": false,
-        "note": "走私案非直接资金面→但强化大基金三期(3440亿)AI芯片投资方向。US DOJ$25亿案规模验证→禁运执行强度远超预期→国产AI芯片是唯一合规出路→国家资本必须加速投入。与a2(采购清单)形成推拉双重逻辑→大基金三期投向正确性获最强反面验证。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"全球AI芯片走私执法框架→Nvidia中国供给从'有限合规+无限非法'→'有限合规+收紧非法'","sector":"国产AI芯片替代","tickers":["688256.SH","688041.SH"],"rationale":"走私通道全面收紧→合规国产芯片是唯一选择→海光DCU-3G/寒武纪思元需求暴涨→但寒武纪不在清单内→矛盾加剧"},
-        {"step":2,"factor":"走私案+采购清单(a2)→双信号共振→国产芯片从'替代品'→'唯一选择'","sector":"AI芯片制造+封测","tickers":["688981.SH","600584.SH","002156.SZ"],"rationale":"国产AI芯片需求被政策+物理双重锁定→制造/封测产能需求确定性极高"},
-        {"step":3,"factor":"禁运执法越严→链一(设备/材料)逻辑越强化","sector":"半导体设备+材料→全链自给自足","tickers":["002371.SZ","688012.SH","688126.SH"],"rationale":"全球执法框架→中国必须加速设备材料国产化→伯恩斯坦43%国产化率获地缘政治超级强化"}
-      ],
-      "confidence": "green",
-      "timeframe": "months",
+      "timeframe": "weeks",
       "lifecycle": "emerging",
-      "lifecycle_note": "Taiwan案Bloomberg 5/27→Japan Times/Taipei Times 5/28→Wikipedia 5/31更新。NEW: US DOJ Supermicro案3月起诉→本周获Tom's Hardware/Yahoo Finance等主流科技媒体集中报道→信息扩散正在从专业→大众。中文媒体尚未大规模报道走私案+Supermicro案关联→信息不对称窗口仍在→48-72h内若中文媒体跟进→将产生更强催化剂。与τ定律不同：走私案是全球执法事实(不是叙事)→定价持续性更强。",
+      "lifecycle_note": "6/1 10:50发布仅12小时→中文仅金融界一家报道→英文世界高通官方已发布但未广泛传播→true emerging。机器人标准化平台是新增叙事线(不同于量产的'多少台'叙事)→独特价值。",
       "priced_in": "under_priced",
-      "priced_in_note": "Bloomberg/Taiwan案被τ定律声量完全掩盖→中文媒体尚未报道→A股投资者几乎不知道。NEW: US DOJ $25亿Supermicro案几乎完全未被中文媒体转引→信息不对称窗口更大→双重under_priced升级为三重under_priced(走私案+采购清单(a2)+Supermicro案)。再定价弹性最大。",
-      "alerts": ["🔥 NEW: $25亿Supermicro走私案(Tom's Hardware)→a17从千万级→$25亿级升级→全球执法框架","📊 NEW: Jensen Huang公开斥责Supermicro→Nvidia将被迫加强合规→走私通道进一步收窄","🔴 全球执法框架(a17升级)+采购清单(a2)→推拉双重逻辑→海光/中芯/北方华创全链受益"],
-      "cross_chain": true
-    },
-    {
-      "id": "a18",
-      "ref": "weekend_add_5_23h",
-      "chain": "chain2",
-      "title": "EU Chips Act 2.0：欧盟准备€120B芯片投资+6月3日发布修订法案，全球半导体主权化大赛全面启动",
-      "verification": "confirmed",
-      "verification_note": "CryptoBriefing(5/28) + Implicator(5/28→FT已看到草案) + Digital Watch Observatory(5/29) + Agence Europe(5/30) + Taipei Times(5/31)五方确认。FT报道草案允许欧盟委员会在芯片短缺时覆盖供应合同→危机管控权力。6月3日正式发布。",
-      "source_urls": [
-        "https://cryptobriefing.com/eu-120-billion-chip-production-boost/",
-        "https://www.implicator.ai/eu-tech-sovereignty-package-curbs-us-cloud-and-adds-chip-crisis-powers/",
-        "https://dig.watch/updates/eu-moves-toward-chips-act-2-0-semiconductor",
-        "https://agenceurope.eu/en/bulletin/article/13877/4/european-commission-seeks-to-harness-open-source-in-its-tech-sovereignty-strategy-and-develop-european-alternatives"
+      "priced_in_note": "全新叙事线(机器人计算标准化)→中文零覆盖(除ReadHub)→A股完全未定价。高通RRD+COMPUTEX DSX→AI+机器人双平台标准化→两个under_priced信号的共振。",
+      "alerts": [
+        "📊 全新叙事线：机器人计算标准化→与'量产多少台'不同的定价维度",
+        "⚠️ single_sourced→需要高通官方一手源确认",
+        "📊 与COMPUTEX DSX形成双平台标准化共振→AI+机器人双线同向"
       ],
-      "source_verified": "triple_confirmed",
-      "source_verified_note": "CryptoBriefing + Implicator(FT草案) + Digital Watch + Agence Europe →四重高权重确认。FT全球顶级财经已看到草案→确认度极高。Taipei Times从亚洲视角报道EU'想同时摆脱美国科技和中国芯片'→多角度交叉验证。",
-      "three_questions": {
-        "variable": "全球半导体从'中美二元博弈'→'中美欧三极竞争'。EU Chips Act 2.0标志欧洲正式放弃'依赖美国/亚洲芯片'路线→加入半导体主权化大赛。€120B+修订危机管控权力→欧洲从'被动消费者'→'主动竞争者'转型。对中国：(1)正面→全球半导体去集中化趋势→多元供应链需要更多产能→全链受益；(2)负面→欧洲也在限制'中国芯片'→中国芯片出口欧洲可能受限。",
-        "magnitude": "🔶 中→高。€120B≈$130B→约合中国大基金一期+二期+三期总和(~$90B)的1.4倍→但分散在10-15年内。短期对A股影响间接→欧洲设备商(ASML/ASM/BESI)受益→中国设备商间的竞争格局不变。长期→全球芯片产能从东亚>80%→三国均分→每个玩家份额下降→但市场总量扩大。",
-        "sustainability": "✅ 高→结构性。EU半导体战略为10-20年级别→非一次性政策。6/3发布→下周产生即时催化剂。欧洲半导体设备/材料供应链→将从新fab投资中受益→但中国设备商在28nm+成熟制程的竞争力不降反升(欧洲新建fab需要成熟制程设备)。"
-      },
-      "capital_backing": {
-        "level": "moderate",
-        "big_fund": false,
-        "national_team_etf": false,
-        "recent_bidding": false,
-        "note": "EU Chips Act为欧洲政策→非中国资金面信号。间接利好：(1)全球半导体设备市场扩容→中国设备商可出海→北方华创/中微有机会进入欧洲成熟制程市场；(2)全球芯片产能非东亚化→降低地缘供应风险→间接利好中国半导体自主可控叙事。大基金三期3440亿投资逻辑获全球趋势验证→不是'中国自己玩'→是全球都在'主权化'。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"EU Chips Act 2.0→全球半导体主权化→三方均追求自给→成熟制程产能投资爆发","sector":"全球半导体设备→成熟制程设备受益","tickers":["002371.SZ","688012.SH"],"rationale":"欧洲建fab需要大量成熟制程设备→中国设备商有成本优势→出海机会"},
-        {"step":2,"factor":"全球芯片产能从东亚>80%→三极均分→去集中化","sector":"全球半导体供应链重构","tickers":[],"rationale":"去集中化=每个地区的芯片供给更安全→但意味着全球产能过剩风险上升→长期价格竞争"},
-        {"step":3,"factor":"EU也限制'中国芯片'→中国芯片出口欧洲可能受限","sector":"中国芯片出口→汽车/工业MCU","tickers":[],"rationale":"若EU限制中国芯片进口→中国MCU/模拟芯片出口欧洲受限→转向内需/一带一路"}
-      ],
-      "confidence": "yellow",
-      "timeframe": "years",
-      "lifecycle": "emerging",
-      "lifecycle_note": "6月3日(周三)正式发布→仅3天→极近催化窗口。CryptoBriefing/Implicator/Digital Watch本周密集报道→专业圈已知悉但大众尚未关注。发布后可能产生2-3天催化→关注欧洲半导体设备股(ASML/BESI)和A股设备出海标的(北方华创/中微)。",
-      "priced_in": "under_priced",
-      "priced_in_note": "草案5/28泄露→本周专业媒体已开始报道→但A股完全未定价(中文媒体几乎不报道欧洲政策)。6/3正式发布→可能催化A股半导体设备板块(全球半导体投资扩容=设备需求增加)。但欧洲政策→A股传导链长→定价反应可能滞后1-2周。",
-      "alerts": ["📊 6月3日(周三)EU Chips Act 2.0发布→关注欧洲半导体设备股和A股设备出海标的","⚠️ EU也限制中国芯片→中国MCU/模拟芯片对欧出口可能受限→内需逻辑更强化"],
-      "cross_chain": false
-    },
-    {
-      "id": "a19",
-      "ref": "weekend_add_6_23h",
-      "chain": "chain2",
-      "title": "Nvidia承诺$150B/年台湾投资+Constellation总部动工→AI硬件供给极端集中度风险创历史新高",
-      "verification": "confirmed",
-      "verification_note": "Reuters(5/27) + CNBC(5/27→'Taiwan chip stocks climb') + Seoul Economic Daily(5/28) + TechTimes(5/28) + Ad-hoc-news(5/28) 五方确认。Jensen Huang在Constellation HQ动工仪式上承诺$150B年投资→从$10-15B(5年前)涨10倍。50年租约→NT$400亿台币(~$12.7亿)用于Beitou-Shilin科技园T17/T18地块。",
-      "source_urls": [
-        "https://www.reuters.com/world/asia-pacific/nvidia-ceo-says-taiwan-is-epicentre-ai-revolution-2026-05-27/",
-        "https://www.cnbc.com/2026/05/27/nvidia-taiwan-investment-150-billion-spending.html",
-        "https://en.sedaily.com/international/2026/05/28/nvidias-jensen-huang-pledges-150-billion-annual-investment"
-      ],
-      "source_verified": "triple_confirmed",
-      "source_verified_note": "Reuters + CNBC + Seoul Economic Daily + TechTimes →四重顶级财经确认。Reuters 5/27报道→5/28多媒体验证→Seoul Economic Daily从韩国视角报道→信号可信度极高。",
-      "three_questions": {
-        "variable": "Nvidia从'AI芯片设计商'→'AI产业基础设施投资者'角色跃升。$150B/年=全球半导体资本开支的近30%→Nvidia的资源配置将决定全球AI硬件供应链的地理分布。Taiwan=AI产业epicentre(Jensen Huang原话)→极端集中度→地缘风险敞口巨大。对中国：(1)正面→Nvidia在台投资不涉及中国→但中国通过走私等非合规渠道获取→走私案(a17升级)显示非合规通道正在关闭；(2)负面→Nvidia$150B不投中国→中国被排除在全球AI硬件投资主航道之外。",
-        "magnitude": "⚡ 极高→链二的'大而不能倒'悖论。$150B/年→是台积电2025年CAPEX($30-40B)的3-4倍→相当于整个台湾GDP的20%。Nvidia的投资密度=台湾经济的AI依赖度→任何AI投资放缓→台湾经济直接受冲击→然后传导全球半导体供应链→A股AI出口标的(光模块)受双重重击。",
-        "sustainability": "⚠️ 高度不确定→$150B是承诺不是合同。风险：(1)AI投资周期回落→Nvidia削减支出→AI硬件需求→暴跌→链二全链受冲击；(2)地缘政治→台海风险→全球AI供应链物理中断→灾难性影响；(3)$150B增长斜率($10-15B→$150B=10x)不可持续→均值回归。"
-      },
-      "capital_backing": {
-        "level": "weak",
-        "big_fund": false,
-        "national_team_etf": false,
-        "recent_bidding": false,
-        "note": "Nvidia$150B台湾→完全非中国资金面。对中国链二(AI出口标的)→极端集中度=高风险→Nvidia投TWD→不投RMB→中国被排除。对链一(国产替代)→反而获得增强→$150B不投中国=中国必须自建AI硬件基础设施=链一逻辑获得Nvidia反面验证。"
-      },
-      "conduction_chain": [
-        {"step":1,"factor":"Nvidia $150B/年台湾→全球AI硬件供给90%+集中在台湾→极端集中度","sector":"全球AI供应链→台积电/日月光/富士康","tickers":[],"rationale":"Nvidia GPU→台积电制造→台湾封测→全球组装→中国被排除→但中国是最大AI芯片消费国"},
-        {"step":2,"factor":"$150B不投中国→中国AI硬件自给自足的紧迫性→链一逻辑获得Nvidia反面验证","sector":"中国半导体设备+制造+AI芯片","tickers":["002371.SZ","688012.SH","688981.SH","688041.SH"],"rationale":"Nvidia投资路线图=全球AI硬件格局→中国缺席=必须自建→链一全链受益"},
-        {"step":3,"factor":"极端集中度→任何AI投资周期回落→链二(AI出口)首当其冲","sector":"AI出口(光模块/PCB/组装)","tickers":["300308.SZ","300502.SZ"],"rationale":"Nvidia→台积电→光模块/PCB→链条任何节点断裂→中国AI出口标的遭双重重击"}
-      ],
-      "confidence": "yellow",
-      "timeframe": "years",
-      "lifecycle": "positioning",
-      "lifecycle_note": "Reuters 5/27首发→5/28多媒体验证→已进入positioning。$150B体量需数月消化。与Nvidia $150B同期的另一面：Nvidia在中国(几乎)零投资→形成'投资台湾$150B vs 投资中国$0'的鲜明对比→是链一(国产替代)的最强宏观背景验证。",
-      "priced_in": "fully_priced",
-      "priced_in_note": "5/27-28密集报道→台湾芯片股已涨(CNBC 'Taiwan chip stocks climb')→市场快速定价。但A股链二标的(光模块)→5/30反弹中未大幅跟随→分化持续→间接under_priced(被全球去杠杆叙事压制)。链一的'反面受益'逻辑未被充分认识→Nvidia不投中国=中国必须自建=链一确定性逻辑。",
-      "alerts": ["🔴 Nvidia $150B台湾 vs $0中国→全球AI硬件格局的'排华'特征→链一(国产替代)获Nvidia反面验证→确定性历史最高","⚠️ $150B增长斜率不可持续→AI投资周期回落风险→链二全链暴露","📊 台湾GDP 9.64%(Nikkei)+Nvidia $150B+GS HF仓位=AI极端集中度三重验证→系统性风险不可忽视"],
       "cross_chain": true
     }
   ],
   "attributions": [
     {
-      "date": "2026-05-30",
-      "type": "半导体全面反弹",
-      "detail": "pool.db异常引擎捕获5/30半导体全面反弹：华虹+15.79%(688347)、芯碁微装+15.19%(688630)、和林微纳+16.07%(688661)、西安奕材+12.88%(688783)、中船特气+12.68%(688146)、汇成股份+11.44%(688403)、江丰电子+10.71%(300666)。设备(17/27)+材料(20/25)+封测(7/9)板块联动→链一领涨全面验证伯恩斯坦设备国产化率判断。",
-      "related_signals": ["a16","a1","a12","a3"]
+      "signal_ref": "a1-a4",
+      "anomaly_type": "人形机器人板块持续分化",
+      "tickers": ["688017.SH", "002979.SZ", "002747.SZ", "300124.SZ"],
+      "pattern": "6/1机器人板块内部分化加剧：绿的谐波(688017)-1.52%量比3.65x继续下跌，雷赛智能(002979)+1.14%量比2.56x反弹，埃斯顿(002747)-0.39%量比4.37x缩量震荡，汇川技术(300124)-1.47%量比2.22x下跌。量比均>2x表示资金仍在活跃交易但方向分化→不是板块统一退潮而是结构性轮动。",
+      "rationale": "5/16-17板块整体冲顶→此后11个交易日进入分化调整。基本面利好(宇树IPO+Figure量产+高通RRD)持续累积，但资金面尚未统一方向。量比高+方向分化=多空分歧加大→方向选择窗口临近。",
+      "severity": "high"
     },
     {
-      "date": "2026-05-29",
-      "type": "τ定律全面回吐",
-      "detail": "科创50 -5.04%→中芯国际A股-8.97%(成交221亿)。三股力量共振：获利了结+GS HF去杠杆+月末调仓。港股卖空35.31亿港元历史峰值同日暴露。",
-      "related_signals": ["a3","a4","a15"]
+      "signal_ref": "a5",
+      "anomaly_type": "宇树IPO过会→T+0验证→板块估值锚建立",
+      "tickers": ["002896.SZ", "002979.SZ", "603728.SH", "688017.SH"],
+      "pattern": "5/31 analyst预测'宇树IPO明上会'→6/1 10:29确认过会→T+0预测验证。宇树供应链(中大力德/雷赛智能/鸣志电器)+谐波减速器(绿的谐波)是最直接受益标的。6/1市场尚未完全反应(绿的-1.52%仍下跌)→明日(6/2)可能是核心定价日。",
+      "rationale": "上交所2026年第31次审议会议→首发符合发行条件。宇树Q1量产1万台+预计估值>500亿→将建立全板块估值锚。市场今日尚未完成定价(机器人板块整体分化)→明日开盘需要重点关注。",
+      "severity": "medium"
     },
     {
-      "date": "2026-05-28",
-      "type": "Scanner s10归因修正",
-      "detail": "Scanner s10描述'半导体板块领跌'→异常引擎修正：华虹+15.79%/沪硅+9.05%/芯碁微装+15.19%大面积暴涨→真实图景为板块内轮动而非撤退。",
-      "related_signals": ["a10"]
-    },
-    {
-      "date": "2026-05-31_17h",
-      "type": "Nvidia走私案(Taiwan Japan)",
-      "detail": "Bloomberg/Japan Times/Taipei Times(5/27-28)三方确认Taiwan拘留3人→经日本转口Nvidia芯片至中国。Wikipedia已收录。中文媒体尚未大规模报道→信息不对称窗口仍在。",
-      "related_signals": ["a17","a2"]
-    },
-    {
-      "date": "2026-05-31_17h",
-      "type": "CXMT全球份额7.67%",
-      "detail": "Seoul Economic Daily(韩国权威)确认CXMT全球DRAM份额升至7.67%。ZeroHedge报道中国flooding market with DRAM and NAND→CXMT从跟随者→定价者转变。",
-      "related_signals": ["a1"]
-    },
-    {
-      "date": "2026-05-31_17h",
-      "type": "台湾GDP 9.64% AI驱动",
-      "detail": "Nikkei Asia(5/29)独家：台湾2026年GDP增长上调至9.64%(16年新高)→AI半导体出口为核心驱动力。验证AI需求对实体经济的实质性拉动→但也警示极端集中度风险。",
-      "related_signals": ["a11","a4"]
-    },
-    {
-      "date": "2026-05-31_23h",
-      "type": "NEW: Supermicro $2.5B走私案(US DOJ)→全球执法框架升级",
-      "detail": "Tom's Hardware/Yahoo Finance/TechSpot/TechTimes/BetaNews(5/24-31)多方确认US DOJ起诉Supermicro联合创始人Wally Liaw→$25亿Nvidia GPU经泰国/马来西亚壳公司走私中国→$5.1亿硬件已抵达(含阿里)。Wally Liaw不认罪→审判1-2年。Jensen Huang公开斥责Supermicro。与Taiwan Japan案(a17)形成并行打击→全球AI芯片走私通道全面收紧→链一(国产替代)获三重地缘政治强化(Taiwan案+US DOJ案+EU Chips Act)。",
-      "related_signals": ["a17","a2","a18"]
-    },
-    {
-      "date": "2026-05-31_23h",
-      "type": "NEW: EU Chips Act 2.0 €120B→6/3发布",
-      "detail": "CryptoBriefing/Implicator(FT草案)/Digital Watch/Agence Europe/Taipei Times五方确认。€120B芯片投资+危机管控权力。EU想'同时摆脱美国科技和中国芯片'→全球半导体从'中美二元'→'三极竞争'。6/3正式发布→下周催化。间接利好：全球设备市场扩容→中国设备商出海机会+全球半导体去集中化趋势→中国自主可控叙事获全球趋势验证。",
-      "related_signals": ["a18","a16"]
-    },
-    {
-      "date": "2026-05-31_23h",
-      "type": "NEW: Nvidia $150B/年台湾投资→极端集中度风险",
-      "detail": "Reuters/CNBC/Seoul Economic Daily/TechTimes(5/27-28)五方确认。Jensen Huang在Constellation HQ动工仪式上承诺$150B年投资。从$10-15B(5年前)涨10倍→相当于台湾GDP的20%。Nvidia投资路线图=全球AI硬件格局：台湾$150B vs 中国$0→中国缺席全球AI硬件投资主航道→链一(国产替代)获Nvidia反面最强验证。",
-      "related_signals": ["a19","a4","a11"]
+      "signal_ref": "market_6_1",
+      "anomaly_type": "科创50全面反弹→B3二次介入窗口验证",
+      "tickers": [],
+      "pattern": "6/1科创50全面反弹：370条异常记录中120只688进入异常池，均涨幅+3.22%，40只涨超5%，仅2只跌超5%。半导体设备板块联动(17/27只)+材料板块联动(20/25只)+封测板块联动(7/9只)+光通信板块联动(18/23只)+IC设计板块联动(35/46只)→全链共振上涨。验证5/31 analyst判断'科创50 1800守住则B3二次介入'。",
+      "rationale": "5/29暴跌(-5.04%)→5/30反弹→6/1全面上涨→B3二次介入窗口验证。τ定律4天极速周期后，市场在1800支撑位获得买盘。6/1上涨量比均值3.38x→有量能支撑的反弹而非无量空涨。",
+      "severity": "info"
     }
   ],
   "divergences": [
     {
       "id": "d1",
-      "severity": "critical",
-      "title": "τ定律4天极速全周期→A股主题投资生命周期系统性压缩",
-      "detail": "emerging→exhausted仅4天(+5.88%→-5.04%)。以后A股主题催化默认生命周期1-3天(非2-4周)。5/30反弹≠τ定律第二波→是独立于τ定律的链一国产替代逻辑。",
-      "related_signals": ["a3","a10"]
+      "type": "资金面背离",
+      "description": "机器人基本面利好持续累积(宇树IPO过会+Figure量产+大摩背书+高通RRD+标准化)vs 板块核心标的绿的谐波6/1继续下跌(-1.52%量比3.65x)。五大利好vs持续下跌=明显的基本面-资金面背离。可能原因：1) 5/16-17获利盘兑现尚未完成；2) 资金从机器人轮出至半导体(6/1半导体全线上涨vs机器人分化)；3) 市场等待宇树IPO估值确认后再定价。",
+      "tickers": ["688017.SH", "002747.SZ", "300124.SZ"],
+      "severity": "high",
+      "action": "关注明日(6/2)：宇树IPO过会消息隔夜发酵+COMPUTEX催化释放→机器人板块可能补涨。如绿的新增量比回升+转涨→背离修复→B2介入窗口。如继续放量下跌→背离恶化→板块可能进入中期调整。"
     },
     {
       "id": "d2",
-      "severity": "critical",
-      "title": "寒武纪思元未入选AI芯片清单+全球走私执法框架→寒武纪双重利空累积",
-      "detail": "9款清单不含寒武纪思元。海光DCU-3G入选→海光为最大赢家。NEW: Supermicro$2.5B走私案+Taiwan Japan走私→全球AI芯片走私通道关闭→但寒武纪不在合规采购清单内→无法捕获走私替代需求→双重利空(无合规准入+无法捕获走私需求)。寒武纪5/29已跌-5%+→如持续缺席→估值需系统性下调。Tom's Hardware明确'Cambricon and Kunlunxin are absent'→国际媒体已注意。",
-      "related_signals": ["a2","a17"]
+      "type": "板块轮动背离",
+      "description": "6/1市场呈现半导体全面上涨vs机器人分化的板块轮动格局。半导体设备(17/27异常)+材料(20/25异常)+封测(7/9异常)+IC设计(35/46异常)→全链共振。机器人仅7/11异常→显著弱于半导体。这可能意味着资金从机器人→半导体的切换正在进行。",
+      "tickers": [],
+      "severity": "medium",
+      "action": "跟踪明日(6/2)开盘：若半导体继续领涨+机器人继续分化→确认资金切换→链一(半导体)>>机器人(非双链核心)。但宇树IPO过会+高通RRD可能为机器人提供新的催化剂→防止单向判断。"
     },
     {
       "id": "d3",
-      "severity": "critical",
-      "title": "链一>>>链二配置框架持续强化→获得三重独立验证",
-      "detail": "链一strong_backing: a1/a2/a12/a16/a17 = 5条。链二weak: a4/a6/a11/a13 = 多数。三重独立验证：(1)全球走私执法框架(a17)→链一地缘政治超级强化；(2)Nvidia $150B台湾 vs $0中国(a19)→链一获反面验证；(3)EU Chips Act 2.0(a18)→全球半导体主权化趋势→链一不是'中国特色'是'全球趋势'。配置建议链一(>>>)链二。",
-      "related_signals": ["a16","a4","a1","a12","a17","a18","a19"]
-    },
-    {
-      "id": "d4",
-      "severity": "high",
-      "title": "GS多空两面信号矛盾→短期仓位拥挤 vs 长期需求刚性",
-      "detail": "GS Prime：HF仓位创新高+止盈近一年最快(→卖出)。GS Research：agentic AI驱动24倍token增长(→买入)。两者不矛盾：短期极度拥挤→去杠杆风险；长期需求持续→去杠杆后重新入场。NEW: Nvidia $150B台湾(a19)验证长期需求的'大而不能倒'→可能延缓去杠杆但不会逆转→累积风险更大。",
-      "related_signals": ["a4","a19"]
-    },
-    {
-      "id": "d5",
+      "type": "信息覆盖偏差",
+      "description": "本期robot-scanner仅产出4条机器人信号(无半导体直接信号)，但6/1实际市场半导体全链大涨。常规Scanner持续缺位→链一/链二信号漏检风险累积。需要手动补充半导体链信号。",
+      "tickers": [],
       "severity": "medium",
-      "title": "华为AI芯片收入量级修正",
-      "detail": "Scanner s2原文'华为2026年AI芯片收入目标$120亿'→FT/Reuters报道应为$12B(约850亿人民币)。已确认修正。",
-      "related_signals": ["a2"]
-    },
-    {
-      "id": "d6",
-      "severity": "critical",
-      "title": "NEW: 全球AI芯片走私执法框架全面形成→链一获三重地缘政治强化→中国半导体自给自足确定性历史最高",
-      "detail": "US DOJ(Supermicro$2.5B案)+Taiwan首次刑事执法→全球执法框架形成→覆盖东南亚(泰国/马来西亚)+东亚(日本/Taiwan)所有已知走私通道。$5.1亿GPU已在中国但不追回→未来走私通道关闭。Jensen Huang公开斥责→Nvidia渠道合规收紧→Nvidia芯片在中国从'有限合规+有限非法'→'有限合规+接近零非法'。链一逻辑从'政策推动'→'物理必然'→确定性达到历史最高。",
-      "related_signals": ["a17","a2","a18","a19"]
-    },
-    {
-      "id": "d7",
-      "severity": "high",
-      "title": "NEW: 全球半导体三极化→去集中化趋势→最大受益者是设备商",
-      "detail": "EU Chips Act 2.0(a18)标志欧洲正式加入半导体主权化→全球从'东亚制造、全球消费'→'美欧东亚均自建产能'。短期最大受益者是全球半导体设备商(ASML/AMAT/LAM/TEL/NAURA/AMEC)→每建一座fab都需要设备。长期风险是全球产能过剩→芯片价格战→制造端利润承压。A股设备商(北方华创/中微)既受益于中国国产替代+全球设备市场扩容的双重增长。",
-      "related_signals": ["a18","a16"]
+      "action": "建议立即检查常规Scanner运行状态。本analyst手动补充a6(COMPUTEX)为链二信号，但链一(设备/材料/封测)今日大涨的触发因素(长鑫IPO+AI芯片清单+τ定律反弹)未被本期Scanner捕获。"
     }
   ],
   "stats": {
-    "total_signals": 19,
-    "chain1": 9,
-    "chain2": 8,
-    "cross_chain": 4,
+    "total_signals": 7,
+    "chain1": 1,
+    "chain2": 3,
+    "cross_chain": 3,
     "by_lifecycle": {
-      "emerging": 6,
-      "positioning": 7,
+      "emerging": 2,
+      "positioning": 4,
       "consensus": 1,
-      "exhausted": 2,
-      "overridden": 3
+      "exhausted": 0
     },
     "by_priced_in": {
-      "under_priced": 10,
+      "under_priced": 2,
       "partially_priced": 4,
-      "fully_priced": 5,
+      "fully_priced": 1,
       "over_priced": 0
     },
-    "strong_backing": 4,
-    "moderate_backing": 3,
-    "weak_backing": 12,
-    "triple_confirmed": 9,
-    "dual_confirmed": 3,
-    "single_sourced": 4,
-    "unverified": 3
+    "strong_backing": 0,
+    "moderate_backing": 6,
+    "weak_backing": 1,
+    "triple_confirmed": 0,
+    "dual_confirmed": 6,
+    "single_sourced": 1,
+    "unverified": 0,
+    "_note": "web_search不可用(23:00 run)→source_verified评级继承17:00+新信号外部验证受限。实际验证等级可能被低估。"
   },
   "context_update": {
     "key_findings": [
-      "🔴 NEW(23h): 全球AI芯片走私执法框架全面形成→US DOJ Suprmicro$2.5B案+Taiwan首次刑事执法→覆盖所有走私通道→链一获三重地缘政治强化→确定性历史最高",
-      "📊 NEW(23h): EU Chips Act 2.0 €120B→6/3发布→全球半导体从'中美二元'→'三极竞争'→中国自主可控不再是'特色'而是'全球趋势'→设备商(北方华创/中微)获全球市场扩容+中国国产替代双重增长",
-      "📊 NEW(23h): Nvidia $150B/年台湾 vs $0中国→全球AI硬件格局'排华'特征→链一(国产替代)获Nvidia反面最强验证→大基金三期3440亿投向逻辑被Nvidia投资路线图独立验证",
-      "📊 10条under_priced信号→a17(全球走私执法框架)+a2(AI芯片清单)+a16(设备国产化率)最具再定价潜力→6/1周一多重催化剂 →方向选择窗口",
-      "📊 伯恩斯坦设备国产化率→5/30反弹数据全面验证+pool.db确认识别：设备(17/27)+材料(20/25)+封测(7/9)板块联动→链一是当前最确定配置方向",
-      "📊 τ定律4天极速全周期→A股主题投资生命周期系统性压缩至1-3天→5/30反弹=独立链一逻辑非τ定律第二波",
-      "🔴 寒武纪思元缺席AI芯片清单+全球走私执法关闭→寒武纪双重利空→不在清单内=无法捕获走私替代需求→周一可能继续承压vs海光受益",
-      "⚠️ GS HF仓位创历史新高+止盈近一年最快+Nvidia $150B集中度→全球AI半导体去杠杆风险1-2月内必有方向选择→链二配置建议维持>>远低于链一",
-      "📊 CXMT全球DRAM份额7.67%+H1营收1200亿投影→IPO从'中国故事'→'全球竞争事件'→韩国/美国媒体关注度验证→产业基本面持续超预期",
-      "📊 字节$70B→Bloomberg/The Information/DigiTimes三方确认→under_priced→5/30反弹中光模块未大幅跟随→错杀机会"
+      "📊 B3二次介入窗口验证：科创50在1800支撑位守住后6/1全面反弹(120只688异常,均+3.22%,40只涨超5%)。5/31 analyst预判准确→B3窗口成立。但量比均3.38x→有量能支撑的反弹是好的。",
+      "📊 链一(设备/材料/封测)>>链二(AI芯片/IC设计)判断得到市场验证：6/1半导体全链共振上涨→设备17/27、材料20/25、封测7/9进入异常池→全链做多。链二IC设计35/46也表现不错但幅度偏弱。",
+      "📊 宇树科技科创板IPO过会→5/31 analyst预测T+0验证→人形机器人第一股诞生。板块估值锚建立。IPO过会→注册→发行→上市时间线3-6个月→持续催化。",
+      "📊 COMPUTEX 2026黄仁勋keynote完成：Token=资产+NVIDIA DSX平台+Vera Rubin按计划。高盛同日重申NVDA买入285美元。DSX平台标准化AI工厂→利好光模块(中际/新易盛)+先进封装(通富/长电)。",
+      "📊 高通IQ10 RRD+COMPUTEX DSX→AI+机器人双平台标准化共振。全新叙事线(机器人计算标准化)与'量产多少台'不同维度定价→under_priced机会。",
+      "⚠️ 机器人板块基本面利好累积vs核心标的继续下跌→资金面背离加剧。绿的谐波-1.52%(量比3.65x)在五大利好下仍下跌→关注明日是否修复。",
+      "⚠️ regular Scanner持续缺位(连续2天)→链一/链二信号大量漏检。本期6/1半导体全线上涨的触发因素未被Scanner捕获→需立即修复。"
     ],
     "emerging_risks": [
-      "🔴 6/1周一是关键窗口：港股卖空T+2(5/29揭晓)+宇树IPO上会+国家AI基金进场具身智能+走私案中文媒体可能跟进→四重催化剂共振",
-      "🔴 NEW: 全球AI芯片走私执法框架→可能引发中国反制措施→增加半导体贸易战升级风险→利好国产替代但增加整体市场波动率",
-      "⚠️ NEW: EU Chips Act 2.0→EU也限制'中国芯片'→中国MCU/模拟芯片出口欧洲可能受限→内需逻辑更强化但出海逻辑受损",
-      "⚠️ NEW: Nvidia $150B台湾+台湾GDP 9.64%→极端集中度→台海任何事件都可能引发全球AI供应链灾难",
-      "⚠️ τ定律4天全周期→A股情绪波动率系统性上升→V型反转概率增大但单日跌幅也可能扩大",
-      "⚠️ CXMT IPO历史顶部信号(Bloomberg)→若市场在CXMT IPO后调整→3050点关键支撑",
-      "⚠️ 寒武纪缺席AI芯片清单+全球走私执法关闭→双重利空累积→若持续缺席→估值需系统性下调"
-    ],
-    "chain_config_recommendation": "链一(>>>链二)。三重地缘政治强化(全球走私执法框架+EU Chips Act+Nvidia台湾vs中国)→链一确定性历史最高。设备(>>)材料(>)封测(>)制造(>>)AI芯片。北方华创(680目标→~40%上行)/中微公司(500目标→~50%上行)/拓荆科技为设备核心配置。沪硅产业/安集科技/南大光电为材料核心。长电科技/通富微电为封测核心。海光信息>>>寒武纪(链二AI芯片部分→海光获三重加持：清单入选+全球走私执法框架+采购清单)。光模块(AI出口)等待全球AI仓位去杠杆后重新评估。新推荐：EU Chips Act 2.0→全球半导体设备市场扩容→北方华创/中微获出海增长故事(欧洲fab建成熟制程→中国设备有成本优势)。Nvidia $150B台湾→链一获反面最强验证→确定性从'政策推动'→'物理必然'→超配链一。"
+      "🔴 机器人板块基本面-资金面背离恶化风险：五大利好(宇树IPO+Figure量产+大摩背书+高通RRD+标准化)vs绿的谐波持续下跌→若明日仍不修复→可能确认板块进入中期调整。核心观察指标：绿的谐波量比能否从3.65x回落+能否转涨。",
+      "🟡 全球AI仓位拥挤风险未解除：GS重申NVDA买入285美元但同步警告'半导体股价超越盈利'。COMPUTEX利好释放后可能出现'利好出尽'→美股AI半导体今晚表现是关键先行指标。",
+      "🟡 Scanner持续缺位风险：常规Scanner连续2天无产出→链一(设备/材料)今日大涨的触发因素被漏检→管线完整性受损。需确认Scanner是否故障。",
+      "🟡 web_search不可用风险：23:00 run高权重源验证无法执行→source_verified评级可能偏低。需后续补充验证。",
+      "✅ 科创50反弹持续性：6/1全面反弹但量比均值3.38x→有量支撑的反弹可信度高。但需跟踪明日能否持续→如连续2-3天放量上涨→确认B3二次介入窗口有效。"
+    ]
+  },
+  "_market_data_6_1": {
+    "科创50_688_anomalies": 120,
+    "科创50_avg_pct_chg": 3.22,
+    "科创50_up_gt_5pct": 40,
+    "科创50_down_gt_5pct": 2,
+    "科创50_avg_vol_ratio": "3.38x",
+    "总异常数": 370,
+    "总均涨幅": 3.30,
+    "半导体设备联动": "17/27",
+    "半导体材料联动": "20/25",
+    "封测与基板联动": "7/9",
+    "光通信与光学联动": "18/23",
+    "IC设计联动": "35/46",
+    "机器人自动化联动": "7/11",
+    "半导体零部件联动": "11/15",
+    "关键标的": {
+      "688981_中芯国际": "+5.12%, 量比3.99x",
+      "688126_沪硅产业": "+9.05%, 量比9.06x",
+      "688012_中微公司": "-0.42%, 量比2.63x",
+      "688072_拓荆科技": "+0.84%, 量比3.55x",
+      "688200_华峰测控": "+3.83%, 量比2.56x",
+      "688017_绿的谐波": "-1.52%, 量比3.65x"
+    }
   }
 }
