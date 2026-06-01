@@ -2290,17 +2290,7 @@ async function loadBacktest() {
     } catch(e) { console.log('Backtest load err:', e); }
 }
 
-// ===== Weekly Chart Modal =====
-function openWeeklyChart(tsCode, stockName) {
-    const header = document.getElementById('chartHeader');
-    const viewer = document.getElementById('chartViewer');
-    header.textContent = '📈 ' + stockName + '  ' + tsCode;
-    viewer.innerHTML = '<div class="modal-loading">⏳ 加载中…</div>';
-    const img = new Image();
-    img.onload = function() { viewer.innerHTML = ''; viewer.appendChild(img); img.style.maxWidth='100%'; img.style.borderRadius='6px'; };
-    img.onerror = function() { viewer.innerHTML = '<div style="color:#f85149;padding-top:40px;text-align:center;">⚠️ 图表加载失败</div>'; };
-    img.src = 'charts/weekly/' + tsCode + '.png';
-}
+// ===== Weekly Chart Modal (Canvas-based, uses kdj-double-alert.json chart_data) =====
 
 // ===== Start =====
 init();
