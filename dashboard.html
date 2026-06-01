@@ -324,27 +324,80 @@ function renderCrossSignals(){
 let themeD;
 async function loadTrend(){
     try{
-        let[sector,alerts]=await Promise.all([loadJSON('data/sector-oversold-index.json').catch(()=>null),loadJSON('data/kdj-double-alert-lite.json').catch(()=>null)]);
+        let[sector,alerts,rotation,volume]=await Promise.all([
+            loadJSON('data/sector-oversold-index.json').catch(()=>null),
+            loadJSON('data/kdj-double-alert-lite.json').catch(()=>null),
+            loadJSON('data/tc-rotation.json').catch(()=>null),
+            loadJSON('data/tc-volume.json').catch(()=>null)
+        ]);
         if(!themeD)themeD=await loadJSON('data/theme-data.json').catch(()=>null);
         let hot=findHot(),flow=findFlow(),b1=(alerts?.l2_buy?.length||0)+(alerts?.l1_buy?.length||0);
-        document.getElementById('trendDate').textContent=themeD?.date?' '+themeD.date:'';
+        document.getElementById('trendDate').textContent=(themeD?.date||rotation?.date||'')+' ';
+
+        // KPIs: add rotation momentum and volume info
+        let topRot=rotation?.ranking?.[0];
+        let topName=topRot?topRot[0]:'-',topMom=topRot?topRot[1]?.momentum_5d:null;
+        let volStats=volume?.stats||{};
+        let surge=(volStats.extreme_surge||0)+(volStats.strong_surge||0);
         document.getElementById('trendKPIs').innerHTML=[
-            {v:hot?.name||'-',l:'最强方向',c:hot?.pct>0?'red':''},{v:b1,l:'B1买点'},{v:flow?.flow||'-',l:'主力资金',c:flow?.pos?'green':'red'},{v:alerts?.l1_sell?.length||0,l:'J>90卖点'}
+            {v:hot?.name||topName||'-',l:'今日最强',c:hot?.pct>0?'red':''},
+            {v:topMom!=null?(topMom>0?'+':'')+topMom.toFixed(1)+'%':'-',l:'5日动量('+(topName||'')+')',c:topMom>0?'red':''},
+            {v:b1,l:'B1买点'},{v:flow?.flow||'-',l:'主力资金',c:flow?.pos?'green':'red'},
+            {v:surge,l:'放量异动',c:surge>5?'red':''},{v:alerts?.l1_sell?.length||0,l:'J>90卖点'}
         ].map(k=>`<div class="kpi"><div class="kpi-val ${k.c||''}">${k.v}</div><div class="kpi-label">${k.l}</div></div>`).join('');
-        // Heat
+
+        // Two columns: left=rotation ranking, right=heat+sectorKDJ
+        let html='<div class="grid-2">';
+
+        // Left: Rotation ranking from trending-china
+        html+='<div class="card"><div class="card-title">🔄 方向轮动排名<span class="card-sub">'+(rotation?.date||'')+'</span></div>';
+        let rank=rotation?.ranking||[];
+        if(rank.length){
+            let crowded=rotation?.crowded||[];
+            html+=rank.map((r,i)=>{
+                let nm=r[0],st=r[1]||{},dr=st.daily_return||0,m5=st.momentum_5d||0,m10=st.momentum_10d||0,up=st.up_ratio||0,vol=st.vol_ratio||0;
+                let isCrowded=crowded.includes(nm);
+                return `<div class="dir-row"><span class="dir-rank">${i+1}</span><span class="dir-name">${nm}${isCrowded?' ⚠️':''}</span>`+
+                    `<span class="mono" style="color:${dr>=0?'#da3633':'#3fb950'};min-width:55px;text-align:right">${dr>0?'+':''}${dr.toFixed(1)}%</span>`+
+                    `<span class="mono" style="color:${m5>=0?'#da3633':'#3fb950'};min-width:55px;text-align:right">5日:${m5>0?'+':''}${m5.toFixed(1)}%</span>`+
+                    `<span class="mono" style="color:${m10>=0?'#da3633':'#3fb950'};min-width:60px;text-align:right">10日:${m10>0?'+':''}${m10.toFixed(1)}%</span>`+
+                    `<span style="min-width:45px;text-align:right;font-size:10px;color:#8b949e">↑${up.toFixed(0)}%</span>`+
+                    `<span style="min-width:45px;text-align:right;font-size:10px;color:${vol>1.3?'#d29922':'#8b949e'}">量${vol.toFixed(1)}x</span>`+
+                `</div>`}).join('');
+        }else{html+='<div class="empty">无轮动数据</div>'}
+        html+='</div>';
+
+        // Right column
+        html+='<div>';
+        // Volume stats
+        html+='<div class="card"><div class="card-title">📊 量价分布<span class="card-sub">'+(volume?.date||'')+'</span></div>';
+        let labels={bullish:'📈 看涨',distribution:'📤 派发',divergence:'🔄 背离',pullback:'📉 回调',extreme_surge:'🔥 极度放量',strong_surge:'⚡ 强势放量'};
+        html+='<div style="display:flex;flex-wrap:wrap;gap:6px">';
+        for(let[k,v]of Object.entries(labels)){let cnt=volStats[k]||0;if(cnt>0)html+=`<span style="font-size:11px;padding:2px 6px;border-radius:3px;background:rgba(88,166,255,.06);color:#c9d1d9">${v} ${cnt}</span>`}
+        html+='</div></div>';
+
+        // Direction heat (compact)
+        html+='<div class="card"><div class="card-title">📈 方向热度</div><div id="dirHeat" style="max-height:300px;overflow-y:auto">';
         let grps=themeD?.groups||[];
-        if(grps.length){let maxP=Math.max(...grps.map(g=>Math.abs(g.avg_pct||0)),.1);let srt=[...grps].sort((a,b)=>(b.avg_pct||0)-(a.avg_pct||0)).slice(0,15);
-        document.getElementById('dirHeat').innerHTML=srt.map((g,i)=>{
-            let p=g.avg_pct||0,w=Math.abs(p)/maxP*100;
-            return `<div class="dir-row"><span class="dir-rank">${i+1}</span><span class="dir-name">${g.group||g.name||'?'}</span><div class="dir-bar-wrap"><div class="dir-bar" style="width:${w}%;background:${p>=0?'#da3633':'#3fb950'}"></div></div><span class="dir-val" style="color:${p>=0?'#da3633':'#3fb950'}">${p>0?'+':''}${p.toFixed(1)}%</span><span class="dir-count">${g.count||0}只</span></div>`}).join('');}
-        // Clusters
+        if(grps.length){let maxP=Math.max(...grps.map(g=>Math.abs(g.avg_pct||0)),.1);let srt=[...grps].sort((a,b)=>(b.avg_pct||0)-(a.avg_pct||0)).slice(0,12);
+        html+=srt.map((g,i)=>{let p=g.avg_pct||0,w=Math.abs(p)/maxP*100;return `<div class="dir-row"><span class="dir-rank">${i+1}</span><span class="dir-name">${g.group||g.name||'?'}</span><div class="dir-bar-wrap"><div class="dir-bar" style="width:${w}%;background:${p>=0?'#da3633':'#3fb950'}"></div></div><span class="dir-val" style="color:${p>=0?'#da3633':'#3fb950'}">${p>0?'+':''}${p.toFixed(1)}%</span></div>`}).join('');}
+        html+='</div></div></div></div>';
+
+        // Bottom: clusters + sector KDJ
+        html+='<div class="grid-2" style="margin-top:12px">';
+        html+='<div class="card"><div class="card-title">🔥 板块集群</div><div id="trendClusters">';
         let cl=alerts?.clusters||{},ent=Object.entries(cl).sort((a,b)=>b[1]-a[1]);
-        document.getElementById('trendClusters').innerHTML=ent.length?ent.map(([c,n])=>`<span class="cluster-badge" style="${n>=5?'background:rgba(248,81,73,.1);color:#f85149;border-color:rgba(248,81,73,.3)':''}">${c} ×${n}</span>`).join('')+'<div style="font-size:10px;color:#8b949e;margin-top:4px">≥3只同方向触发 = 板块级行为</div>':'<div class="empty">无集群</div>';
-        // Sector KDJ
+        html+=ent.length?ent.map(([c,n])=>`<span class="cluster-badge" style="${n>=5?'background:rgba(248,81,73,.1);color:#f85149;border-color:rgba(248,81,73,.3)':''}">${c} ×${n}</span>`).join('')+'<div style="font-size:10px;color:#8b949e;margin-top:4px">≥3只同方向触发 = 板块级行为</div>':'<div class="empty">无集群</div>';
+        html+='</div></div>';
+
         document.getElementById('kdjDate').textContent=sector?.date?' '+sector.date:'';
         let items=sector?.sectors||[];if(!items.length)items=[];
         let srt2=[...items].sort((a,b)=>(a.j_under_15_pct||0)-(b.j_under_15_pct||0));
-        document.getElementById('sectorKDJ').innerHTML=srt2.map(s=>{let j15=s.j_under_15_pct||0;return`<tr><td style="padding:3px">${s.name||s.sector||'?'}</td><td style="text-align:right;padding:3px;color:#8b949e">${s.count||0}</td><td style="text-align:right;padding:3px;font-family:monospace">${(s.avg_k||0).toFixed(1)}</td><td style="text-align:right;padding:3px;font-family:monospace;color:${(s.avg_j||0)<20?'#3fb950':'#c9d1d9'}">${(s.avg_j||0).toFixed(1)}</td><td style="text-align:right;padding:3px;color:${j15>30?'#3fb950':j15>15?'#d29922':'#c9d1d9'}">${j15.toFixed(0)}%</td><td style="text-align:right;padding:3px;font-size:10px;color:${(s.j_under_15_trend||'')==='收敛'?'#3fb950':(s.j_under_15_trend||'')==='发散'?'#f85149':'#8b949e'}">${s.j_under_15_trend||'—'}</td></tr>`}).join('')||'<tr><td colspan="6" class="empty">无数据</td></tr>';
+        html+='<div class="card"><div class="card-title">📊 板块KDJ<span class="card-sub" id="kdjDate">'+(sector?.date||'')+'</span></div><div style="max-height:300px;overflow-y:auto"><table style="width:100%;font-size:11px;border-collapse:collapse"><thead><tr style="color:#8b949e;border-bottom:1px solid #21262d"><th style="text-align:left;padding:3px">板块</th><th style="text-align:right;padding:3px">标的</th><th style="text-align:right;padding:3px">均K</th><th style="text-align:right;padding:3px">均J</th><th style="text-align:right;padding:3px">J&lt;15</th><th style="text-align:right;padding:3px">趋势</th></tr></thead><tbody>';
+        html+=srt2.map(s=>{let j15=s.j_under_15_pct||0;return`<tr><td style="padding:3px">${s.name||s.sector||'?'}</td><td style="text-align:right;padding:3px;color:#8b949e">${s.count||0}</td><td style="text-align:right;padding:3px;font-family:monospace">${(s.avg_k||0).toFixed(1)}</td><td style="text-align:right;padding:3px;font-family:monospace;color:${(s.avg_j||0)<20?'#3fb950':'#c9d1d9'}">${(s.avg_j||0).toFixed(1)}</td><td style="text-align:right;padding:3px;color:${j15>30?'#3fb950':j15>15?'#d29922':'#c9d1d9'}">${j15.toFixed(0)}%</td><td style="text-align:right;padding:3px;font-size:10px;color:${(s.j_under_15_trend||'')==='收敛'?'#3fb950':(s.j_under_15_trend||'')==='发散'?'#f85149':'#8b949e'}">${s.j_under_15_trend||'—'}</td></tr>`}).join('')||'<tr><td colspan="6" class="empty">无数据</td></tr>';
+        html+='</tbody></table></div></div></div>';
+
+        document.getElementById('t-trend').innerHTML=html;
     }catch(e){console.log('Trend err:',e)}
 }
 function findHot(){if(!themeD?.groups)return null;let v=themeD.groups.filter(g=>g.count>=2&&g.avg_pct!=null);if(!v.length)return null;let t=v.reduce((a,b)=>(a.avg_pct||0)>(b.avg_pct||0)?a:b);return{name:t.group||t.name,pct:t.avg_pct}}
