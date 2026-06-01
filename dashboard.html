@@ -2097,20 +2097,30 @@ async function openWeeklyChart(code, name) {
         }
         const cd = kdjChartCache || {};
         const ch = cd[code];
-        if (!ch || !ch.weeks || ch.weeks.length < 10) {
+        if (!ch || !ch.weeks || ch.weeks.length < 5) {
             document.getElementById('chartViewer').innerHTML = '<div style="color:#8b949e;padding:40px;text-align:center;">图表数据不足</div>';
             return;
         }
         document.getElementById('chartHeader').innerHTML = '📈 ' + name + ' <span style="font-size:10px;color:#8b949e;">' + code + '</span>';
 
-        const weeks = ch.weeks.slice(-50);
-        const kdj = ch.kdj ? (ch.kdj.length >= weeks.length ? ch.kdj.slice(-50) : ch.kdj.slice(-30).concat(new Array(Math.max(0,weeks.length-ch.kdj.length)).fill(null))) : [];
+        // Align weeks with kdj data; trim from first bar that has BBI data
+        let weeks = ch.weeks.slice(-60);
+        let kdj = ch.kdj ? ch.kdj.slice(-60) : [];
+        // Find first index where both white and yellow lines are available
+        let firstValid = 0;
+        for (let i = 0; i < Math.min(weeks.length, kdj.length); i++) {
+            if (kdj[i] && kdj[i].yellow != null && kdj[i].white != null) {
+                firstValid = i; break;
+            }
+        }
+        weeks = weeks.slice(firstValid).slice(-50);
+        kdj = kdj.slice(firstValid).slice(-50);
         
         const parent = document.getElementById('chartViewer').parentElement;
-        const W = parent.clientWidth - 48;
-        const H = parent.clientHeight - 80;
+        const W = Math.max(400, parent.clientWidth - 48);
+        const H = Math.max(300, parent.clientHeight - 80);
         const ratio = 0.62;
-        const H1 = Math.floor(H * ratio), H2 = H - H1 - 20;
+        const H1 = Math.floor(H * ratio), H2 = H - H1 - 24;
 
         let canvas = document.getElementById('kdjChart');
         if (!canvas) {
@@ -2125,51 +2135,43 @@ async function openWeeklyChart(code, name) {
         ctx.clearRect(0, 0, W, H);
         
         const n = weeks.length;
-        const padL = 55, padR = 10, padT = 10, padB = 25;
+        const padL = 60, padR = 30, padT = 12, padB = 28;
         const xRange = W - padL - padR;
 
-        // Prices range
+        // Price range (include BBI and white line in range calculation)
         const allP = weeks.flatMap(w => [w.h, w.l]);
-        const bb = (kdj.filter(k=>k&&k.yellow).map(k=>k.yellow)||[]);
-        const wh = (kdj.filter(k=>k&&k.white).map(k=>k.white)||[]);
-        const allV = [...allP, ...bb, ...wh].filter(v=>v&&!isNaN(v));
+        const bb = (kdj.filter(k=>k&&k.yellow!=null).map(k=>k.yellow)||[]);
+        const wh = (kdj.filter(k=>k&&k.white!=null).map(k=>k.white)||[]);
+        const allV = [...allP, ...bb, ...wh].filter(v=>v!=null&&!isNaN(v)&&isFinite(v));
         if (!allV.length) return;
-        const minP = Math.min(...allV) * 0.98, maxP = Math.max(...allV) * 1.02;
+        const minP = Math.min(...allV) * 0.97, maxP = Math.max(...allV) * 1.03;
         const pR = (maxP - minP) || 1;
-        const yRange = H1 - padT - 5;
+        const yRange = H1 - padT - 4;
 
-        function px(i) { return padL + i * xRange / (n-1); }
+        function px(i) { return padL + i * xRange / Math.max(1, n-1); }
         function py(v) { return padT + (maxP - v) / pR * yRange; }
 
         // KDJ range
         const allKDJ = kdj.filter(k=>k).flatMap(k => [k.K,k.D,k.J]).filter(v=>v!=null&&!isNaN(v));
-        const minKDJ = allKDJ.length ? Math.min(...allKDJ) : -20;
-        const maxKDJ = allKDJ.length ? Math.max(...allKDJ) : 120;
+        const minKDJ = allKDJ.length ? Math.min(...allKDJ, -10) : -20;
+        const maxKDJ = allKDJ.length ? Math.max(...allKDJ, 110) : 120;
         const kR = (maxKDJ - minKDJ) || 1;
         const y2R = H2 - padB - 5;
-        const y2Base = H1 + 20;
+        const y2Base = H1 + 24;
         function py2(v) { return y2Base + padT + (maxKDJ - v) / kR * y2R; }
 
         // BG
         ctx.fillStyle = '#0d1117'; ctx.fillRect(0, 0, W, H);
 
-        // Grid
-        ctx.strokeStyle = '#161b22'; ctx.lineWidth = 0.5;
-        for (let i = 0; i < 5; i++) {
+        // ── Main chart grid ──
+        ctx.strokeStyle = '#1a1f2b'; ctx.lineWidth = 0.5;
+        for (let i = 0; i <= 4; i++) {
             const y = padT + i * yRange / 4;
             ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
         }
-        ctx.strokeStyle = '#161b22';
-        for (let i = 0; i < 5; i++) {
-            const y = y2Base + padT + i * y2R / 4;
-            ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
-        }
-        // Separator
-        ctx.strokeStyle = '#30363d'; ctx.lineWidth = 1;
-        ctx.beginPath(); ctx.moveTo(padL, H1+10); ctx.lineTo(W-padR, H1+10); ctx.stroke();
 
-        // BBI (yellow_line) - draw first so it's behind candles
-        ctx.strokeStyle = '#d29922'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3]);
+        // ── BBI 黄线 (drawn behind candles) ──
+        ctx.strokeStyle = '#d29922'; ctx.lineWidth = 1.8; ctx.setLineDash([5, 3]);
         ctx.beginPath();
         let started = false;
         for (let i = 0; i < Math.min(n, kdj.length); i++) {
@@ -2181,8 +2183,8 @@ async function openWeeklyChart(code, name) {
         }
         ctx.stroke(); ctx.setLineDash([]);
 
-        // White line
-        ctx.strokeStyle = '#e6edf3'; ctx.lineWidth = 1.5;
+        // ── 白线 EMA(EMA(C,10),10) ──
+        ctx.strokeStyle = '#f0f6fc'; ctx.lineWidth = 1.5;
         ctx.beginPath();
         started = false;
         for (let i = 0; i < Math.min(n, kdj.length); i++) {
@@ -2194,42 +2196,60 @@ async function openWeeklyChart(code, name) {
         }
         ctx.stroke();
 
-        // Candles
-        const cw = Math.max(1.5, xRange / n * 0.55);
+        // ── Candles (thin, professional style) ──
+        const bodyW = Math.min(6, Math.max(1.5, xRange / n * 0.35));
+        const wickW = 0.8;
         weeks.forEach((w, i) => {
             const x = px(i), o = py(w.o), c = py(w.c), h = py(w.h), l = py(w.l);
             const up = w.c >= w.o;
+            // Wick
             ctx.strokeStyle = up ? '#da3633' : '#3fb950';
-            ctx.fillStyle = up ? '#da3633' : 'transparent';
-            ctx.lineWidth = 0.8;
+            ctx.lineWidth = wickW;
             ctx.beginPath(); ctx.moveTo(x, h); ctx.lineTo(x, l); ctx.stroke();
-            if (Math.abs(o - c) < 1) { ctx.fillStyle = ctx.strokeStyle; ctx.fillRect(x-cw, c-1, cw*2, 1.5); }
-            else ctx.fillRect(x-cw, Math.min(o,c), cw*2, Math.abs(o-c));
+            // Body
+            const bodyH = Math.max(0.5, Math.abs(o - c));
+            ctx.fillStyle = up ? '#da3633' : '#3fb950';
+            ctx.fillRect(x - bodyW/2, Math.min(o, c), bodyW, bodyH);
         });
 
-        // Price labels
+        // ── Main chart price labels ──
         ctx.fillStyle = '#8b949e'; ctx.font = '9px monospace'; ctx.textAlign = 'right';
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i <= 4; i++) {
             const v = minP + i * pR / 4;
             ctx.fillText(v.toFixed(v>=100?0:2), padL-4, py(v)+3);
         }
 
-        // Week labels
-        ctx.textAlign = 'center'; ctx.font = '8px monospace';
-        weeks.forEach((w, i) => {
-            if (i % 5 === 0 || i === n-1) {
-                ctx.fillText(w.d.slice(4), px(i), H1+8);
+        // ── Week labels (x-axis) ──
+        ctx.textAlign = 'center'; ctx.font = '8px monospace'; ctx.fillStyle = '#484f58';
+        for (let i = 0; i < n; i++) {
+            if (i % Math.max(1, Math.floor(n/8)) === 0 || i === n-1) {
+                ctx.fillText(weeks[i].d.slice(4), px(i), H1 + 18);
             }
-        });
+        }
 
-        // KDJ sub-chart
-        const kdjColors = {'K':'#8b949e','D':'#d29922','J':'#58a6ff'};
-        for (const [key, color] of Object.entries(kdjColors)) {
-            ctx.strokeStyle = color; ctx.lineWidth = 1; ctx.beginPath();
+        // ── Separator between main and KDJ ──
+        ctx.strokeStyle = '#30363d'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(padL, H1 + 12); ctx.lineTo(W-padR, H1 + 12); ctx.stroke();
+
+        // ── KDJ sub-chart grid ──
+        ctx.strokeStyle = '#1a1f2b'; ctx.lineWidth = 0.5;
+        for (let vv of [0, 20, 50, 80, 100]) {
+            const y = py2(vv);
+            ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
+        }
+
+        // ── KDJ lines ──
+        const kdjConfig = [
+            {key:'K', color:'#8b949e', width:1},
+            {key:'D', color:'#d29922', width:1.2},
+            {key:'J', color:'#58a6ff', width:1.2}
+        ];
+        for (const cfg of kdjConfig) {
+            ctx.strokeStyle = cfg.color; ctx.lineWidth = cfg.width; ctx.beginPath();
             started = false;
             for (let i = 0; i < Math.min(n, kdj.length); i++) {
-                if (kdj[i] && kdj[i][key] != null) {
-                    const x = px(i), y = py2(kdj[i][key]);
+                if (kdj[i] && kdj[i][cfg.key] != null) {
+                    const x = px(i), y = py2(kdj[i][cfg.key]);
                     if (!started) { ctx.moveTo(x, y); started = true; }
                     else ctx.lineTo(x, y);
                 }
@@ -2237,21 +2257,26 @@ async function openWeeklyChart(code, name) {
             ctx.stroke();
         }
 
-        // KDJ reference lines + labels
-        ctx.setLineDash([2, 4]); ctx.strokeStyle = '#21262d'; ctx.lineWidth = 0.5;
-        [0, 20, 50, 80, 100].forEach(v => {
-            const y = py2(v);
-            ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
-        });
-        ctx.setLineDash([]);
-        ctx.fillStyle = '#8b949e'; ctx.textAlign = 'right'; ctx.font = '8px monospace';
-        [0, 50, 100].forEach(v => ctx.fillText(v, padL-4, py2(v)+3));
+        // ── KDJ value labels ──
+        ctx.fillStyle = '#484f58'; ctx.textAlign = 'right'; ctx.font = '8px monospace';
+        for (let vv of [0, 50, 100]) {
+            ctx.fillText(vv, padL-4, py2(vv)+3);
+        }
 
-        // Legend
-        const lx = W - 200, ly = y2Base + padT + 15;
+        // ── Legend (main chart) ──
+        const lx = padL + 8, ly = padT + 14;
         ctx.font = '10px sans-serif';
+        [['━━ 白线 EMA','#f0f6fc'], ['┅┅ 黄线 BBI','#d29922']].forEach(([t,c],i) => {
+            ctx.fillStyle = c;
+            ctx.textAlign = 'left';
+            ctx.fillText(t, lx + i*130, ly);
+        });
+        // KDJ legend
+        const lx2 = padL + 8, ly2 = y2Base + padT + 12;
         [['━ K','#8b949e'],['━ D','#d29922'],['━ J','#58a6ff']].forEach(([t,c],i) => {
-            ctx.fillStyle = c; ctx.fillText(t, lx + i*60, ly);
+            ctx.fillStyle = c;
+            ctx.textAlign = 'left';
+            ctx.fillText(t, lx2 + i*70, ly2);
         });
 
     } catch(e) { console.log('Chart err:', e); }
