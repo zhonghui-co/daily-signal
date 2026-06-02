@@ -1,331 +1,143 @@
 {
-  "generated_at": "2026-06-01T11:07:09.060099+08:00",
-  "date": "2026-06-01",
+  "generated_at": "2026-06-02T16:29:22.520617+08:00",
+  "date": "2026-06-02",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-05-31",
-      "run_at": "2026-05-31T23:00:00+08:00",
+      "date": "2026-06-02",
+      "run_at": "2026-06-02T11:00:00+08:00",
       "stats": {
-        "total_signals": 19,
-        "chain1": 9,
-        "chain2": 8,
-        "cross_chain": 4,
+        "total_signals": 7,
+        "chain1": 3,
+        "chain2": 3,
+        "cross_chain": 1,
         "by_lifecycle": {
-          "emerging": 6,
-          "positioning": 7,
+          "emerging": 2,
+          "positioning": 3,
           "consensus": 1,
-          "exhausted": 2,
-          "overridden": 3
+          "exhausted": 1
         },
         "by_priced_in": {
-          "under_priced": 10,
+          "under_priced": 1,
           "partially_priced": 4,
-          "fully_priced": 5,
-          "over_priced": 0
+          "fully_priced": 1,
+          "over_priced": 1
         },
-        "strong_backing": 4,
-        "moderate_backing": 3,
-        "weak_backing": 12,
-        "triple_confirmed": 9,
-        "dual_confirmed": 3,
-        "single_sourced": 4,
-        "unverified": 3
+        "strong_backing": 2,
+        "moderate_backing": 4,
+        "weak_backing": 1,
+        "triple_confirmed": 0,
+        "dual_confirmed": 2,
+        "single_sourced": 5,
+        "unverified": 0
       },
       "signals": [
         {
           "id": "a1",
           "priority": "normal",
-          "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，Q1营收508亿同比+719%扭亏为盈",
+          "title": "科创50两日累跌10%：τ定律行情从consensus→exhausted，半导体全链估值压缩至5/24前水平",
           "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
+          "confidence": "red",
+          "lifecycle": "exhausted",
+          "priced_in": "over_priced",
           "capital_backing": {
-            "level": "strong",
+            "level": "moderate",
             "big_fund": true,
             "national_team_etf": true,
             "recent_bidding": false,
-            "note": "大基金二期(2042亿)重设备材料→CXMT为下游最大客户之一。三期(3440亿)明确投向存储+先进封装+AI算力。CXMT为合肥国资委+大基金双背书。长电100亿/通富44亿扩产→封测端直接受益CXMT扩产。"
+            "note": "大基金三期3440亿持续投向上游设备/材料，科创50ETF华夏持仓寒武纪1137万股→国家队ETF持仓虽重但6/1被动跟随下跌。招投标无最新数据(6/2无pool.db更新)。大基金背书为中长期，短期不逆市场情绪。"
           },
           "tickers": []
         },
         {
           "id": "a2",
           "priority": "normal",
-          "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单，华为2026年AI芯片收入$12B",
+          "title": "COMPUTEX 2026黄仁勋Keynote：Vera Rubin量产+200Gb CPO交换机+Token=资产，AI基础设施从GPU到全机架升级",
           "chain": "chain2",
-          "confidence": "green",
+          "confidence": "yellow",
           "lifecycle": "emerging",
-          "priced_in": "under_priced",
+          "priced_in": "partially_priced",
           "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
+            "level": "moderate",
+            "big_fund": false,
             "national_team_etf": true,
             "recent_bidding": false,
-            "note": "大基金三期(3440亿)明确投向AI算力芯片。科创50ETF华夏持仓寒武纪1137万股。海光信息获国家芯片产业基金+中科院双重背书。NEW: Supermicro走私案→反向验证大基金三期AI芯片投资方向的正确性→国家资本必须加速投入。"
+            "note": "光模块/液冷不在大基金投向范围内。但科创50ETF+半导体ETF持仓中际旭创/新易盛→国家队ETF间接覆盖。招投标无直接相关。A股光模块当前主要受英伟达供应链β驱动而非国内政策。"
           },
           "tickers": []
         },
         {
           "id": "a3",
           "priority": "normal",
-          "title": "τ定律引爆A股：科创50单日+5.88%→4天后-5.04%→极速全周期完成",
+          "title": "中国半导体设备国产化率分层数据刷新：去胶65%/清洗50%/刻蚀~25%/光刻<5%，国产替代斜率分化加剧",
           "chain": "chain1",
-          "confidence": "yellow",
-          "lifecycle": "exhausted",
-          "priced_in": "fully_priced",
+          "confidence": "green",
+          "lifecycle": "positioning",
+          "priced_in": "partially_priced",
           "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
+            "level": "strong",
+            "big_fund": true,
             "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "华为未上市→间接利好中芯国际/科创50ETF。大基金三期3440亿间接支持芯片设计创新。"
+            "recent_bidding": true,
+            "note": "大基金三期3440亿明确投向设备/材料→最强背书。大基金二期已投NAURA/AMEC/拓荆/盛美等→三期继续加码。科创50ETF重仓NAURA+AMEC(前十大权重)。招投标：长江存储2号厂房工艺设备管线5/14招标+长鑫Q2全面启动设备招投标(50-60亿美元全年)→设备中标是3-6月后收入前置指标。三重维度全匹配→strong。"
           },
           "tickers": []
         },
         {
           "id": "a4",
           "priority": "normal",
-          "title": "高盛：对冲基金'all in AI'半导体仓位创历史新高，但止盈近一年最快",
-          "chain": "chain2",
-          "confidence": "yellow",
+          "title": "Nikkei: 台湾2026 GDP增速上调至9.64%(16年新高)AI boom驱动 + Goldman Sachs: AI基建全年支出$8000亿 → 全球AI供应链双验证",
+          "chain": "cross",
+          "confidence": "green",
           "lifecycle": "positioning",
-          "priced_in": "fully_priced",
+          "priced_in": "partially_priced",
           "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "全球HF仓位→非中国特有信号。Nvidia $150B台湾→极端集中度→可能加速机构转向A股半导体(有国产替代独立叙事)。"
+            "level": "strong",
+            "big_fund": true,
+            "national_team_etf": true,
+            "recent_bidding": true,
+            "note": "全球AI需求超级周期=大基金三期3440亿投向的宏观合理性确立。AI芯片采购清单+华为$120亿AI芯片收入→国产AI芯片从'me-too'→'抓住机遇窗口'→大基金背书更坚实。招投标数据间接相关(长江存储+长鑫设备采购→满足国内AI芯片制造需要)。"
           },
           "tickers": []
         },
         {
           "id": "a5",
           "priority": "normal",
-          "title": "字节跳动今年最高$70B AI基建支出，明年或提升至$100B",
-          "chain": "chain2",
+          "title": "CXMT长鑫科技IPO进入'提交注册'阶段：预计2-3个月内正式上市，295亿募资将直接拉动设备/材料/封测全链",
+          "chain": "chain1",
           "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "under_priced",
+          "lifecycle": "consensus",
+          "priced_in": "fully_priced",
           "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "字节为纯市场行为→无大基金/国家队直接背书。先进封装(长电/通富)可能承接字节ASIC封装需求。"
+            "level": "strong",
+            "big_fund": true,
+            "national_team_etf": true,
+            "recent_bidding": true,
+            "note": "大基金一期(987亿)重仓SMIC/长电等→长鑫为存储龙头获三期延续支持。大基金二期(2042亿)重设备材料→三期(3440亿)继续加码。长鑫Q2全面启动设备招投标(50-60亿美元)→招投标数据验证。三重维度全匹配→strong。"
           },
           "tickers": []
         },
         {
           "id": "a6",
           "priority": "normal",
-          "title": "SEMI预测玻璃基板2028年进入早期生产，CAGR 67.2%推动先进封装材料革命",
+          "title": "国产光通信产业链全面扩产：华工科技800G月产能>120万只+亨通光电光棒扩产1.5×→AI算力需求从数据中心向全产业链传导",
           "chain": "chain2",
-          "confidence": "grey",
-          "lifecycle": "emerging",
-          "priced_in": "under_priced",
+          "confidence": "yellow",
+          "lifecycle": "positioning",
+          "priced_in": "partially_priced",
           "capital_backing": {
-            "level": "weak",
+            "level": "moderate",
             "big_fund": false,
-            "national_team_etf": false,
+            "national_team_etf": true,
             "recent_bidding": false,
-            "note": "远期技术(2028+)→当前无大基金/国家队专项投向。"
+            "note": "光模块/光通信不在大基金投资范畴内。但科创50ETF+半导体ETF持仓光模块龙头→国家队间接覆盖。全球AI数据中心CAPEX(而非国内政策资金)为主要资金来源。中国光模块企业为全球供应链→受益全球AI需求而非国内政策驱动。"
           },
           "tickers": []
         },
         {
           "id": "a7",
           "priority": "normal",
-          "title": "DigiTimes：小米/BYD/蔚来自研芯片重塑中国芯片战争格局",
-          "chain": "chain1",
-          "confidence": "grey",
-          "lifecycle": "emerging",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "市场行为→无大基金/国家队直接背书。间接利好中芯国际/长电/通富。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a8",
-          "priority": "normal",
-          "title": "DigiTimes：AMD 2nm转向三星，台积电首次面临真正竞争对手",
-          "chain": "chain2",
-          "confidence": "grey",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "全球先进制程格局变化→非中国特有信号。间接利好中芯国际。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a9",
-          "priority": "normal",
-          "title": "华为宣布新Kirin芯片突破美国封锁，性能接近台积电/英特尔",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "间接利好中芯国际(先进制造→科创50权重股)+上游材料。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a10",
-          "priority": "normal",
-          "title": "5/28 A股半导体低开回调→已发展为τ定律全周期，过时信号仅保留记录",
-          "chain": "chain2",
-          "confidence": "grey",
-          "lifecycle": "exhausted",
-          "priced_in": "fully_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "市场行为→非资金面信号"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a11",
-          "priority": "normal",
-          "title": "摩根士丹利：Big Tech hyperscalers 2024-2027年将投入约$2万亿AI基建",
-          "chain": "chain2",
-          "confidence": "green",
-          "lifecycle": "consensus",
-          "priced_in": "fully_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "全球AI CAPEX基准→非中国特有信号。间接利好A股AI出口标的。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a12",
-          "priority": "normal",
-          "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "emerging",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "中芯国际/华虹均为大基金重点持股+科创50核心权重。大基金二期(2042亿)→设备材料为重中之重。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a13",
-          "priority": "normal",
-          "title": "Meta推出AI聊天机器人订阅+Cognition融资$10亿估值$260亿→AI变现早期信号",
-          "chain": "chain2",
-          "confidence": "grey",
-          "lifecycle": "emerging",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "全球AI应用层→非中国特有信号。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a14",
-          "priority": "normal",
-          "title": "全球半导体涨价潮蔓延：英飞凌7月1日二次提价+ST 6月28日涨价，AI需求从GPU→模拟芯片全链蔓延",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "全球涨价潮→非中国特有资金面。为Alpha机会→非Beta驱动。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a15",
-          "priority": "normal",
-          "title": "港股半导体天量卖空：中芯国际5/26单日4036万股/35.31亿港元刷新历史峰值+华虹单日23.39亿港元",
-          "chain": "chain1",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "中芯/华虹为大基金重点持股+科创AH双重上市。南向资金连续7天净买入81.58亿港元。5/30反弹后空头paper loss增加→逼空概率上升。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a16",
-          "priority": "normal",
-          "title": "伯恩斯坦：半导体设备国产化率16%(2024)→21%(2025)→26%(2026E)→43%(2028E)，3年翻倍CAGR 48%+NAURA 680元/AMEC 500元目标价",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": true,
-            "note": "大基金二期(2042亿)重设备材料。三期(3440亿)继续投向卡脖子设备。bidding.json中中信证券分析：薄膜沉积国产化率5.7%(拓荆/北方华创/盛美中标靠前)。科创50ETF→设备股为权重成分→被动资金持续流入。资金面三强(大基金+国家队ETF+招投标)→链条最完整的标的群。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a17",
-          "priority": "normal",
-          "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "emerging",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "走私案非直接资金面→但强化大基金三期(3440亿)AI芯片投资方向。US DOJ$25亿案规模验证→禁运执行强度远超预期→国产AI芯片是唯一合规出路→国家资本必须加速投入。与a2(采购清单)形成推拉双重逻辑→大基金三期投向正确性获最强反面验证。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a18",
-          "priority": "normal",
-          "title": "EU Chips Act 2.0：欧盟准备€120B芯片投资+6月3日发布修订法案，全球半导体主权化大赛全面启动",
+          "title": "智谱建议A股科创板上市+MiniMax M3商用→AI大模型双雄回A+H，近万亿AI资产注入A股→AI算力链估值锚再强化",
           "chain": "chain2",
           "confidence": "yellow",
           "lifecycle": "emerging",
@@ -333,26 +145,9 @@
           "capital_backing": {
             "level": "moderate",
             "big_fund": false,
-            "national_team_etf": false,
+            "national_team_etf": true,
             "recent_bidding": false,
-            "note": "EU Chips Act为欧洲政策→非中国资金面信号。间接利好：(1)全球半导体设备市场扩容→中国设备商可出海→北方华创/中微有机会进入欧洲成熟制程市场；(2)全球芯片产能非东亚化→降低地缘供应风险→间接利好中国半导体自主可控叙事。大基金三期3440亿投资逻辑获全球趋势验证→不是'中国自己玩'→是全球都在'主权化'。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a19",
-          "priority": "normal",
-          "title": "Nvidia承诺$150B/年台湾投资+Constellation总部动工→AI硬件供给极端集中度风险创历史新高",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "fully_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "Nvidia$150B台湾→完全非中国资金面。对中国链二(AI出口标的)→极端集中度=高风险→Nvidia投TWD→不投RMB→中国被排除。对链一(国产替代)→反而获得增强→$150B不投中国=中国必须自建AI硬件基础设施=链一逻辑获得Nvidia反面验证。"
+            "note": "AI大模型不在大基金投向范围(大基金聚焦半导体硬件)。但科创50ETF等宽基将被动配置智谱/MiniMax(若纳入指数)→国家队ETF间接受益。AI大模型IPO是市场自发资本化而非政策驱动。"
           },
           "tickers": []
         }
@@ -474,6 +269,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20260601",
+          "ts_code": "300489.SZ",
+          "name": "光智科技",
+          "pct_chg": 20.0,
+          "vol_ratio": 3.73,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20260522",
           "ts_code": "688020.SH",
           "name": "方邦股份",
@@ -512,19 +315,13 @@
           "pct_chg": 20.0,
           "vol_ratio": 2.62,
           "attribution": "集成电路,✅国产替代,✅AI算力,IC设计板块联动(42/46只)"
-        },
-        {
-          "date": "20260525",
-          "ts_code": "300835.SZ",
-          "name": "龙磁科技",
-          "pct_chg": 20.0,
-          "vol_ratio": 2.5,
-          "attribution": "✅国产替代,✅AI算力,消费电子/元器件板块联动(58/80只)"
         }
       ]
     },
     "themes": {
-      "available": false
+      "available": true,
+      "date": "20260602",
+      "top_themes": []
     },
     "kdj": {
       "available": true,
@@ -541,7 +338,7 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-05-31T23:05:01.110219+08:00",
+      "last_updated": "2026-06-01T11:07:09.137012+08:00",
       "active_count": 10,
       "positions": [
         {
@@ -550,7 +347,7 @@
           "return_pct": 120.91,
           "ret_5d": 16.27,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         },
         {
           "code": "002156.SZ",
@@ -558,7 +355,7 @@
           "return_pct": 75.44,
           "ret_5d": 9.36,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         },
         {
           "code": "688256.SH",
@@ -566,7 +363,7 @@
           "return_pct": 49.28,
           "ret_5d": 8.2,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         },
         {
           "code": "688012.SH",
@@ -574,7 +371,7 @@
           "return_pct": 45.54,
           "ret_5d": -3.51,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         },
         {
           "code": "688041.SH",
@@ -582,7 +379,7 @@
           "return_pct": 39.14,
           "ret_5d": 0.63,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         },
         {
           "code": "002371.SZ",
@@ -590,7 +387,7 @@
           "return_pct": 38.88,
           "ret_5d": -1.49,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         },
         {
           "code": "688126.SH",
@@ -598,7 +395,7 @@
           "return_pct": 36.96,
           "ret_5d": 10.07,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         },
         {
           "code": "688981.SH",
@@ -606,7 +403,7 @@
           "return_pct": 18.28,
           "ret_5d": 17.03,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         },
         {
           "code": "603650.SH",
@@ -614,7 +411,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         },
         {
           "code": "688082.SH",
@@ -622,7 +419,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-05-31"
+          "last_check": "2026-06-01"
         }
       ]
     }

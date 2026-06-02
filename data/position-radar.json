@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-01T15:30:01.041656+08:00",
-  "date": "2026-06-01",
+  "generated_at": "2026-06-02T15:30:00.207147+08:00",
+  "date": "2026-06-02",
   "positions": [
     {
       "code": "688126.SH",
@@ -35,6 +35,78 @@
         "flags": [
           "🔴 远离MA20 +20.81%，过热"
         ]
+      },
+      "alerts": []
+    },
+    {
+      "code": "002156.SZ",
+      "name": "通富微电",
+      "thesis_id": "TH-004",
+      "confidence": "high",
+      "since": "2026-05-06",
+      "chains": [
+        "AI算力",
+        "国产替代"
+      ],
+      "radar": {
+        "latest_price": 61.39,
+        "latest_date": "20260601",
+        "pct_chg_today": -6.98,
+        "open": 65.0,
+        "high": 66.0,
+        "low": 60.96,
+        "vol_ratio": 0.82,
+        "ma5": 68.69,
+        "dev_ma5_pct": -10.62,
+        "ma10": 65.92,
+        "dev_ma10_pct": -6.87,
+        "ma20": 61.88,
+        "dev_ma20_pct": -0.79,
+        "volatility_5d": 27.9,
+        "high_60d": 75.3,
+        "low_60d": 40.37,
+        "position_60d_pct": 60.2,
+        "ret_5d_pct": -18.47,
+        "streak_days": 3,
+        "streak_direction": "down",
+        "flags": [
+          "⚠️ 连跌3日",
+          "🔴 近5日暴跌-18.47%"
+        ]
+      },
+      "alerts": []
+    },
+    {
+      "code": "002371.SZ",
+      "name": "北方华创",
+      "thesis_id": "TH-005",
+      "confidence": "high",
+      "since": "2026-05-06",
+      "chains": [
+        "国产替代"
+      ],
+      "radar": {
+        "latest_price": 589.89,
+        "latest_date": "20260601",
+        "pct_chg_today": -6.35,
+        "open": 624.99,
+        "high": 629.8,
+        "low": 588.92,
+        "vol_ratio": 1.02,
+        "ma5": 640.76,
+        "dev_ma5_pct": -7.94,
+        "ma10": 650.97,
+        "dev_ma10_pct": -9.38,
+        "ma20": 608.75,
+        "dev_ma20_pct": -3.1,
+        "volatility_5d": 17.73,
+        "high_60d": 698.19,
+        "low_60d": 424.08,
+        "position_60d_pct": 60.5,
+        "ret_5d_pct": -11.99,
+        "streak_days": 1,
+        "streak_direction": "down",
+        "flags": []
       },
       "alerts": []
     },
@@ -111,41 +183,6 @@
       "alerts": []
     },
     {
-      "code": "002156.SZ",
-      "name": "通富微电",
-      "thesis_id": "TH-004",
-      "confidence": "high",
-      "since": "2026-05-06",
-      "chains": [
-        "AI算力",
-        "国产替代"
-      ],
-      "radar": {
-        "latest_price": 69.3,
-        "latest_date": "20260528",
-        "pct_chg_today": -3.0,
-        "open": 69.5,
-        "high": 70.88,
-        "low": 67.6,
-        "vol_ratio": 0.69,
-        "ma5": 69.82,
-        "dev_ma5_pct": -0.75,
-        "ma10": 64.68,
-        "dev_ma10_pct": 7.15,
-        "ma20": 60.49,
-        "dev_ma20_pct": 14.57,
-        "volatility_5d": 28.87,
-        "high_60d": 75.3,
-        "low_60d": 40.37,
-        "position_60d_pct": 82.8,
-        "ret_5d_pct": 9.36,
-        "streak_days": 1,
-        "streak_direction": "down",
-        "flags": []
-      },
-      "alerts": []
-    },
-    {
       "code": "600584.SH",
       "name": "长电科技",
       "thesis_id": "TH-007",
@@ -213,40 +250,6 @@
         "ret_5d_pct": 0.63,
         "streak_days": 1,
         "streak_direction": "down",
-        "flags": []
-      },
-      "alerts": []
-    },
-    {
-      "code": "002371.SZ",
-      "name": "北方华创",
-      "thesis_id": "TH-005",
-      "confidence": "high",
-      "since": "2026-05-06",
-      "chains": [
-        "国产替代"
-      ],
-      "radar": {
-        "latest_price": 659.0,
-        "latest_date": "20260528",
-        "pct_chg_today": 0.65,
-        "open": 650.0,
-        "high": 668.67,
-        "low": 646.88,
-        "vol_ratio": 0.81,
-        "ma5": 670.24,
-        "dev_ma5_pct": -1.68,
-        "ma10": 647.99,
-        "dev_ma10_pct": 1.7,
-        "ma20": 599.15,
-        "dev_ma20_pct": 9.99,
-        "volatility_5d": 12.23,
-        "high_60d": 698.19,
-        "low_60d": 424.08,
-        "position_60d_pct": 85.7,
-        "ret_5d_pct": -1.49,
-        "streak_days": 0,
-        "streak_direction": "up",
         "flags": []
       },
       "alerts": []
