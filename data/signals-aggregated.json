@@ -1,89 +1,52 @@
 {
-  "generated_at": "2026-06-02T16:29:12.703195",
+  "generated_at": "2026-06-03T16:29:43.735920",
   "stats": {
-    "total": 89,
+    "total": 93,
     "by_source": {
       "scanner": 13,
-      "pool": 54,
-      "b1b2b3": 2,
+      "pool": 59,
+      "b1b2b3": 1,
       "weekly_kdj": 20
     },
     "by_type": {
-      "fire": 54,
+      "fire": 57,
       "normal": 8,
-      "high": 5,
-      "b1": 2,
+      "high": 7,
+      "b1": 1,
       "weekly_kdj": 20
     },
     "by_direction": {
       "chain1": 5,
       "chain2": 8,
-      "unclassified": 55,
-      "具身智能/机器人": 1,
+      "unclassified": 60,
       "国产软件与信创": 1,
       "生物医药": 12,
       "待分类": 7
     },
     "by_lifecycle": {
-      "emerging": 27,
+      "emerging": 26,
       "positioning": 7,
       "consensus": 1,
-      "unknown": 54
+      "unknown": 59
     },
     "by_priority": {
-      "fire": 54,
+      "fire": 57,
       "normal": 28,
-      "high": 5,
-      "b1": 2
+      "high": 7,
+      "b1": 1
     }
   },
   "top_10": [
     {
-      "id": "SIG-04137d063975",
-      "timestamp": "20260528T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "具身智能/机器人",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 机器人(300024) 具身智能/机器人",
-      "summary": "B1=15.88 B2=15.94 B3=15.93 | +0.4% from B1",
-      "priority": "b1",
-      "settlement_risk": {
-        "type": "T+1",
-        "note": "买入信号次日无法当日止损",
-        "suggestion": "次日开盘观察竞价"
-      },
-      "money_flow_quality": {
-        "status": "not_applicable",
-        "label": "不适用资金验证",
-        "detail": ""
-      },
-      "_score": 62,
-      "tickers": [
-        {
-          "code": "300024",
-          "name": "机器人"
-        }
-      ],
-      "metrics": {
-        "b1_price": 15.88,
-        "b2_price": 15.94,
-        "b3_price": 15.93,
-        "pct_from_b1": 0.4
-      },
-      "source_urls": []
-    },
-    {
-      "id": "SIG-622c797a42d7",
-      "timestamp": "20260528T15:00:00+08:00",
+      "id": "SIG-f1d11b662447",
+      "timestamp": "20260602T15:00:00+08:00",
       "source": "b1b2b3",
       "type": "b1",
       "direction": "国产软件与信创",
       "chain": "",
       "lifecycle": "emerging",
-      "title": "🔵 B1: 中望软件(688083) 国产软件与信创",
-      "summary": "B1=61.41 B2=59.00 B3=58.83 | +-3.9% from B1",
+      "title": "🔵 B1: 白云电器(603861) 国产软件与信创",
+      "summary": "B1=17.21 B2=16.31 B3=16.31 | +-5.2% from B1",
       "priority": "b1",
       "settlement_risk": {
         "type": "T+1",
@@ -98,15 +61,15 @@
       "_score": 62,
       "tickers": [
         {
-          "code": "688083",
-          "name": "中望软件"
+          "code": "603861",
+          "name": "白云电器"
         }
       ],
       "metrics": {
-        "b1_price": 61.41,
-        "b2_price": 59.0,
-        "b3_price": 58.83,
-        "pct_from_b1": -3.9
+        "b1_price": 17.21,
+        "b2_price": 16.31,
+        "b3_price": 16.31,
+        "pct_from_b1": -5.2
       },
       "source_urls": []
     },
@@ -610,55 +573,53 @@
       "source_urls": [
         "https://readhub.cn"
       ]
-    }
-  ],
-  "signals": [
+    },
     {
-      "id": "SIG-04137d063975",
-      "timestamp": "20260528T15:00:00+08:00",
-      "source": "b1b2b3",
-      "type": "b1",
-      "direction": "具身智能/机器人",
-      "chain": "",
-      "lifecycle": "emerging",
-      "title": "🔵 B1: 机器人(300024) 具身智能/机器人",
-      "summary": "B1=15.88 B2=15.94 B3=15.93 | +0.4% from B1",
-      "priority": "b1",
+      "id": "SIG-9e2b812903c9",
+      "timestamp": "2026-05-28T10:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain2",
+      "chain": "chain2",
+      "lifecycle": "positioning",
+      "title": "DigiTimes：AMD 2nm转向三星，台积电首次面临真正竞争对手",
+      "summary": "DigiTimes分析AMD将2nm制程从台积电转向三星，认为台积电首次面临真正竞争对手。此前三星已在硅光子领域布局加强韩荷芯片合作。同时DigiTimes报道SK Hynix加速龙仁工厂建设应对存储产能紧缺。台积电承诺2026年员工分红加速增长应对罢工威胁。先进制程格局变化可能影响全球AI芯片产能分配。",
+      "priority": "normal",
       "settlement_risk": {
         "type": "T+1",
-        "note": "买入信号次日无法当日止损",
-        "suggestion": "次日开盘观察竞价"
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
       },
       "money_flow_quality": {
         "status": "not_applicable",
         "label": "不适用资金验证",
         "detail": ""
       },
-      "_score": 62,
+      "_score": 42,
       "tickers": [
         {
-          "code": "300024",
-          "name": "机器人"
+          "code": "688981.SH",
+          "name": "中芯国际"
         }
       ],
-      "metrics": {
-        "b1_price": 15.88,
-        "b2_price": 15.94,
-        "b3_price": 15.93,
-        "pct_from_b1": 0.4
-      },
-      "source_urls": []
-    },
+      "metrics": {},
+      "source_urls": [
+        "https://www.digitimes.com/news/a20260525VL203/digitimes-asia-weekly-news-roundup-manufacturing-samsung-tsmc-2026.html",
+        "https://www.digitimes.com/news/a20260525PD236/tsmc-taiwan-growth-2026-2025.html"
+      ]
+    }
+  ],
+  "signals": [
     {
-      "id": "SIG-622c797a42d7",
-      "timestamp": "20260528T15:00:00+08:00",
+      "id": "SIG-f1d11b662447",
+      "timestamp": "20260602T15:00:00+08:00",
       "source": "b1b2b3",
       "type": "b1",
       "direction": "国产软件与信创",
       "chain": "",
       "lifecycle": "emerging",
-      "title": "🔵 B1: 中望软件(688083) 国产软件与信创",
-      "summary": "B1=61.41 B2=59.00 B3=58.83 | +-3.9% from B1",
+      "title": "🔵 B1: 白云电器(603861) 国产软件与信创",
+      "summary": "B1=17.21 B2=16.31 B3=16.31 | +-5.2% from B1",
       "priority": "b1",
       "settlement_risk": {
         "type": "T+1",
@@ -673,15 +634,15 @@
       "_score": 62,
       "tickers": [
         {
-          "code": "688083",
-          "name": "中望软件"
+          "code": "603861",
+          "name": "白云电器"
         }
       ],
       "metrics": {
-        "b1_price": 61.41,
-        "b2_price": 59.0,
-        "b3_price": 58.83,
-        "pct_from_b1": -3.9
+        "b1_price": 17.21,
+        "b2_price": 16.31,
+        "b3_price": 16.31,
+        "pct_from_b1": -5.2
       },
       "source_urls": []
     },
@@ -2106,6 +2067,146 @@
       "source_urls": [
         "https://readhub.cn"
       ]
+    },
+    {
+      "id": "SIG-95a578527e1d",
+      "timestamp": "2026-06-03T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⭐ 标准化降本28%——最大under_priced信号，0券商深度覆盖 (a2, under_priced, positioning)",
+      "summary": "标准化是产业化从'手工作坊'→'工业化流水线'的关键跳变。零部件通用率30%→75%、单台制造成本-28%、重复研发-40%。对标电动车2015-2018标准化后供应链涨幅(10-20x)→机器人标准化红利定价空间极大。0券商专题深度分析→定价缺口。传导:精密传动(绿的谐波/双环/中大力德/鸣志)→传感感知→整机本体。标准化红利将在未来2-4个季度逐步释放到供应商报表。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "months"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-6cd93e464f61",
+      "timestamp": "2026-06-03T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🔥 SK海力士万亿市值+高盛存储缺口量化(DRAM 4.9%/NAND 4.2%/HBM 5.1%)→dual_confirmed (a5, positioning/partially_priced)",
+      "summary": "高盛+瑞银+IC排名三重验证。存储超级周期从'产业确认'→'投行背书'完整闭环。合约锁至2030年→需求可见度远超预期。A股存储链: 佰维/江波龙涨价受益+兆易创新长鑫关联。⚠️ 范达'泡沫化'判断→获利了结压力→存储标的短期(2-4周)可能冲高回落。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-a8be9e4710fe",
+      "timestamp": "2026-06-03T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "🏭 东陶(TOTO)跨界半导体陶瓷——Bloomberg+Japan Times双国际源→emerging/under_priced (a6)",
+      "summary": "日本卫浴制造商TOTO将Capex从11%→50%+转向芯片陶瓷(静电吸盘等)。验证全球芯片设备陶瓷需求激增。0券商覆盖+0%定价→首次定价窗口48-72h。传导: 国瓷材料(电子陶瓷)/中瓷电子(陶瓷封装)。0%定价。风险: 国内陶瓷企业能否拿到全球订单待验证。",
+      "priority": "high",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "weeks"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-dd496b3006a7",
+      "timestamp": "2026-06-03T16:30:00+08:00",
+      "source": "pool",
+      "type": "fire",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⚠️ 三大背离：①具身智能4fire密集vs机器人仅4只异常(新增) ②高盛bullish vs 范达bearish(延续+深化) ③Scanner链一/链二覆盖缺失(新增系统性风险)",
+      "summary": "背离①(新增): 今日4条fire级具身智能信号→6/2机器人板块仅4只异常→'信号热vs资金冷'。需6/3-6/4确认: 若连续2-3日无资金承接→短期(1-2周)机器人板块不在风格上，信号可能超前于价格。背离②(延续+深化): 存储多空对立从'战术vs战略'→'产业确认vs估值泡沫'。背离③(新增): Scanner零链一/链二信号→搜索配置必须立即修复→否则持续遗漏半导体/AI关键信号。",
+      "priority": "fire",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
+    },
+    {
+      "id": "SIG-9bf23dcd091b",
+      "timestamp": "2026-06-03T16:30:00+08:00",
+      "source": "pool",
+      "type": "high",
+      "direction": "",
+      "chain": "",
+      "lifecycle": "",
+      "title": "⚠️ 五大风险:①存储泡沫化(范达减持) ②Scanner链一/链二覆盖缺失 ③具身智能信号面超前资金面 ④端午假期前资金偏谨慎 ⑤存储周期18-24月后产能过剩风险",
+      "summary": "①若范达+其他机构跟进减持→存储板块系统性回调。②若Scanner不修复→链一/链二信号被持续遗漏→影响投研覆盖完整性→任务: 紧急向Scanner搜索queries添加半导体/AI关键词。③若6/3-6/4机器人无资金承接→短期配置价值有限。④端午节(6/6-6/8)前资金可能降仓位→短期波动加大。⑤2027H2-2028存储产能释放→周期性过剩风险。",
+      "priority": "high",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 12,
+      "tickers": [],
+      "metrics": {
+        "timeframe": "days"
+      },
+      "source_urls": []
     },
     {
       "id": "SIG-ed06ab31aad3",

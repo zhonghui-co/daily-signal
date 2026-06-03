@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>康拓医疗 (688314.SH) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>康拓医疗 <code style="font-size:0.8rem;color:var(--text-muted)">688314.SH</code></h1>
+    <div class="sub">待分类 · 最新价 41.57 · 20260603 · 5日 +11.2% · 20日 -1.0%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: 涨幅发现 | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-05-12</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">康拓医疗：西安康拓医疗技术股份有限公司关于参加2026年陕西辖区上市公司投资者集体接待日暨2025年度业绩说明会的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688314 证券简称：康拓医疗 公告编号：2026-025 西安康拓医疗技术股份有限公司 关于参加 年陕西辖区上市公司投资者集体接待 2026 日暨 年度业绩说明会的公告 2025 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 西安康拓医疗技术股份有限公司（以下简称“公司”）已于2026年3月31 日发布公司 2025年年度报告，为促进公司规范运作、健康发展，增强公司信息 透明度，加强与广大投资者沟通交流，进一步提升投资者关系管理水平，公司将 于2026年 5月 20 日参与“2026 年陕西辖区上市公司投资者集体接待日暨 2025 年度业绩说明会活动”。 届时，公司董事长胡立人先生，独立董事张禾女士，董事会秘书周欢先生， 财务总监沈亮先生（如有特殊情况，参会人员将可能进行调整）将通过互动平台 与投资者进行网络沟通和交流，欢迎广大投资者踊跃参加。 活动时间：2026年5月20 日15:00-17:00。 活动地址：“全景路演” 网 址：https://rs.p5w.net 为充分尊重投...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-05-12/1225290561.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">康拓医疗：西安康拓医疗技术股份有限公司2026年第一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">西安康拓医疗技术股份有限公司2026年第一季度报告 证券代码：688314 证券简称：康拓医疗 西安康拓医疗技术股份有限公司 2026 年第一季度报告 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性依法承担法律责任。 重要内容提示 公司董事会及董事、高级管理人员保证季度报告内容的真实、准确、完整，不存在虚假记载、误 导性陈述或重大遗漏，并承担个别和连带的法律责任。 公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）保证季度报告中财务信息 的真实、准确、完整。 第一季度财务报表是否经审计 □是 √否 一、主要财务数据 (一)主要会计数据和财务指标 单位：元 币种：人民币 本报告期比 上年同期增 项目 本报告期 上年同期 减变动幅度 (%) 营业收入 73,682,439.89 82,490,998.95 -10.68 利润总额 14,306,438.84 29,559,483.72 -51.60 归属于上市公司股东的净利润 13,158,946.70 24,048,177.86 -45.28 归属于上市公司...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225227308.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-31</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">康拓医疗：西安康拓医疗技术股份有限公司2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">西安康拓医疗技术股份有限公司2025年年度报告摘要 公司代码：688314 公司简称：康拓医疗 西安康拓医疗技术股份有限公司 2025 年年度报告摘要 西安康拓医疗技术股份有限公司2025年年度报告摘要 第一节 重要提示 1、 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规 划，投资者应当到上海证券交易所网站(www.sse.com.cn)网站仔细阅读年度报告全文。 2、 重大风险提示 报告期内，不存在对公司生产经营产生实质性影响的重大风险。公司已在本报告中详细描述可能 存在的相关风险，敬请查阅本报告第三节，四、“风险因素”。 3、 本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 4、 公司全体董事出席董事会会议。 5、 中审众环会计师事务所（特殊普通合伙）为本公司出具了标准无保留意见的审计报告。 6、 公司上市时未盈利且尚未实现盈利 □是 √否 7、 董事会决议通过的本报告期利润分配预案或公积金转增股本预案 经公司第三届董事会第二次会议审议通过，公司202...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225055110.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-31</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">康拓医疗：西安康拓医疗技术股份有限公司2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">西安康拓医疗技术股份有限公司2025年年度报告 公司代码：688314 公司简称：康拓医疗 西安康拓医疗技术股份有限公司 2025 年年度报告 西安康拓医疗技术股份有限公司2025年年度报告 重要提示 一、本公司董事会及董事、高级管理人员保证年度报告内容的真实性、准确性、完整性，不存在 虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。 二、公司上市时未盈利且尚未实现盈利 □是 √否 三、重大风险提示 报告期内，不存在对公司生产经营产生实质性影响的重大风险。公司已在本报告中详细描述可能 存在的相关风险，敬请查阅本报告第三节，四、“风险因素”。 四、公司全体董事出席董事会会议。 五、 中审众环会计师事务所（特殊普通合伙）为本公司出具了标准无保留意见的审计报告。 六、公司负责人胡立人、主管会计工作负责人沈亮及会计机构负责人（会计主管人员）杜明声明： 保证年度报告中财务报告的真实、准确、完整。 七、 董事会决议通过的本报告期利润分配预案或公积金转增股本预案 经公司第三届董事会第二次会议审议通过，公司2025年年度利润分配预案为：以实施权益分 派股权登记日登记的总股本为基数，向全体股...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225055004.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-03-31</td><td><span class="tag tag-green">💰 分红派息</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">康拓医疗：西安康拓医疗技术股份有限公司关于2025年年度利润分配方案及2026年中期分红规划的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：688314 证券简称：康拓医疗 公告编号：2026-008 西安康拓医疗技术股份有限公司 年年度利润分配案及 2025 年中期分红规划的公告 2026 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述 或者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。 重要内容提示：  每10 股派发现金红利3.2 元（含税），不送红股，不进行资本公积金 转增股本。  本次利润分配以实施权益分派股权登记日登记的总股本为基数，具体 日期将在权益分派实施公告中明确，在实施权益分派的股权登记日前西安康拓医 疗技术股份有限公司（以下简称“公司”）总股本发生变动的，拟维持分配总额 不变，相应调整每股分配比例，并将另行公告具体调整情况。  本次利润分配不触及《上海证券交易所科创板股票上市规则》（以下简 称《股票上市规则》）第12.9.1 条第一款第（八）项规定的可能被实施其他风险 警示的情形。 一、 利润分配方案内容 （一）利润分配方案的具体内容 截至 2025 年 12 月 31 日，公司母公司报表中期末未分配利润为人民币 387,093,713.05 元。经董事...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225055081.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+<div class="card"><h3>💬 投资者调研</h3>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260521</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">路演活动 ·  · 机构：西安康拓医疗技术股份有限公司投资者关系活动记录表(2026年陕西辖区上市公司投资者集体接待日暨 2025年度业绩说明会)</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容介绍 组合式销售策略，持续强化在海外新兴市场的业务拓展，提升 收入规模；另一方面聚焦美国市场，实施 PEEK骨板本地化生 产，实现供应链前移，构建快速响应机制，同时积极推进4D生 物活性板、PEEK螺钉产品在美国的注册上市工作，通过输出优 质创新产品，推动海外业务持续增长。 （2）我司美国子公司目前与Neuralink无业务往来。 附件清单（如 有）</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260518</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">路演活动 ·  · 机构：西安康拓医疗技术股份有限公司投资者关系活动记录表(2026年第一季度业绩说明会)</div><div style="margin:6px 0 2px;color:var(--accent);font-weight:600">Q: 主要内容介绍 业务拓展？集采续约后的价格降幅是多少？2.4D生物活性板目 前的市场渗透率如何？预计2026年全年能够贡献多少收入？公 司对新产品的市场推广策略是什么？3.2026年一季度三费占比 大幅上升的具体原因是什么？公司计划如何控制费用增长？</div><div style="margin:2px 0 12px 12px;font-size:0.78rem;line-height:1.7;color:var(--text)">A: 尊敬的投资者，您好。 1、神经外科业务区域集采续约已陆续开展，业务拓展现已 逐渐恢复正常； 2、4D生物活性板产品的市场渗透率尚处于起步阶段，公 司将通过持续的学术推广和市场教育推动该创新型产品及全 PEEK颅骨修补解决方案的商业转化，巩固并提升公司在该领 域的品牌和学术影响力，提升该产品收入规模； 3、公司2026年第一季度费用增长主要因新增股权激励股 份支付费用及研发费用增加等原因综合所致，属于经营发展过 程中的正常阶段性变化，公司已实施全面预算管理，合理统筹 资源投放，在保障核心业务发展的前提下，稳步控制费用增 速，持续改善盈利水平。 2、2026年业绩预期，如何实现 答:尊敬的投资者，您好。2026年，公司将持续深耕神经外 科传统业务并积极践行多元化发展战略目标，且已从新品开 发、业务推广、运营管理、投资规划、人才建设等多方面制定 详细经营计划，稳步推进各项业务落地，多措并举推动公司持 续稳健发展。 3、报告期内业绩如何，满意吗 答:尊敬的投资者，您好。公司具体经营情况敬请持续关注 公司定期报告。 附件清单（如 有）</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260430</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：西安康拓医疗技术股份有限公司2026年4月29日投资者关系活动记录表</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">投资者关系活动记录表 编号：2026-002 投资者关系活动 □特定对象调研 □ 分析师会议 类别 □ 媒体采访 □ 业绩说明会 □ 新闻发布会 □ 路演活动 □ 现场参观 √ 其他 电话会议 参与单位名称及 李婵娟 华创证券 人员姓名 章树立 中信证券 魏巍 中信期货有限公司 王靖予 中国人寿养老保险股份有限公司 郑一宁 中电投先融资产管理有限公司 金嫣 浙江浙商证券资产管理有限公司 龚涵清 兴</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260429</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">媒体采访 ·  · 机构：西安康拓医疗技术股份有限公司关于召开2026年第一季度业绩说明会的公告</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容。 特此公告。 西安康拓医疗技术股份有限公司 2026年4月29 日 2</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260409</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">路演活动 ·  · 机构：西安康拓医疗技术股份有限公司投资者关系活动记录表(2025年年度业绩说明会)</div><div style="margin:6px 0 2px;color:var(--accent);font-weight:600">Q: 主要内容介绍 期？</div><div style="margin:2px 0 12px 12px;font-size:0.78rem;line-height:1.7;color:var(--text)">A: 您好，感谢您的关注，关于2026年Q1业绩情况，敬请 持续关注公司公告。 2、对当前股价是否满意 答: 尊敬的投资者，您好。公司始终专注于做好经营、提升 业绩、创造长期价值，股价受宏观环境、市场情绪、资金偏好 等多重因素影响，我们尊重资本市场的定价。 3、如何评价去年业绩 答: 尊敬的投资者，您好。2025年度公司聚焦主业，在持 续巩固并强化传统神经外科业务优势的基础上，积极践行多元 化战略，实现营业收入和净利润的双增长，未来也将持续稳健 经营，以更好的经营成果回报广大投资者。 4、您好。作为投资者，我注意到贵公司 2024年未采用直 播形式的业绩说明会并提供会后视频回放。业绩说明会有助于 投资者全面了解公司经营和管理层观点，支持理性决策。缺少 视频直播或回放可能使投资者信息获取不够充分与直观。请问 贵公司在2025年的业绩说明会中，是否考虑采用视频直播并提 供会后回放，以便投资者能够更加便捷、充分地获取相关信 息？ 此外，是否计划在问答环节引入线上视频互动，以增强沟 通效果，更好满足投资者信息需求？感谢解答。 答:尊敬的投资者，您好。感谢您的建议，未来公司将根据 实际情况采用更多样化的方式与投资者互动交流，更好传递公 司价值。 附件清单（如 有）</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260331</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">媒体采访 ·  · 机构：西安康拓医疗技术股份有限公司关于召开2025年度业绩说明会的公告</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容。 特此公告。 西安康拓医疗技术股份有限公司 2026年3月31 日 2</div></div>
+</div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260603</td><td>41.57</td><td class="negative">-1.91%</td><td>14973</td></tr><tr><td>20260602</td><td>42.38</td><td class="positive">+0.31%</td><td>11722</td></tr><tr><td>20260601</td><td>42.25</td><td class="positive">+3.55%</td><td>16749</td></tr><tr><td>20260529</td><td>40.80</td><td class="positive">+3.29%</td><td>26652</td></tr><tr><td>20260528</td><td>39.50</td><td class="positive">+5.95%</td><td>13283</td></tr><tr><td>20260527</td><td>37.28</td><td class="negative">-1.38%</td><td>8780</td></tr><tr><td>20260526</td><td>37.80</td><td class="negative">-3.08%</td><td>9721</td></tr><tr><td>20260525</td><td>39.00</td><td class="negative">-3.56%</td><td>9784</td></tr><tr><td>20260522</td><td>40.44</td><td class="positive">+1.10%</td><td>10941</td></tr><tr><td>20260521</td><td>40.00</td><td class="negative">-5.82%</td><td>15883</td></tr><tr><td>20260520</td><td>42.47</td><td class="negative">-2.14%</td><td>12570</td></tr><tr><td>20260519</td><td>43.40</td><td class="positive">+0.53%</td><td>13632</td></tr><tr><td>20260518</td><td>43.17</td><td class="negative">-3.92%</td><td>18882</td></tr><tr><td>20260515</td><td>44.93</td><td class="positive">+2.91%</td><td>24315</td></tr><tr><td>20260514</td><td>43.66</td><td class="negative">-1.44%</td><td>15923</td></tr><tr><td>20260513</td><td>44.30</td><td class="negative">-0.85%</td><td>15099</td></tr><tr><td>20260512</td><td>44.68</td><td class="negative">-1.85%</td><td>21696</td></tr><tr><td>20260511</td><td>45.52</td><td class="positive">+0.66%</td><td>34597</td></tr><tr><td>20260508</td><td>45.23</td><td class="positive">+3.08%</td><td>23621</td></tr><tr><td>20260507</td><td>43.88</td><td class="positive">+3.61%</td><td>16862</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

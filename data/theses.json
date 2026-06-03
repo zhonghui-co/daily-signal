@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-31T23:05:01.110219+08:00",
+  "last_updated": "2026-06-03T16:29:54.370799+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -118,9 +118,24 @@
           "date": "2026-05-31",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {}
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {}
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -477,9 +492,109 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {
+            "latest_close": 314.36,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 39.14,
+            "ret_5d_pct": 0.63,
+            "ret_1d_pct": -0.77,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -9.97
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单，华为2026年AI芯片收入$12B",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a17",
+              "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a19",
+              "title": "Nvidia承诺$150B/年台湾投资+Constellation总部动工→AI硬件供给极端集中度风险创历史新高",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {
+            "latest_close": 283.49,
+            "latest_date": "20260602",
+            "since_date": "2026-05-06",
+            "since_return_pct": 25.48,
+            "ret_5d_pct": -10.51,
+            "ret_1d_pct": 2.95,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -18.81
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "科创50两日累跌10%：τ定律行情从consensus→exhausted，半导体全链估值压缩至5/24前水平",
+              "confidence": "red",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a4",
+              "title": "Nikkei: 台湾2026 GDP增速上调至9.64%(16年新高)AI boom驱动 + Goldman Sachs: AI基建全年支出$8000亿 → 全球AI供应链双验证",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "智谱建议A股科创板上市+MiniMax M3商用→AI大模型双雄回A+H，近万亿AI资产注入A股→AI算力链估值锚再强化",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ],
+          "warnings": [
+            "⚠️ 近5日跌-10.51%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-18.81%"
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {
+            "latest_close": 285.94,
+            "latest_date": "20260603",
+            "since_date": "2026-05-06",
+            "since_return_pct": 26.56,
+            "ret_5d_pct": -9.04,
+            "ret_1d_pct": 0.86,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -18.11
+          },
+          "signals": [
+            {
+              "signal_id": "a9",
+              "title": "东阳光100亿-120亿算力服务合同：国内AI算力需求实证——5年期大单",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ],
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-18.11%"
+          ]
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -888,9 +1003,96 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1391.5,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 49.28,
+            "ret_5d_pct": 8.2,
+            "ret_1d_pct": 3.84,
+            "high_since": 1410.96,
+            "low_since": 651.35,
+            "from_high_pct": -1.38
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单，华为2026年AI芯片收入$12B",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a17",
+              "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1300.0,
+            "latest_date": "20260602",
+            "since_date": "2026-05-06",
+            "since_return_pct": 39.46,
+            "ret_5d_pct": -2.99,
+            "ret_1d_pct": 5.01,
+            "high_since": 1410.96,
+            "low_since": 651.35,
+            "from_high_pct": -7.86
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "科创50两日累跌10%：τ定律行情从consensus→exhausted，半导体全链估值压缩至5/24前水平",
+              "confidence": "red",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a4",
+              "title": "Nikkei: 台湾2026 GDP增速上调至9.64%(16年新高)AI boom驱动 + Goldman Sachs: AI基建全年支出$8000亿 → 全球AI供应链双验证",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "智谱建议A股科创板上市+MiniMax M3商用→AI大模型双雄回A+H，近万亿AI资产注入A股→AI算力链估值锚再强化",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1378.1,
+            "latest_date": "20260603",
+            "since_date": "2026-05-06",
+            "since_return_pct": 47.84,
+            "ret_5d_pct": -0.96,
+            "ret_1d_pct": 6.01,
+            "high_since": 1410.96,
+            "low_since": 651.35,
+            "from_high_pct": -2.33
+          },
+          "signals": [
+            {
+              "signal_id": "a9",
+              "title": "东阳光100亿-120亿算力服务合同：国内AI算力需求实证——5年期大单",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1343,9 +1545,136 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {
+            "latest_close": 69.3,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 75.44,
+            "ret_5d_pct": 9.36,
+            "ret_1d_pct": -3.0,
+            "high_since": 75.3,
+            "low_since": 39.5,
+            "from_high_pct": -7.97
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，Q1营收508亿同比+719%扭亏为盈",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单，华为2026年AI芯片收入$12B",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a5",
+              "title": "字节跳动今年最高$70B AI基建支出，明年或提升至$100B",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为宣布新Kirin芯片突破美国封锁，性能接近台积电/英特尔",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a17",
+              "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {
+            "latest_close": 63.84,
+            "latest_date": "20260602",
+            "since_date": "2026-05-06",
+            "since_return_pct": 61.62,
+            "ret_5d_pct": -10.64,
+            "ret_1d_pct": 3.99,
+            "high_since": 75.3,
+            "low_since": 39.5,
+            "from_high_pct": -15.22
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "科创50两日累跌10%：τ定律行情从consensus→exhausted，半导体全链估值压缩至5/24前水平",
+              "confidence": "red",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a2",
+              "title": "COMPUTEX 2026黄仁勋Keynote：Vera Rubin量产+200Gb CPO交换机+Token=资产，AI基础设施从GPU到全机架升级",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a4",
+              "title": "Nikkei: 台湾2026 GDP增速上调至9.64%(16年新高)AI boom驱动 + Goldman Sachs: AI基建全年支出$8000亿 → 全球AI供应链双验证",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "CXMT长鑫科技IPO进入'提交注册'阶段：预计2-3个月内正式上市，295亿募资将直接拉动设备/材料/封测全链",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a6",
+              "title": "国产光通信产业链全面扩产：华工科技800G月产能>120万只+亨通光电光棒扩产1.5×→AI算力需求从数据中心向全产业链传导",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ],
+          "warnings": [
+            "⚠️ 近5日跌-10.64%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-15.22%"
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {
+            "latest_close": 70.22,
+            "latest_date": "20260603",
+            "since_date": "2026-05-06",
+            "since_return_pct": 77.77,
+            "ret_5d_pct": 1.33,
+            "ret_1d_pct": 9.99,
+            "high_since": 75.3,
+            "low_since": 39.5,
+            "from_high_pct": -6.75
+          },
+          "signals": [
+            {
+              "signal_id": "a5",
+              "title": "🔥 SK海力士市值破万亿+高盛确认存储超级周期至2027年：DRAM/NAND/HBM缺口全品类持续",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "联发科弃台积电CoWoS转Intel EMIB-T封装：2027Q4量产，先进封装格局生变",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1792,9 +2121,144 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {
+            "latest_close": 659.0,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 38.88,
+            "ret_5d_pct": -1.49,
+            "ret_1d_pct": 0.65,
+            "high_since": 698.19,
+            "low_since": 424.08,
+            "from_high_pct": -5.61
+          },
+          "signals": [
+            {
+              "signal_id": "a4",
+              "title": "高盛：对冲基金'all in AI'半导体仓位创历史新高，但止盈近一年最快",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a16",
+              "title": "伯恩斯坦：半导体设备国产化率16%(2024)→21%(2025)→26%(2026E)→43%(2028E)，3年翻倍CAGR 48%+NAURA 680元/AMEC 500元目标价",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a17",
+              "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a18",
+              "title": "EU Chips Act 2.0：欧盟准备€120B芯片投资+6月3日发布修订法案，全球半导体主权化大赛全面启动",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a19",
+              "title": "Nvidia承诺$150B/年台湾投资+Constellation总部动工→AI硬件供给极端集中度风险创历史新高",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {
+            "latest_close": 602.8,
+            "latest_date": "20260602",
+            "since_date": "2026-05-06",
+            "since_return_pct": 27.04,
+            "ret_5d_pct": -7.94,
+            "ret_1d_pct": 2.19,
+            "high_since": 698.19,
+            "low_since": 424.08,
+            "from_high_pct": -13.66
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "科创50两日累跌10%：τ定律行情从consensus→exhausted，半导体全链估值压缩至5/24前水平",
+              "confidence": "red",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a3",
+              "title": "中国半导体设备国产化率分层数据刷新：去胶65%/清洗50%/刻蚀~25%/光刻<5%，国产替代斜率分化加剧",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "Nikkei: 台湾2026 GDP增速上调至9.64%(16年新高)AI boom驱动 + Goldman Sachs: AI基建全年支出$8000亿 → 全球AI供应链双验证",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "CXMT长鑫科技IPO进入'提交注册'阶段：预计2-3个月内正式上市，295亿募资将直接拉动设备/材料/封测全链",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {
+            "latest_close": 614.84,
+            "latest_date": "20260603",
+            "since_date": "2026-05-06",
+            "since_return_pct": 29.57,
+            "ret_5d_pct": -6.7,
+            "ret_1d_pct": 2.0,
+            "high_since": 698.19,
+            "low_since": 424.08,
+            "from_high_pct": -11.94
+          },
+          "signals": [
+            {
+              "signal_id": "a5",
+              "title": "🔥 SK海力士市值破万亿+高盛确认存储超级周期至2027年：DRAM/NAND/HBM缺口全品类持续",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a6",
+              "title": "🏭 东陶(TOTO)大举进军半导体陶瓷材料：芯片设备陶瓷需求激增→Capex占比从11%→50%+",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a7",
+              "title": "联发科弃台积电CoWoS转Intel EMIB-T封装：2027Q4量产，先进封装格局生变",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a8",
+              "title": "马斯克关联公司休斯顿购地6000英亩→550亿美元芯片厂或落地：全球最大AI芯片厂计划",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -2216,9 +2680,138 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {
+            "latest_close": 303.86,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 45.54,
+            "ret_5d_pct": -3.51,
+            "ret_1d_pct": -0.42,
+            "high_since": 328.82,
+            "low_since": 196.82,
+            "from_high_pct": -7.59
+          },
+          "signals": [
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a16",
+              "title": "伯恩斯坦：半导体设备国产化率16%(2024)→21%(2025)→26%(2026E)→43%(2028E)，3年翻倍CAGR 48%+NAURA 680元/AMEC 500元目标价",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a17",
+              "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a18",
+              "title": "EU Chips Act 2.0：欧盟准备€120B芯片投资+6月3日发布修订法案，全球半导体主权化大赛全面启动",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a19",
+              "title": "Nvidia承诺$150B/年台湾投资+Constellation总部动工→AI硬件供给极端集中度风险创历史新高",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {
+            "latest_close": 282.8,
+            "latest_date": "20260602",
+            "since_date": "2026-05-06",
+            "since_return_pct": 35.45,
+            "ret_5d_pct": -7.33,
+            "ret_1d_pct": 3.59,
+            "high_since": 328.82,
+            "low_since": 196.82,
+            "from_high_pct": -14.0
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "科创50两日累跌10%：τ定律行情从consensus→exhausted，半导体全链估值压缩至5/24前水平",
+              "confidence": "red",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a3",
+              "title": "中国半导体设备国产化率分层数据刷新：去胶65%/清洗50%/刻蚀~25%/光刻<5%，国产替代斜率分化加剧",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "Nikkei: 台湾2026 GDP增速上调至9.64%(16年新高)AI boom驱动 + Goldman Sachs: AI基建全年支出$8000亿 → 全球AI供应链双验证",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "CXMT长鑫科技IPO进入'提交注册'阶段：预计2-3个月内正式上市，295亿募资将直接拉动设备/材料/封测全链",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {
+            "latest_close": 285.92,
+            "latest_date": "20260603",
+            "since_date": "2026-05-06",
+            "since_return_pct": 36.95,
+            "ret_5d_pct": -5.9,
+            "ret_1d_pct": 1.1,
+            "high_since": 328.82,
+            "low_since": 196.82,
+            "from_high_pct": -13.05
+          },
+          "signals": [
+            {
+              "signal_id": "a5",
+              "title": "🔥 SK海力士市值破万亿+高盛确认存储超级周期至2027年：DRAM/NAND/HBM缺口全品类持续",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a6",
+              "title": "🏭 东陶(TOTO)大举进军半导体陶瓷材料：芯片设备陶瓷需求激增→Capex占比从11%→50%+",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a7",
+              "title": "联发科弃台积电CoWoS转Intel EMIB-T封装：2027Q4量产，先进封装格局生变",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a8",
+              "title": "马斯克关联公司休斯顿购地6000英亩→550亿美元芯片厂或落地：全球最大AI芯片厂计划",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -2713,9 +3306,129 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {
+            "latest_close": 84.74,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 120.91,
+            "ret_5d_pct": 16.27,
+            "ret_1d_pct": -1.65,
+            "high_since": 88.19,
+            "low_since": 38.29,
+            "from_high_pct": -3.91
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "长鑫科技科创板IPO过会：拟募295亿创纪录，Q1营收508亿同比+719%扭亏为盈",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单，华为2026年AI芯片收入$12B",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a5",
+              "title": "字节跳动今年最高$70B AI基建支出，明年或提升至$100B",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为宣布新Kirin芯片突破美国封锁，性能接近台积电/英特尔",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a17",
+              "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {
+            "latest_close": 75.35,
+            "latest_date": "20260602",
+            "since_date": "2026-05-06",
+            "since_return_pct": 96.43,
+            "ret_5d_pct": -12.55,
+            "ret_1d_pct": -0.4,
+            "high_since": 88.19,
+            "low_since": 38.29,
+            "from_high_pct": -14.56
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "科创50两日累跌10%：τ定律行情从consensus→exhausted，半导体全链估值压缩至5/24前水平",
+              "confidence": "red",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a2",
+              "title": "COMPUTEX 2026黄仁勋Keynote：Vera Rubin量产+200Gb CPO交换机+Token=资产，AI基础设施从GPU到全机架升级",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a4",
+              "title": "Nikkei: 台湾2026 GDP增速上调至9.64%(16年新高)AI boom驱动 + Goldman Sachs: AI基建全年支出$8000亿 → 全球AI供应链双验证",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "CXMT长鑫科技IPO进入'提交注册'阶段：预计2-3个月内正式上市，295亿募资将直接拉动设备/材料/封测全链",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            },
+            {
+              "signal_id": "a6",
+              "title": "国产光通信产业链全面扩产：华工科技800G月产能>120万只+亨通光电光棒扩产1.5×→AI算力需求从数据中心向全产业链传导",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ],
+          "warnings": [
+            "⚠️ 近5日跌-12.55%，短期急剧下跌"
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {
+            "latest_close": 80.13,
+            "latest_date": "20260603",
+            "since_date": "2026-05-06",
+            "since_return_pct": 108.89,
+            "ret_5d_pct": -5.44,
+            "ret_1d_pct": 6.34,
+            "high_since": 88.19,
+            "low_since": 38.29,
+            "from_high_pct": -9.14
+          },
+          "signals": [
+            {
+              "signal_id": "a5",
+              "title": "🔥 SK海力士市值破万亿+高盛确认存储超级周期至2027年：DRAM/NAND/HBM缺口全品类持续",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            }
+          ]
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -3211,9 +3924,148 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {
+            "latest_close": 153.7,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 18.28,
+            "ret_5d_pct": 17.03,
+            "ret_1d_pct": 5.12,
+            "high_since": 156.0,
+            "low_since": 91.78,
+            "from_high_pct": -1.47
+          },
+          "signals": [
+            {
+              "signal_id": "a2",
+              "title": "中国首次将9款国产AI芯片纳入政府采购'安全可靠'清单，华为2026年AI芯片收入$12B",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "τ定律引爆A股：科创50单日+5.88%→4天后-5.04%→极速全周期完成",
+              "confidence": "yellow",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a4",
+              "title": "高盛：对冲基金'all in AI'半导体仓位创历史新高，但止盈近一年最快",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a7",
+              "title": "DigiTimes：小米/BYD/蔚来自研芯片重塑中国芯片战争格局",
+              "confidence": "grey",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a8",
+              "title": "DigiTimes：AMD 2nm转向三星，台积电首次面临真正竞争对手",
+              "confidence": "grey",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a9",
+              "title": "华为宣布新Kirin芯片突破美国封锁，性能接近台积电/英特尔",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a15",
+              "title": "港股半导体天量卖空：中芯国际5/26单日4036万股/35.31亿港元刷新历史峰值+华虹单日23.39亿港元",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a17",
+              "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a19",
+              "title": "Nvidia承诺$150B/年台湾投资+Constellation总部动工→AI硬件供给极端集中度风险创历史新高",
+              "confidence": "yellow",
+              "lifecycle": "positioning"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {
+            "latest_close": 132.48,
+            "latest_date": "20260602",
+            "since_date": "2026-05-06",
+            "since_return_pct": 1.95,
+            "ret_5d_pct": -9.4,
+            "ret_1d_pct": 0.03,
+            "high_since": 156.0,
+            "low_since": 91.78,
+            "from_high_pct": -15.08
+          },
+          "signals": [
+            {
+              "signal_id": "a1",
+              "title": "科创50两日累跌10%：τ定律行情从consensus→exhausted，半导体全链估值压缩至5/24前水平",
+              "confidence": "red",
+              "lifecycle": "exhausted"
+            },
+            {
+              "signal_id": "a2",
+              "title": "COMPUTEX 2026黄仁勋Keynote：Vera Rubin量产+200Gb CPO交换机+Token=资产，AI基础设施从GPU到全机架升级",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a3",
+              "title": "中国半导体设备国产化率分层数据刷新：去胶65%/清洗50%/刻蚀~25%/光刻<5%，国产替代斜率分化加剧",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a4",
+              "title": "Nikkei: 台湾2026 GDP增速上调至9.64%(16年新高)AI boom驱动 + Goldman Sachs: AI基建全年支出$8000亿 → 全球AI供应链双验证",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "CXMT长鑫科技IPO进入'提交注册'阶段：预计2-3个月内正式上市，295亿募资将直接拉动设备/材料/封测全链",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            }
+          ],
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-15.08%"
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {
+            "latest_close": 134.0,
+            "latest_date": "20260603",
+            "since_date": "2026-05-06",
+            "since_return_pct": 3.12,
+            "ret_5d_pct": -12.82,
+            "ret_1d_pct": 1.15,
+            "high_since": 156.0,
+            "low_since": 91.78,
+            "from_high_pct": -14.1
+          },
+          "warnings": [
+            "⚠️ 近5日跌-12.82%，短期急剧下跌"
+          ]
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -3517,9 +4369,104 @@
               "lifecycle": "emerging"
             }
           ]
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {
+            "latest_close": 30.61,
+            "latest_date": "20260528",
+            "since_date": "2026-05-06",
+            "since_return_pct": 36.96,
+            "ret_5d_pct": 10.07,
+            "ret_1d_pct": 9.05,
+            "high_since": 30.61,
+            "low_since": 16.61,
+            "from_high_pct": 0.0
+          },
+          "signals": [
+            {
+              "signal_id": "a12",
+              "title": "中芯国际与华虹联合成立上海电子材料国际供应链平台",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            },
+            {
+              "signal_id": "a16",
+              "title": "伯恩斯坦：半导体设备国产化率16%(2024)→21%(2025)→26%(2026E)→43%(2028E)，3年翻倍CAGR 48%+NAURA 680元/AMEC 500元目标价",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a17",
+              "title": "Taiwan Japan Nvidia芯片走私案+Supermicro$2.5B美国DOJ案→全球AI芯片禁运执法框架全面形成",
+              "confidence": "green",
+              "lifecycle": "emerging"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {
+            "latest_close": 24.71,
+            "latest_date": "20260602",
+            "since_date": "2026-05-06",
+            "since_return_pct": 10.56,
+            "ret_5d_pct": -11.97,
+            "ret_1d_pct": -4.52,
+            "high_since": 30.61,
+            "low_since": 16.61,
+            "from_high_pct": -19.27
+          },
+          "signals": [
+            {
+              "signal_id": "a3",
+              "title": "中国半导体设备国产化率分层数据刷新：去胶65%/清洗50%/刻蚀~25%/光刻<5%，国产替代斜率分化加剧",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "CXMT长鑫科技IPO进入'提交注册'阶段：预计2-3个月内正式上市，295亿募资将直接拉动设备/材料/封测全链",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            }
+          ],
+          "warnings": [
+            "⚠️ 近5日跌-11.97%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-19.27%"
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {
+            "latest_close": 25.28,
+            "latest_date": "20260603",
+            "since_date": "2026-05-06",
+            "since_return_pct": 13.11,
+            "ret_5d_pct": -17.41,
+            "ret_1d_pct": 2.31,
+            "high_since": 30.61,
+            "low_since": 16.61,
+            "from_high_pct": -17.41
+          },
+          "signals": [
+            {
+              "signal_id": "a8",
+              "title": "马斯克关联公司休斯顿购地6000英亩→550亿美元芯片厂或落地：全球最大AI芯片厂计划",
+              "confidence": "yellow",
+              "lifecycle": "emerging"
+            }
+          ],
+          "warnings": [
+            "⚠️ 近5日跌-17.41%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-17.41%"
+          ]
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -3664,9 +4611,38 @@
           "date": "2026-05-31",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-06-01",
+          "status": "active",
+          "metrics": {}
+        },
+        {
+          "date": "2026-06-02",
+          "status": "active",
+          "metrics": {},
+          "signals": [
+            {
+              "signal_id": "a3",
+              "title": "中国半导体设备国产化率分层数据刷新：去胶65%/清洗50%/刻蚀~25%/光刻<5%，国产替代斜率分化加剧",
+              "confidence": "green",
+              "lifecycle": "positioning"
+            },
+            {
+              "signal_id": "a5",
+              "title": "CXMT长鑫科技IPO进入'提交注册'阶段：预计2-3个月内正式上市，295亿募资将直接拉动设备/材料/封测全链",
+              "confidence": "green",
+              "lifecycle": "consensus"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-05-31",
+      "last_check": "2026-06-03",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     }

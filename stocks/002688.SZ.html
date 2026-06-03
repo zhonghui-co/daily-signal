@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>金河生物 (002688.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>金河生物 <code style="font-size:0.8rem;color:var(--text-muted)">002688.SZ</code></h1>
+    <div class="sub">待分类 · 最新价 5.22 · 20260603 · 5日 -0.9% · 20日 -11.4%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: 涨幅发现 | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-05-23</td><td><span class="tag tag-purple">👤 人事变动</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">金河生物：关于完成工商变更登记的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002688 证券简称：金河生物 公告编号：2026-047 金河生物科技股份有限公司 关于完成工商变更登记的公告 本公司及董事会全体人员保证公告内容真实、准确和完整，并对公告中的虚 假记载、误导性陈述或者重大遗漏承担责任。 金河生物科技股份有限公司（以下简称“公司”）于2025年12月30日及2026 年1月16日分别召开了第六届董事会第三十五次会议和2026年第一次临时股东会， 审议并通过了《关于变更公司注册资本及修订<公司章程>部分条款的议案》。具 体 内 容 详 见 公 司 2025 年 12 月 31 日 、 2026 年 1 月 17 日 于 巨 潮 资 讯 网 （http://www.cninfo.com.cn）披露的相关公告。 公司于近日完成了工商变更登记及备案手续，并取得了呼和浩特市行政审批 和政务服务局颁发的《营业执照》，现将具体信息公告如下： 一、变更后的《营业执照》具体信息 统一社会信用代码：91150000114368372K 名称：金河生物科技股份有限公司 类型：其他股份有限公司（上市） 住所：托克托县新坪路71号 注册资本：柒亿陆仟玖佰伍拾万肆仟...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-05-23/1225324878.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-05-22</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">金河生物：关于参加内蒙古辖区上市公司2026年投资者网上集体接待日活动的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002688 证券简称：金河生物 公告编号:2026-046 金河生物科技股份有限公司 关于参加内蒙古辖区上市公司2026年 投资者网上集体接待日活动的公告 本公司及董事会全体人员保证公告内容真实、准确和完整，并对公告中的 虚假记载、误导性陈述或者重大遗漏承担责任。 为进一步加强与投资者的互动交流，金河生物科技股份有限公司（以下简 称“公司”）将参加由内蒙古监管局、内蒙古上市公司协会与深圳市全景网络 有限公司联合举办的“2026年内蒙古辖区上市公司投资者集体接待日活动”， 现将相关事项公告如下： 本次活动将采用网络远程的方式举行，投资者可登录“全景路演”网站 (http://rs.p5w.net)，或关注微信公众号：全景财经，或下载全景路演APP参 与本次互动交流，活动时间为2026年5月27日(周三)14:30-17:00。届时公司高 管将在线就公司业绩、公司治理、发展战略、经营状况、融资计划、股权激励 和可持续发展等投资者关心的问题，与投资者进行沟通与交流，欢迎广大投资 者踊跃参与！ 特此公告。 金河生物科技股份有限公司 董 事 会 2026年5月21日 1</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-05-22/1225324368.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">金河生物：2026年一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">金河生物科技股份有限公司2026年第一季度报告 证券代码：002688 证券简称：金河生物 公告编号：2026-027 金河生物科技股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 重要内容提示： 1.董事会及董事、高级管理人员保证季度报告的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担 个别和连带的法律责任。 2.公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）声明：保证季度报告中财务信息的真实、准 确、完整。 3.第一季度财务会计报告是否经审计 □是 否 一、主要财务数据 （一） 主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是 否 本报告期比上年同期增减 本报告期 上年同期 （%） 营业收入（元） 741,878,953.16 625,145,364.48 18.67% 归属于上市公司股东的净 62,297,096.94 51,116,537.85 21.87% 利润（元） 归属于上市公司股东的扣 除非经常性损益的净利润 60,001,45...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225238177.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">金河生物：关于举办2025年年度报告网上业绩说明会的公告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">证券代码：002688 证券简称：金河生物 公告编号:2026-039 金河生物科技股份有限公司 关于举办2025年年度报告网上业绩说明会的公告 本公司及董事会全体人员保证公告内容真实、准确和完整，并对公告中的 虚假记载、误导性陈述或者重大遗漏承担责任。 金河生物科技股份有限公司（以下简称“公司”）已于2026年4月29日在巨 潮资讯网上披露了《2025年年度报告》及《2025年年度报告摘要》。为便于广 大投资者更加全面深入地了解公司经营业绩、发展战略等情况，公司定于2026 年4月30日（星期四）15:00-17:00在“价值在线”（www.ir-online.cn）举办 公司2025年年度报告网上业绩说明会，与投资者进行沟通和交流，广泛听取投 资者的意见和建议。 一、业绩说明会召开的时间、地点和方式 会议召开时间：2026年4月30日（星期四）15:00-17:00 会议召开地点：价值在线（www.ir-online.cn） 会议召开方式：网络互动方式 二、参加人员 出席本次说明会的人员有：公司董事长王东晓先生，董事、总经理谢昌贤 先生，财务总监牛有山先生，董事、董事会秘书路漫漫先...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225238199.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-29</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">金河生物：2025年年度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">金河生物科技股份有限公司2025年年度报告全文 2025 年年度报告 2026 年 4 月 1 金河生物科技股份有限公司2025年年度报告全文 2025 年年度报告 第一节 重要提示、目录和释义 公司董事会及董事、高级管理人员保证年度报告内容的真实、准确、完 整，不存在虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责 任。 公司负责人王东晓、主管会计工作负责人牛有山及会计机构负责人（会 计主管人员）周立航声明：保证本年度报告中财务报告的真实、准确、完 整。 所有董事均已出席了审议本报告的董事会会议。 本报告中涉及的经营计划及目标等前瞻性陈述，属于规划性事项，不构 成公司对投资者的实质承诺。投资者应对此保持足够的风险意识，应理解经 营计划与业绩承诺之间的差异。敬请广大投资者关注，并注意投资风险。 公司在本报告第三节“管理层讨论与分析”中“十一、公司未来发展的 展望”部分，详细描述了公司经营中可能存在的风险，敬请投资者关注相关 内容。 公司经本次董事会审议通过的利润分配预案为：以 2025 年度权益分派实 施时股权登记日的公司总股本扣除公司回购专用证券账户已回购的股份后的 总股本为...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225238166.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+<div class="card"><h3>💬 投资者调研</h3>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260527</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：金河生物：2026年5月27日投资者关系活动记录表</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容介绍 来还有新的合成生物产品生产。友商的产能据我所知也并不是都 在生产金霉素，也有很多其他化药产品在生产。未来随着兔、水 产、宠物等靶向动物的增加，金霉素将迎来更大的市场空间！谢 谢关注！ Q2：金霉素是否还有销售增长空间，目前使用金霉素的猪、牛羊 有多大比例，这个比例未来是否会持续提升？ A2：尊敬的投资者，您好！金霉素于 2024 底增加了新的靶向动 物-羊，增加了新的应用场景，202</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260430</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：金河生物：2026年4月29日投资者关系活动记录表, 金河生物：2026年4月30日投资者关系活动记录表</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">主要内容介绍 司通过股权转让及增资方式取得吉林百思万可60%股权，其中收 购34%股权的交易价格为16,320万元，增资金额为12,480万元。 此次收购是基于公司战略布局动保行业，特别是兽用疫苗领域的 考虑，旨在增强公司的市场竞争力和盈利能力。 关于知识产权归属问题，公司在收购过程中进行了充分的尽职调 查，并严格按照相关法律法规和公司章程履行了决策程序。收购 合同中对于知识产权的归属、责任和义务</div></div>
+</div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260603</td><td>5.22</td><td class="negative">-1.69%</td><td>106500</td></tr><tr><td>20260602</td><td>5.31</td><td class="negative">-3.45%</td><td>187052</td></tr><tr><td>20260601</td><td>5.50</td><td class="positive">+1.48%</td><td>211585</td></tr><tr><td>20260529</td><td>5.42</td><td class="negative">-7.23%</td><td>522502</td></tr><tr><td>20260528</td><td>5.84</td><td class="positive">+9.98%</td><td>482655</td></tr><tr><td>20260527</td><td>5.31</td><td class="negative">-2.35%</td><td>80199</td></tr><tr><td>20260526</td><td>5.44</td><td class="negative">-2.46%</td><td>76947</td></tr><tr><td>20260525</td><td>5.58</td><td class="positive">+0.71%</td><td>52015</td></tr><tr><td>20260522</td><td>5.54</td><td class="negative">-0.53%</td><td>81874</td></tr><tr><td>20260521</td><td>5.57</td><td class="negative">-2.58%</td><td>70498</td></tr><tr><td>20260520</td><td>5.71</td><td class="negative">-1.85%</td><td>61633</td></tr><tr><td>20260519</td><td>5.82</td><td class="positive">+2.07%</td><td>69173</td></tr><tr><td>20260518</td><td>5.70</td><td class="negative">-1.19%</td><td>72404</td></tr><tr><td>20260515</td><td>5.77</td><td class="negative">-0.84%</td><td>94851</td></tr><tr><td>20260514</td><td>5.82</td><td class="negative">-1.33%</td><td>90406</td></tr><tr><td>20260513</td><td>5.90</td><td class="positive">+0.67%</td><td>81225</td></tr><tr><td>20260512</td><td>5.86</td><td class="negative">-1.81%</td><td>78939</td></tr><tr><td>20260511</td><td>5.97</td><td class="positive">+1.33%</td><td>129025</td></tr><tr><td>20260508</td><td>5.89</td><td class="positive">+0.50%</td><td>62290</td></tr><tr><td>20260507</td><td>5.86</td><td class="negative">-0.83%</td><td>103550</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>

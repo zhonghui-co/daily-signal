@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>绿发电力 (000537.SZ) — Daily Signals</title>
+<style>
+:root {
+  --bg: #0b1120; --bg-card: #111827; --border: #1e3a5f;
+  --text: #cbd5e1; --text-muted: #64748b; --text-heading: #f1f5f9;
+  --accent: #38bdf8; --accent2: #818cf8; --red: #ef4444;
+  --green: #22c55e; --amber: #f59e0b; --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55; font-size: 0.9rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px 14px 36px; }
+header { padding: 2px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+header h1 { font-size: 1.35rem; color: var(--text-heading); }
+header .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.date-tag { display: inline-flex; align-items: center; gap: 3px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: var(--text-muted); }
+nav { margin-bottom: 14px; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--accent); text-decoration: none; font-size: 0.76rem; padding: 2px 8px; border-radius: 3px; transition: background .15s; }
+nav a:hover { background: rgba(56,189,248,0.15); color: #7dd3fc; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.card-header h2, .card-header h3 { color: var(--text-heading); font-size: 1rem; }
+.card-header .stats { font-size: 0.75rem; color: var(--text-muted); }
+h2 { font-size: 1.05rem; color: var(--text-heading); margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 0.92rem; color: var(--text-heading); margin: 12px 0 6px; }
+h2.chain-h2 { color: var(--accent); border-color: rgba(56,189,248,0.2); }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; padding: 6px 8px; background: rgba(30,58,95,0.3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid rgba(30,58,95,0.3); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(56,189,248,0.03); }
+p { margin: 4px 0; font-size: 0.86rem; }
+blockquote { border-left: 3px solid var(--accent2); padding: 6px 12px; margin: 8px 0; background: rgba(129,140,248,0.05); border-radius: 0 4px 4px 0; font-size: 0.83rem; color: #a5b4fc; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-right: 4px; }
+.tag-green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.tag-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.tag-red { background: rgba(239,68,68,0.15); color: #ef4444; }
+.tag-blue { background: rgba(56,189,248,0.15); color: #38bdf8; }
+.tag-purple { background: rgba(129,140,248,0.15); color: #818cf8; }
+.alert-critical { border-left: 3px solid #ef4444; padding: 4px 10px; margin: 4px 0; background: rgba(239,68,68,0.08); font-size: 0.82rem; color: #fca5a5; }
+.alert-high { border-left: 3px solid #f59e0b; padding: 4px 10px; margin: 4px 0; background: rgba(245,158,11,0.08); font-size: 0.82rem; color: #fcd34d; }
+.alert-medium { border-left: 3px solid #38bdf8; padding: 4px 10px; margin: 4px 0; background: rgba(56,189,248,0.08); font-size: 0.82rem; color: #bae6fd; }
+.subtitle-p { font-size: 0.78rem; font-weight: 600; color: var(--amber); margin: 10px 0 4px; }
+.positive { color: #ef4444; }
+.negative { color: #22c55e; }
+.mermaid-wrap { background: #0f172a; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 12px 0; overflow-x: auto; }
+.signal-card { margin-bottom: 14px; }
+.conduction-step { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 0.82rem; }
+.conduction-step .step-num { min-width: 20px; color: var(--accent); font-weight: 600; }
+.conduction-step .step-content { flex: 1; }
+.ticker-link { color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.78rem; }
+.ticker-link:hover { text-decoration: underline; }
+footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.72rem; border-top: 1px solid var(--border); margin-top: 24px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true,theme:"dark",themeVariables:{primaryColor:"#1e3a5f",primaryTextColor:"#cbd5e1",primaryBorderColor:"#38bdf8",lineColor:"#64748b",secondaryColor:"#111827",tertiaryColor:"#0b1120"}});</script>
+</head>
+<body>
+<div class="container">
+<nav><a href="../index.html">← 主页</a> <a href="../directory.html">📋 目录</a></nav>
+<header>
+    <h1>绿发电力 <code style="font-size:0.8rem;color:var(--text-muted)">000537.SZ</code></h1>
+    <div class="sub">待分类 · 最新价 11.06 · 20260603 · 5日 +9.3% · 20日 +6.3%</div>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">
+      十五五: 直接受益 | 驱动: 涨幅发现 | 持续性: -
+    </div>
+</header>
+<div class="card"><h3>🏢 公司信息</h3>
+</div>
+<div class="card"><h3>📋 近期公告</h3>
+<div class="table-wrap"><table>
+<tr><th style="width:80px">日期</th><th style="width:70px">分类</th><th>标题</th><th style="width:40px">源文件</th></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-30</td><td><span class="tag tag-purple">📌 其他公告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">绿发电力：关于适用简化程序召开“天津中绿电投资股份有限公司2023年面向专业投资者公开发行碳中和绿色公司债券（第一期）”2026年第一次债券持有人会议的通知</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">债券代码：148562.SZ 债券简称：23绿电G1 关于适用简化程序召开 “天津中绿电投资股份有限公司 2023年面向专业投资者公开发行碳中和绿色公司 债券（第一期）” 2026年第一次债券持有人会议的通知 本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述或者 重大遗漏，并对其内容的真实性、准确性和完整性承担个别及连带责任。 “天津中绿电投资股份有限公司 2023年面向专业投资者公开发行碳中和绿色公 司债券（第一期）”（以下简称“本期债券”）持有人： 天津绿发电力集团股份有限公司（以下简称“公司”，曾名为“天津中绿电投资股 份有限公司1”）于 2023 年 12 月 28 日公开发行了本期债券。结合公司的具体情况， 为提高本期债券的资金使用效率，公司拟对本期债券募集资金用途进行变更。根据 《天津中绿电投资股份有限公司 2023 年面向专业投资者公开发行碳中和绿色公司 债券（第一期）募集说明书》（以下简称《募集说明书》）及《天津中绿电投资股 份有限公司2023年面向专业投资者公开发行公司债券债券持有人会议规则》（以下 简称《债券持有人会议规则》）的规定，现定于 202...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-30/1225271796.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">绿发电力：2026年一季度报告</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">天津绿发电力集团股份有限公司2026年第一季度报告 证券代码：000537 证券简称：绿发电力 公告编号：2026-036 债券代码：148562 债券简称：23绿电G1 债券代码：524531 债券简称：25绿电G1 天津绿发电力集团股份有限公司 2026 年第一季度报告 本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假记载、误导性陈述或重大遗漏。 重要内容提示： 1.董事会及董事、高级管理人员保证季度报告的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担 个别和连带的法律责任。 2.公司负责人、主管会计工作负责人及会计机构负责人（会计主管人员）声明：保证季度报告中财务信息的真实、准 确、完整。 3.第一季度财务会计报告是否经审计 □是 否 1 天津绿发电力集团股份有限公司2026年第一季度报告 一、主要财务数据 （一） 主要会计数据和财务指标 公司是否需追溯调整或重述以前年度会计数据 □是 否 本报告期比上年同期 本报告期 上年同期 增减 营业收入（元） 1,177,208,154.36 1,025,818,815.04 14.76% 归属于上市...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225208733.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+<tr><td style="white-space:nowrap;font-size:0.72rem;color:var(--text-muted)">2026-04-28</td><td><span class="tag tag-blue">📊 财务报告</span></td><td><div style="font-weight:600;font-size:0.8rem;color:var(--text-heading)">绿发电力：2025年年度报告摘要</div><div style="font-size:0.73rem;color:var(--text-muted);margin-top:4px;line-height:1.6">天津绿发电力集团股份有限公司2025年年度报告摘要 证券代码：000537 证券简称：绿发电力 公告编号：2026-030 债券代码：148562 债券简称：23 绿电G1 债券代码：524531 债券简称：25 绿电G1 天津绿发电力集团股份有限公司 2025 年年度报告摘要 一、重要提示 本年度报告摘要来自年度报告全文，为全面了解本公司的经营成果、财务状况及未来发展规划，投资者应当到证监会指 定媒体仔细阅读年度报告全文。 所有董事均已出席了审议本报告的董事会会议。 非标准审计意见提示 □适用 不适用 董事会审议的报告期利润分配预案或公积金转增股本预案 适用 □不适用 是否以公积金转增股本 □是 否 公司经本次董事会审议通过的利润分配预案为：以2,055,717,899 为基数，向全体股东每10股派发现金红利1.2元 （含税），送红股0股（含税），不以公积金转增股本。 董事会决议通过的本报告期优先股利润分配预案 □适用 ☑不适用 二、公司基本情况 1、公司简介 股票简称 绿发电力 股票代码 000537 股票上市交易所 深圳证券交易所 变更前的股票简称（如有） 中绿电 联系人和...</div></td><td style="text-align:center"><a href="http://static.cninfo.com.cn/finalpage/2026-04-28/1225208722.PDF" target="_blank" class="ticker-link" title="下载PDF" style="font-size:0.7rem">📄</a></td></tr>
+</table></div></div>
+<div class="card"><h3>💬 投资者调研</h3>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260527</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：绿发电力：000537绿发电力投资者关系管理信息20260527</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">交流内容及具体 元/千瓦时降低了0.13 元/千瓦时。在新能源全面入市、供给持续宽松的 问答记录 背景下，公司2026 年一季度综合电价较2025 年年度电价呈现出小幅波动 态势。 问题3.公司在算电协同布局方面的进展? 答：绿电直连、高耗能企业对接等一直都是公司重点聚焦的方向，目 前公司已与相关企业进行对接，但能否促成合作落地以及合作落地后能否 带来预期的投资收益存在一定不确定性，敬请注意投资风</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260522</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：绿发电力：000537绿发电力投资者关系管理信息20260522</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">交流内容及具体 答：公司在运风电、光伏项目分布在新疆、青海、宁夏、甘肃、陕西、 问答记录 河北、内蒙古、吉林、山东、江苏等区域，其中“三北”区域占比较大。 目前公司正积极开展“两个转移”工作，从区域布局上由西北向中东部转 移，从电源类型上由光伏向风电储能转型。 问题4.近年来，新能源发电限电率上升的原因？ 答：我们认为，近年来，新能源发电限电率上升的根本原因是新能源 装机增速与电网调节能力不匹配。</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260520</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：绿发电力：000537绿发电力投资者关系管理信息20260520</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">交流内容及具体 问题2.公司“十五五”期间的装机规划，以及投资思路？ 问答记录 答：“136 号文”实施后，新能源行业普遍面临投资收益承压、盈利 空间收窄的形势，这也使公司对新能源项目的投资安排更加谨慎。公司将 坚持以保障投资收益为核心，统筹考虑各地“136 号文”实施细则的落地 情况、在手资源状况以及配套线路建设进展等因素，审慎开展项目投资论 证，合理安排项目投资节奏和建设时序。公司“十五五”发</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260515</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：绿发电力：000537绿发电力投资者关系管理信息20260515</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">交流内容及具体 向新能源发电业务转型，并充分发挥上市平台融资功能，累计实 问答记录 现资本市场股债融资48亿元。二是在规模发展方面，公司多措并 举获取新能源项目建设指标，助推装机规模从百万千瓦级到千万 千瓦级的跨越，超额完成“十四五”末建设运营装机3000万千瓦 的规模目标。三是在重点工程建设方面，公司深度融入“一带一 1 路”倡议，累计并网新疆新能源大基地项目超1300万千瓦。四是 在经营管理方</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:0.85rem;font-weight:700;color:var(--text-heading);margin-bottom:4px">📅 20260429</div><div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">调研活动 ·  · 机构：绿发电力：000537绿发电力投资者关系管理信息20260429</div><div style="margin:6px 0;font-size:0.78rem;color:var(--text-muted)">交流内容及具体 企业电价补贴款回收进度主要取决于国家补贴款的发放进度，公司将持续 问答记录 紧盯国家可再生能源补贴拨付进展，保持与电网公司紧密联系，确保电价 补贴应收尽收。 问题3.公司“十五五”发展规划制定情况？ 答：公司将立足企业实际，结合行业对标，科学找准自身定位，紧抓 国家“3060”目标及新型能源体系建设机遇，系统推进公司“十五五”发 展规划编制工作，着力破解业务布局与投资结构优化难题。</div></div>
+</div>
+<div class="card">
+    <h3>📈 近20日行情</h3>
+    <div class="table-wrap"><table>
+        <tr><th>日期</th><th>收盘</th><th>涨跌</th><th>成交量</th></tr>
+        <tr><td>20260603</td><td>11.06</td><td class="positive">+1.56%</td><td>723379</td></tr><tr><td>20260602</td><td>10.89</td><td class="negative">-0.09%</td><td>611899</td></tr><tr><td>20260601</td><td>10.90</td><td class="negative">-0.73%</td><td>689697</td></tr><tr><td>20260529</td><td>10.98</td><td class="positive">+2.62%</td><td>926525</td></tr><tr><td>20260528</td><td>10.70</td><td class="positive">+5.94%</td><td>807189</td></tr><tr><td>20260527</td><td>10.10</td><td class="negative">0.00%</td><td>422837</td></tr><tr><td>20260526</td><td>10.10</td><td class="negative">-3.07%</td><td>446273</td></tr><tr><td>20260525</td><td>10.42</td><td class="positive">+1.56%</td><td>352121</td></tr><tr><td>20260522</td><td>10.26</td><td class="positive">+0.69%</td><td>337582</td></tr><tr><td>20260521</td><td>10.19</td><td class="negative">-3.04%</td><td>531645</td></tr><tr><td>20260520</td><td>10.51</td><td class="negative">-6.66%</td><td>589338</td></tr><tr><td>20260519</td><td>11.26</td><td class="positive">+0.72%</td><td>656669</td></tr><tr><td>20260518</td><td>11.18</td><td class="positive">+5.97%</td><td>775121</td></tr><tr><td>20260515</td><td>10.55</td><td class="negative">-3.30%</td><td>676156</td></tr><tr><td>20260514</td><td>10.91</td><td class="negative">-4.38%</td><td>996143</td></tr><tr><td>20260513</td><td>11.41</td><td class="positive">+1.97%</td><td>1116516</td></tr><tr><td>20260512</td><td>11.19</td><td class="positive">+3.13%</td><td>1044639</td></tr><tr><td>20260511</td><td>10.85</td><td class="positive">+1.21%</td><td>573244</td></tr><tr><td>20260508</td><td>10.72</td><td class="negative">-1.11%</td><td>658519</td></tr><tr><td>20260507</td><td>10.84</td><td class="positive">+3.34%</td><td>727210</td></tr>
+    </table></div>
+</div>
+<footer>Mimo 🦉 · OpenClaw Pipeline</footer>
+</div></body></html>
