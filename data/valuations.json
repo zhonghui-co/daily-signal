@@ -1,15 +1,15 @@
 {
-  "generated": "2026-06-02T18:00:46.274192+08:00",
+  "generated": "2026-06-05T18:00:45.659014+08:00",
   "total": 10,
   "valuations": [
     {
       "code": "688126.SH",
-      "date": "20260602",
-      "close": 24.71,
+      "date": "20260605",
+      "close": 28.49,
       "pe": null,
-      "pb": 4.8516,
+      "pb": 5.5937,
       "pe_ttm": null,
-      "total_mv_million": 817.0,
+      "total_mv_million": 942.0,
       "eps": -0.539,
       "roe": -10.3169,
       "revenue_yoy_pct": null,
@@ -22,12 +22,12 @@
     },
     {
       "code": "002371.SZ",
-      "date": "20260602",
-      "close": 602.8,
-      "pe": 79.1253,
-      "pb": 11.1194,
-      "pe_ttm": 78.3585,
-      "total_mv_million": 4369.0,
+      "date": "20260605",
+      "close": 603.36,
+      "pe": 79.1988,
+      "pb": 11.1297,
+      "pe_ttm": 78.4313,
+      "total_mv_million": 4373.0,
       "eps": 7.6446,
       "roe": 16.0506,
       "revenue_yoy_pct": null,
@@ -42,22 +42,22 @@
           "conservative": 347.83,
           "neutral": 496.9,
           "optimistic": 645.97,
-          "upside_conservative": -42.3,
+          "upside_conservative": -42.4,
           "upside_neutral": -17.6,
-          "upside_optimistic": 7.2
+          "upside_optimistic": 7.1
         },
         "pe_relative": {
           "name": "PE相对估值",
           "current_pe_ttm": 78.4,
           "industry_pe": 65,
-          "discount_to_industry": -20.6,
+          "discount_to_industry": -20.7,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 11.12,
+          "pb": 11.13,
           "roe": 16.05,
-          "implied_return_pct": 144.3,
+          "implied_return_pct": 144.2,
           "quality": "优质"
         }
       },
@@ -66,12 +66,12 @@
     },
     {
       "code": "688012.SH",
-      "date": "20260602",
-      "close": 282.8,
-      "pe": 125.4934,
-      "pb": 10.9339,
-      "pe_ttm": 97.1007,
-      "total_mv_million": 2650.0,
+      "date": "20260605",
+      "close": 276.0,
+      "pe": 122.4759,
+      "pb": 10.671,
+      "pe_ttm": 94.7659,
+      "total_mv_million": 2586.0,
       "eps": 3.4,
       "roe": 9.9524,
       "revenue_yoy_pct": null,
@@ -86,22 +86,22 @@
           "conservative": 154.7,
           "neutral": 221.0,
           "optimistic": 287.3,
-          "upside_conservative": -45.3,
-          "upside_neutral": -21.9,
-          "upside_optimistic": 1.6
+          "upside_conservative": -43.9,
+          "upside_neutral": -19.9,
+          "upside_optimistic": 4.1
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 97.1,
+          "current_pe_ttm": 94.8,
           "industry_pe": 65,
-          "discount_to_industry": -49.4,
+          "discount_to_industry": -45.8,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 10.93,
+          "pb": 10.67,
           "roe": 9.95,
-          "implied_return_pct": 91.0,
+          "implied_return_pct": 93.3,
           "quality": "优质"
         }
       },
@@ -110,12 +110,12 @@
     },
     {
       "code": "603650.SH",
-      "date": "20260602",
-      "close": 52.32,
-      "pe": 57.2989,
-      "pb": 8.03,
-      "pe_ttm": 55.128,
-      "total_mv_million": 322.0,
+      "date": "20260605",
+      "close": 54.82,
+      "pe": 60.0368,
+      "pb": 8.4137,
+      "pe_ttm": 57.7622,
+      "total_mv_million": 338.0,
       "eps": 0.94,
       "roe": 14.9212,
       "revenue_yoy_pct": null,
@@ -130,22 +130,22 @@
           "conservative": 23.03,
           "neutral": 32.9,
           "optimistic": 42.77,
-          "upside_conservative": -56.0,
-          "upside_neutral": -37.1,
-          "upside_optimistic": -18.3
+          "upside_conservative": -58.0,
+          "upside_neutral": -40.0,
+          "upside_optimistic": -22.0
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 55.1,
+          "current_pe_ttm": 57.8,
           "industry_pe": 35,
-          "discount_to_industry": -57.5,
+          "discount_to_industry": -65.0,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 8.03,
+          "pb": 8.41,
           "roe": 14.92,
-          "implied_return_pct": 185.8,
+          "implied_return_pct": 177.3,
           "quality": "优质"
         }
       },
@@ -154,12 +154,12 @@
     },
     {
       "code": "688082.SH",
-      "date": "20260602",
-      "close": 225.05,
-      "pe": 77.8036,
-      "pb": 7.8927,
-      "pe_ttm": 86.6175,
-      "total_mv_million": 1086.0,
+      "date": "20260605",
+      "close": 251.0,
+      "pe": 86.775,
+      "pb": 8.8028,
+      "pe_ttm": 96.6052,
+      "total_mv_million": 1211.0,
       "eps": 3.1,
       "roe": 13.2095,
       "revenue_yoy_pct": null,
@@ -174,22 +174,22 @@
           "conservative": 75.95,
           "neutral": 108.5,
           "optimistic": 141.05,
-          "upside_conservative": -66.3,
-          "upside_neutral": -51.8,
-          "upside_optimistic": -37.3
+          "upside_conservative": -69.7,
+          "upside_neutral": -56.8,
+          "upside_optimistic": -43.8
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 86.6,
+          "current_pe_ttm": 96.6,
           "industry_pe": 35,
-          "discount_to_industry": -147.5,
+          "discount_to_industry": -176.0,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 7.89,
+          "pb": 8.8,
           "roe": 13.21,
-          "implied_return_pct": 167.4,
+          "implied_return_pct": 150.1,
           "quality": "优质"
         }
       },
@@ -198,12 +198,12 @@
     },
     {
       "code": "002156.SZ",
-      "date": "20260602",
-      "close": 63.84,
-      "pe": 79.4968,
-      "pb": 6.2362,
-      "pe_ttm": 66.9835,
-      "total_mv_million": 969.0,
+      "date": "20260605",
+      "close": 66.84,
+      "pe": 83.2325,
+      "pb": 6.5293,
+      "pe_ttm": 70.1312,
+      "total_mv_million": 1014.0,
       "eps": 0.8,
       "roe": 8.075,
       "revenue_yoy_pct": null,
@@ -218,22 +218,22 @@
           "conservative": 19.6,
           "neutral": 28.0,
           "optimistic": 36.4,
-          "upside_conservative": -69.3,
-          "upside_neutral": -56.1,
-          "upside_optimistic": -43.0
+          "upside_conservative": -70.7,
+          "upside_neutral": -58.1,
+          "upside_optimistic": -45.5
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 67.0,
+          "current_pe_ttm": 70.1,
           "industry_pe": 35,
-          "discount_to_industry": -91.4,
+          "discount_to_industry": -100.4,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 6.24,
+          "pb": 6.53,
           "roe": 8.07,
-          "implied_return_pct": 129.5,
+          "implied_return_pct": 123.7,
           "quality": "优质"
         }
       },
@@ -242,12 +242,12 @@
     },
     {
       "code": "600584.SH",
-      "date": "20260602",
-      "close": 75.35,
-      "pe": 86.1418,
-      "pb": 4.6872,
-      "pe_ttm": 81.6104,
-      "total_mv_million": 1348.0,
+      "date": "20260605",
+      "close": 75.65,
+      "pe": 86.4847,
+      "pb": 4.7059,
+      "pe_ttm": 81.9353,
+      "total_mv_million": 1354.0,
       "eps": 0.87,
       "roe": 5.5614,
       "revenue_yoy_pct": null,
@@ -262,22 +262,22 @@
           "conservative": 21.31,
           "neutral": 30.45,
           "optimistic": 39.59,
-          "upside_conservative": -71.7,
-          "upside_neutral": -59.6,
-          "upside_optimistic": -47.5
+          "upside_conservative": -71.8,
+          "upside_neutral": -59.7,
+          "upside_optimistic": -47.7
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 81.6,
+          "current_pe_ttm": 81.9,
           "industry_pe": 35,
-          "discount_to_industry": -133.2,
+          "discount_to_industry": -134.1,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 4.69,
+          "pb": 4.71,
           "roe": 5.56,
-          "implied_return_pct": 118.7,
+          "implied_return_pct": 118.2,
           "quality": "优质"
         }
       },
@@ -286,12 +286,12 @@
     },
     {
       "code": "688981.SH",
-      "date": "20260602",
-      "close": 132.48,
-      "pe": 210.6012,
-      "pb": 7.0864,
-      "pe_ttm": 210.3994,
-      "total_mv_million": 10616.0,
+      "date": "20260605",
+      "close": 127.4,
+      "pe": 202.5338,
+      "pb": 6.8149,
+      "pe_ttm": 202.3398,
+      "total_mv_million": 10209.0,
       "eps": 0.63,
       "roe": 3.3716,
       "revenue_yoy_pct": null,
@@ -306,22 +306,22 @@
           "conservative": 15.43,
           "neutral": 22.05,
           "optimistic": 28.67,
-          "upside_conservative": -88.4,
-          "upside_neutral": -83.4,
-          "upside_optimistic": -78.4
+          "upside_conservative": -87.9,
+          "upside_neutral": -82.7,
+          "upside_optimistic": -77.5
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 210.4,
+          "current_pe_ttm": 202.3,
           "industry_pe": 35,
-          "discount_to_industry": -501.1,
+          "discount_to_industry": -478.1,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 7.09,
+          "pb": 6.81,
           "roe": 3.37,
-          "implied_return_pct": 47.6,
+          "implied_return_pct": 49.5,
           "quality": "优质"
         }
       },
@@ -330,12 +330,12 @@
     },
     {
       "code": "688041.SH",
-      "date": "20260602",
-      "close": 283.49,
-      "pe": 258.9214,
-      "pb": 28.0426,
-      "pe_ttm": 241.7112,
-      "total_mv_million": 6589.0,
+      "date": "20260605",
+      "close": 274.06,
+      "pe": 250.3086,
+      "pb": 27.1098,
+      "pe_ttm": 233.6709,
+      "total_mv_million": 6370.0,
       "eps": 1.1,
       "roe": 11.9075,
       "revenue_yoy_pct": null,
@@ -350,22 +350,22 @@
           "conservative": 26.95,
           "neutral": 38.5,
           "optimistic": 50.05,
-          "upside_conservative": -90.5,
-          "upside_neutral": -86.4,
-          "upside_optimistic": -82.3
+          "upside_conservative": -90.2,
+          "upside_neutral": -86.0,
+          "upside_optimistic": -81.7
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 241.7,
+          "current_pe_ttm": 233.7,
           "industry_pe": 35,
-          "discount_to_industry": -590.6,
+          "discount_to_industry": -567.6,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 28.04,
+          "pb": 27.11,
           "roe": 11.91,
-          "implied_return_pct": 42.5,
+          "implied_return_pct": 43.9,
           "quality": "优质"
         }
       },
@@ -374,12 +374,12 @@
     },
     {
       "code": "688256.SH",
-      "date": "20260602",
-      "close": 1300.0,
-      "pe": 396.6441,
-      "pb": 66.7368,
-      "pe_ttm": 300.6212,
-      "total_mv_million": 8168.0,
+      "date": "20260605",
+      "close": 1299.2,
+      "pe": 396.4,
+      "pb": 66.6957,
+      "pe_ttm": 300.4362,
+      "total_mv_million": 8163.0,
       "eps": 4.93,
       "roe": 23.8629,
       "revenue_yoy_pct": null,
@@ -400,14 +400,14 @@
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 300.6,
+          "current_pe_ttm": 300.4,
           "industry_pe": 35,
-          "discount_to_industry": -758.9,
+          "discount_to_industry": -758.4,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 66.74,
+          "pb": 66.7,
           "roe": 23.86,
           "implied_return_pct": 35.8,
           "quality": "优质"
