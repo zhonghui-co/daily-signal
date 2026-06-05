@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-06-05T09:27:16.334575",
+  "results": [
+    {
+      "pool": "🔴 趋势池（产业真实驱动）",
+      "stocks_count": 188,
+      "traded_stocks": 176,
+      "total_trades": 363,
+      "win_rate": 93.4,
+      "avg_return": 45.67,
+      "median_return": 31.8,
+      "avg_weeks": 20.8,
+      "best_trade": 475.11,
+      "worst_trade": -18.37,
+      "stocks_100pct_count": 112
+    },
+    {
+      "pool": "🟡 混合池（有基本面但非核心）",
+      "stocks_count": 183,
+      "traded_stocks": 171,
+      "total_trades": 306,
+      "win_rate": 93.1,
+      "avg_return": 45.78,
+      "median_return": 28.12,
+      "avg_weeks": 23.3,
+      "best_trade": 800.71,
+      "worst_trade": -24.78,
+      "stocks_100pct_count": 95
+    },
+    {
+      "pool": "⚪ 非趋势池（无明确产业趋势）",
+      "stocks_count": 95,
+      "traded_stocks": 79,
+      "total_trades": 140,
+      "win_rate": 92.9,
+      "avg_return": 36.26,
+      "median_return": 23.46,
+      "avg_weeks": 19.6,
+      "best_trade": 278.57,
+      "worst_trade": -50.0,
+      "stocks_100pct_count": 37
+    }
+  ]
+}
