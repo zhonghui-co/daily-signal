@@ -1,41 +1,118 @@
 {
-  "generated": "2026-06-01T12:00:00+08:00",
-  "source": "web_search (Brave)",
-  "total": 3,
+  "generated": "2026-06-08T12:05:00+08:00",
+  "source": "web_search (Brave) + chinabidding.mofcom.gov.cn",
+  "total": 10,
   "results": [
     {
       "type": "招标公告",
-      "source": "哈密机电设备采购网",
-      "title": "面向智能传感器的MEMS异质异构集成共性工艺平台项目物理气相沉积设备和化学气相沉积设备采购项目国际招标公告(2)",
-      "summary": "MEMS异质异构集成共性工艺平台项目采购物理气相沉积(PVD)设备和化学气相沉积(CVD)设备，国际招标公告（第二次）。涉及半导体前道薄膜沉积核心设备。",
-      "url": "https://hm.chinamae.com/news/47813bf7c91e9691688aaf5353cbeb95.html",
-      "date": "2026-05-12",
+      "source": "chinabidding.mofcom.gov.cn",
+      "title": "上海积塔半导体有限公司特色工艺生产线建设项目 - 国际招标公告(1)",
+      "summary": "上海积塔半导体发布多条特色工艺生产线建设项目国际招标公告，涉及半导体制造设备采购。积塔半导体位于上海临港新片区，专注车规级芯片制造（90nm-40nm MCU/模拟IC/CIS），300mm车规半导体集成电路制造基地设备已于2026年3月入场，预计7月投产。",
+      "url": "https://chinabidding.mofcom.gov.cn/",
+      "date": "2026-06-05",
       "amount": "",
-      "companies": [],
-      "equipment_type": "PVD物理气相沉积设备、CVD化学气相沉积设备"
+      "companies": ["上海积塔半导体有限公司"],
+      "equipment_type": "特色工艺生产线设备（车规级芯片制造）"
+    },
+    {
+      "type": "评标结果公示",
+      "source": "chinabidding.mofcom.gov.cn",
+      "title": "上海积塔半导体有限公司特色工艺生产线建设项目评标结果公示公告",
+      "summary": "积塔半导体特色工艺生产线建设项目评标结果公告，项目进入设备采购落地阶段。",
+      "url": "https://chinabidding.mofcom.gov.cn/",
+      "date": "2026-06-05",
+      "amount": "",
+      "companies": ["上海积塔半导体有限公司"],
+      "equipment_type": "特色工艺生产线设备"
     },
     {
       "type": "招标公告",
-      "source": "湖北招标网",
-      "title": "武汉光迅科技股份有限公司2026年第15批采购项目公开招标公告",
-      "summary": "武汉光迅科技（光通信芯片及器件龙头）2026年第15批采购项目公开招标，投标截止2026年6月2日。光迅科技为国内光芯片/光模块核心供应商，采购可能涉及光芯片相关半导体设备或元器件。",
-      "url": "https://hubeibidding.com/view/48055.html",
-      "date": "2026-05-12",
+      "source": "chinabidding.mofcom.gov.cn",
+      "title": "山东有研集成电路用8英寸硅片扩产项目三期滚磨截断生产自动化系统采购重新招标澄清或变更公告",
+      "summary": "山东有研集成电路用8英寸硅片扩产项目三期，采购滚磨截断生产自动化系统，为硅片制造上游设备。",
+      "url": "https://chinabidding.mofcom.gov.cn/",
+      "date": "2026-06-08",
       "amount": "",
-      "companies": ["光迅科技"],
-      "equipment_type": "光通信器件/芯片相关"
+      "companies": ["山东有研半导体材料有限公司"],
+      "equipment_type": "硅片制造自动化系统（滚磨截断）"
     },
     {
-      "type": "采购公告",
-      "source": "台基半导体官网",
-      "title": "2026年下半年度部分物料采购公告",
-      "summary": "湖北台基半导体股份有限公司发布2026下半年物料采购公告，涉及平板式元器件、晶闸管二极管模块、IGBT模块、塑封器件、散热器及功率组件、特种半导体器件等功率半导体物料。",
-      "url": "https://tech-sem.com/index.php?a=index&aid=1954&c=View&m=home",
-      "date": "2026-05-08",
+      "type": "招标公告",
+      "source": "chinabidding.mofcom.gov.cn",
+      "title": "山东有研集成电路用8英寸硅片扩产项目三期倒角生产自动化系统采购重新招标澄清或变更公告",
+      "summary": "山东有研8英寸硅片扩产三期项目，采购倒角生产自动化系统。该项目用于集成电路用硅片制造。",
+      "url": "https://chinabidding.mofcom.gov.cn/",
+      "date": "2026-06-08",
       "amount": "",
-      "companies": ["台基半导体"],
-      "equipment_type": "功率半导体器件（晶闸管、IGBT模块等）"
+      "companies": ["山东有研半导体材料有限公司"],
+      "equipment_type": "硅片制造自动化系统（倒角）"
+    },
+    {
+      "type": "评标结果公示",
+      "source": "chinabidding.mofcom.gov.cn",
+      "title": "京东方重庆第6代AMOLED（柔性）生产线项目评标结果公示公告",
+      "summary": "京东方重庆第6代柔性AMOLED生产线项目评标结果公示，涉及面板制造设备采购。",
+      "url": "https://chinabidding.mofcom.gov.cn/",
+      "date": "2026-06-07",
+      "amount": "",
+      "companies": ["京东方科技集团股份有限公司"],
+      "equipment_type": "AMOLED生产线设备"
+    },
+    {
+      "type": "评标结果公示",
+      "source": "chinabidding.mofcom.gov.cn",
+      "title": "京东方第8.6代AMOLED生产线项目评标结果公示公告（多批次）",
+      "summary": "京东方第8.6代AMOLED生产线项目密集发布评标结果公示（6批），显示大规模设备采购进入定标阶段，涉及曝光机、刻蚀、沉积等核心设备。",
+      "url": "https://chinabidding.mofcom.gov.cn/",
+      "date": "2026-06-05",
+      "amount": "",
+      "companies": ["京东方科技集团股份有限公司"],
+      "equipment_type": "AMOLED生产线设备（曝光/刻蚀/沉积）"
+    },
+    {
+      "type": "中标公示",
+      "source": "chinabidding.cn",
+      "title": "上海国际招标有限公司关于i线步进式光刻系统的中标候选人公示",
+      "summary": "上海芯源创新中心采购i线步进式光刻系统，第一中标候选人为吉姆西半导体科技（无锡）股份有限公司，中标价格约9,900万元。招标编号：16，开标时间为2026年3月13日。",
+      "url": "https://www.chinabidding.cn/3867_cw/",
+      "date": "2026-03-19",
+      "amount": "约9,900万元",
+      "companies": ["上海芯源创新中心", "吉姆西半导体科技（无锡）股份有限公司", "上海国际招标有限公司"],
+      "equipment_type": "i线步进式光刻系统"
+    },
+    {
+      "type": "中标公示",
+      "source": "中国政府采购网/esmchina.com",
+      "title": "上海微电子装备（集团）股份有限公司中标约1.1亿元光刻机采购项目",
+      "summary": "上海微电子装备（集团）股份有限公司成功中标光刻机采购项目，金额约1.1亿元，标志着国产高端半导体装备在实际应用中取得实质性进展。",
+      "url": "https://www.esmchina.com/news/13789.html",
+      "date": "2025-12-26",
+      "amount": "约1.1亿元",
+      "companies": ["上海微电子装备（集团）股份有限公司"],
+      "equipment_type": "光刻机"
+    },
+    {
+      "type": "招标公告",
+      "source": "chinabidding.cn",
+      "title": "采购半导体设备第五十二批/五十三批 - 国内公开招标",
+      "summary": "中国远东国际招标有限公司受苏州威微电子材料有限公司委托，对采购半导体设备第五十二批、五十三批所需货物及服务进行国内公开招标。招标编号：0722-26FE0990ZB5。",
+      "url": "https://www.chinabidding.cn/3867_cw/",
+      "date": "2026-06",
+      "amount": "",
+      "companies": ["苏州威微电子材料有限公司", "中国远东国际招标有限公司"],
+      "equipment_type": "半导体设备（多批次）"
+    },
+    {
+      "type": "招标公告",
+      "source": "chinabidding.mofcom.gov.cn",
+      "title": "准分子激光晶化设备 - 国际招标澄清或变更公告(2)",
+      "summary": "准分子激光晶化设备国际招标项目发布澄清或变更公告（第2次），该设备用于半导体制造中的激光退火/晶化工艺。",
+      "url": "https://chinabidding.mofcom.gov.cn/",
+      "date": "2026-06-05",
+      "amount": "",
+      "companies": [],
+      "equipment_type": "准分子激光晶化设备（激光退火）"
     }
   ],
-  "key_findings": "本期直接搜索到的半导体设备招投标公告仅3条（大多公告在付费平台无法直接检索到），但新闻交叉印证：长江存储2号厂房机台工艺设备管线购装项目5月14日启动招标，长鑫存储Q2全面启动设备招投标（全年设备采购需求50-60亿美元约350-430亿人民币），国内设备龙头北方华创/中微/拓荆已上修2026订单指引——扩产大周期实际招标量远超搜索引擎可检索到的公开公告数量。"
+  "key_findings": "本周半导体设备招投标高度活跃：积塔半导体特色工艺产线密集招标+评标（6月5日），京东方第8.6代AMOLED线6批评标集中释放，山东有研8英寸硅片三期设备采购持续推进，显示国内半导体制造产能扩张和设备国产化进入加速落地期。"
 }
