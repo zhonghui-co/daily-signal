@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-09T16:30:24.113534+08:00",
-  "date": "2026-06-09",
+  "generated_at": "2026-06-10T16:29:15.697516+08:00",
+  "date": "2026-06-10",
   "sections": {
     "signals": {
       "available": true,
@@ -388,12 +388,12 @@
     },
     "themes": {
       "available": true,
-      "date": "20260609",
+      "date": "20260610",
       "top_themes": []
     },
     "kdj": {
       "available": true,
-      "date": "2026-06-01",
+      "date": "2026-06-10",
       "count": 0,
       "stocks": []
     },
@@ -403,72 +403,76 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-06-01T11:07:09.137012+08:00",
+      "last_updated": "2026-06-09T16:30:24.199415+08:00",
       "active_count": 10,
       "positions": [
         {
           "code": "600584.SH",
           "name": "长电科技",
-          "return_pct": 120.91,
-          "ret_5d": 16.27,
+          "return_pct": 96.27,
+          "ret_5d": -6.04,
           "warnings": [],
-          "last_check": "2026-06-01"
+          "last_check": "2026-06-09"
         },
         {
           "code": "002156.SZ",
           "name": "通富微电",
-          "return_pct": 75.44,
-          "ret_5d": 9.36,
+          "return_pct": 63.11,
+          "ret_5d": -8.25,
           "warnings": [],
-          "last_check": "2026-06-01"
-        },
-        {
-          "code": "688256.SH",
-          "name": "寒武纪",
-          "return_pct": 49.28,
-          "ret_5d": 8.2,
-          "warnings": [],
-          "last_check": "2026-06-01"
-        },
-        {
-          "code": "688012.SH",
-          "name": "中微公司",
-          "return_pct": 45.54,
-          "ret_5d": -3.51,
-          "warnings": [],
-          "last_check": "2026-06-01"
-        },
-        {
-          "code": "688041.SH",
-          "name": "海光信息",
-          "return_pct": 39.14,
-          "ret_5d": 0.63,
-          "warnings": [],
-          "last_check": "2026-06-01"
-        },
-        {
-          "code": "002371.SZ",
-          "name": "北方华创",
-          "return_pct": 38.88,
-          "ret_5d": -1.49,
-          "warnings": [],
-          "last_check": "2026-06-01"
+          "last_check": "2026-06-09"
         },
         {
           "code": "688126.SH",
           "name": "沪硅产业",
-          "return_pct": 36.96,
-          "ret_5d": 10.07,
+          "return_pct": 41.97,
+          "ret_5d": 25.51,
           "warnings": [],
-          "last_check": "2026-06-01"
+          "last_check": "2026-06-09"
+        },
+        {
+          "code": "688012.SH",
+          "name": "中微公司",
+          "return_pct": 36.53,
+          "ret_5d": -0.31,
+          "warnings": [],
+          "last_check": "2026-06-09"
+        },
+        {
+          "code": "688256.SH",
+          "name": "寒武纪",
+          "return_pct": 36.25,
+          "ret_5d": -7.84,
+          "warnings": [],
+          "last_check": "2026-06-09"
+        },
+        {
+          "code": "002371.SZ",
+          "name": "北方华创",
+          "return_pct": 30.05,
+          "ret_5d": 0.37,
+          "warnings": [],
+          "last_check": "2026-06-09"
+        },
+        {
+          "code": "688041.SH",
+          "name": "海光信息",
+          "return_pct": 18.7,
+          "ret_5d": -6.21,
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-23.2%"
+          ],
+          "last_check": "2026-06-09"
         },
         {
           "code": "688981.SH",
           "name": "中芯国际",
-          "return_pct": 18.28,
-          "ret_5d": 17.03,
-          "warnings": [],
-          "last_check": "2026-06-01"
+          "return_pct": -2.04,
+          "ret_5d": -5.0,
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-18.4%"
+          ],
+          "last_check": "2026-06-09"
         },
         {
           "code": "603650.SH",
@@ -476,7 +480,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-01"
+          "last_check": "2026-06-09"
         },
         {
           "code": "688082.SH",
@@ -484,7 +488,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-01"
+          "last_check": "2026-06-09"
         }
       ]
     }
