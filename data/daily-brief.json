@@ -1,222 +1,99 @@
 {
-  "generated_at": "2026-06-10T16:29:15.697516+08:00",
-  "date": "2026-06-10",
+  "generated_at": "2026-06-11T16:28:46.794624+08:00",
+  "date": "2026-06-11",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-06-08",
-      "run_at": "2026-06-08T17:00:00+08:00",
-      "stats": {
-        "total_signals": 11,
-        "chain1": 4,
-        "chain2": 5,
-        "cross_chain": 4,
-        "by_lifecycle": {
-          "emerging": 3,
-          "positioning": 5,
-          "consensus": 3,
-          "exhausted": 0
-        },
-        "by_priced_in": {
-          "under_priced": 3,
-          "partially_priced": 7,
-          "fully_priced": 1,
-          "over_priced": 0
-        },
-        "strong_backing": 5,
-        "moderate_backing": 3,
-        "weak_backing": 3,
-        "triple_confirmed": 4,
-        "dual_confirmed": 5,
-        "single_sourced": 1,
-        "unverified": 0
-      },
+      "date": "2026-06-11",
+      "run_at": "?",
+      "stats": {},
       "signals": [
         {
-          "id": "a1",
-          "priority": "normal",
-          "title": "英伟达与SK海力士宣布多年期技术合作，覆盖Vera Rubin/RTX Spark/Jetson Thor全产品线",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "consensus",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "直接受益方为英伟达、SK海力士、三星电子（海外标的），国内无直接大基金或ETF持仓关联。间接传导至国产存储（长鑫/HBM追赶）和先进封装（通富微电/长电科技），但传导链条较长。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a2",
-          "priority": "normal",
-          "title": "全球存储芯片涨价潮：DRAM产能大规模转向HBM，通用DRAM供给紧缩价格或再涨40%",
-          "chain": "chain2",
-          "confidence": "green",
-          "lifecycle": "consensus",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金三期（3440亿）明确投向存储芯片+AI算力+先进封装。长鑫存储科创板IPO已过会拟募资295亿，长江存储IPO在即。科创50ETF持仓存储产业链标的（澜起科技等）。存储涨价直接利好国产存储产业链。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a3",
-          "priority": "normal",
-          "title": "北方华创跃居全球半导体设备第五，中微公司新进第13，3家中国企业跻身全球前20",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": true,
-            "note": "大基金二期（2042亿）重设备材料，三期（3440亿）继续加码。科创50ETF重仓北方华创/中微公司。bidding数据：积塔半导体密集招标+京东方8.6代AMOLED 6批评标+苏州威微电子多批次设备采购，设备采购进入落地放量期。三维度全覆盖。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a4",
-          "priority": "normal",
-          "title": "半导体材料国产替代加速：硅片目标70%自给率+靶材Q1涨价60-70%+光刻胶从0到1",
-          "chain": "chain1",
-          "confidence": "yellow",
+          "id": "rs1",
+          "priority": "fire",
+          "title": "Neura Robotics获$1.4B C轮融资估值~$70B: NVIDIA/Qualcomm/Amazon/Bosch/Tether齐聚",
+          "chain": "chain2+robot",
+          "confidence": "?",
           "lifecycle": "emerging",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": true,
-            "note": "大基金二期（2042亿）重设备材料，三期继续加码。bidding数据：山东有研8英寸硅片三期滚磨截断+倒角自动化系统招标（6月8日），苏州威微电子材料多批次设备采购，显示材料端产能建设加速。科创50ETF和半导体材料ETF均有材料标的持仓。三维度全部匹配。"
-          },
+          "priced_in": "?",
+          "capital_backing": "?",
           "tickers": []
         },
         {
-          "id": "a5",
-          "priority": "normal",
-          "title": "A股今日低开半导体板块跌幅居前，硬科技H股溢价现象持续扩大",
-          "chain": "chain1",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "weak",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "市场情绪信号，无直接资金面支撑。但恐慌抛售期间国家队可能通过ETF入场维稳（汇金/证金ETF持仓1.55万亿），需关注后续ETF申赎数据。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a6",
-          "priority": "normal",
-          "title": "Goldman Sachs 2026展望：AI服务器GPU+ASIC并行发展，光模块向1.6T",
+          "id": "s8",
+          "priority": "fire",
+          "title": "特斯拉Optimus Gen 3量产在即: Fremont产线改造,Model S/X停产全力转产机器人",
           "chain": "chain2",
-          "confidence": "green",
+          "confidence": "?",
+          "lifecycle": "emerging",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "rs3",
+          "priority": "fire",
+          "title": "智元精灵G2完成8小时工厂直播: 2283次任务零失误+Q3部署100台",
+          "chain": "chain2+robot",
+          "confidence": "?",
+          "lifecycle": "emerging",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s4",
+          "priority": "fire",
+          "title": "寒武纪Q1业绩: 营收29亿+160%,净利10亿+185%,国产AI芯片市占率突破40%",
+          "chain": "chain2",
+          "confidence": "?",
+          "lifecycle": "emerging",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s2",
+          "priority": "fire",
+          "title": "长鑫存储DRAM国产化拐点: H1净利500-570亿,设备国产化加速",
+          "chain": "chain1",
+          "confidence": "?",
+          "lifecycle": "positioning",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s5",
+          "priority": "fire",
+          "title": "HBM超级周期: 产能抢空至2028年,2027年大幅涨价,国产存储替代窗口打开",
+          "chain": "chain2",
+          "confidence": "?",
           "lifecycle": "consensus",
-          "priced_in": "fully_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "科创50ETF重仓中际旭创、海光信息。大基金三期涉及AI算力但未明确光模块方向。中际旭创在手订单充足，自身业绩确定性高。"
-          },
+          "priced_in": "?",
+          "capital_backing": "?",
           "tickers": []
         },
         {
-          "id": "a7",
-          "priority": "normal",
-          "title": "长鑫存储冲刺科创板+HBM3布局，2026年目标实现HBM3样品验证",
+          "id": "s7",
+          "priority": "fire",
+          "title": "中际旭创1.6T批量交付+800G放量: 光模块进入量价齐升通道,硅光占比超50%",
+          "chain": "chain2",
+          "confidence": "?",
+          "lifecycle": "positioning",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s1",
+          "priority": "fire",
+          "title": "中芯国际+华虹晶圆代工产能双线扩张: 产能利用率95%+淡季不淡",
           "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "emerging",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金三期（3440亿）明确投向存储芯片方向。长鑫IPO募资295亿是史上最大IPO之一，国家资本直接参与。长江存储也在IPO进程中。科创50ETF将被动配置长鑫上市后。IPO本身就是最大的资金面催化。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a8",
-          "priority": "normal",
-          "title": "国产AI芯片Q1业绩爆发：寒武纪营收28.85亿+海光信息40.34亿+摩尔线程扭亏为盈",
-          "chain": "chain2",
-          "confidence": "green",
+          "confidence": "?",
           "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金三期（3440亿）明确投向AI算力方向。科创50ETF华夏持仓寒武纪1137万股（仅此一家即超6亿市值）、海光信息同样被科创50/半导体ETF重仓。汇金/证金ETF持仓1.55万亿覆盖AI算力标的。国家战略+ETF被动配置双重资金支撑。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a9",
-          "priority": "normal",
-          "title": "华虹完成收购华力微+晶合集成355亿四期项目开工，晶圆制造扩产持续",
-          "chain": "chain1",
-          "confidence": "green",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "strong",
-            "big_fund": true,
-            "national_team_etf": true,
-            "recent_bidding": true,
-            "note": "大基金一二三期均重仓晶圆制造（一期重SMIC/华虹、三期继续）。科创50ETF持仓中芯国际/华虹。bidding数据：积塔密集招标+评标（6月5日）、京东方8.6代AMOLED 6批评标、山东有研硅片三期、苏州威微电子设备采购。三维度全覆盖，bidding活跃度是3-6个月后收入的前置指标。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a10",
-          "priority": "normal",
-          "title": "特斯拉Optimus Gen3 2026年Q2启动量产，人形机器人商业化元年开启",
-          "chain": "chain2",
-          "confidence": "yellow",
-          "lifecycle": "positioning",
-          "priced_in": "partially_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
-            "national_team_etf": true,
-            "recent_bidding": false,
-            "note": "大基金不直接覆盖机器人，但具身智能是十五五规划方向。科创50ETF持仓机器人产业链：奥比中光（传感器）、埃斯顿（执行器）。特斯拉直接向供应商下达订单，供应链订单驱动模式清晰。"
-          },
-          "tickers": []
-        },
-        {
-          "id": "a11",
-          "priority": "normal",
-          "title": "本源量子完成30亿元Pre-IPO融资冲刺量子计算第一股，Quantinuum纳斯达克上市市值超150亿美元",
-          "chain": "chain2",
-          "confidence": "blue",
-          "lifecycle": "emerging",
-          "priced_in": "under_priced",
-          "capital_backing": {
-            "level": "moderate",
-            "big_fund": false,
-            "national_team_etf": false,
-            "recent_bidding": false,
-            "note": "大基金未明确向量子计算。但中国兵器集团领投本源量子30亿（国家背景国资），量子计算被列入国家战略科技方向。科创50ETF未直接持仓量子计算标的（国盾量子市值偏小）。资金面支撑偏弱。"
-          },
+          "priced_in": "?",
+          "capital_backing": "?",
           "tickers": []
         }
       ]
@@ -224,6 +101,14 @@
     "anomalies": {
       "count": 20,
       "top": [
+        {
+          "date": "20260611",
+          "ts_code": "688189.SH",
+          "name": "南新制药",
+          "pct_chg": -20.05,
+          "vol_ratio": 4.44,
+          "attribution": "跌停封板"
+        },
         {
           "date": "20260518",
           "ts_code": "688811.SH",
@@ -270,6 +155,14 @@
           "name": "沪硅产业",
           "pct_chg": 20.01,
           "vol_ratio": 7.62,
+          "attribution": "涨停封板"
+        },
+        {
+          "date": "20260611",
+          "ts_code": "688530.SH",
+          "name": "欧莱新材",
+          "pct_chg": 20.01,
+          "vol_ratio": 4.93,
           "attribution": "涨停封板"
         },
         {
@@ -367,28 +260,12 @@
           "pct_chg": 20.0,
           "vol_ratio": 3.73,
           "attribution": "涨停封板"
-        },
-        {
-          "date": "20260601",
-          "ts_code": "300489.SZ",
-          "name": "光智科技",
-          "pct_chg": 20.0,
-          "vol_ratio": 3.73,
-          "attribution": "涨停封板"
-        },
-        {
-          "date": "20260522",
-          "ts_code": "688020.SH",
-          "name": "方邦股份",
-          "pct_chg": 20.0,
-          "vol_ratio": 4.79,
-          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(66/80只)"
         }
       ]
     },
     "themes": {
       "available": true,
-      "date": "20260610",
+      "date": "20260611",
       "top_themes": []
     },
     "kdj": {
@@ -403,76 +280,81 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-06-09T16:30:24.199415+08:00",
+      "last_updated": "2026-06-10T16:29:15.815901+08:00",
       "active_count": 10,
       "positions": [
         {
           "code": "600584.SH",
           "name": "长电科技",
-          "return_pct": 96.27,
-          "ret_5d": -6.04,
-          "warnings": [],
-          "last_check": "2026-06-09"
+          "return_pct": 93.04,
+          "ret_5d": -7.53,
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-16.03%"
+          ],
+          "last_check": "2026-06-10"
         },
         {
           "code": "002156.SZ",
           "name": "通富微电",
-          "return_pct": 63.11,
-          "ret_5d": -8.25,
-          "warnings": [],
-          "last_check": "2026-06-09"
+          "return_pct": 55.54,
+          "ret_5d": -13.59,
+          "warnings": [
+            "⚠️ 近5日跌-13.59%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-18.41%"
+          ],
+          "last_check": "2026-06-10"
         },
         {
           "code": "688126.SH",
           "name": "沪硅产业",
-          "return_pct": 41.97,
-          "ret_5d": 25.51,
+          "return_pct": 46.09,
+          "ret_5d": 13.17,
           "warnings": [],
-          "last_check": "2026-06-09"
+          "last_check": "2026-06-10"
         },
         {
           "code": "688012.SH",
           "name": "中微公司",
-          "return_pct": 36.53,
-          "ret_5d": -0.31,
+          "return_pct": 38.48,
+          "ret_5d": -0.1,
           "warnings": [],
-          "last_check": "2026-06-09"
+          "last_check": "2026-06-10"
         },
         {
           "code": "688256.SH",
           "name": "寒武纪",
-          "return_pct": 36.25,
-          "ret_5d": -7.84,
+          "return_pct": 32.06,
+          "ret_5d": -9.41,
           "warnings": [],
-          "last_check": "2026-06-09"
+          "last_check": "2026-06-10"
         },
         {
           "code": "002371.SZ",
           "name": "北方华创",
-          "return_pct": 30.05,
-          "ret_5d": 0.37,
+          "return_pct": 30.49,
+          "ret_5d": -1.24,
           "warnings": [],
-          "last_check": "2026-06-09"
+          "last_check": "2026-06-10"
         },
         {
           "code": "688041.SH",
           "name": "海光信息",
-          "return_pct": 18.7,
-          "ret_5d": -6.21,
+          "return_pct": 26.06,
+          "ret_5d": -0.35,
           "warnings": [
-            "⚠️ 从thesis以来高点回撤-23.2%"
+            "⚠️ 从thesis以来高点回撤-18.44%"
           ],
-          "last_check": "2026-06-09"
+          "last_check": "2026-06-10"
         },
         {
           "code": "688981.SH",
           "name": "中芯国际",
-          "return_pct": -2.04,
-          "ret_5d": -5.0,
+          "return_pct": -3.55,
+          "ret_5d": -7.07,
           "warnings": [
-            "⚠️ 从thesis以来高点回撤-18.4%"
+            "⚠️ 从thesis以来高点回撤-19.65%"
           ],
-          "last_check": "2026-06-09"
+          "last_check": "2026-06-10"
         },
         {
           "code": "603650.SH",
@@ -480,7 +362,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-09"
+          "last_check": "2026-06-10"
         },
         {
           "code": "688082.SH",
@@ -488,7 +370,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-09"
+          "last_check": "2026-06-10"
         }
       ]
     }
