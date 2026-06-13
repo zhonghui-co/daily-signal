@@ -1,29 +1,135 @@
 {
-  "generated_at": "2026-06-11T16:28:46.794624+08:00",
-  "date": "2026-06-11",
+  "generated_at": "2026-06-13T16:30:24.379708+08:00",
+  "date": "2026-06-13",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-06-11",
+      "date": "2026-06-13",
       "run_at": "?",
-      "stats": {},
+      "stats": {
+        "total_signals": 8,
+        "by_chain": {
+          "chain1": 3,
+          "chain2": 2,
+          "cross_chain": 3
+        },
+        "by_priority": {
+          "fire": 6,
+          "normal": 2
+        },
+        "by_verification": {
+          "triple": 4,
+          "dual": 1,
+          "unverified_but_confident": 3
+        },
+        "pricing": {
+          "under_priced": 3,
+          "partially_priced": 5,
+          "fully_priced": 0
+        },
+        "funding": {
+          "strong": 1,
+          "moderate": 4,
+          "weak": 2,
+          "wait_for_market": 1
+        },
+        "divergences": {
+          "critical": 1,
+          "high": 2,
+          "low": 1,
+          "total": 4
+        },
+        "under_priced_signals": [
+          "s5: 材料国产化5倍替代空间(时间偏差修正不改变框架)",
+          "s10: 特斯拉产线转换→T链优先级超越汽车(零中文媒体报道)",
+          "rs1: GGII首次中国TAM量化(最新报告，零A股定价)",
+          "rs3: Counterpoint BOM精确拆解(灵巧手20%/执行器+手=60%→全新靶向精度)"
+        ],
+        "most_under_priced": [
+          {
+            "signal": "rs1 (GGII中国TAM 6.25万台/200亿)",
+            "reason": "首次中国独立TAM框架，信息质量最高+认知度最低+A股定价趋近于零。市场尚未认知'中国机器人有独立于海外的TAM'这一框架。",
+            "time_decay": "预计3-5日内开始中文媒体转引→A股首次定价窗口。"
+          },
+          {
+            "signal": "rs3 (Counterpoint BOM拆解：灵巧手20%)",
+            "reason": "让T链投资从'是否在链'→'BOM占比精确目标'的精度跃升。灵巧手为全新靶向标的(兆威机电003021/鸣志电器603728/柯力传感603662)，市场认知最低。",
+            "time_decay": "Counterpoint报告被引用的速度取决于中文科技/财经媒体的反应，预计5-10日。"
+          }
+        ]
+      },
       "signals": [
         {
-          "id": "rs1",
+          "id": "s1",
           "priority": "fire",
-          "title": "Neura Robotics获$1.4B C轮融资估值~$70B: NVIDIA/Qualcomm/Amazon/Bosch/Tether齐聚",
-          "chain": "chain2+robot",
+          "title": "北方华创跃居全球半导体设备第五，中微首次进入前20",
+          "chain": "chain1",
           "confidence": "?",
-          "lifecycle": "emerging",
+          "lifecycle": "positioning",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s2",
+          "priority": "fire",
+          "title": "全球存储芯片涨价潮席卷，DRAM 2026Q2前预计再涨40%",
+          "chain": "chain1",
+          "confidence": "?",
+          "lifecycle": "consensus",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s5",
+          "priority": "normal",
+          "title": "中国70%硅片国产化目标2026年，半导体材料替代空间超5倍",
+          "chain": "chain1",
+          "confidence": "?",
+          "lifecycle": "positioning",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s6",
+          "priority": "fire",
+          "title": "Goldman Sachs 6月降港股评级，明确偏好A股AI硬件",
+          "chain": "chain2",
+          "confidence": "?",
+          "lifecycle": "positioning",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
         },
         {
           "id": "s8",
-          "priority": "fire",
-          "title": "特斯拉Optimus Gen 3量产在即: Fremont产线改造,Model S/X停产全力转产机器人",
+          "priority": "normal",
+          "title": "国产AI芯片Q1业绩爆发：寒武纪28.85亿、海光40.34亿、摩尔线程扭亏",
           "chain": "chain2",
+          "confidence": "?",
+          "lifecycle": "consensus",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s10",
+          "priority": "fire",
+          "title": "特斯拉Optimus Gen 3即将量产：停Model S/X腾产线，2026年7-8月投产",
+          "chain": "cross_chain",
+          "confidence": "?",
+          "lifecycle": "positioning",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "rs1",
+          "priority": "fire",
+          "title": "GGII首次量化2026国内人形机器人出货6.25万台+200亿市场",
+          "chain": "cross_chain",
           "confidence": "?",
           "lifecycle": "emerging",
           "priced_in": "?",
@@ -33,65 +139,10 @@
         {
           "id": "rs3",
           "priority": "fire",
-          "title": "智元精灵G2完成8小时工厂直播: 2283次任务零失误+Q3部署100台",
-          "chain": "chain2+robot",
+          "title": "Counterpoint Optimus V3 BOM首次详细拆解：灵巧手占成本20%、执行器+灵巧手=60%",
+          "chain": "cross_chain",
           "confidence": "?",
           "lifecycle": "emerging",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s4",
-          "priority": "fire",
-          "title": "寒武纪Q1业绩: 营收29亿+160%,净利10亿+185%,国产AI芯片市占率突破40%",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "emerging",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s2",
-          "priority": "fire",
-          "title": "长鑫存储DRAM国产化拐点: H1净利500-570亿,设备国产化加速",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s5",
-          "priority": "fire",
-          "title": "HBM超级周期: 产能抢空至2028年,2027年大幅涨价,国产存储替代窗口打开",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "consensus",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s7",
-          "priority": "fire",
-          "title": "中际旭创1.6T批量交付+800G放量: 光模块进入量价齐升通道,硅光占比超50%",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s1",
-          "priority": "fire",
-          "title": "中芯国际+华虹晶圆代工产能双线扩张: 产能利用率95%+淡季不淡",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "positioning",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -101,14 +152,6 @@
     "anomalies": {
       "count": 20,
       "top": [
-        {
-          "date": "20260611",
-          "ts_code": "688189.SH",
-          "name": "南新制药",
-          "pct_chg": -20.05,
-          "vol_ratio": 4.44,
-          "attribution": "跌停封板"
-        },
         {
           "date": "20260518",
           "ts_code": "688811.SH",
@@ -155,14 +198,6 @@
           "name": "沪硅产业",
           "pct_chg": 20.01,
           "vol_ratio": 7.62,
-          "attribution": "涨停封板"
-        },
-        {
-          "date": "20260611",
-          "ts_code": "688530.SH",
-          "name": "欧莱新材",
-          "pct_chg": 20.01,
-          "vol_ratio": 4.93,
           "attribution": "涨停封板"
         },
         {
@@ -260,17 +295,33 @@
           "pct_chg": 20.0,
           "vol_ratio": 3.73,
           "attribution": "涨停封板"
+        },
+        {
+          "date": "20260601",
+          "ts_code": "300489.SZ",
+          "name": "光智科技",
+          "pct_chg": 20.0,
+          "vol_ratio": 3.73,
+          "attribution": "涨停封板"
+        },
+        {
+          "date": "20260522",
+          "ts_code": "688020.SH",
+          "name": "方邦股份",
+          "pct_chg": 20.0,
+          "vol_ratio": 4.79,
+          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(66/80只)"
         }
       ]
     },
     "themes": {
       "available": true,
-      "date": "20260611",
+      "date": "20260612",
       "top_themes": []
     },
     "kdj": {
       "available": true,
-      "date": "2026-06-10",
+      "date": "2026-06-12",
       "count": 0,
       "stocks": []
     },
