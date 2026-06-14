@@ -1,71 +1,62 @@
 {
-  "generated_at": "2026-06-13T16:30:24.379708+08:00",
-  "date": "2026-06-13",
+  "generated_at": "2026-06-14T16:29:40.394125+08:00",
+  "date": "2026-06-14",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-06-13",
+      "date": "2026-06-14",
       "run_at": "?",
       "stats": {
         "total_signals": 8,
-        "by_chain": {
-          "chain1": 3,
-          "chain2": 2,
-          "cross_chain": 3
-        },
-        "by_priority": {
-          "fire": 6,
-          "normal": 2
-        },
-        "by_verification": {
-          "triple": 4,
-          "dual": 1,
-          "unverified_but_confident": 3
+        "by_lifecycle_vs_pricing": {
+          "emerging": {
+            "s1": "partially"
+          },
+          "positioning": {
+            "s2": "partially",
+            "s3": "fully",
+            "s5": "under",
+            "s6": "partially",
+            "rs1": "partially",
+            "rs3": "under"
+          },
+          "consensus": {
+            "s4": "fully"
+          }
         },
         "pricing": {
-          "under_priced": 3,
-          "partially_priced": 5,
-          "fully_priced": 0
+          "under_priced": 2,
+          "partially_priced": 4,
+          "fully_priced": 2
         },
-        "funding": {
-          "strong": 1,
-          "moderate": 4,
-          "weak": 2,
+        "capital": {
+          "strong": 2,
+          "moderate": 5,
+          "weak": 0,
           "wait_for_market": 1
         },
+        "under_priced_signals": [
+          "rs3: RaaS商业模式写入政策 (定价~0%，类似SaaS估值颠覆，3-6月定价窗口)",
+          "s5: 长鑫IPO+DDR5良率接近三星 (提交注册非获批的认知差，1-2周定价窗口)"
+        ],
+        "most_under_priced": "rs3: RaaS — 商业模式创新从概念→政策写入，整机标的DCF/FCF重估尚未开始，定价趋近于0%",
         "divergences": {
           "critical": 1,
-          "high": 2,
+          "high": 1,
           "low": 1,
-          "total": 4
+          "total": 3
         },
-        "under_priced_signals": [
-          "s5: 材料国产化5倍替代空间(时间偏差修正不改变框架)",
-          "s10: 特斯拉产线转换→T链优先级超越汽车(零中文媒体报道)",
-          "rs1: GGII首次中国TAM量化(最新报告，零A股定价)",
-          "rs3: Counterpoint BOM精确拆解(灵巧手20%/执行器+手=60%→全新靶向精度)"
-        ],
-        "most_under_priced": [
-          {
-            "signal": "rs1 (GGII中国TAM 6.25万台/200亿)",
-            "reason": "首次中国独立TAM框架，信息质量最高+认知度最低+A股定价趋近于零。市场尚未认知'中国机器人有独立于海外的TAM'这一框架。",
-            "time_decay": "预计3-5日内开始中文媒体转引→A股首次定价窗口。"
-          },
-          {
-            "signal": "rs3 (Counterpoint BOM拆解：灵巧手20%)",
-            "reason": "让T链投资从'是否在链'→'BOM占比精确目标'的精度跃升。灵巧手为全新靶向标的(兆威机电003021/鸣志电器603728/柯力传感603662)，市场认知最低。",
-            "time_decay": "Counterpoint报告被引用的速度取决于中文科技/财经媒体的反应，预计5-10日。"
-          }
-        ]
+        "strong_backing": 2,
+        "moderate_backing": 5
       },
       "signals": [
         {
           "id": "s1",
           "priority": "fire",
-          "title": "北方华创跃居全球半导体设备第五，中微首次进入前20",
-          "chain": "chain1",
+          "title": "中国$2950亿AI数据中心计划：强制80%国产芯片",
+          "chain": "chain2",
           "confidence": "?",
-          "lifecycle": "positioning",
+          "lifecycle": "?",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -73,21 +64,43 @@
         {
           "id": "s2",
           "priority": "fire",
-          "title": "全球存储芯片涨价潮席卷，DRAM 2026Q2前预计再涨40%",
+          "title": "华为韬定律突破：麒麟2026芯片晶体管密度238MTr/mm² 等效台积电N3P",
           "chain": "chain1",
           "confidence": "?",
-          "lifecycle": "consensus",
+          "lifecycle": "?",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s3",
+          "priority": "fire",
+          "title": "寒武纪Q1营收近29亿净利润超10亿双翻倍 高盛目标价2406元",
+          "chain": "chain2",
+          "confidence": "?",
+          "lifecycle": "?",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s4",
+          "priority": "fire",
+          "title": "HBM 2026产能全面售罄 DRAM涨价88% 内存短缺压制PC出货",
+          "chain": "chain2",
+          "confidence": "?",
+          "lifecycle": "?",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
         },
         {
           "id": "s5",
-          "priority": "normal",
-          "title": "中国70%硅片国产化目标2026年，半导体材料替代空间超5倍",
+          "priority": "fire",
+          "title": "长鑫科技IPO注册获批 DDR5良率接近三星 长江存储启动IPO",
           "chain": "chain1",
           "confidence": "?",
-          "lifecycle": "positioning",
+          "lifecycle": "?",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -95,32 +108,10 @@
         {
           "id": "s6",
           "priority": "fire",
-          "title": "Goldman Sachs 6月降港股评级，明确偏好A股AI硬件",
-          "chain": "chain2",
+          "title": "半导体设备国产化率仅21% MATCH法案加速替代 25家设备公司市值1.9万亿",
+          "chain": "chain1",
           "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s8",
-          "priority": "normal",
-          "title": "国产AI芯片Q1业绩爆发：寒武纪28.85亿、海光40.34亿、摩尔线程扭亏",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "consensus",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s10",
-          "priority": "fire",
-          "title": "特斯拉Optimus Gen 3即将量产：停Model S/X腾产线，2026年7-8月投产",
-          "chain": "cross_chain",
-          "confidence": "?",
-          "lifecycle": "positioning",
+          "lifecycle": "?",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -128,10 +119,10 @@
         {
           "id": "rs1",
           "priority": "fire",
-          "title": "GGII首次量化2026国内人形机器人出货6.25万台+200亿市场",
-          "chain": "cross_chain",
+          "title": "天工3.0确定2026下半年规模化量产交付：国家级人形机器人平台首次给出明确量产时间表",
+          "chain": "robotics",
           "confidence": "?",
-          "lifecycle": "emerging",
+          "lifecycle": "?",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -139,10 +130,10 @@
         {
           "id": "rs3",
           "priority": "fire",
-          "title": "Counterpoint Optimus V3 BOM首次详细拆解：灵巧手占成本20%、执行器+灵巧手=60%",
-          "chain": "cross_chain",
+          "title": "RaaS（机器人即服务）商业模式首次写入工信部+国资委政策文件",
+          "chain": "robotics",
           "confidence": "?",
-          "lifecycle": "emerging",
+          "lifecycle": "?",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -315,9 +306,7 @@
       ]
     },
     "themes": {
-      "available": true,
-      "date": "20260612",
-      "top_themes": []
+      "available": false
     },
     "kdj": {
       "available": true,
@@ -331,81 +320,80 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-06-10T16:29:15.815901+08:00",
+      "last_updated": "2026-06-13T16:30:24.469844+08:00",
       "active_count": 10,
       "positions": [
         {
           "code": "600584.SH",
           "name": "长电科技",
-          "return_pct": 93.04,
-          "ret_5d": -7.53,
+          "return_pct": 79.67,
+          "ret_5d": -1.96,
           "warnings": [
-            "⚠️ 从thesis以来高点回撤-16.03%"
+            "⚠️ 从thesis以来高点回撤-21.85%"
           ],
-          "last_check": "2026-06-10"
-        },
-        {
-          "code": "002156.SZ",
-          "name": "通富微电",
-          "return_pct": 55.54,
-          "ret_5d": -13.59,
-          "warnings": [
-            "⚠️ 近5日跌-13.59%，短期急剧下跌",
-            "⚠️ 从thesis以来高点回撤-18.41%"
-          ],
-          "last_check": "2026-06-10"
-        },
-        {
-          "code": "688126.SH",
-          "name": "沪硅产业",
-          "return_pct": 46.09,
-          "ret_5d": 13.17,
-          "warnings": [],
-          "last_check": "2026-06-10"
+          "last_check": "2026-06-13"
         },
         {
           "code": "688012.SH",
           "name": "中微公司",
-          "return_pct": 38.48,
-          "ret_5d": -0.1,
+          "return_pct": 45.57,
+          "ret_5d": 14.48,
           "warnings": [],
-          "last_check": "2026-06-10"
+          "last_check": "2026-06-13"
         },
         {
-          "code": "688256.SH",
-          "name": "寒武纪",
-          "return_pct": 32.06,
-          "ret_5d": -9.41,
-          "warnings": [],
-          "last_check": "2026-06-10"
+          "code": "002156.SZ",
+          "name": "通富微电",
+          "return_pct": 44.86,
+          "ret_5d": -8.1,
+          "warnings": [
+            "⚠️ 从thesis以来高点回撤-24.01%"
+          ],
+          "last_check": "2026-06-13"
         },
         {
           "code": "002371.SZ",
           "name": "北方华创",
-          "return_pct": 30.49,
-          "ret_5d": -1.24,
+          "return_pct": 40.61,
+          "ret_5d": 13.91,
           "warnings": [],
-          "last_check": "2026-06-10"
+          "last_check": "2026-06-13"
+        },
+        {
+          "code": "688256.SH",
+          "name": "寒武纪",
+          "return_pct": 33.03,
+          "ret_5d": -0.83,
+          "warnings": [],
+          "last_check": "2026-06-13"
+        },
+        {
+          "code": "688126.SH",
+          "name": "沪硅产业",
+          "return_pct": 32.39,
+          "ret_5d": 11.91,
+          "warnings": [],
+          "last_check": "2026-06-13"
         },
         {
           "code": "688041.SH",
           "name": "海光信息",
-          "return_pct": 26.06,
-          "ret_5d": -0.35,
+          "return_pct": 23.93,
+          "ret_5d": 7.82,
           "warnings": [
-            "⚠️ 从thesis以来高点回撤-18.44%"
+            "⚠️ 从thesis以来高点回撤-19.81%"
           ],
-          "last_check": "2026-06-10"
+          "last_check": "2026-06-13"
         },
         {
           "code": "688981.SH",
           "name": "中芯国际",
-          "return_pct": -3.55,
-          "ret_5d": -7.07,
+          "return_pct": -3.9,
+          "ret_5d": 2.43,
           "warnings": [
-            "⚠️ 从thesis以来高点回撤-19.65%"
+            "⚠️ 从thesis以来高点回撤-19.95%"
           ],
-          "last_check": "2026-06-10"
+          "last_check": "2026-06-13"
         },
         {
           "code": "603650.SH",
@@ -413,7 +401,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-10"
+          "last_check": "2026-06-13"
         },
         {
           "code": "688082.SH",
@@ -421,7 +409,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-10"
+          "last_check": "2026-06-13"
         }
       ]
     }
