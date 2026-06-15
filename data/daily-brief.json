@@ -1,62 +1,53 @@
 {
-  "generated_at": "2026-06-14T16:29:40.394125+08:00",
-  "date": "2026-06-14",
+  "generated_at": "2026-06-15T16:28:52.313456+08:00",
+  "date": "2026-06-15",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-06-14",
+      "date": "2026-06-15",
       "run_at": "?",
       "stats": {
         "total_signals": 8,
-        "by_lifecycle_vs_pricing": {
-          "emerging": {
-            "s1": "partially"
-          },
-          "positioning": {
-            "s2": "partially",
-            "s3": "fully",
-            "s5": "under",
-            "s6": "partially",
-            "rs1": "partially",
-            "rs3": "under"
-          },
-          "consensus": {
-            "s4": "fully"
-          }
+        "by_chain": {
+          "chain1": 3,
+          "chain2": 3,
+          "robot": 2
+        },
+        "by_priority": {
+          "fire": 6,
+          "normal": 2
+        },
+        "by_verification": {
+          "triple": 3,
+          "dual": 1,
+          "unverified": 1,
+          "uncovered": 3
         },
         "pricing": {
-          "under_priced": 2,
-          "partially_priced": 4,
-          "fully_priced": 2
+          "under_priced": 3,
+          "partially_priced": 5,
+          "fully_priced": 0
         },
-        "capital": {
+        "funding": {
           "strong": 2,
-          "moderate": 5,
-          "weak": 0,
-          "wait_for_market": 1
+          "moderate": 4,
+          "weak": 2
         },
-        "under_priced_signals": [
-          "rs3: RaaS商业模式写入政策 (定价~0%，类似SaaS估值颠覆，3-6月定价窗口)",
-          "s5: 长鑫IPO+DDR5良率接近三星 (提交注册非获批的认知差，1-2周定价窗口)"
-        ],
-        "most_under_priced": "rs3: RaaS — 商业模式创新从概念→政策写入，整机标的DCF/FCF重估尚未开始，定价趋近于0%",
         "divergences": {
           "critical": 1,
           "high": 1,
-          "low": 1,
+          "medium": 1,
           "total": 3
-        },
-        "strong_backing": 2,
-        "moderate_backing": 5
+        }
       },
       "signals": [
         {
           "id": "s1",
           "priority": "fire",
-          "title": "中国$2950亿AI数据中心计划：强制80%国产芯片",
+          "title": "高盛降港股评级至中性，超配A股AI硬件板块",
           "chain": "chain2",
           "confidence": "?",
-          "lifecycle": "?",
+          "lifecycle": "positioning",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -64,10 +55,10 @@
         {
           "id": "s2",
           "priority": "fire",
-          "title": "华为韬定律突破：麒麟2026芯片晶体管密度238MTr/mm² 等效台积电N3P",
+          "title": "全球存储芯片涨价潮蔓延，Q2前或再涨40%",
           "chain": "chain1",
           "confidence": "?",
-          "lifecycle": "?",
+          "lifecycle": "positioning",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -75,10 +66,10 @@
         {
           "id": "s3",
           "priority": "fire",
-          "title": "寒武纪Q1营收近29亿净利润超10亿双翻倍 高盛目标价2406元",
+          "title": "光模块1.6T+800G双轮驱动确认，中际旭创订单已排至年底",
           "chain": "chain2",
           "confidence": "?",
-          "lifecycle": "?",
+          "lifecycle": "positioning",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -86,32 +77,10 @@
         {
           "id": "s4",
           "priority": "fire",
-          "title": "HBM 2026产能全面售罄 DRAM涨价88% 内存短缺压制PC出货",
+          "title": "HBM全球需求爆发：2026出货量5.7B GB",
           "chain": "chain2",
           "confidence": "?",
-          "lifecycle": "?",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s5",
-          "priority": "fire",
-          "title": "长鑫科技IPO注册获批 DDR5良率接近三星 长江存储启动IPO",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "?",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s6",
-          "priority": "fire",
-          "title": "半导体设备国产化率仅21% MATCH法案加速替代 25家设备公司市值1.9万亿",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "?",
+          "lifecycle": "consensus",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -119,21 +88,43 @@
         {
           "id": "rs1",
           "priority": "fire",
-          "title": "天工3.0确定2026下半年规模化量产交付：国家级人形机器人平台首次给出明确量产时间表",
-          "chain": "robotics",
+          "title": "特斯拉AI6芯片优先Optimus不装车——机器人专用算力时代开启",
+          "chain": "robot",
           "confidence": "?",
-          "lifecycle": "?",
+          "lifecycle": "emerging",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
         },
         {
-          "id": "rs3",
+          "id": "rs2",
           "priority": "fire",
-          "title": "RaaS（机器人即服务）商业模式首次写入工信部+国资委政策文件",
-          "chain": "robotics",
+          "title": "OpenAI正式进军机器人硬件——Sam Altman招募工程师'制造对社会有用的机器人'",
+          "chain": "robot",
           "confidence": "?",
-          "lifecycle": "?",
+          "lifecycle": "emerging",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s5",
+          "priority": "normal",
+          "title": "半导体材料涨价共振：靶材Q1涨60-70%，硅片Q2涨价即将兑现",
+          "chain": "chain1",
+          "confidence": "?",
+          "lifecycle": "positioning",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s9",
+          "priority": "normal",
+          "title": "长鑫存储启动上市辅导，DRAM国产化加速",
+          "chain": "chain1",
+          "confidence": "?",
+          "lifecycle": "positioning",
           "priced_in": "?",
           "capital_backing": "?",
           "tickers": []
@@ -189,6 +180,14 @@
           "name": "沪硅产业",
           "pct_chg": 20.01,
           "vol_ratio": 7.62,
+          "attribution": "涨停封板"
+        },
+        {
+          "date": "20260615",
+          "ts_code": "301526.SZ",
+          "name": "国际复材",
+          "pct_chg": 20.01,
+          "vol_ratio": 2.17,
           "attribution": "涨停封板"
         },
         {
@@ -294,19 +293,13 @@
           "pct_chg": 20.0,
           "vol_ratio": 3.73,
           "attribution": "涨停封板"
-        },
-        {
-          "date": "20260522",
-          "ts_code": "688020.SH",
-          "name": "方邦股份",
-          "pct_chg": 20.0,
-          "vol_ratio": 4.79,
-          "attribution": "✅AI算力,✅国产替代,消费电子/元器件板块联动(66/80只)"
         }
       ]
     },
     "themes": {
-      "available": false
+      "available": true,
+      "date": "20260615",
+      "top_themes": []
     },
     "kdj": {
       "available": true,
