@@ -1,139 +1,22 @@
 {
-  "generated_at": "2026-06-15T16:28:52.313456+08:00",
-  "date": "2026-06-15",
+  "generated_at": "2026-06-16T16:29:22.700899+08:00",
+  "date": "2026-06-16",
   "sections": {
     "signals": {
-      "available": true,
-      "date": "2026-06-15",
-      "run_at": "?",
-      "stats": {
-        "total_signals": 8,
-        "by_chain": {
-          "chain1": 3,
-          "chain2": 3,
-          "robot": 2
-        },
-        "by_priority": {
-          "fire": 6,
-          "normal": 2
-        },
-        "by_verification": {
-          "triple": 3,
-          "dual": 1,
-          "unverified": 1,
-          "uncovered": 3
-        },
-        "pricing": {
-          "under_priced": 3,
-          "partially_priced": 5,
-          "fully_priced": 0
-        },
-        "funding": {
-          "strong": 2,
-          "moderate": 4,
-          "weak": 2
-        },
-        "divergences": {
-          "critical": 1,
-          "high": 1,
-          "medium": 1,
-          "total": 3
-        }
-      },
-      "signals": [
-        {
-          "id": "s1",
-          "priority": "fire",
-          "title": "高盛降港股评级至中性，超配A股AI硬件板块",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s2",
-          "priority": "fire",
-          "title": "全球存储芯片涨价潮蔓延，Q2前或再涨40%",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s3",
-          "priority": "fire",
-          "title": "光模块1.6T+800G双轮驱动确认，中际旭创订单已排至年底",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s4",
-          "priority": "fire",
-          "title": "HBM全球需求爆发：2026出货量5.7B GB",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "consensus",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "rs1",
-          "priority": "fire",
-          "title": "特斯拉AI6芯片优先Optimus不装车——机器人专用算力时代开启",
-          "chain": "robot",
-          "confidence": "?",
-          "lifecycle": "emerging",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "rs2",
-          "priority": "fire",
-          "title": "OpenAI正式进军机器人硬件——Sam Altman招募工程师'制造对社会有用的机器人'",
-          "chain": "robot",
-          "confidence": "?",
-          "lifecycle": "emerging",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s5",
-          "priority": "normal",
-          "title": "半导体材料涨价共振：靶材Q1涨60-70%，硅片Q2涨价即将兑现",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        },
-        {
-          "id": "s9",
-          "priority": "normal",
-          "title": "长鑫存储启动上市辅导，DRAM国产化加速",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": []
-        }
-      ]
+      "available": false,
+      "error": "Invalid \\escape: line 127 column 54 (char 6993)"
     },
     "anomalies": {
       "count": 20,
       "top": [
+        {
+          "date": "20260616",
+          "ts_code": "300780.SZ",
+          "name": "德恩精工",
+          "pct_chg": 20.01,
+          "vol_ratio": 1.19,
+          "attribution": "涨停封板"
+        },
         {
           "date": "20260518",
           "ts_code": "688811.SH",
@@ -285,14 +168,6 @@
           "pct_chg": 20.0,
           "vol_ratio": 3.73,
           "attribution": "涨停封板"
-        },
-        {
-          "date": "20260601",
-          "ts_code": "300489.SZ",
-          "name": "光智科技",
-          "pct_chg": 20.0,
-          "vol_ratio": 3.73,
-          "attribution": "涨停封板"
         }
       ]
     },
@@ -303,7 +178,7 @@
     },
     "kdj": {
       "available": true,
-      "date": "2026-06-12",
+      "date": "2026-06-15",
       "count": 0,
       "stocks": []
     },
@@ -313,80 +188,78 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-06-13T16:30:24.469844+08:00",
+      "last_updated": "2026-06-15T16:28:52.408987+08:00",
       "active_count": 10,
       "positions": [
         {
           "code": "600584.SH",
           "name": "长电科技",
-          "return_pct": 79.67,
-          "ret_5d": -1.96,
+          "return_pct": 93.74,
+          "ret_5d": -1.29,
           "warnings": [
-            "⚠️ 从thesis以来高点回撤-21.85%"
+            "⚠️ 从thesis以来高点回撤-15.73%"
           ],
-          "last_check": "2026-06-13"
-        },
-        {
-          "code": "688012.SH",
-          "name": "中微公司",
-          "return_pct": 45.57,
-          "ret_5d": 14.48,
-          "warnings": [],
-          "last_check": "2026-06-13"
+          "last_check": "2026-06-15"
         },
         {
           "code": "002156.SZ",
           "name": "通富微电",
-          "return_pct": 44.86,
-          "ret_5d": -8.1,
+          "return_pct": 55.8,
+          "ret_5d": -4.49,
           "warnings": [
-            "⚠️ 从thesis以来高点回撤-24.01%"
+            "⚠️ 从thesis以来高点回撤-18.27%"
           ],
-          "last_check": "2026-06-13"
+          "last_check": "2026-06-15"
+        },
+        {
+          "code": "688012.SH",
+          "name": "中微公司",
+          "return_pct": 53.26,
+          "ret_5d": 12.26,
+          "warnings": [],
+          "last_check": "2026-06-15"
         },
         {
           "code": "002371.SZ",
           "name": "北方华创",
-          "return_pct": 40.61,
-          "ret_5d": 13.91,
+          "return_pct": 43.77,
+          "ret_5d": 10.55,
           "warnings": [],
-          "last_check": "2026-06-13"
+          "last_check": "2026-06-15"
         },
         {
           "code": "688256.SH",
           "name": "寒武纪",
-          "return_pct": 33.03,
-          "ret_5d": -0.83,
+          "return_pct": 43.22,
+          "ret_5d": 5.12,
           "warnings": [],
-          "last_check": "2026-06-13"
+          "last_check": "2026-06-15"
         },
         {
           "code": "688126.SH",
           "name": "沪硅产业",
-          "return_pct": 32.39,
-          "ret_5d": 11.91,
+          "return_pct": 39.69,
+          "ret_5d": -1.61,
           "warnings": [],
-          "last_check": "2026-06-13"
+          "last_check": "2026-06-15"
         },
         {
           "code": "688041.SH",
           "name": "海光信息",
-          "return_pct": 23.93,
-          "ret_5d": 7.82,
-          "warnings": [
-            "⚠️ 从thesis以来高点回撤-19.81%"
-          ],
-          "last_check": "2026-06-13"
+          "return_pct": 32.48,
+          "ret_5d": 11.61,
+          "warnings": [],
+          "last_check": "2026-06-15"
         },
         {
           "code": "688981.SH",
           "name": "中芯国际",
-          "return_pct": -3.9,
-          "ret_5d": 2.43,
+          "return_pct": 0.44,
+          "ret_5d": 2.53,
           "warnings": [
-            "⚠️ 从thesis以来高点回撤-19.95%"
+            "⚠️ 从thesis以来高点回撤-16.33%"
           ],
-          "last_check": "2026-06-13"
+          "last_check": "2026-06-15"
         },
         {
           "code": "603650.SH",
@@ -394,7 +267,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-13"
+          "last_check": "2026-06-15"
         },
         {
           "code": "688082.SH",
@@ -402,7 +275,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-13"
+          "last_check": "2026-06-15"
         }
       ]
     }
