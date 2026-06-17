@@ -1,22 +1,14 @@
 {
-  "generated_at": "2026-06-16T16:29:22.700899+08:00",
-  "date": "2026-06-16",
+  "generated_at": "2026-06-17T16:29:04.259333+08:00",
+  "date": "2026-06-17",
   "sections": {
     "signals": {
       "available": false,
-      "error": "Invalid \\escape: line 127 column 54 (char 6993)"
+      "error": "Invalid control character at: line 103 column 86 (char 4985)"
     },
     "anomalies": {
       "count": 20,
       "top": [
-        {
-          "date": "20260616",
-          "ts_code": "300780.SZ",
-          "name": "德恩精工",
-          "pct_chg": 20.01,
-          "vol_ratio": 1.19,
-          "attribution": "涨停封板"
-        },
         {
           "date": "20260518",
           "ts_code": "688811.SH",
@@ -130,6 +122,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20260617",
+          "ts_code": "688598.SH",
+          "name": "金博股份",
+          "pct_chg": 20.0,
+          "vol_ratio": 9.75,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20260526",
           "ts_code": "688183.SH",
           "name": "生益电子",
@@ -173,7 +173,7 @@
     },
     "themes": {
       "available": true,
-      "date": "20260615",
+      "date": "20260617",
       "top_themes": []
     },
     "kdj": {
