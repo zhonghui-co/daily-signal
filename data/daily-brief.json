@@ -1,10 +1,91 @@
 {
-  "generated_at": "2026-06-17T16:29:04.259333+08:00",
-  "date": "2026-06-17",
+  "generated_at": "2026-06-18T16:29:37.988114+08:00",
+  "date": "2026-06-18",
   "sections": {
     "signals": {
-      "available": false,
-      "error": "Invalid control character at: line 103 column 86 (char 4985)"
+      "available": true,
+      "date": "2026-06-18",
+      "run_at": "?",
+      "stats": {},
+      "signals": [
+        {
+          "id": "s1",
+          "priority": "fire",
+          "title": "长鑫科技IPO注册生效+长江存储辅导备案，存储国产化进入资本市场加速阶段",
+          "chain": "chain1",
+          "confidence": "?",
+          "lifecycle": "?",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s2",
+          "priority": "fire",
+          "title": "美国拟将DUV光刻机全面纳入对华出口管制，制裁范围历史性扩大",
+          "chain": "chain1",
+          "confidence": "?",
+          "lifecycle": "?",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s3",
+          "priority": "fire",
+          "title": "超微电脑70亿美元融资+390亿美元AI服务器订单积压，GS称市场低估AI Capex",
+          "chain": "chain2",
+          "confidence": "?",
+          "lifecycle": "?",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s4",
+          "priority": "fire",
+          "title": "存储芯片全面涨价：成熟NOR/SLC NAND合约价涨超100%，HBM产能全售罄，DRAM年涨125%",
+          "chain": "chain2",
+          "confidence": "?",
+          "lifecycle": "?",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s9",
+          "priority": "fire",
+          "title": "人形机器人量产规模化元年：供应链国产化90%+特斯拉Optimus V3下半年量产",
+          "chain": "robot",
+          "confidence": "?",
+          "lifecycle": "?",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "rs1",
+          "priority": "fire",
+          "title": "宇树科技IPO过会——A股即将迎来首家人形机器人上市公司，板块估值锚正式确立",
+          "chain": "robot",
+          "confidence": "?",
+          "lifecycle": "?",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "rs2",
+          "priority": "fire",
+          "title": "2026上半年具身智能融资460亿——H1已超去年全年121%，国资参投率42%创纪录",
+          "chain": "robot",
+          "confidence": "?",
+          "lifecycle": "?",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        }
+      ]
     },
     "anomalies": {
       "count": 20,
@@ -98,6 +179,14 @@
           "attribution": "✅AI算力,✅国产替代,化工/材料板块联动(47/65只)"
         },
         {
+          "date": "20260618",
+          "ts_code": "688478.SH",
+          "name": "晶升股份",
+          "pct_chg": 20.01,
+          "vol_ratio": 1.82,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20260609",
           "ts_code": "688783.SH",
           "name": "西安奕材",
@@ -122,11 +211,11 @@
           "attribution": "涨停封板"
         },
         {
-          "date": "20260617",
+          "date": "20260618",
           "ts_code": "688598.SH",
           "name": "金博股份",
           "pct_chg": 20.0,
-          "vol_ratio": 9.75,
+          "vol_ratio": 8.54,
           "attribution": "涨停封板"
         },
         {
@@ -160,20 +249,12 @@
           "pct_chg": 20.0,
           "vol_ratio": 3.73,
           "attribution": "涨停封板"
-        },
-        {
-          "date": "20260531",
-          "ts_code": "300489.SZ",
-          "name": "光智科技",
-          "pct_chg": 20.0,
-          "vol_ratio": 3.73,
-          "attribution": "涨停封板"
         }
       ]
     },
     "themes": {
       "available": true,
-      "date": "20260617",
+      "date": "20260618",
       "top_themes": []
     },
     "kdj": {
