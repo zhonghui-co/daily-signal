@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-15",
-  "generated_at": "2026-06-15T16:36:36.203644",
+  "date": "2026-06-19",
+  "generated_at": "2026-06-19T16:35:13.681435",
   "count": 227,
   "threshold": "J < 15",
   "params": "KDJ(9,3,3)",
@@ -36,13 +36,13 @@
       "name": "新宏泰",
       "theme_category": "新能源/电力设备",
       "week_end": "2026-06-12",
-      "close": 36.09,
+      "close": 35.76,
       "week_chg": -11.0,
       "K": 24.7,
       "D": 45.65,
-      "J": -17.19,
-      "week_high_9w": 61.36,
-      "week_low_9w": 35.3
+      "J": -17.2,
+      "week_high_9w": 60.8,
+      "week_low_9w": 34.98
     },
     {
       "ts_code": "002418.SZ",
@@ -205,13 +205,13 @@
       "name": "恒为科技",
       "theme_category": "待分类",
       "week_end": "2026-06-12",
-      "close": 21.84,
-      "week_chg": -3.87,
-      "K": 20.88,
-      "D": 35.93,
-      "J": -9.21,
-      "week_high_9w": 32.77,
-      "week_low_9w": 21.27
+      "close": 21.82,
+      "week_chg": -3.88,
+      "K": 20.9,
+      "D": 35.96,
+      "J": -9.22,
+      "week_high_9w": 32.74,
+      "week_low_9w": 21.25
     },
     {
       "ts_code": "301479.SZ",
@@ -396,19 +396,6 @@
       "week_low_9w": 15.48
     },
     {
-      "ts_code": "002755.SZ",
-      "name": "奥赛康",
-      "theme_category": "生物医药",
-      "week_end": "2026-06-12",
-      "close": 13.15,
-      "week_chg": 1.78,
-      "K": 27.13,
-      "D": 43.39,
-      "J": -5.39,
-      "week_high_9w": 18.1,
-      "week_low_9w": 12.42
-    },
-    {
       "ts_code": "000889.SZ",
       "name": "中嘉博创",
       "theme_category": "通信/6G",
@@ -420,6 +407,19 @@
       "J": -5.37,
       "week_high_9w": 5.89,
       "week_low_9w": 3.45
+    },
+    {
+      "ts_code": "002755.SZ",
+      "name": "奥赛康",
+      "theme_category": "生物医药",
+      "week_end": "2026-06-12",
+      "close": 13.03,
+      "week_chg": 1.8,
+      "K": 27.13,
+      "D": 43.36,
+      "J": -5.31,
+      "week_high_9w": 17.93,
+      "week_low_9w": 12.3
     },
     {
       "ts_code": "600379.SH",
@@ -708,19 +708,6 @@
       "week_low_9w": 57.15
     },
     {
-      "ts_code": "002399.SZ",
-      "name": "海普瑞",
-      "theme_category": "生物医药",
-      "week_end": "2026-06-12",
-      "close": 9.27,
-      "week_chg": -3.74,
-      "K": 11.32,
-      "D": 18.5,
-      "J": -3.02,
-      "week_high_9w": 11.55,
-      "week_low_9w": 9.21
-    },
-    {
       "ts_code": "688523.SH",
       "name": "航天环宇",
       "theme_category": "低空经济/航空",
@@ -745,6 +732,19 @@
       "J": -2.99,
       "week_high_9w": 16.22,
       "week_low_9w": 11.99
+    },
+    {
+      "ts_code": "002399.SZ",
+      "name": "海普瑞",
+      "theme_category": "生物医药",
+      "week_end": "2026-06-12",
+      "close": 9.13,
+      "week_chg": -3.69,
+      "K": 11.41,
+      "D": 18.56,
+      "J": -2.9,
+      "week_high_9w": 11.37,
+      "week_low_9w": 9.07
     },
     {
       "ts_code": "300073.SZ",
@@ -1423,32 +1423,6 @@
       "week_low_9w": 34.51
     },
     {
-      "ts_code": "600267.SH",
-      "name": "海正药业",
-      "theme_category": "生物医药",
-      "week_end": "2026-06-12",
-      "close": 10.0,
-      "week_chg": 2.56,
-      "K": 26.97,
-      "D": 39.65,
-      "J": 1.6,
-      "week_high_9w": 12.24,
-      "week_low_9w": 9.39
-    },
-    {
-      "ts_code": "688139.SH",
-      "name": "海尔生物",
-      "theme_category": "待分类",
-      "week_end": "2026-06-12",
-      "close": 27.07,
-      "week_chg": -9.22,
-      "K": 30.19,
-      "D": 44.46,
-      "J": 1.65,
-      "week_high_9w": 38.0,
-      "week_low_9w": 25.62
-    },
-    {
       "ts_code": "688339.SH",
       "name": "亿华通",
       "theme_category": "待分类",
@@ -1460,6 +1434,32 @@
       "J": 1.65,
       "week_high_9w": 28.94,
       "week_low_9w": 19.08
+    },
+    {
+      "ts_code": "688139.SH",
+      "name": "海尔生物",
+      "theme_category": "待分类",
+      "week_end": "2026-06-12",
+      "close": 26.74,
+      "week_chg": -9.23,
+      "K": 30.2,
+      "D": 44.47,
+      "J": 1.66,
+      "week_high_9w": 37.54,
+      "week_low_9w": 25.31
+    },
+    {
+      "ts_code": "600267.SH",
+      "name": "海正药业",
+      "theme_category": "生物医药",
+      "week_end": "2026-06-12",
+      "close": 9.8,
+      "week_chg": 2.51,
+      "K": 27.04,
+      "D": 39.72,
+      "J": 1.68,
+      "week_high_9w": 12.0,
+      "week_low_9w": 9.2
     },
     {
       "ts_code": "600589.SH",
@@ -1765,13 +1765,13 @@
       "name": "通宇通讯",
       "theme_category": "待分类",
       "week_end": "2026-06-12",
-      "close": 37.01,
+      "close": 36.99,
       "week_chg": -12.92,
       "K": 27.79,
-      "D": 39.79,
-      "J": 3.8,
-      "week_high_9w": 55.0,
-      "week_low_9w": 35.72
+      "D": 39.78,
+      "J": 3.81,
+      "week_high_9w": 54.97,
+      "week_low_9w": 35.7
     },
     {
       "ts_code": "600673.SH",
@@ -2168,13 +2168,13 @@
       "name": "光威复材",
       "theme_category": "待分类",
       "week_end": "2026-06-12",
-      "close": 28.15,
+      "close": 27.67,
       "week_chg": -3.96,
-      "K": 15.09,
-      "D": 19.33,
-      "J": 6.62,
-      "week_high_9w": 37.32,
-      "week_low_9w": 26.93
+      "K": 15.11,
+      "D": 19.35,
+      "J": 6.65,
+      "week_high_9w": 36.68,
+      "week_low_9w": 26.47
     },
     {
       "ts_code": "688387.SH",
@@ -2519,13 +2519,13 @@
       "name": "聚和材料",
       "theme_category": "新能源/电力设备",
       "week_end": "2026-06-12",
-      "close": 89.81,
+      "close": 89.43,
       "week_chg": 2.45,
       "K": 39.15,
       "D": 53.79,
-      "J": 9.87,
-      "week_high_9w": 121.44,
-      "week_low_9w": 79.0
+      "J": 9.88,
+      "week_high_9w": 120.92,
+      "week_low_9w": 78.66
     },
     {
       "ts_code": "300520.SZ",
@@ -2766,13 +2766,13 @@
       "name": "汇金科技",
       "theme_category": "软件与IT服务",
       "week_end": "2026-06-12",
-      "close": 13.19,
-      "week_chg": -10.15,
-      "K": 46.95,
+      "close": 13.16,
+      "week_chg": -10.17,
+      "K": 46.96,
       "D": 64.21,
-      "J": 12.44,
-      "week_high_9w": 22.74,
-      "week_low_9w": 12.44
+      "J": 12.47,
+      "week_high_9w": 22.69,
+      "week_low_9w": 12.41
     },
     {
       "ts_code": "301489.SZ",
