@@ -1,13 +1,102 @@
 {
-  "generated_at": "2026-06-20T16:29:02.435584+08:00",
-  "date": "2026-06-20",
+  "generated_at": "2026-06-21T16:28:45.752073+08:00",
+  "date": "2026-06-21",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-06-20",
+      "date": "2026-06-21",
       "run_at": "?",
       "stats": {},
-      "signals": []
+      "signals": [
+        {
+          "id": "s1",
+          "priority": "fire",
+          "title": "北方华创跃居全球半导体设备第5位，中微首进前20排第13",
+          "chain": "chain1-半导体国产替代",
+          "confidence": "?",
+          "lifecycle": "positioning",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s6",
+          "priority": "fire",
+          "title": "国产AI芯片Q1业绩爆发：寒武纪28.85亿、海光40.34亿、摩尔线程扭亏",
+          "chain": "chain1-半导体国产替代",
+          "confidence": "?",
+          "lifecycle": "positioning",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s5",
+          "priority": "fire",
+          "title": "1.6T光模块放量元年确认：中际旭创订单已至2026年底",
+          "chain": "chain2-算力基建",
+          "confidence": "?",
+          "lifecycle": "consensus",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "rs1",
+          "priority": "fire",
+          "title": "上海具身智能「半小时供应链圈」全球独有 + 智元万台量产里程碑",
+          "chain": "chain2-具身智能",
+          "confidence": "?",
+          "lifecycle": "emerging",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s3",
+          "priority": "fire",
+          "title": "中芯国际7nm良率突破90%，四大12英寸厂2026年新增34万片/月产能",
+          "chain": "chain1-半导体国产替代",
+          "confidence": "?",
+          "lifecycle": "emerging",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s7",
+          "priority": "fire",
+          "title": "全球存储芯片涨价潮：DRAM价格或再涨40%，AI挤压通用DRAM供给",
+          "chain": "chain1-半导体国产替代",
+          "confidence": "?",
+          "lifecycle": "consensus",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "s8",
+          "priority": "fire",
+          "title": "人形机器人2026量产元年：天工3.0下半年量产，Optimus Gen3年底上线",
+          "chain": "chain2-具身智能（跨链）",
+          "confidence": "?",
+          "lifecycle": "emerging",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        },
+        {
+          "id": "rs3",
+          "priority": "fire",
+          "title": "60家国内人形机器人公司全景图谱首次公开——代际切换、场景收敛",
+          "chain": "chain2-具身智能",
+          "confidence": "?",
+          "lifecycle": "emerging",
+          "priced_in": "?",
+          "capital_backing": "?",
+          "tickers": []
+        }
+      ]
     },
     "anomalies": {
       "count": 20,
@@ -117,6 +206,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20260621",
+          "ts_code": "688478.SH",
+          "name": "晶升股份",
+          "pct_chg": 20.01,
+          "vol_ratio": 1.82,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20260609",
           "ts_code": "688783.SH",
           "name": "西安奕材",
@@ -157,19 +254,11 @@
           "attribution": "涨停封板"
         },
         {
-          "date": "20260526",
-          "ts_code": "688183.SH",
-          "name": "生益电子",
+          "date": "20260621",
+          "ts_code": "688598.SH",
+          "name": "金博股份",
           "pct_chg": 20.0,
-          "vol_ratio": 8.43,
-          "attribution": "✅国产替代,✅AI算力,消费电子/元器件板块联动(59/80只)"
-        },
-        {
-          "date": "20260528",
-          "ts_code": "300489.SZ",
-          "name": "光智科技",
-          "pct_chg": 20.0,
-          "vol_ratio": 3.73,
+          "vol_ratio": 8.54,
           "attribution": "涨停封板"
         }
       ]
@@ -189,7 +278,7 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-06-19T16:29:30.248647+08:00",
+      "last_updated": "2026-06-20T16:29:02.519610+08:00",
       "active_count": 10,
       "positions": [
         {
@@ -198,7 +287,7 @@
           "return_pct": 116.45,
           "ret_5d": 20.47,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         },
         {
           "code": "002156.SZ",
@@ -206,7 +295,7 @@
           "return_pct": 72.84,
           "ret_5d": 19.31,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         },
         {
           "code": "688012.SH",
@@ -214,7 +303,7 @@
           "return_pct": 72.43,
           "ret_5d": 18.45,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         },
         {
           "code": "688256.SH",
@@ -222,7 +311,7 @@
           "return_pct": 61.72,
           "ret_5d": 21.57,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         },
         {
           "code": "002371.SZ",
@@ -230,7 +319,7 @@
           "return_pct": 51.95,
           "ret_5d": 8.07,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         },
         {
           "code": "688041.SH",
@@ -238,7 +327,7 @@
           "return_pct": 45.18,
           "ret_5d": 17.14,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         },
         {
           "code": "688126.SH",
@@ -246,7 +335,7 @@
           "return_pct": 44.07,
           "ret_5d": 8.82,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         },
         {
           "code": "688981.SH",
@@ -254,7 +343,7 @@
           "return_pct": 8.27,
           "ret_5d": 12.67,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         },
         {
           "code": "603650.SH",
@@ -262,7 +351,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         },
         {
           "code": "688082.SH",
@@ -270,7 +359,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-19"
+          "last_check": "2026-06-20"
         }
       ]
     }
