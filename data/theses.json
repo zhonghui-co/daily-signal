@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-06-21T16:28:45.833933+08:00",
+  "last_updated": "2026-06-22T16:29:04.859368+08:00",
   "theses": [
     {
       "id": "TH-001",
@@ -158,9 +158,14 @@
           "date": "2026-06-21",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -666,9 +671,24 @@
             "low_since": 207.04,
             "from_high_pct": -6.07
           }
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {
+            "latest_close": 327.3,
+            "latest_date": "20260622",
+            "since_date": "2026-05-06",
+            "since_return_pct": 44.87,
+            "ret_5d_pct": 9.35,
+            "ret_1d_pct": -0.21,
+            "high_since": 349.19,
+            "low_since": 207.04,
+            "from_high_pct": -6.27
+          }
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1211,9 +1231,24 @@
             "low_since": 651.35,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {
+            "latest_close": 1456.99,
+            "latest_date": "20260622",
+            "since_date": "2026-05-06",
+            "since_return_pct": 56.31,
+            "ret_5d_pct": 9.14,
+            "ret_1d_pct": -3.35,
+            "high_since": 1507.46,
+            "low_since": 651.35,
+            "from_high_pct": -3.35
+          }
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "人工智能(AI算力)",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -1828,9 +1863,24 @@
             "low_since": 39.5,
             "from_high_pct": -9.34
           }
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {
+            "latest_close": 71.25,
+            "latest_date": "20260622",
+            "since_date": "2026-05-06",
+            "since_return_pct": 80.38,
+            "ret_5d_pct": 15.78,
+            "ret_1d_pct": 4.37,
+            "high_since": 75.3,
+            "low_since": 39.5,
+            "from_high_pct": -5.38
+          }
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -2435,9 +2485,24 @@
             "low_since": 424.08,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {
+            "latest_close": 745.0,
+            "latest_date": "20260622",
+            "since_date": "2026-05-06",
+            "since_return_pct": 57.0,
+            "ret_5d_pct": 9.2,
+            "ret_1d_pct": 3.32,
+            "high_since": 745.0,
+            "low_since": 424.08,
+            "from_high_pct": 0.0
+          }
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -3011,9 +3076,24 @@
             "low_since": 196.82,
             "from_high_pct": 0.0
           }
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {
+            "latest_close": 372.74,
+            "latest_date": "20260622",
+            "since_date": "2026-05-06",
+            "since_return_pct": 78.53,
+            "ret_5d_pct": 16.49,
+            "ret_1d_pct": 3.54,
+            "high_since": 372.74,
+            "low_since": 196.82,
+            "from_high_pct": 0.0
+          }
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -3669,9 +3749,24 @@
             "low_since": 38.29,
             "from_high_pct": -5.85
           }
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {
+            "latest_close": 91.33,
+            "latest_date": "20260622",
+            "since_date": "2026-05-06",
+            "since_return_pct": 138.09,
+            "ret_5d_pct": 22.89,
+            "ret_1d_pct": 10.0,
+            "high_since": 91.33,
+            "low_since": 38.29,
+            "from_high_pct": 0.0
+          }
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -4355,9 +4450,24 @@
             "low_since": 91.78,
             "from_high_pct": -9.81
           }
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {
+            "latest_close": 145.59,
+            "latest_date": "20260622",
+            "since_date": "2026-05-06",
+            "since_return_pct": 12.04,
+            "ret_5d_pct": 11.55,
+            "ret_1d_pct": 3.48,
+            "high_since": 156.0,
+            "low_since": 91.78,
+            "from_high_pct": -6.67
+          }
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -4801,9 +4911,24 @@
             "low_since": 16.61,
             "from_high_pct": -1.38
           }
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {
+            "latest_close": 33.9,
+            "latest_date": "20260622",
+            "since_date": "2026-05-06",
+            "since_return_pct": 51.68,
+            "ret_5d_pct": 8.58,
+            "ret_1d_pct": 5.28,
+            "high_since": 33.9,
+            "low_since": 16.61,
+            "from_high_pct": 0.0
+          }
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     },
@@ -4988,9 +5113,14 @@
           "date": "2026-06-21",
           "status": "active",
           "metrics": {}
+        },
+        {
+          "date": "2026-06-22",
+          "status": "active",
+          "metrics": {}
         }
       ],
-      "last_check": "2026-06-21",
+      "last_check": "2026-06-22",
       "direction": "集成电路",
       "note": "待更新: 需结合十五五方向最新轮动数据验证逻辑"
     }
