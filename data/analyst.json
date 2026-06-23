@@ -1,142 +1,204 @@
 {
-  "date": "2026-06-22",
-  "assembled_at": "2026-06-22T23:08:00+08:00",
-  "source_files": {
-    "brief": ".analyst-brief-2026-06-22.json (present, 8 signals)",
-    "verify": ".analyst-verify-2026-06-22.json (present, 5 verified)",
-    "funds": ".analyst-funds-2026-06-22.json (present, top15 anomalies + bidding + cross-analysis)"
+  "date": "2026-06-23",
+  "generated_at": "2026-06-23T11:08:00+08:00",
+  "signal_count": 8,
+  "verification_summary": {
+    "triple": 3,
+    "dual": 1,
+    "single": 1,
+    "unverified": 3,
+    "total_verified": 5,
+    "not_checked": ["rs4", "s9", "s10"],
+    "comment": "5条经verify验证(s1-s4+rs1)，rs4/s9/s10未在本轮verify批次中。s2/s3/s4获triple验证，s1获dual验证，rs1为single验证(方向性确认)。"
   },
-  "analysis": [
+  "analyses": [
     {
       "id": "s1",
-      "title": "存储芯片涨价失控：Q1 DRAM合约价暴涨83-90%，Q2预计再涨40%",
-      "analysis": {
-        "variable": "存储芯片价格从温和上涨进入暴涨阶段——Q1 DRAM+83~90%远超市场预期，Q2再+40%持续加速。HBM产能挤占效应放大，HBM已占DRAM晶圆23%。verify确认实际区间更高（90-95%），15年新高。",
-        "magnitude": "暴涨级变量：DRAM创15年新高，Q1行业营收QoQ +81%。NAND闪存大涨65-70%。",
-        "sustainability": "结构性高持续性：HBM产能挤占不可逆，全球三大厂HBM产能全部售罄，转产HBM压缩普通DRAM/NAND供给将持续至2027年。",
-        "pricing": "partially priced — 今日半导体板块大涨已部分反映涨价预期，但涨价持续超预期空间（Q2再+40% vs 市场预期30%以内）尚未充分定价",
-        "capital": "strong — IC设计板块39/46只（85%）联动上涨，存储相关个股（普冉+13.61%、香农芯创+12.92%）涨幅居前，资金高度聚焦存储链"
+      "title": "国产AI芯片Q1业绩井喷：寒武纪28.85亿+350%出货增速，海光40.34亿",
+      "verification": "dual_verified",
+      "assessment": {
+        "variable": "国产AI芯片出货量从实验室走向规模商用——寒武纪年出货11.6万张(+350%)标志进入量产拐点。不再是预期，是可验证的业绩数据。",
+        "magnitude": "寒武纪Q1营收28.85亿(+159.56%)、海光Q1营收40.34亿、摩尔线程扭亏为盈。三个AI芯片龙头上季度同步向好。11.6万张出货量是A股AI芯片板块迄今最大绝对值。",
+        "sustainability": "高。MATCH法案持续收紧出口管制，国产替代政策环境持续有利。AI 算力需求每年翻倍增长，国产AI芯片替代路径存在3-5年确定性。Q1业绩确认增长正在加速而非放缓。",
+        "pricing": "partially_priced",
+        "pricing_rationale": "寒武纪Q1财报4/30已发布(股价从~120→180+，已定价业绩改善)，但36氪6/22披露的'11.6万张出货/350%增速'是增量信息——出货量从'千万级'向'亿级'的量级跳跃，市场尚未充分定价这一拐点意义。",
+        "funding": "strong",
+        "funding_rationale": "IC设计板块今日39/46只联动(85%)，协创数据+14.06%(AI算力板块7/12只)。国产AI芯片是当前半导体热潮的核心驱动力之一。寒武纪/海光未进今日异常Top15但板块整体资金共振极强。"
       }
     },
     {
       "id": "s2",
-      "title": "长鑫存储DRAM月产能20万→30万片+Google评估采购，拟建HBM产线",
-      "analysis": {
-        "variable": "国产DRAM从'有能力做'到'全球大客户认可'的跃迁——Google评估采购是方向性变化信号，标志中国DRAM进入全球供应链。verify确认Google评估采购（multi-source，WCCFTech/CloudNews/Network World），长鑫月产能目标30万片（当前~20万），IPO筹备中。",
-        "magnitude": "大级别方向变化：产能+50%，IPO募资295亿，Google大客户导入，HBM产线建设。",
-        "sustainability": "高持续性：IPO资金+国际客户导入+产能爬坡，未来2-3年持续催化。",
-        "pricing": "partially priced — 招标催化今日半导体设备板块爆发（胜科纳米+15.34%、晶升股份+15.22%），但国际客户导入（Google）和HBM产线建设尚未充分定价",
-        "capital": "strong — 半导体设备板块19/27只（70%）联动上涨，材料板块22/25只（88%）联动上涨，招投标→资金传导链条清晰"
-      },
-      "verify_findings": "verify确认：Google评估采购，CXMT月产能300K目标，IPO募资。source_quality MEDIUM-HIGH (multi-source, 含WCCFTech/CloudNews/Network World)。confidence triple。"
+      "title": "全球存储芯片涨价潮：AI驱动HBM产能挤占，消费DRAM供给紧缩",
+      "verification": "triple_verified",
+      "assessment": {
+        "variable": "存储涨价从周期波动升级为结构性供需失衡——AI需求驱动HBM挤占传统DRAM产能，消费电子DRAM供给严重紧缩。这是产业变革驱动的长期结构调整，不是周期回暖。",
+        "magnitude": "2026全球DRAM供需缺口4.9%，NAND缺口4.2%，三星DDR4产能降至20%以下，DRAM库存降至8周。单季最高涨价75%。三大巨头(三星/海力士/美光)产能同步向HBM倾斜。AI与服务器消耗DRAM占比2026年预计达66%。量级极大——影响全球PC/手机/服务器终端成本。",
+        "sustainability": "高。结构性(非周期)——HBM需求随AI持续增长，传统DRAM产线不会简单恢复。国产替代窗口期至少持续至2027年。",
+        "pricing": "partially_priced",
+        "pricing_rationale": "IC设计板块今日39/46只联动(85%)，普冉+13.61%、香农芯创+12.92%，这是存储涨价逻辑传导至A股IC设计公司的第一天大资金介入。但涨幅仍有限(各~13%)，且长鑫存储(002049)未进异常Top15。涨价已确认但A股定价仍处于初期阶段。",
+        "funding": "strong",
+        "funding_rationale": "IC设计板块85%联动率，量比3.0-5.7(普冉3.00/香农芯创3.47/裕太微5.70)显示资金密集流入。存储涨价+招标扩产双重逻辑驱动，主力资金持续加仓。"
+      }
     },
     {
       "id": "s3",
-      "title": "国家首次设立AI芯片安全可靠评级，9款国产芯片获最高I级认证",
-      "analysis": {
-        "variable": "政策变量从'鼓励研发'升级为'国家级认证'——安全可靠I级认证为政府采购和关键基础设施国产替代扫清准入障碍。verify确认中国信息安全测评中心（itsec.gov.cn）官方公告2026年第2号，首次纳入AI芯片品类。",
-        "magnitude": "大级别政策升级：9款芯片（华为昇腾310/910、海光DCU-3G、平头哥真武、壁仞壁砺等）全部I级，有效期3年。",
-        "sustainability": "持续释放：3年有效期+信创采购长期利好，政府采购指南已出炉。",
-        "pricing": "partially priced — 5/26官方公告，今日板块联动中已部分反映，但信创采购规模尚未落地量化",
-        "capital": "moderate — 今日行情中非主要催化，寒武纪/海光信息等标的涨幅通过半导体板块联动获得"
-      },
-      "verify_findings": "verify确认：itsec.gov.cn官方公告（2026年第2号），9款芯片全部I级，有效期3年。source_quality HIGH (官方+新浪+腾讯云+ESMChina)，confidence triple。"
+      "title": "北方华创跃居全球半导体设备第五，中微公司进入前十三",
+      "verification": "triple_verified",
+      "assessment": {
+        "variable": "中国半导体设备企业首次进入全球前五——从'追赶'进入'并跑'阶段。北方华创超越KLA，这代表国产设备商竞争力的质变。",
+        "magnitude": "北方华创全球第五(仅次于ASML/AMAT/Lam/TEL)，中国企业销售额占比从1.9%→4.7%。中微公司第13，刻蚀设备全球累计出货超6800台。",
+        "sustainability": "高。半导体设备国产化率仅20-25%，清洗/热处理已突破50-70%但光刻<1%、离子注入个位数——替代空间巨大(3-5倍)。长鑫/长江存储招标扩产持续催生设备需求。",
+        "pricing": "fully_priced",
+        "pricing_rationale": "该数据最早源自2月24日行业报道，市场已有4个月消化期。半导体设备板块今日19/27只(70%)联动上涨，胜科纳米+15.34%、晶升股份+15.22%。北方华创(002371)作为龙头已充分定价这一地位。资金已集体定价国产设备龙头叙事。",
+        "funding": "strong",
+        "funding_rationale": "半导体设备板块19/27只(70%)联动，胜科纳米+15.34%/晶升+15.22%，量比3.95/5.85显示放量明显。但板块联动率70%较上周有所回落(从88%极值)——短期过热与分歧并存。"
+      }
     },
     {
       "id": "s4",
-      "title": "华为陶定律folding堆叠突破EUV限制，2026麒麟芯片采用两层folding结构",
-      "analysis": {
-        "variable": "绕过EUV限制的中国方案从理论到量产——folding堆叠技术（τ定律/LogicFolding）从实验室进入麒麟芯片量产，开辟第二条技术路线。verify确认华为官方发布（ISCAS 2026），何庭波正式发表τ定律。",
-        "magnitude": "路径级变化：麒麟手机芯片已采用两层folding结构，未来GPU将采用3-4层堆叠。开辟绕过EUV的中国方案。",
-        "sustainability": "长期技术路线：理论成立+已量产验证，散热为核心挑战（腾讯新闻报道），但持续多年。",
-        "pricing": "partially priced — 5/25华为官方发布，今日通过半导体设备板块联动间接反映（中微公司/北方华创等设备需求增量逻辑）",
-        "capital": "moderate — 今日行情中间接反映，非直接催化"
-      },
-      "verify_findings": "verify确认：华为官方huawei.com发布，IT之家/每日经济新闻/腾讯新闻多源验证。LogicFolding已在麒麟芯片落地。source_quality HIGH，confidence triple。"
-    },
-    {
-      "id": "rs6",
-      "title": "Optimus量产冲刺：7月下旬至8月弗里蒙特投产——距投产仅5-8周",
-      "analysis": {
-        "variable": "量产时间锚从季度级模糊区间(2026H2/Q3)→月份级精确锚(7月下旬-8月)。距量产仅5-8周，T链零部件最后备货窗口已开启。verify确认TradingKey/Counterpoint Research数据，Tesery/Tesorb/botinfo.ai/TechTimes多源验证。",
-        "magnitude": "大——一期年产能100万台，Model S/X产线改造，年500K-100K台内部目标。Counterpoint Research权威第三方数据。",
-        "sustainability": "量产一旦启动，订单持续释放至2027-2028，高持续性。",
-        "pricing": "under-priced — Optimus尚未被纳入特斯拉估值（Piper Sandler指出），T链更未充分定价。今日机器人板块未明显联动，资金冷场。",
-        "capital": "weak today — 今日资金高度聚焦半导体，机器人板块未出现联动响应。T链标的（绿的、双环、三花、拓普等）今日无明显异动。"
-      },
-      "verify_findings": "verify确认：Tesery/Tesorb/botinfo.ai/TechTimes多源验证Fremont 7月下旬-8月投产。一期产能100万台/年，Model S产线改造。source_quality MEDIUM-HIGH，confidence triple。"
-    },
-    {
-      "id": "s5",
-      "title": "Goldman Sachs：科创50调仓引$31亿被动资金流入半导体+硬件；AI hyperscaler 2026 Capex $7570亿",
-      "analysis": {
-        "variable": "被动资金面从中性转为明确利好——$31亿被动流入对A股半导体形成增量资金。$7570亿全球AI Capex规模持续上修。",
-        "magnitude": "中等级别资金流入：$31亿被动资金，$7570亿全球AI Capex（摩根士丹利称2026是AI系统升级关键窗口）。",
-        "sustainability": "调仓是短期事件（6月窗口），但AI Capex持续上修是中长期趋势。",
-        "pricing": "partially priced — 今日半导体板块大涨已部分反映被动资金流入预期",
-        "capital": "strong — 直接匹配今日半导体板块资金流向。协创数据(+14.06%, AI算力板块7/12只联动)等受益。"
+      "title": "Goldman Sachs：2026 AI服务器GPU+ASIC并行发展，光模块加速迈向1.6T",
+      "verification": "triple_verified",
+      "assessment": {
+        "variable": "高盛首次明确提出ASIC成为AI服务器'核心增量驱动力'。框架级变量变化——以前是GPU单平台统治，现在进入GPU+ASIC双平台并进时代。",
+        "magnitude": "ASIC渗透率预计40%，800G光模块出货量同比+253%，1.6T光模块同比+433%。AI capex预计+40%。",
+        "sustainability": "高。ASIC渗透率从0→40%是3-5年趋势。光模块升级周期(800G→1.6T)将持续2-3年。",
+        "pricing": "partially_priced",
+        "pricing_rationale": "高盛报告1月发布，光模块龙头(中际旭创/新易盛等)已有大幅上涨。但ASIC作为'核心增量'这一框架级别判断仍未在A股完全定价——寒武纪ASIC估值仍在传统GPU估值的折扣状态。协创数据今日+14.06%(AI算力板块7/12只联动)显示资金开始关注但尚未全面爆发。",
+        "funding": "moderate",
+        "funding_rationale": "AI算力板块7/12只(58%)联动，低于半导体产业链的其他子板块。协创数据量比4.81显示放量明显，但整体AI算力方向资金集中度不如半导体设备/材料方向。"
       }
     },
     {
-      "id": "rs7",
-      "title": "上海经信委发布2026实景实训专项行动申报通知——6/26截止仅剩4天",
-      "analysis": {
-        "variable": "政策从国家框架（工信部+国资委6/10联合发布）→地方执行落地（上海6/16率先发布）。申报窗口期紧迫（6/26截止）。",
-        "magnitude": "中等级别：地方执行方案，目标2026年底万台级规模落地能力。工信部标委会12/26成立后加速出清劣质产能。",
-        "sustainability": "后续地方采购订单释放，长期催化。",
-        "pricing": "under-priced — 市场未充分反应政策落地后的地方订单释放，今日机器人板块资金冷场",
-        "capital": "weak today — 机器人板块未联动，资金高度聚焦半导体"
+      "id": "rs1",
+      "title": "新华网6/22系统性报道：消费级具身智能多点开花+上游精密减速器供给缺口量化",
+      "verification": "single_verified",
+      "assessment": {
+        "variable": "新华网首次在公开报道中量化精密减速器供给缺口(2027年超20%)。从'预期增量'→'系统性供给缺口量化'——这是叙事性质变。官方媒体背书级别从行业报告→国家媒体确认。",
+        "magnitude": "2027年全球谐波减速器需求600万台 vs 有效产能500万台→缺口超20%。海外哈默纳科扩产保守(2026年仅347万台/年)无法覆盖缺口。五家消费端企业同步布局(上纬启元/宇树/优必选等)。",
+        "sustainability": "高。结构性供给缺口至少持续至2027-2028年。国产减速器替代窗口极其确定。消费级入口打开后需求曲线只会更陡。",
+        "pricing": "under_priced",
+        "pricing_rationale": "机器人板块今日0只进入异常波动Top15。绿的/双环/中大力德等减速器核心标的完全未异动。新华网6/22报道至今日仅1天，A股市场完全未定价供给缺口量化这一新叙事。这是当前信号中under_priced最严重的之一。",
+        "funding": "weak",
+        "funding_rationale": "异常波动Top15中0只机器人标的。资金高度聚焦半导体产业链(60%)，机器人方向完全处于真空期。减速器供给缺口量化未被任何资金关注。"
       }
     },
     {
-      "id": "s8",
-      "title": "成熟存储芯片（NOR/SLC NAND）暴涨100%，全球成熟晶圆产能收缩18%",
-      "analysis": {
-        "variable": "成熟存储从'被忽视的利基市场'变成'供给硬缺口'——全球龙头主动放弃导致产能-18%，无新增建厂计划。需求端IoT/汽车/工业仍在增长。",
-        "magnitude": "价格翻倍级：NOR/SLC NAND暴涨近100%，产能收缩18%且无新建计划。",
-        "sustainability": "结构性不可逆：三星/铠侠/西部数据全面缩减55nm及以上成熟制程，国产替代窗口打开。高持续性。",
-        "pricing": "partially priced — IC设计板块大涨（裕太微+13.74%、普冉+13.61%、香农芯创+12.92%）部分反映，但NOR Flash厂商（兆易创新603986）涨幅可能不足",
-        "capital": "strong — IC设计板块39/46只（85%）联动上涨，量比普遍>3，资金高度参与"
+      "id": "rs4",
+      "title": "Optimus V3 6月底亮相预期进入T-1周窗口：Fremont产线改造完成+供应商进入PPA/RFQ密集程序",
+      "verification": "unverified",
+      "assessment": {
+        "variable": "V3亮相预期进入T-1周执行窗口。供应商从PPA/RFQ→实质性订单的量产切换即将启动。这是一个时间窗口变量——以周计而非以月计。",
+        "magnitude": "Fremont Model S/X产线全面改造为Optimus专用产线(牺牲运营十年的汽车产线)。T链业绩可见性从模糊变清晰。如V3按预期亮相将是量产前最后且最直接的产品形态验证。",
+        "sustainability": "中。单次亮相事件本身是一次性催化，但若亮相超预期将开启6-12个月量产上行周期。若亮相低于预期则可能短期利空。",
+        "pricing": "under_priced",
+        "pricing_rationale": "机器人板块今日0只异常波动。距离6月底亮相窗口仅剩约1周，但A股完全未提前布局。参照6/9-6/12机器人第一波行情(绿的谐波封板79亿)，V3亮相可能触发第二波且力度更大。时间窗口最短、确定性最高、定价不足最严重的信号。",
+        "funding": "weak",
+        "funding_rationale": "机器人方向资金持续真空，所有T链标的(绿的/双环/三花/拓普/汇川/埃斯顿)均未在异常波动Top15中出现。与6/19状态相比背离进一步扩大。"
+      }
+    },
+    {
+      "id": "s9",
+      "title": "人形机器人量产元年：Tesla Optimus Gen3 Q2启动量产，天工3.0 H2交付",
+      "verification": "unverified",
+      "assessment": {
+        "variable": "人形机器人从原型/小批量→真正量产阶段。这是产业级别的变量变化——从'能不能做'到'能做多少'。",
+        "magnitude": "Optimus Gen3年产能目标5万台，天工3.0搭载国产芯片H2规模化量产交付。",
+        "sustainability": "高。量产一旦启动是自我加速的过程。后续季度产能指引只会向上修正。",
+        "pricing": "partially_priced",
+        "pricing_rationale": "量产逻辑在6/9-6/12第一波行情中已有所定价(绿的谐波封板79亿)。但今日机器人板块零异动说明第一波定价已经消化完毕，第二波催化(V3亮相/供给缺口量化/实质性订单)正在酝酿中。",
+        "funding": "moderate",
+        "funding_rationale": "机器人板块整体资金偏弱但非零——6/9-6/12有过集中流入，目前处于整理消化阶段。等待第二轮催化落地。"
+      }
+    },
+    {
+      "id": "s10",
+      "title": "半导体设备国产化率20-25%，MATCH法案倒逼高端设备突破加速",
+      "verification": "unverified",
+      "assessment": {
+        "variable": "国产化率20-25%是替代加速临界区间——清洗/热处理50-70%说明中低端已到位，光刻<1%/离子注入个位数说明高端替代空间巨大。MATCH法案收紧出口管制反而加速替代斜率。",
+        "magnitude": "清洗/热处理突破50-70%，刻蚀设备全球出货6800台(中微)，光刻机<1%——高端空白=3-5倍替代空间。长鑫存储全年设备采购50-60亿美元(350-430亿人民币)是最大增量来源。",
+        "sustainability": "极高。5-10年确定性替代路径。政策(MATCH)+产业(招标)+资本(IPO)三驱动。",
+        "pricing": "partially_priced",
+        "pricing_rationale": "半导体设备板块今日19/27只(70%)联动，已有强烈定价。但20-25%→80%替代率的长期叙事尚未完全折现——多数资金仍以短期景气度交易，而非长期替代路径定价。",
+        "funding": "strong",
+        "funding_rationale": "半导体设备板块连续多日处于资金净流入主导。今日量比3.95-5.85显示放量明显。存储双雄招标扩产提供持续基本面支撑。但高度集中也意味着分歧时杀伤力大。"
       }
     }
   ],
+  "theme_clusters": [
+    {
+      "name": "机器人量产倒计时",
+      "signals": ["rs1", "rs4", "s9"],
+      "narrative": "新华网量化减速器供给缺口+Optimus V3 T-1周亮相+量产元年确认，构成6月底最强催化集群。三重催化叠加但A股今日0只机器人标的进入异常波动Top15——背离较6/19进一步扩大。",
+      "pricing": "under_priced",
+      "directional_consensus": "强烈看多",
+      "divergence_severity": "high"
+    },
+    {
+      "name": "国产AI芯片商业拐点",
+      "signals": ["s1", "s4"],
+      "narrative": "寒武纪出货11.6万张(+350%)+高盛确认ASIC成核心增量驱动力。国产AI芯片从概念→业绩验证期。协创数据+14.06%显示AI算力方向资金开始介入，但寒武纪/海光未进异常Top15。",
+      "pricing": "partially_priced",
+      "directional_consensus": "看多",
+      "divergence_severity": "medium"
+    },
+    {
+      "name": "半导体国产替代加速",
+      "signals": ["s2", "s3", "s10"],
+      "narrative": "存储涨价结构性升级+北方华创全球第五+设备国产化率临界区间。今日半导体产业链全面爆发：设备19/27只(70%)联动、材料22/25只(88%)联动、IC设计39/46只(85%)联动。存储涨价链通过招标扩产→设备/材料/IC设计三线同时验证传导。",
+      "pricing": "partially_priced 部分fully_priced",
+      "directional_consensus": "强烈看多但需警惕短期过热",
+      "divergence_severity": "low"
+    }
+  ],
+  "core_narrative": "半导体产业链暴力突破，机器人方向形成最大背离池",
+  "narrative_detail": "今日(6/23)市场资金高度聚焦半导体产业链——设备(70%联动)、材料(88%联动)、IC设计(85%联动)三线同时爆发。存储双雄招标扩产提供基本面支撑，涨价从周期波动升级为结构性供需失衡。北方华创全球第五/国产化率20-25%临界区间等中长期叙事已被充分定价。\n\n而机器人方向(rs1供给缺口量化+rs4 Optimus V3亮相T-1周)今日完全被市场忽略，异常Top15中0只机器人标的——背离较6/19进一步扩大。新华网首次系统性量化减速器供给缺口(2027年超20%)是全新叙事点，A股完全未定价。6月底V3亮相窗口仅剩约1周，是当前所有信号中时间窗口最短、确定性最高的催化事件。\n\n⚠️ 核心矛盾：半导体产业链已进入Phase 1全面爆发的后期(部分标的已fully_priced)，而机器人Phase 2尚未启动。如果V3亮相或供给缺口叙事发酵，机器人方向资金回流可能引发快速补涨。",
+  "pricing_matrix": {
+    "fully_priced": ["s3: 北方华创全球第五"],
+    "partially_priced": ["s1: 国产AI芯片业绩", "s2: 存储涨价结构性升级", "s4: 高盛ASIC核增量", "s9: 人形机器人量产元年", "s10: 设备国产化率临界区间"],
+    "under_priced": ["rs1: 减速器供给缺口量化(新叙事,完全未定价)", "rs4: Optimus V3亮相T-1周(时间窗口最短)"],
+    "not_rated": []
+  },
+  "funding_assessment": {
+    "strong": ["s1: 国产AI芯片", "s2: 存储涨价", "s3: 北方华创", "s10: 设备国产化率"],
+    "moderate": ["s4: 高盛ASIC", "s9: 机器人量产元年"],
+    "weak": ["rs1: 减速器供给缺口", "rs4: Optimus V3亮相"]
+  },
   "divergences": [
     {
-      "level": "high",
-      "type": "存储三信号共振 vs 机器人冷场",
-      "description": "存储链三信号（s1涨价失控+s2长鑫扩产+s8成熟缺货）内部高度一致形成强合力，资金积极响应（IC设计85%/材料88%/设备70%联动率）。机器人方向两信号（rs6 Optimus 5-8周倒计时+rs7上海政策6/26截止4天）信号密度极高但资金完全无视，形成今日最大背离。",
-      "key_question": "6/23-6/24机器人联动率能否突破？若继续冷场则需重新评估T链定价时间表。"
+      "severity": "high",
+      "pair": "半导体产业链全面爆发 vs 机器人方向零异动",
+      "detail": "半导体设备70%+联动、材料88%+联动、IC设计85%+联动，而机器人方向0只进入异常Top15。分歧较6/19进一步扩大——21年6/19状态'机器人仅温和响应'到今日已恶化至'完全忽略'。但催化剂(新华网量化缺口+Optimus V3亮相)却在增强。",
+      "trigger": "V3亮相(6月底)或机器人板块出现首只>10%涨幅标的"
     },
     {
-      "level": "high",
-      "type": "今日资金高度集中半导体，医药板块资金出逃",
-      "description": "异常波动Top15中半导体相关10只（67%），博瑞医药（-16.32%，量比5.18）资金明显出逃，形成半导体抽血效应。板块联动率70-88%属极端水平，情绪驱动强。",
-      "key_question": "半导体板块极端联动率（85-88%）是否为consensus高潮信号？需警惕板块过热后分歧回调。"
+      "severity": "medium",
+      "pair": "存储涨价全球结构性紧张 vs A股IC设计首日才启动",
+      "detail": "全球DRAM缺口4.9%/NAND缺口4.2%/三星DDR4降至20%以下，但A股IC设计公司今日是第一天才大资金介入(普冉+13.61%/香农芯创+12.92%)，长鑫存储(002049)未进异常Top15。涨价幅度和A股定价程度之间仍有差距。",
+      "trigger": "长鑫存储/普冉/兆易创新出现连续放量上涨"
     },
     {
-      "level": "medium",
-      "type": "政策催化(rs7) vs 市场无视",
-      "description": "上海实景实训6/26截止倒计时4天，工信部+国资委联合行动级别高，但市场资金完全无视此催化剂。政策落地速度vs市场定价速度错配。",
-      "key_question": "政策催化剂是否需要更长传导时间，或市场认为订单规模不及预期？"
+      "severity": "high",
+      "pair": "新华网量化减速器缺口(A股完全未定价) vs 半导体全面爆发",
+      "detail": "新华网6/22首次量化2027年减速器供给缺口超20%，这是官方媒体对供需失衡的系统性确认。而A股机器人标的今日无一只异动。缺口量化是全新叙事线，与半导体产业链的热度形成极端反差。如果缺口叙事发酵，转换速度可能很快——因为供给缺口是硬约束(不是预期)。",
+      "trigger": "机器人板块出现增量资金驱动(催化或板块联动)",
+      "most_actionable": "rs1和rs4是所有信号中定价不足最严重+确定性的组合"
+    },
+    {
+      "severity": "medium",
+      "pair": "招投标利好持续发酵 vs 北方华创已回复至瓶颈",
+      "detail": "长鑫存储Q2设备招标(年50-60亿美元)+长江存储2号厂房管线招标是2026年设备最大增量需求来源。但北方华创作为全球第五龙头的定价已相对充分(从2月至今)。招标利好兑现与股价筑顶之间形成周期性背离——利好还在但空间递减。",
+      "trigger": "设备板块联动率下降至60%以下或新产品订单确认"
     }
   ],
-  "core_narrative": "存储双雄扩产引爆半导体产业链，资金高度聚焦国产替代主线。长鑫/长江存储招标公告（全年50-60亿美元设备采购）催化今日半导体设备/材料/IC设计板块全面爆发。DRAM价格暴涨超预期（Q1+90~95%创15年新高）、AI芯片国家I级认证、华为folding堆叠技术突破形成多因子共振。验证存储超级周期已从预期→业绩兑现阶段。机器人方向（Optimus 5-8周倒计时+上海政策6/26截止）信号高度密集但资金未响应，形成今日最大背离。6/23-6/24为机器人联动率突破关键验证窗口——若继续冷场则T链定价可能推迟至7月（Optimus临近投产），若突破则Phase 2正式启动。今日资金面风险：半导体板块联动率极高（70-88%属情绪极值），短期过热后的分歧回调风险需警惕。存储链三重信号（涨价+扩产+成熟缺货）内部高度一致，为当前最强合力主线。",
-  "stats": {
-    "total_signals": 8,
-    "pricing_distribution": {
-      "fully_priced": 0,
-      "partially_priced": 5,
-      "under_priced": 2,
-      "unpriced": 0
-    },
-    "capital_distribution": {
-      "strong": 4,
-      "moderate": 2,
-      "weak": 2
-    },
-    "divergences_total": 3,
-    "divergences_high": 2,
-    "divergences_medium": 1,
-    "divergences_low": 0
-  }
+  "most_under_priced": "rs4(Optimus V3亮相T-1周) > rs1(减速器供给缺口量化) > 其余",
+  "most_under_priced_rationale": "rs4时间窗口最短(6月底~1周)、确定性最高(Fremont产线已改造完成)、A股完全未布局。rs1新叙事(官方媒体首次量化缺口)完全未定价。二者叠加形成机器人方向最大背离，一旦触发资金回流，补涨空间最大。",
+  "risk_warnings": [
+    "半导体产业链连续多日高度联动(70-88%)，短期动能强但分歧时杀伤力大。若招标利好兑现或市场风格切换，可能引发同步回调。",
+    "博瑞医药(-16.32%,量比5.18)医药板块放量下跌，资金明显出逃，与半导体形成跷跷板效应。若医药持续失血可能拖累整体市场情绪。",
+    "rs4(Optimus V3亮相)和rs1(新华网报道)均未获完整verify(single/unverified)，信源可靠性需进一步确认。",
+    "半导体/AI算力方向部分标的(北方华创等)已接近fully_priced，追高风险显著增加。",
+    "涨停封板个股(汇金科技/瑞丰高材等)若无明确的半导体产业链关联，需警惕游资炒作一日游风险。"
+  ],
+  "outlook": "半导体Phase 1全面爆发后期，机器人Phase 2尚未启动。V3亮相(6月底)是当前最关键的事件催化剂。如果V3亮相超预期，机器人板块可能在1-2个交易日内完成从弱到强的转换。核心关注窗口：6/23-6/30。"
 }

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-22T16:29:04.775550+08:00",
-  "date": "2026-06-22",
+  "generated_at": "2026-06-23T16:26:56.348160+08:00",
+  "date": "2026-06-23",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-06-22",
+      "date": "2026-06-23",
       "run_at": "?",
       "stats": {},
       "signals": []
@@ -12,14 +12,6 @@
     "anomalies": {
       "count": 20,
       "top": [
-        {
-          "date": "20260622",
-          "ts_code": "300561.SZ",
-          "name": "汇金科技",
-          "pct_chg": 20.03,
-          "vol_ratio": 2.78,
-          "attribution": "涨停封板"
-        },
         {
           "date": "20260518",
           "ts_code": "688811.SH",
@@ -117,22 +109,6 @@
           "attribution": "涨停封板"
         },
         {
-          "date": "20260620",
-          "ts_code": "688478.SH",
-          "name": "晶升股份",
-          "pct_chg": 20.01,
-          "vol_ratio": 1.82,
-          "attribution": "涨停封板"
-        },
-        {
-          "date": "20260621",
-          "ts_code": "688478.SH",
-          "name": "晶升股份",
-          "pct_chg": 20.01,
-          "vol_ratio": 1.82,
-          "attribution": "涨停封板"
-        },
-        {
           "date": "20260609",
           "ts_code": "688783.SH",
           "name": "西安奕材",
@@ -165,23 +141,47 @@
           "attribution": "涨停封板"
         },
         {
-          "date": "20260620",
-          "ts_code": "688598.SH",
-          "name": "金博股份",
+          "date": "20260526",
+          "ts_code": "688183.SH",
+          "name": "生益电子",
           "pct_chg": 20.0,
-          "vol_ratio": 8.54,
+          "vol_ratio": 8.43,
+          "attribution": "✅国产替代,✅AI算力,消费电子/元器件板块联动(59/80只)"
+        },
+        {
+          "date": "20260528",
+          "ts_code": "300489.SZ",
+          "name": "光智科技",
+          "pct_chg": 20.0,
+          "vol_ratio": 3.73,
+          "attribution": "涨停封板"
+        },
+        {
+          "date": "20260529",
+          "ts_code": "300489.SZ",
+          "name": "光智科技",
+          "pct_chg": 20.0,
+          "vol_ratio": 3.73,
+          "attribution": "涨停封板"
+        },
+        {
+          "date": "20260530",
+          "ts_code": "300489.SZ",
+          "name": "光智科技",
+          "pct_chg": 20.0,
+          "vol_ratio": 3.73,
           "attribution": "涨停封板"
         }
       ]
     },
     "themes": {
       "available": true,
-      "date": "20260622",
+      "date": "20260623",
       "top_themes": []
     },
     "kdj": {
       "available": true,
-      "date": "2026-06-19",
+      "date": "2026-06-23",
       "count": 0,
       "stocks": []
     },
@@ -191,7 +191,7 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-06-21T16:28:45.833933+08:00",
+      "last_updated": "2026-06-19T16:29:30.248647+08:00",
       "active_count": 10,
       "positions": [
         {
@@ -200,7 +200,7 @@
           "return_pct": 116.45,
           "ret_5d": 20.47,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         },
         {
           "code": "002156.SZ",
@@ -208,7 +208,7 @@
           "return_pct": 72.84,
           "ret_5d": 19.31,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         },
         {
           "code": "688012.SH",
@@ -216,7 +216,7 @@
           "return_pct": 72.43,
           "ret_5d": 18.45,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         },
         {
           "code": "688256.SH",
@@ -224,7 +224,7 @@
           "return_pct": 61.72,
           "ret_5d": 21.57,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         },
         {
           "code": "002371.SZ",
@@ -232,7 +232,7 @@
           "return_pct": 51.95,
           "ret_5d": 8.07,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         },
         {
           "code": "688041.SH",
@@ -240,7 +240,7 @@
           "return_pct": 45.18,
           "ret_5d": 17.14,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         },
         {
           "code": "688126.SH",
@@ -248,7 +248,7 @@
           "return_pct": 44.07,
           "ret_5d": 8.82,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         },
         {
           "code": "688981.SH",
@@ -256,7 +256,7 @@
           "return_pct": 8.27,
           "ret_5d": 12.67,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         },
         {
           "code": "603650.SH",
@@ -264,7 +264,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         },
         {
           "code": "688082.SH",
@@ -272,7 +272,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-21"
+          "last_check": "2026-06-19"
         }
       ]
     }
