@@ -1,6 +1,6 @@
 {
   "date": "2026-06-23",
-  "generated_at": "2026-06-23T09:15:36.575379",
+  "generated_at": "2026-06-23T16:35:14.932037",
   "count": 217,
   "threshold": "J < 15",
   "params": "KDJ(9,3,3)",
@@ -1696,19 +1696,6 @@
       "week_low_9w": 13.5
     },
     {
-      "ts_code": "000597.SZ",
-      "name": "东北制药",
-      "theme_category": "生物医药",
-      "week_end": "2026-06-18",
-      "close": 4.39,
-      "week_chg": -4.15,
-      "K": 14.22,
-      "D": 19.21,
-      "J": 4.23,
-      "week_high_9w": 5.31,
-      "week_low_9w": 4.3
-    },
-    {
       "ts_code": "688382.SH",
       "name": "益方生物",
       "theme_category": "待分类",
@@ -1720,6 +1707,19 @@
       "J": 4.38,
       "week_high_9w": 24.13,
       "week_low_9w": 15.78
+    },
+    {
+      "ts_code": "000597.SZ",
+      "name": "东北制药",
+      "theme_category": "生物医药",
+      "week_end": "2026-06-18",
+      "close": 4.34,
+      "week_chg": -4.19,
+      "K": 14.28,
+      "D": 19.2,
+      "J": 4.45,
+      "week_high_9w": 5.25,
+      "week_low_9w": 4.25
     },
     {
       "ts_code": "600316.SH",
