@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-23",
-  "generated_at": "2026-06-23T16:35:14.932037",
+  "date": "2026-06-24",
+  "generated_at": "2026-06-24T16:36:44.271795",
   "count": 217,
   "threshold": "J < 15",
   "params": "KDJ(9,3,3)",
@@ -864,19 +864,6 @@
       "week_low_9w": 0.21
     },
     {
-      "ts_code": "600572.SH",
-      "name": "康恩贝",
-      "theme_category": "生物医药",
-      "week_end": "2026-06-18",
-      "close": 4.12,
-      "week_chg": -0.24,
-      "K": 11.37,
-      "D": 17.98,
-      "J": -1.84,
-      "week_high_9w": 4.72,
-      "week_low_9w": 4.06
-    },
-    {
       "ts_code": "688266.SH",
       "name": "泽璟制药",
       "theme_category": "待分类",
@@ -927,6 +914,19 @@
       "J": -1.6,
       "week_high_9w": 15.18,
       "week_low_9w": 11.48
+    },
+    {
+      "ts_code": "600572.SH",
+      "name": "康恩贝",
+      "theme_category": "生物医药",
+      "week_end": "2026-06-18",
+      "close": 3.97,
+      "week_chg": -0.25,
+      "K": 11.55,
+      "D": 18.04,
+      "J": -1.44,
+      "week_high_9w": 4.55,
+      "week_low_9w": 3.91
     },
     {
       "ts_code": "688707.SH",

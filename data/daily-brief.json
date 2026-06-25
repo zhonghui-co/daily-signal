@@ -1,10 +1,13 @@
 {
-  "generated_at": "2026-06-24T16:24:55.156612+08:00",
-  "date": "2026-06-24",
+  "generated_at": "2026-06-25T16:28:46.304874+08:00",
+  "date": "2026-06-25",
   "sections": {
     "signals": {
-      "available": false,
-      "error": "Expecting ',' delimiter: line 53 column 101 (char 2382)"
+      "available": true,
+      "date": "?",
+      "run_at": "?",
+      "stats": {},
+      "signals": []
     },
     "anomalies": {
       "count": 20,
@@ -173,12 +176,12 @@
     },
     "themes": {
       "available": true,
-      "date": "20260624",
+      "date": "20260625",
       "top_themes": []
     },
     "kdj": {
       "available": true,
-      "date": "2026-06-23",
+      "date": "2026-06-24",
       "count": 0,
       "stocks": []
     },
