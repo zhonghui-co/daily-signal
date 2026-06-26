@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-25T16:28:46.304874+08:00",
-  "date": "2026-06-25",
+  "generated_at": "2026-06-26T16:27:32.490509+08:00",
+  "date": "2026-06-26",
   "sections": {
     "signals": {
       "available": true,
-      "date": "?",
+      "date": "2026-06-26",
       "run_at": "?",
       "stats": {},
       "signals": []
@@ -176,12 +176,12 @@
     },
     "themes": {
       "available": true,
-      "date": "20260625",
+      "date": "20260626",
       "top_themes": []
     },
     "kdj": {
       "available": true,
-      "date": "2026-06-24",
+      "date": "2026-06-25",
       "count": 0,
       "stocks": []
     },
@@ -191,72 +191,72 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-06-23T16:26:56.425023+08:00",
+      "last_updated": "2026-06-25T16:28:46.396390+08:00",
       "active_count": 10,
       "positions": [
         {
           "code": "600584.SH",
           "name": "长电科技",
-          "return_pct": 124.66,
-          "ret_5d": 12.02,
+          "return_pct": 171.84,
+          "ret_5d": 25.6,
           "warnings": [],
-          "last_check": "2026-06-23"
-        },
-        {
-          "code": "688012.SH",
-          "name": "中微公司",
-          "return_pct": 78.04,
-          "ret_5d": 16.53,
-          "warnings": [],
-          "last_check": "2026-06-23"
+          "last_check": "2026-06-25"
         },
         {
           "code": "002156.SZ",
           "name": "通富微电",
-          "return_pct": 73.22,
-          "ret_5d": 8.72,
+          "return_pct": 96.99,
+          "ret_5d": 13.97,
           "warnings": [],
-          "last_check": "2026-06-23"
+          "last_check": "2026-06-25"
+        },
+        {
+          "code": "688012.SH",
+          "name": "中微公司",
+          "return_pct": 91.17,
+          "ret_5d": 10.87,
+          "warnings": [],
+          "last_check": "2026-06-25"
         },
         {
           "code": "002371.SZ",
           "name": "北方华创",
-          "return_pct": 57.53,
-          "ret_5d": 11.2,
+          "return_pct": 68.17,
+          "ret_5d": 10.67,
           "warnings": [],
-          "last_check": "2026-06-23"
+          "last_check": "2026-06-25"
         },
         {
           "code": "688256.SH",
           "name": "寒武纪",
-          "return_pct": 51.59,
-          "ret_5d": 8.11,
+          "return_pct": 61.46,
+          "ret_5d": -0.16,
           "warnings": [],
-          "last_check": "2026-06-23"
-        },
-        {
-          "code": "688126.SH",
-          "name": "沪硅产业",
-          "return_pct": 44.16,
-          "ret_5d": 3.77,
-          "warnings": [],
-          "last_check": "2026-06-23"
+          "last_check": "2026-06-25"
         },
         {
           "code": "688041.SH",
           "name": "海光信息",
-          "return_pct": 40.38,
-          "ret_5d": 7.76,
+          "return_pct": 59.54,
+          "ret_5d": 9.9,
           "warnings": [],
-          "last_check": "2026-06-23"
+          "last_check": "2026-06-25"
+        },
+        {
+          "code": "688126.SH",
+          "name": "沪硅产业",
+          "return_pct": 49.04,
+          "ret_5d": 3.45,
+          "warnings": [],
+          "last_check": "2026-06-25"
         },
         {
           "code": "688981.SH",
           "name": "中芯国际",
-          "return_pct": 9.04,
-          "ret_5d": 8.88,
+          "return_pct": 20.71,
+          "ret_5d": 11.49,
           "warnings": [],
-          "last_check": "2026-06-23"
+          "last_check": "2026-06-25"
         },
         {
           "code": "603650.SH",
@@ -264,7 +264,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-23"
+          "last_check": "2026-06-25"
         },
         {
           "code": "688082.SH",
@@ -272,7 +272,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-23"
+          "last_check": "2026-06-25"
         }
       ]
     }
