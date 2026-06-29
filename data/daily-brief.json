@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-28T16:30:13.308809+08:00",
-  "date": "2026-06-28",
+  "generated_at": "2026-06-29T16:26:09.340863+08:00",
+  "date": "2026-06-29",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-06-28",
+      "date": "2026-06-29",
       "run_at": "?",
       "stats": {},
       "signals": []
@@ -14,14 +14,6 @@
       "top": [
         {
           "date": "20260627",
-          "ts_code": "002898.SZ",
-          "name": "赛隆退",
-          "pct_chg": -95.78,
-          "vol_ratio": 6.2,
-          "attribution": "跌停封板"
-        },
-        {
-          "date": "20260628",
           "ts_code": "002898.SZ",
           "name": "赛隆退",
           "pct_chg": -95.78,
@@ -171,11 +163,21 @@
           "pct_chg": 20.0,
           "vol_ratio": 8.43,
           "attribution": "✅国产替代,✅AI算力,消费电子/元器件板块联动(59/80只)"
+        },
+        {
+          "date": "20260528",
+          "ts_code": "300489.SZ",
+          "name": "光智科技",
+          "pct_chg": 20.0,
+          "vol_ratio": 3.73,
+          "attribution": "涨停封板"
         }
       ]
     },
     "themes": {
-      "available": false
+      "available": true,
+      "date": "20260629",
+      "top_themes": []
     },
     "kdj": {
       "available": true,
