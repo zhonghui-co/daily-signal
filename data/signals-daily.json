@@ -1,111 +1,179 @@
 {
   "golden": [
     [
-      "002837",
-      "英维克",
-      "新能源(光风储电)",
-      "工业设备/通用机械",
-      "20260630",
-      79.56,
-      75.52,
-      75.51
+      "000703",
+      "恒逸石化",
+      "新材料",
+      "化工/材料",
+      "20260701",
+      14.64,
+      13.79,
+      13.73
     ],
     [
-      "688503",
-      "聚和材料",
+      "002653",
+      "海思科",
+      "生物医药与器械",
+      "生物医药",
+      "20260701",
+      72.96,
+      53.59,
+      53.26
+    ],
+    [
+      "301382",
+      "蜂助手",
+      "国产软件与信创",
+      "软件与IT服务",
+      "20260701",
+      45.5,
+      41.38,
+      41.35
+    ],
+    [
+      "600379",
+      "宝光股份",
       "新能源(光风储电)",
       "新能源/电力设备",
-      "20260630",
-      132.7,
-      96.18,
-      96.08
+      "20260701",
+      15.38,
+      13.47,
+      13.47
+    ],
+    [
+      "603019",
+      "中科曙光",
+      "人工智能(AI算力)",
+      "待分类",
+      "20260701",
+      102.45,
+      90.44,
+      90.15
+    ],
+    [
+      "688266",
+      "泽璟制药",
+      "生物医药与器械",
+      "待分类",
+      "20260701",
+      130.0,
+      98.36,
+      97.73
+    ],
+    [
+      "688387",
+      "信科移动",
+      "国产软件与信创",
+      "通信/6G",
+      "20260701",
+      20.41,
+      17.5,
+      17.42
+    ],
+    [
+      "688685",
+      "迈信林",
+      "商业航天与低空",
+      "低空经济/航空",
+      "20260701",
+      54.75,
+      48.5,
+      48.42
     ]
   ],
   "death": [
     [
-      "000601",
-      "韶能股份",
-      "新能源(光风储电)",
+      "000837",
+      "秦川机床",
+      "高端装备(工业母机)",
+      "待分类",
+      "20260701",
+      11.4,
+      11.73,
+      11.77
+    ],
+    [
+      "002015",
+      "协鑫能科",
+      "人工智能(AI算力)",
       "电力运营",
-      "20260630",
-      5.85,
-      6.85,
-      6.89
+      "20260701",
+      16.8,
+      18.46,
+      18.54
     ],
     [
-      "300097",
-      "智云股份",
-      "具身智能/机器人",
-      "工业设备/通用机械",
-      "20260630",
-      9.08,
-      9.34,
-      9.35
-    ],
-    [
-      "300890",
-      "翔丰华",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260630",
-      33.17,
-      34.26,
-      34.36
-    ],
-    [
-      "301157",
-      "华塑科技",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260630",
-      62.48,
-      68.03,
-      68.2
-    ],
-    [
-      "301219",
-      "腾远钴业",
+      "002240",
+      "盛新锂能",
       "新能源(光风储电)",
       "化工/材料",
-      "20260630",
-      54.8,
-      57.81,
-      57.98
+      "20260701",
+      45.65,
+      46.28,
+      46.3
     ],
     [
-      "688005",
-      "容百科技",
+      "002782",
+      "可立克",
       "新能源(光风储电)",
+      "消费电子/元器件",
+      "20260701",
+      20.68,
+      23.67,
+      23.71
+    ],
+    [
+      "002943",
+      "宇晶股份",
+      "集成电路",
       "新能源/电力设备",
-      "20260630",
-      30.6,
-      32.46,
-      32.53
+      "20260701",
+      48.65,
+      51.83,
+      52.08
+    ],
+    [
+      "301631",
+      "壹连科技",
+      "集成电路",
+      "消费电子/元器件",
+      "20260701",
+      76.6,
+      78.34,
+      78.49
+    ],
+    [
+      "603158",
+      "腾龙股份",
+      "新能源汽车",
+      "汽车零部件",
+      "20260701",
+      12.0,
+      13.14,
+      13.24
+    ],
+    [
+      "688692",
+      "达梦数据",
+      "国产软件与信创",
+      "软件与IT服务",
+      "20260701",
+      246.06,
+      257.6,
+      258.7
     ]
   ],
   "b1": [
     [
-      "002203",
-      "海亮股份",
+      "002254",
+      "泰和新材",
       "新材料",
       "化工/材料",
-      "20260629",
-      21.73,
-      -7.3,
-      22.82,
-      20.44,
-      3
-    ],
-    [
-      "002733",
-      "雄韬股份",
-      "氢能",
-      "待分类",
-      "20260629",
-      31.9,
-      7.1,
-      33.85,
-      31.12,
+      "20260701",
+      17.29,
+      10.6,
+      17.67,
+      15.55,
       3
     ],
     [
@@ -121,15 +189,27 @@
       3
     ],
     [
-      "301322",
-      "绿通科技",
-      "新能源汽车",
-      "汽车零部件",
-      "20260629",
-      53.68,
-      5.1,
-      55.84,
-      48.98,
+      "002957",
+      "科瑞技术",
+      "具身智能/机器人",
+      "工业设备/通用机械",
+      "20260701",
+      51.33,
+      1.4,
+      56.05,
+      50.01,
+      3
+    ],
+    [
+      "301041",
+      "金百泽",
+      "集成电路",
+      "消费电子/元器件",
+      "20260701",
+      33.26,
+      13.0,
+      34.55,
+      32.84,
       3
     ],
     [
@@ -145,6 +225,18 @@
       3
     ],
     [
+      "301322",
+      "绿通科技",
+      "新能源汽车",
+      "汽车零部件",
+      "20260701",
+      54.34,
+      -2.7,
+      55.86,
+      49.2,
+      3
+    ],
+    [
       "600330",
       "天通股份",
       "人工智能(AI算力)",
@@ -157,6 +249,30 @@
       3
     ],
     [
+      "600330",
+      "天通股份",
+      "人工智能(AI算力)",
+      "消费电子/元器件",
+      "20260701",
+      29.94,
+      -6.8,
+      31.7,
+      28.4,
+      3
+    ],
+    [
+      "603916",
+      "苏博特",
+      "集成电路",
+      "化工/材料",
+      "20260701",
+      13.47,
+      -2.0,
+      14.11,
+      13.44,
+      3
+    ],
+    [
       "002203",
       "海亮股份",
       "新材料",
@@ -166,6 +282,18 @@
       3.7,
       22.88,
       20.58,
+      2
+    ],
+    [
+      "002203",
+      "海亮股份",
+      "新材料",
+      "化工/材料",
+      "20260701",
+      22.05,
+      0.9,
+      22.9,
+      20.7,
       2
     ],
     [
@@ -185,18 +313,6 @@
       "蔚蓝锂芯",
       "集成电路",
       "新能源/电力设备",
-      "20260629",
-      18.46,
-      0.0,
-      20.6,
-      18.28,
-      2
-    ],
-    [
-      "002245",
-      "蔚蓝锂芯",
-      "集成电路",
-      "新能源/电力设备",
       "20260630",
       18.71,
       -3.3,
@@ -205,15 +321,39 @@
       2
     ],
     [
+      "002245",
+      "蔚蓝锂芯",
+      "集成电路",
+      "新能源/电力设备",
+      "20260701",
+      19.02,
+      2.0,
+      20.37,
+      18.3,
+      2
+    ],
+    [
+      "002491",
+      "通鼎互联",
+      "国产软件与信创",
+      "通信/6G",
+      "20260701",
+      29.59,
+      5.9,
+      30.34,
+      24.37,
+      2
+    ],
+    [
       "002552",
       "宝鼎科技",
       "集成电路",
       "消费电子/元器件",
-      "20260629",
-      60.12,
-      2.1,
-      65.19,
-      49.46,
+      "20260701",
+      60.2,
+      5.2,
+      65.34,
+      50.41,
       2
     ],
     [
@@ -229,6 +369,54 @@
       2
     ],
     [
+      "002851",
+      "麦格米特",
+      "新能源(光风储电)",
+      "新能源/电力设备",
+      "20260701",
+      156.45,
+      -2.3,
+      161.69,
+      143.48,
+      2
+    ],
+    [
+      "002885",
+      "京泉华",
+      "人工智能(AI算力)",
+      "消费电子/元器件",
+      "20260701",
+      39.88,
+      8.7,
+      42.25,
+      39.12,
+      2
+    ],
+    [
+      "002903",
+      "宇环数控",
+      "高端装备(工业母机)",
+      "工业设备/通用机械",
+      "20260701",
+      43.7,
+      2.9,
+      48.01,
+      42.68,
+      2
+    ],
+    [
+      "002980",
+      "华盛昌",
+      "集成电路",
+      "工业设备/通用机械",
+      "20260701",
+      109.3,
+      5.6,
+      117.47,
+      99.45,
+      2
+    ],
+    [
       "003022",
       "联泓新科",
       "新材料",
@@ -238,6 +426,18 @@
       3.5,
       26.5,
       24.95,
+      2
+    ],
+    [
+      "300131",
+      "英唐智控",
+      "集成电路",
+      "消费电子/元器件",
+      "20260701",
+      18.51,
+      2.8,
+      18.96,
+      17.91,
       2
     ],
     [
@@ -265,27 +465,51 @@
       2
     ],
     [
+      "300626",
+      "华瑞股份",
+      "具身智能/机器人",
+      "工业设备/通用机械",
+      "20260701",
+      35.8,
+      0.6,
+      37.87,
+      33.71,
+      2
+    ],
+    [
       "300700",
       "岱勒新材",
       "集成电路",
       "化工/材料",
-      "20260629",
-      20.83,
-      -6.5,
-      22.13,
-      19.78,
+      "20260701",
+      19.98,
+      -11.7,
+      22.06,
+      19.85,
       2
     ],
     [
-      "300769",
-      "德方纳米",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260629",
-      63.13,
-      0.8,
-      67.55,
-      62.53,
+      "300790",
+      "宇瞳光学",
+      "具身智能/机器人",
+      "光通信与光学",
+      "20260701",
+      24.75,
+      10.8,
+      25.54,
+      23.91,
+      2
+    ],
+    [
+      "300976",
+      "达瑞电子",
+      "集成电路",
+      "消费电子/元器件",
+      "20260701",
+      76.89,
+      -4.7,
+      79.42,
+      66.64,
       2
     ],
     [
@@ -301,27 +525,27 @@
       2
     ],
     [
-      "301228",
-      "实朴检测",
-      "生物医药与器械",
-      "待分类",
-      "20260629",
-      71.88,
-      8.1,
-      76.74,
-      67.48,
+      "301176",
+      "逸豪新材",
+      "集成电路",
+      "消费电子/元器件",
+      "20260701",
+      64.99,
+      -17.3,
+      65.46,
+      52.29,
       2
     ],
     [
-      "301281",
-      "科源制药",
-      "生物医药与器械",
-      "待分类",
-      "20260629",
-      44.81,
-      5.3,
-      46.7,
-      43.23,
+      "301196",
+      "唯科科技",
+      "具身智能/机器人",
+      "工业设备/通用机械",
+      "20260701",
+      122.24,
+      -9.8,
+      132.81,
+      114.42,
       2
     ],
     [
@@ -329,35 +553,11 @@
       "云汉芯城",
       "国产软件与信创",
       "待分类",
-      "20260629",
-      165.4,
-      2.7,
-      185.43,
-      164.0,
-      2
-    ],
-    [
-      "301603",
-      "乔锋智能",
-      "高端装备(工业母机)",
-      "工业设备/通用机械",
-      "20260629",
-      122.04,
-      3.2,
-      133.88,
-      120.17,
-      2
-    ],
-    [
-      "601991",
-      "大唐发电",
-      "新能源(光风储电)",
-      "电力运营",
-      "20260629",
-      7.04,
-      -11.9,
-      8.08,
-      6.91,
+      "20260701",
+      167.2,
+      9.6,
+      183.23,
+      164.57,
       2
     ],
     [
@@ -377,18 +577,6 @@
       "天创时尚",
       "具身智能/机器人",
       "消费/医药/传媒",
-      "20260629",
-      22.16,
-      -5.3,
-      23.21,
-      19.15,
-      2
-    ],
-    [
-      "603608",
-      "天创时尚",
-      "具身智能/机器人",
-      "消费/医药/传媒",
       "20260630",
       22.82,
       8.2,
@@ -401,27 +589,443 @@
       "炬光科技",
       "集成电路",
       "光通信与光学",
-      "20260629",
-      333.5,
-      4.6,
-      354.35,
-      315.0,
+      "20260701",
+      332.98,
+      13.0,
+      354.74,
+      318.73,
       2
     ],
     [
-      "688290",
-      "景业智能",
-      "具身智能/机器人",
-      "机器人/自动化",
-      "20260629",
-      63.98,
-      9.4,
-      64.48,
-      62.23,
+      "688628",
+      "优利德",
+      "集成电路",
+      "工业设备/通用机械",
+      "20260701",
+      96.59,
+      2.9,
+      97.08,
+      86.86,
       2
     ]
   ],
   "b2": [
+    {
+      "code": "000990",
+      "name": "诚志股份",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260701",
+      "close": 8.84,
+      "pct": 8.1,
+      "vol_ratio": 1.88,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002422",
+      "name": "科伦药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260701",
+      "close": 41.95,
+      "pct": 8.9,
+      "vol_ratio": 1.57,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002437",
+      "name": "誉衡药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260701",
+      "close": 2.88,
+      "pct": 6.7,
+      "vol_ratio": 1.52,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002446",
+      "name": "盛路通信",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 11.18,
+      "pct": 4.1,
+      "vol_ratio": 1.65,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002653",
+      "name": "海思科",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260701",
+      "close": 72.96,
+      "pct": 10.0,
+      "vol_ratio": 1.7,
+      "pattern": "平行重炮",
+      "post_golden": true,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002698",
+      "name": "博实股份",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 13.28,
+      "pct": 10.0,
+      "vol_ratio": 2.09,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002773",
+      "name": "康弘药业",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260701",
+      "close": 22.1,
+      "pct": 8.1,
+      "vol_ratio": 1.56,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002826",
+      "name": "易明医药",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 16.53,
+      "pct": 10.0,
+      "vol_ratio": 1.57,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002935",
+      "name": "天奥电子",
+      "ff": "集成电路",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 23.02,
+      "pct": 4.9,
+      "vol_ratio": 1.53,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "003009",
+      "name": "中天火箭",
+      "ff": "商业航天与低空",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 62.37,
+      "pct": 4.0,
+      "vol_ratio": 1.56,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300097",
+      "name": "智云股份",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260701",
+      "close": 9.72,
+      "pct": 7.0,
+      "vol_ratio": 1.74,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300115",
+      "name": "长盈精密",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 29.76,
+      "pct": 6.5,
+      "vol_ratio": 1.56,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300154",
+      "name": "瑞凌股份",
+      "ff": "具身智能/机器人",
+      "tc": "工业设备/通用机械",
+      "date": "20260701",
+      "close": 8.5,
+      "pct": 13.0,
+      "vol_ratio": 1.71,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300270",
+      "name": "中威电子",
+      "ff": "国产软件与信创",
+      "tc": "软件与IT服务",
+      "date": "20260701",
+      "close": 14.28,
+      "pct": 9.8,
+      "vol_ratio": 2.22,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300503",
+      "name": "昊志机电",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 101.48,
+      "pct": 9.9,
+      "vol_ratio": 1.71,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300853",
+      "name": "申昊科技",
+      "ff": "具身智能/机器人",
+      "tc": "机器人/自动化",
+      "date": "20260701",
+      "close": 33.91,
+      "pct": 9.8,
+      "vol_ratio": 2.17,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "301631",
+      "name": "壹连科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260701",
+      "close": 76.6,
+      "pct": 6.6,
+      "vol_ratio": 1.52,
+      "pattern": "",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "600673",
+      "name": "东阳光",
+      "ff": "新材料",
+      "tc": "化工/材料",
+      "date": "20260701",
+      "close": 36.94,
+      "pct": 10.0,
+      "vol_ratio": 1.64,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "603666",
+      "name": "亿嘉和",
+      "ff": "具身智能/机器人",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 30.38,
+      "pct": 10.0,
+      "vol_ratio": 1.52,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "603985",
+      "name": "恒润股份",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260701",
+      "close": 25.16,
+      "pct": 4.7,
+      "vol_ratio": 1.6,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "688148",
+      "name": "芳源股份",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260701",
+      "close": 9.23,
+      "pct": 7.6,
+      "vol_ratio": 1.64,
+      "pattern": "平行重炮",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "688221",
+      "name": "前沿生物",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260701",
+      "close": 26.59,
+      "pct": 18.7,
+      "vol_ratio": 1.5,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "688229",
+      "name": "博睿数据",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 84.97,
+      "pct": 10.8,
+      "vol_ratio": 1.64,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "688282",
+      "name": "理工导航",
+      "ff": "商业航天与低空",
+      "tc": "低空经济/航空",
+      "date": "20260701",
+      "close": 64.76,
+      "pct": 11.3,
+      "vol_ratio": 1.71,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "688520",
+      "name": "神州细胞",
+      "ff": "生物医药与器械",
+      "tc": "生物医药",
+      "date": "20260701",
+      "close": 37.6,
+      "pct": 9.9,
+      "vol_ratio": 1.51,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "688652",
+      "name": "京仪装备",
+      "ff": "集成电路",
+      "tc": "半导体设备",
+      "date": "20260701",
+      "close": 225.0,
+      "pct": 12.4,
+      "vol_ratio": 1.53,
+      "pattern": "灾后重建",
+      "post_golden": false,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
     {
       "code": "000566",
       "name": "海南海药",
@@ -464,7 +1068,7 @@
       "pct": 8.6,
       "vol_ratio": 1.88,
       "pattern": "平行重炮",
-      "post_golden": false,
+      "post_golden": true,
       "moneyflow": {
         "status": "data_unavailable",
         "label": "无数据"
@@ -672,518 +1276,6 @@
       "pct": 19.9,
       "vol_ratio": 1.63,
       "pattern": "平行重炮",
-      "post_golden": true,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "000513",
-      "name": "丽珠集团",
-      "ff": "生物医药与器械",
-      "tc": "生物医药",
-      "date": "20260629",
-      "close": 29.88,
-      "pct": 5.1,
-      "vol_ratio": 1.54,
-      "pattern": "",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "000625",
-      "name": "长安汽车",
-      "ff": "新能源汽车",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 7.23,
-      "pct": 5.4,
-      "vol_ratio": 1.65,
-      "pattern": "",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "001270",
-      "name": "铖昌科技",
-      "ff": "集成电路",
-      "tc": "IC设计",
-      "date": "20260629",
-      "close": 153.31,
-      "pct": 10.0,
-      "vol_ratio": 1.53,
-      "pattern": "平行重炮",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "002366",
-      "name": "融发核电",
-      "ff": "核电",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 5.97,
-      "pct": 9.9,
-      "vol_ratio": 1.73,
-      "pattern": "",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "002559",
-      "name": "亚威股份",
-      "ff": "具身智能/机器人",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 13.0,
-      "pct": 5.6,
-      "vol_ratio": 1.95,
-      "pattern": "平行重炮",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "300024",
-      "name": "机器人",
-      "ff": "具身智能/机器人",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 18.1,
-      "pct": 18.9,
-      "vol_ratio": 1.91,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "300436",
-      "name": "广生堂",
-      "ff": "生物医药与器械",
-      "tc": "生物医药",
-      "date": "20260629",
-      "close": 106.56,
-      "pct": 20.0,
-      "vol_ratio": 1.52,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "300489",
-      "name": "光智科技",
-      "ff": "集成电路",
-      "tc": "光通信与光学",
-      "date": "20260629",
-      "close": 309.67,
-      "pct": 9.3,
-      "vol_ratio": 1.5,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "300759",
-      "name": "康龙化成",
-      "ff": "生物医药与器械",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 28.8,
-      "pct": 9.4,
-      "vol_ratio": 1.61,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "300852",
-      "name": "四会富仕",
-      "ff": "集成电路",
-      "tc": "消费电子/元器件",
-      "date": "20260629",
-      "close": 62.03,
-      "pct": 10.1,
-      "vol_ratio": 1.64,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "301307",
-      "name": "美利信",
-      "ff": "国产软件与信创",
-      "tc": "通信/6G",
-      "date": "20260629",
-      "close": 69.48,
-      "pct": 20.0,
-      "vol_ratio": 2.01,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "301328",
-      "name": "维峰电子",
-      "ff": "集成电路",
-      "tc": "消费电子/元器件",
-      "date": "20260629",
-      "close": 70.8,
-      "pct": 18.7,
-      "vol_ratio": 2.17,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "600118",
-      "name": "中国卫星",
-      "ff": "商业航天与低空",
-      "tc": "低空经济/航空",
-      "date": "20260629",
-      "close": 81.02,
-      "pct": 4.2,
-      "vol_ratio": 1.53,
-      "pattern": "平行重炮",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "600545",
-      "name": "卓郎智能",
-      "ff": "具身智能/机器人",
-      "tc": "工业设备/通用机械",
-      "date": "20260629",
-      "close": 7.49,
-      "pct": 5.5,
-      "vol_ratio": 1.84,
-      "pattern": "平行重炮",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "600667",
-      "name": "太极实业",
-      "ff": "集成电路",
-      "tc": "半导体设备",
-      "date": "20260629",
-      "close": 28.94,
-      "pct": 7.9,
-      "vol_ratio": 1.63,
-      "pattern": "平行重炮",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "601611",
-      "name": "中国核建",
-      "ff": "核电",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 11.1,
-      "pct": 10.0,
-      "vol_ratio": 1.84,
-      "pattern": "",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "603032",
-      "name": "德新科技",
-      "ff": "具身智能/机器人",
-      "tc": "工业设备/通用机械",
-      "date": "20260629",
-      "close": 26.87,
-      "pct": 10.0,
-      "vol_ratio": 1.54,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "603978",
-      "name": "深圳新星",
-      "ff": "集成电路",
-      "tc": "化工/材料",
-      "date": "20260629",
-      "close": 29.84,
-      "pct": 8.0,
-      "vol_ratio": 1.51,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688122",
-      "name": "西部超导",
-      "ff": "新材料",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 60.0,
-      "pct": 13.0,
-      "vol_ratio": 2.14,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688176",
-      "name": "亚虹医药",
-      "ff": "生物医药与器械",
-      "tc": "生物医药",
-      "date": "20260629",
-      "close": 10.22,
-      "pct": 11.2,
-      "vol_ratio": 1.62,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688180",
-      "name": "君实生物",
-      "ff": "生物医药与器械",
-      "tc": "生物医药",
-      "date": "20260629",
-      "close": 33.96,
-      "pct": 14.4,
-      "vol_ratio": 1.58,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688233",
-      "name": "神工股份",
-      "ff": "集成电路",
-      "tc": "半导体材料",
-      "date": "20260629",
-      "close": 194.33,
-      "pct": 20.0,
-      "vol_ratio": 1.54,
-      "pattern": "平行重炮",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688382",
-      "name": "益方生物",
-      "ff": "生物医药与器械",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 18.35,
-      "pct": 15.0,
-      "vol_ratio": 1.61,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688432",
-      "name": "有研硅",
-      "ff": "集成电路",
-      "tc": "半导体材料",
-      "date": "20260629",
-      "close": 37.08,
-      "pct": 20.0,
-      "vol_ratio": 1.61,
-      "pattern": "平行重炮",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688450",
-      "name": "光格科技",
-      "ff": "国产软件与信创",
-      "tc": "工业设备/通用机械",
-      "date": "20260629",
-      "close": 61.78,
-      "pct": 13.3,
-      "vol_ratio": 1.56,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688488",
-      "name": "艾迪药业",
-      "ff": "生物医药与器械",
-      "tc": "生物医药",
-      "date": "20260629",
-      "close": 12.7,
-      "pct": 9.6,
-      "vol_ratio": 1.53,
-      "pattern": "",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688503",
-      "name": "聚和材料",
-      "ff": "新能源(光风储电)",
-      "tc": "新能源/电力设备",
-      "date": "20260629",
-      "close": 110.7,
-      "pct": 16.6,
-      "vol_ratio": 1.73,
-      "pattern": "灾后重建",
-      "post_golden": true,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688520",
-      "name": "神州细胞",
-      "ff": "生物医药与器械",
-      "tc": "生物医药",
-      "date": "20260629",
-      "close": 35.3,
-      "pct": 7.0,
-      "vol_ratio": 1.53,
-      "pattern": "",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688566",
-      "name": "吉贝尔",
-      "ff": "生物医药与器械",
-      "tc": "生物医药",
-      "date": "20260629",
-      "close": 25.81,
-      "pct": 10.6,
-      "vol_ratio": 1.67,
-      "pattern": "",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688578",
-      "name": "艾力斯",
-      "ff": "生物医药与器械",
-      "tc": "生物医药",
-      "date": "20260629",
-      "close": 107.01,
-      "pct": 14.5,
-      "vol_ratio": 1.68,
-      "pattern": "灾后重建",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688596",
-      "name": "正帆科技",
-      "ff": "集成电路",
-      "tc": "半导体零部件",
-      "date": "20260629",
-      "close": 65.95,
-      "pct": 17.3,
-      "vol_ratio": 1.86,
-      "pattern": "平行重炮",
-      "post_golden": false,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688607",
-      "name": "康众医疗",
-      "ff": "生物医药与器械",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 53.15,
-      "pct": 13.8,
-      "vol_ratio": 1.57,
-      "pattern": "灾后重建",
       "post_golden": false,
       "moneyflow": {
         "status": "data_unavailable",
@@ -1208,6 +1300,202 @@
     }
   ],
   "b3": [
+    {
+      "code": "001359",
+      "name": "平安电工",
+      "ff": "新能源(光风储电)",
+      "tc": "新能源/电力设备",
+      "date": "20260701",
+      "close": 123.96,
+      "pct": 1.0,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002080",
+      "name": "中材科技",
+      "ff": "新能源(光风储电)",
+      "tc": "化工/材料",
+      "date": "20260701",
+      "close": 88.7,
+      "pct": 1.4,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002318",
+      "name": "久立特材",
+      "ff": "核电",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 23.82,
+      "pct": 0.3,
+      "vol_ratio": 0.69,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002392",
+      "name": "北京利尔",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260701",
+      "close": 7.98,
+      "pct": 1.1,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002418",
+      "name": "康盛股份",
+      "ff": "新能源(光风储电)",
+      "tc": "消费/医药/传媒",
+      "date": "20260701",
+      "close": 3.98,
+      "pct": 1.0,
+      "vol_ratio": 0.58,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "002432",
+      "name": "九安医疗",
+      "ff": "生物医药与器械",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 69.52,
+      "pct": 1.6,
+      "vol_ratio": 0.61,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300304",
+      "name": "云意电气",
+      "ff": "国产软件与信创",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 18.08,
+      "pct": 1.3,
+      "vol_ratio": 0.63,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300489",
+      "name": "光智科技",
+      "ff": "集成电路",
+      "tc": "光通信与光学",
+      "date": "20260701",
+      "close": 307.12,
+      "pct": 1.5,
+      "vol_ratio": 0.6,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300570",
+      "name": "太辰光",
+      "ff": "国产软件与信创",
+      "tc": "光通信与光学",
+      "date": "20260701",
+      "close": 238.36,
+      "pct": 3.4,
+      "vol_ratio": 0.62,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300627",
+      "name": "华测导航",
+      "ff": "商业航天与低空",
+      "tc": "待分类",
+      "date": "20260701",
+      "close": 28.57,
+      "pct": 0.6,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "300936",
+      "name": "中英科技",
+      "ff": "集成电路",
+      "tc": "消费电子/元器件",
+      "date": "20260701",
+      "close": 108.0,
+      "pct": 2.1,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "603679",
+      "name": "华体科技",
+      "ff": "新能源(光风储电)",
+      "tc": "消费电子/元器件",
+      "date": "20260701",
+      "close": 20.44,
+      "pct": 1.3,
+      "vol_ratio": 0.67,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "603916",
+      "name": "苏博特",
+      "ff": "集成电路",
+      "tc": "化工/材料",
+      "date": "20260701",
+      "close": 13.47,
+      "pct": 1.4,
+      "vol_ratio": 0.5,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
+    {
+      "code": "688381",
+      "name": "帝奥微",
+      "ff": "集成电路",
+      "tc": "IC设计",
+      "date": "20260701",
+      "close": 53.19,
+      "pct": 0.6,
+      "vol_ratio": 0.66,
+      "moneyflow": {
+        "status": "data_unavailable",
+        "label": "无数据"
+      }
+    },
     {
       "code": "000063",
       "name": "中兴通讯",
@@ -1725,233 +2013,321 @@
         "status": "data_unavailable",
         "label": "无数据"
       }
-    },
-    {
-      "code": "000063",
-      "name": "中兴通讯",
-      "ff": "国产软件与信创",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 35.2,
-      "pct": 1.3,
-      "vol_ratio": 0.61,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "000889",
-      "name": "中嘉博创",
-      "ff": "国产软件与信创",
-      "tc": "通信/6G",
-      "date": "20260629",
-      "close": 3.33,
-      "pct": 1.2,
-      "vol_ratio": 0.68,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "002418",
-      "name": "康盛股份",
-      "ff": "新能源(光风储电)",
-      "tc": "消费/医药/传媒",
-      "date": "20260629",
-      "close": 3.87,
-      "pct": 2.0,
-      "vol_ratio": 0.54,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "300067",
-      "name": "安诺其",
-      "ff": "集成电路",
-      "tc": "化工/材料",
-      "date": "20260629",
-      "close": 5.3,
-      "pct": 2.6,
-      "vol_ratio": 0.6,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "300159",
-      "name": "新研股份",
-      "ff": "商业航天与低空",
-      "tc": "低空经济/航空",
-      "date": "20260629",
-      "close": 3.41,
-      "pct": 4.7,
-      "vol_ratio": 0.7,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "300209",
-      "name": "行云科技",
-      "ff": "人工智能(AI算力)",
-      "tc": "AI算力",
-      "date": "20260629",
-      "close": 28.03,
-      "pct": 0.4,
-      "vol_ratio": 0.66,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "300561",
-      "name": "汇金科技",
-      "ff": "国产软件与信创",
-      "tc": "软件与IT服务",
-      "date": "20260629",
-      "close": 13.9,
-      "pct": 4.5,
-      "vol_ratio": 0.54,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "600111",
-      "name": "北方稀土",
-      "ff": "新材料",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 47.62,
-      "pct": 0.8,
-      "vol_ratio": 0.61,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "600172",
-      "name": "黄河旋风",
-      "ff": "集成电路",
-      "tc": "化工/材料",
-      "date": "20260629",
-      "close": 16.16,
-      "pct": 2.9,
-      "vol_ratio": 0.64,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "603026",
-      "name": "石大胜华",
-      "ff": "新能源(光风储电)",
-      "tc": "化工/材料",
-      "date": "20260629",
-      "close": 87.7,
-      "pct": 1.1,
-      "vol_ratio": 0.62,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "603232",
-      "name": "格尔软件",
-      "ff": "国产软件与信创",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 14.59,
-      "pct": 1.3,
-      "vol_ratio": 0.51,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "603496",
-      "name": "恒为科技",
-      "ff": "具身智能/机器人",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 22.2,
-      "pct": 2.6,
-      "vol_ratio": 0.69,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "603906",
-      "name": "龙蟠科技",
-      "ff": "新能源(光风储电)",
-      "tc": "新能源/电力设备",
-      "date": "20260629",
-      "close": 25.67,
-      "pct": 0.8,
-      "vol_ratio": 0.64,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688227",
-      "name": "品高股份",
-      "ff": "国产软件与信创",
-      "tc": "软件与IT服务",
-      "date": "20260629",
-      "close": 96.46,
-      "pct": 1.6,
-      "vol_ratio": 0.53,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688655",
-      "name": "迅捷兴",
-      "ff": "集成电路",
-      "tc": "消费电子/元器件",
-      "date": "20260629",
-      "close": 48.14,
-      "pct": 2.7,
-      "vol_ratio": 0.67,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
-    },
-    {
-      "code": "688657",
-      "name": "浩辰软件",
-      "ff": "国产软件与信创",
-      "tc": "待分类",
-      "date": "20260629",
-      "close": 35.52,
-      "pct": 0.4,
-      "vol_ratio": 0.61,
-      "moneyflow": {
-        "status": "data_unavailable",
-        "label": "无数据"
-      }
     }
   ],
   "b2_raw": [
+    [
+      "000990",
+      "诚志股份",
+      "新材料",
+      "化工/材料",
+      "20260701",
+      8.84,
+      8.1,
+      1.88,
+      "",
+      false
+    ],
+    [
+      "002422",
+      "科伦药业",
+      "生物医药与器械",
+      "生物医药",
+      "20260701",
+      41.95,
+      8.9,
+      1.57,
+      "灾后重建",
+      false
+    ],
+    [
+      "002437",
+      "誉衡药业",
+      "生物医药与器械",
+      "生物医药",
+      "20260701",
+      2.88,
+      6.7,
+      1.52,
+      "灾后重建",
+      false
+    ],
+    [
+      "002446",
+      "盛路通信",
+      "国产软件与信创",
+      "待分类",
+      "20260701",
+      11.18,
+      4.1,
+      1.65,
+      "平行重炮",
+      false
+    ],
+    [
+      "002653",
+      "海思科",
+      "生物医药与器械",
+      "生物医药",
+      "20260701",
+      72.96,
+      10.0,
+      1.7,
+      "平行重炮",
+      true
+    ],
+    [
+      "002698",
+      "博实股份",
+      "具身智能/机器人",
+      "待分类",
+      "20260701",
+      13.28,
+      10.0,
+      2.09,
+      "平行重炮",
+      false
+    ],
+    [
+      "002773",
+      "康弘药业",
+      "生物医药与器械",
+      "生物医药",
+      "20260701",
+      22.1,
+      8.1,
+      1.56,
+      "灾后重建",
+      false
+    ],
+    [
+      "002826",
+      "易明医药",
+      "生物医药与器械",
+      "待分类",
+      "20260701",
+      16.53,
+      10.0,
+      1.57,
+      "",
+      false
+    ],
+    [
+      "002935",
+      "天奥电子",
+      "集成电路",
+      "待分类",
+      "20260701",
+      23.02,
+      4.9,
+      1.53,
+      "平行重炮",
+      false
+    ],
+    [
+      "003009",
+      "中天火箭",
+      "商业航天与低空",
+      "待分类",
+      "20260701",
+      62.37,
+      4.0,
+      1.56,
+      "平行重炮",
+      false
+    ],
+    [
+      "300097",
+      "智云股份",
+      "具身智能/机器人",
+      "工业设备/通用机械",
+      "20260701",
+      9.72,
+      7.0,
+      1.74,
+      "",
+      false
+    ],
+    [
+      "300115",
+      "长盈精密",
+      "具身智能/机器人",
+      "待分类",
+      "20260701",
+      29.76,
+      6.5,
+      1.56,
+      "平行重炮",
+      false
+    ],
+    [
+      "300154",
+      "瑞凌股份",
+      "具身智能/机器人",
+      "工业设备/通用机械",
+      "20260701",
+      8.5,
+      13.0,
+      1.71,
+      "灾后重建",
+      false
+    ],
+    [
+      "300270",
+      "中威电子",
+      "国产软件与信创",
+      "软件与IT服务",
+      "20260701",
+      14.28,
+      9.8,
+      2.22,
+      "平行重炮",
+      false
+    ],
+    [
+      "300503",
+      "昊志机电",
+      "具身智能/机器人",
+      "待分类",
+      "20260701",
+      101.48,
+      9.9,
+      1.71,
+      "平行重炮",
+      false
+    ],
+    [
+      "300853",
+      "申昊科技",
+      "具身智能/机器人",
+      "机器人/自动化",
+      "20260701",
+      33.91,
+      9.8,
+      2.17,
+      "灾后重建",
+      false
+    ],
+    [
+      "301631",
+      "壹连科技",
+      "集成电路",
+      "消费电子/元器件",
+      "20260701",
+      76.6,
+      6.6,
+      1.52,
+      "",
+      false
+    ],
+    [
+      "600673",
+      "东阳光",
+      "新材料",
+      "化工/材料",
+      "20260701",
+      36.94,
+      10.0,
+      1.64,
+      "平行重炮",
+      false
+    ],
+    [
+      "603666",
+      "亿嘉和",
+      "具身智能/机器人",
+      "待分类",
+      "20260701",
+      30.38,
+      10.0,
+      1.52,
+      "平行重炮",
+      false
+    ],
+    [
+      "603985",
+      "恒润股份",
+      "新能源(光风储电)",
+      "新能源/电力设备",
+      "20260701",
+      25.16,
+      4.7,
+      1.6,
+      "平行重炮",
+      false
+    ],
+    [
+      "688148",
+      "芳源股份",
+      "新能源(光风储电)",
+      "新能源/电力设备",
+      "20260701",
+      9.23,
+      7.6,
+      1.64,
+      "平行重炮",
+      false
+    ],
+    [
+      "688221",
+      "前沿生物",
+      "生物医药与器械",
+      "生物医药",
+      "20260701",
+      26.59,
+      18.7,
+      1.5,
+      "灾后重建",
+      false
+    ],
+    [
+      "688229",
+      "博睿数据",
+      "国产软件与信创",
+      "待分类",
+      "20260701",
+      84.97,
+      10.8,
+      1.64,
+      "灾后重建",
+      false
+    ],
+    [
+      "688282",
+      "理工导航",
+      "商业航天与低空",
+      "低空经济/航空",
+      "20260701",
+      64.76,
+      11.3,
+      1.71,
+      "灾后重建",
+      false
+    ],
+    [
+      "688520",
+      "神州细胞",
+      "生物医药与器械",
+      "生物医药",
+      "20260701",
+      37.6,
+      9.9,
+      1.51,
+      "灾后重建",
+      false
+    ],
+    [
+      "688652",
+      "京仪装备",
+      "集成电路",
+      "半导体设备",
+      "20260701",
+      225.0,
+      12.4,
+      1.53,
+      "灾后重建",
+      false
+    ],
     [
       "000566",
       "海南海药",
@@ -1986,7 +2362,7 @@
       8.6,
       1.88,
       "平行重炮",
-      false
+      true
     ],
     [
       "002898",
@@ -2142,390 +2518,6 @@
       19.9,
       1.63,
       "平行重炮",
-      true
-    ],
-    [
-      "000513",
-      "丽珠集团",
-      "生物医药与器械",
-      "生物医药",
-      "20260629",
-      29.88,
-      5.1,
-      1.54,
-      "",
-      false
-    ],
-    [
-      "000625",
-      "长安汽车",
-      "新能源汽车",
-      "待分类",
-      "20260629",
-      7.23,
-      5.4,
-      1.65,
-      "",
-      false
-    ],
-    [
-      "001270",
-      "铖昌科技",
-      "集成电路",
-      "IC设计",
-      "20260629",
-      153.31,
-      10.0,
-      1.53,
-      "平行重炮",
-      false
-    ],
-    [
-      "002366",
-      "融发核电",
-      "核电",
-      "待分类",
-      "20260629",
-      5.97,
-      9.9,
-      1.73,
-      "",
-      false
-    ],
-    [
-      "002559",
-      "亚威股份",
-      "具身智能/机器人",
-      "待分类",
-      "20260629",
-      13.0,
-      5.6,
-      1.95,
-      "平行重炮",
-      false
-    ],
-    [
-      "300024",
-      "机器人",
-      "具身智能/机器人",
-      "待分类",
-      "20260629",
-      18.1,
-      18.9,
-      1.91,
-      "灾后重建",
-      false
-    ],
-    [
-      "300436",
-      "广生堂",
-      "生物医药与器械",
-      "生物医药",
-      "20260629",
-      106.56,
-      20.0,
-      1.52,
-      "灾后重建",
-      false
-    ],
-    [
-      "300489",
-      "光智科技",
-      "集成电路",
-      "光通信与光学",
-      "20260629",
-      309.67,
-      9.3,
-      1.5,
-      "灾后重建",
-      false
-    ],
-    [
-      "300759",
-      "康龙化成",
-      "生物医药与器械",
-      "待分类",
-      "20260629",
-      28.8,
-      9.4,
-      1.61,
-      "灾后重建",
-      false
-    ],
-    [
-      "300852",
-      "四会富仕",
-      "集成电路",
-      "消费电子/元器件",
-      "20260629",
-      62.03,
-      10.1,
-      1.64,
-      "灾后重建",
-      false
-    ],
-    [
-      "301307",
-      "美利信",
-      "国产软件与信创",
-      "通信/6G",
-      "20260629",
-      69.48,
-      20.0,
-      2.01,
-      "灾后重建",
-      false
-    ],
-    [
-      "301328",
-      "维峰电子",
-      "集成电路",
-      "消费电子/元器件",
-      "20260629",
-      70.8,
-      18.7,
-      2.17,
-      "灾后重建",
-      false
-    ],
-    [
-      "600118",
-      "中国卫星",
-      "商业航天与低空",
-      "低空经济/航空",
-      "20260629",
-      81.02,
-      4.2,
-      1.53,
-      "平行重炮",
-      false
-    ],
-    [
-      "600545",
-      "卓郎智能",
-      "具身智能/机器人",
-      "工业设备/通用机械",
-      "20260629",
-      7.49,
-      5.5,
-      1.84,
-      "平行重炮",
-      false
-    ],
-    [
-      "600667",
-      "太极实业",
-      "集成电路",
-      "半导体设备",
-      "20260629",
-      28.94,
-      7.9,
-      1.63,
-      "平行重炮",
-      false
-    ],
-    [
-      "601611",
-      "中国核建",
-      "核电",
-      "待分类",
-      "20260629",
-      11.1,
-      10.0,
-      1.84,
-      "",
-      false
-    ],
-    [
-      "603032",
-      "德新科技",
-      "具身智能/机器人",
-      "工业设备/通用机械",
-      "20260629",
-      26.87,
-      10.0,
-      1.54,
-      "灾后重建",
-      false
-    ],
-    [
-      "603978",
-      "深圳新星",
-      "集成电路",
-      "化工/材料",
-      "20260629",
-      29.84,
-      8.0,
-      1.51,
-      "灾后重建",
-      false
-    ],
-    [
-      "688122",
-      "西部超导",
-      "新材料",
-      "待分类",
-      "20260629",
-      60.0,
-      13.0,
-      2.14,
-      "灾后重建",
-      false
-    ],
-    [
-      "688176",
-      "亚虹医药",
-      "生物医药与器械",
-      "生物医药",
-      "20260629",
-      10.22,
-      11.2,
-      1.62,
-      "灾后重建",
-      false
-    ],
-    [
-      "688180",
-      "君实生物",
-      "生物医药与器械",
-      "生物医药",
-      "20260629",
-      33.96,
-      14.4,
-      1.58,
-      "灾后重建",
-      false
-    ],
-    [
-      "688233",
-      "神工股份",
-      "集成电路",
-      "半导体材料",
-      "20260629",
-      194.33,
-      20.0,
-      1.54,
-      "平行重炮",
-      false
-    ],
-    [
-      "688382",
-      "益方生物",
-      "生物医药与器械",
-      "待分类",
-      "20260629",
-      18.35,
-      15.0,
-      1.61,
-      "灾后重建",
-      false
-    ],
-    [
-      "688432",
-      "有研硅",
-      "集成电路",
-      "半导体材料",
-      "20260629",
-      37.08,
-      20.0,
-      1.61,
-      "平行重炮",
-      false
-    ],
-    [
-      "688450",
-      "光格科技",
-      "国产软件与信创",
-      "工业设备/通用机械",
-      "20260629",
-      61.78,
-      13.3,
-      1.56,
-      "灾后重建",
-      false
-    ],
-    [
-      "688488",
-      "艾迪药业",
-      "生物医药与器械",
-      "生物医药",
-      "20260629",
-      12.7,
-      9.6,
-      1.53,
-      "",
-      false
-    ],
-    [
-      "688503",
-      "聚和材料",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260629",
-      110.7,
-      16.6,
-      1.73,
-      "灾后重建",
-      true
-    ],
-    [
-      "688520",
-      "神州细胞",
-      "生物医药与器械",
-      "生物医药",
-      "20260629",
-      35.3,
-      7.0,
-      1.53,
-      "",
-      false
-    ],
-    [
-      "688566",
-      "吉贝尔",
-      "生物医药与器械",
-      "生物医药",
-      "20260629",
-      25.81,
-      10.6,
-      1.67,
-      "",
-      false
-    ],
-    [
-      "688578",
-      "艾力斯",
-      "生物医药与器械",
-      "生物医药",
-      "20260629",
-      107.01,
-      14.5,
-      1.68,
-      "灾后重建",
-      false
-    ],
-    [
-      "688596",
-      "正帆科技",
-      "集成电路",
-      "半导体零部件",
-      "20260629",
-      65.95,
-      17.3,
-      1.86,
-      "平行重炮",
-      false
-    ],
-    [
-      "688607",
-      "康众医疗",
-      "生物医药与器械",
-      "待分类",
-      "20260629",
-      53.15,
-      13.8,
-      1.57,
-      "灾后重建",
       false
     ],
     [
@@ -2542,6 +2534,146 @@
     ]
   ],
   "b3_raw": [
+    [
+      "001359",
+      "平安电工",
+      "新能源(光风储电)",
+      "新能源/电力设备",
+      "20260701",
+      123.96,
+      1.0,
+      0.61
+    ],
+    [
+      "002080",
+      "中材科技",
+      "新能源(光风储电)",
+      "化工/材料",
+      "20260701",
+      88.7,
+      1.4,
+      0.69
+    ],
+    [
+      "002318",
+      "久立特材",
+      "核电",
+      "待分类",
+      "20260701",
+      23.82,
+      0.3,
+      0.69
+    ],
+    [
+      "002392",
+      "北京利尔",
+      "集成电路",
+      "化工/材料",
+      "20260701",
+      7.98,
+      1.1,
+      0.63
+    ],
+    [
+      "002418",
+      "康盛股份",
+      "新能源(光风储电)",
+      "消费/医药/传媒",
+      "20260701",
+      3.98,
+      1.0,
+      0.58
+    ],
+    [
+      "002432",
+      "九安医疗",
+      "生物医药与器械",
+      "待分类",
+      "20260701",
+      69.52,
+      1.6,
+      0.61
+    ],
+    [
+      "300304",
+      "云意电气",
+      "国产软件与信创",
+      "待分类",
+      "20260701",
+      18.08,
+      1.3,
+      0.63
+    ],
+    [
+      "300489",
+      "光智科技",
+      "集成电路",
+      "光通信与光学",
+      "20260701",
+      307.12,
+      1.5,
+      0.6
+    ],
+    [
+      "300570",
+      "太辰光",
+      "国产软件与信创",
+      "光通信与光学",
+      "20260701",
+      238.36,
+      3.4,
+      0.62
+    ],
+    [
+      "300627",
+      "华测导航",
+      "商业航天与低空",
+      "待分类",
+      "20260701",
+      28.57,
+      0.6,
+      0.67
+    ],
+    [
+      "300936",
+      "中英科技",
+      "集成电路",
+      "消费电子/元器件",
+      "20260701",
+      108.0,
+      2.1,
+      0.66
+    ],
+    [
+      "603679",
+      "华体科技",
+      "新能源(光风储电)",
+      "消费电子/元器件",
+      "20260701",
+      20.44,
+      1.3,
+      0.67
+    ],
+    [
+      "603916",
+      "苏博特",
+      "集成电路",
+      "化工/材料",
+      "20260701",
+      13.47,
+      1.4,
+      0.5
+    ],
+    [
+      "688381",
+      "帝奥微",
+      "集成电路",
+      "IC设计",
+      "20260701",
+      53.19,
+      0.6,
+      0.66
+    ],
     [
       "000063",
       "中兴通讯",
@@ -2911,169 +3043,53 @@
       88.46,
       1.3,
       0.64
-    ],
-    [
-      "000063",
-      "中兴通讯",
-      "国产软件与信创",
-      "待分类",
-      "20260629",
-      35.2,
-      1.3,
-      0.61
-    ],
-    [
-      "000889",
-      "中嘉博创",
-      "国产软件与信创",
-      "通信/6G",
-      "20260629",
-      3.33,
-      1.2,
-      0.68
-    ],
-    [
-      "002418",
-      "康盛股份",
-      "新能源(光风储电)",
-      "消费/医药/传媒",
-      "20260629",
-      3.87,
-      2.0,
-      0.54
-    ],
-    [
-      "300067",
-      "安诺其",
-      "集成电路",
-      "化工/材料",
-      "20260629",
-      5.3,
-      2.6,
-      0.6
-    ],
-    [
-      "300159",
-      "新研股份",
-      "商业航天与低空",
-      "低空经济/航空",
-      "20260629",
-      3.41,
-      4.7,
-      0.7
-    ],
-    [
-      "300209",
-      "行云科技",
-      "人工智能(AI算力)",
-      "AI算力",
-      "20260629",
-      28.03,
-      0.4,
-      0.66
-    ],
-    [
-      "300561",
-      "汇金科技",
-      "国产软件与信创",
-      "软件与IT服务",
-      "20260629",
-      13.9,
-      4.5,
-      0.54
-    ],
-    [
-      "600111",
-      "北方稀土",
-      "新材料",
-      "待分类",
-      "20260629",
-      47.62,
-      0.8,
-      0.61
-    ],
-    [
-      "600172",
-      "黄河旋风",
-      "集成电路",
-      "化工/材料",
-      "20260629",
-      16.16,
-      2.9,
-      0.64
-    ],
-    [
-      "603026",
-      "石大胜华",
-      "新能源(光风储电)",
-      "化工/材料",
-      "20260629",
-      87.7,
-      1.1,
-      0.62
-    ],
-    [
-      "603232",
-      "格尔软件",
-      "国产软件与信创",
-      "待分类",
-      "20260629",
-      14.59,
-      1.3,
-      0.51
-    ],
-    [
-      "603496",
-      "恒为科技",
-      "具身智能/机器人",
-      "待分类",
-      "20260629",
-      22.2,
-      2.6,
-      0.69
-    ],
-    [
-      "603906",
-      "龙蟠科技",
-      "新能源(光风储电)",
-      "新能源/电力设备",
-      "20260629",
-      25.67,
-      0.8,
-      0.64
-    ],
-    [
-      "688227",
-      "品高股份",
-      "国产软件与信创",
-      "软件与IT服务",
-      "20260629",
-      96.46,
-      1.6,
-      0.53
-    ],
-    [
-      "688655",
-      "迅捷兴",
-      "集成电路",
-      "消费电子/元器件",
-      "20260629",
-      48.14,
-      2.7,
-      0.67
-    ],
-    [
-      "688657",
-      "浩辰软件",
-      "国产软件与信创",
-      "待分类",
-      "20260629",
-      35.52,
-      0.4,
-      0.61
     ]
   ],
   "washout": [
+    [
+      "300246",
+      "宝莱特",
+      "生物医药与器械",
+      "消费/医药/传媒",
+      "20260701",
+      14.54,
+      -9.3,
+      3.3,
+      0.77
+    ],
+    [
+      "600497",
+      "驰宏锌锗",
+      "集成电路",
+      "化工/材料",
+      "20260701",
+      12.22,
+      -5.4,
+      0.9,
+      0.79
+    ],
+    [
+      "603698",
+      "航天工程",
+      "商业航天与低空",
+      "低空经济/航空",
+      "20260701",
+      39.5,
+      -3.3,
+      2.4,
+      0.72
+    ],
+    [
+      "688051",
+      "佳华科技",
+      "人工智能(AI算力)",
+      "软件与IT服务",
+      "20260701",
+      23.8,
+      -3.0,
+      3.6,
+      0.78
+    ],
     [
       "000062",
       "深圳华强",
@@ -4008,48 +4024,15 @@
       -6.6,
       4.2,
       0.71
-    ],
-    [
-      "003004",
-      "声迅股份",
-      "国产软件与信创",
-      "软件与IT服务",
-      "20260626",
-      69.68,
-      -4.6,
-      3.5,
-      0.63
-    ],
-    [
-      "300225",
-      "金力泰",
-      "集成电路",
-      "化工/材料",
-      "20260626",
-      8.0,
-      -3.0,
-      0.3,
-      0.79
-    ],
-    [
-      "603861",
-      "白云电器",
-      "国产软件与信创",
-      "待分类",
-      "20260626",
-      14.25,
-      -4.2,
-      10.0,
-      0.66
     ]
   ],
   "flows": {},
   "stats": {
     "total": 717,
-    "golden": 2,
-    "b2": 49,
-    "b3": 53,
-    "b1": 28,
-    "death": 6
+    "golden": 8,
+    "b2": 43,
+    "b3": 51,
+    "b1": 37,
+    "death": 8
   }
 }
