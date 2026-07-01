@@ -1,15 +1,15 @@
 {
-  "generated": "2026-06-24T18:00:20.385356+08:00",
+  "generated": "2026-06-30T18:00:28.303973+08:00",
   "total": 10,
   "valuations": [
     {
       "code": "688126.SH",
-      "date": "20260624",
-      "close": 32.57,
+      "date": "20260630",
+      "close": 39.89,
       "pe": null,
-      "pb": 6.3948,
+      "pb": 7.832,
       "pe_ttm": null,
-      "total_mv_million": 1076.0,
+      "total_mv_million": 1318.0,
       "eps": -0.539,
       "roe": -10.3169,
       "revenue_yoy_pct": null,
@@ -22,12 +22,12 @@
     },
     {
       "code": "002371.SZ",
-      "date": "20260624",
-      "close": 770.07,
-      "pe": 101.0816,
-      "pb": 14.2049,
-      "pe_ttm": 100.1021,
-      "total_mv_million": 5582.0,
+      "date": "20260630",
+      "close": 884.56,
+      "pe": 116.2471,
+      "pb": 16.3361,
+      "pe_ttm": 115.1207,
+      "total_mv_million": 6419.0,
       "eps": 7.6446,
       "roe": 16.0506,
       "revenue_yoy_pct": null,
@@ -42,22 +42,22 @@
           "conservative": 347.83,
           "neutral": 496.9,
           "optimistic": 645.97,
-          "upside_conservative": -54.8,
-          "upside_neutral": -35.5,
-          "upside_optimistic": -16.1
+          "upside_conservative": -60.7,
+          "upside_neutral": -43.8,
+          "upside_optimistic": -27.0
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 100.1,
+          "current_pe_ttm": 115.1,
           "industry_pe": 65,
-          "discount_to_industry": -54.0,
+          "discount_to_industry": -77.1,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 14.2,
+          "pb": 16.34,
           "roe": 16.05,
-          "implied_return_pct": 113.0,
+          "implied_return_pct": 98.3,
           "quality": "优质"
         }
       },
@@ -66,12 +66,12 @@
     },
     {
       "code": "688012.SH",
-      "date": "20260624",
-      "close": 383.0,
-      "pe": 171.86,
-      "pb": 14.9275,
-      "pe_ttm": 132.9769,
-      "total_mv_million": 3629.0,
+      "date": "20260630",
+      "close": 468.5,
+      "pe": 210.2256,
+      "pb": 18.2599,
+      "pe_ttm": 162.6624,
+      "total_mv_million": 4439.0,
       "eps": 3.4,
       "roe": 9.9524,
       "revenue_yoy_pct": null,
@@ -86,22 +86,22 @@
           "conservative": 154.7,
           "neutral": 221.0,
           "optimistic": 287.3,
-          "upside_conservative": -59.6,
-          "upside_neutral": -42.3,
-          "upside_optimistic": -25.0
+          "upside_conservative": -67.0,
+          "upside_neutral": -52.8,
+          "upside_optimistic": -38.7
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 133.0,
+          "current_pe_ttm": 162.7,
           "industry_pe": 65,
-          "discount_to_industry": -104.6,
+          "discount_to_industry": -150.2,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 14.93,
+          "pb": 18.26,
           "roe": 9.95,
-          "implied_return_pct": 66.7,
+          "implied_return_pct": 54.5,
           "quality": "优质"
         }
       },
@@ -109,57 +109,13 @@
       "thesis_summary": "刻蚀设备国产替代主力，CCP/ICP刻蚀在3D NAND和逻辑制程均为必需品。制裁扩大加速国产设备导入。"
     },
     {
-      "code": "603650.SH",
-      "date": "20260624",
-      "close": 77.22,
-      "pe": 84.5684,
-      "pb": 11.0108,
-      "pe_ttm": 81.3644,
-      "total_mv_million": 476.0,
-      "eps": 0.94,
-      "roe": 14.9212,
-      "revenue_yoy_pct": null,
-      "profit_yoy_pct": null,
-      "group": "其他",
-      "industry_pe": 35,
-      "targets": {
-        "pe_method": {
-          "name": "行业PE法",
-          "eps_annualized": 0.94,
-          "industry_pe": 35,
-          "conservative": 23.03,
-          "neutral": 32.9,
-          "optimistic": 42.77,
-          "upside_conservative": -70.2,
-          "upside_neutral": -57.4,
-          "upside_optimistic": -44.6
-        },
-        "pe_relative": {
-          "name": "PE相对估值",
-          "current_pe_ttm": 81.4,
-          "industry_pe": 35,
-          "discount_to_industry": -132.5,
-          "assessment": "高估"
-        },
-        "pb_roe": {
-          "name": "PB-ROE法",
-          "pb": 11.01,
-          "roe": 14.92,
-          "implied_return_pct": 135.5,
-          "quality": "优质"
-        }
-      },
-      "name": "彤程新材",
-      "thesis_summary": "ArF光刻胶唯一规模放量标的，2025年营收增长800%+，已通过头部晶圆厂验证量产。光刻机管制扩大倒逼光刻胶国产化加速。"
-    },
-    {
       "code": "002156.SZ",
-      "date": "20260624",
-      "close": 74.64,
-      "pe": 92.9455,
-      "pb": 7.234,
-      "pe_ttm": 78.3153,
-      "total_mv_million": 1133.0,
+      "date": "20260630",
+      "close": 75.87,
+      "pe": 94.4772,
+      "pb": 7.3532,
+      "pe_ttm": 79.6059,
+      "total_mv_million": 1151.0,
       "eps": 0.8,
       "roe": 8.075,
       "revenue_yoy_pct": null,
@@ -174,22 +130,22 @@
           "conservative": 19.6,
           "neutral": 28.0,
           "optimistic": 36.4,
-          "upside_conservative": -73.7,
-          "upside_neutral": -62.5,
-          "upside_optimistic": -51.2
+          "upside_conservative": -74.2,
+          "upside_neutral": -63.1,
+          "upside_optimistic": -52.0
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 78.3,
+          "current_pe_ttm": 79.6,
           "industry_pe": 35,
-          "discount_to_industry": -123.8,
+          "discount_to_industry": -127.4,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 7.23,
+          "pb": 7.35,
           "roe": 8.07,
-          "implied_return_pct": 111.6,
+          "implied_return_pct": 109.8,
           "quality": "优质"
         }
       },
@@ -197,13 +153,57 @@
       "thesis_summary": "先进封装双驱动：AMD深度绑定+国产GPU出货量增长。Q1净利+45.5%，2026全年营收目标323亿(+15.7%)。"
     },
     {
+      "code": "603650.SH",
+      "date": "20260630",
+      "close": 97.98,
+      "pe": 107.304,
+      "pb": 13.971,
+      "pe_ttm": 103.2385,
+      "total_mv_million": 604.0,
+      "eps": 0.94,
+      "roe": 14.9212,
+      "revenue_yoy_pct": null,
+      "profit_yoy_pct": null,
+      "group": "其他",
+      "industry_pe": 35,
+      "targets": {
+        "pe_method": {
+          "name": "行业PE法",
+          "eps_annualized": 0.94,
+          "industry_pe": 35,
+          "conservative": 23.03,
+          "neutral": 32.9,
+          "optimistic": 42.77,
+          "upside_conservative": -76.5,
+          "upside_neutral": -66.4,
+          "upside_optimistic": -56.3
+        },
+        "pe_relative": {
+          "name": "PE相对估值",
+          "current_pe_ttm": 103.2,
+          "industry_pe": 35,
+          "discount_to_industry": -195.0,
+          "assessment": "高估"
+        },
+        "pb_roe": {
+          "name": "PB-ROE法",
+          "pb": 13.97,
+          "roe": 14.92,
+          "implied_return_pct": 106.8,
+          "quality": "优质"
+        }
+      },
+      "name": "彤程新材",
+      "thesis_summary": "ArF光刻胶唯一规模放量标的，2025年营收增长800%+，已通过头部晶圆厂验证量产。光刻机管制扩大倒逼光刻胶国产化加速。"
+    },
+    {
       "code": "600584.SH",
-      "date": "20260624",
-      "close": 94.7,
-      "pe": 108.2631,
-      "pb": 5.8909,
-      "pe_ttm": 102.5681,
-      "total_mv_million": 1695.0,
+      "date": "20260630",
+      "close": 103.55,
+      "pe": 118.3806,
+      "pb": 6.4414,
+      "pe_ttm": 112.1534,
+      "total_mv_million": 1853.0,
       "eps": 0.87,
       "roe": 5.5614,
       "revenue_yoy_pct": null,
@@ -218,22 +218,22 @@
           "conservative": 21.31,
           "neutral": 30.45,
           "optimistic": 39.59,
-          "upside_conservative": -77.5,
-          "upside_neutral": -67.8,
-          "upside_optimistic": -58.2
+          "upside_conservative": -79.4,
+          "upside_neutral": -70.6,
+          "upside_optimistic": -61.8
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 102.6,
+          "current_pe_ttm": 112.2,
           "industry_pe": 35,
-          "discount_to_industry": -193.1,
+          "discount_to_industry": -220.4,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 5.89,
+          "pb": 6.44,
           "roe": 5.56,
-          "implied_return_pct": 94.4,
+          "implied_return_pct": 86.3,
           "quality": "优质"
         }
       },
@@ -242,12 +242,12 @@
     },
     {
       "code": "688082.SH",
-      "date": "20260624",
-      "close": 402.18,
-      "pe": 139.0405,
-      "pb": 14.2268,
-      "pe_ttm": 154.7916,
-      "total_mv_million": 1941.0,
+      "date": "20260630",
+      "close": 432.0,
+      "pe": 149.3498,
+      "pb": 15.2816,
+      "pe_ttm": 166.2687,
+      "total_mv_million": 2085.0,
       "eps": 3.1,
       "roe": 13.2095,
       "revenue_yoy_pct": null,
@@ -262,22 +262,22 @@
           "conservative": 75.95,
           "neutral": 108.5,
           "optimistic": 141.05,
-          "upside_conservative": -81.1,
-          "upside_neutral": -73.0,
-          "upside_optimistic": -64.9
+          "upside_conservative": -82.4,
+          "upside_neutral": -74.9,
+          "upside_optimistic": -67.3
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 154.8,
+          "current_pe_ttm": 166.3,
           "industry_pe": 35,
-          "discount_to_industry": -342.3,
+          "discount_to_industry": -375.1,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 14.23,
+          "pb": 15.28,
           "roe": 13.21,
-          "implied_return_pct": 92.8,
+          "implied_return_pct": 86.4,
           "quality": "优质"
         }
       },
@@ -286,12 +286,12 @@
     },
     {
       "code": "688981.SH",
-      "date": "20260624",
-      "close": 151.53,
-      "pe": 240.8945,
-      "pb": 8.1057,
-      "pe_ttm": 240.6636,
-      "total_mv_million": 12143.0,
+      "date": "20260630",
+      "close": 158.82,
+      "pe": 269.7259,
+      "pb": 9.0758,
+      "pe_ttm": 269.4674,
+      "total_mv_million": 13596.0,
       "eps": 0.63,
       "roe": 3.3716,
       "revenue_yoy_pct": null,
@@ -306,22 +306,22 @@
           "conservative": 15.43,
           "neutral": 22.05,
           "optimistic": 28.67,
-          "upside_conservative": -89.8,
-          "upside_neutral": -85.4,
-          "upside_optimistic": -81.1
+          "upside_conservative": -90.3,
+          "upside_neutral": -86.1,
+          "upside_optimistic": -81.9
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 240.7,
+          "current_pe_ttm": 269.5,
           "industry_pe": 35,
-          "discount_to_industry": -587.6,
+          "discount_to_industry": -669.9,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 8.11,
+          "pb": 9.08,
           "roe": 3.37,
-          "implied_return_pct": 41.6,
+          "implied_return_pct": 37.1,
           "quality": "优质"
         }
       },
@@ -330,12 +330,12 @@
     },
     {
       "code": "688256.SH",
-      "date": "20260624",
-      "close": 1453.0,
-      "pe": 443.3261,
-      "pb": 70.9259,
-      "pe_ttm": 336.002,
-      "total_mv_million": 9129.0,
+      "date": "20260630",
+      "close": 1595.55,
+      "pe": 486.8196,
+      "pb": 77.8843,
+      "pe_ttm": 368.9663,
+      "total_mv_million": 10025.0,
       "eps": 4.93,
       "roe": 23.8629,
       "revenue_yoy_pct": null,
@@ -350,22 +350,22 @@
           "conservative": 120.78,
           "neutral": 172.55,
           "optimistic": 224.31,
-          "upside_conservative": -91.7,
-          "upside_neutral": -88.1,
-          "upside_optimistic": -84.6
+          "upside_conservative": -92.4,
+          "upside_neutral": -89.2,
+          "upside_optimistic": -85.9
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 336.0,
+          "current_pe_ttm": 369.0,
           "industry_pe": 35,
-          "discount_to_industry": -860.0,
+          "discount_to_industry": -954.2,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 70.93,
+          "pb": 77.88,
           "roe": 23.86,
-          "implied_return_pct": 33.6,
+          "implied_return_pct": 30.6,
           "quality": "优质"
         }
       },
@@ -374,12 +374,12 @@
     },
     {
       "code": "688041.SH",
-      "date": "20260624",
-      "close": 337.1,
-      "pe": 307.8853,
-      "pb": 33.3456,
-      "pe_ttm": 287.4205,
-      "total_mv_million": 7835.0,
+      "date": "20260630",
+      "close": 370.3,
+      "pe": 338.208,
+      "pb": 36.6297,
+      "pe_ttm": 315.7277,
+      "total_mv_million": 8607.0,
       "eps": 1.1,
       "roe": 11.9075,
       "revenue_yoy_pct": null,
@@ -394,22 +394,22 @@
           "conservative": 26.95,
           "neutral": 38.5,
           "optimistic": 50.05,
-          "upside_conservative": -92.0,
-          "upside_neutral": -88.6,
-          "upside_optimistic": -85.2
+          "upside_conservative": -92.7,
+          "upside_neutral": -89.6,
+          "upside_optimistic": -86.5
         },
         "pe_relative": {
           "name": "PE相对估值",
-          "current_pe_ttm": 287.4,
+          "current_pe_ttm": 315.7,
           "industry_pe": 35,
-          "discount_to_industry": -721.2,
+          "discount_to_industry": -802.1,
           "assessment": "高估"
         },
         "pb_roe": {
           "name": "PB-ROE法",
-          "pb": 33.35,
+          "pb": 36.63,
           "roe": 11.91,
-          "implied_return_pct": 35.7,
+          "implied_return_pct": 32.5,
           "quality": "优质"
         }
       },
