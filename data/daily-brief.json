@@ -1,143 +1,13 @@
 {
-  "generated_at": "2026-07-15T16:27:52.187089+08:00",
-  "date": "2026-07-15",
+  "generated_at": "2026-07-16T16:29:25.933733+08:00",
+  "date": "2026-07-16",
   "sections": {
     "signals": {
       "available": true,
-      "date": "?",
+      "date": "2026-07-15",
       "run_at": "?",
       "stats": {},
-      "signals": [
-        {
-          "id": "s1",
-          "priority": "fire",
-          "title": "长鑫存储HBM3突破+IPO启动：国产DRAM-HBM全链条闭环",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": [
-            "688981",
-            "688347",
-            "002371",
-            "688072",
-            "688361"
-          ]
-        },
-        {
-          "id": "s2",
-          "priority": "fire",
-          "title": "半导体设备国产化率突破35%：验证窗口提前，订单从政策驱动转商业需求",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": [
-            "002371",
-            "688072",
-            "688012",
-            "688082",
-            "300567"
-          ]
-        },
-        {
-          "id": "s3",
-          "priority": "normal",
-          "title": "中芯国际+H1业绩+华虹扩张：晶圆代工双龙头景气确认，制程涨价传导",
-          "chain": "chain1",
-          "confidence": "?",
-          "lifecycle": "consensus",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": [
-            "688981",
-            "688347",
-            "00981",
-            "01347"
-          ]
-        },
-        {
-          "id": "s4",
-          "priority": "fire",
-          "title": "高盛强烈看多中国AI价值链：全球基金配置仅1.2%，建议做多基础设施+电力+半导体",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "emerging",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": [
-            "688256",
-            "688041",
-            "688981",
-            "300308"
-          ]
-        },
-        {
-          "id": "s5",
-          "priority": "fire",
-          "title": "中际旭创+剑桥科技业绩爆发：800G满产1.6T放量，光模块全行业景气确认",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "consensus",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": [
-            "300308",
-            "603083",
-            "000977"
-          ]
-        },
-        {
-          "id": "s7",
-          "priority": "fire",
-          "title": "HBM4预计价格翻倍+先进封装国产突破：SK海力士封测大单落入国产厂商",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": [
-            "688256",
-            "688041",
-            "688981",
-            "002371"
-          ]
-        },
-        {
-          "id": "s11",
-          "priority": "fire",
-          "title": "特斯拉Optimus Gen 3定型：要求9月周产1000台，年底2000-2500台/周",
-          "chain": "chain2",
-          "confidence": "?",
-          "lifecycle": "positioning",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": [
-            "300124",
-            "002747",
-            "688017"
-          ]
-        },
-        {
-          "id": "pm-rs1",
-          "priority": "fire",
-          "title": "逐际动力完成Pre-IPO轮近2亿美元融资，半年累计4亿美元，投后估值150亿",
-          "chain": "robot",
-          "confidence": "?",
-          "lifecycle": "emerging",
-          "priced_in": "?",
-          "capital_backing": "?",
-          "tickers": [
-            "300024",
-            "688165",
-            "300607",
-            "002050",
-            "002747"
-          ]
-        }
-      ]
+      "signals": []
     },
     "anomalies": {
       "count": 20,
@@ -165,14 +35,6 @@
           "pct_chg": 20.01,
           "vol_ratio": 3.01,
           "attribution": "国产替代链,✅AI算力,半导体材料板块联动(25/25只)"
-        },
-        {
-          "date": "20260715",
-          "ts_code": "688166.SH",
-          "name": "博瑞医药",
-          "pct_chg": 20.01,
-          "vol_ratio": 1.82,
-          "attribution": "涨停封板"
         },
         {
           "date": "20260522",
@@ -228,14 +90,6 @@
           "name": "华瑞股份",
           "pct_chg": 20.01,
           "vol_ratio": 1.72,
-          "attribution": "涨停封板"
-        },
-        {
-          "date": "20260715",
-          "ts_code": "688192.SH",
-          "name": "迪哲医药",
-          "pct_chg": 20.01,
-          "vol_ratio": 6.96,
           "attribution": "涨停封板"
         },
         {
@@ -301,12 +155,28 @@
           "pct_chg": 20.01,
           "vol_ratio": 3.92,
           "attribution": "国产替代链,✅国产替代,✅AI算力,IC设计板块联动(36/46只)"
+        },
+        {
+          "date": "20260609",
+          "ts_code": "688596.SH",
+          "name": "正帆科技",
+          "pct_chg": 20.01,
+          "vol_ratio": 5.44,
+          "attribution": "涨停封板"
+        },
+        {
+          "date": "20260714",
+          "ts_code": "688192.SH",
+          "name": "迪哲医药",
+          "pct_chg": 20.0,
+          "vol_ratio": 3.8,
+          "attribution": "涨停封板"
         }
       ]
     },
     "themes": {
       "available": true,
-      "date": "20260715",
+      "date": "20260716",
       "top_themes": []
     },
     "kdj": {
