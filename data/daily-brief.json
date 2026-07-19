@@ -1,13 +1,10 @@
 {
-  "generated_at": "2026-07-16T16:29:25.933733+08:00",
-  "date": "2026-07-16",
+  "generated_at": "2026-07-19T16:30:27.879906+08:00",
+  "date": "2026-07-19",
   "sections": {
     "signals": {
-      "available": true,
-      "date": "2026-07-15",
-      "run_at": "?",
-      "stats": {},
-      "signals": []
+      "available": false,
+      "note": "No recent analyst data"
     },
     "anomalies": {
       "count": 20,
@@ -15,7 +12,7 @@
         {
           "date": "20260627",
           "ts_code": "002898.SZ",
-          "name": "赛隆退",
+          "name": "赛隆药业",
           "pct_chg": -95.78,
           "vol_ratio": 6.2,
           "attribution": "跌停封板"
@@ -69,6 +66,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20260719",
+          "ts_code": "688218.SH",
+          "name": "江苏北人",
+          "pct_chg": -20.01,
+          "vol_ratio": 2.29,
+          "attribution": "跌停封板"
+        },
+        {
           "date": "20260711",
           "ts_code": "688523.SH",
           "name": "航天环宇",
@@ -99,6 +104,14 @@
           "pct_chg": 20.01,
           "vol_ratio": 2.17,
           "attribution": "涨停封板"
+        },
+        {
+          "date": "20260719",
+          "ts_code": "301228.SZ",
+          "name": "实朴检测",
+          "pct_chg": -20.01,
+          "vol_ratio": 1.65,
+          "attribution": "跌停封板"
         },
         {
           "date": "20260609",
@@ -155,29 +168,11 @@
           "pct_chg": 20.01,
           "vol_ratio": 3.92,
           "attribution": "国产替代链,✅国产替代,✅AI算力,IC设计板块联动(36/46只)"
-        },
-        {
-          "date": "20260609",
-          "ts_code": "688596.SH",
-          "name": "正帆科技",
-          "pct_chg": 20.01,
-          "vol_ratio": 5.44,
-          "attribution": "涨停封板"
-        },
-        {
-          "date": "20260714",
-          "ts_code": "688192.SH",
-          "name": "迪哲医药",
-          "pct_chg": 20.0,
-          "vol_ratio": 3.8,
-          "attribution": "涨停封板"
         }
       ]
     },
     "themes": {
-      "available": true,
-      "date": "20260716",
-      "top_themes": []
+      "available": false
     },
     "kdj": {
       "available": true,

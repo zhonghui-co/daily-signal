@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-16T16:29:03.665823",
+  "generated_at": "2026-07-19T16:30:15.859247",
   "stats": {
-    "total": 34,
+    "total": 32,
     "by_source": {
-      "scanner": 12,
+      "scanner": 10,
       "b1b2b3": 2,
       "weekly_kdj": 20
     },
     "by_type": {
-      "fire": 8,
-      "normal": 4,
+      "fire": 4,
+      "normal": 6,
       "b1": 2,
       "weekly_kdj": 20
     },
     "by_direction": {
       "chain1": 5,
-      "chain2": 7,
+      "chain2": 5,
       "生物医药与器械": 2,
       "软件与IT服务": 1,
       "新能源/电力设备": 3,
@@ -30,27 +30,27 @@
       "汽车零部件": 1
     },
     "by_lifecycle": {
-      "consensus": 5,
       "positioning": 5,
-      "emerging": 24
+      "emerging": 24,
+      "consensus": 3
     },
     "by_priority": {
-      "fire": 8,
-      "normal": 24,
+      "fire": 4,
+      "normal": 26,
       "b1": 2
     }
   },
   "top_10": [
     {
-      "id": "SIG-35e1c70c1ee9",
-      "timestamp": "20260715T15:00:00+08:00",
+      "id": "SIG-a5eefc377e55",
+      "timestamp": "20260717T15:00:00+08:00",
       "source": "b1b2b3",
       "type": "b1",
       "direction": "生物医药与器械",
       "chain": "",
       "lifecycle": "emerging",
-      "title": "🔵 B1: 药石科技(300725) 生物医药与器械",
-      "summary": "B1=41.00 B2=36.54 B3=36.50 | +-10.9% from B1",
+      "title": "🔵 B1: 双鹭药业(002038) 生物医药与器械",
+      "summary": "B1=5.90 B2=6.18 B3=6.17 | +4.7% from B1",
       "priority": "b1",
       "settlement_risk": {
         "type": "T+1",
@@ -65,28 +65,28 @@
       "_score": 62,
       "tickers": [
         {
-          "code": "300725",
-          "name": "药石科技"
+          "code": "002038",
+          "name": "双鹭药业"
         }
       ],
       "metrics": {
-        "b1_price": 41.0,
-        "b2_price": 36.54,
-        "b3_price": 36.5,
-        "pct_from_b1": -10.9
+        "b1_price": 5.9,
+        "b2_price": 6.18,
+        "b3_price": 6.17,
+        "pct_from_b1": 4.7
       },
       "source_urls": []
     },
     {
-      "id": "SIG-e4bea0159af3",
-      "timestamp": "20260715T15:00:00+08:00",
+      "id": "SIG-ac36df883cb2",
+      "timestamp": "20260717T15:00:00+08:00",
       "source": "b1b2b3",
       "type": "b1",
       "direction": "生物医药与器械",
       "chain": "",
       "lifecycle": "emerging",
-      "title": "🔵 B1: 君实生物(688180) 生物医药与器械",
-      "summary": "B1=38.55 B2=35.17 B3=35.06 | +-8.8% from B1",
+      "title": "🔵 B1: 以岭药业(002603) 生物医药与器械",
+      "summary": "B1=16.50 B2=15.84 B3=15.84 | +-4.0% from B1",
       "priority": "b1",
       "settlement_risk": {
         "type": "T+1",
@@ -101,38 +101,63 @@
       "_score": 62,
       "tickers": [
         {
-          "code": "688180",
-          "name": "君实生物"
+          "code": "002603",
+          "name": "以岭药业"
         }
       ],
       "metrics": {
-        "b1_price": 38.55,
-        "b2_price": 35.17,
-        "b3_price": 35.06,
-        "pct_from_b1": -8.8
+        "b1_price": 16.5,
+        "b2_price": 15.84,
+        "b3_price": 15.84,
+        "pct_from_b1": -4.0
       },
       "source_urls": []
     },
     {
-      "id": "SIG-2a33cb51244c",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-00cce591fac6",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
-      "type": "normal",
+      "type": "fire",
       "direction": "chain1",
       "chain": "chain1",
       "lifecycle": "emerging",
-      "title": "中国芯片材料厂与日本争夺730亿美元市场：光刻胶/硅片/特气国产替代加速，日系断供风险催化",
-      "summary": "Nikkei Asia报道中国芯片材料制造商正在扩大尖端产品产能，瞄准日本企业长期主导的730亿美元市场。日系光刻胶全球市占率90%，中国从日本进口光刻胶占比50-60%。六氟化钨特气因HBM需求+30-40%涨价，国产替代空间显著。南大光电、彤程新材、沪硅产业等企业在ArF光刻胶、12英寸硅片领域取得突破。",
-      "priority": "normal",
+      "title": "日本光刻胶巨头集体断供中国：ArF/EUV新增订单连续5个月零报关，国产替代从可选项变必选项",
+      "summary": "2026年6月市场传闻日本四大光刻胶巨头同步断供中国——ArF/EUV光刻胶新增订单连续5个月零报关，KrF大幅压缩，驻华技术团队全数撤离。此前2025年11月日本已将ArF和EUV光刻胶纳入出口管制，审批周期延长至90天，对华配额削减10-15%。目前KrF光刻胶国产替代最快（市占率>40%），ArF整体国产化率<1%，EUV仍在研发阶段。晶圆厂导入一款新光刻胶需2-3年全周期验证，短期断供将直接冲击先进制程扩产。",
+      "priority": "fire",
       "settlement_risk": {
         "type": "T+1",
         "note": "A股T+1制度，当日买入无法当日止损",
         "suggestion": "尾盘14:50后确认信号方向再操作"
       },
       "money_flow_quality": {
-        "status": "not_applicable",
-        "label": "不适用资金验证",
-        "detail": ""
+        "type": "margin",
+        "margin_by_ticker": {
+          "南大光电": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "鼎龙股份": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "雅克科技": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "晶瑞电材": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "上海新阳": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          }
+        }
       },
       "_score": 52,
       "tickers": [
@@ -141,94 +166,115 @@
           "name": ""
         },
         {
-          "code": "彤程新材",
+          "code": "鼎龙股份",
           "name": ""
         },
         {
-          "code": "沪硅产业",
+          "code": "雅克科技",
           "name": ""
         },
         {
-          "code": "中船特气",
+          "code": "晶瑞电材",
           "name": ""
         },
         {
-          "code": "江丰电子",
-          "name": ""
-        },
-        {
-          "code": "安集科技",
+          "code": "上海新阳",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://asia.nikkei.com/business/tech/semiconductors/china-chip-material-makers-battle-japan-rivals-for-73bn-market",
-        "https://www.sina.cn/news/detail/5312689964320105.html",
-        "https://www.sina.cn/news/detail/5316026666585325.html"
+        "https://www.9fzt.com/9fztgw_1_bottom_B/678ec2877a2850da71819889421a6f58.html",
+        "https://www.163.com/dy/article/L1DSTMJL0539IMJ0.html",
+        "https://36kr.com/p/3798834887914248"
       ]
     },
     {
-      "id": "SIG-d97b97b61059",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-c20ec6d42815",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
-      "type": "normal",
+      "type": "fire",
       "direction": "chain2",
       "chain": "chain2",
       "lifecycle": "emerging",
-      "title": "人形机器人量产元年2026：特斯拉Optimus Gen3年底量产5-10万台，国内产业链从主题向订单验证切换",
-      "summary": "特斯拉Optimus Gen3计划2026年底规模量产，目标5-10万台（2027年50-100万台）。加州Model S/X工厂已改造为机器人产线，Gen3手部22个自由度接近人类。中信证券指出2026是人形机器人从0到1的量产元年，投资逻辑由主题博弈切向定点份额×出货量验证。越疆科技7月22日创业板IPO上会。",
-      "priority": "normal",
+      "title": "高盛重磅：中国AI市值仅占全球10%但贡献16%营收，三重错配创造万亿重估机会",
+      "summary": "高盛发布中国AI行业深度报告：中国AI已构建不可复制的全价值链竞争优势（从半导体设备到应用层）。中国AI市值仅占全球10%但贡献16%营收，存在三重错配。全球共同基金对中国科技配置仅1.2%。高盛推荐做多中国AI价值链条。CNBC报道高盛重点看好DeepSeek和字节跳动（私有），阿里获中性评级。报告指出中国在AI应用层（豆包AI手机、Apple智能本地化）和算力基建（智算中心）已形成全球竞争力。",
+      "priority": "fire",
       "settlement_risk": {
         "type": "T+1",
         "note": "A股T+1制度，当日买入无法当日止损",
         "suggestion": "尾盘14:50后确认信号方向再操作"
       },
       "money_flow_quality": {
-        "status": "not_applicable",
-        "label": "不适用资金验证",
-        "detail": ""
+        "type": "margin",
+        "margin_by_ticker": {
+          "寒武纪": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "海光信息": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "中科曙光": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "浪潮信息": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "拓维信息": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          }
+        }
       },
       "_score": 52,
       "tickers": [
         {
-          "code": "埃斯顿",
+          "code": "寒武纪",
           "name": ""
         },
         {
-          "code": "奥比中光",
+          "code": "海光信息",
           "name": ""
         },
         {
-          "code": "拓普集团",
+          "code": "中科曙光",
           "name": ""
         },
         {
-          "code": "三花智控",
+          "code": "浪潮信息",
           "name": ""
         },
         {
-          "code": "绿的谐波",
+          "code": "拓维信息",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://app.myzaker.com/news/article.php?pk=6a4b17f7b15ec043a7352e40",
-        "https://www.tradingkey.com/zh-hant/analysis/stocks/us-stock/262020142-tsla-musk-optimus-gen3-ai-tradingkey",
-        "https://www.sfccn.com/2026/7-2/4MMDE1MjBfMjE3Mjg4MQ.html"
+        "https://finance.biggo.com/news/8610c6d4-0628-4e77-a816-ca3dfca11ea6",
+        "https://www.cnbc.com/2026/07/12/goldman-sachs-picks-its-favorite-chinese-ai-models.html",
+        "https://www.kucoin.com/news/flash/goldman-sachs-recommends-long-china-ai-value-chain-amid-low-global-fund-allocation"
       ]
     },
     {
-      "id": "SIG-d671bb0a6988",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-d8796e44b8b1",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
       "type": "fire",
       "direction": "chain1",
       "chain": "chain1",
       "lifecycle": "positioning",
-      "title": "北方华创横扫820亿订单，全球半导体设备排名升至第五（中国企业首次进入前五）",
-      "summary": "北方华创2025年全球芯片设备20强中超越科磊排名第五，为中国企业首次进入全球前五。Q1营收103.23亿元（+25.8%），净利润16.35亿元（+3.4%），在手订单820亿元。作为平台型企业覆盖刻蚀、薄膜沉积、清洗、炉管等全品类设备。",
+      "title": "长鑫科技今日申购：国产DRAM第一股，5791亿市值起步，2026年最大A股IPO",
+      "summary": "长鑫科技7月16日开启科创板申购，发行价8.66元/股，IPO规模579-666亿元，有望成为2026年A股最大IPO。CXMT全球DRAM份额一年间从3%飙升至8%，是国内唯一DRAM全产业链IDM。2025年归母净利润187.49亿元，预计2026H1归母净利润500-570亿元，2026年扣非净利润预计超22倍增长。多家险资+社保+养老基金参与战略配售，限售期12-18个月。上市后市值有望超3万亿，早期入场险资持股市值将超千亿。",
       "priority": "fire",
       "settlement_risk": {
         "type": "T+1",
@@ -238,158 +284,7 @@
       "money_flow_quality": {
         "type": "margin",
         "margin_by_ticker": {
-          "北方华创": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "中微公司": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "拓荆科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "盛美上海": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          }
-        }
-      },
-      "_score": 42,
-      "tickers": [
-        {
-          "code": "北方华创",
-          "name": ""
-        },
-        {
-          "code": "中微公司",
-          "name": ""
-        },
-        {
-          "code": "拓荆科技",
-          "name": ""
-        },
-        {
-          "code": "盛美上海",
-          "name": ""
-        }
-      ],
-      "metrics": {},
-      "source_urls": [
-        "https://www.163.com/dy/article/L1O9MGUR0556DW7R.html",
-        "https://www.163.com/dy/article/L0R4MCHN0519QIKK.html"
-      ]
-    },
-    {
-      "id": "SIG-10985d7f0773",
-      "timestamp": "2026-07-15T22:30:00+08:00",
-      "source": "scanner",
-      "type": "fire",
-      "direction": "chain1",
-      "chain": "chain1",
-      "lifecycle": "positioning",
-      "title": "国产半导体设备「黄金大年」：SEMI预测2026-2028年全球设备市场CAGR近20%，国产化率加速提升",
-      "summary": "SEMI预测全球半导体设备市场2026年1659亿美元（+23.2%），2028年达2295亿美元，CAGR 19.44%。DRAM设备今年增39%至388亿美元。国产替代方面：刻蚀设备国产化率约25%、薄膜沉积约27%、CMP约30%，先进封装/碳化硅产线国产导入周期明显压缩，部分刻蚀、清洗设备已进入「重复下单」阶段。",
-      "priority": "fire",
-      "settlement_risk": {
-        "type": "T+1",
-        "note": "A股T+1制度，当日买入无法当日止损",
-        "suggestion": "尾盘14:50后确认信号方向再操作"
-      },
-      "money_flow_quality": {
-        "type": "margin",
-        "margin_by_ticker": {
-          "北方华创": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "中微公司": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "拓荆科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "盛美上海": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "芯源微": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "华海清科": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          }
-        }
-      },
-      "_score": 42,
-      "tickers": [
-        {
-          "code": "北方华创",
-          "name": ""
-        },
-        {
-          "code": "中微公司",
-          "name": ""
-        },
-        {
-          "code": "拓荆科技",
-          "name": ""
-        },
-        {
-          "code": "盛美上海",
-          "name": ""
-        },
-        {
-          "code": "芯源微",
-          "name": ""
-        },
-        {
-          "code": "华海清科",
-          "name": ""
-        }
-      ],
-      "metrics": {},
-      "source_urls": [
-        "https://news.pedaily.cn/202607/565872.shtml",
-        "http://www.ciweek.com/article/2026/0706/A2026070635270.shtml",
-        "https://www.ichaoqi.com/guandian/2026/0706/82869.html"
-      ]
-    },
-    {
-      "id": "SIG-1182d3fc5bab",
-      "timestamp": "2026-07-15T22:30:00+08:00",
-      "source": "scanner",
-      "type": "fire",
-      "direction": "chain2",
-      "chain": "chain2",
-      "lifecycle": "positioning",
-      "title": "存储芯片涨价进入连续第三季度：三星Q3 DRAM拟涨20%，HBM涨15-30%，巴克莱称短缺持续至2028",
-      "summary": "截至2026年7月全球存储涨价进入连续第三个季度，量价齐升刷新历史。三星计划Q3通用DRAM ASP环比+20%，LPDDR移动端+20%以上。HBM3E/HBM4涨15-30%，DRAM/NAND涨8-22%。巴克莱称存储短缺持续至2028年，SK海力士ADR有翻倍上涨空间（目标330美元）。DRAM ASP环比+45%，营业利润达55万亿韩元。",
-      "priority": "fire",
-      "settlement_risk": {
-        "type": "T+1",
-        "note": "A股T+1制度，当日买入无法当日止损",
-        "suggestion": "尾盘14:50后确认信号方向再操作"
-      },
-      "money_flow_quality": {
-        "type": "margin",
-        "margin_by_ticker": {
-          "佰维存储": {
+          "长鑫科技": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
@@ -399,17 +294,17 @@
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
           },
-          "江波龙": {
+          "澜起科技": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
           },
-          "德明利": {
+          "北方华创": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
           },
-          "SK海力士": {
+          "中微公司": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
@@ -419,7 +314,7 @@
       "_score": 42,
       "tickers": [
         {
-          "code": "佰维存储",
+          "code": "长鑫科技",
           "name": ""
         },
         {
@@ -427,69 +322,96 @@
           "name": ""
         },
         {
-          "code": "江波龙",
+          "code": "澜起科技",
           "name": ""
         },
         {
-          "code": "德明利",
+          "code": "北方华创",
           "name": ""
         },
         {
-          "code": "SK海力士",
+          "code": "中微公司",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://finance.sina.com.cn/jjxw/2026-07-07/doc-inifxpii1621357.shtml",
-        "https://www.sina.cn/news/detail/5314459758496000.html"
+        "https://asia.nikkei.com/business/tech/semiconductors/cxmt-to-raise-8.5bn-in-largest-chinese-chip-ipo",
+        "https://app.myzaker.com/news/article.php?pk=6a5700588e9f095d7f695c2e",
+        "https://www.lanjinger.com/d/1783650507287254889"
       ]
     },
     {
-      "id": "SIG-fd262a5d03a6",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-988bd7d53288",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
-      "type": "fire",
-      "direction": "chain2",
-      "chain": "chain2",
+      "type": "normal",
+      "direction": "chain1",
+      "chain": "chain1",
       "lifecycle": "positioning",
-      "title": "先进封装2026超级扩产大年：8家企业累计投资超300亿，HBM市场规模预计546-560亿美元",
-      "summary": "受AI算力、HBM存储、车载芯片需求拉动，A股先进封装板块2026年累计扩产投资超300亿元，8家核心企业集中落地。高盛/美银预计HBM市场规模2026年达546-560亿美元（2027年突破1100亿），供需缺口5.4%，产能排到2027年。封装设备订单排产拉长，键合/植球/检测设备采购需求持续增长。",
-      "priority": "fire",
+      "title": "北方华创横扫820亿订单，全球半导体设备第五，12英寸金属刻蚀国产化率突破60%",
+      "summary": "北方华创2026Q1经营活动现金流7.48亿元（+150% YoY），全年手持订单820亿。12英寸金属刻蚀设备国产化率突破60%。政策要求晶圆厂新建产线至少使用50%国产设备。公司凭借平台化布局拿下全球半导体设备第五名，但多品类布局导致毛利率下滑。伯恩斯坦数据：本土晶圆设备国产化率从2024年16%→2025年21%，高盛预测2028年有望冲击28%。",
+      "priority": "normal",
       "settlement_risk": {
         "type": "T+1",
         "note": "A股T+1制度，当日买入无法当日止损",
         "suggestion": "尾盘14:50后确认信号方向再操作"
       },
       "money_flow_quality": {
-        "type": "margin",
-        "margin_by_ticker": {
-          "长电科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "通富微电": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "华天科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "晶方科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "甬矽电子": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          }
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 42,
+      "tickers": [
+        {
+          "code": "北方华创",
+          "name": ""
+        },
+        {
+          "code": "中微公司",
+          "name": ""
+        },
+        {
+          "code": "拓荆科技",
+          "name": ""
+        },
+        {
+          "code": "华海清科",
+          "name": ""
+        },
+        {
+          "code": "盛美上海",
+          "name": ""
         }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://caifuhao.eastmoney.com/news/20260713195545237631500",
+        "https://www.163.com/dy/article/L1O9MGUR0556DW7R.html",
+        "https://www.ichaoqi.com/guandian/2026/0706/82869.html"
+      ]
+    },
+    {
+      "id": "SIG-fff25a09b6cd",
+      "timestamp": "2026-07-16T10:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain2",
+      "chain": "chain2",
+      "lifecycle": "positioning",
+      "title": "HBM4价格预期翻倍：$2/GB→$4-5/GB，先进封装产能供不应求，国产HBM配套龙头2.5D加工费上调15-22%",
+      "summary": "HBM4价格预计2026H2从~$2/GB飙升至$4-5/GB甚至更高，涨价核心源于制造难度极高、生产周期长。三星Q1营业利润57.2万亿韩元（+755% YoY），Q2 DRAM价涨~30%。国内HBM先进封装龙头自研SmartPoserSi平台对标台积电CoWoS，可实现20μm微凸点间距，2026年百亿级上海临港3DIC项目开工，二季度2.5D封装加工费上调15-22%，订单排产周期4-6个月，产能供不应求。",
+      "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
       },
       "_score": 42,
       "tickers": [
@@ -510,27 +432,27 @@
           "name": ""
         },
         {
-          "code": "甬矽电子",
+          "code": "深科技",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://stock.jrj.com.cn/2026/07/09105357745261.shtml",
-        "https://www.eet-china.com/mp/a506092.html",
-        "https://caifuhao.eastmoney.com/news/20260629205113506547690"
+        "https://finance.sina.cn/stock/jdts/2026-07-12/detail-inihnhar8111922.d.html",
+        "https://caifuhao2.eastmoney.com/news/20260711184016942854040",
+        "https://www.yicai.com/news/102989986.html"
       ]
     },
     {
-      "id": "SIG-55856aed79fe",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-776cd3290aa8",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
       "type": "normal",
       "direction": "chain2",
       "chain": "chain2",
       "lifecycle": "positioning",
-      "title": "Goldman Sachs强力看多中国AI价值链：市值仅占全球10%但贡献16%营收，三重错配创造万亿重估机会",
-      "summary": "高盛报告指出：①中国AI市值仅占全球10%但贡献16%营收，三重错配（估值/营收/利润）创造重估机会；②全球基金中国科技敞口仅1.2%，极度低配；③中国在AI基础设施、电力和半导体环节具有独特竞争优势。浪潮信息H1净利润+226-288%，印证服务器环节景气度。",
+      "title": "英伟达Vera Rubin已进入生产阶段，推理吞吐量35x提升，黄仁勋否认延期传闻",
+      "summary": "英伟达CEO黄仁勋明确否认产品延期传闻，称下一代AI加速计算系统Vera Rubin已进入生产阶段，将按计划交付客户，大规模量产即将开始。该平台整合七大专用芯片和五大加速机架，相较Blackwell架构推理吞吐量提升35倍，AI工厂营收能力提高10倍。同时英伟达与丰田扩大合作至L2++辅助驾驶+机器人+智能设施，构建物理AI生态。",
       "priority": "normal",
       "settlement_risk": {
         "type": "T+1",
@@ -545,26 +467,85 @@
       "_score": 42,
       "tickers": [
         {
+          "code": "英伟达",
+          "name": ""
+        },
+        {
+          "code": "中际旭创",
+          "name": ""
+        },
+        {
+          "code": "工业富联",
+          "name": ""
+        },
+        {
           "code": "浪潮信息",
-          "name": ""
-        },
-        {
-          "code": "寒武纪",
-          "name": ""
-        },
-        {
-          "code": "海光信息",
-          "name": ""
-        },
-        {
-          "code": "中科曙光",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://finance.biggo.com/news/8610c6d4-0628-4e77-a816-ca3dfca11ea6",
-        "https://www.moomoo.com/community/feed/goldman-sachs-makes-a-major-statement-go-long-on-china-116888960762262"
+        "https://readhub data",
+        "https://36kr.com/p/3590983777108229"
+      ]
+    },
+    {
+      "id": "SIG-f2a703278e0f",
+      "timestamp": "2026-07-16T10:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "positioning",
+      "title": "特斯拉Optimus Gen 3初步定型，要求供应商年底具备年产10万台零件能力，2026人形机器人商业化元年",
+      "summary": "特斯拉第三代Optimus设计已定案，马斯克要求供应商年底前具备年产10万台零件能力，否则开除整个采购团队。2026年产量目标5-10万台，2027年有望50-100万台。工信部数据：2026年全年中国人形机器人整机产量有望首次突破10万台。小鹏计划年底月产能超千台。万联证券认为当前处于从技术突破→规模化商业化的关键阶段。英伟达+丰田合作拓展至机器人领域，构建物理AI生态。",
+      "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 42,
+      "tickers": [
+        {
+          "code": "拓普集团",
+          "name": ""
+        },
+        {
+          "code": "三花智控",
+          "name": ""
+        },
+        {
+          "code": "鸣志电器",
+          "name": ""
+        },
+        {
+          "code": "绿的谐波",
+          "name": ""
+        },
+        {
+          "code": "汇川技术",
+          "name": ""
+        },
+        {
+          "code": "奥比中光",
+          "name": ""
+        },
+        {
+          "code": "埃斯顿",
+          "name": ""
+        }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://www.tradingkey.com/zh-hant/analysis/stocks/us-stock/262020142-tsla-musk-optimus-gen3-ai-tradingkey",
+        "https://m.jiemian.com/article/14751657.html",
+        "https://udn.com/news/story/6811/9620098"
       ]
     },
     {
@@ -606,15 +587,15 @@
   ],
   "signals": [
     {
-      "id": "SIG-35e1c70c1ee9",
-      "timestamp": "20260715T15:00:00+08:00",
+      "id": "SIG-a5eefc377e55",
+      "timestamp": "20260717T15:00:00+08:00",
       "source": "b1b2b3",
       "type": "b1",
       "direction": "生物医药与器械",
       "chain": "",
       "lifecycle": "emerging",
-      "title": "🔵 B1: 药石科技(300725) 生物医药与器械",
-      "summary": "B1=41.00 B2=36.54 B3=36.50 | +-10.9% from B1",
+      "title": "🔵 B1: 双鹭药业(002038) 生物医药与器械",
+      "summary": "B1=5.90 B2=6.18 B3=6.17 | +4.7% from B1",
       "priority": "b1",
       "settlement_risk": {
         "type": "T+1",
@@ -629,28 +610,28 @@
       "_score": 62,
       "tickers": [
         {
-          "code": "300725",
-          "name": "药石科技"
+          "code": "002038",
+          "name": "双鹭药业"
         }
       ],
       "metrics": {
-        "b1_price": 41.0,
-        "b2_price": 36.54,
-        "b3_price": 36.5,
-        "pct_from_b1": -10.9
+        "b1_price": 5.9,
+        "b2_price": 6.18,
+        "b3_price": 6.17,
+        "pct_from_b1": 4.7
       },
       "source_urls": []
     },
     {
-      "id": "SIG-e4bea0159af3",
-      "timestamp": "20260715T15:00:00+08:00",
+      "id": "SIG-ac36df883cb2",
+      "timestamp": "20260717T15:00:00+08:00",
       "source": "b1b2b3",
       "type": "b1",
       "direction": "生物医药与器械",
       "chain": "",
       "lifecycle": "emerging",
-      "title": "🔵 B1: 君实生物(688180) 生物医药与器械",
-      "summary": "B1=38.55 B2=35.17 B3=35.06 | +-8.8% from B1",
+      "title": "🔵 B1: 以岭药业(002603) 生物医药与器械",
+      "summary": "B1=16.50 B2=15.84 B3=15.84 | +-4.0% from B1",
       "priority": "b1",
       "settlement_risk": {
         "type": "T+1",
@@ -665,38 +646,63 @@
       "_score": 62,
       "tickers": [
         {
-          "code": "688180",
-          "name": "君实生物"
+          "code": "002603",
+          "name": "以岭药业"
         }
       ],
       "metrics": {
-        "b1_price": 38.55,
-        "b2_price": 35.17,
-        "b3_price": 35.06,
-        "pct_from_b1": -8.8
+        "b1_price": 16.5,
+        "b2_price": 15.84,
+        "b3_price": 15.84,
+        "pct_from_b1": -4.0
       },
       "source_urls": []
     },
     {
-      "id": "SIG-2a33cb51244c",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-00cce591fac6",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
-      "type": "normal",
+      "type": "fire",
       "direction": "chain1",
       "chain": "chain1",
       "lifecycle": "emerging",
-      "title": "中国芯片材料厂与日本争夺730亿美元市场：光刻胶/硅片/特气国产替代加速，日系断供风险催化",
-      "summary": "Nikkei Asia报道中国芯片材料制造商正在扩大尖端产品产能，瞄准日本企业长期主导的730亿美元市场。日系光刻胶全球市占率90%，中国从日本进口光刻胶占比50-60%。六氟化钨特气因HBM需求+30-40%涨价，国产替代空间显著。南大光电、彤程新材、沪硅产业等企业在ArF光刻胶、12英寸硅片领域取得突破。",
-      "priority": "normal",
+      "title": "日本光刻胶巨头集体断供中国：ArF/EUV新增订单连续5个月零报关，国产替代从可选项变必选项",
+      "summary": "2026年6月市场传闻日本四大光刻胶巨头同步断供中国——ArF/EUV光刻胶新增订单连续5个月零报关，KrF大幅压缩，驻华技术团队全数撤离。此前2025年11月日本已将ArF和EUV光刻胶纳入出口管制，审批周期延长至90天，对华配额削减10-15%。目前KrF光刻胶国产替代最快（市占率>40%），ArF整体国产化率<1%，EUV仍在研发阶段。晶圆厂导入一款新光刻胶需2-3年全周期验证，短期断供将直接冲击先进制程扩产。",
+      "priority": "fire",
       "settlement_risk": {
         "type": "T+1",
         "note": "A股T+1制度，当日买入无法当日止损",
         "suggestion": "尾盘14:50后确认信号方向再操作"
       },
       "money_flow_quality": {
-        "status": "not_applicable",
-        "label": "不适用资金验证",
-        "detail": ""
+        "type": "margin",
+        "margin_by_ticker": {
+          "南大光电": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "鼎龙股份": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "雅克科技": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "晶瑞电材": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "上海新阳": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          }
+        }
       },
       "_score": 52,
       "tickers": [
@@ -705,94 +711,115 @@
           "name": ""
         },
         {
-          "code": "彤程新材",
+          "code": "鼎龙股份",
           "name": ""
         },
         {
-          "code": "沪硅产业",
+          "code": "雅克科技",
           "name": ""
         },
         {
-          "code": "中船特气",
+          "code": "晶瑞电材",
           "name": ""
         },
         {
-          "code": "江丰电子",
-          "name": ""
-        },
-        {
-          "code": "安集科技",
+          "code": "上海新阳",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://asia.nikkei.com/business/tech/semiconductors/china-chip-material-makers-battle-japan-rivals-for-73bn-market",
-        "https://www.sina.cn/news/detail/5312689964320105.html",
-        "https://www.sina.cn/news/detail/5316026666585325.html"
+        "https://www.9fzt.com/9fztgw_1_bottom_B/678ec2877a2850da71819889421a6f58.html",
+        "https://www.163.com/dy/article/L1DSTMJL0539IMJ0.html",
+        "https://36kr.com/p/3798834887914248"
       ]
     },
     {
-      "id": "SIG-d97b97b61059",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-c20ec6d42815",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
-      "type": "normal",
+      "type": "fire",
       "direction": "chain2",
       "chain": "chain2",
       "lifecycle": "emerging",
-      "title": "人形机器人量产元年2026：特斯拉Optimus Gen3年底量产5-10万台，国内产业链从主题向订单验证切换",
-      "summary": "特斯拉Optimus Gen3计划2026年底规模量产，目标5-10万台（2027年50-100万台）。加州Model S/X工厂已改造为机器人产线，Gen3手部22个自由度接近人类。中信证券指出2026是人形机器人从0到1的量产元年，投资逻辑由主题博弈切向定点份额×出货量验证。越疆科技7月22日创业板IPO上会。",
-      "priority": "normal",
+      "title": "高盛重磅：中国AI市值仅占全球10%但贡献16%营收，三重错配创造万亿重估机会",
+      "summary": "高盛发布中国AI行业深度报告：中国AI已构建不可复制的全价值链竞争优势（从半导体设备到应用层）。中国AI市值仅占全球10%但贡献16%营收，存在三重错配。全球共同基金对中国科技配置仅1.2%。高盛推荐做多中国AI价值链条。CNBC报道高盛重点看好DeepSeek和字节跳动（私有），阿里获中性评级。报告指出中国在AI应用层（豆包AI手机、Apple智能本地化）和算力基建（智算中心）已形成全球竞争力。",
+      "priority": "fire",
       "settlement_risk": {
         "type": "T+1",
         "note": "A股T+1制度，当日买入无法当日止损",
         "suggestion": "尾盘14:50后确认信号方向再操作"
       },
       "money_flow_quality": {
-        "status": "not_applicable",
-        "label": "不适用资金验证",
-        "detail": ""
+        "type": "margin",
+        "margin_by_ticker": {
+          "寒武纪": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "海光信息": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "中科曙光": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "浪潮信息": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "拓维信息": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          }
+        }
       },
       "_score": 52,
       "tickers": [
         {
-          "code": "埃斯顿",
+          "code": "寒武纪",
           "name": ""
         },
         {
-          "code": "奥比中光",
+          "code": "海光信息",
           "name": ""
         },
         {
-          "code": "拓普集团",
+          "code": "中科曙光",
           "name": ""
         },
         {
-          "code": "三花智控",
+          "code": "浪潮信息",
           "name": ""
         },
         {
-          "code": "绿的谐波",
+          "code": "拓维信息",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://app.myzaker.com/news/article.php?pk=6a4b17f7b15ec043a7352e40",
-        "https://www.tradingkey.com/zh-hant/analysis/stocks/us-stock/262020142-tsla-musk-optimus-gen3-ai-tradingkey",
-        "https://www.sfccn.com/2026/7-2/4MMDE1MjBfMjE3Mjg4MQ.html"
+        "https://finance.biggo.com/news/8610c6d4-0628-4e77-a816-ca3dfca11ea6",
+        "https://www.cnbc.com/2026/07/12/goldman-sachs-picks-its-favorite-chinese-ai-models.html",
+        "https://www.kucoin.com/news/flash/goldman-sachs-recommends-long-china-ai-value-chain-amid-low-global-fund-allocation"
       ]
     },
     {
-      "id": "SIG-d671bb0a6988",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-d8796e44b8b1",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
       "type": "fire",
       "direction": "chain1",
       "chain": "chain1",
       "lifecycle": "positioning",
-      "title": "北方华创横扫820亿订单，全球半导体设备排名升至第五（中国企业首次进入前五）",
-      "summary": "北方华创2025年全球芯片设备20强中超越科磊排名第五，为中国企业首次进入全球前五。Q1营收103.23亿元（+25.8%），净利润16.35亿元（+3.4%），在手订单820亿元。作为平台型企业覆盖刻蚀、薄膜沉积、清洗、炉管等全品类设备。",
+      "title": "长鑫科技今日申购：国产DRAM第一股，5791亿市值起步，2026年最大A股IPO",
+      "summary": "长鑫科技7月16日开启科创板申购，发行价8.66元/股，IPO规模579-666亿元，有望成为2026年A股最大IPO。CXMT全球DRAM份额一年间从3%飙升至8%，是国内唯一DRAM全产业链IDM。2025年归母净利润187.49亿元，预计2026H1归母净利润500-570亿元，2026年扣非净利润预计超22倍增长。多家险资+社保+养老基金参与战略配售，限售期12-18个月。上市后市值有望超3万亿，早期入场险资持股市值将超千亿。",
       "priority": "fire",
       "settlement_risk": {
         "type": "T+1",
@@ -802,158 +829,7 @@
       "money_flow_quality": {
         "type": "margin",
         "margin_by_ticker": {
-          "北方华创": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "中微公司": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "拓荆科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "盛美上海": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          }
-        }
-      },
-      "_score": 42,
-      "tickers": [
-        {
-          "code": "北方华创",
-          "name": ""
-        },
-        {
-          "code": "中微公司",
-          "name": ""
-        },
-        {
-          "code": "拓荆科技",
-          "name": ""
-        },
-        {
-          "code": "盛美上海",
-          "name": ""
-        }
-      ],
-      "metrics": {},
-      "source_urls": [
-        "https://www.163.com/dy/article/L1O9MGUR0556DW7R.html",
-        "https://www.163.com/dy/article/L0R4MCHN0519QIKK.html"
-      ]
-    },
-    {
-      "id": "SIG-10985d7f0773",
-      "timestamp": "2026-07-15T22:30:00+08:00",
-      "source": "scanner",
-      "type": "fire",
-      "direction": "chain1",
-      "chain": "chain1",
-      "lifecycle": "positioning",
-      "title": "国产半导体设备「黄金大年」：SEMI预测2026-2028年全球设备市场CAGR近20%，国产化率加速提升",
-      "summary": "SEMI预测全球半导体设备市场2026年1659亿美元（+23.2%），2028年达2295亿美元，CAGR 19.44%。DRAM设备今年增39%至388亿美元。国产替代方面：刻蚀设备国产化率约25%、薄膜沉积约27%、CMP约30%，先进封装/碳化硅产线国产导入周期明显压缩，部分刻蚀、清洗设备已进入「重复下单」阶段。",
-      "priority": "fire",
-      "settlement_risk": {
-        "type": "T+1",
-        "note": "A股T+1制度，当日买入无法当日止损",
-        "suggestion": "尾盘14:50后确认信号方向再操作"
-      },
-      "money_flow_quality": {
-        "type": "margin",
-        "margin_by_ticker": {
-          "北方华创": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "中微公司": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "拓荆科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "盛美上海": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "芯源微": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "华海清科": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          }
-        }
-      },
-      "_score": 42,
-      "tickers": [
-        {
-          "code": "北方华创",
-          "name": ""
-        },
-        {
-          "code": "中微公司",
-          "name": ""
-        },
-        {
-          "code": "拓荆科技",
-          "name": ""
-        },
-        {
-          "code": "盛美上海",
-          "name": ""
-        },
-        {
-          "code": "芯源微",
-          "name": ""
-        },
-        {
-          "code": "华海清科",
-          "name": ""
-        }
-      ],
-      "metrics": {},
-      "source_urls": [
-        "https://news.pedaily.cn/202607/565872.shtml",
-        "http://www.ciweek.com/article/2026/0706/A2026070635270.shtml",
-        "https://www.ichaoqi.com/guandian/2026/0706/82869.html"
-      ]
-    },
-    {
-      "id": "SIG-1182d3fc5bab",
-      "timestamp": "2026-07-15T22:30:00+08:00",
-      "source": "scanner",
-      "type": "fire",
-      "direction": "chain2",
-      "chain": "chain2",
-      "lifecycle": "positioning",
-      "title": "存储芯片涨价进入连续第三季度：三星Q3 DRAM拟涨20%，HBM涨15-30%，巴克莱称短缺持续至2028",
-      "summary": "截至2026年7月全球存储涨价进入连续第三个季度，量价齐升刷新历史。三星计划Q3通用DRAM ASP环比+20%，LPDDR移动端+20%以上。HBM3E/HBM4涨15-30%，DRAM/NAND涨8-22%。巴克莱称存储短缺持续至2028年，SK海力士ADR有翻倍上涨空间（目标330美元）。DRAM ASP环比+45%，营业利润达55万亿韩元。",
-      "priority": "fire",
-      "settlement_risk": {
-        "type": "T+1",
-        "note": "A股T+1制度，当日买入无法当日止损",
-        "suggestion": "尾盘14:50后确认信号方向再操作"
-      },
-      "money_flow_quality": {
-        "type": "margin",
-        "margin_by_ticker": {
-          "佰维存储": {
+          "长鑫科技": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
@@ -963,17 +839,17 @@
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
           },
-          "江波龙": {
+          "澜起科技": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
           },
-          "德明利": {
+          "北方华创": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
           },
-          "SK海力士": {
+          "中微公司": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
@@ -983,7 +859,7 @@
       "_score": 42,
       "tickers": [
         {
-          "code": "佰维存储",
+          "code": "长鑫科技",
           "name": ""
         },
         {
@@ -991,69 +867,96 @@
           "name": ""
         },
         {
-          "code": "江波龙",
+          "code": "澜起科技",
           "name": ""
         },
         {
-          "code": "德明利",
+          "code": "北方华创",
           "name": ""
         },
         {
-          "code": "SK海力士",
+          "code": "中微公司",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://finance.sina.com.cn/jjxw/2026-07-07/doc-inifxpii1621357.shtml",
-        "https://www.sina.cn/news/detail/5314459758496000.html"
+        "https://asia.nikkei.com/business/tech/semiconductors/cxmt-to-raise-8.5bn-in-largest-chinese-chip-ipo",
+        "https://app.myzaker.com/news/article.php?pk=6a5700588e9f095d7f695c2e",
+        "https://www.lanjinger.com/d/1783650507287254889"
       ]
     },
     {
-      "id": "SIG-fd262a5d03a6",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-988bd7d53288",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
-      "type": "fire",
-      "direction": "chain2",
-      "chain": "chain2",
+      "type": "normal",
+      "direction": "chain1",
+      "chain": "chain1",
       "lifecycle": "positioning",
-      "title": "先进封装2026超级扩产大年：8家企业累计投资超300亿，HBM市场规模预计546-560亿美元",
-      "summary": "受AI算力、HBM存储、车载芯片需求拉动，A股先进封装板块2026年累计扩产投资超300亿元，8家核心企业集中落地。高盛/美银预计HBM市场规模2026年达546-560亿美元（2027年突破1100亿），供需缺口5.4%，产能排到2027年。封装设备订单排产拉长，键合/植球/检测设备采购需求持续增长。",
-      "priority": "fire",
+      "title": "北方华创横扫820亿订单，全球半导体设备第五，12英寸金属刻蚀国产化率突破60%",
+      "summary": "北方华创2026Q1经营活动现金流7.48亿元（+150% YoY），全年手持订单820亿。12英寸金属刻蚀设备国产化率突破60%。政策要求晶圆厂新建产线至少使用50%国产设备。公司凭借平台化布局拿下全球半导体设备第五名，但多品类布局导致毛利率下滑。伯恩斯坦数据：本土晶圆设备国产化率从2024年16%→2025年21%，高盛预测2028年有望冲击28%。",
+      "priority": "normal",
       "settlement_risk": {
         "type": "T+1",
         "note": "A股T+1制度，当日买入无法当日止损",
         "suggestion": "尾盘14:50后确认信号方向再操作"
       },
       "money_flow_quality": {
-        "type": "margin",
-        "margin_by_ticker": {
-          "长电科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "通富微电": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "华天科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "晶方科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "甬矽电子": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          }
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 42,
+      "tickers": [
+        {
+          "code": "北方华创",
+          "name": ""
+        },
+        {
+          "code": "中微公司",
+          "name": ""
+        },
+        {
+          "code": "拓荆科技",
+          "name": ""
+        },
+        {
+          "code": "华海清科",
+          "name": ""
+        },
+        {
+          "code": "盛美上海",
+          "name": ""
         }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://caifuhao.eastmoney.com/news/20260713195545237631500",
+        "https://www.163.com/dy/article/L1O9MGUR0556DW7R.html",
+        "https://www.ichaoqi.com/guandian/2026/0706/82869.html"
+      ]
+    },
+    {
+      "id": "SIG-fff25a09b6cd",
+      "timestamp": "2026-07-16T10:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain2",
+      "chain": "chain2",
+      "lifecycle": "positioning",
+      "title": "HBM4价格预期翻倍：$2/GB→$4-5/GB，先进封装产能供不应求，国产HBM配套龙头2.5D加工费上调15-22%",
+      "summary": "HBM4价格预计2026H2从~$2/GB飙升至$4-5/GB甚至更高，涨价核心源于制造难度极高、生产周期长。三星Q1营业利润57.2万亿韩元（+755% YoY），Q2 DRAM价涨~30%。国内HBM先进封装龙头自研SmartPoserSi平台对标台积电CoWoS，可实现20μm微凸点间距，2026年百亿级上海临港3DIC项目开工，二季度2.5D封装加工费上调15-22%，订单排产周期4-6个月，产能供不应求。",
+      "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
       },
       "_score": 42,
       "tickers": [
@@ -1074,27 +977,27 @@
           "name": ""
         },
         {
-          "code": "甬矽电子",
+          "code": "深科技",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://stock.jrj.com.cn/2026/07/09105357745261.shtml",
-        "https://www.eet-china.com/mp/a506092.html",
-        "https://caifuhao.eastmoney.com/news/20260629205113506547690"
+        "https://finance.sina.cn/stock/jdts/2026-07-12/detail-inihnhar8111922.d.html",
+        "https://caifuhao2.eastmoney.com/news/20260711184016942854040",
+        "https://www.yicai.com/news/102989986.html"
       ]
     },
     {
-      "id": "SIG-55856aed79fe",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-776cd3290aa8",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
       "type": "normal",
       "direction": "chain2",
       "chain": "chain2",
       "lifecycle": "positioning",
-      "title": "Goldman Sachs强力看多中国AI价值链：市值仅占全球10%但贡献16%营收，三重错配创造万亿重估机会",
-      "summary": "高盛报告指出：①中国AI市值仅占全球10%但贡献16%营收，三重错配（估值/营收/利润）创造重估机会；②全球基金中国科技敞口仅1.2%，极度低配；③中国在AI基础设施、电力和半导体环节具有独特竞争优势。浪潮信息H1净利润+226-288%，印证服务器环节景气度。",
+      "title": "英伟达Vera Rubin已进入生产阶段，推理吞吐量35x提升，黄仁勋否认延期传闻",
+      "summary": "英伟达CEO黄仁勋明确否认产品延期传闻，称下一代AI加速计算系统Vera Rubin已进入生产阶段，将按计划交付客户，大规模量产即将开始。该平台整合七大专用芯片和五大加速机架，相较Blackwell架构推理吞吐量提升35倍，AI工厂营收能力提高10倍。同时英伟达与丰田扩大合作至L2++辅助驾驶+机器人+智能设施，构建物理AI生态。",
       "priority": "normal",
       "settlement_risk": {
         "type": "T+1",
@@ -1109,26 +1012,85 @@
       "_score": 42,
       "tickers": [
         {
+          "code": "英伟达",
+          "name": ""
+        },
+        {
+          "code": "中际旭创",
+          "name": ""
+        },
+        {
+          "code": "工业富联",
+          "name": ""
+        },
+        {
           "code": "浪潮信息",
-          "name": ""
-        },
-        {
-          "code": "寒武纪",
-          "name": ""
-        },
-        {
-          "code": "海光信息",
-          "name": ""
-        },
-        {
-          "code": "中科曙光",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://finance.biggo.com/news/8610c6d4-0628-4e77-a816-ca3dfca11ea6",
-        "https://www.moomoo.com/community/feed/goldman-sachs-makes-a-major-statement-go-long-on-china-116888960762262"
+        "https://readhub data",
+        "https://36kr.com/p/3590983777108229"
+      ]
+    },
+    {
+      "id": "SIG-f2a703278e0f",
+      "timestamp": "2026-07-16T10:30:00+08:00",
+      "source": "scanner",
+      "type": "normal",
+      "direction": "chain1",
+      "chain": "chain1",
+      "lifecycle": "positioning",
+      "title": "特斯拉Optimus Gen 3初步定型，要求供应商年底具备年产10万台零件能力，2026人形机器人商业化元年",
+      "summary": "特斯拉第三代Optimus设计已定案，马斯克要求供应商年底前具备年产10万台零件能力，否则开除整个采购团队。2026年产量目标5-10万台，2027年有望50-100万台。工信部数据：2026年全年中国人形机器人整机产量有望首次突破10万台。小鹏计划年底月产能超千台。万联证券认为当前处于从技术突破→规模化商业化的关键阶段。英伟达+丰田合作拓展至机器人领域，构建物理AI生态。",
+      "priority": "normal",
+      "settlement_risk": {
+        "type": "T+1",
+        "note": "A股T+1制度，当日买入无法当日止损",
+        "suggestion": "尾盘14:50后确认信号方向再操作"
+      },
+      "money_flow_quality": {
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
+      },
+      "_score": 42,
+      "tickers": [
+        {
+          "code": "拓普集团",
+          "name": ""
+        },
+        {
+          "code": "三花智控",
+          "name": ""
+        },
+        {
+          "code": "鸣志电器",
+          "name": ""
+        },
+        {
+          "code": "绿的谐波",
+          "name": ""
+        },
+        {
+          "code": "汇川技术",
+          "name": ""
+        },
+        {
+          "code": "奥比中光",
+          "name": ""
+        },
+        {
+          "code": "埃斯顿",
+          "name": ""
+        }
+      ],
+      "metrics": {},
+      "source_urls": [
+        "https://www.tradingkey.com/zh-hant/analysis/stocks/us-stock/262020142-tsla-musk-optimus-gen3-ai-tradingkey",
+        "https://m.jiemian.com/article/14751657.html",
+        "https://udn.com/news/story/6811/9620098"
       ]
     },
     {
@@ -1852,82 +1814,15 @@
       "source_urls": []
     },
     {
-      "id": "SIG-982b1c0a76f8",
-      "timestamp": "2026-07-15T22:30:00+08:00",
-      "source": "scanner",
-      "type": "fire",
-      "direction": "chain1",
-      "chain": "chain1",
-      "lifecycle": "consensus",
-      "title": "长鑫科技科创板IPO定价8.66元，募资579亿；SemiAnalysis预测年底产能超越美光成全球DRAM第三",
-      "summary": "长鑫科技7月16日申购，发行价8.66元/股，估值5791.88亿元，募资约579亿元，为A股近年最大半导体IPO。SemiAnalysis预测2026年底月产能达35万片12英寸等效晶圆，超越美光（~38.5万片）仅一步之遥，DRAM全球市占率从6.4%升至7.5%。2026年营收预计突破500亿美元，连续三年翻倍增长。公司上市后保持无实控人架构。",
-      "priority": "fire",
-      "settlement_risk": {
-        "type": "T+1",
-        "note": "A股T+1制度，当日买入无法当日止损",
-        "suggestion": "尾盘14:50后确认信号方向再操作"
-      },
-      "money_flow_quality": {
-        "type": "margin",
-        "margin_by_ticker": {
-          "长鑫科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "兆易创新": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "北方华创": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "中微公司": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          }
-        }
-      },
-      "_score": 32,
-      "tickers": [
-        {
-          "code": "长鑫科技",
-          "name": ""
-        },
-        {
-          "code": "兆易创新",
-          "name": ""
-        },
-        {
-          "code": "北方华创",
-          "name": ""
-        },
-        {
-          "code": "中微公司",
-          "name": ""
-        }
-      ],
-      "metrics": {},
-      "source_urls": [
-        "https://36kr.com/p/3808991938502405",
-        "https://www.eet-china.com/news/202606259749.html",
-        "https://ai.zol.com.cn/1216/12161600.html"
-      ]
-    },
-    {
-      "id": "SIG-c4db227a9579",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-d3de397ad595",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
       "type": "normal",
       "direction": "chain1",
       "chain": "chain1",
       "lifecycle": "consensus",
-      "title": "中芯国际Q1产能利用率93.1%，华虹Q1 99.7%；华虹收购华力微进入实质审核，成熟制程扩产持续推进",
-      "summary": "中芯国际Q1收入25.05亿美元（环比+0.7%），毛利率20.1%（环比+0.9pct），产能利用率93.1%。华虹12英寸产能占比升至62.7%，产能利用率99.7%，拟收购华力微已获上交所受理，预计下半年完成。三星将N4/N5制程对新客户报价上调15%。",
+      "title": "中芯国际A+H总市值破8500亿，H2选择性涨价~10%，晶圆代工格局重塑",
+      "summary": "中芯国际A+H总市值突破8500亿元。2026H2将对部分产能实施约10%选择性涨价，2027年将更全面调整价格。华虹宏力同步提价。中芯/华虹成熟制程提价大概率延续到2027年。三星N4/N5和新客户车用N8报价上调15%，N4产能已排满明年。台积电产能达极限后订单外溢至中芯华虹。代工市场的买方卖方已经易位。",
       "priority": "normal",
       "settlement_risk": {
         "type": "T+1",
@@ -1946,108 +1841,37 @@
           "name": ""
         },
         {
-          "code": "华虹宏力",
+          "code": "华虹半导体",
           "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
+        "https://app.myzaker.com/news/article.php?pk=6a4f82fb8e9f097e992a1502",
         "https://36kr.com/p/3808991938502405",
-        "https://pdf.dfcfw.com/pdf/H3_AP202607081826790255_1.pdf"
+        "https://xueqiu.com/S/01347"
       ]
     },
     {
-      "id": "SIG-2173241b25e8",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-6e79f8882f2b",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
-      "type": "fire",
+      "type": "normal",
       "direction": "chain2",
       "chain": "chain2",
       "lifecycle": "consensus",
-      "title": "长飞光纤H1净利润24-30亿（同比+711%-914%），AI算力数据中心驱动光纤光缆需求爆发",
-      "summary": "长飞光纤公告预计2026年H1归母净利润24-30亿元，同比增711%-914%；扣非净利润20-26亿元，同比增1349%-1784%。业绩暴增主因：算力数据中心加速建设，国内外新型光纤光缆产品需求持续旺盛。A股当日涨停。",
-      "priority": "fire",
+      "title": "中际旭创在手订单覆盖2026全年，1.6T需求未缩+800G明显增加，3.2T在研",
+      "summary": "中际旭创澄清\"压制股价\"传言不实。目前在手订单已覆盖2026年全年，部分订单已下到2027年，部分客户已提前给出2027年各季度出货预期。1.6T市场需求并未缩减，800G需求较此前预期出现明显增加。太平洋证券预计2026年归母净利润350.51亿元。1.6T全球市占率超50%。同时英伟达CPO交换机可能重构光模块供应链格局（可插拔→NPO→CPO），800G端口功耗从30W降至9W。",
+      "priority": "normal",
       "settlement_risk": {
         "type": "T+1",
         "note": "A股T+1制度，当日买入无法当日止损",
         "suggestion": "尾盘14:50后确认信号方向再操作"
       },
       "money_flow_quality": {
-        "type": "margin",
-        "margin_by_ticker": {
-          "长飞光纤": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "亨通光电": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "中天科技": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          }
-        }
-      },
-      "_score": 32,
-      "tickers": [
-        {
-          "code": "长飞光纤",
-          "name": ""
-        },
-        {
-          "code": "亨通光电",
-          "name": ""
-        },
-        {
-          "code": "中天科技",
-          "name": ""
-        }
-      ],
-      "metrics": {},
-      "source_urls": [
-        "https://stock.stockstar.com/KX2026071400030614.shtml",
-        "https://app.myzaker.com/news/article.php?pk=6a56eff68e9f092b7a61a166"
-      ]
-    },
-    {
-      "id": "SIG-b41a57c5f30d",
-      "timestamp": "2026-07-15T22:30:00+08:00",
-      "source": "scanner",
-      "type": "fire",
-      "direction": "chain2",
-      "chain": "chain2",
-      "lifecycle": "consensus",
-      "title": "中际旭创Q1营收195亿（+192%）净利润57亿（+262%），赴港IPO拟募70亿美元",
-      "summary": "中际旭创2026年Q1营收194.96亿元（+192.12%），归母净利润57.35亿元（+262.28%）。据悉接近获批赴港上市，募资规模或达70亿美元，有望成近年香港最大上市项目之一。800G/1.6T光模块持续放量，全球AI数据中心光互联需求爆发。花旗预计AI光通信业务2026/27/28年贡献54亿/257亿/527亿元。",
-      "priority": "fire",
-      "settlement_risk": {
-        "type": "T+1",
-        "note": "A股T+1制度，当日买入无法当日止损",
-        "suggestion": "尾盘14:50后确认信号方向再操作"
-      },
-      "money_flow_quality": {
-        "type": "margin",
-        "margin_by_ticker": {
-          "中际旭创": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "新易盛": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "天孚通信": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          }
-        }
+        "status": "not_applicable",
+        "label": "不适用资金验证",
+        "detail": ""
       },
       "_score": 32,
       "tickers": [
@@ -2062,24 +1886,29 @@
         {
           "code": "天孚通信",
           "name": ""
+        },
+        {
+          "code": "仕佳光子",
+          "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://www.fupanwang.com/kplart_info/753012.html",
-        "https://www.sina.cn/news/detail/5316940647104906.html"
+        "https://www.c114.com.cn/news/6564/a1313773.html",
+        "https://www.caiwennews.com/article/1511405.shtml",
+        "https://news.pedaily.cn/202607/566250.shtml"
       ]
     },
     {
-      "id": "SIG-5be2bc00f487",
-      "timestamp": "2026-07-15T22:30:00+08:00",
+      "id": "SIG-18468e8d468a",
+      "timestamp": "2026-07-16T10:30:00+08:00",
       "source": "scanner",
       "type": "fire",
       "direction": "chain2",
       "chain": "chain2",
       "lifecycle": "consensus",
-      "title": "佰维存储H1扭亏实现净利润70-75亿元，AI算力+存储高景气周期驱动业绩爆发",
-      "summary": "佰维存储预计2026年H1净利润70-75亿元（上年同期亏损2.26亿），主因AI算力爆发与存储高景气周期，公司产品和客户结构持续优化，在芯片设计等领域加大投入增强竞争力。思特威H1净利润5.1-5.3亿（+29-34%），Q2环比+15-23%。",
+      "title": "全球存储崩盘：三星-9% SK海力士-12% 韩国KOSPI-7%，恐慌中关注国产存储替代机遇",
+      "summary": "7月16日韩国存储股集体暴跌：三星电子-9%、SK海力士-12%，韩国KOSPI跌超7%。两倍做多海力士和三星ETF跌近15%。A股兆易创新、澜起科技跌超5%。韩国金融服务委员会宣布将出台单一ETF措施以稳定市场。存储芯片涨价潮从未放缓（三星Q2 DRAM+30%），暴跌或为短期流动性冲击叠加杠杆ETF爆仓。长鑫科技今日申购正好卡在存储恐慌与国产替代的交汇点。",
       "priority": "fire",
       "settlement_risk": {
         "type": "T+1",
@@ -2089,22 +1918,27 @@
       "money_flow_quality": {
         "type": "margin",
         "margin_by_ticker": {
-          "佰维存储": {
+          "兆易创新": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
           },
-          "思特威": {
+          "澜起科技": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "长鑫科技": {
+            "status": "data_unavailable",
+            "label": "融资数据不足",
+            "detail": "仅 0 条记录"
+          },
+          "北京君正": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
           },
           "江波龙": {
-            "status": "data_unavailable",
-            "label": "融资数据不足",
-            "detail": "仅 0 条记录"
-          },
-          "德明利": {
             "status": "data_unavailable",
             "label": "融资数据不足",
             "detail": "仅 0 条记录"
@@ -2114,26 +1948,30 @@
       "_score": 32,
       "tickers": [
         {
-          "code": "佰维存储",
+          "code": "兆易创新",
           "name": ""
         },
         {
-          "code": "思特威",
+          "code": "澜起科技",
+          "name": ""
+        },
+        {
+          "code": "长鑫科技",
+          "name": ""
+        },
+        {
+          "code": "北京君正",
           "name": ""
         },
         {
           "code": "江波龙",
           "name": ""
-        },
-        {
-          "code": "德明利",
-          "name": ""
         }
       ],
       "metrics": {},
       "source_urls": [
-        "https://36kr.com/p/3808991938502405",
-        "https://www.stcn.com/article/detail/4007621.html"
+        "https://readhub data",
+        "https://www.yicai.com/news/103127432.html"
       ]
     }
   ]
