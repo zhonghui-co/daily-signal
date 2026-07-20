@@ -1,13 +1,15 @@
 {
-  "updated": "2026-07-19T16:30:16",
-  "updated_display": "2026-07-19 16:30",
+  "updated": "2026-07-20T16:25:02",
+  "updated_display": "2026-07-20 16:25",
   "summary": {
     "positions_count": 3,
     "active_count": 1,
-    "avg_pnl_pct": 46.88,
+    "avg_pnl_pct": 32.19,
     "triggered_count": 0,
-    "near_stop_count": 0,
-    "top_alerts": []
+    "near_stop_count": 1,
+    "top_alerts": [
+      "🔶 距BBI仅-1.6%，若跌破两日不收回需强制清仓"
+    ]
   },
   "positions": [
     {
@@ -36,19 +38,21 @@
       "direction": "具身智能",
       "entry_date": "2026-05",
       "notes": "止损26",
-      "current_price": 38.19,
-      "white": 40.47,
+      "current_price": 34.37,
+      "white": 40.29,
       "yellow": 34.92,
       "bbi": 34.92,
-      "j": 15.0,
-      "trade_date": "20260717",
+      "j": -4.6,
+      "trade_date": "20260720",
       "stop_loss": 26.0,
       "stop_price": 26.0,
-      "stop_distance_pct": 46.88,
-      "pnl_pct": 46.88,
-      "status": "holding",
-      "action": "持有",
-      "alerts": []
+      "stop_distance_pct": 32.19,
+      "pnl_pct": 32.19,
+      "status": "near_stop",
+      "action": "减仓",
+      "alerts": [
+        "🔶 距BBI仅-1.6%，若跌破两日不收回需强制清仓"
+      ]
     },
     {
       "code": "300346.SZ",

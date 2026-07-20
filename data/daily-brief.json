@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-19T23:10:02.516517+08:00",
-  "date": "2026-07-19",
+  "generated_at": "2026-07-20T16:25:13.314948+08:00",
+  "date": "2026-07-20",
   "sections": {
     "signals": {
       "available": true,
@@ -74,6 +74,14 @@
           "name": "江苏北人",
           "pct_chg": -20.01,
           "vol_ratio": 2.29,
+          "attribution": "跌停封板"
+        },
+        {
+          "date": "20260720",
+          "ts_code": "301176.SZ",
+          "name": "逸豪新材",
+          "pct_chg": -20.01,
+          "vol_ratio": 3.58,
           "attribution": "跌停封板"
         },
         {
@@ -163,19 +171,13 @@
           "pct_chg": 20.01,
           "vol_ratio": 2.04,
           "attribution": "涨停封板"
-        },
-        {
-          "date": "20260520",
-          "ts_code": "688449.SH",
-          "name": "联芸科技",
-          "pct_chg": 20.01,
-          "vol_ratio": 3.92,
-          "attribution": "国产替代链,✅国产替代,✅AI算力,IC设计板块联动(36/46只)"
         }
       ]
     },
     "themes": {
-      "available": false
+      "available": true,
+      "date": "20260720",
+      "top_themes": []
     },
     "kdj": {
       "available": true,
