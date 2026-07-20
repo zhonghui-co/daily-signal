@@ -1,10 +1,13 @@
 {
-  "generated_at": "2026-07-19T16:30:27.879906+08:00",
+  "generated_at": "2026-07-19T23:10:02.516517+08:00",
   "date": "2026-07-19",
   "sections": {
     "signals": {
-      "available": false,
-      "note": "No recent analyst data"
+      "available": true,
+      "date": "2026-07-19",
+      "run_at": "?",
+      "stats": {},
+      "signals": []
     },
     "anomalies": {
       "count": 20,
@@ -186,72 +189,93 @@
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-06-27T16:29:52.725901+08:00",
+      "last_updated": "2026-07-19T16:30:27.974376+08:00",
       "active_count": 10,
       "positions": [
         {
           "code": "600584.SH",
           "name": "长电科技",
-          "return_pct": 163.28,
-          "ret_5d": 10.59,
-          "warnings": [],
-          "last_check": "2026-06-27"
-        },
-        {
-          "code": "688012.SH",
-          "name": "中微公司",
-          "return_pct": 97.82,
-          "ret_5d": 10.8,
-          "warnings": [],
-          "last_check": "2026-06-27"
+          "return_pct": 123.09,
+          "ret_5d": -13.69,
+          "warnings": [
+            "⚠️ 近5日跌-13.69%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-19.83%"
+          ],
+          "last_check": "2026-07-19"
         },
         {
           "code": "002156.SZ",
           "name": "通富微电",
-          "return_pct": 81.27,
-          "ret_5d": 0.49,
+          "return_pct": 73.06,
+          "ret_5d": -7.08,
           "warnings": [],
-          "last_check": "2026-06-27"
+          "last_check": "2026-07-19"
+        },
+        {
+          "code": "688012.SH",
+          "name": "中微公司",
+          "return_pct": 67.97,
+          "ret_5d": -14.17,
+          "warnings": [
+            "⚠️ 近5日跌-14.17%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-25.64%"
+          ],
+          "last_check": "2026-07-19"
         },
         {
           "code": "002371.SZ",
           "name": "北方华创",
-          "return_pct": 71.41,
-          "ret_5d": 9.18,
-          "warnings": [],
-          "last_check": "2026-06-27"
-        },
-        {
-          "code": "688256.SH",
-          "name": "寒武纪",
-          "return_pct": 56.41,
-          "ret_5d": 0.07,
-          "warnings": [],
-          "last_check": "2026-06-27"
-        },
-        {
-          "code": "688126.SH",
-          "name": "沪硅产业",
-          "return_pct": 55.97,
-          "ret_5d": 2.83,
-          "warnings": [],
-          "last_check": "2026-06-27"
+          "return_pct": 42.8,
+          "ret_5d": -11.42,
+          "warnings": [
+            "⚠️ 近5日跌-11.42%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-27.56%"
+          ],
+          "last_check": "2026-07-19"
         },
         {
           "code": "688041.SH",
           "name": "海光信息",
-          "return_pct": 52.73,
-          "ret_5d": 5.43,
-          "warnings": [],
-          "last_check": "2026-06-27"
+          "return_pct": 35.01,
+          "ret_5d": -11.63,
+          "warnings": [
+            "⚠️ 近5日跌-11.63%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-17.67%"
+          ],
+          "last_check": "2026-07-19"
+        },
+        {
+          "code": "688256.SH",
+          "name": "寒武纪",
+          "return_pct": 27.73,
+          "ret_5d": -14.35,
+          "warnings": [
+            "⚠️ 近5日跌-14.35%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-25.38%"
+          ],
+          "last_check": "2026-07-19"
+        },
+        {
+          "code": "688126.SH",
+          "name": "沪硅产业",
+          "return_pct": 19.28,
+          "ret_5d": -25.66,
+          "warnings": [
+            "⚠️ 近5日跌-25.66%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-35.07%"
+          ],
+          "last_check": "2026-07-19"
         },
         {
           "code": "688981.SH",
           "name": "中芯国际",
-          "return_pct": 14.47,
-          "ret_5d": 2.18,
-          "warnings": [],
-          "last_check": "2026-06-27"
+          "return_pct": 7.64,
+          "ret_5d": -14.49,
+          "warnings": [
+            "⚠️ 近5日跌-14.49%，短期急剧下跌",
+            "⚠️ 从thesis以来高点回撤-19.14%"
+          ],
+          "last_check": "2026-07-19"
         },
         {
           "code": "603650.SH",
@@ -259,7 +283,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-27"
+          "last_check": "2026-07-19"
         },
         {
           "code": "688082.SH",
@@ -267,7 +291,7 @@
           "return_pct": null,
           "ret_5d": null,
           "warnings": [],
-          "last_check": "2026-06-27"
+          "last_check": "2026-07-19"
         }
       ]
     }
