@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-20T23:10:03.073562+08:00",
-  "date": "2026-07-20",
+  "generated_at": "2026-07-21T16:28:40.418893+08:00",
+  "date": "2026-07-21",
   "sections": {
     "signals": {
       "available": true,
-      "date": "2026-07-19",
+      "date": "2026-07-21",
       "run_at": "?",
       "stats": {},
       "signals": []
@@ -21,12 +21,28 @@
           "attribution": "跌停封板"
         },
         {
+          "date": "20260721",
+          "ts_code": "301012.SZ",
+          "name": "扬电科技",
+          "pct_chg": 20.02,
+          "vol_ratio": 3.77,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20260518",
           "ts_code": "688811.SH",
           "name": "有研复材",
           "pct_chg": 20.01,
           "vol_ratio": 1.04,
           "attribution": "✅国产替代,✅AI算力,化工/材料板块联动(82/108只)"
+        },
+        {
+          "date": "20260721",
+          "ts_code": "301588.SZ",
+          "name": "美新科技",
+          "pct_chg": 20.01,
+          "vol_ratio": 2.96,
+          "attribution": "涨停封板"
         },
         {
           "date": "20260517",
@@ -133,6 +149,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20260721",
+          "ts_code": "688328.SH",
+          "name": "深科达",
+          "pct_chg": 20.01,
+          "vol_ratio": 3.55,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20260522",
           "ts_code": "301588.SZ",
           "name": "美新科技",
@@ -147,36 +171,12 @@
           "pct_chg": 20.01,
           "vol_ratio": 3.44,
           "attribution": "✅AI算力,化工/材料板块联动(47/65只)"
-        },
-        {
-          "date": "20260524",
-          "ts_code": "301588.SZ",
-          "name": "美新科技",
-          "pct_chg": 20.01,
-          "vol_ratio": 3.44,
-          "attribution": "✅AI算力,✅国产替代,化工/材料板块联动(47/65只)"
-        },
-        {
-          "date": "20260619",
-          "ts_code": "688478.SH",
-          "name": "晶升股份",
-          "pct_chg": 20.01,
-          "vol_ratio": 1.82,
-          "attribution": "涨停封板"
-        },
-        {
-          "date": "20260609",
-          "ts_code": "688783.SH",
-          "name": "西安奕材",
-          "pct_chg": 20.01,
-          "vol_ratio": 2.04,
-          "attribution": "涨停封板"
         }
       ]
     },
     "themes": {
       "available": true,
-      "date": "20260720",
+      "date": "20260721",
       "top_themes": []
     },
     "kdj": {

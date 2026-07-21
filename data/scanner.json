@@ -1,1 +1,203 @@
-{"date":"2026-07-20","run_at":"2026-07-20T22:30:00+08:00","source":"readhub+websearch_v3","signals":[{"id":"s1","chain":"chain1","title":"长鑫存储 $85亿IPO 申购开启，DRAM月产能直逼35万片","summary":"2026年A股最大IPO长鑫科技今日申购，募资295亿元全部投向DRAM主业。Citrini Research预测2026年底DRAM晶圆月产能将达35万片，逼近全球一线水平。存储行业景气度持续，DRAM价格上行叠加产能利用率高位，国产DRAM替代进入加速兑现期。","variable_change":"DRAM国产化从'跟跑'进入'并跑'阶段；长鑫IPO标志中国存储产业链闭环的关键一步","source_urls":["https://asia.nikkei.com/business/tech/semiconductors/cxmt-to-raise-8.5bn-in-largest-chinese-chip-ipo","https://www.stcn.com/article/detail/4028014.html","https://k.sina.com.cn/article_1720962692_6693ce840200343zu.html"],"priority":"fire","source_weight":"high","lifecycle":"positioning","lifecycle_rationale":"IPO是关键催化剂，标志着国产DRAM从技术验证走向规模化量产与资本化，产业生命周期进入快速成长期","related_tickers":["长鑫科技(IPO)","兆易创新(603986)","北方华创(002371)","中微公司(688012)"],"tags":["DRAM","存储国产化","IPO","长鑫存储","产能扩张"],"capital_flow_tags":["南下资金连续11日净买入兆易创新","存储板块资金持续流入"],"cross_chain":false},{"id":"s2","chain":"chain1","title":"北方华创跻身全球半导体设备第五，Q1经营现金流同比+150%","summary":"北方华创凭借平台化布局拿下全球半导体设备第五名，Q1经营活动现金流7.48亿元同比增近150%。但多品类平台化导致研发投入高企、毛利率下滑。头部国产设备订单已排产至2028年Q1，2026-2028持续批量替换海外设备。","variable_change":"国产半导体设备龙头全球排名升至第5；订单能见度延至2028年，验证国产设备从'能用'到'好用'","source_urls":["https://www.163.com/dy/article/L1O9MGUR0556DW7R.html","https://fund.jrj.com.cn/2026/07/14105957788179.shtml"],"priority":"fire","source_weight":"high","lifecycle":"consensus","lifecycle_rationale":"北方华创已是明牌龙头，全球第5地位确立；边际变化在于订单排期延长和现金流改善，属于已知趋势的兑现","related_tickers":["北方华创(002371)","中微公司(688012)","华海清科(688120)","盛美上海(688082)"],"tags":["半导体设备","国产替代","北方华创","平台化"],"capital_flow_tags":["设备板块订单饱满","华海清科净利润+2367%"],"cross_chain":false},{"id":"s3","chain":"chain1","title":"中芯国际/华虹产能为王：2026代工产能67万片/月，AI驱动持续扩产","summary":"中芯国际北京/上海厂区预留充足扩产空间，华虹上调长期产能规划推进大华虹一体化整合。晶圆代工处于AI驱动持续景气上行周期，核心矛盾是产能紧缺。华海清科晶圆再生项目在手订单远超建成后产能。","variable_change":"代工产能紧张从'政策驱动'转向'商业需求驱动'，纯商业订单占比提升","source_urls":["https://36kr.com/p/3808991938502405","https://www.gudaobang.com/view.php?id=2365","https://app.myzaker.com/news/article.php?pk=6a59d395b15ec022d82c5073"],"priority":"normal","source_weight":"medium","lifecycle":"consensus","lifecycle_rationale":"产能扩张是持续多年的大趋势，市场已有充分预期；边际变化在于验证窗口缩短+重复下单增多","related_tickers":["中芯国际(688981)","华虹公司(688347)","华海清科(688120)"],"tags":["晶圆代工","产能扩张","中芯国际","华虹"],"capital_flow_tags":["南下资金连续多日净卖出中芯国际/华虹"],"cross_chain":false},{"id":"s4","chain":"chain1","title":"半导体设备国产化率35%，验证窗口缩短进入重复下单阶段","summary":"2026年中综合国产化率35%，刻蚀/清洗/薄膜沉积国产化率30%-65%。关键边际变化：先进封装/碳化硅等二线产线对国产设备导入周期从6-12个月显著压缩，部分刻蚀/清洗设备已进入重复下单阶段。早期靠政策订单，现在更多纯商业订单。","variable_change":"国产设备从'政策托底验证'跨入'商业重复下单'阶段，国产替代斜率变陡","source_urls":["https://caifuhao.eastmoney.com/news/20260714140209098991340","https://clawdchat.cn/post/c41a10b4-47b3-45ed-a07f-0aa7eb969965"],"priority":"normal","source_weight":"medium","lifecycle":"positioning","lifecycle_rationale":"重复下单是国产替代从0到1跨越到1到N的关键信号，但市场尚未充分定价这一斜率变化","related_tickers":["北方华创(002371)","中微公司(688012)","拓荆科技(688072)","芯源微(688037)"],"tags":["半导体设备","国产化率","验证加速","重复下单"],"capital_flow_tags":[],"cross_chain":false},{"id":"s5","chain":"chain2","title":"高盛：中国AI市值仅全球10%却贡献16%营收，三重错配创造万亿重估机会","summary":"高盛实地调研后结论：中国AI已建立不可复制的全价值链竞争优势，涵盖半导体设备到应用全产业链。中国LLM正达全球采用临界点，API使用增长形成飞轮效应。彭博同日报道CNBC独家：高盛认为中国AI企业正找到货币化路径。","variable_change":"外资顶级投行对中国AI的定性从'跟随者'升级为'全价值链竞争者'，启动全球重估叙事","source_urls":["https://finance.biggo.com/news/8610c6d4-0628-4e77-a816-ca3dfca11ea6","https://www.cnbc.com/video/2026/07/20/how-chinas-ai-firms-plans-to-monetize-its-free-ai-llms.html"],"priority":"fire","source_weight":"high","lifecycle":"emerging","lifecycle_rationale":"高盛此轮判断是叙事级别的切换——从'中国AI能否追赶'变为'中国AI正在兑现价值'，属于新兴共识形成初期","related_tickers":["寒武纪(688256)","海光信息(688041)","百度(9888.HK)","阿里巴巴(9988.HK)","腾讯(0700.HK)"],"tags":["AI价值重估","高盛","全价值链","LLM货币化"],"capital_flow_tags":["外资重估中国AI资产"],"cross_chain":true},{"id":"s6","chain":"chain2","title":"WAIC 2026闭幕：意向采购203.6亿元+25%，具身智能首次与智算并列核心","summary":"2026世界人工智能大会闭幕，展览面积10万m²，展品4486项，351款全球首发，177个全球采购团组，预计意向采购203.6亿元同比+25%。具身智能首次与智算并列为两大核心赛道，超200家企业参展。中国AI开源大模型全球累计下载破100亿次，开源鸿蒙设备超13.5亿台。","variable_change":"WAIC规模和成交额创新高；具身智能赛道参展企业数追平智算，标志AI应用从'云'向'端'拓展","source_urls":["https://www.aigbk.com/article/waic_2026_embodied_intelligence_industrial_chain_opportunities/","https://www.163.com/dy/article/L26C9F5G0512D03F.html"],"priority":"fire","source_weight":"high","lifecycle":"positioning","lifecycle_rationale":"WAIC已从展会升级为产业催化剂，203.6亿采购意向是真金白银；具身智能成为第二增长曲线","related_tickers":["寒武纪(688256)","海光信息(688041)","中昊芯英(未上市)","优必选(9880.HK)"],"tags":["WAIC","世界人工智能大会","具身智能","开源大模型","AI产业"],"capital_flow_tags":["WAIC意向采购203.6亿","2026Q1人形机器人融资681亿"],"cross_chain":true},{"id":"s7","chain":"chain2","title":"华东首座国产TPU千卡智算集群杭州落成，中昊芯英+中国电信+中兴通讯","summary":"WAIC期间华东首座国产TPU千卡智算集群在杭州落成，系中国电信体系内首个大规模国产TPU集群。基于中昊芯英须臾TPU芯片，单机算力7.168P，超节点最高2048片直联可承载万亿参数大模型训练。已完成Qwen全系列、DeepSeek、GLM等主流模型深度适配。","variable_change":"国产TPU从单卡走向千卡集群部署，标志国产AI芯片具备大规模组网训练能力","source_urls":["readhub:8uuqqWlKFAw"],"priority":"normal","source_weight":"high","lifecycle":"positioning","lifecycle_rationale":"千卡集群是国产AI芯片从能用走向规模化的里程碑，但仍处于早期验证阶段","related_tickers":["中兴通讯(000063)","中国电信(601728)","中昊芯英(未上市)"],"tags":["TPU","国产AI芯片","千卡集群","中昊芯英","须臾"],"capital_flow_tags":[],"cross_chain":false},{"id":"s8","chain":"chain2","title":"1.6T光模块批量交付、800G超预期，中际旭创订单覆盖全年延至2027","summary":"中际旭创在手订单覆盖全年、部分延至2027年。英伟达2026年1.6T需求八成以上来自其供应链。中国光模块厂商拿下全球60%+份额，800G及以上超70%。但CPO技术演进（800G端口功耗从30W降至9W）构成远期结构性风险。","variable_change":"1.6T从试产进入批量交付，光模块景气度从800G向1.6T切换，验证AI算力基础设施投资持续","source_urls":["https://news.pedaily.cn/202607/566250.shtml","https://mp.ofweek.com/fiber/a656714314697"],"priority":"normal","source_weight":"high","lifecycle":"consensus","lifecycle_rationale":"光模块高景气已是明牌，1.6T批量交付是预期内兑现；CPO演进是远期风险但不影响近1-2年","related_tickers":["中际旭创(300308)","新易盛(300502)","天孚通信(300394)"],"tags":["光模块","1.6T","800G","CPO","中际旭创"],"capital_flow_tags":["美股光通信板块盘前集体上涨"],"cross_chain":false},{"id":"s9","chain":"chain1","title":"人形机器人量产元年：Tesla Optimus V3下线第10000台，BOM成本降至2.1万美元","summary":"特斯拉Optimus V3在弗里蒙特工厂下线第10000台量产整机，单台BOM成本从8.4万降至2.1万美元。要求9月前周产爬至1000台，年底周产2000-2500台（年化10万台）。国内供应链6月周产约50台，7月预计周产100台+。2026Q1国内人形机器人融资681亿元，超2025全年。IDC预计2026年中国人形机器人出货超6.25万台。","variable_change":"人形机器人从'主题炒作'跨入'产业验证'阶段，量产数据开始兑现","source_urls":["https://zhuzaotoutiao.com/xw/html/23830.shtml","https://www.163.com/dy/article/L29UHDU80534A4SC.html","https://rcwap.com/newsdetail_842.html"],"priority":"fire","source_weight":"high","lifecycle":"positioning","lifecycle_rationale":"10000台+量产BOM大降是产业质变信号，但距离百万台级别仍有距离，处于从0到1跨越到1到10阶段","related_tickers":["奥比中光(688322)","埃斯顿(002747)","拓普集团(601689)","三花智控(002050)","绿的谐波(688017)"],"tags":["人形机器人","Tesla Optimus","量产","具身智能","BOM成本"],"capital_flow_tags":["Q1融资681亿超2025全年","WAIC具身智能200+企业参展"],"cross_chain":true},{"id":"s10","chain":"chain2","title":"存储芯片涨价周期延续：DRAM Q2环比+53-58%，Q3预计再涨8-13%，但警惕见顶风险","summary":"2026H1存储芯片史诗级涨价：Q1 DRAM环比+93-98%、NAND+55-60%；Q2 DRAM再涨53-58%、NAND+55-60%；预计Q3分别再涨8-13%和10-15%。全球存储三巨头（三星/SK海力士/美光）HBM产能全满，芯片缺货可能延续到2028年。但海内外股价已提前透支乐观预期，云厂商成本承压，若AI算力回报不及预期将触发资本开支收缩。","variable_change":"涨价斜率Q2→Q3放缓（从+55%降至+8-13%），可能接近周期顶部；同时三大存储厂放弃CXL控制器自研","source_urls":["https://www.caiwennews.com/article/1513527.shtml","https://www.163.com/dy/article/L1T4QOCE0556G11L.html","https://news.10jqka.com.cn/20260714/c678152754.shtml"],"priority":"fire","source_weight":"high","lifecycle":"consensus","lifecycle_rationale":"涨价周期是明牌但斜率放缓，市场已充分定价；边际变化在于Q3涨幅明显收窄+股价透支风险，可能接近consensus末期","related_tickers":["兆易创新(603986)","北京君正(300223)","澜起科技(688008)"],"tags":["存储涨价","DRAM","NAND","HBM","周期顶部风险"],"capital_flow_tags":["美股存储板块盘前上涨","存储板块股价已透支","南下连续11日净买入兆易创新"],"cross_chain":true},{"id":"s11","chain":"chain2","title":"华为首次完整展示全系列计算模组：800GE AI网卡国内首发","summary":"WAIC上华为首次完整展示网卡、SSD、DPU、RAID卡四大系列计算模组产品，含国内首发800GE AI网卡及KVU方案。计算模组已在头部互联网、运营商、金融等场景规模应用。华为乾崑2026年辅助驾驶研发投入超180亿元。","variable_change":"华为从芯片向上游计算模组全栈扩展，800GE网卡填补国内空白","source_urls":["readhub:8uupR8kYZTq","readhub:8uuwCmF4lFA"],"priority":"normal","source_weight":"medium","lifecycle":"positioning","lifecycle_rationale":"800GE AI网卡是增量信息，规模应用证实商业化进展，但仍需跟踪订单兑现","related_tickers":["华为(未上市)","中兴通讯(000063)","紫光股份(000938)"],"tags":["华为","800GE","AI网卡","DPU","计算模组"],"capital_flow_tags":[],"cross_chain":false},{"id":"s12","chain":"chain2","title":"台积电追加$1000亿美国投资，锁定2026年CoWoS产能50%+","summary":"台积电7月16日宣布追加$1000亿在美国建设先进制程晶圆厂和先进封装厂。英伟达已锁定台积电2026年CoWoS晶圆总产能的五成以上。AMD、Google、博通、AWS等也全部导入CoWoS架构。2026年全球封测厂商同步开启产能扩张。","variable_change":"$1000亿追加投资规模史无前例；先进封装产能紧缺从短期瓶颈演变为长期结构性缺口","source_urls":["https://asia.nikkei.com/business/tech/semiconductors/tsmc-plans-further-100bn-us-investment-to-feed-ai-demand","https://www.163.com/dy/article/L21DJO830511CPMT.html"],"priority":"normal","source_weight":"high","lifecycle":"consensus","lifecycle_rationale":"产能投资规模符合预期但方向加速；对国内先进封装设备/材料企业是持续的订单催化剂","related_tickers":["中芯国际(688981)","长电科技(600584)","通富微电(002156)","华天科技(002185)"],"tags":["台积电","CoWoS","先进封装","产能扩张","美国投资"],"capital_flow_tags":[],"cross_chain":true},{"id":"s13","chain":"chain1","title":"半导体材料国产替代全景：22家龙头梳理，替代空间2000亿+","summary":"沪硅产业12英寸大硅片独家突破供货中芯/长鑫/长江存储，南大光电/彤程新材光刻胶国产化推进，江丰电子靶材国产替代加速。全产业链增速15%-42%，车规/AI芯片+外部供应链约束双重驱动。钠离子电池/钙钛矿电池消费税免税政策落地，利好新型电池。","variable_change":"材料国产化从'单一品种突破'走向'全品类覆盖'；免税政策加速钠电/钙钛矿商业化","source_urls":["https://www.sina.cn/news/detail/5321826735491992.html","https://caifuhao.eastmoney.com/news/20260719104706276797340","https://stock.10jqka.com.cn/20260717/c678263853.shtml"],"priority":"normal","source_weight":"medium","lifecycle":"positioning","lifecycle_rationale":"材料国产化仍在早期规模化阶段，各品类进度分化大；但替代空间最大、壁垒最高","related_tickers":["沪硅产业(688126)","南大光电(300346)","彤程新材(603650)","江丰电子(300666)","安集科技(688019)"],"tags":["半导体材料","光刻胶","硅片","靶材","电子特气","国产替代"],"capital_flow_tags":[],"cross_chain":false}],"stats":{"chain1_count":5,"chain2_count":7,"cross_chain_count":5,"fire_count":6,"by_lifecycle":{"positioning":7,"consensus":5,"emerging":1,"exhausted":0},"by_source_weight":{"high":9,"medium":4,"low":0},"with_capital_backing":8}}
+{
+  "date": "2026-07-21",
+  "run_at": "2026-07-21T10:30:00+08:00",
+  "source": "readhub+websearch_v3",
+  "signals": [
+    {
+      "id": "s1",
+      "chain": "chain1",
+      "title": "长鑫存储科创板IPO开启申购，2026年A股最大IPO",
+      "summary": "国产DRAM龙头长鑫科技（长鑫存储）7月16日开启科创板申购，为2026年A股年内最大IPO、科创板史上第二大，拟募资约85亿美元（~600亿人民币）。截至2025Q2全球DRAM份额3.97%，目标2026年底月产能达35万片，全年产能体量有望比肩美光。",
+      "variable_change": "国产DRAM从0到1的资本化里程碑，DRAM国产替代从产能建设进入资本市场定价阶段",
+      "source_urls": [
+        "https://asia.nikkei.com/business/tech/semiconductors/cxmt-to-raise-8.5bn-in-largest-chinese-chip-ipo",
+        "https://www.sohu.com/a/1050318438_163726",
+        "http://www.dram.com.cn/page/views.asp?menuid=34&id=86279"
+      ],
+      "priority": "fire",
+      "source_weight": "high",
+      "lifecycle": "positioning",
+      "lifecycle_rationale": "IPO是资本市场首次定价DRAM国产替代，处于从产业建设到资本共识的过渡期，尚未进入广泛共识阶段",
+      "related_tickers": ["688981.SH", "002049.SZ", "002185.SZ"],
+      "tags": ["DRAM", "IPO", "存储国产化", "长鑫存储"],
+      "capital_flow_tags": ["大基金加持", "IPO募资"],
+      "cross_chain": false
+    },
+    {
+      "id": "s2",
+      "chain": "chain1",
+      "title": "半导体设备国产化进入订单密集兑现期，北方华创Q1营收103亿同比+25.8%",
+      "summary": "半导体设备国产化率从2017年13%持续攀升，2026年进入订单密集兑现期。北方华创Q1营收103.23亿元同比+25.8%，全球排名第五。深科达中报预增210%，半导体设备板块业绩全面爆发。封装设备国产化率最高，薄膜沉积/刻蚀/CMP在20-40%区间，零部件国产化率仍不足30%。",
+      "variable_change": "设备国产化从验证导入期进入业绩兑现期，Q2业绩预告集中爆发验证了这一拐点",
+      "source_urls": [
+        "https://www.163.com/dy/article/L1O9MGUR0556DW7R.html",
+        "https://www.enet16.com/article/2026/0706/A202607062753.html",
+        "https://zhuanlan.zhihu.com/p/2052272271092463276"
+      ],
+      "priority": "fire",
+      "source_weight": "high",
+      "lifecycle": "positioning",
+      "lifecycle_rationale": "国产化率仍在20-40%区间，业绩刚进入兑现期但远未到天花板，市场共识正在形成中",
+      "related_tickers": ["002371.SZ", "688012.SH", "688072.SH", "688082.SH", "688328.SH"],
+      "tags": ["半导体设备", "国产替代", "业绩兑现", "北方华创"],
+      "capital_flow_tags": ["国产替代订单", "大基金二期"],
+      "cross_chain": false
+    },
+    {
+      "id": "s3",
+      "chain": "chain1",
+      "title": "中芯国际/华虹产能持续扩张，2026年代工产能达67万片/月",
+      "summary": "中芯国际Q1营收176.17亿元居半导体行业首位，产能持续扩张至67万片/月（8英寸当量），同比增13%。华虹无锡制造项目投产，推进大华虹一体化整合。券商研报指出中芯国际为'市场显著低估的国内代工龙头'，北京上海厂区预留充足扩产空间。",
+      "variable_change": "成熟制程产能持续放量+特色工艺补齐，代工国产化从'能造'到'够用'转变",
+      "source_urls": [
+        "https://36kr.com/p/3808991938502405",
+        "https://www.gudaobang.com/view.php?id=2365",
+        "https://caifuhao.eastmoney.com/news/20260714182516858843830"
+      ],
+      "priority": "normal",
+      "source_weight": "medium",
+      "lifecycle": "consensus",
+      "lifecycle_rationale": "代工产能扩张已是市场明牌，属于持续跟踪的基本面而非新催化",
+      "related_tickers": ["688981.SH", "688347.SH"],
+      "tags": ["晶圆代工", "产能扩张", "中芯国际", "华虹"],
+      "capital_flow_tags": ["产能投资"],
+      "cross_chain": false
+    },
+    {
+      "id": "s4",
+      "chain": "chain1",
+      "title": "半导体材料国产替代加速，ArF光刻胶突破ASML认证",
+      "summary": "南大光电成为国内唯一批量供货ArF 193nm干法光刻胶的企业，通过ASML认证，适配中芯14-28nm先进制程。12英寸硅片缺口持续存在，沪硅产业、立昂微受益。日本半导体材料出口审批收紧加速国产替代进程。台积电回应中央硝子停产六氟化钨称多源供应不受影响。",
+      "variable_change": "光刻胶从实验室突破迈入批量供货阶段，材料国产化从'能用'到'好用'的关键跨越",
+      "source_urls": [
+        "https://www.sina.cn/news/detail/5312689964320105.html",
+        "https://www.sina.cn/news/detail/5316026666585325.html"
+      ],
+      "priority": "normal",
+      "source_weight": "medium",
+      "lifecycle": "emerging",
+      "lifecycle_rationale": "光刻胶国产化率仍极低（日系垄断90%+），刚看到国产突破苗头，市场关注度不够",
+      "related_tickers": ["688325.SH", "603650.SH", "688126.SH", "300655.SZ"],
+      "tags": ["光刻胶", "硅片", "半导体材料", "ArF"],
+      "capital_flow_tags": ["国产替代采购"],
+      "cross_chain": false
+    },
+    {
+      "id": "s5",
+      "chain": "chain2",
+      "title": "HBM/存储芯片涨价周期延续，三星Q2 DRAM再涨30%",
+      "summary": "三星Q1营业利润57.2万亿韩元（~2610亿人民币），环比+185%，同比+755%，超越2025全年利润。Q2 DRAM价格再涨约30%（含HBM和通用DRAM）。三大存储厂70-80%先进产能转向HBM，消费级和车规存储严重紧缺。2026H1存储芯片指数大涨165%。SK海力士明确2026年无力调整HBM/标准DRAM产线。",
+      "variable_change": "存储涨价从AI驱动→全品类蔓延，车规存储成本暴涨开始挤压下游利润",
+      "source_urls": [
+        "https://www.yicai.com/news/103127432.html",
+        "https://news.qq.com/rain/a/20260716A086P400",
+        "https://news.10jqka.com.cn/20260714/c678152754.shtml"
+      ],
+      "priority": "fire",
+      "source_weight": "high",
+      "lifecycle": "consensus",
+      "lifecycle_rationale": "存储涨价已是市场明牌，HBM供需缺口持续扩大，但市场定价已较为充分",
+      "related_tickers": ["002415.SZ", "688385.SH", "603986.SH", "300223.SZ"],
+      "tags": ["HBM", "存储涨价", "DRAM", "三星", "SK海力士"],
+      "capital_flow_tags": ["AI资本开支", "产能挤占"],
+      "cross_chain": false
+    },
+    {
+      "id": "s6",
+      "chain": "chain2",
+      "title": "国产AI芯片替代率突破35%，寒武纪PE 212x海光市值超8000亿",
+      "summary": "中国AI芯片国产替代率从2023年不足10%攀升至2026年中突破35%，政企端和三大运营商集采中国产芯片（华为昇腾、海光、寒武纪）份额已过半。华东首座国产TPU千卡智算集群（杭州）落成，基于中昊芯英须臾TPU芯片。但寒武纪PE 212倍、海光市值8000亿+，估值已处历史极端高位。",
+      "variable_change": "国产AI芯片从'能用'到'能用好'，在政企和运营商市场完成份额逆转，但估值泡沫化风险突出",
+      "source_urls": [
+        "https://m.sohu.com/a/1051639109_122014422",
+        "https://finance.ifeng.com/c/8umppbkr5Ns",
+        "https://caifuhao.eastmoney.com/news/20260716055713100658990"
+      ],
+      "priority": "normal",
+      "source_weight": "medium",
+      "lifecycle": "consensus",
+      "lifecycle_rationale": "国产替代率35%+估值PE 200x意味着市场已充分定价国产替代逻辑，进入共识期但风险收益比恶化",
+      "related_tickers": ["688256.SH", "688041.SH", "300474.SZ", "688047.SH"],
+      "tags": ["AI芯片", "国产替代", "寒武纪", "海光信息", "TPU"],
+      "capital_flow_tags": ["政企采购", "算力基建"],
+      "cross_chain": false
+    },
+    {
+      "id": "s7",
+      "chain": "chain2",
+      "title": "先进封装百亿级扩产潮，英伟达锁定台积电CoWoS产能50%+",
+      "summary": "甬矽电子103亿投建高端IC封测三期，通富微电42.2亿定增加码算力芯片封装，华天科技30亿投建HBM/DDR5封测线。英伟达Blackwell GPU锁定台积电2026年CoWoS产能五成以上，AMD/Google/博通/AWS全部导入CoWoS。先进封装产能成为制约高端芯片交付的核心瓶颈。",
+      "variable_change": "先进封装从台积电一家独大进入国产百亿级扩产阶段，产能缺口驱动产业链投资加速",
+      "source_urls": [
+        "https://eu.36kr.com/zh/p/3899029791623044",
+        "https://www.163.com/dy/article/L21DJO830511CPMT.html"
+      ],
+      "priority": "normal",
+      "source_weight": "medium",
+      "lifecycle": "positioning",
+      "lifecycle_rationale": "国产先进封装刚启动大规模扩产，技术和产能差距仍大，处于布局阶段",
+      "related_tickers": ["688362.SH", "002156.SZ", "002185.SZ", "600584.SH"],
+      "tags": ["先进封装", "CoWoS", "HBM", "封测"],
+      "capital_flow_tags": ["定增募资", "产能投资"],
+      "cross_chain": true
+    },
+    {
+      "id": "s8",
+      "chain": "chain2",
+      "title": "光模块1.6T量产放量在即，中际旭创硅光方案占比超50%",
+      "summary": "中际旭创800G和1.6T产品中硅光方案占比已超50%，Q3 1.6T放量将带来利润爆发式增长。部分客户下调1.6T采购量引发市场担忧，但整体AI算力对高速光模块需求趋势未改。新易盛、天孚通信同步受益。阿里云发布智能体专用型实例，华为展示800GE AI网卡。",
+      "variable_change": "1.6T从导入期进入放量期，硅光方案渗透率超预期，但部分客户砍单增添不确定性",
+      "source_urls": [
+        "https://zhuanlan.zhihu.com/p/2060098871338987723",
+        "https://www.sina.cn/news/detail/5316940647104906.html",
+        "https://www.sina.cn/news/detail/5317741943980870.html"
+      ],
+      "priority": "normal",
+      "source_weight": "medium",
+      "lifecycle": "positioning",
+      "lifecycle_rationale": "1.6T刚进入量产放量期，市场对需求有分歧（部分客户砍单vs整体增长），尚未形成一致预期",
+      "related_tickers": ["300308.SZ", "300502.SZ", "300394.SZ"],
+      "tags": ["光模块", "1.6T", "硅光", "中际旭创", "800G"],
+      "capital_flow_tags": ["AI算力基建"],
+      "cross_chain": false
+    },
+    {
+      "id": "s9",
+      "chain": "chain2",
+      "title": "Meta拟$100亿向Anthropic出租算力，AI算力稀缺信号再升级",
+      "summary": "Meta正与Anthropic谈判出租数据中心算力，潜在协议价值最高100亿美元、为期两年。AMD将于7/22-23举办Advancing AI 2026大会，瑞银目标价上调至700美元。谷歌开发Frozen V2芯片，效率比TPU高6-10倍。高通与Meta达成CPU合作进入超大规模基础设施领域。2026 WAIC闭幕，意向采购金额203.6亿同比+25%。",
+      "variable_change": "AI算力从'建设期'进入'出租/商业化期'，算力作为资产的变现模式开始出现",
+      "source_urls": [
+        "https://blog.wenhaofree.com/ai-briefings/2026-07-18/",
+        "https://news.qq.com/rain/a/20260714A06IMG00",
+        "https://news.qq.com/rain/a/20260714A09LSY00"
+      ],
+      "priority": "normal",
+      "source_weight": "high",
+      "lifecycle": "consensus",
+      "lifecycle_rationale": "AI算力紧缺已是市场共识，新变量是算力变现模式的出现（出租、云服务）",
+      "related_tickers": ["603019.SH", "000977.SZ", "688256.SH"],
+      "tags": ["AI算力", "数据中心", "Meta", "Anthropic", "AMD"],
+      "capital_flow_tags": ["AI资本开支", "算力变现"],
+      "cross_chain": false
+    }
+  ],
+  "stats": {
+    "chain1_count": 4,
+    "chain2_count": 5,
+    "cross_chain_count": 1,
+    "fire_count": 3,
+    "by_lifecycle": {
+      "emerging": 1,
+      "positioning": 4,
+      "consensus": 4,
+      "exhausted": 0
+    },
+    "by_source_weight": {
+      "high": 4,
+      "medium": 5,
+      "low": 0
+    },
+    "with_capital_backing": 4
+  }
+}

@@ -1,484 +1,311 @@
 {
-  "date": "2026-07-19",
-  "generated_at": "2026-07-19T23:08:00+08:00",
-  "assembled_at": "2026-07-19T23:08:00+08:00",
-  "source_files": [
-    ".analyst-brief-2026-07-19.json",
-    ".analyst-verify-2026-07-19.json",
-    ".analyst-funds-2026-07-19.json"
-  ],
+  "date": "2026-07-21",
+  "assembled_at": "2026-07-21T11:08:00+08:00",
+  "brief_at": "2026-07-21T11:00:00+08:00",
+  "verified_at": "2026-07-21T11:03:00+08:00",
+  "funds_at": "2026-07-21T11:03:00+08:00",
+  "market_regime": "panic_to_repair_transition",
+  "data_date": "20260720",
+  "note": "盘中分析。异常数据来自7/20收盘。7/21早晨发布25条新催化剂(6 fire)，近一个月最强催化剂密度。7/20极端恐慌+7/21催化剂密集=情绪修复观察窗口。",
   "top_signals": [
     {
-      "id": "s6",
-      "title": "SK集团崔泰源：明年半导体需求至少增50%，AI需求增60-100%，新增供应近零",
-      "summary": "SK集团会长崔泰源7月19日在济州论坛表示：明年全球半导体需求将大幅增长，AI领域需求增60-100%，整体增50-60%。但明年新增供应量几乎为零，供需缺口恐进一步扩大。",
-      "priority": "fire",
-      "chain": "chain2",
-      "theme": "半导体超级周期",
-      "selection_rationale": "今日最新信号(7/19)，SK会长公开定调供需缺口，超级周期共识强化"
-    },
-    {
-      "id": "s5",
-      "title": "美日荷同步升级对华半导体管制：日本新增20类设备覆盖HBM全流程",
-      "summary": "5月29日日本经济产业省发布新规，新增20类设备管制覆盖HBM超薄堆叠全流程。DISCO垄断研磨设备在列，先进封装设备驳回率近80%。电子化学品同步受限。",
-      "priority": "fire",
-      "chain": "chain1",
-      "theme": "地缘政治驱动国产替代",
-      "selection_rationale": "管制从设备升级到材料+先进封装全面封锁，cross_chain信号，倒逼国产替代逻辑最强"
-    },
-    {
+      "rank": 1,
       "id": "s1",
-      "title": "长鑫存储/长鑫科技完成A股史上最大DRAM IPO申购",
-      "summary": "7月16日长鑫科技开启科创板申购，募资85亿美元，为2026年A股最大IPO、科创板史上第二大。2025年净利润247.62亿(+1688%)，2026H1预盈500-570亿。",
+      "source": "scanner",
+      "chain": "chain1-半导体",
       "priority": "fire",
-      "chain": "chain1",
-      "theme": "DRAM国产替代",
-      "selection_rationale": "A股史上最大DRAM IPO，打通资本市场渠道，标志DRAM国产化进入资本扩张阶段"
+      "lifecycle": "positioning",
+      "title": "长鑫存储科创板IPO开启申购，2026年A股最大IPO",
+      "summary": "国产DRAM龙头长鑫科技7月16日开启科创板申购，拟募资约85亿美元（~600亿人民币），为2026年A股最大IPO。全球DRAM份额3.97%，目标月产能35万片。",
+      "selection_reason": "fire级+chain1核心，DRAM国产替代的资本化里程碑，IPO定价将为整个存储国产化链条提供估值锚",
+      "verified_sources": [
+        "https://www.stcn.com/article/detail/4010092.html (证券时报: 7月16日开启新股申购, 证券代码688825)",
+        "https://www.163.com/dy/article/L1UQJ7LA053469LG.html (网易: 2026年A股年内募资最大IPO, 计划募资295亿)",
+        "https://www.eet-china.com/mp/a508597.html (电子工程专辑: 7月16日申购, DRAM龙头)",
+        "https://finance.ifeng.com/c/8u5GB2Fbl4V (凤凰网: 7月中下旬申购, 7月底-8月初上市)"
+      ],
+      "verification_notes": "IPO申购日期(7月16日)、科创板、2026年A股最大IPO均获多方权威媒体确认。募资金额分析简报称约85亿美元(~600亿人民币)，网易报道实际募资295亿人民币——差异可能来自估值口径不同。核心事实一致。",
+      "source_quality": "high",
+      "confidence": "triple"
     },
     {
-      "id": "s11",
-      "title": "人形机器人量产元年：特斯拉Optimus下线第10000台，中国整机产量破10万台",
-      "summary": "特斯拉Optimus V3下线第10000台量产整机，BOM成本从8.4万→2.1万美元。工信部公布2026年中国人形机器人整机产量有望突破10万台。",
+      "rank": 2,
+      "id": "s2",
+      "source": "scanner",
+      "chain": "chain1-半导体",
       "priority": "fire",
-      "chain": "chain2",
-      "theme": "人形机器人量产拐点",
-      "selection_rationale": "2026年是人形机器人从0→1的商业化元年，cross_chain，类似2019年的电动车"
+      "lifecycle": "positioning",
+      "title": "半导体设备国产化进入订单密集兑现期，北方华创Q1营收103亿",
+      "summary": "设备国产化率持续攀升，北方华创Q1营收103.23亿全球第五，深科达中报预增210%，板块业绩全面爆发。",
+      "selection_reason": "fire级+chain1，设备国产化从导入到兑现的拐点确认，中报密集预告期催化剂充足",
+      "verified_sources": [
+        "https://news.qq.com/rain/a/20260430A02CC600 (腾讯新闻: Q1营收103.23亿, 同比+25.8%, 净利润16.35亿)",
+        "https://finance.sina.com.cn/stock/aigc/stockfs/2026-04-30/doc-inhwftwn6258537.shtml (新浪财经: Q1营收103.23亿, 市占率提升驱动)",
+        "https://www.sohu.com/a/1016544206_122014422 (搜狐: Q1营收103.23亿, 多品类设备市占率扩大)"
+      ],
+      "verification_notes": "北方华创Q1营收103.23亿获多家权威财经媒体财报报道确认，同比+25.8%。'全球第五'排名未在搜索结果中直接验证，深科达中报预增210%未搜索确认。核心营收数据完全准确。",
+      "source_quality": "high",
+      "confidence": "triple"
     },
     {
-      "id": "s8",
-      "title": "国产AI芯片突破：寒武纪思元590出货目标30万颗，NVIDIA中国份额从95%→不足10%",
-      "summary": "国产AI芯片国产化率从2023年不足10%升至2026年中突破35%。寒武纪思元590达A100约80-90%性能、1/3价格，字节为最大客户。但PE 212倍估值处于历史高位。",
+      "rank": 3,
+      "id": "s5",
+      "source": "scanner",
+      "chain": "chain2-半导体",
       "priority": "fire",
-      "chain": "chain2",
-      "theme": "AI芯片国产替代",
-      "selection_rationale": "NVIDIA份额崩溃式下滑，国产替代从推理→训练全面突破，但估值已大幅透支"
+      "lifecycle": "consensus",
+      "title": "HBM/存储芯片涨价周期延续，三星Q2 DRAM再涨30%",
+      "summary": "三星Q1营业利润~2610亿人民币同比+755%，Q2 DRAM再涨30%。70-80%先进产能转HBM致消费级/车规存储紧缺。",
+      "selection_reason": "fire级+chain2，存储涨价全品类蔓延，车规存储缺口为上游材料/封测带来溢出效应",
+      "verified_sources": [
+        "https://finance.sina.com.cn/wm/2026-07-04/doc-inifrnzw2241877.shtml (新浪财经: Q1 DRAM涨90%, Q2再涨50-60%)",
+        "https://www.esmchina.com/news/14294.html (国际电子商情: 2026年常规DRAM涨30-40%, 部分厂商通知最高70%涨幅)",
+        "https://www.ithome.com/0/972/616.htm (IT之家: Q3 DRAM预计涨13-18%, 三星Q3拟提价20%)"
+      ],
+      "verification_notes": "DRAM涨价趋势获全面确认，但分析简报称'Q2 DRAM再涨30%'可能偏保守——新浪财经报道Q2实际涨幅50-60%，ESMchina称部分涨幅达70%。三星营业利润~2610亿未在本次搜索验证。涨价方向正确，具体数字偏低。",
+      "source_quality": "high",
+      "confidence": "dual"
     },
     {
+      "rank": 4,
       "id": "rs1",
-      "title": "36氪深度：宇树IPO估值420亿成行业标尺，U1预售1.3万台订单含金量存疑",
-      "summary": "36氪发布深度长文：宇树科技IPO估值约420亿元，连续5年盈利、净利率35.13%。优必选U1系列1.3万台订单3000元定金可全额退款、尾款7/16才开始收，订单含金量大打折扣。核心零部件进口比例超40%。",
+      "source": "robot-scanner",
+      "chain": "机器人",
       "priority": "fire",
-      "chain": "robot",
-      "theme": "人形机器人需求真实性",
-      "selection_rationale": "7/19凌晨发布，首次公开质疑U1订单含金量，可能引发板块情绪修正"
+      "lifecycle": "positioning",
+      "title": "工信部：中国人形机器人整机产品达400余款，超全球半数",
+      "summary": "工信部7月20日数据：人形机器人400余款超全球半数，四足机器人占全球销量70%。H1出货超4万台，全年预计超10万台。",
+      "selection_reason": "fire级+机器人核心，首次'超全球半数'量化指标，政策背书+量产验证双驱动",
+      "verified_sources": [
+        "https://www.ithome.com/0/978/908.htm (IT之家: 工信部7月20日数据, 400余款超全球半数)",
+        "https://cn.technode.com/post/2026-07-20/china-has-more-than-half-of-the-worlds-total-number-of-humanoid-robots/ (动点科技: 国新办发布会数据)",
+        "https://www.stcn.com/article/detail/4028606.html (证券时报: 工信部7月20日发布, 四足机器人占全球70%)",
+        "https://m.sohu.com/a/1052388478_123753 (搜狐/中新网: 工信部辛国斌披露数据)"
+      ],
+      "verification_notes": "所有核心数据点均获多方权威媒体确认：400余款人形机器人、超全球半数、四足机器人占全球销量70%，数据来源为工信部7月20日国新办发布会。'H1出货超4万台'未在搜索结果中验证，但核心政策数据完全准确。",
+      "source_quality": "high",
+      "confidence": "triple"
     },
     {
+      "rank": 5,
       "id": "rs2",
-      "title": "华泰证券：Optimus量级与爬坡斜率分歧巨大，'量'的定价分歧是板块波动核心来源",
-      "summary": "华泰证券调研反馈：Optimus方案已基本锁定，批量量产预计8月底至9月启动，但多数供应商对9月1000台/周、年底2500台/周的爬坡速度持怀疑态度。板块波动核心来源于'量'的不确定性定价。",
+      "source": "robot-scanner",
+      "chain": "机器人",
       "priority": "fire",
-      "chain": "robot",
-      "theme": "Optimus量产不确定性",
-      "selection_rationale": "正规券商首次公开讨论量级分歧，挑战市场对Optimus量的'确定性共识'"
+      "lifecycle": "positioning",
+      "title": "地瓜机器人两个月融资2.7亿美元，成具身智能芯片最大供应商",
+      "summary": "地瓜机器人B2轮1.5亿美元，累计融资近18亿。2025年出货量同比+180%，服务20+家具身企业，目标'具身英伟达'。",
+      "selection_reason": "fire级+机器人，具身智能'大脑'赛道龙头确立，资本验证+生态壁垒形成先发优势",
+      "verified_sources": [
+        "https://www.qbitai.com/2026/04/397912.html (量子位: B2轮1.5亿美元, B轮累计2.7亿美元)",
+        "https://www.stcn.com/article/detail/3739212.html (证券时报: B1轮1.2亿(3月中)+B2轮1.5亿(4月初), 总融资3.7亿美元)",
+        "https://developer.cloud.tencent.com/article/2652867 (腾讯云: 累计融资超25亿人民币)",
+        "https://wx.leaderobot.com/news/7566 (机器人大讲堂: 具身智能基础设施融资纪录)"
+      ],
+      "verification_notes": "融资数据获多方确认：B1轮1.2亿(3月中旬)+B2轮1.5亿(4月8日)=B轮累计2.7亿美元,'两个月'时间线准确。'具身英伟达'定位和累计融资近18亿人民币均被验证。'2025年出货量同比+180%'和'服务20+家具身企业'未在本次搜索中直接核实。",
+      "source_quality": "high",
+      "confidence": "triple"
     },
     {
-      "id": "s3",
-      "title": "晶圆代工双雄产能满载：中芯稼动率93.1%、华虹99.7%，华虹ASP涨10-15%",
-      "summary": "成熟+先进制程双紧缺，华虹2026年ASP预计涨10-15%，中芯开启涨价协商。中芯产能预计达67万片/月。台积电3nm下半年最高涨价15%。",
+      "rank": 6,
+      "id": "rs3",
+      "source": "robot-scanner",
+      "chain": "机器人",
       "priority": "fire",
-      "chain": "chain1",
-      "theme": "晶圆代工量价齐升",
-      "selection_rationale": "稼动率接近极限+涨价已成共识，晶圆代工进入业绩释放期"
+      "lifecycle": "emerging",
+      "title": "发改委WAIC发布《人工智能合作发展行动计划》八项行动",
+      "summary": "发改委在WAIC 2026发布AI八项行动计划：数据、算力、生态、赋能、人才、规则、治理、伦理。最高级别系统性政策框架。",
+      "selection_reason": "fire级+emerging生命周期，国家级政策框架首次发布，市场解读尚未充分，存在预期差"
+    },
+    {
+      "rank": 7,
+      "id": "s4",
+      "source": "scanner",
+      "chain": "chain1-半导体",
+      "priority": "normal",
+      "lifecycle": "emerging",
+      "title": "半导体材料国产替代加速，ArF光刻胶突破ASML认证",
+      "summary": "南大光电成国内唯一批量供货ArF 193nm干法光刻胶企业，通过ASML认证适配14-28nm。日本出口审批收紧加速替代。",
+      "selection_reason": "normal但emerging生命周期+chain1，光刻胶国产化率极低（日系90%+），突破窗口期溢价大"
+    },
+    {
+      "rank": 8,
+      "id": "s7",
+      "source": "scanner",
+      "chain": "chain2-半导体",
+      "priority": "normal",
+      "lifecycle": "positioning",
+      "title": "先进封装百亿级扩产潮，英伟达锁定台积电CoWoS产能50%+",
+      "summary": "甬矽电子103亿、通富微电42.2亿、华天科技30亿投建封测线。英伟达锁定台积电CoWoS产能五成以上。",
+      "selection_reason": "cross_chain+chain2，先进封装国产百亿扩产启动，产能缺口驱动全产业链投资加速"
     }
   ],
-  "theme_distribution": {
-    "半导体超级周期/供需缺口": 1,
-    "地缘政治驱动国产替代": 1,
-    "DRAM国产替代": 1,
-    "人形机器人量产拐点": 1,
-    "AI芯片国产替代": 1,
-    "人形机器人需求真实性": 1,
-    "Optimus量产不确定性": 1,
-    "晶圆代工量价齐升": 1
+  "composition": {
+    "total": 8,
+    "by_chain": { "chain1-半导体": 3, "chain2-半导体": 2, "机器人": 3 },
+    "by_priority": { "fire": 6, "normal": 2 },
+    "by_lifecycle": { "emerging": 2, "positioning": 4, "consensus": 2 }
   },
-  "cross_validation_priority": ["s6", "s5", "s1", "s11", "s8"],
-  "verified_signals": {
-    "total_signals": 5,
-    "fully_verified": 1,
-    "partially_verified": 2,
-    "unverified": 2,
-    "high_confidence": 1,
-    "medium_confidence": 2,
-    "low_confidence": 2,
-    "details": [
-      {
-        "id": "s6",
-        "title": "SK集团崔泰源：明年半导体需求至少增50%，AI需求增60-100%，新增供应近零",
-        "verified_sources": [
-          "https://finance.sina.com.cn/tech/digi/2026-07-19/doc-iniiirzf0272627.shtml",
-          "https://www.163.com/dy/article/L27D4F6705198CJN.html",
-          "https://ai.zol.com.cn/1217/12174486.html"
-        ],
-        "confidence": "triple",
-        "source_quality": "high",
-        "discrepancies": [],
-        "key_facts_verified": [
-          "7月19日济州论坛崔泰源发言确认（财联社电头）",
-          "AI领域需求预计+60%至100%（完全一致）",
-          "整体半导体需求增长至少50%至60%（信号写'至少50%'略有简化，原文为50-60%）",
-          "明年新增供应量几乎为零（完全一致）",
-          "供需缺口恐进一步扩大（完全一致）"
-        ]
-      },
-      {
-        "id": "s8",
-        "title": "国产AI芯片突破：寒武纪思元590出货目标30万颗，NVIDIA中国份额从95%→不足10%",
-        "verified_sources": [
-          "https://cann.csdn.net/6a5441d810ee7a33f28cdad1.html",
-          "https://finance.sina.cn/stock/ssgs/2026-07-02/detail-inifmrts2601171.d.html",
-          "https://www.stcn.com/article/detail/3991331.html"
-        ],
-        "confidence": "dual",
-        "source_quality": "medium",
-        "discrepancies": [
-          "NVIDIA份额数据来源为CSDN行业分析文章，非NVIDIA或第三方审计数据，精度待考",
-          "PE 212倍估值位于历史高位：本次搜索未独立核实",
-          "国产化率从不足10%升至35%：来源未明确，无法独立验证",
-          "思元690已量产（证券时报确认），部分数据可能混淆思元590和思元690的出货/产能"
-        ],
-        "key_facts_verified": [
-          "思元590性能约A100的80-90%、价格约1/3（CSDN分析确认）",
-          "字节跳动为最大客户（CSDN确认）",
-          "2026年出货目标30万颗（CSDN确认）",
-          "摩根士丹利确认思元590 Q1出货强劲（新浪财经引用）",
-          "NVIDIA中国份额大幅下滑：CSDN标题称'从95%跌到8%'，与信号'不足10%'一致"
-        ]
-      },
-      {
-        "id": "s1",
-        "title": "长鑫存储/长鑫科技完成A股史上最大DRAM IPO申购",
-        "verified_sources": [
-          "https://finance.ifeng.com/c/8tVDNRnQPWg",
-          "https://m.21jingji.com/article/20260717/herald/bae3c894be7033782e3f7e5cda09d01f_zaker.html",
-          "https://www.stcn.com/article/detail/4010092.html",
-          "https://finance.eastmoney.com/a/202607173810104030.html"
-        ],
-        "confidence": "dual",
-        "source_quality": "high",
-        "discrepancies": [
-          "排名矛盾：信号称'科创板史上第二大IPO'，但21世纪经济报道、东方财富等多个权威来源称'科创板史上最大IPO'（超越中芯国际2020年532亿元募资）。证券时报则称'2026年以来A股最大IPO'。多数来源支持'史上最大'而非'第二大'。",
-          "2025年净利润247.62亿(+1688%)、2026H1预盈500-570亿——本次搜索未独立核实，建议单独验证财报数据"
-        ],
-        "key_facts_verified": [
-          "7月16日开启科创板申购（完全一致）",
-          "发行价8.66元/股（完全一致）",
-          "估值约5800亿元/853亿美元（完全一致）",
-          "募资约579亿元≈85亿美元（汇率换算合理）",
-          "中金公司+中信建投联合保荐（确认）"
-        ]
-      },
-      {
-        "id": "s5",
-        "title": "美日荷同步升级对华半导体管制：日本新增20类设备覆盖HBM全流程",
-        "confidence": "unverified",
-        "source_quality": "low",
-        "discrepancies": [
-          "无法直接验证'5月29日日本经济产业省新增20类设备覆盖HBM全流程'这一核心主张",
-          "DISCO垄断研磨设备在列、先进封装设备驳回率近80%等细节未找到独立来源",
-          "搜索结果主要为中国反制措施，日本原始出口管制令的具体条款未在英文/中文媒体中找到直接报道"
-        ],
-        "verified_sources": [
-          "https://www.esmchina.com/news/14308.html",
-          "https://www.mofcom.gov.cn/zcfb/blgg/gg/2026/art/2026/art_6607ea694b704da8ac5e863a5568e47c.html"
-        ],
-        "key_facts_verified": [
-          "中日半导体管制对抗持续升级（间接验证：中国商务部6/29连发第27/28号公告反制日本）",
-          "中国已分两批将80家日本实体纳入出口管制清单（2月40家+6月40家）"
-        ]
-      },
-      {
-        "id": "s11",
-        "title": "人形机器人量产元年：特斯拉Optimus下线第10000台，中国整机产量破10万台",
-        "confidence": "unverified",
-        "source_quality": "low",
-        "discrepancies": [
-          "【严重不一致】信号称'下线第10000台量产整机'，但多方独立来源明确表示Optimus量产尚未开始。Tesla Q1 2026财报指引：限量生产预计2026年7月底或8月启动（late July/August 2026）。RoboZaps明确写道'not in mass production yet'。Yahoo Finance同样确认生产尚未启动。",
-          "BOM成本从$84K→$21K：无法独立验证",
-          "中国整机产量突破10万台：本次搜索无法独立验证",
-          "华泰证券调研反馈（rs2）显示供应商对爬坡速度普遍怀疑，进一步削弱'量产10000台'的可信度"
-        ],
-        "verified_sources": [
-          "https://blog.robozaps.com/b/tesla-model-s-optimus-robot-factory-conversion",
-          "https://www.teslarati.com/elon-musk-outlines-tesla-optimus-production-expectations/",
-          "https://finance.yahoo.com/technology/articles/tesla-tears-down-model-x-221918335.html"
-        ],
-        "key_facts_verified": [
-          "Optimus V3确实是最新版本（22-DoF hands, AI5 chip, Grok voice AI）",
-          "Fremont产线已改造完成，设计年产能100万台"
-        ]
-      }
-    ],
-    "critical_flags": [
-      "🛑 s11: Optimus量产10000台与多方来源矛盾，量产尚未开始，此信号可能基于误读或非一手来源",
-      "⚠️ s5: 日本管制新规核心细节无法通过公开搜索验证，建议通过日文或专业渠道进一步核实",
-      "⚠️ s1: IPO排名描述存在'史上最大'vs'史上第二大'的矛盾，需更正为'科创板史上最大IPO'"
-    ]
+  "verification_summary": {
+    "total": 5,
+    "triple": 4,
+    "dual": 1,
+    "single": 0,
+    "unverified": 0
   },
-  "market_overview": {
-    "date": "2026-07-19",
-    "total_anomalies": 612,
-    "up_count": 22,
-    "down_count": 589,
-    "flat_count": 1,
-    "limit_up": 1,
-    "limit_down": 128,
-    "avg_pct_chg": -8.77,
-    "avg_vol_ratio": 2.40,
-    "market_bias": "extreme_bearish",
-    "market_summary": "96.2%股票下跌, 20.9%跌停封板, 全面恐慌性出逃",
-    "northbound_net_inflow_billion": 376.79,
-    "northbound_vs_market": "🔥 巨大背离: 北向净买入376.79亿 vs 全市场96%下跌 — 外资逆势抄底半导体/AI",
-    "bidding_status": "❌ 数据不可用 — daily/bidding-2026-07-19.json 不存在, 集合竞价盘前数据缺失"
+  "data_sources": {
+    "anomalies": "pool.db::anomalies WHERE trade_date='20260720' (top15 by abs(pct_chg)) — 异常数据来自上交易日7/20，7/21盘中数据尚未生成",
+    "bidding": "_gh-pages-repo/data/bidding.json (1 bidding result + 5 industry_context signals)",
+    "analyst_brief": "daily/.analyst-brief-2026-07-21.json (6 fire + 2 normal signals, 8 total)",
+    "robot_scanner": "daily/robot-scanner-2026-07-21.json (3 fire + 5 normal signals)",
+    "scanner": "daily/scanner-2026-07-21.json (3 fire + 6 normal signals, 9 total)",
+    "northbound": "未生成（7/21盘中，北向数据通常盘后发布）"
   },
-  "anomaly_stocks": {
-    "top15_by_decline": [
-      {"ts_code": "688218.SH", "pct_chg": -20.01, "vol_ratio": 2.29, "attribution": "跌停封板", "sector": "机器人"},
-      {"ts_code": "301228.SZ", "pct_chg": -20.01, "vol_ratio": 1.65, "attribution": "跌停封板", "sector": "检测服务"},
-      {"ts_code": "688048.SH", "pct_chg": -20.00, "vol_ratio": 2.94, "attribution": "跌停封板", "sector": "光通信/激光芯片"},
-      {"ts_code": "688668.SH", "pct_chg": -20.00, "vol_ratio": 2.21, "attribution": "跌停封板", "sector": "连接器"},
-      {"ts_code": "300382.SZ", "pct_chg": -18.97, "vol_ratio": 3.49, "attribution": "工业设备/通用机械板块联动", "sector": "工业设备"},
-      {"ts_code": "300720.SZ", "pct_chg": -18.96, "vol_ratio": 3.81, "attribution": "工业设备/通用机械板块联动", "sector": "工业设备"},
-      {"ts_code": "688416.SH", "pct_chg": -18.91, "vol_ratio": 2.94, "attribution": "IC设计板块联动", "sector": "半导体/IC设计"},
-      {"ts_code": "688766.SH", "pct_chg": -18.63, "vol_ratio": 3.76, "attribution": "IC设计板块联动", "sector": "半导体/IC设计"},
-      {"ts_code": "301588.SZ", "pct_chg": -18.30, "vol_ratio": 2.44, "attribution": "跌停封板", "sector": "新材料"},
-      {"ts_code": "300489.SZ", "pct_chg": -18.17, "vol_ratio": 3.04, "attribution": "AI算力,光通信与光学板块联动", "sector": "AI算力/光通信"},
-      {"ts_code": "301281.SZ", "pct_chg": -17.48, "vol_ratio": 1.63, "attribution": "跌停封板", "sector": "医药"},
-      {"ts_code": "688135.SH", "pct_chg": -17.37, "vol_ratio": 4.32, "attribution": "封测与基板板块联动", "sector": "半导体/封测"},
-      {"ts_code": "301183.SZ", "pct_chg": -17.05, "vol_ratio": 0.95, "attribution": "跌停封板", "sector": "光学元件"},
-      {"ts_code": "688313.SH", "pct_chg": -16.93, "vol_ratio": 1.58, "attribution": "AI算力,光通信与光学板块联动", "sector": "AI算力/光通信"},
-      {"ts_code": "688221.SH", "pct_chg": -16.87, "vol_ratio": 4.03, "attribution": "生物医药板块联动", "sector": "生物医药"}
-    ],
-    "bright_spots": [
-      {"ts_code": "002432.SZ", "pct_chg": 10.00, "vol_ratio": 2.35, "attribution": "涨停封板", "note": "全场唯一涨停"},
-      {"ts_code": "601016.SH", "pct_chg": 6.06, "vol_ratio": 3.28, "attribution": "电力运营板块联动", "note": "电力板块资金避险"},
-      {"ts_code": "603318.SH", "pct_chg": 5.61, "vol_ratio": 5.61, "attribution": "电力运营板块联动", "note": "高量比+涨幅, 资金集中涌入"},
-      {"ts_code": "000601.SZ", "pct_chg": 5.54, "vol_ratio": 5.02, "attribution": "电力运营板块联动", "note": "高量比+涨幅"},
-      {"ts_code": "688432.SH", "pct_chg": 5.19, "vol_ratio": 5.64, "attribution": "半导体材料板块联动", "note": "🔑 半导体材料逆势抗跌, 高量比"},
-      {"ts_code": "688549.SH", "pct_chg": 4.23, "vol_ratio": 3.88, "attribution": "半导体材料板块联动", "note": "🔑 半导体材料连续两日逆势"}
-    ]
-  },
-  "sector_flows": [
-    {
-      "name": "IC设计",
-      "count": 48,
-      "up_pct": 0,
-      "avg_pct": -11.56,
-      "avg_vol_ratio": 2.90,
-      "high_vol_count": 14,
-      "flow_direction": "🚨 重度出金",
-      "analysis": "IC设计是今日跌幅最大的半导体子板块(-11.56%)，近30%标的高量比放量下杀。存储器类(恒烁-18.91%、普冉-18.63%)领跌，反映在长鑫IPO后存储芯片估值重估压力"
-    },
-    {
-      "name": "AI算力+光通信",
-      "count": 26,
-      "up_pct": 0,
-      "avg_pct": -11.23,
-      "avg_vol_ratio": 2.19,
-      "high_vol_count": 5,
-      "flow_direction": "🚨 重度出金",
-      "analysis": "光通信全线崩溃, 光智科技-18.17%、仕佳光子-16.93%等领跌。AI算力板块在NVIDIA份额暴跌+国产替代双逻辑下出现获利了结式抛售"
-    },
-    {
-      "name": "跌停封板(跨板块)",
-      "count": 128,
-      "up_pct": 0,
-      "avg_pct": -11.07,
-      "avg_vol_ratio": 2.33,
-      "high_vol_count": 28,
-      "flow_direction": "🚨 极度恐慌",
-      "analysis": "128只跌停封板为单日极端值，涵盖半导体、医药、工业设备等多板块。21.9%的跌停股量比>3，为恐慌性放量跌停而非无量封板"
-    },
-    {
-      "name": "半导体设备",
-      "count": 105,
-      "up_pct": 2.9,
-      "avg_pct": -9.82,
-      "avg_vol_ratio": 2.90,
-      "high_vol_count": 41,
-      "flow_direction": "🔴 重度出金",
-      "analysis": "半导体设备板块数量最多(105只)，39%标的高量比(>3)放量下杀。但3只收红——688432(+5.19%)、688549(+4.23%)逆势，设备细分内部剧烈分化"
-    },
-    {
-      "name": "半导体材料",
-      "count": 24,
-      "up_pct": 8.3,
-      "avg_pct": -7.72,
-      "avg_vol_ratio": 3.12,
-      "high_vol_count": 15,
-      "flow_direction": "🟡 分歧加大(高量比+部分逆势)",
-      "analysis": "🔑 关键发现: 半导体材料板块平均量比3.12(全板块最高)，62.5%高量比，但有2只逆势上涨(688432 +5.19%, 688549 +4.23%)。显示资金在系统性下跌中进行结构性调仓——从设备/IC设计轮出，部分流入材料端"
-    },
-    {
-      "name": "消费电子/元器件",
-      "count": 46,
-      "up_pct": 2.2,
-      "avg_pct": -9.69,
-      "avg_vol_ratio": 2.11,
-      "high_vol_count": 4,
-      "flow_direction": "🔴 中度出金",
-      "analysis": "板块普跌但量比偏低(avg 2.11)，仅8.7%高量比。消费电子在半导体暴跌中跟跌但非放量恐慌"
-    },
-    {
-      "name": "工业设备/通用机械",
-      "count": 33,
-      "up_pct": 0,
-      "avg_pct": -9.34,
-      "avg_vol_ratio": 2.33,
-      "high_vol_count": 7,
-      "flow_direction": "🔴 中度出金",
-      "analysis": "通用机械全面下跌，斯莱克-18.97%、海川智能-18.96%领跌。机器人概念退潮拖累设备板块"
-    },
-    {
-      "name": "低空经济/航空",
-      "count": 8,
-      "up_pct": 0,
-      "avg_pct": -9.54,
-      "avg_vol_ratio": 1.80,
-      "high_vol_count": 0,
-      "flow_direction": "🔴 缩量出金",
-      "analysis": "低空经济板块量比偏低(1.80)但跌幅深(-9.54%)，场内资金被动撤退，无增量承接"
-    },
-    {
-      "name": "软件与IT服务",
-      "count": 17,
-      "up_pct": 5.9,
-      "avg_pct": -8.79,
-      "avg_vol_ratio": 1.95,
-      "high_vol_count": 2,
-      "flow_direction": "🟡 温和出金",
-      "analysis": "300561 +2.63%逆势，但板块整体跟跌。软件板块与AI算力关联度较低, 相对抗跌"
-    },
-    {
-      "name": "新能源/电力设备",
-      "count": 25,
-      "up_pct": 0,
-      "avg_pct": -8.05,
-      "avg_vol_ratio": 1.78,
-      "high_vol_count": 2,
-      "flow_direction": "🔴 缩量出金",
-      "analysis": "量比全板块最低(1.78)，为被动跟跌而非主动抛售。新能源与半导体风格相关性导致联动下杀"
-    },
-    {
-      "name": "机器人/具身智能",
-      "count": 8,
-      "up_pct": 12.5,
-      "avg_pct": -8.00,
-      "avg_vol_ratio": 2.47,
-      "high_vol_count": 2,
-      "flow_direction": "🟡 分歧(1只逆势+2只高量比)",
-      "analysis": "688400 +0.36%唯一收红。板块受rs1(U1订单质疑)+rs2(Optimus量级分歧)双重打击, 但跌幅(-8.0%)优于半导体设备(-9.82%)和AI算力(-11.23%)"
-    },
-    {
-      "name": "生物医药",
-      "count": 37,
-      "up_pct": 2.7,
-      "avg_pct": -7.89,
-      "avg_vol_ratio": 2.98,
-      "high_vol_count": 13,
-      "flow_direction": "🔴 中度出金",
-      "analysis": "35.1%高量比，前沿生物-16.87%等高量比跌停。医药在系统性风险中同样无法独善其身"
-    },
-    {
-      "name": "化工/材料",
-      "count": 46,
-      "up_pct": 6.5,
-      "avg_pct": -6.57,
-      "avg_vol_ratio": 2.42,
-      "high_vol_count": 13,
-      "flow_direction": "🟡 温和出金(相对抗跌)",
-      "analysis": "3只逆势收红(000703 +4.12%, 301217 +1.45%, 301237 +0.91%)，相对跌幅最小(-6.57%)。化工/材料板块展现防御属性"
-    },
-    {
-      "name": "电力运营",
-      "count": 9,
-      "up_pct": 77.8,
-      "avg_pct": 2.24,
-      "avg_vol_ratio": 4.80,
-      "high_vol_count": 9,
-      "flow_direction": "🟢 严重吸金 — 全市场唯一净流入板块",
-      "analysis": "⚠️ 今日最大亮点: 电力运营是全场唯一正收益板块(+2.24%), 7/9上涨, 100%高量比(全部量比>3!), 平均量比4.80。资金在恐慌中涌入电力防御板块，603318量比5.61、601991量比5.89, 为典型避险交易"
-    },
-    {
-      "name": "汽车零部件",
-      "count": 9,
-      "up_pct": 0,
-      "avg_pct": -7.18,
-      "avg_vol_ratio": 1.47,
-      "high_vol_count": 0,
-      "flow_direction": "🟡 缩量出金(无人关注)",
-      "analysis": "量比最低(1.47), 零高量比。板块无人气, 冷门跟跌"
-    }
+  "top_anomalies": [
+    { "ts_code": "301176.SZ", "name": "逸豪新材", "group": "消费电子/元器件", "pct_chg": -20.01, "vol_ratio": 3.58, "attribution": "跌停封板" },
+    { "ts_code": "688020.SH", "name": "方邦股份", "group": "消费电子/元器件", "pct_chg": -20.0, "vol_ratio": 4.31, "attribution": "跌停封板" },
+    { "ts_code": "688146.SH", "name": "中船特气", "group": "半导体材料", "pct_chg": -20.0, "vol_ratio": 3.17, "attribution": "跌停封板" },
+    { "ts_code": "301217.SZ", "name": "铜冠铜箔", "group": "化工/材料", "pct_chg": -20.0, "vol_ratio": 1.49, "attribution": "跌停封板" },
+    { "ts_code": "688669.SH", "name": "聚石化学", "group": "化工/材料", "pct_chg": -20.0, "vol_ratio": 4.61, "attribution": "跌停封板" },
+    { "ts_code": "301511.SZ", "name": "德福科技", "group": "化工/材料", "pct_chg": -20.0, "vol_ratio": 2.1, "attribution": "跌停封板" },
+    { "ts_code": "300780.SZ", "name": "德恩精工", "group": "工业设备/通用机械", "pct_chg": -19.99, "vol_ratio": 1.95, "attribution": "跌停封板" },
+    { "ts_code": "300553.SZ", "name": "集智股份", "group": "工业设备/通用机械", "pct_chg": -17.62, "vol_ratio": 5.23, "attribution": "工业设备/通用机械板块联动(18/44只)" },
+    { "ts_code": "300201.SZ", "name": "海伦哲", "group": "工业设备/通用机械", "pct_chg": -16.23, "vol_ratio": 3.22, "attribution": "工业设备/通用机械板块联动(18/44只)" },
+    { "ts_code": "300806.SZ", "name": "斯迪克", "group": "化工/材料", "pct_chg": -15.99, "vol_ratio": 5.42, "attribution": "化工/材料板块联动(29/65只)" },
+    { "ts_code": "688685.SH", "name": "迈信林", "group": "低空经济/航空", "pct_chg": -15.9, "vol_ratio": 3.73, "attribution": "低空经济/航空板块联动(5/12只)" },
+    { "ts_code": "300209.SZ", "name": "行云科技", "group": "AI算力", "pct_chg": 15.51, "vol_ratio": 7.34, "attribution": "AI算力,AI算力板块联动(9/12只)" },
+    { "ts_code": "301526.SZ", "name": "国际复材", "group": "化工/材料", "pct_chg": -15.48, "vol_ratio": 2.2, "attribution": "跌停封板" },
+    { "ts_code": "688809.SH", "name": "强一股份", "group": "半导体设备", "pct_chg": -15.36, "vol_ratio": 1.14, "attribution": "集成电路,半导体设备板块联动(14/27只)" },
+    { "ts_code": "688307.SH", "name": "中润光学", "group": "光通信与光学", "pct_chg": -15.28, "vol_ratio": 3.21, "attribution": "AI算力,光通信与光学板块联动(15/23只)" }
   ],
-  "fund_flow_summary": "⚡ 资金面核心矛盾: (1) 北向资金逆势净买入376.79亿, 明确流入集成电路、AI算力、机器人 — 外资在恐慌中贪婪; (2) 内资恐慌出逃, 电力运营(+2.24%)成为唯一避难所, 100%高量比吸金; (3) 半导体内部剧烈分化: IC设计(-11.56%)>>设备(-9.82%)>>材料(-7.72%, 但2只逆势), 材料端出现结构性抵抗; (4) 机器人(-8.0%)相对抗跌, 反映'订单质疑'已被部分消化但非完全出清",
-  "signal_correlation": {
-    "brief_consensus": "brief信号高度一致看多半导体/AI/机器人: SK崔泰源'供需缺口', 长鑫史上最大IPO, 晶圆代工量价齐升, AI芯片国产替代突破, 人形机器人量产元年",
-    "market_reality": "市场以极端下杀回应: 半导体设备-9.82%, AI算力-11.23%, IC设计-11.56%, 机器人-8.0%, 128只跌停",
-    "correlation_score": -85,
-    "correlation_verdict": "❌ 强负相关 — 资金面严重背离brief看多信号, 需警惕brief信号的'叙事滞后'风险",
-    "counter_signals_from_market": [
-      {
-        "brief_signal": "s6: SK崔泰源'半导体需求增50-60%, 供应零增长'(超级周期)",
-        "market_response": "⚠️ 反向: 半导体/AI全线暴跌。市场可能在price in'利好出尽'或担忧需求预期未能传导至A股标的利润端",
-        "confidence": "high"
-      },
-      {
-        "brief_signal": "s1: 长鑫存储85亿美元A股最大DRAM IPO",
-        "market_response": "⚠️ 反向: IC设计(-11.56%)领跌全市场, 恒烁(-18.91%)、普冉(-18.63%)存储IC重创。'龙头IPO吸金效应' + '存量估值重估'是更合理的市场解释",
-        "confidence": "high"
-      },
-      {
-        "brief_signal": "s5: 美日荷同步升级管制, 日本新增20类设备覆盖HBM全流程",
-        "market_response": "🔄 双向: 长期利好国产替代, 但短期'管制范围扩大'引发供应链断裂恐惧 — 半导体设备(-9.82%)首当其冲。此信号可能是今日暴跌的核心催化剂之一",
-        "confidence": "medium"
-      },
-      {
-        "brief_signal": "s8: AI芯片国产替代突破(寒武纪590出货30万颗, NVIDIA份额<10%)",
-        "market_response": "⚠️ 反向: AI算力(-11.23%)第二惨板块。即使国产替代逻辑确立,'估值已大幅透支'(brief自身也提示PE 212倍)导致获利了结",
-        "confidence": "high"
-      },
-      {
-        "brief_signal": "s11: 人形机器人量产元年(Tesla Optimus 10000台, 中国10万台)",
-        "market_response": "🔄 混合: 机器人(-8.0%)跌幅相对较轻, 优于半导体/AI。但rs1(U1订单含金量质疑)和rs2(Optimus量级分歧)正在瓦解'量产确定性'共识。市场在定价'量级从确定→概率'的降级",
-        "confidence": "high"
-      }
+  "anomaly_summary": {
+    "data_date": "20260720",
+    "total_anomalies": 483,
+    "up_count": 86,
+    "down_count": 397,
+    "up_ratio": "17.8%",
+    "avg_pct_chg": -6.21,
+    "sum_pct_chg": -2997.24,
+    "market_narrative": "7月20日为2026年以来最严重的系统性恐慌抛售日之一——483只异动股平均-6.21%，82%下跌。仅三方向录得正收益：电力运营(+6.71%,全板块6涨0跌)、AI算力(+1.97%,6涨3跌)、生物医药(+1.22%,17涨8跌)。半导体全链条（材料-9.46%/零部件-9.04%/设备-8.31%）遭遇无差别抛售，无一上涨。行云科技+15.51%(vol_ratio 7.34)为唯一逆势大幅上涨标的。119只跌停封板股平均-10.96%。",
+    "top_groups_by_count": [
+      { "group": "跌停封板", "count": 119, "avg_pct": -10.96, "up_down": "0/119" },
+      { "group": "待分类", "count": 70, "avg_pct": -2.71, "up_down": "26/44" },
+      { "group": "消费电子/元器件", "count": 38, "avg_pct": -7.38, "up_down": "2/36" },
+      { "group": "IC设计", "count": 30, "avg_pct": -6.27, "up_down": "4/26" },
+      { "group": "化工/材料", "count": 29, "avg_pct": -6.33, "up_down": "3/26" }
     ],
-    "robot_scanner_correlation": [
-      {
-        "signal_id": "rs1",
-        "title": "36氪: U1预售1.3万台订单含金量存疑",
-        "market_match": "✅ 高度匹配 — 此信号可能是触发今日机器人板块抛售的导火索。文章7/19凌晨发布, 当日机器人-8.0%, 相关结构件/精密传动全线下跌",
-        "intensity": 85
-      },
-      {
-        "signal_id": "rs2",
-        "title": "华泰: Optimus量级与爬坡斜率分歧巨大",
-        "market_match": "✅ 匹配 — '量'从确定性变为概率变量, 与rs1形成'需求质疑+供给不确定性'双重打击",
-        "intensity": 80
-      },
-      {
-        "signal_id": "rs3",
-        "title": "投资界: 200万可定制人形机器人样机贴牌",
-        "market_match": "🟡 部分匹配 — 泡沫警告信号从边缘扩散至机构视野, 加速板块去伪存真",
-        "intensity": 60
-      }
+    "top_gainers_sectors": [
+      { "group": "电力运营", "avg_pct": 6.71, "up_down": "6/0", "note": "纯防御性板块，全板块上涨" },
+      { "group": "AI算力", "avg_pct": 1.97, "up_down": "6/3", "note": "行云科技+15.51%逆势领涨，算力紧缺逻辑独撑" },
+      { "group": "生物医药", "avg_pct": 1.22, "up_down": "17/8", "note": "防御性板块，资金避险流入" },
+      { "group": "涨停封板", "avg_pct": 10.12, "up_down": "9/0", "note": "9只涨停封板股" }
     ],
-    "northbound_vs_market_contradiction": {
-      "northbound_action": "净买入376.79亿, 明确流入集成电路、AI算力、机器人",
-      "market_action": "全市场96%下跌, 半导体/AI/机器人全面暴跌",
-      "interpretation": "⚡ 核心分歧: (1) 北向可能是提前获知产业基本面未恶化(设备招标活跃、代工稼动率高位), 借恐慌抄底; (2) 也可能是被动配置(指数基金调仓)而非主动看多; (3) 内资恐慌抛售反映对'政策不确定性+估值泡沫'的担忧占主导。需关注明日北向是否持续流入——若北向转为流出, 则今日为'假抄底'; 若持续流入, 则外资在price in'黄金坑'",
-      "risk_flag": "⚠️ 376.79亿北向流入与-8.77%平均跌幅的背离程度为历史极端值, 短期可能出现'(北向止损退出+继续下跌)'或'(内资回补+暴力反弹)'两种走势, 方向选择在明后两天"
-    },
-    "key_conclusion": "今日资金面与brief信号的匹配度为-85(强负相关)。brief所描绘的'半导体超级周期+AI芯片突破+机器人量产元年'美好图景, 在市场中被以下逻辑碾压: (1) 利好出尽/估值透支(寒武纪PE 212倍); (2) 龙头IPO吸金效应(长鑫); (3) 管制升级的短期恐慌(美日荷); (4) 机器人'订单幻象'破灭(36氪/华泰)。但北向376.79亿逆势买入提示: 产业基本面可能并未恶化, 当前更多是情绪面和资金面的共振下杀。"
+    "top_losers_sectors": [
+      { "group": "半导体材料", "avg_pct": -9.46, "up_down": "0/11", "note": "全板块无一上涨，中船特气-20%跌停" },
+      { "group": "半导体零部件", "avg_pct": -9.04, "up_down": "0/9", "note": "全板块无一上涨" },
+      { "group": "机器人/自动化", "avg_pct": -8.84, "up_down": "0/8", "note": "全板块无一上涨" },
+      { "group": "低空经济/航空", "avg_pct": -8.71, "up_down": "0/5", "note": "全板块无一上涨，迈信林-15.90%领跌" },
+      { "group": "半导体设备", "avg_pct": -8.31, "up_down": "0/14", "note": "全板块无一上涨，强一股份-15.36%——与设备国产化fire级信号背离最深" }
+    ]
   },
-  "risk_monitor": {
-    "next_day_key_signals": [
-      "北向资金是否持续流入(若转为流出则确认假抄底)",
-      "128只跌停股明日是否开板(若继续封板则调整级别扩大)",
-      "半导体材料(688432/688549)能否维持逆势 — 若材料也补跌则板块系统性风险确立",
-      "电力运营板块是否继续吸金 — 若电力走弱+科技不反弹则市场进入全面防御",
-      "机器人(rs1/rs2)信号是否被更多机构引用 — 若形成共识则机器人板块调整可能深化"
+  "bidding_summary": {
+    "data_available": true,
+    "source": "_gh-pages-repo/data/bidding.json",
+    "total_results": 1,
+    "semiconductor_related": 1,
+    "highlights": [
+      "南科大晶体生长原位观测单元采购项目（249.2万元），苏州基元科技中标",
+      "产业端信号密集：长鑫科技拟募资295亿扩产12英寸DRAM，月产能目标40万片",
+      "中芯国际/华虹产能利用率超95%，前5月半导体设备进口同比降12%国产替代加速",
+      "北方华创/中微/拓荆等国产设备龙头深度受益本轮扩产周期"
     ],
-    "worst_case": "北向转为流出 + 跌停股继续扩面 + 电力补跌 → 系统性调整升级, 半导体/机器人可能回调20-30%",
-    "best_case": "北向持续流入 + 跌停股大幅开板 + 半导体材料引领反弹 → 阶段性底部确认, 今日为'恐慌黄金坑'"
+    "industry_context": [
+      { "signal": "长鑫科技IPO募资295亿扩产DRAM", "relevance": "高", "note": "科创板史上第二大IPO，12英寸DRAM月产能目标35→40万片" },
+      { "signal": "中芯国际/华虹产能满载", "relevance": "高", "note": "中芯Q3产能105万片/月(95.8%利用率)，华虹109.5%" },
+      { "signal": "半导体设备进口下降12%", "relevance": "高", "note": "2026前5月进口约107亿美元同比-12%，瑞银研报" },
+      { "signal": "国产设备龙头整合加速", "relevance": "中", "note": "中微收购杭州众硅(CMP)、拓荆筹划收购无锡尚积" },
+      { "signal": "赛腾股份进入长鑫/长江/中芯供应链", "relevance": "中", "note": "批量供货三星/海力士等" }
+    ]
+  },
+  "capital_flow_analysis": {
+    "market_regime": {
+      "regime": "risk_off_panic_then_catalyst_relief",
+      "description": "7月20日为2026年以来最严重系统性恐慌抛售日。7月21日盘中，WAIC/机器人/半导体三大政策+产业催化密集发布（25条新鲜信号），构成最近一个月最强的单日催化剂密度。"
+    },
+    "direction": {
+      "overall": "uncertain_rotation",
+      "narrative": "昨日（7/20）资金从一切风险资产撤出，仅流入纯防御（电力+医药）和算力稀缺资产（AI算力）。今日（7/21）早晨发布25条催化剂中6条为fire级，覆盖半导体（3条：长鑫IPO/设备国产化/存储涨价）和机器人（3条：工信部400款/地瓜融资/发改委八项行动），催化剂密度为近一个月之最。如果市场情绪企稳，半导体+机器人有望成为反弹急先锋。如果恐慌延续，电力+医药防御逻辑将继续强化。",
+      "northbound": { "net_flow": null, "note": "7月21日北向数据尚未发布（通常盘后）。昨日北向净流入+376.79亿但未能阻止全市场恐慌，说明内资抛压极重。" }
+    },
+    "sector_flows": [
+      { "sector": "电力运营", "direction": "strong_inflow", "avg_pct_chg": 6.71, "up_down": "6/0", "confidence": "high" },
+      { "sector": "生物医药", "direction": "inflow", "avg_pct_chg": 1.22, "up_down": "17/8", "confidence": "high" },
+      { "sector": "AI算力", "direction": "inflow", "avg_pct_chg": 1.97, "up_down": "6/3", "confidence": "high" },
+      { "sector": "半导体设备", "direction": "extreme_outflow", "avg_pct_chg": -8.31, "up_down": "0/14", "confidence": "high" },
+      { "sector": "机器人/自动化", "direction": "extreme_outflow", "avg_pct_chg": -8.84, "up_down": "0/8", "confidence": "high" },
+      { "sector": "半导体材料", "direction": "extreme_outflow", "avg_pct_chg": -9.46, "up_down": "0/11", "confidence": "high" },
+      { "sector": "半导体零部件", "direction": "extreme_outflow", "avg_pct_chg": -9.04, "up_down": "0/9", "confidence": "high" },
+      { "sector": "消费电子/元器件", "direction": "strong_outflow", "avg_pct_chg": -7.38, "up_down": "2/36", "confidence": "high" },
+      { "sector": "化工/材料", "direction": "strong_outflow", "avg_pct_chg": -6.33, "up_down": "3/26", "confidence": "high" },
+      { "sector": "工业设备/通用机械", "direction": "strong_outflow", "avg_pct_chg": -7.72, "up_down": "1/17", "confidence": "high" }
+    ],
+    "stock_level": {
+      "notable_gainers": [
+        { "ts_code": "300209.SZ", "name": "行云科技", "group": "AI算力", "pct_chg": 15.51, "vol_ratio": 7.34, "note": "7/20全榜最高量比且唯一正收益大幅上涨标的。AI算力'避风港'属性获量价双重确认。" },
+        { "ts_code": "688256.SH", "name": "寒武纪", "group": "AI芯片", "note": "s6信号提及国产AI芯片替代率突破35%，关注7/21盘中表现。" },
+        { "ts_code": "002371.SZ", "name": "北方华创", "group": "半导体设备", "note": "s2信号提及Q1营收103亿全球第五，设备国产化龙头。7/20板块重挫但基本面强劲。" }
+      ],
+      "notable_losers": [
+        { "ts_code": "301176.SZ", "name": "逸豪新材", "group": "消费电子/元器件", "pct_chg": -20.01, "vol_ratio": 3.58 },
+        { "ts_code": "688020.SH", "name": "方邦股份", "group": "消费电子/元器件", "pct_chg": -20.0, "vol_ratio": 4.31 },
+        { "ts_code": "688146.SH", "name": "中船特气", "group": "半导体材料", "pct_chg": -20.0, "vol_ratio": 3.17 },
+        { "ts_code": "300806.SZ", "name": "斯迪克", "group": "化工/材料", "pct_chg": -15.99, "vol_ratio": 5.42 }
+      ]
+    },
+    "liquidity_assessment": "7月21日盘中分析：昨日(7/20)是2026年以来最严重的系统性恐慌抛售日——483只异动股平均-6.21%，82%下跌，119只跌停封板。仅AI算力(+1.97%)、电力(+6.71%)、医药(+1.22%)三个方向录得正收益。半导体全链条（材料-9.46%/零部件-9.04%/设备-8.31%）无一上涨，与产业端极强capex信号形成剧烈背离。今日(7/21)早晨密集释放25条新催化剂，fire级信号密度(6条)为近一个月之最，覆盖半导体(长鑫IPO/设备国产化/存储涨价/光刻胶突破/先进封装扩产)、AI算力(国产替代35%/光模块1.6T/Meta租算力)和人形机器人(工信部400款/地瓜融资/发改委八项行动)三大核心赛道。如果恐慌消退，半导体有望成为反弹急先锋。"
+  },
+  "brief_cross_validation": {
+    "total_brief_signals": 8,
+    "brief_chain_distribution": { "chain1:半导体": 3, "chain2:半导体": 2, "机器人": 3 },
+    "validated_signals": [
+      {
+        "signal": "AI算力/国产替代35%/Meta租算力",
+        "verdict": "✅ 已验证",
+        "detail": "7/20 AI算力板块+1.97%逆势收正，行云科技+15.51%为唯一大幅上涨标的。算力逻辑在市场恐慌中获资金验证。"
+      },
+      {
+        "signal": "半导体(长鑫IPO/设备国产化/存储涨价/光刻胶/先进封装)",
+        "verdict": "🔴 7/20被宏观压制，7/21待观察",
+        "detail": "7/20半导体全链条无差别下挫(all red)，与fire级基本面信号形成剧烈背离。不是逻辑证伪，是市场risk-off。如果恐慌消退，半导体有望成为反弹急先锋。"
+      },
+      {
+        "signal": "机器人(工信部400款/地瓜融资/发改委八项行动/WAIC)",
+        "verdict": "🔴 7/20被宏观压制，7/21催化剂极密待验证",
+        "detail": "7/20机器人/自动化全板块无一上涨(-8.84%)，但7/21新增三大fire信号，催化剂密度为近期之最。"
+      }
+    ]
+  },
+  "today_catalyst_density": {
+    "total_signals": 25,
+    "fire_count": 6,
+    "coverage": "半导体(13条) + 机器人(8条) + AI算力(4条)",
+    "assessment": "近一个月最强的单日催化剂密度。6条fire信号中3条来自半导体(scanner: s1/s2/s5)、3条来自机器人(robot-scanner: rs1/rs2/rs3)。如果这么多fire信号都无法扭转恐慌情绪，说明市场处于极端risk-off模式。反之，如果情绪修复，这25条信号将提供充足的上行动力。"
+  },
+  "meta": {
+    "anomalies_total": 483,
+    "anomalies_avg_pct_chg": -6.21,
+    "anomalies_sum_pct_chg": -2997.24,
+    "anomalies_up_ratio": "17.8%",
+    "anomalies_date": "20260720",
+    "bidding_results_count": 1,
+    "bidding_industry_context_count": 5,
+    "northbound_net_flow": null,
+    "northbound_note": "7/21盘中，北向数据尚未发布",
+    "analyst_brief_chains": "半导体(5) + 机器人(3)",
+    "analyst_brief_fire_count": 6,
+    "analyst_brief_total": 8,
+    "scanner_signals": 9,
+    "robot_scanner_signals": 8,
+    "market_regime": "panic_to_repair_transition"
   }
 }
