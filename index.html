@@ -2,471 +2,238 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mimo 投研日报</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>板块广度扫描 — 20260722</title>
 <style>
-:root{--bg:#0b1120;--card:#111827;--border:#1e3a5f;--text:#cbd5e1;--muted:#64748b;--head:#f1f5f9;--red:#ef4444;--green:#22c55e;--gold:#f59e0b;--blue:#38bdf8}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);font-size:0.88rem;line-height:1.6}
-a{color:var(--blue);text-decoration:none}
-a:hover{text-decoration:underline}
-
-/* Nav */
-#nav{position:sticky;top:0;z-index:100;background:var(--card);border-bottom:1px solid var(--border);padding:8px 16px;display:flex;align-items:center;gap:16px}
-#nav h1{font-size:1rem;color:var(--head)}
-#nav .links{display:flex;gap:12px;font-size:0.82rem}
-#nav .links a{color:var(--muted);padding:4px 8px;border-radius:4px;transition:all .15s}
-#nav .links a:hover{color:var(--blue);background:rgba(56,189,248,0.08);text-decoration:none}
-#nav .meta{font-size:0.72rem;color:var(--muted);margin-left:auto}
-
-/* Sections */
-.section{padding:16px 20px;border-bottom:1px solid var(--border)}
-.section h2{font-size:1.05rem;color:var(--head);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(100,116,139,0.2)}
-.section h3{font-size:0.92rem;color:var(--head);margin:12px 0 6px}
-
-/* Rotation */
-.rot-table{width:100%;border-collapse:collapse;font-size:0.8rem}
-.rot-table th{text-align:left;color:var(--muted);font-weight:600;padding:4px 8px;border-bottom:1px solid rgba(100,116,139,0.2);font-size:0.72rem}
-.rot-table td{padding:4px 8px;border-bottom:1px solid rgba(30,58,95,0.5)}
-.rot-table tr:hover td{background:rgba(56,189,248,0.03)}
-.rot-table .rn{text-align:right;color:var(--muted);width:20px}
-.rot-table .rv{text-align:right;font-family:monospace;font-size:0.78rem}
-.red{color:var(--red)}.green{color:var(--green)}.gold{color:var(--gold)}.blue{color:var(--blue)}
-.mono{font-family:monospace;font-size:0.78rem}
-
-/* Signal card */
-.sig-card{background:var(--card);border-left:3px solid var(--border);border-radius:6px;padding:12px 14px;margin:8px 0}
-.sig-card.fire{border-left-color:var(--red)}
-.sig-card.high{border-left-color:var(--gold)}
-.sig-card .sig-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px}
-.sig-card .sig-title{font-weight:600;color:var(--head)}
-.sig-card .sig-tag{font-size:0.68rem;padding:1px 5px;border-radius:3px}
-.tag-fire{color:var(--red);background:rgba(239,68,68,0.12)}
-.tag-gold{color:var(--gold);background:rgba(245,158,11,0.12)}
-.tag-blue{color:var(--blue);background:rgba(56,189,248,0.1)}
-.tag-green{color:var(--green);background:rgba(34,197,94,0.12)}
-.sig-card .sig-vc{font-size:0.78rem;color:var(--muted);margin:4px 0}
-
-/* Conduction chain */
-.chain-step{background:rgba(56,189,248,0.03);border-radius:4px;padding:8px 10px;margin:6px 0 6px 12px}
-.chain-step .step-num{font-size:0.72rem;color:var(--gold);font-weight:600}
-.chain-step .step-flow{font-size:0.8rem;color:var(--text)}
-.chain-step .step-rationale{font-size:0.72rem;color:var(--muted);margin:2px 0 4px}
-.chain-tickers{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:4px;margin-top:4px}
-.ticker-item{display:flex;align-items:center;gap:6px;font-size:0.74rem;padding:3px 6px;background:rgba(30,58,95,0.3);border-radius:3px;flex-wrap:wrap}
-.ticker-item .ti-code{font-family:monospace;color:var(--blue);font-size:0.72rem}
-.ticker-item .ti-name{font-weight:500}
-.ticker-item .ti-b1{font-size:0.65rem;color:var(--green);cursor:pointer}
-.ticker-item .ti-price{font-family:monospace;font-size:0.72rem}
-
-/* Analyst info */
-.analyst-info{background:rgba(88,166,255,0.04);border-radius:4px;padding:8px 10px;margin:6px 0;font-size:0.78rem}
-.analyst-info .ai-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:2px 0}
-.analyst-info .ai-label{color:var(--muted);font-size:0.72rem;min-width:50px}
-
-/* Three questions */
-.three-q{background:rgba(245,158,11,0.04);border-left:2px solid var(--gold);padding:6px 10px;margin:4px 0;font-size:0.76rem}
-.three-q .q-label{color:var(--gold);font-weight:600;font-size:0.72rem}
-
-/* Capital backing */
-.cap-tags{display:flex;gap:4px;flex-wrap:wrap;margin:4px 0}
-.cap-tag{font-size:0.68rem;padding:1px 5px;border-radius:3px}
-.cap-strong{background:rgba(34,197,94,0.12);color:var(--green)}
-.cap-moderate{background:rgba(245,158,11,0.12);color:var(--gold)}
-.cap-weak{background:rgba(239,68,68,0.12);color:var(--red)}
-
-/* Alerts */
-.alert-item{font-size:0.74rem;padding:3px 8px;margin:2px 0;border-radius:3px}
-.alert-high{border-left:2px solid var(--red);background:rgba(239,68,68,0.06)}
-.alert-mid{border-left:2px solid var(--gold);background:rgba(245,158,11,0.04)}
-
-/* Attribution */
-.att-row{display:flex;align-items:center;gap:8px;padding:3px 0;font-size:0.76rem;border-bottom:1px solid rgba(30,58,95,0.3);flex-wrap:wrap}
-
-/* KDJ alerts */
-.kdj-alert{display:flex;align-items:center;padding:6px 10px;margin:2px 0;border-radius:4px;cursor:pointer;gap:8px;font-size:0.78rem;flex-wrap:wrap}
-.kdj-alert:hover{filter:brightness(1.1)}
-.kdj-l2{background:rgba(34,197,94,0.08);border-left:3px solid var(--green)}
-.kdj-l1{background:rgba(34,197,94,0.04);border-left:3px solid rgba(34,197,94,0.6)}
-.kdj-wait{background:rgba(245,158,11,0.06);border-left:3px solid var(--gold)}
-.kdj-sell{background:rgba(239,68,68,0.06);border-left:3px solid var(--red)}
-
-/* Chart panel */
-#chartPanel{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px;position:sticky;top:60px}
-#chartPanel canvas{display:block;margin:0 auto}
-
-/* Collapse */
-.collapse-h{cursor:pointer;color:var(--muted);font-size:0.76rem;margin:4px 0;display:flex;align-items:center;gap:4px}
-.collapse-body{max-height:0;overflow:hidden;transition:max-height 0.3s}
-.collapse-body.open{max-height:8000px}
-
-/* Two column for KDJ section */
-.kdj-layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:768px){.kdj-layout{grid-template-columns:1fr}}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:20px;max-width:1300px;margin:0 auto}
+h1{font-size:22px;margin-bottom:6px;color:#f0f6fc}
+.sub{color:#8b949e;font-size:13px;margin-bottom:20px}
+.note{background:#161b22;border:1px solid #30363d;border-radius:6px;padding:10px 14px;margin-bottom:16px;font-size:12px;color:#8b949e;line-height:1.7}
+.note b{color:#f0f6fc}
+.note .green{color:#22c55e}
+.note .red{color:#ef4444}
+.note .yellow{color:#f59e0b}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#161b22;color:#8b949e;text-align:left;padding:8px 10px;border-bottom:2px solid #30363d;font-weight:600;font-size:11px;letter-spacing:0.5px}
+td{padding:8px 10px;border-bottom:1px solid #21262d}
+tr:hover{background:#161b22}
+.rank{color:#484f58;width:32px;text-align:center}
+.grp{font-weight:600;color:#e6edf3;min-width:110px}
+.val{font-variant-numeric:tabular-nums;width:75px;text-align:right;padding-right:16px!important}
+.signal{width:82px}
+.tag{display:inline-block;padding:2px 7px;border-radius:3px;font-size:11px;font-weight:600;color:#fff}
+.count{color:#8b949e;width:55px;text-align:right;font-size:12px}
+.footer{margin-top:20px;padding-top:10px;border-top:1px solid #21262d;color:#484f58;font-size:11px}
+@media(max-width:768px){body{padding:10px}td,th{padding:6px 4px;font-size:11px}}
 </style>
 </head>
 <body>
-<div id="nav">
-    <h1>Mimo 投研日报</h1>
-    <div class="links">
-        <a href="#s1">方向轮动</a>
-        <a href="#s2">信号传导</a>
-        <a href="#s3">KDJ报警</a>
-    </div>
-    <span class="meta" id="navMeta">载入中...</span>
+<h1>📊 板块广度扫描 · 白&gt;黄</h1>
+<p class="sub">20260722 盘后 · 按5日广度变化排序</p>
+<div class="note">
+<b>三维指标体系：</b>
+<b class="green">广度</b> = 白&gt;黄占比（趋势覆盖度） ·
+<b class="green">斜率↑</b> = 白线在上升的标的占比（趋势加速度） ·
+<b class="yellow">偏离</b> = 价格/白线中位数（牵牛绳距离，越低越健康）<br>
+<b>信号逻辑：</b>🌱萌芽(低广度+高斜率) → 🔥主线(高广度) → 🔥🔥高潮(极高广度+高斜率+低偏离) → ⚠️筑顶(高广度+斜率转负)
 </div>
-
-<!-- Section 1: 方向轮动 -->
-<div class="section" id="s1">
-<h2>方向轮动</h2>
-<div id="rotContent"><span style="color:var(--muted)">载入中...</span></div>
-</div>
-
-<!-- Section 2: 信号-传导-验证 -->
-<div class="section" id="s2">
-<h2>信号-传导-验证</h2>
-<div id="sigContent"><span style="color:var(--muted)">载入中...</span></div>
-</div>
-
-<!-- Section 3: KDJ报警 -->
-<div class="section" id="s3">
-<h2>KDJ报警</h2>
-<div class="kdj-layout">
-<div><div id="kdjList"></div></div>
-<div id="chartPanel"><canvas id="kdjCanvas"></canvas></div>
-</div>
-</div>
-
-<script>
-// === Data loading ===
-async function L(p){const r=await fetch(p+'?v='+Date.now().toString(36));if(!r.ok)throw new Error(p+' '+r.status);return r.json()}
-function fmtP(v,d){if(v==null||isNaN(v))return'-';return(v>=0?'+':'')+v.toFixed(d||1)+'%'}
-function el(id){return document.getElementById(id)}
-
-// === Init ===
-(async function init(){
-    try{
-        let[rot,theme,sector,sc,an,pool,kdjL,alerts,attr,th]=await Promise.all([
-            L('data/tc-rotation.json'),L('data/theme-data.json'),L('data/sector-oversold-index.json'),
-            L('data/scanner.json'),L('data/analyst.json'),L('data/pool.json'),
-            L('data/kdj-latest.json'),L('data/kdj-double-alert-lite.json'),
-            L('data/attributions.json'),L('data/theses.json')
-        ]);
-        let poolMap={};(pool.stocks||[]).forEach(s=>poolMap[s.code]=s);
-        el('navMeta').textContent='@ '+(rot.date||theme.date||'');
-        renderRotation(rot,theme,sector);
-        renderSignals(sc,an,poolMap,kdjL);
-        renderAttr(attr,sc);
-        renderTheses(th,poolMap);
-        renderKDJ(alerts);
-    }catch(e){console.error(e);}
-})();
-
-// === Section 1: 方向轮动 ===
-function renderRotation(rot,theme,sector){
-    let rk=rot?.ranking||[],crowded=rot?.crowded||[],scores=theme?.scores||[],secs=sector?.sectors||[];
-    let secMap={};secs.forEach(s=>secMap[s.category]=s);
-    let hot5=scores.slice(0,5).map(s=>s.name);
-    let html='<table class="rot-table"><thead><tr><th>#</th><th>方向</th><th class="rv">今日</th><th class="rv">5日</th><th class="rv">10日</th><th class="rv">20日</th><th class="rv">上涨比</th><th class="rv">量比</th><th class="rv">KDJ</th><th></th></tr></thead><tbody>';
-    rk.forEach((r,i)=>{
-        let nm=r[0],st=r[1]||{},dr=st.daily_return||0,m5=st.momentum_5d||0,m10=st.momentum_10d||0,m20=st.momentum_20d||0;
-        let up=st.up_ratio||0,vol=st.vol_ratio||0,isC=crowded.includes(nm),isH=hot5.includes(nm);
-        let sectorInfo=secMap[nm]||{},kdj=sectorInfo.below15_pct!=null?sectorInfo.below15_pct.toFixed(0)+'%':'';
-        let stColor=sectorInfo.status==='超跌'?'#22c55e':sectorInfo.status==='偏弱'?'#f59e0b':'#64748b';
-        html+=`<tr><td class="rn">${i+1}</td><td>${isH?'<span style="color:#38bdf8">':''}${nm}${isH?'</span>':''}${isC?' <span style="font-size:0.65rem;color:#f59e0b">拥挤</span>':''}</td>
-        <td class="rv" style="color:${dr>=0?'#ef4444':'#22c55e'}">${dr>0?'+':''}${dr.toFixed(1)}%</td>
-        <td class="rv" style="color:${m5>=0?'#ef4444':'#22c55e'}">${m5>0?'+':''}${m5.toFixed(1)}%</td>
-        <td class="rv" style="color:${m10>=0?'#ef4444':'#22c55e'}">${m10>0?'+':''}${m10.toFixed(1)}%</td>
-        <td class="rv" style="color:${m20>=0?'#ef4444':'#22c55e'}">${m20>0?'+':''}${m20.toFixed(1)}%</td>
-        <td class="rv" style="color:var(--muted)">${up.toFixed(0)}%</td>
-        <td class="rv" style="color:${vol>1.3?'#f59e0b':'#64748b'}">${vol.toFixed(1)}x</td>
-        <td class="rv" style="color:${stColor}">${kdj}</td>
-        <td style="color:var(--muted);font-size:0.68rem">${st.stocks||0}只</td></tr>`;
-    });
-    html+='</tbody></table>';
-    // Cluster info
-    let cl=alertsData?.clusters||{},clEnt=Object.entries(cl).sort((a,b)=>b[1]-a[1]);
-    if(clEnt.length)html+='<div style="margin-top:8px;font-size:0.76rem;color:var(--muted)">集群触发: '+clEnt.filter(([,n])=>n>=3).map(([c,n])=>c+' x'+n).join(' | ')+'</div>';
-    el('rotContent').innerHTML=html;
-    alertsData=alertsData; // store for later
-}
-let alertsData;
-
-// === Section 2: 信号-传导-验证 ===
-function renderSignals(sc,an,poolMap,kdjL){
-    let scSigs=sc?.signals||[],anSigs=an?.signals||[];
-    // Build anMap by ref
-    let anMap={};anSigs.forEach(a=>{if(a.ref)anMap[a.ref]=a});
-    // Group scSigs by chain
-    let groups={dual:[],c1:[],c2:[]};
-    scSigs.forEach(s=>{let ch=s.chain||'';if(ch.includes('chain1')&&ch.includes('chain2'))groups.dual.push(s);else if(ch==='chain1')groups.c1.push(s);else groups.c2.push(s)});
-    // Find anSigs without scanner ref
-    let unrefed=anSigs.filter(a=>a.ref&&!scSigs.find(s=>s.id===a.ref));
-    // Build HTML
-    let html='';
-    let labels={dual:'双链共振',c1:'链一 - 国产替代',c2:'链二 - AI算力'};
-    for(let[key,label]of Object.entries(labels)){
-        let sigs=groups[key]||[];
-        if(!sigs.length)continue;
-        html+=`<h3 style="color:${key==='dual'?'#ef4444':key==='c1'?'#38bdf8':'#22c55e'}">${label} (${sigs.length}条)</h3>`;
-        sigs.forEach(s=>{
-            let a=anMap[s.id];
-            html+=renderSigCard(s,a,poolMap,kdjL);
-        });
-    }
-    // Unreferenced analyst signals
-    if(unrefed.length){
-        html+='<h3>补充信号</h3>';
-        unrefed.forEach(a=>html+=renderSigCard(null,a,poolMap,kdjL));
-    }
-    el('sigContent').innerHTML=html||'<span style="color:var(--muted)">今日无催化信号</span>';
-}
-
-function renderSigCard(scan,analyst,poolMap,kdjL){
-    let html='';
-    let cls=scan?.priority==='fire'?'fire':scan?.priority==='high'?'high':'';
-    html+=`<div class="sig-card ${cls}">`;
-    
-    // Title line
-    html+='<div class="sig-head">';
-    if(scan){
-        html+=`<span class="sig-title">${scan.title||''}</span>`;
-        if(scan.priority==='fire')html+='<span class="sig-tag tag-fire">Fire</span>';
-        html+=`<span class="sig-tag tag-blue">${scan.lifecycle||'?'}</span>`;
-        if(scan.capital_flow_tags?.includes('big_fund'))html+='<span class="sig-tag tag-green">大基金</span>';
-    }else if(analyst){
-        html+=`<span class="sig-title">${analyst.title||analyst.id||''}</span>`;
-    }
-    html+='</div>';
-    
-    // Variable change
-    if(scan?.variable_change)html+=`<div class="sig-vc">${scan.variable_change}</div>`;
-    
-    // Analyst info
-    if(analyst){
-        let confMap={green:'已确认',yellow:'合理推断',grey:'猜测'};
-        let verifMap={triple_confirmed:'三方确认',dual_confirmed:'双重确认',single_sourced:'单一来源',unverified:'未验证'};
-        let pricedMap={under_priced:'<span style="color:#22c55e">低估</span>',partially_priced:'部分定价',fully_priced:'已定价'};
-        html+='<div class="analyst-info">';
-        html+=`<div class="ai-row"><span class="ai-label">验证</span>${confMap[analyst.confidence]||analyst.confidence||'?'} | ${verifMap[analyst.source_verified]||analyst.source_verified||'?'} | ${pricedMap[analyst.priced_in]||analyst.priced_in||''} | ${analyst.timeframe||''}</div>`;
-        if(analyst.verification_note){
-            let vn=analyst.verification_note;
-            if(vn.length>300)vn=vn.substring(0,300)+'... <span style="color:#38bdf8;cursor:pointer" onclick="this.parentElement.textContent=\''+(analyst.verification_note.replace(/'/g,'\\\''))+'\'">展开</span>';
-            html+=`<div style="font-size:0.76rem;color:var(--text);margin:4px 0">${vn}</div>`;
-        }
-        html+='</div>';
-        
-        // Three questions
-        let tq=analyst.three_questions||{};
-        if(tq.variable||tq.magnitude||tq.sustainability){
-            html+='<div class="three-q">';
-            html+=`<div class="q-label">变量</div><div>${tq.variable||''}</div>`;
-            html+=`<div class="q-label" style="margin-top:4px">量级</div><div>${tq.magnitude||''}</div>`;
-            html+=`<div class="q-label" style="margin-top:4px">持续性</div><div>${tq.sustainability||''}</div>`;
-            html+='</div>';
-        }
-        
-        // Conduction chain
-        let cc=analyst.conduction_chain||[];
-        if(cc.length){
-            cc.forEach(step=>{
-                html+=`<div class="chain-step">`;
-                html+=`<span class="step-num">${step.step||'?'}.</span> <span class="step-flow">${step.factor||''}</span> <span style="color:var(--blue);font-size:0.76rem">[${step.sector||''}]</span>`;
-                if(step.rationale)html+=`<div class="step-rationale">${step.rationale}</div>`;
-                let tickers=step.tickers||[];
-                if(tickers.length){
-                    html+='<div class="chain-tickers">';
-                    tickers.forEach(tk=>{
-                        let m=tk.match(/^([\d.]+[A-Z]+)\s*\((.+?)(?:→(.+))?\)$/);
-                        if(!m)return;
-                        let code=m[1],name=m[2],note=m[3]||'';
-                        let poolInfo=poolMap[code]||{};
-                        let kdjInfo=kdjL[code]||{};
-                        let price=poolInfo.close||'-',pct=poolInfo.pct||0;
-                        let jVal=kdjInfo.J!=null?kdjInfo.J.toFixed(0):'-';
-                        let yl=kdjInfo.yellow||'-';
-                        let distYl=yl!=='-'&&price!=='-'?((price-yl)/yl*100).toFixed(1):'-';
-                        let isB1=alertsData&&(alertsData.l2_buy||[]).concat(alertsData.l1_buy||[]).find(x=>x.ts_code===code);
-                        html+=`<div class="ticker-item">
-                            <span class="ti-code">${code}</span>
-                            <span class="ti-name">${name}</span>
-                            ${note?`<span style="font-size:0.65rem;color:var(--muted)">${note}</span>`:''}
-                            <span class="ti-price" style="color:${pct>=0?'#ef4444':'#22c55e'}">${price} ${pct>0?'+':''}${pct.toFixed(1)}%</span>
-                            <span class="ti-price" style="color:var(--muted)">周J=${jVal}</span>
-                            <span class="ti-price" style="color:#f59e0b">黄线=${yl}</span>
-                            <span class="ti-price" style="color:${distYl>=0?'#22c55e':'#ef4444'}">距${distYl>=0?'+':''}${distYl}%</span>
-                            ${isB1?'<span class="ti-b1" onclick="document.getElementById(\"s3\").scrollIntoView({behavior:\"smooth\"})">B1</span>':''}
-                        </div>`;
-                    });
-                    html+='</div>';
-                }
-                html+='</div>';
-            });
-        }
-        
-        // Capital backing
-        let cap=analyst.capital_backing||{};
-        if(cap.level||cap.big_fund||cap.national_team_etf||cap.recent_bidding){
-            html+='<div class="cap-tags">';
-            if(cap.level==='strong')html+='<span class="cap-tag cap-strong">资金强支撑</span>';
-            else if(cap.level==='moderate')html+='<span class="cap-tag cap-moderate">资金有支撑</span>';
-            else if(cap.level==='weak')html+='<span class="cap-tag cap-weak">资金弱支撑</span>';
-            if(cap.big_fund)html+='<span class="sig-tag tag-fire">大基金</span>';
-            if(cap.national_team_etf)html+='<span class="sig-tag tag-blue">国家队ETF</span>';
-            if(cap.recent_bidding)html+='<span class="sig-tag tag-green">中标</span>';
-            if(cap.note)html+=`<span style="font-size:0.72rem;color:var(--muted)">${cap.note}</span>`;
-            html+='</div>';
-        }
-        
-        // Alerts
-        let alerts=analyst.alerts||[];
-        alerts.forEach(a=>{
-            if(typeof a==='string')html+=`<div class="alert-item alert-mid">${a}</div>`;
-            else html+=`<div class="alert-item ${a.level==='high'?'alert-high':'alert-mid'}">${a.title||''} ${a.impact||''}</div>`;
-        });
-    }
-    
-    html+='</div>';
-    return html;
-}
-
-// === Attribution ===
-function renderAttr(attr,sc){
-    let items=attr?.items||[];
-    let filtered=items.filter(a=>Math.abs(a.pct_change||0)>3&&a.catalyst&&a.catalyst!=='unattributed');
-    if(!filtered.length)return;
-    let scTitles=(sc?.signals||[]).map(s=>s.title||'');
-    let html='<h3>归因验证</h3>';
-    filtered.slice(0,30).sort((a,b)=>Math.abs(b.pct_change||0)-Math.abs(a.pct_change||0)).forEach(a=>{
-        let p=a.pct_change||0;
-        // Check if catalyst matches any scanner title
-        let scRefs=[];
-        scTitles.forEach((t,i)=>{if(a.catalyst&&a.catalyst.includes(t.substring(0,20)))scRefs.push('s'+(i+1))});
-        let refStr=scRefs.length?' <span style="color:#38bdf8;font-size:0.68rem">'+scRefs.join(',')+'</span>':'';
-        html+=`<div class="att-row">
-            <span class="mono blue">${a.ticker||''}</span>
-            <span>${a.ticker_name||''}</span>
-            <span class="mono" style="color:${p>=0?'#ef4444':'#22c55e'}">${p>0?'+':''}${p.toFixed(1)}%</span>
-            <span style="font-size:0.74rem;flex:1">${a.catalyst||''}</span>
-            ${refStr}
-        </div>`;
-    });
-    el('sigContent').insertAdjacentHTML('beforeend',html);
-}
-
-// === Theses ===
-function renderTheses(th,poolMap){
-    let theses=th?.theses||[];
-    if(!theses.length)return;
-    let html='<h3>投资逻辑追踪</h3>';
-    theses.forEach(t=>{
-        let poolInfo=poolMap[t.code]||{};
-        let pct=poolInfo.pct||0;
-        html+=`<div class="att-row">
-            <span class="mono blue">${t.code||''}</span>
-            <span style="font-weight:500">${t.stock||''}</span>
-            <span class="mono" style="color:${pct>=0?'#ef4444':'#22c55e'}">${pct>0?'+':''}${pct.toFixed(1)}%</span>
-            <span style="flex:1">${t.thesis||''}</span>
-            <span style="font-size:0.72rem;color:${t.confidence==='high'?'#22c55e':t.confidence==='medium'?'#f59e0b':'#64748b'}">${t.confidence==='high'?'高':t.confidence==='medium'?'中':'低'}</span>
-            <span style="font-size:0.68rem;color:var(--muted)">${t.status||''}</span>
-        </div>`;
-    });
-    el('sigContent').insertAdjacentHTML('beforeend',html);
-}
-
-// === Section 3: KDJ ===
-async function renderKDJ(alerts){
-    if(!alerts){el('kdjList').innerHTML='<span style="color:var(--muted)">载入中...</span>';return}
-    let l2=alerts.l2_buy||[],l1=alerts.l1_buy||[],wt=alerts.wait_daily||[],sl=alerts.l1_sell||[],ms=alerts.missed||[];
-    let allBuy=[...l2.map(s=>({...s,level:2})),...l1.map(s=>({...s,level:1}))];
-    allBuy.sort((a,b)=>{let sa=(a.backtest_win_rate||0)*(a.backtest_avg_return||0)/100,sb=(b.backtest_win_rate||0)*(b.backtest_avg_return||0)/100;return sb-sa});
-    
-    let html='<div style="margin-bottom:8px;font-size:0.82rem">';
-    html+=`<span style="color:#22c55e">B1双超卖 ${l2.length}</span> | `;
-    html+=`<span>一级买点 ${l1.length}</span> | `;
-    html+=`<span style="color:#f59e0b">等日线 ${wt.length}</span> | `;
-    html+=`<span style="color:#ef4444">J>90卖点 ${sl.length}</span>`;
-    html+='</div>';
-    
-    // Top 15 scored
-    html+='<div style="font-weight:600;margin:8px 0 4px;font-size:0.84rem">优先关注 (综合得分=胜率*均收/100)</div>';
-    allBuy.slice(0,15).forEach((s,i)=>{
-        let score=(s.backtest_win_rate||0)*(s.backtest_avg_return||0)/100;
-        let dj=s.day_J!=null?s.day_J.toFixed(0):'-';
-        let name=(s.name||'').replace(/'/g,'');
-        html+=`<div class="kdj-alert kdj-l2" onclick="showChart('${s.ts_code}','${name}')">
-            <span style="color:var(--muted);font-size:0.72rem">#${i+1}</span>
-            <span style="font-weight:600">${s.name||''}</span>
-            <span class="mono blue">${s.ts_code||''}</span>
-            <span style="font-size:0.72rem;color:var(--muted)">${s.theme_category||''}</span>
-            <span class="mono">周J=${(s.week_J||0).toFixed(0)} 日J=${dj}</span>
-            <span style="color:#22c55e;font-size:0.74rem">${s.backtest_win_rate||'-'}%</span>
-            <span style="color:${(s.backtest_avg_return||0)>0?'#ef4444':'#22c55e'};font-size:0.74rem">${s.backtest_avg_return!=null?(s.backtest_avg_return>0?'+':'')+s.backtest_avg_return+'%':'-'}</span>
-            <span class="mono" style="color:#f59e0b">${score.toFixed(0)}</span>
-        </div>`;
-    });
-    
-    // Full lists
-    if(l2.length)html+=`<div style="font-weight:600;margin:10px 0 4px">双超卖 B1 (${l2.length}只)</div>`+l2.map(s=>renderKDJRow(s,'kdj-l2')).join('');
-    if(l1.length)html+=`<div style="font-weight:600;margin:10px 0 4px">一级买点 (${l1.length}只)</div>`+l1.map(s=>renderKDJRow(s,'kdj-l1')).join('');
-    if(sl.length)html+=`<div style="font-weight:600;margin:10px 0 4px">J>90 卖点 (${sl.length}只)</div>`+sl.slice(0,20).map(s=>renderKDJRow(s,'kdj-sell')).join('')
-        +(sl.length>20?`<div class="collapse-h" onclick="this.nextElementSibling.classList.toggle('open')">更多 ${sl.length-20} 条...</div><div class="collapse-body">${sl.slice(20).map(s=>renderKDJRow(s,'kdj-sell')).join('')}</div>`:'');
-    
-    el('kdjList').innerHTML=html;
-}
-function renderKDJRow(s,cls){
-    let dj=s.day_J!=null?s.day_J.toFixed(0):'-';
-    let name=(s.name||'').replace(/'/g,'');
-    return`<div class="kdj-alert ${cls}" onclick="showChart('${s.ts_code}','${name}')">
-        <span style="font-weight:600">${s.name||''}</span>
-        <span class="mono blue">${s.ts_code||''}</span>
-        <span style="font-size:0.72rem;color:var(--muted)">${s.theme_category||''}</span>
-        <span class="mono">周J=${(s.week_J||0).toFixed(0)} 日J=${dj}</span>
-    </div>`;
-}
-
-// === Chart ===
-let chartCache;
-async function showChart(code,name){
-    let panel=document.getElementById('chartPanel');
-    let canvas=document.getElementById('kdjCanvas');
-    canvas.style.display='none';
-    try{
-        if(!chartCache)chartCache=await L('data/kdj-chart-data.json');
-        let ch=(chartCache||{})[code];
-        if(!ch||!ch.weeks||ch.weeks.length<5)return;
-        let w=ch.weeks.slice(-80),k=ch.kdj?ch.kdj.slice(-80):[],fv=0;
-        for(let i=0;i<Math.min(w.length,k.length);i++){if(k[i]&&k[i].white!=null&&k[i].yellow!=null){fv=i;break}}
-        w=w.slice(fv).slice(-52);k=k.slice(fv).slice(-52);let n=w.length;
-        let W=panel.clientWidth-20,H=Math.min(600,panel.clientWidth*0.65),r=.62,H1=Math.floor(H*r),H2=H-H1-24;
-        canvas.width=W;canvas.height=H;canvas.style.width=W+'px';canvas.style.height=H+'px';
-        let ctx=canvas.getContext('2d');ctx.fillStyle='#0b1120';ctx.fillRect(0,0,W,H);
-        let pL=55,pR=20,pT=15,pB=28,xR=W-pL-pR;
-        let allP=w.flatMap(x=>[x.h,x.l]),bbV=k.filter(x=>x&&x.yellow!=null).map(x=>x.yellow),whV=k.filter(x=>x&&x.white!=null).map(x=>x.white),bsV=k.filter(x=>x&&x.bbi_std!=null&&x.bbi_std!==x.yellow).map(x=>x.bbi_std);
-        let allV=[...allP,...bbV,...whV,...bsV].filter(v=>v!=null&&isFinite(v));if(!allV.length)return;
-        let minP=Math.min(...allV)*.97,maxP=Math.max(...allV)*1.03,pRng=(maxP-minP)||1,yR=H1-pT-5;
-        function px(i){return pL+i*xR/Math.max(1,n-1)}function py(v){return pT+(maxP-v)/pRng*yR}
-        let allK=k.filter(x=>x).flatMap(x=>[x.K,x.D,x.J]).filter(v=>v!=null),minK=allK.length?Math.min(...allK,-10):-20,maxK=allK.length?Math.max(...allK,110):120,kRng=(maxK-minK)||1,y2R=H2-pB-5,y2B=H1+24;
-        function py2(v){return y2B+pT+(maxK-v)/kRng*y2R}
-        // Grid
-        ctx.strokeStyle='#1a1f2b';ctx.lineWidth=.5;
-        for(let i=0;i<=4;i++){let y=pT+i*yR/4;ctx.beginPath();ctx.moveTo(pL,y);ctx.lineTo(W-pR,y);ctx.stroke()}
-        ctx.strokeStyle='#30363d';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pL,H1+12);ctx.lineTo(W-pR,H1+12);ctx.stroke();
-        // Lines
-        if(bsV.length){ctx.strokeStyle='#6e7681';ctx.lineWidth=1.2;ctx.setLineDash([2,4]);ctx.beginPath();let st=false;for(let i=0;i<n;i++){if(k[i]&&k[i].bbi_std!=null&&k[i].bbi_std!==k[i].yellow){let x=px(i),y=py(k[i].bbi_std);if(!st){ctx.moveTo(x,y);st=true}else ctx.lineTo(x,y)}}ctx.stroke();ctx.setLineDash([])}
-        ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.8;ctx.setLineDash([5,3]);ctx.beginPath();let st=false;for(let i=0;i<n;i++){if(k[i]&&k[i].yellow!=null){let x=px(i),y=py(k[i].yellow);if(!st){ctx.moveTo(x,y);st=true}else ctx.lineTo(x,y)}}ctx.stroke();ctx.setLineDash([]);
-        ctx.strokeStyle='#f1f5f9';ctx.lineWidth=1.5;ctx.beginPath();st=false;for(let i=0;i<n;i++){if(k[i]&&k[i].white!=null){let x=px(i),y=py(k[i].white);if(!st){ctx.moveTo(x,y);st=true}else ctx.lineTo(x,y)}}ctx.stroke();
-        // Candles
-        let bw=Math.min(6,Math.max(1.5,xR/n*.35));
-        w.forEach((cd,i)=>{let x=px(i),o=py(cd.o),c=py(cd.c),h=py(cd.h),l=py(cd.l),up=cd.c>=cd.o;ctx.strokeStyle=up?'#ef4444':'#22c55e';ctx.lineWidth=.8;ctx.beginPath();ctx.moveTo(x,h);ctx.lineTo(x,l);ctx.stroke();let bh=Math.max(.5,Math.abs(o-c));ctx.fillStyle=up?'#ef4444':'#22c55e';ctx.fillRect(x-bw/2,Math.min(o,c),bw,bh)});
-        ctx.fillStyle='#64748b';ctx.font='9px monospace';ctx.textAlign='right';for(let i=0;i<=4;i++){let v=minP+i*pRng/4;ctx.fillText(v.toFixed(v>=100?0:2),pL-4,py(v)+3)}
-        ctx.textAlign='center';ctx.font='8px monospace';ctx.fillStyle='#484f58';for(let i=0;i<n;i++){if(i%Math.max(1,Math.floor(n/8))===0||i===n-1)ctx.fillText(w[i].d.slice(4),px(i),H1+18)}
-        ctx.strokeStyle='#1a1f2b';ctx.lineWidth=.5;[0,20,50,80,100].forEach(vv=>{let y=py2(vv);ctx.beginPath();ctx.moveTo(pL,y);ctx.lineTo(W-pR,y);ctx.stroke()});
-        [{k:'K',c:'#64748b'},{k:'D',c:'#f59e0b'},{k:'J',c:'#38bdf8'}].forEach(cf=>{ctx.strokeStyle=cf.c;ctx.lineWidth=1;ctx.beginPath();st=false;for(let i=0;i<n;i++){if(k[i]&&k[i][cf.k]!=null){let x=px(i),y=py2(k[i][cf.k]);if(!st){ctx.moveTo(x,y);st=true}else ctx.lineTo(x,y)}}ctx.stroke()});
-        ctx.fillStyle='#484f58';ctx.textAlign='right';ctx.font='8px monospace';[0,50,100].forEach(vv=>ctx.fillText(vv,pL-4,py2(vv)+3));
-        canvas.style.display='block';
-    }catch(e){console.error(e);}
-}
-</script>
+<table>
+<thead><tr>
+<th>#</th><th>板块</th><th>广度</th><th>5日变</th><th>斜率↑</th><th>偏离</th><th>状态</th><th>标的</th>
+</tr></thead>
+<tbody>
+        <tr>
+            <td class="rank">1</td>
+            <td class="grp">生物医药</td>
+            <td class="val" style="color:#90a4ae;font-weight:700">38.5%</td>
+            <td class="val" style="color:#ff4444">+9.7pp</td>
+            <td class="val" style="color:#22c55e;font-weight:600">86.5%</td>
+            <td class="val" style="color:#22c55e">+1.4%</td>
+            <td class="signal"><span class="tag" style="background:#22c55e">🌱萌芽</span></td>
+            <td class="count">20/52</td>
+        </tr>
+        <tr>
+            <td class="rank">2</td>
+            <td class="grp">半导体材料</td>
+            <td class="val" style="color:#ff4444;font-weight:700">96.0%</td>
+            <td class="val" style="color:#4caf50">+0.0pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">8.0%</td>
+            <td class="val" style="color:#22c55e">-22.6%</td>
+            <td class="signal"><span class="tag" style="background:#ff6b6b">🔥主线</span></td>
+            <td class="count">24/25</td>
+        </tr>
+        <tr>
+            <td class="rank">3</td>
+            <td class="grp">金融/综合</td>
+            <td class="val" style="color:#90a4ae;font-weight:700">0.0%</td>
+            <td class="val" style="color:#4caf50">+0.0pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">0.0%</td>
+            <td class="val" style="color:#22c55e">-20.7%</td>
+            <td class="signal"><span class="tag" style="background:#5c6b73">弱势区</span></td>
+            <td class="count">0/1</td>
+        </tr>
+        <tr>
+            <td class="rank">4</td>
+            <td class="grp">汽车零部件</td>
+            <td class="val" style="color:#90a4ae;font-weight:700">20.0%</td>
+            <td class="val" style="color:#4caf50">-6.7pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">6.7%</td>
+            <td class="val" style="color:#22c55e">-18.0%</td>
+            <td class="signal"><span class="tag" style="background:#5c6b73">弱势区</span></td>
+            <td class="count">3/15</td>
+        </tr>
+        <tr>
+            <td class="rank">5</td>
+            <td class="grp">软件与IT服务</td>
+            <td class="val" style="color:#90a4ae;font-weight:700">14.3%</td>
+            <td class="val" style="color:#4caf50">-7.1pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">7.1%</td>
+            <td class="val" style="color:#22c55e">-15.6%</td>
+            <td class="signal"><span class="tag" style="background:#5c6b73">弱势区</span></td>
+            <td class="count">4/28</td>
+        </tr>
+        <tr>
+            <td class="rank">6</td>
+            <td class="grp">电力运营</td>
+            <td class="val" style="color:#90a4ae;font-weight:700">9.1%</td>
+            <td class="val" style="color:#4caf50">-9.1pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">9.1%</td>
+            <td class="val" style="color:#22c55e">+4.9%</td>
+            <td class="signal"><span class="tag" style="background:#5c6b73">弱势区</span></td>
+            <td class="count">1/11</td>
+        </tr>
+        <tr>
+            <td class="rank">7</td>
+            <td class="grp">封测与基板</td>
+            <td class="val" style="color:#ff4444;font-weight:700">77.8%</td>
+            <td class="val" style="color:#4caf50">-11.1pp</td>
+            <td class="val" style="color:#f59e0b;font-weight:600">33.3%</td>
+            <td class="val" style="color:#22c55e">-10.2%</td>
+            <td class="signal"><span class="tag" style="background:#ffa726">强势区</span></td>
+            <td class="count">7/9</td>
+        </tr>
+        <tr>
+            <td class="rank">8</td>
+            <td class="grp">半导体设备</td>
+            <td class="val" style="color:#ff4444;font-weight:700">81.5%</td>
+            <td class="val" style="color:#4caf50">-11.1pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">0.0%</td>
+            <td class="val" style="color:#22c55e">-15.0%</td>
+            <td class="signal"><span class="tag" style="background:#f59e0b">⚠️筑顶</span></td>
+            <td class="count">22/27</td>
+        </tr>
+        <tr>
+            <td class="rank">9</td>
+            <td class="grp">半导体零部件</td>
+            <td class="val" style="color:#ffa726;font-weight:700">60.0%</td>
+            <td class="val" style="color:#4caf50">-13.3pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">6.7%</td>
+            <td class="val" style="color:#22c55e">-20.5%</td>
+            <td class="signal"><span class="tag" style="background:#66bb6a">升温区</span></td>
+            <td class="count">9/15</td>
+        </tr>
+        <tr>
+            <td class="rank">10</td>
+            <td class="grp">低空经济/航空</td>
+            <td class="val" style="color:#90a4ae;font-weight:700">16.7%</td>
+            <td class="val" style="color:#4caf50">-16.6pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">0.0%</td>
+            <td class="val" style="color:#22c55e">-19.8%</td>
+            <td class="signal"><span class="tag" style="background:#5c6b73">弱势区</span></td>
+            <td class="count">2/12</td>
+        </tr>
+        <tr>
+            <td class="rank">11</td>
+            <td class="grp">AI算力</td>
+            <td class="val" style="color:#ff4444;font-weight:700">75.0%</td>
+            <td class="val" style="color:#4caf50">-16.7pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">8.3%</td>
+            <td class="val" style="color:#22c55e">-9.0%</td>
+            <td class="signal"><span class="tag" style="background:#ffa726">强势区</span></td>
+            <td class="count">9/12</td>
+        </tr>
+        <tr>
+            <td class="rank">12</td>
+            <td class="grp">消费电子/元器件</td>
+            <td class="val" style="color:#4caf50;font-weight:700">51.2%</td>
+            <td class="val" style="color:#4caf50">-18.8pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">2.5%</td>
+            <td class="val" style="color:#22c55e">-20.0%</td>
+            <td class="signal"><span class="tag" style="background:#90a4ae">观察区</span></td>
+            <td class="count">41/80</td>
+        </tr>
+        <tr>
+            <td class="rank">13</td>
+            <td class="grp">通信/6G</td>
+            <td class="val" style="color:#4caf50;font-weight:700">40.0%</td>
+            <td class="val" style="color:#4caf50">-20.0pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">10.0%</td>
+            <td class="val" style="color:#22c55e">-21.5%</td>
+            <td class="signal"><span class="tag" style="background:#90a4ae">观察区</span></td>
+            <td class="count">4/10</td>
+        </tr>
+        <tr>
+            <td class="rank">14</td>
+            <td class="grp">化工/材料</td>
+            <td class="val" style="color:#4caf50;font-weight:700">41.5%</td>
+            <td class="val" style="color:#4caf50">-20.0pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">4.6%</td>
+            <td class="val" style="color:#22c55e">-21.8%</td>
+            <td class="signal"><span class="tag" style="background:#90a4ae">观察区</span></td>
+            <td class="count">27/65</td>
+        </tr>
+        <tr>
+            <td class="rank">15</td>
+            <td class="grp">工业设备/通用机械</td>
+            <td class="val" style="color:#4caf50;font-weight:700">47.7%</td>
+            <td class="val" style="color:#4caf50">-20.5pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">0.0%</td>
+            <td class="val" style="color:#22c55e">-18.4%</td>
+            <td class="signal"><span class="tag" style="background:#90a4ae">观察区</span></td>
+            <td class="count">21/44</td>
+        </tr>
+        <tr>
+            <td class="rank">16</td>
+            <td class="grp">IC设计</td>
+            <td class="val" style="color:#ffa726;font-weight:700">63.0%</td>
+            <td class="val" style="color:#4caf50">-24.0pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">2.2%</td>
+            <td class="val" style="color:#22c55e">-20.5%</td>
+            <td class="signal"><span class="tag" style="background:#66bb6a">升温区</span></td>
+            <td class="count">29/46</td>
+        </tr>
+        <tr>
+            <td class="rank">17</td>
+            <td class="grp">机器人/自动化</td>
+            <td class="val" style="color:#4caf50;font-weight:700">54.5%</td>
+            <td class="val" style="color:#4caf50">-27.3pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">0.0%</td>
+            <td class="val" style="color:#22c55e">-18.0%</td>
+            <td class="signal"><span class="tag" style="background:#90a4ae">观察区</span></td>
+            <td class="count">6/11</td>
+        </tr>
+        <tr>
+            <td class="rank">18</td>
+            <td class="grp">地产/基建</td>
+            <td class="val" style="color:#90a4ae;font-weight:700">0.0%</td>
+            <td class="val" style="color:#4caf50">-33.3pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">0.0%</td>
+            <td class="val" style="color:#22c55e">-11.6%</td>
+            <td class="signal"><span class="tag" style="background:#5c6b73">弱势区</span></td>
+            <td class="count">0/3</td>
+        </tr>
+        <tr>
+            <td class="rank">19</td>
+            <td class="grp">光通信与光学</td>
+            <td class="val" style="color:#4caf50;font-weight:700">43.5%</td>
+            <td class="val" style="color:#4caf50">-34.8pp</td>
+            <td class="val" style="color:#ef4444;font-weight:600">0.0%</td>
+            <td class="val" style="color:#22c55e">-20.4%</td>
+            <td class="signal"><span class="tag" style="background:#90a4ae">观察区</span></td>
+            <td class="count">10/23</td>
+        </tr></tbody>
+</table>
+<p class="footer">🦉 Mimo 自动生成 · 2026-07-23 11:27 · 白线=EMA(EMA(C,10),10) 黄线=BBI</p>
 </body>
 </html>
