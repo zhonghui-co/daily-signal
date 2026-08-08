@@ -260,7 +260,7 @@ const mainOption = {
             type: 'inside',
             start: 0,
             end: 100,
-            zoomOnMouseWheel: true,
+            zoomOnMouseWheel: false,
             moveOnMouseMove: true,
             preventDefaultMouseMove: true,
         },
@@ -426,39 +426,41 @@ const macdOption = {
 };
 macdChart.setOption(macdOption);
 
-// 跨图表联动：tooltip + axisPointer + dataZoom 全同步
+// 跨图表联动：tooltip + axisPointer
 echarts.connect([mainChart, macdChart]);
 
-// dataZoom 单向同步（主图→MACD），用防抖避免死循环
-var syncing = false;
+// ── 统一缩放函数（同时更新主图+MACD）──
+var zoomBoth = function(start, end) {
+    mainChart.dispatchAction({ type: 'dataZoom', start: start, end: end });
+    macdChart.dispatchAction({ type: 'dataZoom', start: start, end: end });
+};
+
+// 监听主图 slider/inside 缩放 → 同步到 MACD
 mainChart.on('datazoom', function(params) {
-    if (syncing) return;
-    syncing = true;
-    var batch = params.batch || [params];
-    batch.forEach(function(b) {
+    var b = params.batch ? params.batch[0] : params;
+    if (b && b.start !== undefined) {
         macdChart.dispatchAction({ type: 'dataZoom', start: b.start, end: b.end });
-    });
-    setTimeout(function() { syncing = false; }, 50);
+    }
 });
 
 // 缩放按钮
 var zoomLevel = 100;
 function zoomIn() {
     zoomLevel = Math.max(10, zoomLevel - 20);
-    var end = Math.min(100, zoomLevel + 20);
-    mainChart.dispatchAction({ type: 'dataZoom', start: 100 - zoomLevel, end: 100 });
+    zoomBoth(100 - zoomLevel, 100);
 }
 function zoomOut() {
     zoomLevel = Math.min(100, zoomLevel + 20);
-    mainChart.dispatchAction({ type: 'dataZoom', start: 100 - zoomLevel, end: 100 });
+    zoomBoth(100 - zoomLevel, 100);
 }
 function zoomReset() {
     zoomLevel = 100;
-    mainChart.dispatchAction({ type: 'dataZoom', start: 0, end: 100 });
+    zoomBoth(0, 100);
 }
-// 保持 zoomLevel 同步
+// 按钮缩放后同步 zoomLevel
 mainChart.on('datazoom', function(p) {
-    zoomLevel = (p.end || p.batch?.[0]?.end || 100) - (p.start || p.batch?.[0]?.start || 0);
+    var d = p.batch ? p.batch[0] : p;
+    if (d && d.end !== undefined) zoomLevel = d.end - d.start;
 });
 
 // 响应式
