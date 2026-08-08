@@ -11,7 +11,7 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    background: #0f172a;
+    background: #000000;
     color: #e2e8f0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     height: 100vh;
@@ -26,7 +26,7 @@ body {
     justify-content: space-between;
     border-bottom: 1px solid #1e293b;
     flex-shrink: 0;
-    background: #0f172a;
+    background: #000000;
 }
 .header h1 {
     font-size: 18px;
@@ -73,7 +73,7 @@ body {
     flex-shrink: 0;
     font-size: 12px;
     color: #94a3b8;
-    background: #0f172a;
+    background: #000000;
 }
 .legend-dot {
     display: inline-block;
@@ -194,7 +194,7 @@ function updateStats(idx) {
 const mainChart = echarts.init(document.getElementById('main-chart'));
 
 const mainOption = {
-    backgroundColor: '#0f172a',
+    backgroundColor: '#000000',
     animation: false,
     tooltip: {
         trigger: 'axis',
@@ -348,7 +348,7 @@ mainChart.on('mousemove', function(params) {
 // ============ 附图1: MACD ============
 const macdChart = echarts.init(document.getElementById('macd-chart'));
 const macdOption = {
-    backgroundColor: '#0f172a',
+    backgroundColor: '#000000',
     animation: false,
     tooltip: {
         trigger: 'axis',
