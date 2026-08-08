@@ -339,12 +339,15 @@ mainChart.on('mousemove', function(params) {
     if (params.dataIndex != null) updateStats(params.dataIndex);
 });
 
-// 手动捕获滚轮事件（绕过ECharts兼容问题）
-['main-chart'].forEach(function(id) {
-    var el = document.getElementById(id);
+// 手动捕获滚轮事件（绕过ECharts兼容问题），节流100ms
+(function() {
+    var wheelTimer = null;
+    var el = document.getElementById('main-chart');
     el.addEventListener('wheel', function(e) {
         e.preventDefault();
         e.stopPropagation();
+        if (wheelTimer) return;
+        wheelTimer = setTimeout(function() { wheelTimer = null; }, 100);
         var opt = mainChart.getOption();
         if (!opt.dataZoom || !opt.dataZoom[0]) return;
         var dz = opt.dataZoom[0];
@@ -353,9 +356,9 @@ mainChart.on('mousemove', function(params) {
         var newStart = Math.max(0, dz.start + delta);
         var newEnd = Math.min(100, dz.end + delta);
         if (newEnd - newStart < 5) { newStart = newEnd - 5; }
-        mainChart.dispatchAction({ type: 'dataZoom', start: newStart, end: newEnd });
+        zoomBoth(newStart, newEnd);
     }, { passive: false });
-});
+})();
 
 // ============ 附图1: MACD ============
 const macdChart = echarts.init(document.getElementById('macd-chart'));
