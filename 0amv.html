@@ -89,16 +89,19 @@ body {
 #main-chart {
     flex: 2;
     min-height: 0;
+    touch-action: pan-x pinch-zoom;
 }
 #macd-chart {
     flex: 1;
     min-height: 0;
     border-top: 1px solid #1e293b;
+    touch-action: pan-x pinch-zoom;
 }
 #volume-chart {
     flex: 0.6;
     min-height: 0;
     border-top: 1px solid #1e293b;
+    touch-action: pan-x pinch-zoom;
 }
 .relation { color: #22c55e; }
 </style>
@@ -255,10 +258,43 @@ const mainOption = {
         splitLine: { lineStyle: { color: '#1e293b', type: 'dashed' } },
     }],
     dataZoom: [
-        { type: 'inside', xAxisIndex: [0, 1, 2], start: 50, end: 100 },
-        { type: 'slider', xAxisIndex: [0, 1, 2], start: 50, end: 100, height: 20, bottom: 0,
-           backgroundColor: '#1e293b', dataBackground: { lineStyle: { color: '#475569' }, areaStyle: { color: '#334155' } },
-           borderColor: '#334155', textStyle: { color: '#94a3b8' } }
+        {
+            type: 'inside',
+            xAxisIndex: [0, 1, 2],
+            start: 0,
+            end: 100,
+            zoomOnMouseWheel: true,
+            moveOnMouseMove: true,
+            moveOnMouseWheel: false,
+            preventDefaultMouseMove: false,
+        },
+        {
+            type: 'slider',
+            xAxisIndex: [0, 1, 2],
+            start: 0,
+            end: 100,
+            height: 30,
+            bottom: 8,
+            left: '8%',
+            right: '3%',
+            backgroundColor: 'rgba(30,41,59,0.9)',
+            fillerColor: 'rgba(56,189,248,0.15)',
+            borderColor: '#334155',
+            handleStyle: { color: '#38bdf8', borderColor: '#0284c7' },
+            moveHandleStyle: { color: '#38bdf8', borderColor: '#0284c7' },
+            dataBackground: {
+                lineStyle: { color: '#475569' },
+                areaStyle: { color: 'rgba(71,85,105,0.3)' }
+            },
+            selectedDataBackground: {
+                lineStyle: { color: '#38bdf8' },
+                areaStyle: { color: 'rgba(56,189,248,0.1)' }
+            },
+            textStyle: { color: '#94a3b8', fontSize: 10 },
+            showDetail: true,
+            showDataShadow: 'auto',
+            brushSelect: false,
+        }
     ],
     series: [
         {
@@ -353,7 +389,7 @@ const macdOption = {
         splitNumber: 4,
     }],
     dataZoom: [
-        { type: 'inside', xAxisIndex: 0, start: 50, end: 100 },
+        { type: 'inside', xAxisIndex: 0, start: 0, end: 100, zoomOnMouseWheel: true, moveOnMouseMove: true, moveOnMouseWheel: false },
     ],
     series: [
         {
@@ -422,7 +458,7 @@ const volOption = {
         splitNumber: 3,
     }],
     dataZoom: [
-        { type: 'inside', xAxisIndex: 0, start: 50, end: 100 },
+        { type: 'inside', xAxisIndex: 0, start: 0, end: 100, zoomOnMouseWheel: true, moveOnMouseMove: true, moveOnMouseWheel: false },
     ],
     series: [
         {
