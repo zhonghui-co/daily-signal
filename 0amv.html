@@ -260,8 +260,9 @@ const mainOption = {
             type: 'inside',
             start: 0,
             end: 100,
-            zoomOnMouseWheel: 'ctrl',
-            moveOnMouseMove: 'shift',
+            zoomOnMouseWheel: true,
+            moveOnMouseMove: true,
+            preventDefaultMouseMove: true,
         },
         {
             type: 'slider',
