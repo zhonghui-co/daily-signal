@@ -1,21 +1,85 @@
 {
-  "updated": "2026-07-22T16:30:37",
-  "updated_display": "2026-07-22 16:30",
+  "updated": "2026-08-08T09:00:01",
+  "updated_display": "2026-08-08 09:00",
   "summary": {
-    "positions_count": 3,
-    "active_count": 1,
-    "avg_pnl_pct": 26.88,
+    "positions_count": 5,
+    "active_count": 3,
+    "avg_pnl_pct": 14.82,
     "triggered_count": 0,
-    "near_stop_count": 1,
-    "top_alerts": [
-      "🔶 距BBI仅-5.1%，若跌破两日不收回需强制清仓"
-    ]
+    "near_stop_count": 0,
+    "top_alerts": []
   },
   "positions": [
     {
-      "code": "688322.SH",
-      "name": "奥比中光",
-      "cost": 90.0,
+      "code": "603087.SH",
+      "name": "甘李药业",
+      "cost": 64.16,
+      "type": "中长线",
+      "direction": "创新药",
+      "entry_date": "2026-08",
+      "notes": "",
+      "current_price": 69.69,
+      "white": 67.01,
+      "yellow": 63.77,
+      "bbi": 63.77,
+      "j": 86.2,
+      "trade_date": "20260807",
+      "stop_loss": "BBI",
+      "stop_price": 63.77,
+      "stop_distance_pct": 9.28,
+      "pnl_pct": 8.62,
+      "status": "holding",
+      "action": "持有",
+      "alerts": []
+    },
+    {
+      "code": "603259.SH",
+      "name": "药明康德",
+      "cost": 126.52,
+      "type": "中长线",
+      "direction": "创新药",
+      "entry_date": "2026-08",
+      "notes": "",
+      "current_price": 154.82,
+      "white": 129.74,
+      "yellow": 120.61,
+      "bbi": 120.61,
+      "j": 101.9,
+      "trade_date": "20260807",
+      "stop_loss": "BBI",
+      "stop_price": 120.61,
+      "stop_distance_pct": 28.36,
+      "pnl_pct": 22.37,
+      "status": "holding",
+      "action": "持有",
+      "alerts": []
+    },
+    {
+      "code": "300759.SZ",
+      "name": "康龙化成",
+      "cost": 39.9,
+      "type": "中长线",
+      "direction": "创新药",
+      "entry_date": "2026-08",
+      "notes": "",
+      "current_price": 45.28,
+      "white": 37.58,
+      "yellow": 33.61,
+      "bbi": 33.61,
+      "j": 101.9,
+      "trade_date": "20260807",
+      "stop_loss": "BBI",
+      "stop_price": 33.61,
+      "stop_distance_pct": 34.72,
+      "pnl_pct": 13.48,
+      "status": "holding",
+      "action": "持有",
+      "alerts": []
+    },
+    {
+      "code": "159992.SZ",
+      "name": "创新药ETF",
+      "cost": 0.7955,
       "current_price": null,
       "pnl_pct": null,
       "white": null,
@@ -28,36 +92,12 @@
       ],
       "stop_price": null,
       "stop_distance_pct": null,
-      "direction": "具身智能"
+      "direction": "创新药"
     },
     {
-      "code": "002747.SZ",
-      "name": "埃斯顿",
-      "cost": 26.0,
-      "type": "B2/B3",
-      "direction": "具身智能",
-      "entry_date": "2026-05",
-      "notes": "止损26",
-      "current_price": 32.99,
-      "white": 39.49,
-      "yellow": 34.77,
-      "bbi": 34.77,
-      "j": 4.3,
-      "trade_date": "20260722",
-      "stop_loss": 26.0,
-      "stop_price": 26.0,
-      "stop_distance_pct": 26.88,
-      "pnl_pct": 26.88,
-      "status": "near_stop",
-      "action": "减仓",
-      "alerts": [
-        "🔶 距BBI仅-5.1%，若跌破两日不收回需强制清仓"
-      ]
-    },
-    {
-      "code": "300346.SZ",
-      "name": "南大光电",
-      "cost": 55.79,
+      "code": "513120.SH",
+      "name": "港股通创新药ETF",
+      "cost": 1.114,
       "current_price": null,
       "pnl_pct": null,
       "white": null,
@@ -70,7 +110,7 @@
       ],
       "stop_price": null,
       "stop_distance_pct": null,
-      "direction": "集成电路"
+      "direction": "创新药"
     }
   ]
 }
