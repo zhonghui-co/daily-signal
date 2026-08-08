@@ -208,7 +208,8 @@ const mainOption = {
             const k = params.find(p => p.seriesName === 'K线');
             let html = `<b>${d}</b><br/>`;
             if (k) {
-                const v = k.data;
+                const raw = k.data;
+                const v = Array.isArray(raw) ? raw : (raw.value || raw);
                 html += `开: ${fmtMV(v[0])}<br/>`;
                 html += `收: ${fmtMV(v[1])}<br/>`;
                 html += `低: ${fmtMV(v[2])}<br/>`;
