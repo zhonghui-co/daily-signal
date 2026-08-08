@@ -411,6 +411,20 @@ macdChart.setOption(macdOption);
 // 跨图表联动：tooltip + axisPointer + dataZoom 全同步
 echarts.connect([mainChart, macdChart]);
 
+// dataZoom 手动同步（echarts.connect不自动同步dataZoom）
+mainChart.on('datazoom', function(params) {
+    var batch = params.batch || [params];
+    batch.forEach(function(b) {
+        macdChart.dispatchAction({ type: 'dataZoom', start: b.start, end: b.end });
+    });
+});
+macdChart.on('datazoom', function(params) {
+    var batch = params.batch || [params];
+    batch.forEach(function(b) {
+        mainChart.dispatchAction({ type: 'dataZoom', start: b.start, end: b.end });
+    });
+});
+
 // 缩放按钮
 var zoomLevel = 100;
 function zoomIn() {
