@@ -223,7 +223,7 @@ const mainOption = {
     },
     axisPointer: {
         link: [
-            { xAxisIndex: [0, 1, 2] }
+            { xAxisIndex: 'all' }
         ],
         label: { backgroundColor: '#1e293b' }
     },
@@ -256,17 +256,16 @@ const mainOption = {
     dataZoom: [
         {
             type: 'inside',
-            xAxisIndex: [0, 1, 2],
+            xAxisIndex: 0,
             start: 0,
             end: 100,
             zoomOnMouseWheel: true,
             moveOnMouseMove: true,
             moveOnMouseWheel: false,
-            preventDefaultMouseMove: false,
         },
         {
             type: 'slider',
-            xAxisIndex: [0, 1, 2],
+            xAxisIndex: 0,
             start: 0,
             end: 100,
             height: 30,
@@ -413,7 +412,8 @@ const macdOption = {
 };
 macdChart.setOption(macdOption);
 
-// 联动缩放
+// 跨图表联动：十字光标 + 缩放同步
+echarts.connect([mainChart, macdChart]);
 macdChart.on('datazoom', function(params) {
     const opt = params.batch?.[0] || params;
     mainChart.dispatchAction({ type: 'dataZoom', start: opt.start, end: opt.end });
