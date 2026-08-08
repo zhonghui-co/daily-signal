@@ -283,7 +283,7 @@ const mainOption = {
                 areaStyle: { color: 'rgba(56,189,248,0.1)' }
             },
             textStyle: { color: '#94a3b8', fontSize: 10 },
-            showDetail: true,
+            showDetail: false,
             showDataShadow: 'auto',
             brushSelect: false,
         }
@@ -360,7 +360,7 @@ const macdOption = {
     xAxis: [{
         type: 'category',
         data: categoryData,
-        boundaryGap: false,
+        boundaryGap: true,
         axisLine: { lineStyle: { color: '#334155' } },
         axisLabel: { show: false },
         axisTick: { show: false },
@@ -375,7 +375,16 @@ const macdOption = {
         splitLine: { lineStyle: { color: '#1e293b', type: 'dashed' } },
         splitNumber: 4,
     }],
-    dataZoom: [],
+    dataZoom: [
+        {
+            type: 'inside',
+            start: 0,
+            end: 100,
+            zoomOnMouseWheel: true,
+            moveOnMouseMove: 'shift',
+            moveOnMouseWheel: false,
+        }
+    ],
     series: [
         {
             name: 'DIF',
@@ -407,39 +416,64 @@ macdChart.setOption(macdOption);
 // 跨图表联动：tooltip + axisPointer
 echarts.connect([mainChart, macdChart]);
 
-// ── 统一缩放函数（同时更新主图+MACD）──
-var zoomBoth = function(start, end) {
-    mainChart.dispatchAction({ type: 'dataZoom', start: start, end: end });
-    macdChart.dispatchAction({ type: 'dataZoom', start: start, end: end });
-};
+// ── 缩放按钮（基于当前视野中心缩放，不丢失位置）──
+var zoomLevel = 100;
+var zoomCenter = 100;  // 当前视野中心位置（%）
 
-// 监听主图 slider/inside 缩放 → 同步到 MACD
-mainChart.on('datazoom', function(params) {
-    var b = params.batch ? params.batch[0] : params;
-    if (b && b.start !== undefined) {
-        macdChart.dispatchAction({ type: 'dataZoom', start: b.start, end: b.end });
+// 统一监听 dataZoom：同步更新 zoomLevel / zoomCenter
+var _syncing = false;
+mainChart.on('datazoom', function(p) {
+    if (_syncing) return;
+    var d = p.batch ? p.batch[0] : p;
+    if (d && d.start !== undefined && d.end !== undefined) {
+        zoomLevel = d.end - d.start;
+        zoomCenter = (d.start + d.end) / 2;
     }
 });
 
-// 缩放按钮
-var zoomLevel = 100;
+macdChart.on('datazoom', function(p) {
+    if (_syncing) return;
+    var d = p.batch ? p.batch[0] : p;
+    if (d && d.start !== undefined && d.end !== undefined) {
+        // MACD 缩放时反向同步主图
+        _syncing = true;
+        mainChart.dispatchAction({ type: 'dataZoom', start: d.start, end: d.end });
+        _syncing = false;
+        zoomLevel = d.end - d.start;
+        zoomCenter = (d.start + d.end) / 2;
+    }
+});
+
 function zoomIn() {
     zoomLevel = Math.max(10, zoomLevel - 20);
-    zoomBoth(100 - zoomLevel, 100);
+    var half = zoomLevel / 2;
+    var start = Math.max(0, zoomCenter - half);
+    var end = Math.min(100, zoomCenter + half);
+    if (end - start < zoomLevel) { end = Math.min(100, start + zoomLevel); start = Math.max(0, end - zoomLevel); }
+    _syncing = true;
+    mainChart.dispatchAction({ type: 'dataZoom', start: start, end: end });
+    macdChart.dispatchAction({ type: 'dataZoom', start: start, end: end });
+    _syncing = false;
 }
 function zoomOut() {
     zoomLevel = Math.min(100, zoomLevel + 20);
-    zoomBoth(100 - zoomLevel, 100);
+    var half = zoomLevel / 2;
+    var start = Math.max(0, zoomCenter - half);
+    var end = Math.min(100, zoomCenter + half);
+    if (end - start < zoomLevel) { end = Math.min(100, start + zoomLevel); start = Math.max(0, end - zoomLevel); }
+    _syncing = true;
+    mainChart.dispatchAction({ type: 'dataZoom', start: start, end: end });
+    macdChart.dispatchAction({ type: 'dataZoom', start: start, end: end });
+    _syncing = false;
 }
 function zoomReset() {
     zoomLevel = 100;
-    zoomBoth(0, 100);
+    zoomCenter = 50;
+    _syncing = true;
+    mainChart.dispatchAction({ type: 'dataZoom', start: 0, end: 100 });
+    macdChart.dispatchAction({ type: 'dataZoom', start: 0, end: 100 });
+    _syncing = false;
 }
-// 按钮缩放后同步 zoomLevel
-mainChart.on('datazoom', function(p) {
-    var d = p.batch ? p.batch[0] : p;
-    if (d && d.end !== undefined) zoomLevel = d.end - d.start;
-});
 
 // 响应式
 window.addEventListener('resize', function() {
