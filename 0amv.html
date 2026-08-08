@@ -222,7 +222,7 @@ const mainOption = {
             const b = params.find(p => p.seriesName === '黄线BBI');
             if (w) html += `白线: ${fmtMV(w.data)}<br/>`;
             if (b) html += `黄线: ${fmtMV(b.data)}<br/>`;
-            if (w && b) {
+            if (w && b && w.data != null && b.data != null) {
                 const ratio = ((w.data / b.data - 1) * 100);
                 html += `白/黄: <span style="color:${ratio>=0?'#ef4444':'#22c55e'}">${ratio>=0?'+':''}${ratio.toFixed(2)}%</span>`;
             }
@@ -446,9 +446,9 @@ echarts.connect([mainChart, macdChart]);
 
 // ── 缩放按钮（基于当前视野中心缩放，不丢失位置）──
 var zoomLevel = 100;
-var zoomCenter = 100;  // 当前视野中心位置（%）
+var zoomCenter = 50;  // 当前视野中心位置（%）
 
-// 统一监听 dataZoom：同步更新 zoomLevel / zoomCenter
+// 统一监听 dataZoom：同步更新 zoomLevel / zoomCenter + 同步 MACD
 var _syncing = false;
 mainChart.on('datazoom', function(p) {
     if (_syncing) return;
@@ -456,6 +456,10 @@ mainChart.on('datazoom', function(p) {
     if (d && d.start !== undefined && d.end !== undefined) {
         zoomLevel = d.end - d.start;
         zoomCenter = (d.start + d.end) / 2;
+        // 同步到 MACD
+        _syncing = true;
+        macdChart.dispatchAction({ type: 'dataZoom', start: d.start, end: d.end });
+        setTimeout(function() { _syncing = false; }, 50);
     }
 });
 
