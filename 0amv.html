@@ -126,7 +126,12 @@ body {
 </div>
 <div class="legend-row">
     <span>📅 20240909 ~ 20260807 · 共428个交易日</span>
-    <span style="margin-left:auto">拖拽缩放 · 滚轮缩放 · 十字光标</span>
+    <span style="margin-left:auto">
+        <button onclick="zoomIn()" style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 8px;border-radius:3px;cursor:pointer;font-size:11px;margin:0 2px">🔍+</button>
+        <button onclick="zoomOut()" style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 8px;border-radius:3px;cursor:pointer;font-size:11px;margin:0 2px">🔍−</button>
+        <button onclick="zoomReset()" style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 8px;border-radius:3px;cursor:pointer;font-size:11px;margin:0 2px">↺ 全部</button>
+        Ctrl+滚轮缩放 · Shift+拖拽平移
+    </span>
 </div>
 <div class="chart-container">
     <div id="main-chart"></div>
@@ -255,8 +260,8 @@ const mainOption = {
             type: 'inside',
             start: 0,
             end: 100,
-            zoomOnMouseWheel: true,
-            moveOnMouseMove: true,
+            zoomOnMouseWheel: 'ctrl',
+            moveOnMouseMove: 'shift',
         },
         {
             type: 'slider',
@@ -405,6 +410,26 @@ macdChart.setOption(macdOption);
 
 // 跨图表联动：tooltip + axisPointer + dataZoom 全同步
 echarts.connect([mainChart, macdChart]);
+
+// 缩放按钮
+var zoomLevel = 100;
+function zoomIn() {
+    zoomLevel = Math.max(10, zoomLevel - 20);
+    var end = Math.min(100, zoomLevel + 20);
+    mainChart.dispatchAction({ type: 'dataZoom', start: 100 - zoomLevel, end: 100 });
+}
+function zoomOut() {
+    zoomLevel = Math.min(100, zoomLevel + 20);
+    mainChart.dispatchAction({ type: 'dataZoom', start: 100 - zoomLevel, end: 100 });
+}
+function zoomReset() {
+    zoomLevel = 100;
+    mainChart.dispatchAction({ type: 'dataZoom', start: 0, end: 100 });
+}
+// 保持 zoomLevel 同步
+mainChart.on('datazoom', function(p) {
+    zoomLevel = (p.end || p.batch?.[0]?.end || 100) - (p.start || p.batch?.[0]?.start || 0);
+});
 
 // 响应式
 window.addEventListener('resize', function() {
