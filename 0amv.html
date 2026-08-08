@@ -184,10 +184,9 @@ function updateStats(idx) {
 }
 
 // ============ 主图: K线 + 白线 + 黄线 ============
-const mainChart = echarts.init(document.getElementById('main-chart'), 'dark');
+const mainChart = echarts.init(document.getElementById('main-chart'));
 
 const mainOption = {
-    group: '0amv-group',
     backgroundColor: '#0f172a',
     animation: false,
     tooltip: {
@@ -223,9 +222,6 @@ const mainOption = {
         }
     },
     axisPointer: {
-        link: [
-            { xAxisIndex: 'all' }
-        ],
         label: { backgroundColor: '#1e293b' }
     },
     grid: [
@@ -335,20 +331,10 @@ mainChart.setOption(mainOption);
 mainChart.on('mousemove', function(params) {
     if (params.dataIndex != null) updateStats(params.dataIndex);
 });
-mainChart.on('datazoom', function(params) {
-    if (params.batch) {
-        params.batch.forEach(function(b) {
-            macdChart.dispatchAction({ type: 'dataZoom', start: b.start, end: b.end });
-        });
-    } else {
-        macdChart.dispatchAction({ type: 'dataZoom', start: params.start, end: params.end });
-    }
-});
 
 // ============ 附图1: MACD ============
-const macdChart = echarts.init(document.getElementById('macd-chart'), 'dark');
+const macdChart = echarts.init(document.getElementById('macd-chart'));
 const macdOption = {
-    group: '0amv-group',
     backgroundColor: '#0f172a',
     animation: false,
     tooltip: {
@@ -417,11 +403,8 @@ const macdOption = {
 };
 macdChart.setOption(macdOption);
 
-// 联动缩放（使用 group 属性自动同步 tooltip/axisPointer）
-macdChart.on('datazoom', function(params) {
-    const opt = params.batch?.[0] || params;
-    mainChart.dispatchAction({ type: 'dataZoom', start: opt.start, end: opt.end });
-});
+// 跨图表联动：tooltip + axisPointer + dataZoom 全同步
+echarts.connect([mainChart, macdChart]);
 
 // 响应式
 window.addEventListener('resize', function() {
