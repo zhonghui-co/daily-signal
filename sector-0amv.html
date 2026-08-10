@@ -90,7 +90,7 @@ tr.spacer td { padding:0; border-bottom:1px solid #30363d; height:0; }
 
 <script>
 (async function() {
-  const resp = await fetch('../daily/sector-compare.json');
+  const resp = await fetch('data/sector-compare.json');
   const data = await resp.json();
 
   document.getElementById('update-time').textContent = 
