@@ -145,6 +145,35 @@ function update() {
     
     mainChart.setOption({
         backgroundColor: '#000', animation: false,
+        tooltip: { trigger: 'axis', axisPointer: { type: 'cross' },
+            backgroundColor: 'rgba(15,23,42,0.95)', borderColor: '#334155',
+            textStyle: { color: '#e2e8f0', fontSize: 11 },
+            formatter: function(params) {
+                const idx = params[0].dataIndex;
+                const d = catData[idx];
+                let html = '<b>'+d+'</b><br/>';
+                const kp = params.find(p=>p.seriesName==='K线');
+                if (kp && Array.isArray(kp.data)) {
+                    const v = kp.data;
+                    html += '开:'+v[0].toFixed(0)+' 收:'+v[1].toFixed(0)+'<br/>';
+                    html += '低:'+v[2].toFixed(0)+' 高:'+v[3].toFixed(0)+'<br/>';
+                    if (idx > 0 && c[idx-1] > 0) {
+                        const pct = ((c[idx]/c[idx-1]-1)*100).toFixed(2);
+                        const color = pct >= 0 ? '#ef4444' : '#22c55e';
+                        html += '涨跌: <span style="color:'+color+'">'+(pct>=0?'+':'')+pct+'%</span>';
+                    }
+                }
+                const wp = params.find(p=>p.seriesName==='白线');
+                const yp = params.find(p=>p.seriesName==='黄线');
+                if (wp && wp.data != null) html += '<br/>白线:'+wp.data.toFixed(0);
+                if (yp && yp.data != null) html += ' 黄线:'+yp.data.toFixed(0);
+                if (wp && yp && wp.data != null && yp.data != null && yp.data > 0) {
+                    const r = ((wp.data/yp.data-1)*100).toFixed(2);
+                    html += ' 白/黄:'+(r>=0?'+':'')+r+'%';
+                }
+                return html;
+            }
+        },
         grid: [{ left: '8%', right: '3%', top: 12, height: '75%' }],
         xAxis: [{ type: 'category', data: catData, boundaryGap: true,
             axisLine: { lineStyle: { color: '#334155' } },
