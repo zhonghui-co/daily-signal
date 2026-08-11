@@ -1,0 +1,4915 @@
+{
+  "run_at": "2026-08-11T06:22:42.804055+08:00",
+  "trade_dates": "20260209~20260810",
+  "total_stocks_scanned": 5556,
+  "anti_fragile_count": 515,
+  "top_30": [
+    {
+      "ts_code": "600664.SH",
+      "name": "哈药股份",
+      "close": 7.52,
+      "white_line": 5.72,
+      "bbi": 4.78,
+      "ratio_pct": 19.74,
+      "vol": 1317603.19
+    },
+    {
+      "ts_code": "300534.SZ",
+      "name": "陇神戎发",
+      "close": 15.88,
+      "white_line": 12.92,
+      "bbi": 11.07,
+      "ratio_pct": 16.72,
+      "vol": 981339.1
+    },
+    {
+      "ts_code": "603823.SH",
+      "name": "百合花",
+      "close": 68.38,
+      "white_line": 62.65,
+      "bbi": 53.84,
+      "ratio_pct": 16.37,
+      "vol": 255154.68
+    },
+    {
+      "ts_code": "000779.SZ",
+      "name": "甘咨询",
+      "close": 11.57,
+      "white_line": 11.81,
+      "bbi": 10.32,
+      "ratio_pct": 14.47,
+      "vol": 26350.0
+    },
+    {
+      "ts_code": "001258.SZ",
+      "name": "立新能源",
+      "close": 14.48,
+      "white_line": 11.72,
+      "bbi": 10.4,
+      "ratio_pct": 12.75,
+      "vol": 1763390.74
+    },
+    {
+      "ts_code": "300795.SZ",
+      "name": "米奥会展",
+      "close": 16.14,
+      "white_line": 13.6,
+      "bbi": 12.08,
+      "ratio_pct": 12.58,
+      "vol": 431084.21
+    },
+    {
+      "ts_code": "300759.SZ",
+      "name": "康龙化成",
+      "close": 47.03,
+      "white_line": 38.18,
+      "bbi": 34.03,
+      "ratio_pct": 12.21,
+      "vol": 1341186.53
+    },
+    {
+      "ts_code": "301165.SZ",
+      "name": "锐捷网络",
+      "close": 121.2,
+      "white_line": 112.34,
+      "bbi": 101.04,
+      "ratio_pct": 11.18,
+      "vol": 268130.52
+    },
+    {
+      "ts_code": "600428.SH",
+      "name": "中远海特",
+      "close": 11.65,
+      "white_line": 11.05,
+      "bbi": 9.95,
+      "ratio_pct": 11.09,
+      "vol": 753938.02
+    },
+    {
+      "ts_code": "002141.SZ",
+      "name": "贤丰控股",
+      "close": 6.72,
+      "white_line": 5.6,
+      "bbi": 5.05,
+      "ratio_pct": 10.8,
+      "vol": 2481186.26
+    },
+    {
+      "ts_code": "688361.SH",
+      "name": "中科飞测",
+      "close": 362.45,
+      "white_line": 347.16,
+      "bbi": 313.69,
+      "ratio_pct": 10.67,
+      "vol": 100262.78
+    },
+    {
+      "ts_code": "300209.SZ",
+      "name": "行云科技",
+      "close": 38.39,
+      "white_line": 29.86,
+      "bbi": 27.04,
+      "ratio_pct": 10.43,
+      "vol": 1658834.68
+    },
+    {
+      "ts_code": "300951.SZ",
+      "name": "博硕科技",
+      "close": 66.79,
+      "white_line": 53.82,
+      "bbi": 48.86,
+      "ratio_pct": 10.16,
+      "vol": 52261.34
+    },
+    {
+      "ts_code": "688432.SH",
+      "name": "有研硅",
+      "close": 41.74,
+      "white_line": 36.45,
+      "bbi": 33.09,
+      "ratio_pct": 10.15,
+      "vol": 792712.18
+    },
+    {
+      "ts_code": "920438.BJ",
+      "name": "戈碧迦",
+      "close": 114.84,
+      "white_line": 119.16,
+      "bbi": 108.29,
+      "ratio_pct": 10.04,
+      "vol": 53331.71
+    },
+    {
+      "ts_code": "301520.SZ",
+      "name": "万邦医药",
+      "close": 58.66,
+      "white_line": 50.56,
+      "bbi": 46.01,
+      "ratio_pct": 9.89,
+      "vol": 163869.67
+    },
+    {
+      "ts_code": "688046.SH",
+      "name": "药康生物",
+      "close": 37.39,
+      "white_line": 26.29,
+      "bbi": 24.01,
+      "ratio_pct": 9.51,
+      "vol": 353769.96
+    },
+    {
+      "ts_code": "002674.SZ",
+      "name": "兴业科技",
+      "close": 29.52,
+      "white_line": 24.63,
+      "bbi": 22.51,
+      "ratio_pct": 9.4,
+      "vol": 329446.0
+    },
+    {
+      "ts_code": "301108.SZ",
+      "name": "洁雅股份",
+      "close": 38.15,
+      "white_line": 32.88,
+      "bbi": 30.05,
+      "ratio_pct": 9.4,
+      "vol": 20206.32
+    },
+    {
+      "ts_code": "002303.SZ",
+      "name": "美盈森",
+      "close": 5.47,
+      "white_line": 4.68,
+      "bbi": 4.3,
+      "ratio_pct": 8.98,
+      "vol": 711864.72
+    },
+    {
+      "ts_code": "300765.SZ",
+      "name": "石药创新",
+      "close": 40.78,
+      "white_line": 38.05,
+      "bbi": 34.97,
+      "ratio_pct": 8.81,
+      "vol": 291487.33
+    },
+    {
+      "ts_code": "002827.SZ",
+      "name": "高争民爆",
+      "close": 59.58,
+      "white_line": 34.07,
+      "bbi": 31.39,
+      "ratio_pct": 8.52,
+      "vol": 133901.0
+    },
+    {
+      "ts_code": "000938.SZ",
+      "name": "紫光股份",
+      "close": 37.63,
+      "white_line": 37.22,
+      "bbi": 34.3,
+      "ratio_pct": 8.51,
+      "vol": 1940833.61
+    },
+    {
+      "ts_code": "002832.SZ",
+      "name": "比音勒芬",
+      "close": 25.91,
+      "white_line": 24.12,
+      "bbi": 22.24,
+      "ratio_pct": 8.42,
+      "vol": 213864.69
+    },
+    {
+      "ts_code": "601168.SH",
+      "name": "西部矿业",
+      "close": 42.45,
+      "white_line": 37.0,
+      "bbi": 34.14,
+      "ratio_pct": 8.4,
+      "vol": 921396.88
+    },
+    {
+      "ts_code": "603259.SH",
+      "name": "药明康德",
+      "close": 161.34,
+      "white_line": 132.0,
+      "bbi": 121.95,
+      "ratio_pct": 8.25,
+      "vol": 1265362.04
+    },
+    {
+      "ts_code": "605179.SH",
+      "name": "一鸣食品",
+      "close": 25.12,
+      "white_line": 17.78,
+      "bbi": 16.44,
+      "ratio_pct": 8.17,
+      "vol": 310383.01
+    },
+    {
+      "ts_code": "301310.SZ",
+      "name": "鑫宏业",
+      "close": 51.54,
+      "white_line": 55.93,
+      "bbi": 51.7,
+      "ratio_pct": 8.16,
+      "vol": 100509.98
+    },
+    {
+      "ts_code": "688758.SH",
+      "name": "赛分科技",
+      "close": 29.65,
+      "white_line": 24.68,
+      "bbi": 22.84,
+      "ratio_pct": 8.07,
+      "vol": 205817.81
+    },
+    {
+      "ts_code": "002841.SZ",
+      "name": "视源股份",
+      "close": 51.05,
+      "white_line": 46.51,
+      "bbi": 43.14,
+      "ratio_pct": 7.81,
+      "vol": 97367.81
+    }
+  ],
+  "all": [
+    {
+      "ts_code": "600664.SH",
+      "name": "哈药股份",
+      "close": 7.52,
+      "white_line": 5.72,
+      "bbi": 4.78,
+      "ratio_pct": 19.74,
+      "vol": 1317603.19
+    },
+    {
+      "ts_code": "300534.SZ",
+      "name": "陇神戎发",
+      "close": 15.88,
+      "white_line": 12.92,
+      "bbi": 11.07,
+      "ratio_pct": 16.72,
+      "vol": 981339.1
+    },
+    {
+      "ts_code": "603823.SH",
+      "name": "百合花",
+      "close": 68.38,
+      "white_line": 62.65,
+      "bbi": 53.84,
+      "ratio_pct": 16.37,
+      "vol": 255154.68
+    },
+    {
+      "ts_code": "000779.SZ",
+      "name": "甘咨询",
+      "close": 11.57,
+      "white_line": 11.81,
+      "bbi": 10.32,
+      "ratio_pct": 14.47,
+      "vol": 26350.0
+    },
+    {
+      "ts_code": "001258.SZ",
+      "name": "立新能源",
+      "close": 14.48,
+      "white_line": 11.72,
+      "bbi": 10.4,
+      "ratio_pct": 12.75,
+      "vol": 1763390.74
+    },
+    {
+      "ts_code": "300795.SZ",
+      "name": "米奥会展",
+      "close": 16.14,
+      "white_line": 13.6,
+      "bbi": 12.08,
+      "ratio_pct": 12.58,
+      "vol": 431084.21
+    },
+    {
+      "ts_code": "300759.SZ",
+      "name": "康龙化成",
+      "close": 47.03,
+      "white_line": 38.18,
+      "bbi": 34.03,
+      "ratio_pct": 12.21,
+      "vol": 1341186.53
+    },
+    {
+      "ts_code": "301165.SZ",
+      "name": "锐捷网络",
+      "close": 121.2,
+      "white_line": 112.34,
+      "bbi": 101.04,
+      "ratio_pct": 11.18,
+      "vol": 268130.52
+    },
+    {
+      "ts_code": "600428.SH",
+      "name": "中远海特",
+      "close": 11.65,
+      "white_line": 11.05,
+      "bbi": 9.95,
+      "ratio_pct": 11.09,
+      "vol": 753938.02
+    },
+    {
+      "ts_code": "002141.SZ",
+      "name": "贤丰控股",
+      "close": 6.72,
+      "white_line": 5.6,
+      "bbi": 5.05,
+      "ratio_pct": 10.8,
+      "vol": 2481186.26
+    },
+    {
+      "ts_code": "688361.SH",
+      "name": "中科飞测",
+      "close": 362.45,
+      "white_line": 347.16,
+      "bbi": 313.69,
+      "ratio_pct": 10.67,
+      "vol": 100262.78
+    },
+    {
+      "ts_code": "300209.SZ",
+      "name": "行云科技",
+      "close": 38.39,
+      "white_line": 29.86,
+      "bbi": 27.04,
+      "ratio_pct": 10.43,
+      "vol": 1658834.68
+    },
+    {
+      "ts_code": "300951.SZ",
+      "name": "博硕科技",
+      "close": 66.79,
+      "white_line": 53.82,
+      "bbi": 48.86,
+      "ratio_pct": 10.16,
+      "vol": 52261.34
+    },
+    {
+      "ts_code": "688432.SH",
+      "name": "有研硅",
+      "close": 41.74,
+      "white_line": 36.45,
+      "bbi": 33.09,
+      "ratio_pct": 10.15,
+      "vol": 792712.18
+    },
+    {
+      "ts_code": "920438.BJ",
+      "name": "戈碧迦",
+      "close": 114.84,
+      "white_line": 119.16,
+      "bbi": 108.29,
+      "ratio_pct": 10.04,
+      "vol": 53331.71
+    },
+    {
+      "ts_code": "301520.SZ",
+      "name": "万邦医药",
+      "close": 58.66,
+      "white_line": 50.56,
+      "bbi": 46.01,
+      "ratio_pct": 9.89,
+      "vol": 163869.67
+    },
+    {
+      "ts_code": "688046.SH",
+      "name": "药康生物",
+      "close": 37.39,
+      "white_line": 26.29,
+      "bbi": 24.01,
+      "ratio_pct": 9.51,
+      "vol": 353769.96
+    },
+    {
+      "ts_code": "002674.SZ",
+      "name": "兴业科技",
+      "close": 29.52,
+      "white_line": 24.63,
+      "bbi": 22.51,
+      "ratio_pct": 9.4,
+      "vol": 329446.0
+    },
+    {
+      "ts_code": "301108.SZ",
+      "name": "洁雅股份",
+      "close": 38.15,
+      "white_line": 32.88,
+      "bbi": 30.05,
+      "ratio_pct": 9.4,
+      "vol": 20206.32
+    },
+    {
+      "ts_code": "002303.SZ",
+      "name": "美盈森",
+      "close": 5.47,
+      "white_line": 4.68,
+      "bbi": 4.3,
+      "ratio_pct": 8.98,
+      "vol": 711864.72
+    },
+    {
+      "ts_code": "300765.SZ",
+      "name": "石药创新",
+      "close": 40.78,
+      "white_line": 38.05,
+      "bbi": 34.97,
+      "ratio_pct": 8.81,
+      "vol": 291487.33
+    },
+    {
+      "ts_code": "002827.SZ",
+      "name": "高争民爆",
+      "close": 59.58,
+      "white_line": 34.07,
+      "bbi": 31.39,
+      "ratio_pct": 8.52,
+      "vol": 133901.0
+    },
+    {
+      "ts_code": "000938.SZ",
+      "name": "紫光股份",
+      "close": 37.63,
+      "white_line": 37.22,
+      "bbi": 34.3,
+      "ratio_pct": 8.51,
+      "vol": 1940833.61
+    },
+    {
+      "ts_code": "002832.SZ",
+      "name": "比音勒芬",
+      "close": 25.91,
+      "white_line": 24.12,
+      "bbi": 22.24,
+      "ratio_pct": 8.42,
+      "vol": 213864.69
+    },
+    {
+      "ts_code": "601168.SH",
+      "name": "西部矿业",
+      "close": 42.45,
+      "white_line": 37.0,
+      "bbi": 34.14,
+      "ratio_pct": 8.4,
+      "vol": 921396.88
+    },
+    {
+      "ts_code": "603259.SH",
+      "name": "药明康德",
+      "close": 161.34,
+      "white_line": 132.0,
+      "bbi": 121.95,
+      "ratio_pct": 8.25,
+      "vol": 1265362.04
+    },
+    {
+      "ts_code": "605179.SH",
+      "name": "一鸣食品",
+      "close": 25.12,
+      "white_line": 17.78,
+      "bbi": 16.44,
+      "ratio_pct": 8.17,
+      "vol": 310383.01
+    },
+    {
+      "ts_code": "301310.SZ",
+      "name": "鑫宏业",
+      "close": 51.54,
+      "white_line": 55.93,
+      "bbi": 51.7,
+      "ratio_pct": 8.16,
+      "vol": 100509.98
+    },
+    {
+      "ts_code": "688758.SH",
+      "name": "赛分科技",
+      "close": 29.65,
+      "white_line": 24.68,
+      "bbi": 22.84,
+      "ratio_pct": 8.07,
+      "vol": 205817.81
+    },
+    {
+      "ts_code": "002841.SZ",
+      "name": "视源股份",
+      "close": 51.05,
+      "white_line": 46.51,
+      "bbi": 43.14,
+      "ratio_pct": 7.81,
+      "vol": 97367.81
+    },
+    {
+      "ts_code": "002821.SZ",
+      "name": "凯莱英",
+      "close": 176.0,
+      "white_line": 160.21,
+      "bbi": 148.65,
+      "ratio_pct": 7.78,
+      "vol": 232821.85
+    },
+    {
+      "ts_code": "603127.SH",
+      "name": "昭衍新药",
+      "close": 52.8,
+      "white_line": 45.39,
+      "bbi": 42.3,
+      "ratio_pct": 7.31,
+      "vol": 947831.42
+    },
+    {
+      "ts_code": "688702.SH",
+      "name": "盛科通信",
+      "close": 403.96,
+      "white_line": 361.93,
+      "bbi": 337.34,
+      "ratio_pct": 7.29,
+      "vol": 88313.78
+    },
+    {
+      "ts_code": "002860.SZ",
+      "name": "星帅尔",
+      "close": 16.54,
+      "white_line": 16.99,
+      "bbi": 15.84,
+      "ratio_pct": 7.25,
+      "vol": 117765.14
+    },
+    {
+      "ts_code": "600162.SH",
+      "name": "香江控股",
+      "close": 3.9,
+      "white_line": 3.0,
+      "bbi": 2.79,
+      "ratio_pct": 7.21,
+      "vol": 1830883.11
+    },
+    {
+      "ts_code": "002440.SZ",
+      "name": "闰土股份",
+      "close": 13.87,
+      "white_line": 12.57,
+      "bbi": 11.75,
+      "ratio_pct": 6.98,
+      "vol": 754678.47
+    },
+    {
+      "ts_code": "002774.SZ",
+      "name": "快意电梯",
+      "close": 17.0,
+      "white_line": 15.35,
+      "bbi": 14.36,
+      "ratio_pct": 6.91,
+      "vol": 117192.0
+    },
+    {
+      "ts_code": "688710.SH",
+      "name": "益诺思",
+      "close": 89.01,
+      "white_line": 75.96,
+      "bbi": 71.05,
+      "ratio_pct": 6.91,
+      "vol": 62199.02
+    },
+    {
+      "ts_code": "301536.SZ",
+      "name": "星宸科技",
+      "close": 121.6,
+      "white_line": 116.67,
+      "bbi": 109.17,
+      "ratio_pct": 6.87,
+      "vol": 158629.61
+    },
+    {
+      "ts_code": "603129.SH",
+      "name": "春风动力",
+      "close": 303.27,
+      "white_line": 290.68,
+      "bbi": 272.03,
+      "ratio_pct": 6.85,
+      "vol": 14624.66
+    },
+    {
+      "ts_code": "688293.SH",
+      "name": "奥浦迈",
+      "close": 66.85,
+      "white_line": 53.39,
+      "bbi": 49.97,
+      "ratio_pct": 6.85,
+      "vol": 113767.45
+    },
+    {
+      "ts_code": "000739.SZ",
+      "name": "普洛药业",
+      "close": 23.25,
+      "white_line": 20.58,
+      "bbi": 19.28,
+      "ratio_pct": 6.77,
+      "vol": 622827.18
+    },
+    {
+      "ts_code": "603682.SH",
+      "name": "锦和商管",
+      "close": 11.58,
+      "white_line": 9.34,
+      "bbi": 8.76,
+      "ratio_pct": 6.58,
+      "vol": 271781.0
+    },
+    {
+      "ts_code": "002317.SZ",
+      "name": "众生药业",
+      "close": 27.78,
+      "white_line": 27.23,
+      "bbi": 25.6,
+      "ratio_pct": 6.36,
+      "vol": 493461.53
+    },
+    {
+      "ts_code": "603065.SH",
+      "name": "宿迁联盛",
+      "close": 17.75,
+      "white_line": 15.51,
+      "bbi": 14.59,
+      "ratio_pct": 6.3,
+      "vol": 437466.73
+    },
+    {
+      "ts_code": "002422.SZ",
+      "name": "科伦药业",
+      "close": 46.41,
+      "white_line": 44.67,
+      "bbi": 42.07,
+      "ratio_pct": 6.2,
+      "vol": 480879.47
+    },
+    {
+      "ts_code": "688347.SH",
+      "name": "华虹宏力",
+      "close": 264.0,
+      "white_line": 283.7,
+      "bbi": 267.19,
+      "ratio_pct": 6.18,
+      "vol": 189623.11
+    },
+    {
+      "ts_code": "688796.SH",
+      "name": "百奥赛图",
+      "close": 137.0,
+      "white_line": 119.61,
+      "bbi": 112.65,
+      "ratio_pct": 6.18,
+      "vol": 65271.52
+    },
+    {
+      "ts_code": "688202.SH",
+      "name": "美迪西",
+      "close": 103.1,
+      "white_line": 79.79,
+      "bbi": 75.18,
+      "ratio_pct": 6.14,
+      "vol": 172761.36
+    },
+    {
+      "ts_code": "600882.SH",
+      "name": "妙可蓝多",
+      "close": 22.46,
+      "white_line": 21.72,
+      "bbi": 20.5,
+      "ratio_pct": 5.95,
+      "vol": 79327.48
+    },
+    {
+      "ts_code": "000566.SZ",
+      "name": "海南海药",
+      "close": 6.05,
+      "white_line": 5.55,
+      "bbi": 5.24,
+      "ratio_pct": 5.91,
+      "vol": 3132461.02
+    },
+    {
+      "ts_code": "301526.SZ",
+      "name": "国际复材",
+      "close": 38.12,
+      "white_line": 32.24,
+      "bbi": 30.44,
+      "ratio_pct": 5.91,
+      "vol": 2503646.56
+    },
+    {
+      "ts_code": "301381.SZ",
+      "name": "赛维时代",
+      "close": 23.01,
+      "white_line": 22.23,
+      "bbi": 21.0,
+      "ratio_pct": 5.85,
+      "vol": 56394.47
+    },
+    {
+      "ts_code": "300604.SZ",
+      "name": "长川科技",
+      "close": 288.08,
+      "white_line": 278.3,
+      "bbi": 262.99,
+      "ratio_pct": 5.82,
+      "vol": 224927.25
+    },
+    {
+      "ts_code": "003001.SZ",
+      "name": "中岩大地",
+      "close": 19.93,
+      "white_line": 18.87,
+      "bbi": 17.83,
+      "ratio_pct": 5.81,
+      "vol": 175542.91
+    },
+    {
+      "ts_code": "920367.BJ",
+      "name": "新赣江",
+      "close": 24.74,
+      "white_line": 23.51,
+      "bbi": 22.23,
+      "ratio_pct": 5.75,
+      "vol": 94272.97
+    },
+    {
+      "ts_code": "301080.SZ",
+      "name": "百普赛斯",
+      "close": 77.7,
+      "white_line": 52.52,
+      "bbi": 49.67,
+      "ratio_pct": 5.73,
+      "vol": 295610.18
+    },
+    {
+      "ts_code": "003013.SZ",
+      "name": "地铁设计",
+      "close": 18.35,
+      "white_line": 16.81,
+      "bbi": 15.91,
+      "ratio_pct": 5.66,
+      "vol": 102249.52
+    },
+    {
+      "ts_code": "688057.SH",
+      "name": "金达莱",
+      "close": 19.66,
+      "white_line": 16.68,
+      "bbi": 15.8,
+      "ratio_pct": 5.59,
+      "vol": 61750.51
+    },
+    {
+      "ts_code": "300105.SZ",
+      "name": "龙源技术",
+      "close": 8.16,
+      "white_line": 8.32,
+      "bbi": 7.89,
+      "ratio_pct": 5.54,
+      "vol": 332792.0
+    },
+    {
+      "ts_code": "688578.SH",
+      "name": "艾力斯",
+      "close": 116.18,
+      "white_line": 116.29,
+      "bbi": 110.22,
+      "ratio_pct": 5.51,
+      "vol": 125715.65
+    },
+    {
+      "ts_code": "000759.SZ",
+      "name": "中百集团",
+      "close": 6.99,
+      "white_line": 6.83,
+      "bbi": 6.48,
+      "ratio_pct": 5.43,
+      "vol": 782741.99
+    },
+    {
+      "ts_code": "000703.SZ",
+      "name": "恒逸石化",
+      "close": 18.18,
+      "white_line": 15.79,
+      "bbi": 14.98,
+      "ratio_pct": 5.37,
+      "vol": 1134646.43
+    },
+    {
+      "ts_code": "600396.SH",
+      "name": "华电辽能",
+      "close": 17.21,
+      "white_line": 15.38,
+      "bbi": 14.59,
+      "ratio_pct": 5.37,
+      "vol": 2661359.0
+    },
+    {
+      "ts_code": "688266.SH",
+      "name": "泽璟制药",
+      "close": 119.55,
+      "white_line": 124.76,
+      "bbi": 118.53,
+      "ratio_pct": 5.26,
+      "vol": 91275.52
+    },
+    {
+      "ts_code": "000676.SZ",
+      "name": "智度股份",
+      "close": 7.48,
+      "white_line": 7.03,
+      "bbi": 6.68,
+      "ratio_pct": 5.22,
+      "vol": 1564871.58
+    },
+    {
+      "ts_code": "300419.SZ",
+      "name": "ST浩丰",
+      "close": 9.58,
+      "white_line": 8.0,
+      "bbi": 7.6,
+      "ratio_pct": 5.22,
+      "vol": 105693.46
+    },
+    {
+      "ts_code": "688669.SH",
+      "name": "聚石化学",
+      "close": 70.64,
+      "white_line": 66.34,
+      "bbi": 63.05,
+      "ratio_pct": 5.21,
+      "vol": 55170.48
+    },
+    {
+      "ts_code": "002653.SZ",
+      "name": "海思科",
+      "close": 70.28,
+      "white_line": 66.06,
+      "bbi": 62.83,
+      "ratio_pct": 5.13,
+      "vol": 121267.6
+    },
+    {
+      "ts_code": "603087.SH",
+      "name": "甘李药业",
+      "close": 67.7,
+      "white_line": 67.23,
+      "bbi": 63.95,
+      "ratio_pct": 5.12,
+      "vol": 126714.36
+    },
+    {
+      "ts_code": "603956.SH",
+      "name": "威派格",
+      "close": 6.95,
+      "white_line": 6.32,
+      "bbi": 6.02,
+      "ratio_pct": 5.07,
+      "vol": 259715.3
+    },
+    {
+      "ts_code": "000526.SZ",
+      "name": "学大教育",
+      "close": 36.37,
+      "white_line": 33.19,
+      "bbi": 31.6,
+      "ratio_pct": 5.02,
+      "vol": 49264.95
+    },
+    {
+      "ts_code": "603983.SH",
+      "name": "丸美生物",
+      "close": 30.83,
+      "white_line": 29.54,
+      "bbi": 28.14,
+      "ratio_pct": 4.97,
+      "vol": 53050.5
+    },
+    {
+      "ts_code": "301047.SZ",
+      "name": "义翘神州",
+      "close": 113.61,
+      "white_line": 76.75,
+      "bbi": 73.12,
+      "ratio_pct": 4.96,
+      "vol": 192538.96
+    },
+    {
+      "ts_code": "000977.SZ",
+      "name": "浪潮信息",
+      "close": 76.7,
+      "white_line": 78.01,
+      "bbi": 74.35,
+      "ratio_pct": 4.92,
+      "vol": 602085.03
+    },
+    {
+      "ts_code": "600936.SH",
+      "name": "北投科技",
+      "close": 6.16,
+      "white_line": 5.32,
+      "bbi": 5.07,
+      "ratio_pct": 4.92,
+      "vol": 1183437.31
+    },
+    {
+      "ts_code": "600663.SH",
+      "name": "陆家嘴",
+      "close": 9.39,
+      "white_line": 7.85,
+      "bbi": 7.49,
+      "ratio_pct": 4.88,
+      "vol": 305717.47
+    },
+    {
+      "ts_code": "002415.SZ",
+      "name": "海康威视",
+      "close": 37.44,
+      "white_line": 36.39,
+      "bbi": 34.72,
+      "ratio_pct": 4.81,
+      "vol": 922271.48
+    },
+    {
+      "ts_code": "688506.SH",
+      "name": "百利天恒",
+      "close": 319.07,
+      "white_line": 307.58,
+      "bbi": 293.59,
+      "ratio_pct": 4.77,
+      "vol": 31481.63
+    },
+    {
+      "ts_code": "600267.SH",
+      "name": "海正药业",
+      "close": 14.24,
+      "white_line": 11.88,
+      "bbi": 11.35,
+      "ratio_pct": 4.7,
+      "vol": 1725926.42
+    },
+    {
+      "ts_code": "603669.SH",
+      "name": "灵康药业",
+      "close": 6.14,
+      "white_line": 5.68,
+      "bbi": 5.43,
+      "ratio_pct": 4.53,
+      "vol": 327271.74
+    },
+    {
+      "ts_code": "601678.SH",
+      "name": "滨化股份",
+      "close": 7.43,
+      "white_line": 6.38,
+      "bbi": 6.12,
+      "ratio_pct": 4.33,
+      "vol": 1972086.49
+    },
+    {
+      "ts_code": "002900.SZ",
+      "name": "哈三联",
+      "close": 14.83,
+      "white_line": 11.8,
+      "bbi": 11.31,
+      "ratio_pct": 4.32,
+      "vol": 598713.61
+    },
+    {
+      "ts_code": "002003.SZ",
+      "name": "伟星股份",
+      "close": 10.35,
+      "white_line": 10.16,
+      "bbi": 9.74,
+      "ratio_pct": 4.26,
+      "vol": 100080.27
+    },
+    {
+      "ts_code": "603679.SH",
+      "name": "华体科技",
+      "close": 22.44,
+      "white_line": 19.16,
+      "bbi": 18.38,
+      "ratio_pct": 4.25,
+      "vol": 70732.0
+    },
+    {
+      "ts_code": "603338.SH",
+      "name": "浙江鼎力",
+      "close": 57.37,
+      "white_line": 56.38,
+      "bbi": 54.13,
+      "ratio_pct": 4.15,
+      "vol": 42887.0
+    },
+    {
+      "ts_code": "920510.BJ",
+      "name": "丰光精密",
+      "close": 22.75,
+      "white_line": 22.44,
+      "bbi": 21.54,
+      "ratio_pct": 4.15,
+      "vol": 87983.85
+    },
+    {
+      "ts_code": "600671.SH",
+      "name": "天目药业",
+      "close": 21.7,
+      "white_line": 20.64,
+      "bbi": 19.82,
+      "ratio_pct": 4.13,
+      "vol": 46365.0
+    },
+    {
+      "ts_code": "300981.SZ",
+      "name": "中红医疗",
+      "close": 15.38,
+      "white_line": 12.91,
+      "bbi": 12.4,
+      "ratio_pct": 4.1,
+      "vol": 295825.27
+    },
+    {
+      "ts_code": "688037.SH",
+      "name": "芯源微",
+      "close": 322.2,
+      "white_line": 318.06,
+      "bbi": 305.81,
+      "ratio_pct": 4.0,
+      "vol": 63380.87
+    },
+    {
+      "ts_code": "600535.SH",
+      "name": "天士力",
+      "close": 15.63,
+      "white_line": 15.65,
+      "bbi": 15.06,
+      "ratio_pct": 3.95,
+      "vol": 207738.13
+    },
+    {
+      "ts_code": "002396.SZ",
+      "name": "星网锐捷",
+      "close": 30.03,
+      "white_line": 28.23,
+      "bbi": 27.16,
+      "ratio_pct": 3.94,
+      "vol": 714286.28
+    },
+    {
+      "ts_code": "688141.SH",
+      "name": "杰华特",
+      "close": 141.31,
+      "white_line": 125.49,
+      "bbi": 120.76,
+      "ratio_pct": 3.92,
+      "vol": 167998.91
+    },
+    {
+      "ts_code": "600801.SH",
+      "name": "华新建材",
+      "close": 24.02,
+      "white_line": 21.35,
+      "bbi": 20.54,
+      "ratio_pct": 3.91,
+      "vol": 181980.59
+    },
+    {
+      "ts_code": "688192.SH",
+      "name": "迪哲医药",
+      "close": 55.85,
+      "white_line": 53.86,
+      "bbi": 51.84,
+      "ratio_pct": 3.9,
+      "vol": 125232.17
+    },
+    {
+      "ts_code": "300558.SZ",
+      "name": "贝达药业",
+      "close": 69.88,
+      "white_line": 60.49,
+      "bbi": 58.23,
+      "ratio_pct": 3.88,
+      "vol": 251372.75
+    },
+    {
+      "ts_code": "603118.SH",
+      "name": "共进股份",
+      "close": 14.68,
+      "white_line": 14.82,
+      "bbi": 14.27,
+      "ratio_pct": 3.88,
+      "vol": 642463.91
+    },
+    {
+      "ts_code": "300420.SZ",
+      "name": "五洋自控",
+      "close": 8.15,
+      "white_line": 6.89,
+      "bbi": 6.63,
+      "ratio_pct": 3.85,
+      "vol": 1162062.0
+    },
+    {
+      "ts_code": "300688.SZ",
+      "name": "创业黑马",
+      "close": 31.45,
+      "white_line": 28.53,
+      "bbi": 27.47,
+      "ratio_pct": 3.84,
+      "vol": 187369.6
+    },
+    {
+      "ts_code": "002955.SZ",
+      "name": "鸿合科技",
+      "close": 35.13,
+      "white_line": 32.04,
+      "bbi": 30.87,
+      "ratio_pct": 3.79,
+      "vol": 40390.45
+    },
+    {
+      "ts_code": "600881.SH",
+      "name": "亚泰集团",
+      "close": 1.7,
+      "white_line": 1.73,
+      "bbi": 1.67,
+      "ratio_pct": 3.77,
+      "vol": 593007.6
+    },
+    {
+      "ts_code": "688235.SH",
+      "name": "百济神州",
+      "close": 299.79,
+      "white_line": 268.2,
+      "bbi": 258.57,
+      "ratio_pct": 3.72,
+      "vol": 108237.35
+    },
+    {
+      "ts_code": "002563.SZ",
+      "name": "森马服饰",
+      "close": 6.18,
+      "white_line": 5.93,
+      "bbi": 5.73,
+      "ratio_pct": 3.61,
+      "vol": 209873.8
+    },
+    {
+      "ts_code": "603893.SH",
+      "name": "瑞芯微",
+      "close": 205.3,
+      "white_line": 201.16,
+      "bbi": 194.17,
+      "ratio_pct": 3.6,
+      "vol": 104904.16
+    },
+    {
+      "ts_code": "000811.SZ",
+      "name": "冰轮环境",
+      "close": 42.48,
+      "white_line": 40.49,
+      "bbi": 39.1,
+      "ratio_pct": 3.56,
+      "vol": 408828.41
+    },
+    {
+      "ts_code": "300929.SZ",
+      "name": "华骐环保",
+      "close": 14.24,
+      "white_line": 13.65,
+      "bbi": 13.18,
+      "ratio_pct": 3.54,
+      "vol": 42720.21
+    },
+    {
+      "ts_code": "688596.SH",
+      "name": "正帆科技",
+      "close": 70.5,
+      "white_line": 54.05,
+      "bbi": 52.21,
+      "ratio_pct": 3.54,
+      "vol": 415323.99
+    },
+    {
+      "ts_code": "300746.SZ",
+      "name": "汉嘉数智",
+      "close": 15.05,
+      "white_line": 12.37,
+      "bbi": 11.95,
+      "ratio_pct": 3.52,
+      "vol": 64379.5
+    },
+    {
+      "ts_code": "002371.SZ",
+      "name": "北方华创",
+      "close": 760.0,
+      "white_line": 723.76,
+      "bbi": 699.39,
+      "ratio_pct": 3.48,
+      "vol": 87285.85
+    },
+    {
+      "ts_code": "300654.SZ",
+      "name": "世纪天鸿",
+      "close": 11.43,
+      "white_line": 11.13,
+      "bbi": 10.76,
+      "ratio_pct": 3.43,
+      "vol": 379521.85
+    },
+    {
+      "ts_code": "688002.SH",
+      "name": "睿创微纳",
+      "close": 169.0,
+      "white_line": 147.11,
+      "bbi": 142.25,
+      "ratio_pct": 3.42,
+      "vol": 126312.9
+    },
+    {
+      "ts_code": "688111.SH",
+      "name": "金山办公",
+      "close": 262.6,
+      "white_line": 252.37,
+      "bbi": 244.06,
+      "ratio_pct": 3.41,
+      "vol": 99028.96
+    },
+    {
+      "ts_code": "300843.SZ",
+      "name": "胜蓝股份",
+      "close": 121.31,
+      "white_line": 114.53,
+      "bbi": 110.79,
+      "ratio_pct": 3.38,
+      "vol": 75092.24
+    },
+    {
+      "ts_code": "301345.SZ",
+      "name": "涛涛车业",
+      "close": 260.55,
+      "white_line": 247.65,
+      "bbi": 239.6,
+      "ratio_pct": 3.36,
+      "vol": 18608.21
+    },
+    {
+      "ts_code": "603519.SH",
+      "name": "立霸股份",
+      "close": 16.32,
+      "white_line": 15.12,
+      "bbi": 14.64,
+      "ratio_pct": 3.28,
+      "vol": 139684.14
+    },
+    {
+      "ts_code": "002979.SZ",
+      "name": "雷赛智能",
+      "close": 58.85,
+      "white_line": 58.29,
+      "bbi": 56.45,
+      "ratio_pct": 3.26,
+      "vol": 143329.51
+    },
+    {
+      "ts_code": "600886.SH",
+      "name": "国投电力",
+      "close": 14.26,
+      "white_line": 14.83,
+      "bbi": 14.36,
+      "ratio_pct": 3.26,
+      "vol": 283627.65
+    },
+    {
+      "ts_code": "603979.SH",
+      "name": "金诚信",
+      "close": 80.18,
+      "white_line": 72.3,
+      "bbi": 70.03,
+      "ratio_pct": 3.25,
+      "vol": 77544.48
+    },
+    {
+      "ts_code": "300628.SZ",
+      "name": "亿联网络",
+      "close": 40.03,
+      "white_line": 38.19,
+      "bbi": 36.99,
+      "ratio_pct": 3.24,
+      "vol": 146692.24
+    },
+    {
+      "ts_code": "688296.SH",
+      "name": "和达科技",
+      "close": 20.03,
+      "white_line": 14.84,
+      "bbi": 14.38,
+      "ratio_pct": 3.24,
+      "vol": 80583.73
+    },
+    {
+      "ts_code": "601038.SH",
+      "name": "一拖股份",
+      "close": 13.48,
+      "white_line": 13.45,
+      "bbi": 13.03,
+      "ratio_pct": 3.23,
+      "vol": 73263.0
+    },
+    {
+      "ts_code": "601598.SH",
+      "name": "中国外运",
+      "close": 6.68,
+      "white_line": 6.2,
+      "bbi": 6.01,
+      "ratio_pct": 3.21,
+      "vol": 240166.1
+    },
+    {
+      "ts_code": "600206.SH",
+      "name": "有研新材",
+      "close": 52.03,
+      "white_line": 42.04,
+      "bbi": 40.75,
+      "ratio_pct": 3.17,
+      "vol": 1582009.23
+    },
+    {
+      "ts_code": "301376.SZ",
+      "name": "致欧科技",
+      "close": 20.8,
+      "white_line": 18.96,
+      "bbi": 18.38,
+      "ratio_pct": 3.15,
+      "vol": 59858.59
+    },
+    {
+      "ts_code": "301008.SZ",
+      "name": "宏昌科技",
+      "close": 38.3,
+      "white_line": 32.19,
+      "bbi": 31.21,
+      "ratio_pct": 3.14,
+      "vol": 198953.58
+    },
+    {
+      "ts_code": "603228.SH",
+      "name": "景旺电子",
+      "close": 96.0,
+      "white_line": 76.72,
+      "bbi": 74.43,
+      "ratio_pct": 3.08,
+      "vol": 1054142.67
+    },
+    {
+      "ts_code": "688253.SH",
+      "name": "英诺特",
+      "close": 71.34,
+      "white_line": 58.04,
+      "bbi": 56.31,
+      "ratio_pct": 3.08,
+      "vol": 30051.8
+    },
+    {
+      "ts_code": "000428.SZ",
+      "name": "华天酒店",
+      "close": 4.32,
+      "white_line": 3.66,
+      "bbi": 3.56,
+      "ratio_pct": 3.07,
+      "vol": 528152.92
+    },
+    {
+      "ts_code": "600298.SH",
+      "name": "安琪酵母",
+      "close": 43.49,
+      "white_line": 40.15,
+      "bbi": 38.96,
+      "ratio_pct": 3.06,
+      "vol": 192474.5
+    },
+    {
+      "ts_code": "920725.BJ",
+      "name": "惠丰钻石",
+      "close": 76.07,
+      "white_line": 74.63,
+      "bbi": 72.41,
+      "ratio_pct": 3.06,
+      "vol": 43890.8
+    },
+    {
+      "ts_code": "000848.SZ",
+      "name": "承德露露",
+      "close": 8.97,
+      "white_line": 8.65,
+      "bbi": 8.4,
+      "ratio_pct": 3.01,
+      "vol": 184888.28
+    },
+    {
+      "ts_code": "601339.SH",
+      "name": "百隆东方",
+      "close": 8.0,
+      "white_line": 7.98,
+      "bbi": 7.75,
+      "ratio_pct": 3.01,
+      "vol": 220100.0
+    },
+    {
+      "ts_code": "605007.SH",
+      "name": "五洲特纸",
+      "close": 16.77,
+      "white_line": 15.42,
+      "bbi": 14.97,
+      "ratio_pct": 3.0,
+      "vol": 106246.04
+    },
+    {
+      "ts_code": "601000.SH",
+      "name": "唐山港",
+      "close": 4.64,
+      "white_line": 4.67,
+      "bbi": 4.54,
+      "ratio_pct": 2.94,
+      "vol": 401945.45
+    },
+    {
+      "ts_code": "300083.SZ",
+      "name": "创世纪",
+      "close": 14.57,
+      "white_line": 11.7,
+      "bbi": 11.37,
+      "ratio_pct": 2.88,
+      "vol": 1349607.5
+    },
+    {
+      "ts_code": "300483.SZ",
+      "name": "首华燃气",
+      "close": 23.68,
+      "white_line": 20.94,
+      "bbi": 20.36,
+      "ratio_pct": 2.87,
+      "vol": 109124.45
+    },
+    {
+      "ts_code": "002568.SZ",
+      "name": "百润股份",
+      "close": 19.99,
+      "white_line": 18.92,
+      "bbi": 18.4,
+      "ratio_pct": 2.85,
+      "vol": 198459.83
+    },
+    {
+      "ts_code": "000048.SZ",
+      "name": "京基智农",
+      "close": 21.87,
+      "white_line": 19.62,
+      "bbi": 19.08,
+      "ratio_pct": 2.83,
+      "vol": 143538.85
+    },
+    {
+      "ts_code": "603976.SH",
+      "name": "正川股份",
+      "close": 28.09,
+      "white_line": 25.59,
+      "bbi": 24.89,
+      "ratio_pct": 2.83,
+      "vol": 38136.19
+    },
+    {
+      "ts_code": "002293.SZ",
+      "name": "罗莱生活",
+      "close": 11.41,
+      "white_line": 11.1,
+      "bbi": 10.8,
+      "ratio_pct": 2.82,
+      "vol": 93394.99
+    },
+    {
+      "ts_code": "000429.SZ",
+      "name": "粤高速A",
+      "close": 13.25,
+      "white_line": 14.38,
+      "bbi": 13.99,
+      "ratio_pct": 2.81,
+      "vol": 207901.06
+    },
+    {
+      "ts_code": "000948.SZ",
+      "name": "南天信息",
+      "close": 15.21,
+      "white_line": 14.48,
+      "bbi": 14.09,
+      "ratio_pct": 2.81,
+      "vol": 207299.52
+    },
+    {
+      "ts_code": "000333.SZ",
+      "name": "美的集团",
+      "close": 85.3,
+      "white_line": 84.8,
+      "bbi": 82.51,
+      "ratio_pct": 2.78,
+      "vol": 311419.03
+    },
+    {
+      "ts_code": "600236.SH",
+      "name": "桂冠电力",
+      "close": 10.89,
+      "white_line": 10.75,
+      "bbi": 10.47,
+      "ratio_pct": 2.75,
+      "vol": 290537.28
+    },
+    {
+      "ts_code": "605028.SH",
+      "name": "世茂能源",
+      "close": 25.94,
+      "white_line": 25.67,
+      "bbi": 24.99,
+      "ratio_pct": 2.72,
+      "vol": 31482.8
+    },
+    {
+      "ts_code": "301365.SZ",
+      "name": "矩阵股份",
+      "close": 39.32,
+      "white_line": 36.12,
+      "bbi": 35.17,
+      "ratio_pct": 2.71,
+      "vol": 27714.46
+    },
+    {
+      "ts_code": "301033.SZ",
+      "name": "迈普医学",
+      "close": 59.7,
+      "white_line": 58.41,
+      "bbi": 56.87,
+      "ratio_pct": 2.7,
+      "vol": 21935.44
+    },
+    {
+      "ts_code": "920130.BJ",
+      "name": "立方控股",
+      "close": 19.71,
+      "white_line": 17.52,
+      "bbi": 17.06,
+      "ratio_pct": 2.69,
+      "vol": 52964.74
+    },
+    {
+      "ts_code": "603233.SH",
+      "name": "大参林",
+      "close": 18.23,
+      "white_line": 18.47,
+      "bbi": 17.99,
+      "ratio_pct": 2.67,
+      "vol": 118953.19
+    },
+    {
+      "ts_code": "600012.SH",
+      "name": "皖通高速",
+      "close": 15.89,
+      "white_line": 17.27,
+      "bbi": 16.82,
+      "ratio_pct": 2.66,
+      "vol": 67356.16
+    },
+    {
+      "ts_code": "920339.BJ",
+      "name": "恒太照明",
+      "close": 11.58,
+      "white_line": 11.56,
+      "bbi": 11.26,
+      "ratio_pct": 2.65,
+      "vol": 13205.87
+    },
+    {
+      "ts_code": "002409.SZ",
+      "name": "雅克科技",
+      "close": 155.24,
+      "white_line": 149.47,
+      "bbi": 145.62,
+      "ratio_pct": 2.64,
+      "vol": 351494.01
+    },
+    {
+      "ts_code": "300454.SZ",
+      "name": "深信服",
+      "close": 124.06,
+      "white_line": 113.28,
+      "bbi": 110.37,
+      "ratio_pct": 2.64,
+      "vol": 155864.46
+    },
+    {
+      "ts_code": "300725.SZ",
+      "name": "药石科技",
+      "close": 49.61,
+      "white_line": 39.18,
+      "bbi": 38.17,
+      "ratio_pct": 2.64,
+      "vol": 540459.44
+    },
+    {
+      "ts_code": "300347.SZ",
+      "name": "泰格医药",
+      "close": 54.97,
+      "white_line": 49.77,
+      "bbi": 48.5,
+      "ratio_pct": 2.63,
+      "vol": 349372.8
+    },
+    {
+      "ts_code": "600060.SH",
+      "name": "海信视像",
+      "close": 26.0,
+      "white_line": 27.06,
+      "bbi": 26.37,
+      "ratio_pct": 2.62,
+      "vol": 95097.5
+    },
+    {
+      "ts_code": "603882.SH",
+      "name": "金域医学",
+      "close": 30.95,
+      "white_line": 27.17,
+      "bbi": 26.47,
+      "ratio_pct": 2.62,
+      "vol": 285020.4
+    },
+    {
+      "ts_code": "920267.BJ",
+      "name": "鑫汇科",
+      "close": 18.15,
+      "white_line": 17.96,
+      "bbi": 17.5,
+      "ratio_pct": 2.62,
+      "vol": 25451.53
+    },
+    {
+      "ts_code": "301072.SZ",
+      "name": "中捷精工",
+      "close": 35.15,
+      "white_line": 33.93,
+      "bbi": 33.07,
+      "ratio_pct": 2.61,
+      "vol": 20235.63
+    },
+    {
+      "ts_code": "002127.SZ",
+      "name": "南极电商",
+      "close": 3.19,
+      "white_line": 3.06,
+      "bbi": 2.98,
+      "ratio_pct": 2.57,
+      "vol": 620980.97
+    },
+    {
+      "ts_code": "002292.SZ",
+      "name": "奥飞娱乐",
+      "close": 8.43,
+      "white_line": 7.92,
+      "bbi": 7.72,
+      "ratio_pct": 2.57,
+      "vol": 532115.24
+    },
+    {
+      "ts_code": "603198.SH",
+      "name": "迎驾贡酒",
+      "close": 40.18,
+      "white_line": 36.26,
+      "bbi": 35.35,
+      "ratio_pct": 2.57,
+      "vol": 145802.07
+    },
+    {
+      "ts_code": "000423.SZ",
+      "name": "东阿阿胶",
+      "close": 54.06,
+      "white_line": 52.65,
+      "bbi": 51.35,
+      "ratio_pct": 2.53,
+      "vol": 67032.01
+    },
+    {
+      "ts_code": "002258.SZ",
+      "name": "利尔化学",
+      "close": 14.48,
+      "white_line": 14.37,
+      "bbi": 14.02,
+      "ratio_pct": 2.53,
+      "vol": 306823.94
+    },
+    {
+      "ts_code": "000636.SZ",
+      "name": "风华高科",
+      "close": 61.7,
+      "white_line": 51.54,
+      "bbi": 50.28,
+      "ratio_pct": 2.5,
+      "vol": 2152325.82
+    },
+    {
+      "ts_code": "601700.SH",
+      "name": "风范股份",
+      "close": 7.08,
+      "white_line": 5.33,
+      "bbi": 5.2,
+      "ratio_pct": 2.49,
+      "vol": 2712904.12
+    },
+    {
+      "ts_code": "000989.SZ",
+      "name": "九芝堂",
+      "close": 9.5,
+      "white_line": 9.06,
+      "bbi": 8.84,
+      "ratio_pct": 2.46,
+      "vol": 493123.42
+    },
+    {
+      "ts_code": "300039.SZ",
+      "name": "上海凯宝",
+      "close": 5.84,
+      "white_line": 5.49,
+      "bbi": 5.36,
+      "ratio_pct": 2.45,
+      "vol": 793646.57
+    },
+    {
+      "ts_code": "601918.SH",
+      "name": "新集能源",
+      "close": 10.2,
+      "white_line": 9.74,
+      "bbi": 9.5,
+      "ratio_pct": 2.45,
+      "vol": 567920.19
+    },
+    {
+      "ts_code": "000651.SZ",
+      "name": "格力电器",
+      "close": 40.67,
+      "white_line": 40.59,
+      "bbi": 39.63,
+      "ratio_pct": 2.43,
+      "vol": 417269.25
+    },
+    {
+      "ts_code": "601058.SH",
+      "name": "赛轮轮胎",
+      "close": 13.87,
+      "white_line": 13.63,
+      "bbi": 13.3,
+      "ratio_pct": 2.43,
+      "vol": 286844.3
+    },
+    {
+      "ts_code": "002793.SZ",
+      "name": "罗欣药业",
+      "close": 5.3,
+      "white_line": 4.82,
+      "bbi": 4.71,
+      "ratio_pct": 2.41,
+      "vol": 921952.56
+    },
+    {
+      "ts_code": "601211.SH",
+      "name": "国泰海通",
+      "close": 18.2,
+      "white_line": 18.51,
+      "bbi": 18.08,
+      "ratio_pct": 2.4,
+      "vol": 735156.81
+    },
+    {
+      "ts_code": "600962.SH",
+      "name": "国投中鲁",
+      "close": 28.15,
+      "white_line": 25.15,
+      "bbi": 24.56,
+      "ratio_pct": 2.39,
+      "vol": 171850.79
+    },
+    {
+      "ts_code": "601728.SH",
+      "name": "中国电信",
+      "close": 6.27,
+      "white_line": 6.17,
+      "bbi": 6.03,
+      "ratio_pct": 2.39,
+      "vol": 1316179.13
+    },
+    {
+      "ts_code": "600436.SH",
+      "name": "片仔癀",
+      "close": 139.77,
+      "white_line": 135.39,
+      "bbi": 132.28,
+      "ratio_pct": 2.36,
+      "vol": 78531.64
+    },
+    {
+      "ts_code": "300489.SZ",
+      "name": "光智科技",
+      "close": 237.0,
+      "white_line": 183.19,
+      "bbi": 179.04,
+      "ratio_pct": 2.32,
+      "vol": 140965.17
+    },
+    {
+      "ts_code": "300592.SZ",
+      "name": "华凯易佰",
+      "close": 16.56,
+      "white_line": 15.65,
+      "bbi": 15.29,
+      "ratio_pct": 2.32,
+      "vol": 167340.99
+    },
+    {
+      "ts_code": "688475.SH",
+      "name": "萤石网络",
+      "close": 31.29,
+      "white_line": 29.38,
+      "bbi": 28.71,
+      "ratio_pct": 2.32,
+      "vol": 75817.4
+    },
+    {
+      "ts_code": "000598.SZ",
+      "name": "兴蓉环境",
+      "close": 7.21,
+      "white_line": 7.19,
+      "bbi": 7.03,
+      "ratio_pct": 2.3,
+      "vol": 248838.3
+    },
+    {
+      "ts_code": "600857.SH",
+      "name": "宁波中百",
+      "close": 17.77,
+      "white_line": 17.01,
+      "bbi": 16.63,
+      "ratio_pct": 2.3,
+      "vol": 36731.0
+    },
+    {
+      "ts_code": "688068.SH",
+      "name": "热景生物",
+      "close": 107.9,
+      "white_line": 112.01,
+      "bbi": 109.49,
+      "ratio_pct": 2.3,
+      "vol": 51831.37
+    },
+    {
+      "ts_code": "600521.SH",
+      "name": "华海药业",
+      "close": 18.19,
+      "white_line": 16.64,
+      "bbi": 16.27,
+      "ratio_pct": 2.28,
+      "vol": 790052.41
+    },
+    {
+      "ts_code": "600756.SH",
+      "name": "浪潮软件",
+      "close": 15.78,
+      "white_line": 15.27,
+      "bbi": 14.94,
+      "ratio_pct": 2.25,
+      "vol": 219029.5
+    },
+    {
+      "ts_code": "601398.SH",
+      "name": "工商银行",
+      "close": 7.53,
+      "white_line": 7.7,
+      "bbi": 7.53,
+      "ratio_pct": 2.25,
+      "vol": 3073877.36
+    },
+    {
+      "ts_code": "601919.SH",
+      "name": "中远海控",
+      "close": 15.64,
+      "white_line": 15.23,
+      "bbi": 14.9,
+      "ratio_pct": 2.25,
+      "vol": 650749.95
+    },
+    {
+      "ts_code": "002737.SZ",
+      "name": "葵花药业",
+      "close": 13.5,
+      "white_line": 13.35,
+      "bbi": 13.05,
+      "ratio_pct": 2.24,
+      "vol": 59119.73
+    },
+    {
+      "ts_code": "688549.SH",
+      "name": "中巨芯",
+      "close": 29.17,
+      "white_line": 23.87,
+      "bbi": 23.34,
+      "ratio_pct": 2.24,
+      "vol": 1281813.95
+    },
+    {
+      "ts_code": "600285.SH",
+      "name": "羚锐制药",
+      "close": 22.39,
+      "white_line": 22.55,
+      "bbi": 22.06,
+      "ratio_pct": 2.23,
+      "vol": 102300.0
+    },
+    {
+      "ts_code": "600129.SH",
+      "name": "太极集团",
+      "close": 16.25,
+      "white_line": 15.66,
+      "bbi": 15.32,
+      "ratio_pct": 2.22,
+      "vol": 371372.09
+    },
+    {
+      "ts_code": "605296.SH",
+      "name": "神农集团",
+      "close": 31.57,
+      "white_line": 29.92,
+      "bbi": 29.27,
+      "ratio_pct": 2.22,
+      "vol": 54674.02
+    },
+    {
+      "ts_code": "002485.SZ",
+      "name": "ST雪发",
+      "close": 5.78,
+      "white_line": 5.4,
+      "bbi": 5.29,
+      "ratio_pct": 2.2,
+      "vol": 28316.78
+    },
+    {
+      "ts_code": "601628.SH",
+      "name": "中国人寿",
+      "close": 37.7,
+      "white_line": 39.07,
+      "bbi": 38.22,
+      "ratio_pct": 2.2,
+      "vol": 371568.36
+    },
+    {
+      "ts_code": "920088.BJ",
+      "name": "科力股份",
+      "close": 44.44,
+      "white_line": 47.17,
+      "bbi": 46.16,
+      "ratio_pct": 2.2,
+      "vol": 47264.79
+    },
+    {
+      "ts_code": "002412.SZ",
+      "name": "汉森制药",
+      "close": 7.27,
+      "white_line": 6.82,
+      "bbi": 6.67,
+      "ratio_pct": 2.19,
+      "vol": 412060.02
+    },
+    {
+      "ts_code": "000729.SZ",
+      "name": "燕京啤酒",
+      "close": 12.8,
+      "white_line": 12.44,
+      "bbi": 12.17,
+      "ratio_pct": 2.18,
+      "vol": 247053.0
+    },
+    {
+      "ts_code": "600690.SH",
+      "name": "海尔智家",
+      "close": 22.25,
+      "white_line": 22.12,
+      "bbi": 21.64,
+      "ratio_pct": 2.18,
+      "vol": 447050.2
+    },
+    {
+      "ts_code": "605189.SH",
+      "name": "富春染织",
+      "close": 16.78,
+      "white_line": 15.48,
+      "bbi": 15.15,
+      "ratio_pct": 2.18,
+      "vol": 374791.0
+    },
+    {
+      "ts_code": "600885.SH",
+      "name": "宏发股份",
+      "close": 35.3,
+      "white_line": 34.81,
+      "bbi": 34.07,
+      "ratio_pct": 2.17,
+      "vol": 161806.93
+    },
+    {
+      "ts_code": "000921.SZ",
+      "name": "海信家电",
+      "close": 26.8,
+      "white_line": 26.35,
+      "bbi": 25.8,
+      "ratio_pct": 2.14,
+      "vol": 74212.09
+    },
+    {
+      "ts_code": "688071.SH",
+      "name": "华依科技",
+      "close": 36.16,
+      "white_line": 36.1,
+      "bbi": 35.35,
+      "ratio_pct": 2.14,
+      "vol": 28065.88
+    },
+    {
+      "ts_code": "001317.SZ",
+      "name": "三羊马",
+      "close": 56.62,
+      "white_line": 51.1,
+      "bbi": 50.03,
+      "ratio_pct": 2.13,
+      "vol": 66769.34
+    },
+    {
+      "ts_code": "002668.SZ",
+      "name": "TCL智家",
+      "close": 10.37,
+      "white_line": 10.39,
+      "bbi": 10.18,
+      "ratio_pct": 2.12,
+      "vol": 157501.11
+    },
+    {
+      "ts_code": "300972.SZ",
+      "name": "万辰集团",
+      "close": 206.4,
+      "white_line": 202.28,
+      "bbi": 198.09,
+      "ratio_pct": 2.12,
+      "vol": 17605.53
+    },
+    {
+      "ts_code": "600844.SH",
+      "name": "金煤科技",
+      "close": 3.57,
+      "white_line": 3.18,
+      "bbi": 3.12,
+      "ratio_pct": 2.12,
+      "vol": 633505.02
+    },
+    {
+      "ts_code": "688382.SH",
+      "name": "益方生物",
+      "close": 20.43,
+      "white_line": 21.64,
+      "bbi": 21.19,
+      "ratio_pct": 2.1,
+      "vol": 292934.64
+    },
+    {
+      "ts_code": "002083.SZ",
+      "name": "孚日股份",
+      "close": 12.12,
+      "white_line": 11.01,
+      "bbi": 10.79,
+      "ratio_pct": 2.09,
+      "vol": 784959.02
+    },
+    {
+      "ts_code": "002479.SZ",
+      "name": "富春环保",
+      "close": 5.8,
+      "white_line": 5.32,
+      "bbi": 5.21,
+      "ratio_pct": 2.08,
+      "vol": 222204.5
+    },
+    {
+      "ts_code": "603110.SH",
+      "name": "东方材料",
+      "close": 26.5,
+      "white_line": 22.09,
+      "bbi": 21.64,
+      "ratio_pct": 2.08,
+      "vol": 140471.6
+    },
+    {
+      "ts_code": "000783.SZ",
+      "name": "长江证券",
+      "close": 9.02,
+      "white_line": 8.77,
+      "bbi": 8.59,
+      "ratio_pct": 2.05,
+      "vol": 869311.26
+    },
+    {
+      "ts_code": "300866.SZ",
+      "name": "安克创新",
+      "close": 119.95,
+      "white_line": 117.49,
+      "bbi": 115.14,
+      "ratio_pct": 2.05,
+      "vol": 32942.18
+    },
+    {
+      "ts_code": "002958.SZ",
+      "name": "青农商行",
+      "close": 3.01,
+      "white_line": 3.05,
+      "bbi": 2.99,
+      "ratio_pct": 2.03,
+      "vol": 490809.0
+    },
+    {
+      "ts_code": "300613.SZ",
+      "name": "富瀚微",
+      "close": 74.15,
+      "white_line": 63.44,
+      "bbi": 62.18,
+      "ratio_pct": 2.02,
+      "vol": 156016.92
+    },
+    {
+      "ts_code": "600352.SH",
+      "name": "浙江龙盛",
+      "close": 13.99,
+      "white_line": 12.98,
+      "bbi": 12.72,
+      "ratio_pct": 2.01,
+      "vol": 987746.09
+    },
+    {
+      "ts_code": "603766.SH",
+      "name": "隆鑫通用",
+      "close": 13.87,
+      "white_line": 13.95,
+      "bbi": 13.68,
+      "ratio_pct": 2.01,
+      "vol": 272666.14
+    },
+    {
+      "ts_code": "002546.SZ",
+      "name": "新联电子",
+      "close": 8.64,
+      "white_line": 8.33,
+      "bbi": 8.17,
+      "ratio_pct": 2.0,
+      "vol": 242263.26
+    },
+    {
+      "ts_code": "301087.SZ",
+      "name": "可孚医疗",
+      "close": 50.83,
+      "white_line": 52.25,
+      "bbi": 51.23,
+      "ratio_pct": 1.99,
+      "vol": 23509.68
+    },
+    {
+      "ts_code": "688120.SH",
+      "name": "华海清科",
+      "close": 263.53,
+      "white_line": 258.37,
+      "bbi": 253.33,
+      "ratio_pct": 1.99,
+      "vol": 125574.36
+    },
+    {
+      "ts_code": "601939.SH",
+      "name": "建设银行",
+      "close": 10.13,
+      "white_line": 10.3,
+      "bbi": 10.1,
+      "ratio_pct": 1.98,
+      "vol": 1453438.29
+    },
+    {
+      "ts_code": "002345.SZ",
+      "name": "潮宏基",
+      "close": 11.65,
+      "white_line": 10.39,
+      "bbi": 10.19,
+      "ratio_pct": 1.97,
+      "vol": 346943.87
+    },
+    {
+      "ts_code": "600123.SH",
+      "name": "兰花科创",
+      "close": 7.24,
+      "white_line": 6.68,
+      "bbi": 6.55,
+      "ratio_pct": 1.96,
+      "vol": 354016.0
+    },
+    {
+      "ts_code": "002262.SZ",
+      "name": "恩华药业",
+      "close": 22.37,
+      "white_line": 21.51,
+      "bbi": 21.1,
+      "ratio_pct": 1.95,
+      "vol": 199936.48
+    },
+    {
+      "ts_code": "603298.SH",
+      "name": "杭叉集团",
+      "close": 26.88,
+      "white_line": 26.85,
+      "bbi": 26.34,
+      "ratio_pct": 1.95,
+      "vol": 88719.16
+    },
+    {
+      "ts_code": "603337.SH",
+      "name": "杰克科技",
+      "close": 44.29,
+      "white_line": 41.46,
+      "bbi": 40.67,
+      "ratio_pct": 1.94,
+      "vol": 56055.25
+    },
+    {
+      "ts_code": "688180.SH",
+      "name": "君实生物",
+      "close": 38.91,
+      "white_line": 36.72,
+      "bbi": 36.02,
+      "ratio_pct": 1.94,
+      "vol": 280874.87
+    },
+    {
+      "ts_code": "000582.SZ",
+      "name": "北部湾港",
+      "close": 13.28,
+      "white_line": 12.18,
+      "bbi": 11.95,
+      "ratio_pct": 1.93,
+      "vol": 762623.8
+    },
+    {
+      "ts_code": "600030.SH",
+      "name": "中信证券",
+      "close": 27.95,
+      "white_line": 28.22,
+      "bbi": 27.68,
+      "ratio_pct": 1.93,
+      "vol": 915437.97
+    },
+    {
+      "ts_code": "688036.SH",
+      "name": "传音控股",
+      "close": 58.11,
+      "white_line": 61.39,
+      "bbi": 60.23,
+      "ratio_pct": 1.93,
+      "vol": 160831.34
+    },
+    {
+      "ts_code": "603444.SH",
+      "name": "吉比特",
+      "close": 394.8,
+      "white_line": 371.92,
+      "bbi": 364.91,
+      "ratio_pct": 1.92,
+      "vol": 19630.98
+    },
+    {
+      "ts_code": "601899.SH",
+      "name": "紫金矿业",
+      "close": 35.45,
+      "white_line": 32.03,
+      "bbi": 31.43,
+      "ratio_pct": 1.91,
+      "vol": 2736505.25
+    },
+    {
+      "ts_code": "601101.SH",
+      "name": "昊华能源",
+      "close": 13.39,
+      "white_line": 11.55,
+      "bbi": 11.33,
+      "ratio_pct": 1.89,
+      "vol": 626552.7
+    },
+    {
+      "ts_code": "603456.SH",
+      "name": "九洲药业",
+      "close": 16.51,
+      "white_line": 14.96,
+      "bbi": 14.68,
+      "ratio_pct": 1.89,
+      "vol": 502990.62
+    },
+    {
+      "ts_code": "601233.SH",
+      "name": "桐昆股份",
+      "close": 24.4,
+      "white_line": 22.17,
+      "bbi": 21.77,
+      "ratio_pct": 1.85,
+      "vol": 401415.52
+    },
+    {
+      "ts_code": "002948.SZ",
+      "name": "青岛银行",
+      "close": 5.8,
+      "white_line": 5.73,
+      "bbi": 5.63,
+      "ratio_pct": 1.84,
+      "vol": 337190.41
+    },
+    {
+      "ts_code": "688621.SH",
+      "name": "阳光诺和",
+      "close": 64.3,
+      "white_line": 58.35,
+      "bbi": 57.3,
+      "ratio_pct": 1.84,
+      "vol": 39886.02
+    },
+    {
+      "ts_code": "600660.SH",
+      "name": "福耀玻璃",
+      "close": 56.59,
+      "white_line": 56.19,
+      "bbi": 55.18,
+      "ratio_pct": 1.83,
+      "vol": 115539.36
+    },
+    {
+      "ts_code": "600900.SH",
+      "name": "长江电力",
+      "close": 28.05,
+      "white_line": 28.5,
+      "bbi": 27.99,
+      "ratio_pct": 1.81,
+      "vol": 1187473.47
+    },
+    {
+      "ts_code": "002365.SZ",
+      "name": "永安药业",
+      "close": 13.68,
+      "white_line": 12.5,
+      "bbi": 12.27,
+      "ratio_pct": 1.8,
+      "vol": 480156.53
+    },
+    {
+      "ts_code": "600829.SH",
+      "name": "人民同泰",
+      "close": 10.54,
+      "white_line": 9.33,
+      "bbi": 9.17,
+      "ratio_pct": 1.8,
+      "vol": 495346.92
+    },
+    {
+      "ts_code": "300562.SZ",
+      "name": "乐心医疗",
+      "close": 15.98,
+      "white_line": 13.9,
+      "bbi": 13.65,
+      "ratio_pct": 1.79,
+      "vol": 162980.0
+    },
+    {
+      "ts_code": "002746.SZ",
+      "name": "仙坛股份",
+      "close": 6.57,
+      "white_line": 6.03,
+      "bbi": 5.92,
+      "ratio_pct": 1.74,
+      "vol": 378874.86
+    },
+    {
+      "ts_code": "002064.SZ",
+      "name": "华峰化学",
+      "close": 11.83,
+      "white_line": 11.01,
+      "bbi": 10.83,
+      "ratio_pct": 1.72,
+      "vol": 563840.83
+    },
+    {
+      "ts_code": "689009.SH",
+      "name": "九号公司",
+      "close": 42.35,
+      "white_line": 41.21,
+      "bbi": 40.52,
+      "ratio_pct": 1.72,
+      "vol": 129196.83
+    },
+    {
+      "ts_code": "600333.SH",
+      "name": "长春燃气",
+      "close": 6.2,
+      "white_line": 5.77,
+      "bbi": 5.67,
+      "ratio_pct": 1.71,
+      "vol": 103534.39
+    },
+    {
+      "ts_code": "601816.SH",
+      "name": "京沪高铁",
+      "close": 5.1,
+      "white_line": 5.03,
+      "bbi": 4.95,
+      "ratio_pct": 1.69,
+      "vol": 1411035.05
+    },
+    {
+      "ts_code": "600351.SH",
+      "name": "亚宝药业",
+      "close": 6.96,
+      "white_line": 6.6,
+      "bbi": 6.49,
+      "ratio_pct": 1.68,
+      "vol": 381006.3
+    },
+    {
+      "ts_code": "600674.SH",
+      "name": "川投能源",
+      "close": 15.05,
+      "white_line": 15.62,
+      "bbi": 15.36,
+      "ratio_pct": 1.68,
+      "vol": 325347.07
+    },
+    {
+      "ts_code": "688428.SH",
+      "name": "诺诚健华",
+      "close": 29.36,
+      "white_line": 27.34,
+      "bbi": 26.89,
+      "ratio_pct": 1.68,
+      "vol": 146669.61
+    },
+    {
+      "ts_code": "603939.SH",
+      "name": "益丰药房",
+      "close": 23.43,
+      "white_line": 22.12,
+      "bbi": 21.75,
+      "ratio_pct": 1.66,
+      "vol": 185095.08
+    },
+    {
+      "ts_code": "601766.SH",
+      "name": "中国中车",
+      "close": 5.97,
+      "white_line": 5.96,
+      "bbi": 5.86,
+      "ratio_pct": 1.65,
+      "vol": 1457264.48
+    },
+    {
+      "ts_code": "000001.SZ",
+      "name": "平安银行",
+      "close": 11.29,
+      "white_line": 11.19,
+      "bbi": 11.01,
+      "ratio_pct": 1.64,
+      "vol": 889060.14
+    },
+    {
+      "ts_code": "600750.SH",
+      "name": "华润江中",
+      "close": 24.86,
+      "white_line": 25.41,
+      "bbi": 25.0,
+      "ratio_pct": 1.64,
+      "vol": 60125.0
+    },
+    {
+      "ts_code": "603068.SH",
+      "name": "博通集成",
+      "close": 40.98,
+      "white_line": 37.51,
+      "bbi": 36.91,
+      "ratio_pct": 1.62,
+      "vol": 112864.0
+    },
+    {
+      "ts_code": "688082.SH",
+      "name": "盛美上海",
+      "close": 323.02,
+      "white_line": 295.13,
+      "bbi": 290.45,
+      "ratio_pct": 1.61,
+      "vol": 117892.83
+    },
+    {
+      "ts_code": "002180.SZ",
+      "name": "奔图科技",
+      "close": 18.7,
+      "white_line": 17.12,
+      "bbi": 16.85,
+      "ratio_pct": 1.6,
+      "vol": 397852.2
+    },
+    {
+      "ts_code": "002603.SZ",
+      "name": "以岭药业",
+      "close": 16.89,
+      "white_line": 16.67,
+      "bbi": 16.41,
+      "ratio_pct": 1.6,
+      "vol": 264580.55
+    },
+    {
+      "ts_code": "300138.SZ",
+      "name": "晨光生物",
+      "close": 11.7,
+      "white_line": 11.03,
+      "bbi": 10.86,
+      "ratio_pct": 1.6,
+      "vol": 97484.76
+    },
+    {
+      "ts_code": "301015.SZ",
+      "name": "百洋医药",
+      "close": 24.23,
+      "white_line": 22.94,
+      "bbi": 22.58,
+      "ratio_pct": 1.6,
+      "vol": 98909.83
+    },
+    {
+      "ts_code": "601328.SH",
+      "name": "交通银行",
+      "close": 6.9,
+      "white_line": 7.0,
+      "bbi": 6.89,
+      "ratio_pct": 1.59,
+      "vol": 1098860.46
+    },
+    {
+      "ts_code": "600529.SH",
+      "name": "山东药玻",
+      "close": 19.18,
+      "white_line": 19.32,
+      "bbi": 19.02,
+      "ratio_pct": 1.58,
+      "vol": 128844.54
+    },
+    {
+      "ts_code": "600971.SH",
+      "name": "恒源煤电",
+      "close": 8.43,
+      "white_line": 7.83,
+      "bbi": 7.71,
+      "ratio_pct": 1.58,
+      "vol": 214290.95
+    },
+    {
+      "ts_code": "002747.SZ",
+      "name": "埃斯顿",
+      "close": 34.63,
+      "white_line": 33.33,
+      "bbi": 32.82,
+      "ratio_pct": 1.57,
+      "vol": 595749.26
+    },
+    {
+      "ts_code": "002250.SZ",
+      "name": "联化科技",
+      "close": 17.54,
+      "white_line": 15.74,
+      "bbi": 15.5,
+      "ratio_pct": 1.56,
+      "vol": 360339.71
+    },
+    {
+      "ts_code": "601066.SH",
+      "name": "中信建投",
+      "close": 25.96,
+      "white_line": 26.26,
+      "bbi": 25.85,
+      "ratio_pct": 1.56,
+      "vol": 196748.16
+    },
+    {
+      "ts_code": "601198.SH",
+      "name": "东兴证券",
+      "close": 13.82,
+      "white_line": 13.8,
+      "bbi": 13.59,
+      "ratio_pct": 1.54,
+      "vol": 173006.56
+    },
+    {
+      "ts_code": "601928.SH",
+      "name": "凤凰传媒",
+      "close": 9.24,
+      "white_line": 9.56,
+      "bbi": 9.42,
+      "ratio_pct": 1.54,
+      "vol": 106177.91
+    },
+    {
+      "ts_code": "603980.SH",
+      "name": "吉华集团",
+      "close": 6.93,
+      "white_line": 6.44,
+      "bbi": 6.34,
+      "ratio_pct": 1.54,
+      "vol": 321904.59
+    },
+    {
+      "ts_code": "920476.BJ",
+      "name": "海能技术",
+      "close": 22.8,
+      "white_line": 21.54,
+      "bbi": 21.21,
+      "ratio_pct": 1.54,
+      "vol": 14445.27
+    },
+    {
+      "ts_code": "002541.SZ",
+      "name": "鸿路钢构",
+      "close": 20.57,
+      "white_line": 19.91,
+      "bbi": 19.61,
+      "ratio_pct": 1.51,
+      "vol": 171631.51
+    },
+    {
+      "ts_code": "000571.SZ",
+      "name": "新大洲A",
+      "close": 7.12,
+      "white_line": 6.31,
+      "bbi": 6.22,
+      "ratio_pct": 1.49,
+      "vol": 362491.54
+    },
+    {
+      "ts_code": "000776.SZ",
+      "name": "广发证券",
+      "close": 20.92,
+      "white_line": 21.61,
+      "bbi": 21.29,
+      "ratio_pct": 1.49,
+      "vol": 417993.34
+    },
+    {
+      "ts_code": "300369.SZ",
+      "name": "绿盟科技",
+      "close": 7.51,
+      "white_line": 7.04,
+      "bbi": 6.94,
+      "ratio_pct": 1.48,
+      "vol": 687686.6
+    },
+    {
+      "ts_code": "688011.SH",
+      "name": "新光光电",
+      "close": 85.39,
+      "white_line": 65.89,
+      "bbi": 64.93,
+      "ratio_pct": 1.48,
+      "vol": 28860.38
+    },
+    {
+      "ts_code": "002839.SZ",
+      "name": "张家港行",
+      "close": 4.36,
+      "white_line": 4.41,
+      "bbi": 4.35,
+      "ratio_pct": 1.46,
+      "vol": 271485.8
+    },
+    {
+      "ts_code": "000011.SZ",
+      "name": "深物业A",
+      "close": 7.93,
+      "white_line": 7.62,
+      "bbi": 7.51,
+      "ratio_pct": 1.45,
+      "vol": 98574.21
+    },
+    {
+      "ts_code": "002867.SZ",
+      "name": "周大生",
+      "close": 12.93,
+      "white_line": 12.53,
+      "bbi": 12.35,
+      "ratio_pct": 1.45,
+      "vol": 91320.16
+    },
+    {
+      "ts_code": "600354.SH",
+      "name": "敦煌种业",
+      "close": 6.25,
+      "white_line": 5.82,
+      "bbi": 5.74,
+      "ratio_pct": 1.45,
+      "vol": 487653.22
+    },
+    {
+      "ts_code": "301218.SZ",
+      "name": "华是科技",
+      "close": 48.5,
+      "white_line": 40.43,
+      "bbi": 39.85,
+      "ratio_pct": 1.44,
+      "vol": 150595.95
+    },
+    {
+      "ts_code": "688620.SH",
+      "name": "安凯微",
+      "close": 15.95,
+      "white_line": 14.34,
+      "bbi": 14.14,
+      "ratio_pct": 1.44,
+      "vol": 198027.47
+    },
+    {
+      "ts_code": "300298.SZ",
+      "name": "三诺生物",
+      "close": 16.6,
+      "white_line": 15.88,
+      "bbi": 15.66,
+      "ratio_pct": 1.43,
+      "vol": 78753.0
+    },
+    {
+      "ts_code": "600872.SH",
+      "name": "中炬高新",
+      "close": 19.56,
+      "white_line": 19.27,
+      "bbi": 18.99,
+      "ratio_pct": 1.43,
+      "vol": 140945.48
+    },
+    {
+      "ts_code": "600667.SH",
+      "name": "太极实业",
+      "close": 19.27,
+      "white_line": 18.25,
+      "bbi": 18.0,
+      "ratio_pct": 1.42,
+      "vol": 2853385.56
+    },
+    {
+      "ts_code": "600985.SH",
+      "name": "淮北矿业",
+      "close": 16.86,
+      "white_line": 15.17,
+      "bbi": 14.96,
+      "ratio_pct": 1.42,
+      "vol": 294353.0
+    },
+    {
+      "ts_code": "688627.SH",
+      "name": "精智达",
+      "close": 463.0,
+      "white_line": 467.0,
+      "bbi": 460.48,
+      "ratio_pct": 1.42,
+      "vol": 50967.34
+    },
+    {
+      "ts_code": "603317.SH",
+      "name": "天味食品",
+      "close": 14.64,
+      "white_line": 14.3,
+      "bbi": 14.1,
+      "ratio_pct": 1.41,
+      "vol": 187742.46
+    },
+    {
+      "ts_code": "688548.SH",
+      "name": "广钢气体",
+      "close": 37.66,
+      "white_line": 36.01,
+      "bbi": 35.51,
+      "ratio_pct": 1.41,
+      "vol": 298168.91
+    },
+    {
+      "ts_code": "600066.SH",
+      "name": "宇通客车",
+      "close": 32.97,
+      "white_line": 31.73,
+      "bbi": 31.29,
+      "ratio_pct": 1.4,
+      "vol": 166964.64
+    },
+    {
+      "ts_code": "603288.SH",
+      "name": "海天味业",
+      "close": 36.78,
+      "white_line": 36.78,
+      "bbi": 36.27,
+      "ratio_pct": 1.4,
+      "vol": 185713.58
+    },
+    {
+      "ts_code": "300285.SZ",
+      "name": "国瓷材料",
+      "close": 76.11,
+      "white_line": 64.02,
+      "bbi": 63.14,
+      "ratio_pct": 1.39,
+      "vol": 1686171.49
+    },
+    {
+      "ts_code": "600018.SH",
+      "name": "上港集团",
+      "close": 5.16,
+      "white_line": 5.18,
+      "bbi": 5.11,
+      "ratio_pct": 1.38,
+      "vol": 487671.5
+    },
+    {
+      "ts_code": "600887.SH",
+      "name": "伊利股份",
+      "close": 26.26,
+      "white_line": 26.57,
+      "bbi": 26.21,
+      "ratio_pct": 1.38,
+      "vol": 535487.2
+    },
+    {
+      "ts_code": "603099.SH",
+      "name": "长白山",
+      "close": 40.2,
+      "white_line": 37.73,
+      "bbi": 37.21,
+      "ratio_pct": 1.38,
+      "vol": 69931.26
+    },
+    {
+      "ts_code": "600919.SH",
+      "name": "江苏银行",
+      "close": 11.81,
+      "white_line": 11.57,
+      "bbi": 11.41,
+      "ratio_pct": 1.37,
+      "vol": 1129222.46
+    },
+    {
+      "ts_code": "601162.SH",
+      "name": "天风证券",
+      "close": 3.63,
+      "white_line": 3.69,
+      "bbi": 3.64,
+      "ratio_pct": 1.36,
+      "vol": 967615.2
+    },
+    {
+      "ts_code": "002879.SZ",
+      "name": "长缆科技",
+      "close": 18.33,
+      "white_line": 16.8,
+      "bbi": 16.58,
+      "ratio_pct": 1.34,
+      "vol": 251694.8
+    },
+    {
+      "ts_code": "300026.SZ",
+      "name": "红日药业",
+      "close": 3.41,
+      "white_line": 3.36,
+      "bbi": 3.31,
+      "ratio_pct": 1.34,
+      "vol": 583014.14
+    },
+    {
+      "ts_code": "688004.SH",
+      "name": "博汇科技",
+      "close": 24.2,
+      "white_line": 21.02,
+      "bbi": 20.74,
+      "ratio_pct": 1.34,
+      "vol": 26679.7
+    },
+    {
+      "ts_code": "002100.SZ",
+      "name": "天康生物",
+      "close": 7.28,
+      "white_line": 7.03,
+      "bbi": 6.94,
+      "ratio_pct": 1.33,
+      "vol": 269287.13
+    },
+    {
+      "ts_code": "301321.SZ",
+      "name": "翰博高新",
+      "close": 38.2,
+      "white_line": 35.01,
+      "bbi": 34.55,
+      "ratio_pct": 1.31,
+      "vol": 89968.69
+    },
+    {
+      "ts_code": "600398.SH",
+      "name": "海澜之家",
+      "close": 6.11,
+      "white_line": 6.05,
+      "bbi": 5.97,
+      "ratio_pct": 1.31,
+      "vol": 288199.16
+    },
+    {
+      "ts_code": "601288.SH",
+      "name": "农业银行",
+      "close": 6.46,
+      "white_line": 6.64,
+      "bbi": 6.55,
+      "ratio_pct": 1.31,
+      "vol": 3554488.77
+    },
+    {
+      "ts_code": "000408.SZ",
+      "name": "藏格矿业",
+      "close": 89.2,
+      "white_line": 79.55,
+      "bbi": 78.53,
+      "ratio_pct": 1.3,
+      "vol": 141569.2
+    },
+    {
+      "ts_code": "300779.SZ",
+      "name": "惠城环保",
+      "close": 74.03,
+      "white_line": 73.12,
+      "bbi": 72.19,
+      "ratio_pct": 1.29,
+      "vol": 162775.63
+    },
+    {
+      "ts_code": "301122.SZ",
+      "name": "采纳股份",
+      "close": 31.82,
+      "white_line": 29.76,
+      "bbi": 29.38,
+      "ratio_pct": 1.29,
+      "vol": 33834.11
+    },
+    {
+      "ts_code": "600025.SH",
+      "name": "华能水电",
+      "close": 9.74,
+      "white_line": 9.91,
+      "bbi": 9.79,
+      "ratio_pct": 1.28,
+      "vol": 213826.0
+    },
+    {
+      "ts_code": "001965.SZ",
+      "name": "招商公路",
+      "close": 9.43,
+      "white_line": 9.99,
+      "bbi": 9.86,
+      "ratio_pct": 1.26,
+      "vol": 180187.51
+    },
+    {
+      "ts_code": "300529.SZ",
+      "name": "健帆生物",
+      "close": 16.41,
+      "white_line": 17.67,
+      "bbi": 17.45,
+      "ratio_pct": 1.26,
+      "vol": 167521.93
+    },
+    {
+      "ts_code": "601009.SH",
+      "name": "南京银行",
+      "close": 11.25,
+      "white_line": 11.3,
+      "bbi": 11.16,
+      "ratio_pct": 1.26,
+      "vol": 386372.31
+    },
+    {
+      "ts_code": "603558.SH",
+      "name": "健盛集团",
+      "close": 12.88,
+      "white_line": 12.49,
+      "bbi": 12.33,
+      "ratio_pct": 1.26,
+      "vol": 38040.0
+    },
+    {
+      "ts_code": "603727.SH",
+      "name": "博迈科",
+      "close": 19.21,
+      "white_line": 17.32,
+      "bbi": 17.1,
+      "ratio_pct": 1.26,
+      "vol": 52757.0
+    },
+    {
+      "ts_code": "002966.SZ",
+      "name": "苏州银行",
+      "close": 8.35,
+      "white_line": 8.17,
+      "bbi": 8.07,
+      "ratio_pct": 1.25,
+      "vol": 446377.37
+    },
+    {
+      "ts_code": "300477.SZ",
+      "name": "ST合纵",
+      "close": 2.69,
+      "white_line": 2.58,
+      "bbi": 2.55,
+      "ratio_pct": 1.25,
+      "vol": 231522.64
+    },
+    {
+      "ts_code": "001229.SZ",
+      "name": "魅视科技",
+      "close": 40.9,
+      "white_line": 37.38,
+      "bbi": 36.93,
+      "ratio_pct": 1.24,
+      "vol": 80767.49
+    },
+    {
+      "ts_code": "601166.SH",
+      "name": "兴业银行",
+      "close": 18.34,
+      "white_line": 18.37,
+      "bbi": 18.15,
+      "ratio_pct": 1.23,
+      "vol": 636905.48
+    },
+    {
+      "ts_code": "000661.SZ",
+      "name": "长春高新",
+      "close": 83.0,
+      "white_line": 77.21,
+      "bbi": 76.28,
+      "ratio_pct": 1.21,
+      "vol": 133997.81
+    },
+    {
+      "ts_code": "003033.SZ",
+      "name": "征和工业",
+      "close": 63.53,
+      "white_line": 62.28,
+      "bbi": 61.54,
+      "ratio_pct": 1.21,
+      "vol": 16730.0
+    },
+    {
+      "ts_code": "600031.SH",
+      "name": "三一重工",
+      "close": 19.74,
+      "white_line": 19.72,
+      "bbi": 19.49,
+      "ratio_pct": 1.2,
+      "vol": 682099.42
+    },
+    {
+      "ts_code": "002078.SZ",
+      "name": "太阳纸业",
+      "close": 14.03,
+      "white_line": 14.12,
+      "bbi": 13.96,
+      "ratio_pct": 1.17,
+      "vol": 189797.12
+    },
+    {
+      "ts_code": "002606.SZ",
+      "name": "大连电瓷",
+      "close": 14.84,
+      "white_line": 14.11,
+      "bbi": 13.95,
+      "ratio_pct": 1.17,
+      "vol": 329869.46
+    },
+    {
+      "ts_code": "600036.SH",
+      "name": "招商银行",
+      "close": 38.91,
+      "white_line": 39.03,
+      "bbi": 38.58,
+      "ratio_pct": 1.16,
+      "vol": 651757.86
+    },
+    {
+      "ts_code": "300832.SZ",
+      "name": "新产业",
+      "close": 49.02,
+      "white_line": 46.96,
+      "bbi": 46.43,
+      "ratio_pct": 1.15,
+      "vol": 115134.3
+    },
+    {
+      "ts_code": "600227.SH",
+      "name": "赤天化",
+      "close": 3.67,
+      "white_line": 3.16,
+      "bbi": 3.13,
+      "ratio_pct": 1.14,
+      "vol": 2004963.28
+    },
+    {
+      "ts_code": "603369.SH",
+      "name": "今世缘",
+      "close": 28.39,
+      "white_line": 27.01,
+      "bbi": 26.7,
+      "ratio_pct": 1.14,
+      "vol": 215274.35
+    },
+    {
+      "ts_code": "688103.SH",
+      "name": "国力电子",
+      "close": 77.21,
+      "white_line": 71.67,
+      "bbi": 70.86,
+      "ratio_pct": 1.14,
+      "vol": 26541.36
+    },
+    {
+      "ts_code": "601827.SH",
+      "name": "三峰环境",
+      "close": 8.84,
+      "white_line": 8.16,
+      "bbi": 8.07,
+      "ratio_pct": 1.13,
+      "vol": 233503.0
+    },
+    {
+      "ts_code": "002174.SZ",
+      "name": "游族网络",
+      "close": 11.99,
+      "white_line": 11.58,
+      "bbi": 11.45,
+      "ratio_pct": 1.12,
+      "vol": 262216.86
+    },
+    {
+      "ts_code": "601665.SH",
+      "name": "齐鲁银行",
+      "close": 6.24,
+      "white_line": 6.2,
+      "bbi": 6.14,
+      "ratio_pct": 1.12,
+      "vol": 372283.98
+    },
+    {
+      "ts_code": "600276.SH",
+      "name": "恒瑞医药",
+      "close": 54.18,
+      "white_line": 53.97,
+      "bbi": 53.39,
+      "ratio_pct": 1.09,
+      "vol": 1183656.58
+    },
+    {
+      "ts_code": "603871.SH",
+      "name": "嘉友国际",
+      "close": 12.67,
+      "white_line": 12.51,
+      "bbi": 12.38,
+      "ratio_pct": 1.09,
+      "vol": 79548.99
+    },
+    {
+      "ts_code": "002925.SZ",
+      "name": "盈趣科技",
+      "close": 23.21,
+      "white_line": 22.14,
+      "bbi": 21.9,
+      "ratio_pct": 1.08,
+      "vol": 131890.83
+    },
+    {
+      "ts_code": "603049.SH",
+      "name": "中策橡胶",
+      "close": 49.67,
+      "white_line": 48.85,
+      "bbi": 48.33,
+      "ratio_pct": 1.08,
+      "vol": 26024.23
+    },
+    {
+      "ts_code": "603170.SH",
+      "name": "宝立食品",
+      "close": 13.34,
+      "white_line": 12.59,
+      "bbi": 12.46,
+      "ratio_pct": 1.07,
+      "vol": 43469.53
+    },
+    {
+      "ts_code": "000517.SZ",
+      "name": "荣安地产",
+      "close": 2.18,
+      "white_line": 1.89,
+      "bbi": 1.87,
+      "ratio_pct": 1.05,
+      "vol": 315066.72
+    },
+    {
+      "ts_code": "000567.SZ",
+      "name": "海德股份",
+      "close": 6.3,
+      "white_line": 5.96,
+      "bbi": 5.9,
+      "ratio_pct": 1.04,
+      "vol": 165719.19
+    },
+    {
+      "ts_code": "300983.SZ",
+      "name": "尤安设计",
+      "close": 42.25,
+      "white_line": 35.69,
+      "bbi": 35.32,
+      "ratio_pct": 1.04,
+      "vol": 12260.68
+    },
+    {
+      "ts_code": "600177.SH",
+      "name": "雅戈尔",
+      "close": 7.69,
+      "white_line": 7.74,
+      "bbi": 7.66,
+      "ratio_pct": 1.04,
+      "vol": 345583.53
+    },
+    {
+      "ts_code": "301448.SZ",
+      "name": "开创电气",
+      "close": 43.74,
+      "white_line": 40.68,
+      "bbi": 40.27,
+      "ratio_pct": 1.03,
+      "vol": 20543.62
+    },
+    {
+      "ts_code": "601375.SH",
+      "name": "中原证券",
+      "close": 4.14,
+      "white_line": 4.13,
+      "bbi": 4.09,
+      "ratio_pct": 1.02,
+      "vol": 341591.0
+    },
+    {
+      "ts_code": "601995.SH",
+      "name": "中金公司",
+      "close": 34.97,
+      "white_line": 35.49,
+      "bbi": 35.13,
+      "ratio_pct": 1.02,
+      "vol": 145933.87
+    },
+    {
+      "ts_code": "002216.SZ",
+      "name": "三全食品",
+      "close": 13.15,
+      "white_line": 12.93,
+      "bbi": 12.81,
+      "ratio_pct": 1.01,
+      "vol": 93131.94
+    },
+    {
+      "ts_code": "601187.SH",
+      "name": "厦门银行",
+      "close": 7.27,
+      "white_line": 7.48,
+      "bbi": 7.4,
+      "ratio_pct": 1.0,
+      "vol": 158170.44
+    },
+    {
+      "ts_code": "300894.SZ",
+      "name": "火星人",
+      "close": 12.05,
+      "white_line": 10.88,
+      "bbi": 10.78,
+      "ratio_pct": 0.96,
+      "vol": 80474.21
+    },
+    {
+      "ts_code": "600593.SH",
+      "name": "大连圣亚",
+      "close": 40.17,
+      "white_line": 38.0,
+      "bbi": 37.64,
+      "ratio_pct": 0.95,
+      "vol": 38834.51
+    },
+    {
+      "ts_code": "688802.SH",
+      "name": "沐曦股份",
+      "close": 715.01,
+      "white_line": 757.77,
+      "bbi": 750.62,
+      "ratio_pct": 0.95,
+      "vol": 10424.36
+    },
+    {
+      "ts_code": "600941.SH",
+      "name": "中国移动",
+      "close": 96.7,
+      "white_line": 95.56,
+      "bbi": 94.67,
+      "ratio_pct": 0.94,
+      "vol": 108936.45
+    },
+    {
+      "ts_code": "300671.SZ",
+      "name": "富满微",
+      "close": 62.82,
+      "white_line": 63.87,
+      "bbi": 63.28,
+      "ratio_pct": 0.93,
+      "vol": 119384.69
+    },
+    {
+      "ts_code": "301377.SZ",
+      "name": "鼎泰高科",
+      "close": 437.45,
+      "white_line": 402.04,
+      "bbi": 398.33,
+      "ratio_pct": 0.93,
+      "vol": 52715.91
+    },
+    {
+      "ts_code": "301633.SZ",
+      "name": "港迪技术",
+      "close": 60.93,
+      "white_line": 54.26,
+      "bbi": 53.77,
+      "ratio_pct": 0.92,
+      "vol": 19841.98
+    },
+    {
+      "ts_code": "600617.SH",
+      "name": "国新能源",
+      "close": 3.54,
+      "white_line": 3.27,
+      "bbi": 3.24,
+      "ratio_pct": 0.92,
+      "vol": 466446.26
+    },
+    {
+      "ts_code": "601108.SH",
+      "name": "财通证券",
+      "close": 8.41,
+      "white_line": 8.44,
+      "bbi": 8.36,
+      "ratio_pct": 0.92,
+      "vol": 347752.52
+    },
+    {
+      "ts_code": "688409.SH",
+      "name": "富创精密",
+      "close": 210.0,
+      "white_line": 186.82,
+      "bbi": 185.11,
+      "ratio_pct": 0.92,
+      "vol": 123091.0
+    },
+    {
+      "ts_code": "688105.SH",
+      "name": "诺唯赞",
+      "close": 23.08,
+      "white_line": 18.38,
+      "bbi": 18.21,
+      "ratio_pct": 0.91,
+      "vol": 287766.41
+    },
+    {
+      "ts_code": "300441.SZ",
+      "name": "鲍斯股份",
+      "close": 6.95,
+      "white_line": 6.75,
+      "bbi": 6.69,
+      "ratio_pct": 0.9,
+      "vol": 57961.42
+    },
+    {
+      "ts_code": "300677.SZ",
+      "name": "英科医疗",
+      "close": 49.6,
+      "white_line": 47.94,
+      "bbi": 47.52,
+      "ratio_pct": 0.88,
+      "vol": 107611.06
+    },
+    {
+      "ts_code": "603993.SH",
+      "name": "洛阳钼业",
+      "close": 20.75,
+      "white_line": 19.28,
+      "bbi": 19.11,
+      "ratio_pct": 0.87,
+      "vol": 2529300.18
+    },
+    {
+      "ts_code": "605098.SH",
+      "name": "行动教育",
+      "close": 58.28,
+      "white_line": 56.43,
+      "bbi": 55.94,
+      "ratio_pct": 0.87,
+      "vol": 15979.4
+    },
+    {
+      "ts_code": "600562.SH",
+      "name": "国睿科技",
+      "close": 26.75,
+      "white_line": 24.21,
+      "bbi": 24.0,
+      "ratio_pct": 0.86,
+      "vol": 186424.37
+    },
+    {
+      "ts_code": "001872.SZ",
+      "name": "招商港口",
+      "close": 22.17,
+      "white_line": 21.75,
+      "bbi": 21.57,
+      "ratio_pct": 0.85,
+      "vol": 26960.0
+    },
+    {
+      "ts_code": "002493.SZ",
+      "name": "荣盛石化",
+      "close": 13.52,
+      "white_line": 12.14,
+      "bbi": 12.04,
+      "ratio_pct": 0.84,
+      "vol": 576561.48
+    },
+    {
+      "ts_code": "300119.SZ",
+      "name": "瑞普生物",
+      "close": 18.38,
+      "white_line": 16.75,
+      "bbi": 16.61,
+      "ratio_pct": 0.84,
+      "vol": 37653.7
+    },
+    {
+      "ts_code": "601988.SH",
+      "name": "中国银行",
+      "close": 5.82,
+      "white_line": 5.93,
+      "bbi": 5.88,
+      "ratio_pct": 0.84,
+      "vol": 2628531.69
+    },
+    {
+      "ts_code": "002311.SZ",
+      "name": "海大集团",
+      "close": 46.59,
+      "white_line": 47.75,
+      "bbi": 47.35,
+      "ratio_pct": 0.83,
+      "vol": 135012.31
+    },
+    {
+      "ts_code": "300577.SZ",
+      "name": "开润股份",
+      "close": 18.36,
+      "white_line": 17.67,
+      "bbi": 17.53,
+      "ratio_pct": 0.82,
+      "vol": 36959.0
+    },
+    {
+      "ts_code": "600661.SH",
+      "name": "昂立教育",
+      "close": 9.72,
+      "white_line": 8.5,
+      "bbi": 8.43,
+      "ratio_pct": 0.82,
+      "vol": 118157.48
+    },
+    {
+      "ts_code": "688328.SH",
+      "name": "深科达",
+      "close": 78.47,
+      "white_line": 73.21,
+      "bbi": 72.61,
+      "ratio_pct": 0.82,
+      "vol": 94778.6
+    },
+    {
+      "ts_code": "002901.SZ",
+      "name": "大博医疗",
+      "close": 44.2,
+      "white_line": 43.97,
+      "bbi": 43.62,
+      "ratio_pct": 0.81,
+      "vol": 37280.1
+    },
+    {
+      "ts_code": "601857.SH",
+      "name": "中国石油",
+      "close": 10.85,
+      "white_line": 10.72,
+      "bbi": 10.63,
+      "ratio_pct": 0.81,
+      "vol": 1087100.97
+    },
+    {
+      "ts_code": "002142.SZ",
+      "name": "宁波银行",
+      "close": 32.0,
+      "white_line": 31.81,
+      "bbi": 31.56,
+      "ratio_pct": 0.8,
+      "vol": 315591.37
+    },
+    {
+      "ts_code": "002550.SZ",
+      "name": "千红制药",
+      "close": 6.83,
+      "white_line": 6.83,
+      "bbi": 6.77,
+      "ratio_pct": 0.8,
+      "vol": 368998.62
+    },
+    {
+      "ts_code": "688485.SH",
+      "name": "九州一轨",
+      "close": 62.5,
+      "white_line": 51.99,
+      "bbi": 51.57,
+      "ratio_pct": 0.8,
+      "vol": 65281.04
+    },
+    {
+      "ts_code": "301270.SZ",
+      "name": "汉仪股份",
+      "close": 34.43,
+      "white_line": 30.41,
+      "bbi": 30.17,
+      "ratio_pct": 0.79,
+      "vol": 93646.51
+    },
+    {
+      "ts_code": "603995.SH",
+      "name": "甬金股份",
+      "close": 24.73,
+      "white_line": 20.98,
+      "bbi": 20.81,
+      "ratio_pct": 0.79,
+      "vol": 82116.98
+    },
+    {
+      "ts_code": "002687.SZ",
+      "name": "乔治白",
+      "close": 5.44,
+      "white_line": 5.0,
+      "bbi": 4.96,
+      "ratio_pct": 0.78,
+      "vol": 304948.37
+    },
+    {
+      "ts_code": "601963.SH",
+      "name": "重庆银行",
+      "close": 10.97,
+      "white_line": 11.01,
+      "bbi": 10.93,
+      "ratio_pct": 0.78,
+      "vol": 129952.65
+    },
+    {
+      "ts_code": "002517.SZ",
+      "name": "恺英网络",
+      "close": 18.31,
+      "white_line": 16.94,
+      "bbi": 16.81,
+      "ratio_pct": 0.77,
+      "vol": 724917.77
+    },
+    {
+      "ts_code": "600368.SH",
+      "name": "五洲交通",
+      "close": 4.07,
+      "white_line": 3.84,
+      "bbi": 3.81,
+      "ratio_pct": 0.77,
+      "vol": 331889.28
+    },
+    {
+      "ts_code": "603192.SH",
+      "name": "汇得科技",
+      "close": 22.06,
+      "white_line": 20.77,
+      "bbi": 20.61,
+      "ratio_pct": 0.77,
+      "vol": 22942.0
+    },
+    {
+      "ts_code": "000623.SZ",
+      "name": "吉林敖东",
+      "close": 18.28,
+      "white_line": 18.19,
+      "bbi": 18.05,
+      "ratio_pct": 0.76,
+      "vol": 150028.64
+    },
+    {
+      "ts_code": "300768.SZ",
+      "name": "迪普科技",
+      "close": 16.79,
+      "white_line": 16.24,
+      "bbi": 16.12,
+      "ratio_pct": 0.76,
+      "vol": 110564.9
+    },
+    {
+      "ts_code": "600572.SH",
+      "name": "康恩贝",
+      "close": 4.34,
+      "white_line": 4.3,
+      "bbi": 4.27,
+      "ratio_pct": 0.76,
+      "vol": 514178.43
+    },
+    {
+      "ts_code": "000415.SZ",
+      "name": "渤海租赁",
+      "close": 4.64,
+      "white_line": 4.4,
+      "bbi": 4.37,
+      "ratio_pct": 0.75,
+      "vol": 574914.22
+    },
+    {
+      "ts_code": "002745.SZ",
+      "name": "木林森",
+      "close": 11.17,
+      "white_line": 10.76,
+      "bbi": 10.68,
+      "ratio_pct": 0.75,
+      "vol": 583235.05
+    },
+    {
+      "ts_code": "600116.SH",
+      "name": "三峡水利",
+      "close": 6.57,
+      "white_line": 6.45,
+      "bbi": 6.41,
+      "ratio_pct": 0.74,
+      "vol": 230720.6
+    },
+    {
+      "ts_code": "601326.SH",
+      "name": "秦港股份",
+      "close": 3.4,
+      "white_line": 3.45,
+      "bbi": 3.43,
+      "ratio_pct": 0.74,
+      "vol": 208810.76
+    },
+    {
+      "ts_code": "000100.SZ",
+      "name": "TCL科技",
+      "close": 4.87,
+      "white_line": 4.93,
+      "bbi": 4.9,
+      "ratio_pct": 0.72,
+      "vol": 4791213.21
+    },
+    {
+      "ts_code": "300112.SZ",
+      "name": "万讯自控",
+      "close": 9.14,
+      "white_line": 7.18,
+      "bbi": 7.13,
+      "ratio_pct": 0.72,
+      "vol": 184406.56
+    },
+    {
+      "ts_code": "601298.SH",
+      "name": "青岛港",
+      "close": 8.88,
+      "white_line": 8.8,
+      "bbi": 8.74,
+      "ratio_pct": 0.68,
+      "vol": 124995.85
+    },
+    {
+      "ts_code": "002936.SZ",
+      "name": "郑州银行",
+      "close": 1.77,
+      "white_line": 1.79,
+      "bbi": 1.78,
+      "ratio_pct": 0.67,
+      "vol": 864504.6
+    },
+    {
+      "ts_code": "600846.SH",
+      "name": "同济科技",
+      "close": 12.85,
+      "white_line": 11.65,
+      "bbi": 11.57,
+      "ratio_pct": 0.67,
+      "vol": 128625.33
+    },
+    {
+      "ts_code": "603225.SH",
+      "name": "新凤鸣",
+      "close": 19.93,
+      "white_line": 19.04,
+      "bbi": 18.91,
+      "ratio_pct": 0.67,
+      "vol": 136377.39
+    },
+    {
+      "ts_code": "603658.SH",
+      "name": "安图生物",
+      "close": 32.85,
+      "white_line": 32.54,
+      "bbi": 32.33,
+      "ratio_pct": 0.66,
+      "vol": 35618.5
+    },
+    {
+      "ts_code": "301273.SZ",
+      "name": "瑞晨环保",
+      "close": 37.88,
+      "white_line": 35.7,
+      "bbi": 35.47,
+      "ratio_pct": 0.65,
+      "vol": 58574.65
+    },
+    {
+      "ts_code": "600488.SH",
+      "name": "津药药业",
+      "close": 6.2,
+      "white_line": 5.43,
+      "bbi": 5.4,
+      "ratio_pct": 0.65,
+      "vol": 1611368.33
+    },
+    {
+      "ts_code": "001227.SZ",
+      "name": "兰州银行",
+      "close": 2.15,
+      "white_line": 2.16,
+      "bbi": 2.15,
+      "ratio_pct": 0.64,
+      "vol": 607030.33
+    },
+    {
+      "ts_code": "600400.SH",
+      "name": "红豆股份",
+      "close": 3.14,
+      "white_line": 2.83,
+      "bbi": 2.81,
+      "ratio_pct": 0.64,
+      "vol": 418201.97
+    },
+    {
+      "ts_code": "600795.SH",
+      "name": "国电电力",
+      "close": 5.02,
+      "white_line": 4.95,
+      "bbi": 4.92,
+      "ratio_pct": 0.63,
+      "vol": 876413.76
+    },
+    {
+      "ts_code": "600998.SH",
+      "name": "九州通",
+      "close": 5.05,
+      "white_line": 5.06,
+      "bbi": 5.03,
+      "ratio_pct": 0.63,
+      "vol": 454454.4
+    },
+    {
+      "ts_code": "600928.SH",
+      "name": "西安银行",
+      "close": 3.58,
+      "white_line": 3.59,
+      "bbi": 3.57,
+      "ratio_pct": 0.61,
+      "vol": 250451.99
+    },
+    {
+      "ts_code": "002612.SZ",
+      "name": "朗姿股份",
+      "close": 16.75,
+      "white_line": 13.73,
+      "bbi": 13.65,
+      "ratio_pct": 0.6,
+      "vol": 226356.94
+    },
+    {
+      "ts_code": "600199.SH",
+      "name": "金种子酒",
+      "close": 8.09,
+      "white_line": 7.48,
+      "bbi": 7.43,
+      "ratio_pct": 0.6,
+      "vol": 510604.12
+    },
+    {
+      "ts_code": "601528.SH",
+      "name": "瑞丰银行",
+      "close": 4.92,
+      "white_line": 4.9,
+      "bbi": 4.88,
+      "ratio_pct": 0.58,
+      "vol": 204621.29
+    },
+    {
+      "ts_code": "603333.SH",
+      "name": "福华尚纬",
+      "close": 9.24,
+      "white_line": 8.45,
+      "bbi": 8.4,
+      "ratio_pct": 0.58,
+      "vol": 211744.0
+    },
+    {
+      "ts_code": "000088.SZ",
+      "name": "盐田港",
+      "close": 4.46,
+      "white_line": 4.42,
+      "bbi": 4.39,
+      "ratio_pct": 0.54,
+      "vol": 207360.45
+    },
+    {
+      "ts_code": "001328.SZ",
+      "name": "登康口腔",
+      "close": 31.1,
+      "white_line": 30.01,
+      "bbi": 29.85,
+      "ratio_pct": 0.54,
+      "vol": 22868.38
+    },
+    {
+      "ts_code": "002333.SZ",
+      "name": "罗普斯金",
+      "close": 5.55,
+      "white_line": 5.2,
+      "bbi": 5.17,
+      "ratio_pct": 0.54,
+      "vol": 98861.02
+    },
+    {
+      "ts_code": "603387.SH",
+      "name": "基蛋生物",
+      "close": 9.32,
+      "white_line": 8.79,
+      "bbi": 8.74,
+      "ratio_pct": 0.54,
+      "vol": 139116.21
+    },
+    {
+      "ts_code": "600909.SH",
+      "name": "华安证券",
+      "close": 8.24,
+      "white_line": 8.25,
+      "bbi": 8.2,
+      "ratio_pct": 0.53,
+      "vol": 1184524.65
+    },
+    {
+      "ts_code": "603156.SH",
+      "name": "养元饮品",
+      "close": 50.88,
+      "white_line": 41.04,
+      "bbi": 40.83,
+      "ratio_pct": 0.53,
+      "vol": 153260.37
+    },
+    {
+      "ts_code": "000166.SZ",
+      "name": "申万宏源",
+      "close": 4.56,
+      "white_line": 4.64,
+      "bbi": 4.61,
+      "ratio_pct": 0.52,
+      "vol": 503469.74
+    },
+    {
+      "ts_code": "300149.SZ",
+      "name": "睿智医药",
+      "close": 10.48,
+      "white_line": 9.41,
+      "bbi": 9.36,
+      "ratio_pct": 0.52,
+      "vol": 718545.63
+    },
+    {
+      "ts_code": "600519.SH",
+      "name": "贵州茅台",
+      "close": 1348.86,
+      "white_line": 1307.54,
+      "bbi": 1300.83,
+      "ratio_pct": 0.52,
+      "vol": 62685.72
+    },
+    {
+      "ts_code": "688630.SH",
+      "name": "芯碁微装",
+      "close": 430.3,
+      "white_line": 377.98,
+      "bbi": 376.03,
+      "ratio_pct": 0.52,
+      "vol": 58464.35
+    },
+    {
+      "ts_code": "000895.SZ",
+      "name": "双汇发展",
+      "close": 24.95,
+      "white_line": 25.22,
+      "bbi": 25.09,
+      "ratio_pct": 0.51,
+      "vol": 213290.04
+    },
+    {
+      "ts_code": "000951.SZ",
+      "name": "中国重汽",
+      "close": 21.79,
+      "white_line": 22.15,
+      "bbi": 22.04,
+      "ratio_pct": 0.51,
+      "vol": 111183.82
+    },
+    {
+      "ts_code": "601658.SH",
+      "name": "邮储银行",
+      "close": 4.96,
+      "white_line": 5.08,
+      "bbi": 5.05,
+      "ratio_pct": 0.51,
+      "vol": 1137898.41
+    },
+    {
+      "ts_code": "605198.SH",
+      "name": "安德利",
+      "close": 68.73,
+      "white_line": 56.89,
+      "bbi": 56.6,
+      "ratio_pct": 0.51,
+      "vol": 68955.54
+    },
+    {
+      "ts_code": "300408.SZ",
+      "name": "三环集团",
+      "close": 126.9,
+      "white_line": 115.27,
+      "bbi": 114.69,
+      "ratio_pct": 0.5,
+      "vol": 802969.74
+    },
+    {
+      "ts_code": "601319.SH",
+      "name": "中国人保",
+      "close": 7.07,
+      "white_line": 7.32,
+      "bbi": 7.28,
+      "ratio_pct": 0.48,
+      "vol": 476011.94
+    },
+    {
+      "ts_code": "601998.SH",
+      "name": "中信银行",
+      "close": 7.52,
+      "white_line": 7.61,
+      "bbi": 7.58,
+      "ratio_pct": 0.48,
+      "vol": 554283.91
+    },
+    {
+      "ts_code": "600566.SH",
+      "name": "济川药业",
+      "close": 25.89,
+      "white_line": 26.43,
+      "bbi": 26.3,
+      "ratio_pct": 0.47,
+      "vol": 82868.65
+    },
+    {
+      "ts_code": "000750.SZ",
+      "name": "国海证券",
+      "close": 3.8,
+      "white_line": 3.82,
+      "bbi": 3.8,
+      "ratio_pct": 0.46,
+      "vol": 321430.55
+    },
+    {
+      "ts_code": "600015.SH",
+      "name": "华夏银行",
+      "close": 6.76,
+      "white_line": 6.92,
+      "bbi": 6.89,
+      "ratio_pct": 0.46,
+      "vol": 536664.61
+    },
+    {
+      "ts_code": "600033.SH",
+      "name": "福建高速",
+      "close": 3.57,
+      "white_line": 3.57,
+      "bbi": 3.56,
+      "ratio_pct": 0.46,
+      "vol": 241334.85
+    },
+    {
+      "ts_code": "603223.SH",
+      "name": "恒通股份",
+      "close": 10.8,
+      "white_line": 10.76,
+      "bbi": 10.71,
+      "ratio_pct": 0.45,
+      "vol": 96570.83
+    },
+    {
+      "ts_code": "002577.SZ",
+      "name": "雷柏科技",
+      "close": 18.73,
+      "white_line": 17.93,
+      "bbi": 17.85,
+      "ratio_pct": 0.44,
+      "vol": 32081.1
+    },
+    {
+      "ts_code": "300663.SZ",
+      "name": "科蓝软件",
+      "close": 9.92,
+      "white_line": 8.91,
+      "bbi": 8.88,
+      "ratio_pct": 0.44,
+      "vol": 518786.02
+    },
+    {
+      "ts_code": "300985.SZ",
+      "name": "致远新能",
+      "close": 33.97,
+      "white_line": 32.78,
+      "bbi": 32.64,
+      "ratio_pct": 0.43,
+      "vol": 57070.08
+    },
+    {
+      "ts_code": "601688.SH",
+      "name": "华泰证券",
+      "close": 19.39,
+      "white_line": 19.97,
+      "bbi": 19.89,
+      "ratio_pct": 0.43,
+      "vol": 491683.96
+    },
+    {
+      "ts_code": "000538.SZ",
+      "name": "云南白药",
+      "close": 51.19,
+      "white_line": 51.35,
+      "bbi": 51.14,
+      "ratio_pct": 0.41,
+      "vol": 107302.11
+    },
+    {
+      "ts_code": "300357.SZ",
+      "name": "我武生物",
+      "close": 25.01,
+      "white_line": 23.91,
+      "bbi": 23.82,
+      "ratio_pct": 0.41,
+      "vol": 159844.92
+    },
+    {
+      "ts_code": "688222.SH",
+      "name": "成都先导",
+      "close": 36.38,
+      "white_line": 29.89,
+      "bbi": 29.76,
+      "ratio_pct": 0.41,
+      "vol": 455072.59
+    },
+    {
+      "ts_code": "300760.SZ",
+      "name": "迈瑞医疗",
+      "close": 155.58,
+      "white_line": 152.05,
+      "bbi": 151.43,
+      "ratio_pct": 0.4,
+      "vol": 140124.68
+    },
+    {
+      "ts_code": "603630.SH",
+      "name": "拉芳家化",
+      "close": 15.23,
+      "white_line": 14.59,
+      "bbi": 14.53,
+      "ratio_pct": 0.4,
+      "vol": 71245.0
+    },
+    {
+      "ts_code": "688777.SH",
+      "name": "中控技术",
+      "close": 103.0,
+      "white_line": 93.47,
+      "bbi": 93.1,
+      "ratio_pct": 0.4,
+      "vol": 147240.25
+    },
+    {
+      "ts_code": "002350.SZ",
+      "name": "北京科锐",
+      "close": 16.68,
+      "white_line": 14.8,
+      "bbi": 14.75,
+      "ratio_pct": 0.39,
+      "vol": 130282.45
+    },
+    {
+      "ts_code": "688271.SH",
+      "name": "联影医疗",
+      "close": 112.7,
+      "white_line": 112.74,
+      "bbi": 112.3,
+      "ratio_pct": 0.39,
+      "vol": 64389.48
+    },
+    {
+      "ts_code": "002946.SZ",
+      "name": "新乳业",
+      "close": 16.97,
+      "white_line": 16.52,
+      "bbi": 16.46,
+      "ratio_pct": 0.38,
+      "vol": 115294.0
+    },
+    {
+      "ts_code": "601607.SH",
+      "name": "上海医药",
+      "close": 16.72,
+      "white_line": 16.59,
+      "bbi": 16.53,
+      "ratio_pct": 0.37,
+      "vol": 146724.06
+    },
+    {
+      "ts_code": "688176.SH",
+      "name": "亚虹医药",
+      "close": 12.87,
+      "white_line": 12.38,
+      "bbi": 12.34,
+      "ratio_pct": 0.37,
+      "vol": 169744.72
+    },
+    {
+      "ts_code": "002895.SZ",
+      "name": "川恒股份",
+      "close": 35.36,
+      "white_line": 33.72,
+      "bbi": 33.59,
+      "ratio_pct": 0.36,
+      "vol": 52748.0
+    },
+    {
+      "ts_code": "300146.SZ",
+      "name": "汤臣倍健",
+      "close": 10.11,
+      "white_line": 10.07,
+      "bbi": 10.04,
+      "ratio_pct": 0.36,
+      "vol": 162428.18
+    },
+    {
+      "ts_code": "300692.SZ",
+      "name": "中赋科技",
+      "close": 9.55,
+      "white_line": 8.36,
+      "bbi": 8.33,
+      "ratio_pct": 0.36,
+      "vol": 417204.65
+    },
+    {
+      "ts_code": "688087.SH",
+      "name": "英科再生",
+      "close": 40.8,
+      "white_line": 38.58,
+      "bbi": 38.44,
+      "ratio_pct": 0.36,
+      "vol": 13288.32
+    },
+    {
+      "ts_code": "688538.SH",
+      "name": "和辉光电",
+      "close": 2.39,
+      "white_line": 2.4,
+      "bbi": 2.39,
+      "ratio_pct": 0.36,
+      "vol": 518702.59
+    },
+    {
+      "ts_code": "300453.SZ",
+      "name": "三鑫医疗",
+      "close": 9.71,
+      "white_line": 9.55,
+      "bbi": 9.52,
+      "ratio_pct": 0.35,
+      "vol": 125739.74
+    },
+    {
+      "ts_code": "600155.SH",
+      "name": "华创云信",
+      "close": 5.92,
+      "white_line": 5.83,
+      "bbi": 5.81,
+      "ratio_pct": 0.35,
+      "vol": 203176.34
+    },
+    {
+      "ts_code": "600369.SH",
+      "name": "西南证券",
+      "close": 4.15,
+      "white_line": 4.14,
+      "bbi": 4.13,
+      "ratio_pct": 0.35,
+      "vol": 298945.18
+    },
+    {
+      "ts_code": "600233.SH",
+      "name": "圆通速递",
+      "close": 18.89,
+      "white_line": 18.2,
+      "bbi": 18.14,
+      "ratio_pct": 0.34,
+      "vol": 223446.47
+    },
+    {
+      "ts_code": "601229.SH",
+      "name": "上海银行",
+      "close": 9.27,
+      "white_line": 9.28,
+      "bbi": 9.25,
+      "ratio_pct": 0.34,
+      "vol": 530518.84
+    },
+    {
+      "ts_code": "600415.SH",
+      "name": "小商品城",
+      "close": 12.15,
+      "white_line": 11.85,
+      "bbi": 11.81,
+      "ratio_pct": 0.32,
+      "vol": 633195.66
+    },
+    {
+      "ts_code": "601901.SH",
+      "name": "方正证券",
+      "close": 7.05,
+      "white_line": 7.09,
+      "bbi": 7.07,
+      "ratio_pct": 0.31,
+      "vol": 291006.25
+    },
+    {
+      "ts_code": "688617.SH",
+      "name": "惠泰医疗",
+      "close": 211.01,
+      "white_line": 213.1,
+      "bbi": 212.44,
+      "ratio_pct": 0.31,
+      "vol": 14702.38
+    },
+    {
+      "ts_code": "600729.SH",
+      "name": "重百集团",
+      "close": 20.66,
+      "white_line": 20.41,
+      "bbi": 20.34,
+      "ratio_pct": 0.3,
+      "vol": 52771.76
+    },
+    {
+      "ts_code": "603567.SH",
+      "name": "珍宝岛",
+      "close": 7.06,
+      "white_line": 6.19,
+      "bbi": 6.17,
+      "ratio_pct": 0.3,
+      "vol": 1453647.3
+    },
+    {
+      "ts_code": "688220.SH",
+      "name": "翱捷科技",
+      "close": 104.5,
+      "white_line": 103.28,
+      "bbi": 102.97,
+      "ratio_pct": 0.3,
+      "vol": 137623.21
+    },
+    {
+      "ts_code": "000503.SZ",
+      "name": "国新健康",
+      "close": 7.54,
+      "white_line": 7.08,
+      "bbi": 7.06,
+      "ratio_pct": 0.29,
+      "vol": 196309.81
+    },
+    {
+      "ts_code": "600901.SH",
+      "name": "江苏金租",
+      "close": 6.51,
+      "white_line": 6.42,
+      "bbi": 6.4,
+      "ratio_pct": 0.28,
+      "vol": 497744.59
+    },
+    {
+      "ts_code": "600120.SH",
+      "name": "浙江东方",
+      "close": 5.15,
+      "white_line": 5.05,
+      "bbi": 5.03,
+      "ratio_pct": 0.27,
+      "vol": 301752.25
+    },
+    {
+      "ts_code": "601336.SH",
+      "name": "新华保险",
+      "close": 60.06,
+      "white_line": 63.03,
+      "bbi": 62.87,
+      "ratio_pct": 0.26,
+      "vol": 151347.12
+    },
+    {
+      "ts_code": "002154.SZ",
+      "name": "报喜鸟",
+      "close": 4.28,
+      "white_line": 3.9,
+      "bbi": 3.89,
+      "ratio_pct": 0.24,
+      "vol": 410545.86
+    },
+    {
+      "ts_code": "603858.SH",
+      "name": "步长制药",
+      "close": 15.87,
+      "white_line": 15.72,
+      "bbi": 15.68,
+      "ratio_pct": 0.24,
+      "vol": 76541.68
+    },
+    {
+      "ts_code": "000800.SZ",
+      "name": "一汽解放",
+      "close": 6.22,
+      "white_line": 6.33,
+      "bbi": 6.31,
+      "ratio_pct": 0.23,
+      "vol": 162238.21
+    },
+    {
+      "ts_code": "600908.SH",
+      "name": "无锡银行",
+      "close": 5.42,
+      "white_line": 5.49,
+      "bbi": 5.48,
+      "ratio_pct": 0.23,
+      "vol": 195519.64
+    },
+    {
+      "ts_code": "688309.SH",
+      "name": "恒誉环保",
+      "close": 70.5,
+      "white_line": 64.84,
+      "bbi": 64.69,
+      "ratio_pct": 0.23,
+      "vol": 24881.46
+    },
+    {
+      "ts_code": "300059.SZ",
+      "name": "东方财富",
+      "close": 20.03,
+      "white_line": 20.0,
+      "bbi": 19.96,
+      "ratio_pct": 0.22,
+      "vol": 1949808.37
+    },
+    {
+      "ts_code": "000999.SZ",
+      "name": "华润三九",
+      "close": 25.27,
+      "white_line": 25.25,
+      "bbi": 25.2,
+      "ratio_pct": 0.2,
+      "vol": 124942.7
+    },
+    {
+      "ts_code": "002926.SZ",
+      "name": "华西证券",
+      "close": 8.34,
+      "white_line": 8.39,
+      "bbi": 8.37,
+      "ratio_pct": 0.2,
+      "vol": 117510.0
+    },
+    {
+      "ts_code": "002439.SZ",
+      "name": "启明星辰",
+      "close": 14.32,
+      "white_line": 13.85,
+      "bbi": 13.82,
+      "ratio_pct": 0.19,
+      "vol": 257617.37
+    },
+    {
+      "ts_code": "003000.SZ",
+      "name": "劲仔食品",
+      "close": 10.85,
+      "white_line": 10.51,
+      "bbi": 10.49,
+      "ratio_pct": 0.19,
+      "vol": 47166.0
+    },
+    {
+      "ts_code": "300404.SZ",
+      "name": "博济医药",
+      "close": 11.23,
+      "white_line": 9.68,
+      "bbi": 9.67,
+      "ratio_pct": 0.17,
+      "vol": 494852.04
+    },
+    {
+      "ts_code": "600109.SH",
+      "name": "国金证券",
+      "close": 8.73,
+      "white_line": 8.66,
+      "bbi": 8.65,
+      "ratio_pct": 0.17,
+      "vol": 183185.19
+    },
+    {
+      "ts_code": "601577.SH",
+      "name": "长沙银行",
+      "close": 9.22,
+      "white_line": 9.35,
+      "bbi": 9.34,
+      "ratio_pct": 0.15,
+      "vol": 149421.92
+    },
+    {
+      "ts_code": "601818.SH",
+      "name": "光大银行",
+      "close": 3.05,
+      "white_line": 3.13,
+      "bbi": 3.13,
+      "ratio_pct": 0.15,
+      "vol": 1554446.52
+    },
+    {
+      "ts_code": "000089.SZ",
+      "name": "深圳机场",
+      "close": 6.56,
+      "white_line": 6.61,
+      "bbi": 6.6,
+      "ratio_pct": 0.14,
+      "vol": 180354.0
+    },
+    {
+      "ts_code": "603883.SH",
+      "name": "老百姓",
+      "close": 12.74,
+      "white_line": 12.41,
+      "bbi": 12.39,
+      "ratio_pct": 0.14,
+      "vol": 141037.02
+    },
+    {
+      "ts_code": "920020.BJ",
+      "name": "泰凯英",
+      "close": 15.49,
+      "white_line": 15.68,
+      "bbi": 15.65,
+      "ratio_pct": 0.14,
+      "vol": 5893.37
+    },
+    {
+      "ts_code": "300676.SZ",
+      "name": "华大基因",
+      "close": 40.69,
+      "white_line": 37.72,
+      "bbi": 37.67,
+      "ratio_pct": 0.13,
+      "vol": 148802.45
+    },
+    {
+      "ts_code": "300888.SZ",
+      "name": "稳健医疗",
+      "close": 29.93,
+      "white_line": 29.8,
+      "bbi": 29.76,
+      "ratio_pct": 0.13,
+      "vol": 50168.61
+    },
+    {
+      "ts_code": "600483.SH",
+      "name": "福能股份",
+      "close": 10.51,
+      "white_line": 10.84,
+      "bbi": 10.83,
+      "ratio_pct": 0.13,
+      "vol": 123348.02
+    },
+    {
+      "ts_code": "603565.SH",
+      "name": "中谷物流",
+      "close": 10.4,
+      "white_line": 10.47,
+      "bbi": 10.46,
+      "ratio_pct": 0.13,
+      "vol": 139963.29
+    },
+    {
+      "ts_code": "600039.SH",
+      "name": "四川路桥",
+      "close": 8.45,
+      "white_line": 8.73,
+      "bbi": 8.72,
+      "ratio_pct": 0.12,
+      "vol": 201765.38
+    },
+    {
+      "ts_code": "600312.SH",
+      "name": "平高电气",
+      "close": 20.29,
+      "white_line": 19.51,
+      "bbi": 19.49,
+      "ratio_pct": 0.12,
+      "vol": 203518.0
+    },
+    {
+      "ts_code": "600993.SH",
+      "name": "马应龙",
+      "close": 23.79,
+      "white_line": 24.01,
+      "bbi": 23.98,
+      "ratio_pct": 0.12,
+      "vol": 67113.37
+    },
+    {
+      "ts_code": "300001.SZ",
+      "name": "特锐德",
+      "close": 35.36,
+      "white_line": 34.78,
+      "bbi": 34.74,
+      "ratio_pct": 0.11,
+      "vol": 139319.26
+    },
+    {
+      "ts_code": "300896.SZ",
+      "name": "爱美客",
+      "close": 105.58,
+      "white_line": 102.96,
+      "bbi": 102.84,
+      "ratio_pct": 0.11,
+      "vol": 56923.08
+    },
+    {
+      "ts_code": "603336.SH",
+      "name": "宏辉果蔬",
+      "close": 10.1,
+      "white_line": 9.04,
+      "bbi": 9.03,
+      "ratio_pct": 0.11,
+      "vol": 203837.9
+    },
+    {
+      "ts_code": "002648.SZ",
+      "name": "卫星化学",
+      "close": 26.46,
+      "white_line": 24.81,
+      "bbi": 24.79,
+      "ratio_pct": 0.1,
+      "vol": 539056.74
+    },
+    {
+      "ts_code": "002500.SZ",
+      "name": "山西证券",
+      "close": 5.38,
+      "white_line": 5.37,
+      "bbi": 5.37,
+      "ratio_pct": 0.09,
+      "vol": 163857.6
+    },
+    {
+      "ts_code": "600926.SH",
+      "name": "杭州银行",
+      "close": 16.1,
+      "white_line": 16.0,
+      "bbi": 15.98,
+      "ratio_pct": 0.09,
+      "vol": 285697.23
+    },
+    {
+      "ts_code": "688131.SH",
+      "name": "皓元医药",
+      "close": 97.73,
+      "white_line": 79.03,
+      "bbi": 78.96,
+      "ratio_pct": 0.09,
+      "vol": 106323.03
+    },
+    {
+      "ts_code": "600350.SH",
+      "name": "山东高速",
+      "close": 10.7,
+      "white_line": 11.32,
+      "bbi": 11.31,
+      "ratio_pct": 0.08,
+      "vol": 151943.58
+    },
+    {
+      "ts_code": "600511.SH",
+      "name": "国药股份",
+      "close": 27.66,
+      "white_line": 27.66,
+      "bbi": 27.64,
+      "ratio_pct": 0.08,
+      "vol": 58514.94
+    },
+    {
+      "ts_code": "601156.SH",
+      "name": "东航物流",
+      "close": 17.87,
+      "white_line": 16.88,
+      "bbi": 16.87,
+      "ratio_pct": 0.08,
+      "vol": 115180.29
+    },
+    {
+      "ts_code": "603195.SH",
+      "name": "公牛集团",
+      "close": 41.05,
+      "white_line": 40.22,
+      "bbi": 40.19,
+      "ratio_pct": 0.08,
+      "vol": 42680.46
+    },
+    {
+      "ts_code": "600050.SH",
+      "name": "中国联通",
+      "close": 4.33,
+      "white_line": 4.38,
+      "bbi": 4.38,
+      "ratio_pct": 0.07,
+      "vol": 1269218.34
+    },
+    {
+      "ts_code": "600718.SH",
+      "name": "东软集团",
+      "close": 8.36,
+      "white_line": 8.21,
+      "bbi": 8.21,
+      "ratio_pct": 0.07,
+      "vol": 127907.75
+    },
+    {
+      "ts_code": "600999.SH",
+      "name": "招商证券",
+      "close": 18.21,
+      "white_line": 18.39,
+      "bbi": 18.38,
+      "ratio_pct": 0.07,
+      "vol": 505501.22
+    },
+    {
+      "ts_code": "603713.SH",
+      "name": "密尔克卫",
+      "close": 67.29,
+      "white_line": 64.01,
+      "bbi": 63.96,
+      "ratio_pct": 0.07,
+      "vol": 28894.83
+    },
+    {
+      "ts_code": "688363.SH",
+      "name": "华熙生物",
+      "close": 38.92,
+      "white_line": 37.99,
+      "bbi": 37.96,
+      "ratio_pct": 0.07,
+      "vol": 40617.07
+    },
+    {
+      "ts_code": "600761.SH",
+      "name": "安徽合力",
+      "close": 17.41,
+      "white_line": 17.49,
+      "bbi": 17.48,
+      "ratio_pct": 0.06,
+      "vol": 111527.87
+    },
+    {
+      "ts_code": "300738.SZ",
+      "name": "奥飞数据",
+      "close": 22.84,
+      "white_line": 21.91,
+      "bbi": 21.9,
+      "ratio_pct": 0.05,
+      "vol": 565351.64
+    },
+    {
+      "ts_code": "601377.SH",
+      "name": "兴业证券",
+      "close": 5.91,
+      "white_line": 6.06,
+      "bbi": 6.06,
+      "ratio_pct": 0.05,
+      "vol": 531499.6
+    },
+    {
+      "ts_code": "000893.SZ",
+      "name": "亚钾国际",
+      "close": 48.16,
+      "white_line": 48.09,
+      "bbi": 48.07,
+      "ratio_pct": 0.04,
+      "vol": 119045.5
+    },
+    {
+      "ts_code": "002156.SZ",
+      "name": "通富微电",
+      "close": 63.2,
+      "white_line": 64.15,
+      "bbi": 64.13,
+      "ratio_pct": 0.04,
+      "vol": 1023890.89
+    },
+    {
+      "ts_code": "301275.SZ",
+      "name": "汉朔科技",
+      "close": 44.41,
+      "white_line": 43.44,
+      "bbi": 43.42,
+      "ratio_pct": 0.04,
+      "vol": 47222.7
+    },
+    {
+      "ts_code": "301393.SZ",
+      "name": "昊帆生物",
+      "close": 66.98,
+      "white_line": 58.72,
+      "bbi": 58.7,
+      "ratio_pct": 0.04,
+      "vol": 41837.2
+    },
+    {
+      "ts_code": "601059.SH",
+      "name": "信达证券",
+      "close": 16.68,
+      "white_line": 16.59,
+      "bbi": 16.58,
+      "ratio_pct": 0.04,
+      "vol": 39471.0
+    },
+    {
+      "ts_code": "300434.SZ",
+      "name": "金石亚药",
+      "close": 11.6,
+      "white_line": 10.52,
+      "bbi": 10.51,
+      "ratio_pct": 0.03,
+      "vol": 300732.6
+    },
+    {
+      "ts_code": "600655.SH",
+      "name": "豫园股份",
+      "close": 4.66,
+      "white_line": 4.54,
+      "bbi": 4.53,
+      "ratio_pct": 0.03,
+      "vol": 134467.42
+    },
+    {
+      "ts_code": "601333.SH",
+      "name": "广深铁路",
+      "close": 2.96,
+      "white_line": 3.01,
+      "bbi": 3.01,
+      "ratio_pct": 0.03,
+      "vol": 577326.05
+    },
+    {
+      "ts_code": "600390.SH",
+      "name": "五矿资本",
+      "close": 4.91,
+      "white_line": 4.93,
+      "bbi": 4.93,
+      "ratio_pct": 0.02,
+      "vol": 290287.01
+    },
+    {
+      "ts_code": "300937.SZ",
+      "name": "药易购",
+      "close": 26.76,
+      "white_line": 23.98,
+      "bbi": 23.98,
+      "ratio_pct": 0.01,
+      "vol": 129301.75
+    },
+    {
+      "ts_code": "600064.SH",
+      "name": "南京高科",
+      "close": 7.65,
+      "white_line": 7.66,
+      "bbi": 7.66,
+      "ratio_pct": 0.01,
+      "vol": 159527.11
+    },
+    {
+      "ts_code": "601860.SH",
+      "name": "紫金银行",
+      "close": 2.56,
+      "white_line": 2.6,
+      "bbi": 2.6,
+      "ratio_pct": 0.01,
+      "vol": 495518.37
+    },
+    {
+      "ts_code": "600812.SH",
+      "name": "华北制药",
+      "close": 5.02,
+      "white_line": 4.8,
+      "bbi": 4.8,
+      "ratio_pct": 0.0,
+      "vol": 300915.84
+    }
+  ]
+}
