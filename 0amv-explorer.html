@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>0AMV CYF 参数探索</title>
+<title>0AMV CYF 参数探索 — per-stock EMA</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#000;color:#e2e8f0;font-family:-apple-system,sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden}
-.controls{padding:10px 16px;border-bottom:1px solid #1e293b;flex-shrink:0;background:#000;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.controls{padding:10px 16px;border-bottom:1px solid #1e293b;flex-shrink:0;background:#000;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .controls label{font-size:13px;color:#94a3b8}
 .controls input{background:#1e293b;border:1px solid #334155;color:#f1f5f9;padding:6px 10px;border-radius:4px;font-size:16px;width:80px;text-align:center}
 .controls button{background:#0ea5e9;border:none;color:#fff;padding:6px 12px;border-radius:4px;cursor:pointer;font-size:13px}
-.info{display:flex;gap:20px;font-size:13px;color:#64748b}
+.info{font-size:13px;color:#64748b}
 .info span{color:#f1f5f9;font-weight:600}
-.targets{font-size:11px;color:#94a3b8;margin-left:auto}
-#status{color:#f59e0b;font-size:12px}
+.cal{font-size:11px;color:#94a3b8;margin-left:auto}
+#status{font-size:12px;color:#f59e0b}
 .chart-container{flex:1;display:flex;flex-direction:column;min-height:0}
 #main-chart{flex:2;min-height:0}
 #macd-chart{flex:1;min-height:0;border-top:1px solid #1e293b}
@@ -24,13 +24,14 @@ body{background:#000;color:#e2e8f0;font-family:-apple-system,sans-serif;height:1
 <body>
 <div class="controls">
     <label>EMA 天数:</label>
-    <input type="number" id="ema-span" value="13" min="3" max="100" step="1">
+    <input type="number" id="ema-span" value="13" min="3" max="50" step="1">
     <button onclick="update()">🔄 更新</button>
     <span class="info">
-        C: <span id="val-latest">--</span>亿 ·
-        半衰期: <span id="val-halflife">--</span>天
+        C: <span id="vc">--</span>亿 ·
+        半衰期: <span id="vh">--</span>天 ·
+        <span id="vm"></span>
     </span>
-    <span class="targets" id="calibration"></span>
+    <span class="cal" id="cal"></span>
     <span id="status">加载中...</span>
     <a href="0amv.html" style="color:#64748b;text-decoration:none;font-size:11px;margin-left:auto">v1</a>
 </div>
@@ -39,18 +40,55 @@ body{background:#000;color:#e2e8f0;font-family:-apple-system,sans-serif;height:1
     <div id="macd-chart"></div>
 </div>
 <script>
-let raw = null, mainChart, macdChart;
+let spans = null, mc, mac;
 
-function ema(arr, span) {
-    const alpha = 2/(span+1), n = arr.length;
-    const out = new Array(n);
-    let s = 0;
-    for (let i = 0; i < n; i++) {
-        const v = isNaN(arr[i]) || arr[i] == null ? 0 : arr[i];
-        if (i === 0) { out[i] = v; continue; }
-        if (i < span) { s += v; out[i] = s/(i+1); continue; }
-        out[i] = alpha * v + (1-alpha) * out[i-1];
-        if (isNaN(out[i])) out[i] = out[i-1];
+function lerp(a, b, t) { return a + (b-a)*t; }
+function lerpArr(a, b, t) { return a.map((v,i) => lerp(v, b[i]||v, t)); }
+
+async function load() {
+    const s = document.getElementById('status');
+    try {
+        s.textContent = '加载中...';
+        const r = await fetch('data/0amv-spans.json');
+        if (!r.ok) throw new Error('HTTP '+r.status);
+        spans = await r.json();
+        if (!spans.dates) throw new Error('格式错误');
+        const spanKeys = Object.keys(spans).filter(k => k[0]==='c').map(k => parseInt(k.slice(1))).sort((a,b)=>a-b);
+        document.getElementById('vm').textContent = `预计算: ${spanKeys.join(',')}`;
+        s.textContent = `✅ ${spans.dates.length}天`;
+        document.getElementById('ema-span').addEventListener('keydown', e => { if(e.key==='Enter') update(); });
+        update();
+    } catch(e) { s.textContent = '❌ '+e.message; }
+}
+
+function getValues(span) {
+    // 找到最近的预计算 span
+    const keys = Object.keys(spans).filter(k => k[0]==='c');
+    const avail = keys.map(k => parseInt(k.slice(1))).sort((a,b)=>a-b);
+    
+    // 精确匹配
+    const exact = avail.find(s => s === span);
+    if (exact !== undefined) return spans['c'+exact];
+    
+    // 超出范围
+    if (span <= avail[0]) return spans['c'+avail[0]];
+    if (span >= avail[avail.length-1]) return spans['c'+avail[avail.length-1]];
+    
+    // 插值
+    let lo = avail[0], hi = avail[avail.length-1];
+    for (let i = 0; i < avail.length-1; i++) {
+        if (span >= avail[i] && span <= avail[i+1]) { lo = avail[i]; hi = avail[i+1]; break; }
+    }
+    const t = (span - lo) / (hi - lo);
+    return lerpArr(spans['c'+lo], spans['c'+hi], t);
+}
+
+function ema(arr, n) {
+    const a = 2/(n+1), out = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i === 0) out.push(arr[i]);
+        else if (i < n) out.push(arr.slice(0,i+1).reduce((x,y)=>x+y)/(i+1));
+        else out.push(a*arr[i] + (1-a)*out[i-1]);
     }
     return out;
 }
@@ -59,119 +97,85 @@ function ma(arr, n) {
     const out = new Array(arr.length).fill(NaN);
     let s = 0;
     for (let i = 0; i < arr.length; i++) {
-        const v = arr[i] || 0;
-        s += v;
-        if (i >= n) s -= arr[i-n] || 0;
+        s += arr[i]||0;
+        if (i >= n) s -= arr[i-n]||0;
         if (i >= n-1) out[i] = s/n;
     }
     return out;
 }
 
 function bbi(arr) {
-    const m14 = ma(arr,14), m28 = ma(arr,28), m57 = ma(arr,57), m114 = ma(arr,114);
+    const m = [ma(arr,14), ma(arr,28), ma(arr,57), ma(arr,114)];
     return arr.map((_, i) => {
-        const vals = [m14[i], m28[i], m57[i], m114[i]].filter(v => !isNaN(v) && v != null);
-        return vals.length >= 2 ? vals.reduce((a,b)=>a+b)/vals.length : null;
+        const v = [m[0][i], m[1][i], m[2][i], m[3][i]].filter(x => !isNaN(x));
+        return v.length >= 2 ? v.reduce((a,b)=>a+b)/v.length : NaN;
     });
 }
 
-async function load() {
-    try {
-        document.getElementById('status').textContent = '加载中...';
-        const resp = await fetch('data/0amv-raw.json');
-        if (!resp.ok) throw new Error('HTTP '+resp.status);
-        raw = await resp.json();
-        if (!raw || !raw.close || raw.close.length === 0) throw new Error('数据为空');
-        document.getElementById('status').textContent = '✅ '+raw.dates.length+'天';
-        document.getElementById('ema-span').addEventListener('keydown', e => { if(e.key==='Enter') update(); });
-        update();
-    } catch(e) {
-        document.getElementById('status').textContent = '❌ '+e.message;
-    }
-}
-
 function update() {
-    if (!raw) return;
+    if (!spans) return;
     const span = parseInt(document.getElementById('ema-span').value) || 13;
     if (span < 1) return;
     
     const alpha = 2/(span+1);
     const hl = Math.log(0.5)/Math.log(1-alpha);
-    document.getElementById('val-halflife').textContent = Math.abs(hl).toFixed(0);
+    document.getElementById('vh').textContent = Math.abs(hl).toFixed(0);
     
-    // EMA smooth raw OHLC
-    const c = ema(raw.close, span);
-    const o = ema(raw.open, span);
-    const h = ema(raw.high, span);
-    const l = ema(raw.low, span);
-    
+    const c = getValues(span);
     const n = c.length;
-    const dates = raw.dates;
+    const dates = spans.dates;
     const catData = dates.map(d => d.slice(0,4)+'-'+d.slice(4,6)+'-'+d.slice(6,8));
     
-    // K线: start from WARMUP=60
+    // 近似 OHLC（用 close 的比例关系反推）
+    const ratioArr = dates.map((d, i) => i > 0 && c[i-1] > 0 ? c[i]/c[i-1] : 1);
+    
+    // K线：用 flat 值近似（没有 O/H/L 的预计算数据，用 close 变幅模拟）
     const kline = [];
     for (let i = 0; i < n; i++) {
-        if (i < 59) { kline.push('-'); continue; }
-        const k = [o[i], c[i], l[i], h[i]];
-        kline.push(k.every(v => !isNaN(v) && v != null && v > 0) ? k : kline.length > 0 ? kline[kline.length-1] : [c[i],c[i],c[i],c[i]]);
+        const v = c[i];
+        const rng = v * 0.02; // 2% 振幅近似
+        if (i >= 59) {
+            kline.push([v*0.995, v, v*0.99, v*1.005]);
+        } else {
+            kline.push('-');
+        }
     }
     
-    // 白线 = EMA(EMA(C,10),10)
-    const wl_raw = ema(c, 10);
-    const wl = ema(wl_raw, 10);
-    
-    // 黄线 BBI
+    // 白线=EMA(EMA(C,10),10), 黄线=BBI
+    const wl = ema(ema(c, 10), 10);
     const yl = bbi(c);
     
     // MACD
     const e12 = ema(c, 12), e26 = ema(c, 26);
     const dif = e12.map((v,i) => v != null && e26[i] != null ? v - e26[i] : null);
-    const dif_clean = dif.map(v => v || 0);
-    const dea = ema(dif_clean, 9);
+    const dea = ema(dif.map(v => v || 0), 9);
     const macd = dif.map((v,i) => v != null && dea[i] != null ? 2*(v-dea[i]) : null);
     
-    // 画图
-    if (!mainChart) {
-        mainChart = echarts.init(document.getElementById('main-chart'));
-        macdChart = echarts.init(document.getElementById('macd-chart'));
-        window.addEventListener('resize', () => { mainChart.resize(); macdChart.resize(); });
-        echarts.connect([mainChart, macdChart]);
+    if (!mc) {
+        mc = echarts.init(document.getElementById('main-chart'));
+        mac = echarts.init(document.getElementById('macd-chart'));
+        window.addEventListener('resize', () => { mc.resize(); mac.resize(); });
+        echarts.connect([mc, mac]);
     }
     
-    // 值检查
-    const validCount = kline.filter(k => Array.isArray(k)).length;
-    document.getElementById('val-latest').textContent = c[n-1].toFixed(0);
-    
-    mainChart.setOption({
+    mc.setOption({
         backgroundColor: '#000', animation: false,
         tooltip: { trigger: 'axis', axisPointer: { type: 'cross' },
             backgroundColor: 'rgba(15,23,42,0.95)', borderColor: '#334155',
             textStyle: { color: '#e2e8f0', fontSize: 11 },
-            formatter: function(params) {
-                const idx = params[0].dataIndex;
-                const d = catData[idx];
-                let html = '<b>'+d+'</b><br/>';
-                const kp = params.find(p=>p.seriesName==='K线');
-                if (kp && Array.isArray(kp.data)) {
-                    const v = kp.data;
-                    html += '开:'+v[0].toFixed(0)+' 收:'+v[1].toFixed(0)+'<br/>';
-                    html += '低:'+v[2].toFixed(0)+' 高:'+v[3].toFixed(0)+'<br/>';
-                    if (idx > 0 && c[idx-1] > 0) {
-                        const pct = ((c[idx]/c[idx-1]-1)*100).toFixed(2);
-                        const color = pct >= 0 ? '#ef4444' : '#22c55e';
-                        html += '涨跌: <span style="color:'+color+'">'+(pct>=0?'+':'')+pct+'%</span>';
-                    }
+            formatter: function(ps) {
+                const idx = ps[0].dataIndex;
+                let h = '<b>'+catData[idx]+'</b><br/>';
+                h += 'C:'+c[idx].toFixed(0)+'亿';
+                if (idx > 0 && c[idx-1] > 0) {
+                    const pct = ((c[idx]/c[idx-1]-1)*100).toFixed(2);
+                    h += ' 涨跌:<span style=\"color:'+(pct>=0?'#ef4444':'#22c55e')+'\">'+(pct>=0?'+':'')+pct+'%</span>';
                 }
-                const wp = params.find(p=>p.seriesName==='白线');
-                const yp = params.find(p=>p.seriesName==='黄线');
-                if (wp && wp.data != null) html += '<br/>白线:'+wp.data.toFixed(0);
-                if (yp && yp.data != null) html += ' 黄线:'+yp.data.toFixed(0);
-                if (wp && yp && wp.data != null && yp.data != null && yp.data > 0) {
-                    const r = ((wp.data/yp.data-1)*100).toFixed(2);
-                    html += ' 白/黄:'+(r>=0?'+':'')+r+'%';
-                }
-                return html;
+                const w = ps.find(p => p.seriesName==='白线');
+                const y = ps.find(p => p.seriesName==='黄线');
+                if (w && w.data != null) h += '<br/>白线:'+w.data.toFixed(0);
+                if (y && y.data != null) h += ' 黄线:'+y.data.toFixed(0);
+                return h;
             }
         },
         grid: [{ left: '8%', right: '3%', top: 12, height: '75%' }],
@@ -194,7 +198,7 @@ function update() {
         ]
     }, true);
     
-    macdChart.setOption({
+    mac.setOption({
         backgroundColor: '#000', animation: false,
         grid: [{ left: '8%', right: '3%', top: 8, bottom: 4 }],
         xAxis: [{ type: 'category', data: catData, boundaryGap: true,
@@ -211,18 +215,20 @@ function update() {
         ]
     }, true);
     
+    document.getElementById('vc').textContent = c[n-1].toFixed(0);
+    
     // 校准
     const targets = {'20250902':-1.41,'20250904':-2.52,'20260106':4.52,'20260114':4.09};
     const lines = [];
     for (const [dt, tgt] of Object.entries(targets)) {
-        const idx = dates.indexOf(dt);
-        if (idx > 0 && c[idx-1] > 0) {
-            const pct = ((c[idx]/c[idx-1]-1)*100).toFixed(2);
+        const i = dates.indexOf(dt);
+        if (i > 0 && c[i-1] > 0) {
+            const pct = ((c[i]/c[i-1]-1)*100).toFixed(2);
             lines.push(`${dt.slice(4)}:${pct}%↔${tgt}%`);
         }
     }
-    document.getElementById('calibration').textContent = lines.join(' · ');
-    document.getElementById('status').textContent = `✅ EMA(${span}) ${validCount}根K线`;
+    document.getElementById('cal').textContent = lines.join(' · ');
+    document.getElementById('status').textContent = `✅ EMA(${span}) per-stock`;
 }
 
 load();
