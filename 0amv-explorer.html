@@ -113,7 +113,6 @@ function update() {
     // K线数据
     const kline = [];
     for (let i = 0; i < n; i++) {
-        if (i < 60) { kline.push(null); continue; } // warmup
         kline.push([cyfOpen[i], cyfClose[i], cyfLow[i], cyfHigh[i]]);
     }
     
