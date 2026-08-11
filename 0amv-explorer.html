@@ -12,10 +12,10 @@ body{background:#000;color:#e2e8f0;font-family:-apple-system,sans-serif;height:1
 .controls label{font-size:13px;color:#94a3b8}
 .controls input{background:#1e293b;border:1px solid #334155;color:#f1f5f9;padding:6px 10px;border-radius:4px;font-size:16px;width:80px;text-align:center}
 .controls button{background:#0ea5e9;border:none;color:#fff;padding:6px 12px;border-radius:4px;cursor:pointer;font-size:13px}
-.controls button:hover{background:#0284c7}
 .info{display:flex;gap:20px;font-size:13px;color:#64748b}
 .info span{color:#f1f5f9;font-weight:600}
-.targets{font-size:11px;color:#64748b;margin-left:auto}
+.targets{font-size:11px;color:#94a3b8;margin-left:auto}
+#status{color:#f59e0b;font-size:12px}
 .chart-container{flex:1;display:flex;flex-direction:column;min-height:0}
 #main-chart{flex:2;min-height:0}
 #macd-chart{flex:1;min-height:0;border-top:1px solid #1e293b}
@@ -24,154 +24,114 @@ body{background:#000;color:#e2e8f0;font-family:-apple-system,sans-serif;height:1
 <body>
 <div class="controls">
     <label>EMA 天数:</label>
-    <input type="number" id="ema-span" value="13" min="1" max="100" step="1" onchange="update()">
+    <input type="number" id="ema-span" value="13" min="3" max="100" step="1">
     <button onclick="update()">🔄 更新</button>
-    <span style="font-size:11px;color:#475569">(回车也可)</span>
-    <div class="info">
-        最新: <span id="val-latest">--</span> 亿 ·
-        半衰期: <span id="val-halflife">--</span> 天
-    </div>
-    <div class="targets" id="calibration"></div>
-    <a href="0amv.html" style="color:#64748b;text-decoration:none;font-size:11px">v1 市值版</a>
+    <span class="info">
+        C: <span id="val-latest">--</span>亿 ·
+        半衰期: <span id="val-halflife">--</span>天
+    </span>
+    <span class="targets" id="calibration"></span>
+    <span id="status">加载中...</span>
+    <a href="0amv.html" style="color:#64748b;text-decoration:none;font-size:11px;margin-left:auto">v1</a>
 </div>
 <div class="chart-container">
     <div id="main-chart"></div>
     <div id="macd-chart"></div>
 </div>
-
 <script>
-// 加载 raw 数据 (无 EMA)
-let rawData = null;
+let raw = null, mainChart, macdChart;
+
+function ema(arr, span) {
+    const alpha = 2/(span+1), n = arr.length;
+    const out = new Array(n);
+    let s = 0;
+    for (let i = 0; i < n; i++) {
+        const v = isNaN(arr[i]) || arr[i] == null ? 0 : arr[i];
+        if (i === 0) { out[i] = v; continue; }
+        if (i < span) { s += v; out[i] = s/(i+1); continue; }
+        out[i] = alpha * v + (1-alpha) * out[i-1];
+        if (isNaN(out[i])) out[i] = out[i-1];
+    }
+    return out;
+}
+
+function ma(arr, n) {
+    const out = new Array(arr.length).fill(NaN);
+    let s = 0;
+    for (let i = 0; i < arr.length; i++) {
+        const v = arr[i] || 0;
+        s += v;
+        if (i >= n) s -= arr[i-n] || 0;
+        if (i >= n-1) out[i] = s/n;
+    }
+    return out;
+}
+
+function bbi(arr) {
+    const m14 = ma(arr,14), m28 = ma(arr,28), m57 = ma(arr,57), m114 = ma(arr,114);
+    return arr.map((_, i) => {
+        const vals = [m14[i], m28[i], m57[i], m114[i]].filter(v => !isNaN(v) && v != null);
+        return vals.length >= 2 ? vals.reduce((a,b)=>a+b)/vals.length : null;
+    });
+}
 
 async function load() {
-    const resp = await fetch('data/0amv-raw.json');
-    rawData = await resp.json();
-    document.getElementById('ema-span').addEventListener('keydown', e => {
-        if (e.key === 'Enter') update();
-    });
-    update();
-}
-
-function ema(data, span) {
-    const alpha = 2 / (span + 1);
-    const result = new Array(data.length);
-    // 前 span 个数用 SMA
-    let sum = 0;
-    for (let i = 0; i < data.length; i++) {
-        if (i < span) {
-            sum += data[i];
-            result[i] = sum / (i + 1);
-        } else {
-            result[i] = alpha * data[i] + (1 - alpha) * result[i - 1];
-        }
+    try {
+        document.getElementById('status').textContent = '加载中...';
+        const resp = await fetch('data/0amv-raw.json');
+        if (!resp.ok) throw new Error('HTTP '+resp.status);
+        raw = await resp.json();
+        if (!raw || !raw.close || raw.close.length === 0) throw new Error('数据为空');
+        document.getElementById('status').textContent = '✅ '+raw.dates.length+'天';
+        document.getElementById('ema-span').addEventListener('keydown', e => { if(e.key==='Enter') update(); });
+        update();
+    } catch(e) {
+        document.getElementById('status').textContent = '❌ '+e.message;
     }
-    return result;
 }
-
-function ema2(data, span) {
-    // EMA of EMA for white line
-    const e1 = ema(data, span);
-    return ema(e1, span);
-}
-
-function ma(data, n) {
-    const result = new Array(data.length);
-    let sum = 0;
-    for (let i = 0; i < data.length; i++) {
-        sum += data[i];
-        if (i >= n) sum -= data[i - n];
-        if (i >= n - 1) result[i] = sum / n;
-        else result[i] = null;
-    }
-    return result;
-}
-
-function bbi(data) {
-    const m14 = ma(data, 14), m28 = ma(data, 28), m57 = ma(data, 57), m114 = ma(data, 114);
-    return data.map((_, i) => {
-        const vals = [m14[i], m28[i], m57[i], m114[i]].filter(v => v != null);
-        return vals.length >= 2 ? vals.reduce((a,b) => a+b) / vals.length : null;
-    });
-}
-
-let mainChart, macdChart;
 
 function update() {
+    if (!raw) return;
     const span = parseInt(document.getElementById('ema-span').value) || 13;
-    const alpha = 2 / (span + 1);
-    const halflife = Math.log(0.5) / Math.log(1 - alpha);
+    if (span < 1) return;
     
-    // EMA 平滑 raw close → CYF close
-    const cyfClose = ema(rawData.close, span);
-    const cyfOpen = ema(rawData.open, span);
-    const cyfHigh = ema(rawData.high, span);
-    const cyfLow = ema(rawData.low, span);
+    const alpha = 2/(span+1);
+    const hl = Math.log(0.5)/Math.log(1-alpha);
+    document.getElementById('val-halflife').textContent = Math.abs(hl).toFixed(0);
     
-    const n = cyfClose.length;
-    const dates = rawData.dates;
+    // EMA smooth raw OHLC
+    const c = ema(raw.close, span);
+    const o = ema(raw.open, span);
+    const h = ema(raw.high, span);
+    const l = ema(raw.low, span);
     
-    // K线数据
+    const n = c.length;
+    const dates = raw.dates;
+    const catData = dates.map(d => d.slice(0,4)+'-'+d.slice(4,6)+'-'+d.slice(6,8));
+    
+    // K线: start from WARMUP=60
     const kline = [];
     for (let i = 0; i < n; i++) {
-        kline.push([cyfOpen[i], cyfClose[i], cyfLow[i], cyfHigh[i]]);
+        if (i < 59) { kline.push('-'); continue; }
+        const k = [o[i], c[i], l[i], h[i]];
+        kline.push(k.every(v => !isNaN(v) && v != null && v > 0) ? k : kline.length > 0 ? kline[kline.length-1] : [c[i],c[i],c[i],c[i]]);
     }
     
-    // 白线
-    const whiteLine = ema2(cyfClose, 10);
-    const bbiLine = bbi(cyfClose);
+    // 白线 = EMA(EMA(C,10),10)
+    const wl_raw = ema(c, 10);
+    const wl = ema(wl_raw, 10);
+    
+    // 黄线 BBI
+    const yl = bbi(c);
     
     // MACD
-    const e12 = ema(cyfClose, 12), e26 = ema(cyfClose, 26);
+    const e12 = ema(c, 12), e26 = ema(c, 26);
     const dif = e12.map((v,i) => v != null && e26[i] != null ? v - e26[i] : null);
-    const dea = ema(dif.map(v => v || 0), 9);
-    const macd = dif.map((v,i) => v != null && dea[i] != null ? 2*(v - dea[i]) : null);
+    const dif_clean = dif.map(v => v || 0);
+    const dea = ema(dif_clean, 9);
+    const macd = dif.map((v,i) => v != null && dea[i] != null ? 2*(v-dea[i]) : null);
     
-    // 日期格式化
-    const categoryData = dates.map(d => `${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}`);
-    
-    const mainOption = {
-        backgroundColor: '#000', animation: false,
-        tooltip: { trigger: 'axis', axisPointer: { type: 'cross' },
-            backgroundColor: 'rgba(15,23,42,0.95)', borderColor: '#334155',
-            textStyle: { color: '#e2e8f0', fontSize: 11 } },
-        grid: [{ left: '8%', right: '3%', top: 12, height: '75%' }],
-        xAxis: [{ type: 'category', data: categoryData, boundaryGap: true,
-            axisLine: { lineStyle: { color: '#334155' } },
-            axisLabel: { color: '#64748b', fontSize: 10 } }],
-        yAxis: [{ type: 'value', scale: true, position: 'left',
-            axisLabel: { color: '#64748b', fontSize: 10, formatter: v => v.toFixed(0)+'亿' },
-            splitLine: { lineStyle: { color: '#1e293b', type: 'dashed' } } }],
-        dataZoom: [{ type: 'inside', start: 0, end: 100 },
-            { type: 'slider', start: 0, end: 100, height: 28, bottom: 8, left:'8%', right:'3%',
-              backgroundColor: 'rgba(30,41,59,0.9)', fillerColor: 'rgba(56,189,248,0.15)',
-              textStyle: { color: '#94a3b8', fontSize: 10 } }],
-        series: [
-            { name: 'K线', type: 'candlestick', data: kline,
-              itemStyle: { color: '#ef4444', color0: '#22c55e', borderColor: '#ef4444', borderColor0: '#22c55e' } },
-            { name: '白线', type: 'line', data: whiteLine, symbol: 'none',
-              lineStyle: { color: '#ffffff', width: 1.5 } },
-            { name: '黄线BBI', type: 'line', data: bbiLine, symbol: 'none',
-              lineStyle: { color: '#f59e0b', width: 2 } },
-        ]
-    };
-    
-    const macdOption = {
-        backgroundColor: '#000', animation: false,
-        grid: [{ left: '8%', right: '3%', top: 8, bottom: 4 }],
-        xAxis: [{ type: 'category', data: categoryData, boundaryGap: true,
-            axisLine: { lineStyle: { color: '#334155' } }, axisLabel: { show: false } }],
-        yAxis: [{ type: 'value', scale: true, position: 'left',
-            axisLabel: { color: '#64748b', fontSize: 9 },
-            splitLine: { lineStyle: { color: '#1e293b', type: 'dashed' } } }],
-        dataZoom: [{ type: 'inside', start: 0, end: 100 }],
-        series: [
-            { name: 'DIF', type: 'line', data: dif, symbol: 'none', lineStyle: { color: '#f59e0b', width: 1 } },
-            { name: 'DEA', type: 'line', data: dea, symbol: 'none', lineStyle: { color: '#3b82f6', width: 1 } },
-            { name: 'MACD', type: 'bar', data: macd,
-              itemStyle: { color: p => p.data >= 0 ? '#ef4444' : '#22c55e' }, barWidth: '60%' },
-        ]
-    };
-    
+    // 画图
     if (!mainChart) {
         mainChart = echarts.init(document.getElementById('main-chart'));
         macdChart = echarts.init(document.getElementById('macd-chart'));
@@ -179,26 +139,61 @@ function update() {
         echarts.connect([mainChart, macdChart]);
     }
     
-    mainChart.setOption(mainOption, true);
-    macdChart.setOption(macdOption, true);
+    // 值检查
+    const validCount = kline.filter(k => Array.isArray(k)).length;
+    document.getElementById('val-latest').textContent = c[n-1].toFixed(0);
     
-    // 更新信息
-    const latest = cyfClose[n-1];
-    document.getElementById('val-latest').textContent = latest.toFixed(0);
-    document.getElementById('val-halflife').textContent = Math.abs(halflife).toFixed(0);
+    mainChart.setOption({
+        backgroundColor: '#000', animation: false,
+        grid: [{ left: '8%', right: '3%', top: 12, height: '75%' }],
+        xAxis: [{ type: 'category', data: catData, boundaryGap: true,
+            axisLine: { lineStyle: { color: '#334155' } },
+            axisLabel: { color: '#64748b', fontSize: 10 } }],
+        yAxis: [{ type: 'value', scale: true,
+            axisLabel: { color: '#64748b', fontSize: 10, formatter: v => v.toFixed(0)+'亿' },
+            splitLine: { lineStyle: { color: '#1e293b', type: 'dashed' } } }],
+        dataZoom: [{ type: 'inside', start: 0, end: 100 },
+            { type: 'slider', start: 0, end: 100, height: 28, bottom: 8, left:'8%', right:'3%',
+              backgroundColor: 'rgba(30,41,59,0.9)', textStyle: { color: '#94a3b8', fontSize: 10 } }],
+        series: [
+            { name: 'K线', type: 'candlestick', data: kline,
+              itemStyle: { color: '#ef4444', color0: '#22c55e', borderColor: '#ef4444', borderColor0: '#22c55e' } },
+            { name: '白线', type: 'line', data: wl, symbol: 'none', connectNulls: true,
+              lineStyle: { color: '#ffffff', width: 1.5 } },
+            { name: '黄线', type: 'line', data: yl, symbol: 'none', connectNulls: true,
+              lineStyle: { color: '#f59e0b', width: 2 } },
+        ]
+    }, true);
     
-    // 校准点
-    const targets = {'20250902': -1.41, '20250904': -2.52, '20260106': 4.52, '20260114': 4.09};
-    let calLines = [];
+    macdChart.setOption({
+        backgroundColor: '#000', animation: false,
+        grid: [{ left: '8%', right: '3%', top: 8, bottom: 4 }],
+        xAxis: [{ type: 'category', data: catData, boundaryGap: true,
+            axisLine: { lineStyle: { color: '#334155' } }, axisLabel: { show: false } }],
+        yAxis: [{ type: 'value', scale: true,
+            axisLabel: { color: '#64748b', fontSize: 9 },
+            splitLine: { lineStyle: { color: '#1e293b', type: 'dashed' } } }],
+        dataZoom: [{ type: 'inside', start: 0, end: 100 }],
+        series: [
+            { name: 'DIF', type: 'line', data: dif, symbol: 'none', connectNulls: true, lineStyle: { color: '#f59e0b', width: 1 } },
+            { name: 'DEA', type: 'line', data: dea, symbol: 'none', connectNulls: true, lineStyle: { color: '#3b82f6', width: 1 } },
+            { name: 'MACD', type: 'bar', data: macd,
+              itemStyle: { color: p => p.data >= 0 ? '#ef4444' : '#22c55e' }, barWidth: '60%' },
+        ]
+    }, true);
+    
+    // 校准
+    const targets = {'20250902':-1.41,'20250904':-2.52,'20260106':4.52,'20260114':4.09};
+    const lines = [];
     for (const [dt, tgt] of Object.entries(targets)) {
         const idx = dates.indexOf(dt);
-        if (idx > 0 && cyfClose[idx-1] > 0) {
-            const pct = ((cyfClose[idx]/cyfClose[idx-1] - 1)*100).toFixed(2);
-            const err = Math.abs(pct - tgt).toFixed(2);
-            calLines.push(`${dt.slice(4)}: ${pct}% (目标${tgt} 差${err})`);
+        if (idx > 0 && c[idx-1] > 0) {
+            const pct = ((c[idx]/c[idx-1]-1)*100).toFixed(2);
+            lines.push(`${dt.slice(4)}:${pct}%↔${tgt}%`);
         }
     }
-    document.getElementById('calibration').textContent = calLines.join(' · ');
+    document.getElementById('calibration').textContent = lines.join(' · ');
+    document.getElementById('status').textContent = `✅ EMA(${span}) ${validCount}根K线`;
 }
 
 load();
