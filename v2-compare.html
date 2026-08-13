@@ -359,7 +359,7 @@ function renderTop() {
   const dates = DATA.dates;
   const kline = klineArr(DATA.allA);
   // 全A v2 多空区间标记（规则: 空<-3%；多>+6% 或空头中两日合计>+6%；同方向不重复）
-  const V2_BULL = 6.0, V2_BEAR = -3.0;
+  const V2_BULL = 5.6, V2_BEAR = -3.0;
   const marks = [], areas = [];
   let zone = null, zoneStart = null;
   for (let i = 1; i < dates.length; i++) {
