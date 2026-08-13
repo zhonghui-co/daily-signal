@@ -145,7 +145,7 @@ function pctOf(closes) {
 }
 function whiteOf(closes) {
   const e10 = ema(closes, 10);
-  const c = closes.map((v,i) => v != null ? v : (e10[i] != null ? e10[i] : 0));
+  const c = e10.map((v,i) => v != null ? v : closes[i]);
   return ema(c, 10);
 }
 function bbiOf(closes) {
@@ -237,12 +237,17 @@ function init() {
   A.white = whiteOf(DATA.allA.close);
   A.bbi = bbiOf(DATA.allA.close);
   A.macd = macdOf(DATA.allA.close);
+  zoomState.start = ZOOM_DEFAULT().start;
+  zoomState.end = 100;
 
   buildFilters();
   buildList();
   chartTop = echarts.init(document.getElementById('chartTop'));
   chartBottom = echarts.init(document.getElementById('chartBottom'));
   echarts.connect([chartTop, chartBottom]);
+  // datazoom 同步只在 init 注册一次（防重复注册导致事件风暴）
+  chartTop.on('datazoom', ev => syncZoom(ev, chartBottom));
+  chartBottom.on('datazoom', ev => syncZoom(ev, chartTop));
   renderTop();
   // 默认选中第一个分类
   const first = document.querySelector('.list-item');
@@ -353,6 +358,35 @@ function zoomSpan() {
 function renderTop() {
   const dates = DATA.dates;
   const kline = klineArr(DATA.allA);
+  // 全A v2 多空区间标记（规则: 空<-3%；多>+6% 或空头中两日合计>+6%；同方向不重复）
+  const V2_BULL = 6.0, V2_BEAR = -3.0;
+  const marks = [], areas = [];
+  let zone = null, zoneStart = null;
+  for (let i = 1; i < dates.length; i++) {
+    const c = A.pct[i], p = A.pct[i-1];
+    if (c == null) continue;
+    let ns = null;
+    if (c < V2_BEAR) ns = '空';
+    else if (c > V2_BULL) ns = '多';
+    else if (zone === '空' && p != null && (c + p) > V2_BULL) ns = '多';
+    if (ns && ns !== zone) {
+      if (zone != null && zoneStart != null) areas.push({s: zoneStart, e: i-1, t: zone});
+      marks.push({i, t: ns});
+      zone = ns; zoneStart = i;
+    }
+  }
+  if (zone != null && zoneStart != null) areas.push({s: zoneStart, e: dates.length-1, t: zone});
+  const markPoints = marks.map(m => ({
+    name: m.t, coord: [m.i, kline[m.i][2]], value: m.t,
+    symbol: 'triangle', symbolSize: 12, symbolRotate: m.t === '空' ? 180 : 0,
+    itemStyle: { color: m.t === '多' ? '#dc2626' : '#16a34a' },
+    label: { show: true, position: 'bottom', distance: 6, formatter: m.t,
+             color: m.t === '多' ? '#fca5a5' : '#86efac', fontSize: 12, fontWeight: 'bold' }
+  }));
+  const markAreas = areas.map(a => ([
+    { xAxis: dates[a.s], itemStyle: { color: a.t === '多' ? 'rgba(220,38,38,0.07)' : 'rgba(22,163,74,0.07)' } },
+    { xAxis: dates[a.e] }
+  ]));
   const option = {
     animation: false, backgroundColor: '#000',
     tooltip: { trigger:'axis', axisPointer:{type:'cross'}, backgroundColor:'#0f172a', borderColor:'#334155',
@@ -386,7 +420,9 @@ function renderTop() {
     ],
     series: [
       {name:'K线', type:'candlestick', data:kline, xAxisIndex:0, yAxisIndex:0,
-       itemStyle:{color:'#ef4444', color0:'#22c55e', borderColor:'#ef4444', borderColor0:'#22c55e'}},
+       itemStyle:{color:'#ef4444', color0:'#22c55e', borderColor:'#ef4444', borderColor0:'#22c55e'},
+       markPoint: { data: markPoints },
+       markArea: { silent: true, data: markAreas }},
       {name:'白线', type:'line', data:A.white, xAxisIndex:0, yAxisIndex:0, symbol:'none',
        lineStyle:{color:'#ffffff', width:1.2}},
       {name:'黄线', type:'line', data:A.bbi, xAxisIndex:0, yAxisIndex:0, symbol:'none',
@@ -398,8 +434,12 @@ function renderTop() {
     ]
   };
   chartTop.setOption(option, true);
-  chartTop.on('datazoom', ev => syncZoom(ev, chartBottom));
+  // 应用共享 zoom（换板块后不重置窗口）
+  chartTop.dispatchAction({type:'dataZoom', start: zoomState.start, end: zoomState.end});
 }
+
+/* ── 共享缩放状态（跨渲染保持） ── */
+const zoomState = { start: 72, end: 100 };
 
 function renderBottom(it) {
   const dates = DATA.dates;
@@ -474,7 +514,8 @@ function renderBottom(it) {
     ]
   };
   chartBottom.setOption(option, true);
-  chartBottom.on('datazoom', ev => syncZoom(ev, chartTop));
+  // 应用共享 zoom（换板块后不重置窗口）
+  chartBottom.dispatchAction({type:'dataZoom', start: zoomState.start, end: zoomState.end});
 }
 
 /* ───────── tab / 窗口切换 ───────── */
@@ -483,7 +524,12 @@ function syncZoom(from, to) {
   if (syncGuard) return;
   syncGuard = true;
   try {
-    to.dispatchAction({type:'dataZoom', start: from.start ?? from.batch?.[0].start, end: from.end ?? from.batch?.[0].end});
+    const s = from.start ?? from.batch?.[0].start;
+    const e = from.end ?? from.batch?.[0].end;
+    if (s == null || e == null) return;
+    if (Math.abs(s - zoomState.start) < 0.01 && Math.abs(e - zoomState.end) < 0.01) return; // 值未变，防递归
+    zoomState.start = s; zoomState.end = e;
+    to.dispatchAction({type:'dataZoom', start: s, end: e});
   } finally {
     syncGuard = false;
   }
