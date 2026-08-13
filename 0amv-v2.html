@@ -64,19 +64,15 @@ const mainOption = {
     }
   },
   axisPointer: { link:[{xAxisIndex:'all'}], label:{backgroundColor:'#334155'} },
-  grid: [{left:70, right:20, top:10, bottom:'42%'}, {left:70, right:20, top:'60%', bottom:20}],
-  xAxis: [{type:'category', data:dates, gridIndex:0, boundaryGap:true, axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{color:'#64748b'}},
-          {type:'category', data:dates, gridIndex:1, axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{show:false}}],
-  yAxis: [{scale:true, gridIndex:0, splitLine:{lineStyle:{color:'#111827'}}, axisLabel:{color:'#64748b'}},
-          {scale:true, gridIndex:1, splitLine:{lineStyle:{color:'#111827'}}, axisLabel:{color:'#64748b', fontSize:10}}],
+  grid: [{left:70, right:20, top:10, bottom:40}],
+  xAxis: [{type:'category', data:dates, gridIndex:0, boundaryGap:true, axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{color:'#64748b'}}],
+  yAxis: [{scale:true, gridIndex:0, splitLine:{lineStyle:{color:'#111827'}}, axisLabel:{color:'#64748b'}}],
   dataZoom: [{type:'inside', xAxisIndex:[0,1], start:zoomRange.start, end:zoomRange.end}],
   series: [
     {name:'K线', type:'candlestick', data:klineData, xAxisIndex:0, yAxisIndex:0,
       itemStyle: {color:'#ef4444', color0:'#22c55e', borderColor:'#ef4444', borderColor0:'#22c55e'}},
     {name:'白线', type:'line', data:whiteData, xAxisIndex:0, yAxisIndex:0, symbol:'none', lineStyle:{color:'#ffffff', width:1.2}},
-    {name:'黄线', type:'line', data:bbiData, xAxisIndex:0, yAxisIndex:0, symbol:'none', lineStyle:{color:'#f59e0b', width:1.2, type:'dashed'}},
-    {name:'涨跌', type:'bar', data:chgData.map(v=>v===null?0:v), xAxisIndex:1, yAxisIndex:1,
-      itemStyle: { color: function(p){ return chgData[p.dataIndex]>=0 ? '#ef4444' : '#22c55e'; } }, barWidth:'60%'}
+    {name:'黄线', type:'line', data:bbiData, xAxisIndex:0, yAxisIndex:0, symbol:'none', lineStyle:{color:'#f59e0b', width:1.2, type:'dashed'}}
   ]
 };
 const macdOption = {
