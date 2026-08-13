@@ -1,879 +1,1123 @@
 {
-  "run_at": "2026-08-12T16:30:03.758046+08:00",
-  "total_scanned": 549,
-  "with_data": 549,
-  "b1_signals": 70,
+  "run_at": "2026-08-13T16:30:02.992420+08:00",
+  "total_scanned": 607,
+  "with_data": 607,
+  "b1_signals": 89,
   "stocks": [
+    {
+      "ts_code": "601168.SH",
+      "name": "西部矿业",
+      "close": 36.3,
+      "white_line": 37.78,
+      "bbi": 34.47,
+      "ratio_pct": 9.59,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 7.87
+    },
+    {
+      "ts_code": "603129.SH",
+      "name": "春风动力",
+      "close": 281.49,
+      "white_line": 292.31,
+      "bbi": 273.91,
+      "ratio_pct": 6.72,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 4.76
+    },
+    {
+      "ts_code": "003001.SZ",
+      "name": "中岩大地",
+      "close": 17.74,
+      "white_line": 19.08,
+      "bbi": 17.93,
+      "ratio_pct": 6.4,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 2.21
+    },
+    {
+      "ts_code": "000676.SZ",
+      "name": "智度股份",
+      "close": 7.02,
+      "white_line": 7.15,
+      "bbi": 6.74,
+      "ratio_pct": 6.15,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 11.67
+    },
+    {
+      "ts_code": "600882.SH",
+      "name": "妙可蓝多",
+      "close": 21.7,
+      "white_line": 21.88,
+      "bbi": 20.67,
+      "ratio_pct": 5.87,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 12.15
+    },
+    {
+      "ts_code": "002415.SZ",
+      "name": "海康威视",
+      "close": 35.66,
+      "white_line": 36.58,
+      "bbi": 34.85,
+      "ratio_pct": 4.95,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 5.59
+    },
     {
       "ts_code": "002003.SZ",
       "name": "伟星股份",
-      "close": 10.2,
-      "white_line": 10.19,
-      "bbi": 9.77,
-      "ratio_pct": 4.3,
+      "close": 10.11,
+      "white_line": 10.22,
+      "bbi": 9.8,
+      "ratio_pct": 4.32,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 5.63
+    },
+    {
+      "ts_code": "688111.SH",
+      "name": "金山办公",
+      "close": 254.5,
+      "white_line": 255.44,
+      "bbi": 245.67,
+      "ratio_pct": 3.98,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 8.39
+    },
+    {
+      "ts_code": "600535.SH",
+      "name": "天士力",
+      "close": 15.43,
+      "white_line": 15.65,
+      "bbi": 15.08,
+      "ratio_pct": 3.79,
       "b1_dates": [
         "20260812"
       ],
-      "latest_j": 12.32
-    },
-    {
-      "ts_code": "603338.SH",
-      "name": "浙江鼎力",
-      "close": 56.96,
-      "white_line": 56.47,
-      "bbi": 54.23,
-      "ratio_pct": 4.13,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 35.4
+      "latest_j": 22.59
     },
     {
       "ts_code": "002563.SZ",
       "name": "森马服饰",
-      "close": 5.96,
-      "white_line": 5.96,
-      "bbi": 5.75,
-      "ratio_pct": 3.66,
+      "close": 5.84,
+      "white_line": 5.98,
+      "bbi": 5.76,
+      "ratio_pct": 3.67,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 2.05
+    },
+    {
+      "ts_code": "605007.SH",
+      "name": "五洲特纸",
+      "close": 15.38,
+      "white_line": 15.56,
+      "bbi": 15.04,
+      "ratio_pct": 3.48,
       "b1_dates": [
         "20260812"
       ],
-      "latest_j": 7.82
+      "latest_j": 14.66
+    },
+    {
+      "ts_code": "000948.SZ",
+      "name": "南天信息",
+      "close": 14.46,
+      "white_line": 14.64,
+      "bbi": 14.17,
+      "ratio_pct": 3.25,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 12.85
     },
     {
       "ts_code": "601038.SH",
       "name": "一拖股份",
-      "close": 13.06,
-      "white_line": 13.46,
-      "bbi": 13.03,
+      "close": 12.86,
+      "white_line": 13.45,
+      "bbi": 13.02,
       "ratio_pct": 3.24,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 4.52
+      "latest_j": 1.51
     },
     {
       "ts_code": "000848.SZ",
       "name": "承德露露",
-      "close": 8.7,
-      "white_line": 8.69,
-      "bbi": 8.42,
-      "ratio_pct": 3.13,
+      "close": 8.57,
+      "white_line": 8.71,
+      "bbi": 8.44,
+      "ratio_pct": 3.22,
       "b1_dates": [
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 12.04
+      "latest_j": 1.23
     },
     {
-      "ts_code": "600886.SH",
-      "name": "国投电力",
-      "close": 14.0,
-      "white_line": 14.8,
-      "bbi": 14.36,
-      "ratio_pct": 3.07,
+      "ts_code": "600236.SH",
+      "name": "桂冠电力",
+      "close": 10.43,
+      "white_line": 10.77,
+      "bbi": 10.45,
+      "ratio_pct": 3.05,
       "b1_dates": [
-        "20260812"
+        "20260813"
       ],
-      "latest_j": 3.6
+      "latest_j": 4.42
     },
     {
-      "ts_code": "601339.SH",
-      "name": "百隆东方",
-      "close": 8.04,
-      "white_line": 8.0,
-      "bbi": 7.76,
-      "ratio_pct": 3.01,
+      "ts_code": "603337.SH",
+      "name": "杰克科技",
+      "close": 39.57,
+      "white_line": 42.16,
+      "bbi": 40.94,
+      "ratio_pct": 2.99,
       "b1_dates": [
-        "20260811"
+        "20260813"
       ],
-      "latest_j": 26.54
+      "latest_j": 12.11
     },
     {
       "ts_code": "601000.SH",
       "name": "唐山港",
-      "close": 4.59,
+      "close": 4.53,
       "white_line": 4.68,
-      "bbi": 4.54,
-      "ratio_pct": 2.96,
+      "bbi": 4.55,
+      "ratio_pct": 2.91,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 6.51
+      "latest_j": 5.82
+    },
+    {
+      "ts_code": "601339.SH",
+      "name": "百隆东方",
+      "close": 7.85,
+      "white_line": 8.0,
+      "bbi": 7.78,
+      "ratio_pct": 2.9,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 11.75
+    },
+    {
+      "ts_code": "605028.SH",
+      "name": "世茂能源",
+      "close": 25.23,
+      "white_line": 25.82,
+      "bbi": 25.09,
+      "ratio_pct": 2.89,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 7.54
+    },
+    {
+      "ts_code": "600886.SH",
+      "name": "国投电力",
+      "close": 13.95,
+      "white_line": 14.75,
+      "bbi": 14.35,
+      "ratio_pct": 2.81,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 4.28
     },
     {
       "ts_code": "000423.SZ",
       "name": "东阿阿胶",
-      "close": 52.97,
-      "white_line": 52.83,
-      "bbi": 51.46,
-      "ratio_pct": 2.66,
+      "close": 52.68,
+      "white_line": 52.95,
+      "bbi": 51.55,
+      "ratio_pct": 2.71,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 8.14
+    },
+    {
+      "ts_code": "600436.SH",
+      "name": "片仔癀",
+      "close": 133.66,
+      "white_line": 135.99,
+      "bbi": 132.62,
+      "ratio_pct": 2.54,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 10.14
+    },
+    {
+      "ts_code": "000408.SZ",
+      "name": "藏格矿业",
+      "close": 78.04,
+      "white_line": 80.85,
+      "bbi": 78.85,
+      "ratio_pct": 2.53,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 7.89
+    },
+    {
+      "ts_code": "600885.SH",
+      "name": "宏发股份",
+      "close": 36.02,
+      "white_line": 34.92,
+      "bbi": 34.07,
+      "ratio_pct": 2.5,
       "b1_dates": [
         "20260812"
       ],
-      "latest_j": 9.79
+      "latest_j": 45.49
+    },
+    {
+      "ts_code": "002258.SZ",
+      "name": "利尔化学",
+      "close": 13.71,
+      "white_line": 14.39,
+      "bbi": 14.04,
+      "ratio_pct": 2.49,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 3.37
+    },
+    {
+      "ts_code": "601058.SH",
+      "name": "赛轮轮胎",
+      "close": 13.38,
+      "white_line": 13.65,
+      "bbi": 13.33,
+      "ratio_pct": 2.4,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 5.24
     },
     {
       "ts_code": "000429.SZ",
       "name": "粤高速A",
-      "close": 13.16,
-      "white_line": 14.33,
-      "bbi": 13.97,
-      "ratio_pct": 2.55,
+      "close": 13.23,
+      "white_line": 14.25,
+      "bbi": 13.94,
+      "ratio_pct": 2.22,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 8.38
+      "latest_j": 10.65
     },
     {
-      "ts_code": "600690.SH",
-      "name": "海尔智家",
-      "close": 21.75,
-      "white_line": 22.14,
-      "bbi": 21.66,
+      "ts_code": "000598.SZ",
+      "name": "兴蓉环境",
+      "close": 7.13,
+      "white_line": 7.19,
+      "bbi": 7.04,
       "ratio_pct": 2.21,
       "b1_dates": [
-        "20260811"
+        "20260813"
       ],
-      "latest_j": 13.57
+      "latest_j": 12.42
     },
     {
-      "ts_code": "600012.SH",
-      "name": "皖通高速",
-      "close": 16.5,
-      "white_line": 17.15,
-      "bbi": 16.79,
-      "ratio_pct": 2.13,
+      "ts_code": "300663.SZ",
+      "name": "科蓝软件",
+      "close": 9.32,
+      "white_line": 9.16,
+      "bbi": 8.97,
+      "ratio_pct": 2.11,
       "b1_dates": [
-        "20260811"
+        "20260813"
       ],
-      "latest_j": 38.69
+      "latest_j": 11.68
+    },
+    {
+      "ts_code": "300972.SZ",
+      "name": "万辰集团",
+      "close": 198.72,
+      "white_line": 202.83,
+      "bbi": 198.71,
+      "ratio_pct": 2.08,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 10.28
     },
     {
       "ts_code": "600285.SH",
       "name": "羚锐制药",
-      "close": 20.47,
-      "white_line": 22.55,
-      "bbi": 22.08,
-      "ratio_pct": 2.1,
-      "b1_dates": [
-        "20260812"
-      ],
-      "latest_j": 10.07
-    },
-    {
-      "ts_code": "601628.SH",
-      "name": "中国人寿",
-      "close": 37.33,
-      "white_line": 38.93,
-      "bbi": 38.14,
-      "ratio_pct": 2.08,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 14.38
-    },
-    {
-      "ts_code": "603766.SH",
-      "name": "隆鑫通用",
-      "close": 13.48,
-      "white_line": 13.96,
-      "bbi": 13.69,
+      "close": 19.67,
+      "white_line": 22.48,
+      "bbi": 22.04,
       "ratio_pct": 2.0,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 5.23
-    },
-    {
-      "ts_code": "002958.SZ",
-      "name": "青农商行",
-      "close": 2.98,
-      "white_line": 3.05,
-      "bbi": 2.99,
-      "ratio_pct": 1.97,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 6.95
+      "latest_j": 0.81
     },
     {
       "ts_code": "603298.SH",
       "name": "杭叉集团",
-      "close": 26.13,
-      "white_line": 26.84,
-      "bbi": 26.33,
-      "ratio_pct": 1.96,
+      "close": 25.71,
+      "white_line": 26.81,
+      "bbi": 26.29,
+      "ratio_pct": 1.98,
       "b1_dates": [
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 4.12
+      "latest_j": 0.62
+    },
+    {
+      "ts_code": "603766.SH",
+      "name": "隆鑫通用",
+      "close": 13.28,
+      "white_line": 13.95,
+      "bbi": 13.68,
+      "ratio_pct": 1.98,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 1.41
+    },
+    {
+      "ts_code": "002958.SZ",
+      "name": "青农商行",
+      "close": 2.96,
+      "white_line": 3.05,
+      "bbi": 2.99,
+      "ratio_pct": 1.85,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 8.82
     },
     {
       "ts_code": "301087.SZ",
       "name": "可孚医疗",
-      "close": 49.95,
-      "white_line": 52.18,
-      "bbi": 51.18,
-      "ratio_pct": 1.95,
+      "close": 50.0,
+      "white_line": 52.06,
+      "bbi": 51.11,
+      "ratio_pct": 1.84,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 5.74
-    },
-    {
-      "ts_code": "600030.SH",
-      "name": "中信证券",
-      "close": 27.7,
-      "white_line": 28.18,
-      "bbi": 27.67,
-      "ratio_pct": 1.86,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 11.2
+      "latest_j": 10.72
     },
     {
       "ts_code": "600660.SH",
       "name": "福耀玻璃",
-      "close": 55.43,
-      "white_line": 56.23,
-      "bbi": 55.23,
-      "ratio_pct": 1.82,
+      "close": 54.87,
+      "white_line": 56.24,
+      "bbi": 55.24,
+      "ratio_pct": 1.8,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 5.04
+    },
+    {
+      "ts_code": "601398.SH",
+      "name": "工商银行",
+      "close": 7.6,
+      "white_line": 7.68,
+      "bbi": 7.55,
+      "ratio_pct": 1.8,
       "b1_dates": [
         "20260812"
       ],
-      "latest_j": 12.73
+      "latest_j": 23.61
+    },
+    {
+      "ts_code": "603993.SH",
+      "name": "洛阳钼业",
+      "close": 18.41,
+      "white_line": 19.42,
+      "bbi": 19.09,
+      "ratio_pct": 1.75,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 5.19
     },
     {
       "ts_code": "601816.SH",
       "name": "京沪高铁",
-      "close": 5.01,
+      "close": 4.97,
       "white_line": 5.04,
-      "bbi": 4.95,
-      "ratio_pct": 1.73,
+      "bbi": 4.96,
+      "ratio_pct": 1.74,
       "b1_dates": [
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 9.51
+      "latest_j": 9.9
     },
     {
-      "ts_code": "300779.SZ",
-      "name": "惠城环保",
-      "close": 73.55,
-      "white_line": 73.56,
-      "bbi": 72.41,
+      "ts_code": "002867.SZ",
+      "name": "周大生",
+      "close": 12.46,
+      "white_line": 12.58,
+      "bbi": 12.37,
+      "ratio_pct": 1.67,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 7.44
+    },
+    {
+      "ts_code": "600872.SH",
+      "name": "中炬高新",
+      "close": 18.98,
+      "white_line": 19.32,
+      "bbi": 19.02,
       "ratio_pct": 1.59,
       "b1_dates": [
-        "20260811"
+        "20260813"
       ],
-      "latest_j": 23.16
+      "latest_j": 9.14
     },
     {
       "ts_code": "600529.SH",
       "name": "山东药玻",
-      "close": 19.05,
+      "close": 19.15,
       "white_line": 19.32,
-      "bbi": 19.03,
-      "ratio_pct": 1.53,
+      "bbi": 19.04,
+      "ratio_pct": 1.48,
       "b1_dates": [
-        "20260811",
         "20260812"
       ],
-      "latest_j": 7.91
+      "latest_j": 13.57
     },
     {
-      "ts_code": "600066.SH",
-      "name": "宇通客车",
-      "close": 29.82,
-      "white_line": 31.76,
-      "bbi": 31.3,
-      "ratio_pct": 1.47,
+      "ts_code": "603558.SH",
+      "name": "健盛集团",
+      "close": 11.92,
+      "white_line": 12.55,
+      "bbi": 12.37,
+      "ratio_pct": 1.43,
       "b1_dates": [
-        "20260811"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 22.23
+      "latest_j": 5.22
+    },
+    {
+      "ts_code": "600398.SH",
+      "name": "海澜之家",
+      "close": 5.99,
+      "white_line": 6.07,
+      "bbi": 5.99,
+      "ratio_pct": 1.31,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 6.78
+    },
+    {
+      "ts_code": "002839.SZ",
+      "name": "张家港行",
+      "close": 4.3,
+      "white_line": 4.41,
+      "bbi": 4.35,
+      "ratio_pct": 1.26,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 5.33
+    },
+    {
+      "ts_code": "600018.SH",
+      "name": "上港集团",
+      "close": 5.1,
+      "white_line": 5.18,
+      "bbi": 5.12,
+      "ratio_pct": 1.26,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 9.98
+    },
+    {
+      "ts_code": "600887.SH",
+      "name": "伊利股份",
+      "close": 25.89,
+      "white_line": 26.51,
+      "bbi": 26.18,
+      "ratio_pct": 1.25,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 8.65
+    },
+    {
+      "ts_code": "603871.SH",
+      "name": "嘉友国际",
+      "close": 12.08,
+      "white_line": 12.56,
+      "bbi": 12.4,
+      "ratio_pct": 1.24,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 2.76
     },
     {
       "ts_code": "600750.SH",
       "name": "华润江中",
-      "close": 24.21,
-      "white_line": 25.37,
+      "close": 24.08,
+      "white_line": 25.31,
       "bbi": 25.01,
-      "ratio_pct": 1.43,
+      "ratio_pct": 1.2,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 1.88
+      "latest_j": 4.18
     },
     {
-      "ts_code": "688036.SH",
-      "name": "传音控股",
-      "close": 56.29,
-      "white_line": 61.01,
-      "bbi": 60.16,
-      "ratio_pct": 1.41,
+      "ts_code": "600031.SH",
+      "name": "三一重工",
+      "close": 18.72,
+      "white_line": 19.67,
+      "bbi": 19.45,
+      "ratio_pct": 1.15,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 9.12
+      "latest_j": 5.73
     },
     {
       "ts_code": "601928.SH",
       "name": "凤凰传媒",
       "close": 9.16,
-      "white_line": 9.54,
-      "bbi": 9.41,
-      "ratio_pct": 1.39,
+      "white_line": 9.51,
+      "bbi": 9.4,
+      "ratio_pct": 1.15,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 7.31
-    },
-    {
-      "ts_code": "002839.SZ",
-      "name": "张家港行",
-      "close": 4.32,
-      "white_line": 4.41,
-      "bbi": 4.35,
-      "ratio_pct": 1.38,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 4.97
-    },
-    {
-      "ts_code": "603993.SH",
-      "name": "洛阳钼业",
-      "close": 19.0,
-      "white_line": 19.37,
-      "bbi": 19.11,
-      "ratio_pct": 1.38,
-      "b1_dates": [
-        "20260812"
-      ],
-      "latest_j": 12.8
-    },
-    {
-      "ts_code": "600018.SH",
-      "name": "上港集团",
-      "close": 5.12,
-      "white_line": 5.18,
-      "bbi": 5.12,
-      "ratio_pct": 1.34,
-      "b1_dates": [
-        "20260812"
-      ],
-      "latest_j": 6.71
-    },
-    {
-      "ts_code": "603288.SH",
-      "name": "海天味业",
-      "close": 36.24,
-      "white_line": 36.78,
-      "bbi": 36.29,
-      "ratio_pct": 1.34,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 13.85
-    },
-    {
-      "ts_code": "600887.SH",
-      "name": "伊利股份",
-      "close": 25.91,
-      "white_line": 26.55,
-      "bbi": 26.2,
-      "ratio_pct": 1.33,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 8.55
-    },
-    {
-      "ts_code": "600031.SH",
-      "name": "三一重工",
-      "close": 18.91,
-      "white_line": 19.71,
-      "bbi": 19.48,
-      "ratio_pct": 1.2,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 6.1
-    },
-    {
-      "ts_code": "601166.SH",
-      "name": "兴业银行",
-      "close": 18.1,
-      "white_line": 18.38,
-      "bbi": 18.16,
-      "ratio_pct": 1.19,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 3.9
-    },
-    {
-      "ts_code": "603871.SH",
-      "name": "嘉友国际",
-      "close": 12.45,
-      "white_line": 12.54,
-      "bbi": 12.4,
-      "ratio_pct": 1.17,
-      "b1_dates": [
-        "20260812"
-      ],
-      "latest_j": 8.49
-    },
-    {
-      "ts_code": "600025.SH",
-      "name": "华能水电",
-      "close": 9.69,
-      "white_line": 9.9,
-      "bbi": 9.79,
-      "ratio_pct": 1.14,
-      "b1_dates": [
-        "20260812"
-      ],
-      "latest_j": 11.48
+      "latest_j": 8.82
     },
     {
       "ts_code": "603049.SH",
       "name": "中策橡胶",
-      "close": 48.18,
+      "close": 47.51,
       "white_line": 48.89,
-      "bbi": 48.35,
-      "ratio_pct": 1.11,
+      "bbi": 48.33,
+      "ratio_pct": 1.14,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 4.86
+      "latest_j": 1.93
     },
     {
-      "ts_code": "601288.SH",
-      "name": "农业银行",
-      "close": 6.44,
-      "white_line": 6.63,
-      "bbi": 6.55,
-      "ratio_pct": 1.1,
+      "ts_code": "601166.SH",
+      "name": "兴业银行",
+      "close": 18.17,
+      "white_line": 18.38,
+      "bbi": 18.17,
+      "ratio_pct": 1.12,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 12.95
+      "latest_j": 11.45
     },
     {
-      "ts_code": "001965.SZ",
-      "name": "招商公路",
-      "close": 9.36,
-      "white_line": 9.94,
-      "bbi": 9.85,
+      "ts_code": "600036.SH",
+      "name": "招商银行",
+      "close": 38.77,
+      "white_line": 39.04,
+      "bbi": 38.64,
+      "ratio_pct": 1.04,
+      "b1_dates": [
+        "20260812"
+      ],
+      "latest_j": 14.59
+    },
+    {
+      "ts_code": "688036.SH",
+      "name": "传音控股",
+      "close": 54.57,
+      "white_line": 60.59,
+      "bbi": 59.99,
+      "ratio_pct": 1.01,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 2.33
+    },
+    {
+      "ts_code": "001872.SZ",
+      "name": "招商港口",
+      "close": 21.54,
+      "white_line": 21.79,
+      "bbi": 21.58,
+      "ratio_pct": 0.99,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 4.22
+    },
+    {
+      "ts_code": "600025.SH",
+      "name": "华能水电",
+      "close": 9.71,
+      "white_line": 9.88,
+      "bbi": 9.79,
+      "ratio_pct": 0.99,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 12.93
+    },
+    {
+      "ts_code": "600094.SH",
+      "name": "大名城",
+      "close": 4.12,
+      "white_line": 4.14,
+      "bbi": 4.1,
       "ratio_pct": 0.92,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260813"
       ],
-      "latest_j": 10.98
-    },
-    {
-      "ts_code": "002311.SZ",
-      "name": "海大集团",
-      "close": 45.73,
-      "white_line": 47.65,
-      "bbi": 47.3,
-      "ratio_pct": 0.73,
-      "b1_dates": [
-        "20260812"
-      ],
-      "latest_j": 9.94
+      "latest_j": 11.92
     },
     {
       "ts_code": "600415.SH",
       "name": "小商品城",
-      "close": 11.81,
-      "white_line": 11.9,
-      "bbi": 11.81,
+      "close": 11.59,
+      "white_line": 11.93,
+      "bbi": 11.82,
+      "ratio_pct": 0.91,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 2.41
+    },
+    {
+      "ts_code": "600312.SH",
+      "name": "平高电气",
+      "close": 19.55,
+      "white_line": 19.69,
+      "bbi": 19.52,
+      "ratio_pct": 0.88,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 6.33
+    },
+    {
+      "ts_code": "300529.SZ",
+      "name": "健帆生物",
+      "close": 16.37,
+      "white_line": 17.52,
+      "bbi": 17.38,
+      "ratio_pct": 0.82,
+      "b1_dates": [
+        "20260812"
+      ],
+      "latest_j": 13.94
+    },
+    {
+      "ts_code": "301275.SZ",
+      "name": "汉朔科技",
+      "close": 43.01,
+      "white_line": 43.76,
+      "bbi": 43.45,
       "ratio_pct": 0.72,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260813"
       ],
-      "latest_j": 6.04
+      "latest_j": 6.11
     },
     {
-      "ts_code": "601326.SH",
-      "name": "秦港股份",
-      "close": 3.36,
-      "white_line": 3.45,
-      "bbi": 3.43,
-      "ratio_pct": 0.64,
+      "ts_code": "002311.SZ",
+      "name": "海大集团",
+      "close": 45.5,
+      "white_line": 47.52,
+      "bbi": 47.24,
+      "ratio_pct": 0.61,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 10.57
-    },
-    {
-      "ts_code": "001227.SZ",
-      "name": "兰州银行",
-      "close": 2.15,
-      "white_line": 2.16,
-      "bbi": 2.15,
-      "ratio_pct": 0.63,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 20.92
+      "latest_j": 10.4
     },
     {
       "ts_code": "601528.SH",
       "name": "瑞丰银行",
-      "close": 4.85,
+      "close": 4.86,
       "white_line": 4.91,
       "bbi": 4.88,
-      "ratio_pct": 0.61,
+      "ratio_pct": 0.59,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 6.28
+      "latest_j": 9.21
     },
     {
-      "ts_code": "000088.SZ",
-      "name": "盐田港",
-      "close": 4.44,
-      "white_line": 4.42,
-      "bbi": 4.39,
-      "ratio_pct": 0.6,
+      "ts_code": "001965.SZ",
+      "name": "招商公路",
+      "close": 9.24,
+      "white_line": 9.88,
+      "bbi": 9.83,
+      "ratio_pct": 0.57,
       "b1_dates": [
-        "20260811"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 16.89
+      "latest_j": 5.78
     },
     {
-      "ts_code": "600928.SH",
-      "name": "西安银行",
-      "close": 3.55,
-      "white_line": 3.59,
-      "bbi": 3.57,
-      "ratio_pct": 0.55,
+      "ts_code": "601326.SH",
+      "name": "秦港股份",
+      "close": 3.33,
+      "white_line": 3.44,
+      "bbi": 3.43,
+      "ratio_pct": 0.52,
       "b1_dates": [
-        "20260811"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 15.74
+      "latest_j": 10.25
     },
     {
-      "ts_code": "000750.SZ",
-      "name": "国海证券",
-      "close": 3.78,
-      "white_line": 3.82,
-      "bbi": 3.8,
-      "ratio_pct": 0.48,
+      "ts_code": "000680.SZ",
+      "name": "山推股份",
+      "close": 10.41,
+      "white_line": 10.95,
+      "bbi": 10.9,
+      "ratio_pct": 0.47,
       "b1_dates": [
-        "20260811"
+        "20260813"
       ],
-      "latest_j": 13.68
-    },
-    {
-      "ts_code": "300146.SZ",
-      "name": "汤臣倍健",
-      "close": 10.13,
-      "white_line": 10.08,
-      "bbi": 10.04,
-      "ratio_pct": 0.45,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 30.59
-    },
-    {
-      "ts_code": "600033.SH",
-      "name": "福建高速",
-      "close": 3.52,
-      "white_line": 3.57,
-      "bbi": 3.56,
-      "ratio_pct": 0.45,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 11.11
+      "latest_j": 11.74
     },
     {
       "ts_code": "688271.SH",
       "name": "联影医疗",
-      "close": 110.5,
-      "white_line": 112.73,
-      "bbi": 112.22,
+      "close": 109.29,
+      "white_line": 112.64,
+      "bbi": 112.14,
       "ratio_pct": 0.45,
       "b1_dates": [
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 8.36
-    },
-    {
-      "ts_code": "600566.SH",
-      "name": "济川药业",
-      "close": 25.19,
-      "white_line": 26.4,
-      "bbi": 26.28,
-      "ratio_pct": 0.44,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 2.69
+      "latest_j": 4.22
     },
     {
       "ts_code": "688538.SH",
       "name": "和辉光电",
-      "close": 2.38,
+      "close": 2.35,
       "white_line": 2.4,
       "bbi": 2.39,
       "ratio_pct": 0.43,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 6.48
+      "latest_j": 1.85
     },
     {
-      "ts_code": "000951.SZ",
-      "name": "中国重汽",
-      "close": 21.12,
-      "white_line": 22.12,
-      "bbi": 22.03,
-      "ratio_pct": 0.4,
+      "ts_code": "600449.SH",
+      "name": "宁夏建材",
+      "close": 12.04,
+      "white_line": 12.93,
+      "bbi": 12.88,
+      "ratio_pct": 0.41,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260813"
       ],
-      "latest_j": 6.58
+      "latest_j": 5.25
     },
     {
-      "ts_code": "601319.SH",
-      "name": "中国人保",
-      "close": 6.98,
-      "white_line": 7.29,
-      "bbi": 7.26,
-      "ratio_pct": 0.37,
+      "ts_code": "300059.SZ",
+      "name": "东方财富",
+      "close": 19.78,
+      "white_line": 19.99,
+      "bbi": 19.92,
+      "ratio_pct": 0.39,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260813"
       ],
-      "latest_j": 10.31
+      "latest_j": 9.12
     },
     {
-      "ts_code": "601658.SH",
-      "name": "邮储银行",
-      "close": 4.93,
-      "white_line": 5.07,
-      "bbi": 5.05,
-      "ratio_pct": 0.35,
+      "ts_code": "600033.SH",
+      "name": "福建高速",
+      "close": 3.5,
+      "white_line": 3.57,
+      "bbi": 3.56,
+      "ratio_pct": 0.38,
       "b1_dates": [
-        "20260812"
+        "20260813"
       ],
-      "latest_j": 5.84
-    },
-    {
-      "ts_code": "601688.SH",
-      "name": "华泰证券",
-      "close": 19.39,
-      "white_line": 19.9,
-      "bbi": 19.84,
-      "ratio_pct": 0.31,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 30.48
-    },
-    {
-      "ts_code": "601901.SH",
-      "name": "方正证券",
-      "close": 7.01,
-      "white_line": 7.08,
-      "bbi": 7.06,
-      "ratio_pct": 0.3,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 15.58
-    },
-    {
-      "ts_code": "600015.SH",
-      "name": "华夏银行",
-      "close": 6.69,
-      "white_line": 6.9,
-      "bbi": 6.88,
-      "ratio_pct": 0.29,
-      "b1_dates": [
-        "20260812"
-      ],
-      "latest_j": 5.71
-    },
-    {
-      "ts_code": "300888.SZ",
-      "name": "稳健医疗",
-      "close": 29.35,
-      "white_line": 29.79,
-      "bbi": 29.73,
-      "ratio_pct": 0.2,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 11.63
-    },
-    {
-      "ts_code": "600908.SH",
-      "name": "无锡银行",
-      "close": 5.41,
-      "white_line": 5.49,
-      "bbi": 5.48,
-      "ratio_pct": 0.18,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 13.23
-    },
-    {
-      "ts_code": "603565.SH",
-      "name": "中谷物流",
-      "close": 10.82,
-      "white_line": 10.47,
-      "bbi": 10.46,
-      "ratio_pct": 0.18,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 43.95
-    },
-    {
-      "ts_code": "920020.BJ",
-      "name": "泰凯英",
-      "close": 15.36,
-      "white_line": 15.67,
-      "bbi": 15.64,
-      "ratio_pct": 0.18,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 10.57
-    },
-    {
-      "ts_code": "000800.SZ",
-      "name": "一汽解放",
-      "close": 6.18,
-      "white_line": 6.32,
-      "bbi": 6.31,
-      "ratio_pct": 0.16,
-      "b1_dates": [
-        "20260811"
-      ],
-      "latest_j": 13.43
-    },
-    {
-      "ts_code": "000893.SZ",
-      "name": "亚钾国际",
-      "close": 47.2,
-      "white_line": 48.15,
-      "bbi": 48.08,
-      "ratio_pct": 0.16,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 9.65
-    },
-    {
-      "ts_code": "601336.SH",
-      "name": "新华保险",
-      "close": 58.83,
-      "white_line": 62.74,
-      "bbi": 62.65,
-      "ratio_pct": 0.14,
-      "b1_dates": [
-        "20260811",
-        "20260812"
-      ],
-      "latest_j": 11.37
+      "latest_j": 10.25
     },
     {
       "ts_code": "603486.SH",
       "name": "科沃斯",
-      "close": 57.74,
-      "white_line": 57.75,
-      "bbi": 57.67,
-      "ratio_pct": 0.14,
+      "close": 56.07,
+      "white_line": 57.9,
+      "bbi": 57.68,
+      "ratio_pct": 0.38,
       "b1_dates": [
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 11.61
+      "latest_j": 1.41
     },
     {
       "ts_code": "301039.SZ",
       "name": "中集车辆",
-      "close": 7.99,
-      "white_line": 7.85,
-      "bbi": 7.84,
-      "ratio_pct": 0.13,
+      "close": 7.82,
+      "white_line": 7.88,
+      "bbi": 7.85,
+      "ratio_pct": 0.36,
       "b1_dates": [
-        "20260811"
+        "20260813"
       ],
-      "latest_j": 22.01
+      "latest_j": 8.47
+    },
+    {
+      "ts_code": "000538.SZ",
+      "name": "云南白药",
+      "close": 50.46,
+      "white_line": 51.29,
+      "bbi": 51.12,
+      "ratio_pct": 0.34,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 11.32
+    },
+    {
+      "ts_code": "600729.SH",
+      "name": "重百集团",
+      "close": 19.33,
+      "white_line": 20.44,
+      "bbi": 20.37,
+      "ratio_pct": 0.34,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 12.45
+    },
+    {
+      "ts_code": "000951.SZ",
+      "name": "中国重汽",
+      "close": 20.81,
+      "white_line": 22.06,
+      "bbi": 21.99,
+      "ratio_pct": 0.32,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 1.68
+    },
+    {
+      "ts_code": "000893.SZ",
+      "name": "亚钾国际",
+      "close": 45.86,
+      "white_line": 48.16,
+      "bbi": 48.01,
+      "ratio_pct": 0.31,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 4.3
+    },
+    {
+      "ts_code": "600566.SH",
+      "name": "济川药业",
+      "close": 25.0,
+      "white_line": 26.34,
+      "bbi": 26.26,
+      "ratio_pct": 0.31,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 5.97
+    },
+    {
+      "ts_code": "601901.SH",
+      "name": "方正证券",
+      "close": 6.99,
+      "white_line": 7.08,
+      "bbi": 7.06,
+      "ratio_pct": 0.31,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 8.02
+    },
+    {
+      "ts_code": "601319.SH",
+      "name": "中国人保",
+      "close": 7.03,
+      "white_line": 7.26,
+      "bbi": 7.25,
+      "ratio_pct": 0.23,
+      "b1_dates": [
+        "20260812"
+      ],
+      "latest_j": 21.44
+    },
+    {
+      "ts_code": "300888.SZ",
+      "name": "稳健医疗",
+      "close": 29.34,
+      "white_line": 29.78,
+      "bbi": 29.72,
+      "ratio_pct": 0.21,
+      "b1_dates": [
+        "20260812"
+      ],
+      "latest_j": 14.15
     },
     {
       "ts_code": "600761.SH",
       "name": "安徽合力",
-      "close": 16.98,
-      "white_line": 17.49,
-      "bbi": 17.47,
+      "close": 16.68,
+      "white_line": 17.48,
+      "bbi": 17.44,
+      "ratio_pct": 0.2,
+      "b1_dates": [
+        "20260812",
+        "20260813"
+      ],
+      "latest_j": 2.25
+    },
+    {
+      "ts_code": "920020.BJ",
+      "name": "泰凯英",
+      "close": 15.17,
+      "white_line": 15.65,
+      "bbi": 15.63,
+      "ratio_pct": 0.14,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 3.02
+    },
+    {
+      "ts_code": "300531.SZ",
+      "name": "优博讯",
+      "close": 16.41,
+      "white_line": 16.86,
+      "bbi": 16.84,
+      "ratio_pct": 0.13,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 3.7
+    },
+    {
+      "ts_code": "600015.SH",
+      "name": "华夏银行",
+      "close": 6.66,
+      "white_line": 6.89,
+      "bbi": 6.88,
       "ratio_pct": 0.12,
       "b1_dates": [
-        "20260811",
-        "20260812"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 2.91
+      "latest_j": 4.39
     },
     {
       "ts_code": "600926.SH",
       "name": "杭州银行",
-      "close": 15.93,
-      "white_line": 16.01,
-      "bbi": 16.0,
+      "close": 16.18,
+      "white_line": 16.02,
+      "bbi": 16.01,
       "ratio_pct": 0.09,
       "b1_dates": [
         "20260812"
       ],
-      "latest_j": 12.64
+      "latest_j": 40.07
     },
     {
-      "ts_code": "600064.SH",
-      "name": "南京高科",
-      "close": 7.64,
-      "white_line": 7.67,
-      "bbi": 7.66,
-      "ratio_pct": 0.03,
+      "ts_code": "002601.SZ",
+      "name": "龙佰集团",
+      "close": 15.61,
+      "white_line": 16.43,
+      "bbi": 16.42,
+      "ratio_pct": 0.08,
       "b1_dates": [
-        "20260811"
+        "20260812",
+        "20260813"
       ],
-      "latest_j": 15.22
+      "latest_j": 4.75
+    },
+    {
+      "ts_code": "000800.SZ",
+      "name": "一汽解放",
+      "close": 6.08,
+      "white_line": 6.31,
+      "bbi": 6.3,
+      "ratio_pct": 0.05,
+      "b1_dates": [
+        "20260813"
+      ],
+      "latest_j": 3.54
     }
   ]
 }
