@@ -36,6 +36,8 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
 .b-strong { background:#7c3aed; color:#ddd6fe; }
 .b-follow { background:rgba(220,38,38,.35); color:#fca5a5; }
 .b-flat { background:#334155; color:#cbd5e1; }
+.b-flat-low { background:rgba(217,119,6,.45); color:#fde68a; }
+.b-flat-high { background:#475569; color:#e2e8f0; }
 .b-down { background:rgba(22,163,74,.35); color:#86efac; }
 #charts { flex:1; display:flex; flex-direction:column; position:relative; }
 #chartTop { height:44%; }
@@ -192,6 +194,8 @@ const badgeCls = (s) => {
   if (s.s4 === '领涨反转') return s.tier==='确认' ? 'b-rev-confirm' : 'b-rev-first';
   if (s.s4 === '先行走强') return 'b-strong';
   if (s.s4 === '跟涨') return 'b-follow';
+  if (s.s4 === '低位横盘') return 'b-flat-low';
+  if (s.s4 === '高位横盘') return 'b-flat-high';
   if (s.s4 === '横盘') return 'b-flat';
   return 'b-down';
 };
@@ -285,9 +289,10 @@ function renderSummary() {
   const nStrong = codes.filter(c => sectors[c].s4==='先行走强').length;
   const nFollow = codes.filter(c => sectors[c].s4==='跟涨').length;
   const nDown = codes.filter(c => sectors[c].s4==='同跌'||sectors[c].s4==='独立下跌').length;
-  const nFlat = codes.filter(c => sectors[c].s4==='横盘').length;
+  const nFlat = codes.filter(c => ['横盘','高位横盘','低位横盘'].includes(sectors[c].s4)).length;
+  const nFlatLow = codes.filter(c => sectors[c].s4==='低位横盘').length;
   document.getElementById('summary').innerHTML =
-    `<b>${curLevel}</b> ${codes.length}个：领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌 <b class="green">${nDown}</b> · 横盘 <b>${nFlat}</b>`;
+    `<b>${curLevel}</b> ${codes.length}个：领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌 <b class="green">${nDown}</b> · 横盘 <b>${nFlat}</b>（低位 <b style="color:#fde68a">${nFlatLow}</b>）`;
 }
 function renderList() {
   const listEl = document.getElementById('list');
