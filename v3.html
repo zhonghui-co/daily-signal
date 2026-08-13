@@ -167,7 +167,7 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate) 
         borderColor:'#1e293b', backgroundColor:'#0f172a', fillerColor:'rgba(220,38,38,.15)',
         textStyle:{color:'#64748b', fontSize:10} }
     ],
-    tooltip:{ trigger:'axis', axisPointer:{type:'cross'}, backgroundColor:'#0f172a', borderColor:'#334155', textStyle:{color:'#e2e8f0', fontSize:11} },
+    tooltip:{ trigger:'axis', axisPointer:{type:'cross', link:[{xAxisIndex:'all'}]}, backgroundColor:'#0f172a', borderColor:'#334155', textStyle:{color:'#e2e8f0', fontSize:11} },
     series
   };
 }
@@ -316,6 +316,7 @@ function render() {
       cBottom = echarts.init(document.getElementById('chartBottom'));
       cBottom.on('datazoom', ev => syncZoom(ev, cTop));
     }
+    echarts.connect([cTop, cBottom]);  // 跨图同步十字准线/tooltip
     cBottom.setOption(optS, true);
   }
   syncZoomFrom(zoomState);
