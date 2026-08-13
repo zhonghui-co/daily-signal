@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>0AMV v2 对比 — 全A vs 板块</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+       height:100vh; display:flex; flex-direction:column; overflow:hidden; }
+.header { padding:8px 16px; display:flex; align-items:center; justify-content:space-between;
+          border-bottom:1px solid #1e293b; gap:12px; flex-shrink:0; }
+.header h1 { font-size:16px; font-weight:700; display:flex; align-items:center; gap:8px; white-space:nowrap; }
+.badge { font-size:10px; background:#3b2f1e; color:#f59e0b; padding:2px 6px; border-radius:4px; }
+.header-right { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.corr-win { display:flex; gap:0; border:1px solid #334155; border-radius:4px; overflow:hidden; }
+.corr-win button { background:#111827; color:#94a3b8; border:none; padding:3px 8px; font-size:11px; cursor:pointer; }
+.corr-win button.active { background:#1e3a5f; color:#60a5fa; }
+.corr-now { font-size:12px; color:#94a3b8; }
+.corr-now b { font-size:14px; }
+.main { display:flex; flex:1; min-height:0; }
+/* ── 左侧面板 ── */
+.side { width:300px; flex-shrink:0; border-right:1px solid #1e293b; display:flex; flex-direction:column; min-height:0; }
+.tabs { display:flex; border-bottom:1px solid #1e293b; flex-shrink:0; }
+.tabs button { flex:1; background:#000; color:#64748b; border:none; padding:8px 0; font-size:13px; cursor:pointer;
+               border-bottom:2px solid transparent; }
+.tabs button.active { color:#38bdf8; border-bottom-color:#38bdf8; }
+.filters { display:flex; gap:6px; padding:6px 8px; border-bottom:1px solid #1e293b; flex-shrink:0; }
+.filters select { flex:1; background:#111827; color:#e2e8f0; border:1px solid #334155; border-radius:4px;
+                  padding:4px 6px; font-size:11px; min-width:0; }
+.filters select:disabled { opacity:0.4; }
+.side-hint { padding:4px 8px; font-size:10px; color:#475569; border-bottom:1px solid #0f172a; flex-shrink:0; }
+.list { flex:1; overflow-y:auto; }
+.list-item { padding:6px 10px; font-size:12px; cursor:pointer; border-bottom:1px solid #0f172a;
+             color:#cbd5e1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:flex;
+             justify-content:space-between; align-items:center; gap:6px; }
+.list-item .lbl { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1; }
+.badge-corr { font-size:9px; padding:1px 5px; border-radius:3px; flex-shrink:0; font-weight:600; }
+.badge-corr.pos { background:rgba(239,68,68,0.15); color:#ef4444; }
+.badge-corr.neg { background:rgba(34,197,94,0.15); color:#22c55e; }
+.badge-corr.neu { background:rgba(148,163,184,0.12); color:#94a3b8; }
+.badge-corr.na  { background:rgba(100,116,139,0.1); color:#64748b; }
+.list-item:hover { background:#0f172a; }
+.list-item.active { background:#1e3a5f; color:#60a5fa; border-left:2px solid #38bdf8; }
+/* ── 右侧图表 ── */
+.charts { flex:1; display:flex; flex-direction:column; min-width:0; }
+.chart-top { flex:1; min-height:0; border-bottom:1px solid #1e293b; }
+.chart-bottom { flex:1; min-height:0; }
+.chart-label { position:absolute; left:70px; font-size:11px; color:#94a3b8; z-index:10; pointer-events:none;
+               background:rgba(0,0,0,0.7); padding:1px 6px; border-radius:3px; }
+.charts { position:relative; }
+.loading { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+           color:#64748b; font-size:14px; z-index:20; background:rgba(0,0,0,0.6); }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🏦 0AMV v2 对比 <span class="badge">全A vs 板块 · EMA(换手率,30)×free_share</span></h1>
+  <div class="header-right">
+    <span class="corr-now">相关性 <b id="corrNow" style="color:#38bdf8">--</b></span>
+    <span style="font-size:10px;color:#475569">窗口</span>
+    <div class="corr-win" id="corrWin">
+      <button data-w="20">20</button>
+      <button data-w="60" class="active">60</button>
+      <button data-w="120">120</button>
+    </div>
+    <span id="selName" style="font-size:11px;color:#64748b"></span>
+  </div>
+</div>
+<div class="main">
+  <div class="side">
+    <div class="tabs" id="tabs">
+      <button data-tab="L1" class="active">L1</button>
+      <button data-tab="L2">L2</button>
+      <button data-tab="L3">L3</button>
+    </div>
+    <div class="filters" id="filters">
+      <select id="fL1" disabled><option>全部L1</option></select>
+      <select id="fL2" disabled><option>全部L2</option></select>
+    </div>
+    <div class="side-hint" id="sideHint">L1 行业（31）</div>
+    <div class="list" id="list"></div>
+  </div>
+  <div class="charts">
+    <div class="loading" id="loading">加载数据中…</div>
+    <div class="chart-label" id="labelTop" style="top:6px">🏦 全A 0AMV</div>
+    <div class="chart-label" id="labelBottom" style="top:50%">📊 板块</div>
+    <div class="chart-top" id="chartTop"></div>
+    <div class="chart-bottom" id="chartBottom"></div>
+  </div>
+</div>
+<script>
+/* ───────── 数据加载 ───────── */
+let DATA = null;
+let CORR_WIN = 60;   // 相关性窗口（交易日），可切换
+const HALF_YEAR = 126; // 滑条默认选中范围 ≈ 半年交易日
+
+fetch('v2-compare-data.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(d => { DATA = d; init(); })
+  .catch(e => {
+    document.getElementById('loading').textContent = '数据加载失败: ' + e.message;
+  });
+
+/* ───────── 指标计算 ───────── */
+function ema(arr, n) {
+  const k = 2/(n+1), out = new Array(arr.length).fill(null);
+  let start = arr.findIndex(v => v != null);
+  if (start < 0) return out;
+  let s = 0, cnt = 0;
+  for (let i = start; i < Math.min(start+n, arr.length); i++) {
+    if (arr[i] == null) continue;
+    s += arr[i]; cnt++;
+  }
+  let idx = start + n - 1;
+  if (cnt === 0) return out;
+  out[idx] = s / cnt;
+  for (let i = idx + 1; i < arr.length; i++) {
+    out[i] = arr[i] * k + out[i-1] * (1-k);
+  }
+  return out;
+}
+function ma(arr, n) {
+  const out = new Array(arr.length).fill(null);
+  let s = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == null) { s = 0; continue; }
+    s += arr[i];
+    if (i >= n) s -= arr[i-n];
+    if (i >= n-1) out[i] = s / n;
+  }
+  return out;
+}
+function pctOf(closes) {
+  const out = [null];
+  for (let i = 1; i < closes.length; i++) {
+    out.push(closes[i] != null && closes[i-1] != null && closes[i-1] > 0
+      ? (closes[i]/closes[i-1]-1)*100 : null);
+  }
+  return out;
+}
+function whiteOf(closes) {
+  const e10 = ema(closes, 10);
+  const c = e10.map((v,i) => v != null ? v : closes[i]);
+  return ema(c, 10);
+}
+function bbiOf(closes) {
+  const m14 = ma(closes,14), m28 = ma(closes,28), m57 = ma(closes,57), m114 = ma(closes,114);
+  const out = new Array(closes.length).fill(null);
+  for (let i = 0; i < closes.length; i++) {
+    const vs = [m14[i], m28[i], m57[i], m114[i]].filter(v => v != null);
+    if (vs.length >= 2) out[i] = vs.reduce((a,b)=>a+b,0) / vs.length;
+  }
+  return out;
+}
+function macdOf(closes) {
+  const e12 = ema(closes,12), e26 = ema(closes,26);
+  const dif = closes.map((_,i) => e12[i]!=null&&e26[i]!=null ? e12[i]-e26[i] : null);
+  const first = dif.findIndex(v => v != null);
+  const dea = new Array(closes.length).fill(null);
+  const hist = new Array(closes.length).fill(null);
+  if (first >= 0) {
+    const dsub = dif.slice(first).map(v => v==null?0:v);
+    const deaSub = ema(dsub, 9);
+    for (let i = 0; i < deaSub.length; i++) dea[first+i] = deaSub[i];
+  }
+  for (let i = 0; i < closes.length; i++) {
+    if (dif[i]!=null && dea[i]!=null) hist[i] = +( (dif[i]-dea[i])*2 ).toFixed(4);
+  }
+  return {dif, dea, hist};
+}
+/* 滚动 Pearson 相关系数（基于涨跌幅序列） */
+function rollingCorr(x, y, win) {
+  const out = new Array(x.length).fill(null);
+  let sx=0, sy=0, sxx=0, syy=0, sxy=0, cnt=0;
+  for (let i = 0; i < x.length; i++) {
+    if (x[i]!=null && y[i]!=null) {
+      sx+=x[i]; sy+=y[i]; sxx+=x[i]*x[i]; syy+=y[i]*y[i]; sxy+=x[i]*y[i]; cnt++;
+    }
+    if (i >= win) {
+      const j = i - win;
+      if (x[j]!=null && y[j]!=null) {
+        sx-=x[j]; sy-=y[j]; sxx-=x[j]*x[j]; syy-=y[j]*y[j]; sxy-=x[j]*y[j]; cnt--;
+      }
+    }
+    if (i >= win-1 && cnt >= Math.max(10, win*0.5)) {
+      const mx = sx/cnt, my = sy/cnt;
+      const cov = sxy/cnt - mx*my;
+      const vx = sxx/cnt - mx*mx, vy = syy/cnt - my*my;
+      out[i] = (vx>0 && vy>0) ? + (cov / Math.sqrt(vx*vy)).toFixed(3) : 0;
+    }
+  }
+  return out;
+}
+
+/* 板块涨跌序列缓存 + 当前窗口相关性缓存 */
+const pctCache = new Map();
+const corrCache = new Map();
+function getPct(code) {
+  if (!pctCache.has(code)) {
+    const s = DATA.sectors[code];
+    pctCache.set(code, s ? pctOf(s.close) : null);
+  }
+  return pctCache.get(code);
+}
+function getCorr(code) {
+  const key = code + ':' + CORR_WIN;
+  if (!corrCache.has(key)) {
+    const p = getPct(code);
+    let r = null;
+    if (p) {
+      const series = rollingCorr(A.pct, p, CORR_WIN);
+      r = series[series.length - 1];
+    }
+    corrCache.set(key, r);
+  }
+  return corrCache.get(key);
+}
+function corrBadge(r) {
+  if (r == null) return '<span class="badge-corr na">—</span>';
+  if (Math.abs(r) < 0.3) return `<span class="badge-corr neu">无关 ${r>=0?'+':''}${r.toFixed(2)}</span>`;
+  if (r > 0) return `<span class="badge-corr pos">正相关 +${r.toFixed(2)}</span>`;
+  return `<span class="badge-corr neg">负相关 ${r.toFixed(2)}</span>`;
+}
+
+/* ───────── 状态 ───────── */
+let state = { tab: 'L1', selL1: '', selL2: '', selCode: '', selName: '' };
+let chartTop = null, chartBottom = null;
+const A = {}; // 全A 指标缓存
+
+function init() {
+  A.pct = pctOf(DATA.allA.close);
+  A.white = whiteOf(DATA.allA.close);
+  A.bbi = bbiOf(DATA.allA.close);
+  A.macd = macdOf(DATA.allA.close);
+  zoomState.start = ZOOM_DEFAULT().start;
+  zoomState.end = 100;
+
+  buildFilters();
+  buildList();
+  chartTop = echarts.init(document.getElementById('chartTop'));
+  chartBottom = echarts.init(document.getElementById('chartBottom'));
+  echarts.connect([chartTop, chartBottom]);
+  // datazoom 同步只在 init 注册一次（防重复注册导致事件风暴）
+  chartTop.on('datazoom', ev => syncZoom(ev, chartBottom));
+  chartBottom.on('datazoom', ev => syncZoom(ev, chartTop));
+  renderTop();
+  // 默认选中第一个分类
+  const first = document.querySelector('.list-item');
+  if (first) first.click();
+  document.getElementById('loading').style.display = 'none';
+  window.addEventListener('resize', () => { chartTop.resize(); chartBottom.resize(); });
+}
+
+/* ───────── 左侧列表 ───────── */
+function flatItems() {
+  const out = [];
+  for (const l1 of DATA.tree) {
+    out.push({code:l1.code, name:l1.name, label:l1.name, level:'L1', l1Code:l1.code, l1:l1.name});
+    for (const l2 of (l1.children||[])) {
+      out.push({code:l2.code, name:l2.name, label:`${l1.name} > ${l2.name}`, level:'L2', l1Code:l1.code, l2Code:l2.code, l1:l1.name, l2:l2.name});
+      for (const l3 of (l2.children||[])) {
+        out.push({code:l3.code, name:l3.name, label:`${l1.name} > ${l2.name} > ${l3.name}`, level:'L3', l1Code:l1.code, l2Code:l2.code, l1:l1.name, l2:l2.name});
+      }
+    }
+  }
+  return out;
+}
+
+function buildFilters() {
+  const fL1 = document.getElementById('fL1'), fL2 = document.getElementById('fL2');
+  fL1.innerHTML = '<option value="">全部L1</option>';
+  for (const l1 of DATA.tree) {
+    fL1.innerHTML += `<option value="${l1.code}">${l1.name}</option>`;
+  }
+  fL1.onchange = () => {
+    state.selL1 = fL1.value;
+    if (state.tab === 'L3') {
+      const l1node = DATA.tree.find(n => n.code === state.selL1);
+      fL2.innerHTML = '<option value="">全部L2</option>';
+      for (const l2 of (l1node?.children||[])) {
+        fL2.innerHTML += `<option value="${l2.code}">${l2.name}</option>`;
+      }
+      state.selL2 = '';
+    }
+    buildList();
+  };
+  fL2.onchange = () => { state.selL2 = fL2.value; buildList(); };
+}
+
+function buildList() {
+  const tab = state.tab;
+  const fL1 = document.getElementById('fL1'), fL2 = document.getElementById('fL2');
+  fL1.disabled = (tab === 'L1');
+  fL2.disabled = (tab !== 'L3');
+  const hint = document.getElementById('sideHint');
+  const list = document.getElementById('list');
+  list.innerHTML = '';
+
+  let items = flatItems().filter(it => it.level === tab);
+  if (tab !== 'L1' && state.selL1) items = items.filter(it => it.l1Code === state.selL1);
+  if (tab === 'L3' && state.selL2) items = items.filter(it => it.l2Code === state.selL2);
+
+  hint.textContent = `${tab} 分类（${items.length}）`;
+  for (const it of items) {
+    const div = document.createElement('div');
+    div.className = 'list-item' + (it.code === state.selCode ? ' active' : '');
+    div.innerHTML = `<span class="lbl">${it.label}</span>${corrBadge(getCorr(it.code))}`;
+    div.dataset.code = it.code;
+    div.onclick = () => selectSector(it, div);
+    list.appendChild(div);
+  }
+}
+
+function findNameByCode(code, level) {
+  for (const l1 of DATA.tree) {
+    if (level === 'L1' && l1.code === code) return l1.name;
+    for (const l2 of (l1.children||[])) {
+      if (level === 'L2' && l2.code === code) return l2.name;
+    }
+  }
+  return '';
+}
+
+function selectSector(it, el) {
+  state.selCode = it.code;
+  state.selName = it.label;
+  document.querySelectorAll('.list-item').forEach(e => e.classList.remove('active'));
+  if (el) el.classList.add('active');
+  document.getElementById('selName').textContent = it.label;
+  document.getElementById('labelBottom').textContent = '📊 ' + it.label;
+  renderBottom(it);
+}
+
+/* ───────── 图表渲染 ───────── */
+function klineArr(s) {
+  return s.close.map((c,i) => {
+    const o = s.open[i] ?? c, h = s.high[i] ?? c, l = s.low[i] ?? c;
+    return [o ?? 0, c ?? 0, l ?? 0, h ?? 0];
+  });
+}
+
+const ZOOM_DEFAULT = () => {
+  const n = DATA.dates.length;
+  const start = Math.max(0, ((n - HALF_YEAR) / n) * 100);
+  return {start, end: 100};
+};
+// 滑条：默认选中最近半年；可缩放到全历史（2024-09 至今），最小 20 交易日
+function zoomSpan() {
+  const n = DATA ? DATA.dates.length : 500;
+  return {minSpan: Math.max(20 / n * 100, 1)};
+}
+
+function renderTop() {
+  const dates = DATA.dates;
+  const kline = klineArr(DATA.allA);
+  // 全A v2 多空区间标记（规则: 空<-3%；多>+6% 或空头中两日合计>+6%；同方向不重复）
+  const V2_BULL = 6.0, V2_BEAR = -3.0;
+  const marks = [], areas = [];
+  let zone = null, zoneStart = null;
+  for (let i = 1; i < dates.length; i++) {
+    const c = A.pct[i], p = A.pct[i-1];
+    if (c == null) continue;
+    let ns = null;
+    if (c < V2_BEAR) ns = '空';
+    else if (c > V2_BULL) ns = '多';
+    else if (zone === '空' && p != null && (c + p) > V2_BULL) ns = '多';
+    if (ns && ns !== zone) {
+      if (zone != null && zoneStart != null) areas.push({s: zoneStart, e: i-1, t: zone});
+      marks.push({i, t: ns});
+      zone = ns; zoneStart = i;
+    }
+  }
+  if (zone != null && zoneStart != null) areas.push({s: zoneStart, e: dates.length-1, t: zone});
+  const markPoints = marks.map(m => ({
+    name: m.t, coord: [m.i, kline[m.i][2]], value: m.t,
+    symbol: 'triangle', symbolSize: 12, symbolRotate: m.t === '空' ? 180 : 0,
+    itemStyle: { color: m.t === '多' ? '#dc2626' : '#16a34a' },
+    label: { show: true, position: 'bottom', distance: 6, formatter: m.t,
+             color: m.t === '多' ? '#fca5a5' : '#86efac', fontSize: 12, fontWeight: 'bold' }
+  }));
+  const markAreas = areas.map(a => ([
+    { xAxis: dates[a.s], itemStyle: { color: a.t === '多' ? 'rgba(220,38,38,0.07)' : 'rgba(22,163,74,0.07)' } },
+    { xAxis: dates[a.e] }
+  ]));
+  const option = {
+    animation: false, backgroundColor: '#000',
+    tooltip: { trigger:'axis', axisPointer:{type:'cross'}, backgroundColor:'#0f172a', borderColor:'#334155',
+      formatter: function(ps) {
+        const i = ps[0].dataIndex;
+        const d = dates[i];
+        const chg = A.pct[i] != null ? (A.pct[i]>=0?'+':'')+A.pct[i].toFixed(2)+'%' : '—';
+        const color = A.pct[i]>=0 ? '#ef4444' : '#22c55e';
+        return `<b>${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}</b><br/>`
+          + `开 ${kline[i][0]} 收 ${kline[i][1]}<br/>低 ${kline[i][2]} 高 ${kline[i][3]}<br/>`
+          + `涨跌 <span style="color:${color}">${chg}</span>`;
+      }},
+    axisPointer: { link:[{xAxisIndex:'all'}], label:{backgroundColor:'#334155'} },
+    grid: [
+      {left:70, right:20, top:8, bottom:60, height:'62%'},
+      {left:70, right:20, top:'72%', height:'18%'}
+    ],
+    xAxis: [
+      {type:'category', data:dates, gridIndex:0, boundaryGap:true, axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{color:'#64748b'}},
+      {type:'category', data:dates, gridIndex:1, axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{show:false}}
+    ],
+    yAxis: [
+      {scale:true, gridIndex:0, splitLine:{lineStyle:{color:'#111827'}}, axisLabel:{color:'#64748b'}},
+      {scale:true, gridIndex:1, splitLine:{lineStyle:{color:'#111827'}}, axisLabel:{color:'#64748b', fontSize:10}}
+    ],
+    dataZoom: [
+      {type:'inside', xAxisIndex:[0,1], start:ZOOM_DEFAULT().start, end:100, minSpan:zoomSpan().minSpan},
+      {type:'slider', xAxisIndex:[0,1], start:ZOOM_DEFAULT().start, end:100, bottom:8, height:18, minSpan:zoomSpan().minSpan,
+       borderColor:'#334155', backgroundColor:'#0f172a', fillerColor:'rgba(56,189,248,0.15)',
+       handleStyle:{color:'#334155'}, textStyle:{color:'#64748b'}}
+    ],
+    series: [
+      {name:'K线', type:'candlestick', data:kline, xAxisIndex:0, yAxisIndex:0,
+       itemStyle:{color:'#ef4444', color0:'#22c55e', borderColor:'#ef4444', borderColor0:'#22c55e'},
+       markPoint: { data: markPoints },
+       markArea: { silent: true, data: markAreas }},
+      {name:'白线', type:'line', data:A.white, xAxisIndex:0, yAxisIndex:0, symbol:'none',
+       lineStyle:{color:'#ffffff', width:1.2}},
+      {name:'黄线', type:'line', data:A.bbi, xAxisIndex:0, yAxisIndex:0, symbol:'none',
+       lineStyle:{color:'#f59e0b', width:1.2, type:'dashed'}},
+      {name:'MACD', type:'bar', data:A.macd.hist, xAxisIndex:1, yAxisIndex:1,
+       itemStyle:{color: p => A.macd.hist[p.dataIndex]>=0 ? '#ef4444' : '#22c55e'}},
+      {name:'DIF', type:'line', data:A.macd.dif, xAxisIndex:1, yAxisIndex:1, symbol:'none', lineStyle:{color:'#f8fafc', width:1}},
+      {name:'DEA', type:'line', data:A.macd.dea, xAxisIndex:1, yAxisIndex:1, symbol:'none', lineStyle:{color:'#f59e0b', width:1}}
+    ]
+  };
+  chartTop.setOption(option, true);
+  // 应用共享 zoom（换板块后不重置窗口）
+  chartTop.dispatchAction({type:'dataZoom', start: zoomState.start, end: zoomState.end});
+}
+
+/* ── 共享缩放状态（跨渲染保持） ── */
+const zoomState = { start: 72, end: 100 };
+
+function renderBottom(it) {
+  const dates = DATA.dates;
+  const s = DATA.sectors[it.code];
+  const kline = klineArr(s);
+  const pct = pctOf(s.close);
+  const white = whiteOf(s.close);
+  const bbi = bbiOf(s.close);
+  const macd = macdOf(s.close);
+  const corr = rollingCorr(A.pct, pct, CORR_WIN);
+  const corrNow = corr[corr.length-1];
+  const corrEl = document.getElementById('corrNow');
+  corrEl.textContent = corrNow != null ? (corrNow>=0?'+':'')+corrNow.toFixed(2) : '--';
+  corrEl.style.color = corrNow == null ? '#64748b' : (Math.abs(corrNow) < 0.3 ? '#94a3b8' : (corrNow > 0 ? '#ef4444' : '#22c55e'));
+
+  const option = {
+    animation: false, backgroundColor: '#000',
+    tooltip: { trigger:'axis', axisPointer:{type:'cross'}, backgroundColor:'#0f172a', borderColor:'#334155',
+      formatter: function(ps) {
+        const i = ps[0].dataIndex;
+        const d = dates[i];
+        const chg = pct[i] != null ? (pct[i]>=0?'+':'')+pct[i].toFixed(2)+'%' : '—';
+        const color = pct[i]>=0 ? '#ef4444' : '#22c55e';
+        const c = corr[i];
+        return `<b>${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}</b><br/>`
+          + `开 ${kline[i][0]} 收 ${kline[i][1]}<br/>低 ${kline[i][2]} 高 ${kline[i][3]}<br/>`
+          + `涨跌 <span style="color:${color}">${chg}</span>`
+          + (c!=null ? `<br/>相关性 r=${c>=0?'+':''}${c.toFixed(2)}` : '');
+      }},
+    axisPointer: { link:[{xAxisIndex:'all'}], label:{backgroundColor:'#334155'} },
+    grid: [
+      {left:70, right:20, top:8, bottom:60, height:'50%'},
+      {left:70, right:20, top:'66%', height:'12%'},
+      {left:70, right:20, top:'82%', height:'9%'}
+    ],
+    xAxis: [
+      {type:'category', data:dates, gridIndex:0, boundaryGap:true, axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{color:'#64748b'}},
+      {type:'category', data:dates, gridIndex:1, axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{show:false}},
+      {type:'category', data:dates, gridIndex:2, boundaryGap:true, axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{color:'#64748b', fontSize:9}}
+    ],
+    yAxis: [
+      {scale:true, gridIndex:0, splitLine:{lineStyle:{color:'#111827'}}, axisLabel:{color:'#64748b'}},
+      {scale:true, gridIndex:1, splitLine:{lineStyle:{color:'#111827'}}, axisLabel:{color:'#64748b', fontSize:10}},
+      {min:-1, max:1, gridIndex:2, splitLine:{lineStyle:{color:'#111827'}}, axisLabel:{color:'#64748b', fontSize:9},
+       axisLine:{lineStyle:{color:'#334155'}}}
+    ],
+    dataZoom: [
+      {type:'inside', xAxisIndex:[0,1,2], start:ZOOM_DEFAULT().start, end:100, minSpan:zoomSpan().minSpan},
+      {type:'slider', xAxisIndex:[0,1,2], start:ZOOM_DEFAULT().start, end:100, bottom:8, height:18, minSpan:zoomSpan().minSpan,
+       borderColor:'#334155', backgroundColor:'#0f172a', fillerColor:'rgba(56,189,248,0.15)',
+       handleStyle:{color:'#334155'}, textStyle:{color:'#64748b'}}
+    ],
+    series: [
+      {name:'K线', type:'candlestick', data:kline, xAxisIndex:0, yAxisIndex:0,
+       itemStyle:{color:'#ef4444', color0:'#22c55e', borderColor:'#ef4444', borderColor0:'#22c55e'}},
+      {name:'白线', type:'line', data:white, xAxisIndex:0, yAxisIndex:0, symbol:'none',
+       lineStyle:{color:'#ffffff', width:1.2}},
+      {name:'黄线', type:'line', data:bbi, xAxisIndex:0, yAxisIndex:0, symbol:'none',
+       lineStyle:{color:'#f59e0b', width:1.2, type:'dashed'}},
+      {name:'MACD', type:'bar', data:macd.hist, xAxisIndex:1, yAxisIndex:1,
+       itemStyle:{color: p => macd.hist[p.dataIndex]>=0 ? '#ef4444' : '#22c55e'}},
+      {name:'DIF', type:'line', data:macd.dif, xAxisIndex:1, yAxisIndex:1, symbol:'none', lineStyle:{color:'#f8fafc', width:1}},
+      {name:'DEA', type:'line', data:macd.dea, xAxisIndex:1, yAxisIndex:1, symbol:'none', lineStyle:{color:'#f59e0b', width:1}},
+      {name:'相关性', type:'line', data:corr, xAxisIndex:2, yAxisIndex:2, symbol:'none',
+       lineStyle:{color:'#38bdf8', width:1.2},
+       markLine:{symbol:'none', label:{show:false},
+         lineStyle:{color:'#475569', type:'dashed'}, data:[{yAxis:0}]},
+       markPoint:{symbol:'none',
+         label:{show:true, position:'right', color:'#38bdf8', fontSize:10,
+                formatter: () => corrNow!=null ? 'r='+(corrNow>=0?'+':'')+corrNow.toFixed(2) : ''},
+         data:[{coord:[dates.length-1, corrNow ?? 0]}]}}
+    ]
+  };
+  chartBottom.setOption(option, true);
+  // 应用共享 zoom（换板块后不重置窗口）
+  chartBottom.dispatchAction({type:'dataZoom', start: zoomState.start, end: zoomState.end});
+}
+
+/* ───────── tab / 窗口切换 ───────── */
+let syncGuard = false;
+function syncZoom(from, to) {
+  if (syncGuard) return;
+  syncGuard = true;
+  try {
+    const s = from.start ?? from.batch?.[0].start;
+    const e = from.end ?? from.batch?.[0].end;
+    if (s == null || e == null) return;
+    if (Math.abs(s - zoomState.start) < 0.01 && Math.abs(e - zoomState.end) < 0.01) return; // 值未变，防递归
+    zoomState.start = s; zoomState.end = e;
+    to.dispatchAction({type:'dataZoom', start: s, end: e});
+  } finally {
+    syncGuard = false;
+  }
+}
+document.getElementById('tabs').addEventListener('click', e => {
+  const btn = e.target.closest('button[data-tab]');
+  if (!btn) return;
+  state.tab = btn.dataset.tab;
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('active', b === btn));
+  buildList();
+  // tab 切换后默认选中第一个
+  const first = document.querySelector('.list-item');
+  if (first) first.click();
+});
+document.getElementById('corrWin').addEventListener('click', e => {
+  const btn = e.target.closest('button[data-w]');
+  if (!btn) return;
+  CORR_WIN = +btn.dataset.w;
+  document.querySelectorAll('#corrWin button').forEach(b => b.classList.toggle('active', b === btn));
+  corrCache.clear();  // 窗口变了，相关性缓存全部重算
+  buildList();       // 刷新列表 badge
+  if (state.selCode) {
+    const it = flatItems().find(x => x.code === state.selCode);
+    if (it) renderBottom(it);
+  }
+});
+</script>
+</body>
+</html>
