@@ -21,8 +21,8 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
 #tabs { display:flex; border-bottom:1px solid #1e293b; }
 #tabs button { flex:1; padding:7px 0; background:#0f172a; color:#94a3b8; border:none; cursor:pointer; font-size:12px; border-right:1px solid #1e293b; }
 #tabs button.active { background:#16233f; color:#f87171; font-weight:700; }
-#l3box { display:none; padding:8px 14px; border-bottom:1px solid #1e293b; background:#0d1526; }
-#l3box select { width:100%; margin:4px 0; background:#0f172a; color:#e2e8f0; border:1px solid #334155; border-radius:4px; padding:4px; font-size:12px; }
+#filterbox { display:none; padding:8px 14px; border-bottom:1px solid #1e293b; background:#0d1526; }
+#filterbox select { width:100%; margin:4px 0; background:#0f172a; color:#e2e8f0; border:1px solid #334155; border-radius:4px; padding:4px; font-size:12px; }
 #list { flex:1; overflow-y:auto; }
 .item { padding:8px 14px; cursor:pointer; border-bottom:1px solid #0f172a; }
 .item:hover { background:#111c33; }
@@ -56,9 +56,9 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
       <button data-level="L2">L2</button>
       <button data-level="L3">L3</button>
     </div>
-    <div id="l3box">
-      <select id="l3sel1"></select>
-      <select id="l3sel2"></select>
+    <div id="filterbox">
+      <select id="fsel1"></select>
+      <select id="fsel2"></select>
     </div>
     <div id="list"></div>
   </div>
@@ -210,13 +210,13 @@ function init() {
     if (!btn) return;
     curLevel = btn.dataset.level;
     document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('active', b === btn));
-    renderL3Box();
+    renderFilterBox();
     renderSummary();
     renderList();
   });
-  document.getElementById('l3sel1').addEventListener('change', () => { fillL3Sel2(); renderSummary(); renderList(); });
-  document.getElementById('l3sel2').addEventListener('change', () => { renderSummary(); renderList(); });
-  renderL3Box();
+  document.getElementById('fsel1').addEventListener('change', () => { if (curLevel === 'L3') fillL3Sel2(); renderSummary(); renderList(); });
+  document.getElementById('fsel2').addEventListener('change', () => { renderSummary(); renderList(); });
+  renderFilterBox();
   renderSummary();
   renderList();
 }
@@ -226,26 +226,47 @@ function l3CodesFor(l2code) {
   for (const l1 of DATA.tree) for (const l2 of l1.children) if (l2.code === l2code) for (const l3 of l2.children) out.push(l3.code);
   return out;
 }
-function renderL3Box() {
-  const box = document.getElementById('l3box');
-  box.style.display = curLevel === 'L3' ? 'block' : 'none';
-  if (curLevel !== 'L3') return;
-  const sel1 = document.getElementById('l3sel1');
-  if (sel1.options.length === 0) {
+function renderFilterBox() {
+  const box = document.getElementById('filterbox');
+  const sel1 = document.getElementById('fsel1');
+  const sel2 = document.getElementById('fsel2');
+  if (curLevel === 'L1') { box.style.display = 'none'; return; }
+  box.style.display = 'block';
+  if (curLevel === 'L2') {
+    sel2.style.display = 'none';
+    if (sel1.dataset.mode !== 'L2') {
+      sel1.dataset.mode = 'L2';
+      sel1.innerHTML = '';
+      sel1.add(new Option('全部 L1（默认）', ''));
+      for (const n of DATA.tree) sel1.add(new Option(n.name, n.code));
+    }
+    return;
+  }
+  sel2.style.display = 'block';
+  if (sel1.dataset.mode !== 'L3') {
+    sel1.dataset.mode = 'L3';
+    sel1.innerHTML = '';
     for (const n of DATA.tree) sel1.add(new Option(n.name, n.code));
   }
   fillL3Sel2();
 }
 function fillL3Sel2() {
-  const sel1 = document.getElementById('l3sel1');
-  const sel2 = document.getElementById('l3sel2');
+  const sel1 = document.getElementById('fsel1');
+  const sel2 = document.getElementById('fsel2');
   sel2.innerHTML = '';
   const l1node = DATA.tree.find(n => n.code === sel1.value);
   for (const c of (l1node ? l1node.children : [])) sel2.add(new Option(c.name, c.code));
 }
 function currentCodes() {
-  if (curLevel !== 'L3') return DATA.orders[curLevel] || [];
-  const l2code = document.getElementById('l3sel2').value;
+  if (curLevel === 'L1') return DATA.orders.L1 || [];
+  if (curLevel === 'L2') {
+    const l1code = document.getElementById('fsel1').value;
+    if (!l1code) return DATA.orders.L2 || [];  // 默认全部
+    const l1node = DATA.tree.find(n => n.code === l1code);
+    const set = new Set((l1node ? l1node.children : []).map(c => c.code));
+    return (DATA.orders.L2 || []).filter(c => set.has(c));
+  }
+  const l2code = document.getElementById('fsel2').value;
   const set = new Set(l3CodesFor(l2code));
   return (DATA.orders.L3 || []).filter(c => set.has(c));
 }
