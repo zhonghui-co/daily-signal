@@ -130,12 +130,16 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, 
   let mp = {};
   if (arrows.length) mp.data = arrows;
   if (marks && marks.length) {
-    mp.data = (mp.data||[]).concat(marks.map(m => ({
-      coord:[dates[m.i], k[m.i]?k[m.i][2]:null], value:m.t,
-      symbol:'triangle', symbolSize:11, symbolRotate: m.t==='空'?180:0,
-      itemStyle:{color: m.t==='多' ? '#dc2626' : '#16a34a'},
-      label:{show:true, position:'bottom', distance:5, formatter:m.t, color: m.t==='多'?'#fca5a5':'#86efac', fontSize:11, fontWeight:'bold'}
-    })));
+    mp.data = (mp.data||[]).concat(marks.map(m => {
+      const isDuo = m.t === '多';
+      const y = k[m.i] ? (isDuo ? k[m.i][2] : k[m.i][1]) : null;
+      return {
+        coord:[dates[m.i], y], value:m.t,
+        symbol:'triangle', symbolSize:11, symbolRotate: isDuo ? 0 : 180,
+        itemStyle:{color: isDuo ? '#dc2626' : '#16a34a'},
+        label:{show:true, position: isDuo ? 'bottom' : 'top', distance:5, formatter:m.t, color: isDuo ? '#fca5a5':'#86efac', fontSize:11, fontWeight:'bold'}
+      };
+    }));
   }
   if (mp.data && mp.data.length) series[0].markPoint = { silent:true, data:mp.data };
   for (const s of (extraSeries||[])) series.push(s);
@@ -157,11 +161,11 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, 
 }
 function attachSlopeSub(opt, slopeMain, slopeRef, dates) {
   opt.grid.push({left:60, right:20, top:'74%', bottom:22});
-  opt.xAxis.push({ type:'category', data:dates, axisLabel:{show:false}, axisLine:{lineStyle:{color:'#334155'}} });
-  opt.yAxis.push({ scale:true, axisLabel:{color:'#64748b', fontSize:9}, splitLine:{lineStyle:{color:'#1e293b'}} });
-  opt.series.push({ type:'line', name:'斜率', data:slopeMain, symbol:'none', lineStyle:{width:1.2, color:'#f87171'} });
-  opt.series.push({ type:'line', name:'全A斜率', data:slopeRef, symbol:'none', lineStyle:{width:1.2, color:'#38bdf8'} });
-  opt.series.push({ type:'line', name:'零轴', data:dates.map(()=>0), symbol:'none', lineStyle:{width:1, color:'#475569', type:'dashed'} });
+  opt.xAxis.push({ gridIndex:1, type:'category', data:dates, axisLabel:{show:false}, axisLine:{lineStyle:{color:'#334155'}} });
+  opt.yAxis.push({ gridIndex:1, scale:true, axisLabel:{color:'#64748b', fontSize:9}, splitLine:{lineStyle:{color:'#1e293b'}} });
+  opt.series.push({ xAxisIndex:1, yAxisIndex:1, type:'line', name:'斜率', data:slopeMain, symbol:'none', lineStyle:{width:1.2, color:'#f87171'} });
+  opt.series.push({ xAxisIndex:1, yAxisIndex:1, type:'line', name:'全A斜率', data:slopeRef, symbol:'none', lineStyle:{width:1.2, color:'#38bdf8'} });
+  opt.series.push({ xAxisIndex:1, yAxisIndex:1, type:'line', name:'零轴', data:dates.map(()=>0), symbol:'none', lineStyle:{width:1, color:'#475569', type:'dashed'} });
   return opt;
 }
 
@@ -170,7 +174,7 @@ function init() {
   const stTxt = {1:'上涨段', '-1':'下跌段', 0:'横盘'}[A.curState];
   const zoneTxt = A.anchorType === '多' ? '<span class="red">🟢 多头区间</span>' : '<span class="green">🔴 空头区间</span>';
   document.getElementById('statusCard').innerHTML = `
-    <div class="row"><span>全A v2 0AMV</span>${zoneTxt}</div>
+    <div class="row"><span>全A市场 · 0AMV v2</span>${zoneTxt}</div>
     <div class="row"><span class="dim">锚点 ${A.anchorDate} · 第${dates.length - A.anchor}天</span>
       <span class="dim">斜率 <b style="color:${A.curSlope>=0?'#f87171':'#4ade80'}">${A.curSlope>0?'+':''}${A.curSlope}%</b></span></div>
     <div class="row"><span class="dim">距锚点</span><span class="${A.anchorPct>=0?'red':'green'}">${A.anchorPct>0?'+':''}${A.anchorPct}%</span></div>
@@ -230,8 +234,7 @@ function render() {
   cTop.setOption(optA, true);
   const s = D.sectors[sel];
   if (s) {
-    const optS = buildOption(s.k, sel, s.state, s.slope, s.segments, dates, null, A.anchorDate,
-      [{ type:'line', name:'全A斜率', data:A.slope, symbol:'none', lineStyle:{width:1, color:'#38bdf8', type:'dotted'} }]);
+    const optS = buildOption(s.k, sel, s.state, s.slope, s.segments, dates, null, A.anchorDate);
     attachSlopeSub(optS, s.slope, A.slope, dates);
     if (s.turn != null && s.k[s.turn]) {
       const cs = optS.series[0];
@@ -239,7 +242,7 @@ function render() {
       mp.data = (mp.data||[]).concat([{
         coord:[dates[s.turn], s.k[s.turn][2]*0.98], value:'掉头',
         symbol:'arrow', symbolSize:13, symbolRotate:0, itemStyle:{color:'#facc15'},
-        label:{show:true, position:'bottom', distance:4, formatter:`掉头 ${s.turnDate}`, color:'#facc15', fontSize:10}
+        label:{show:true, position:'top', distance:4, formatter:`掉头 ${s.turnDate}`, color:'#facc15', fontSize:10}
       }]);
       cs.markPoint = mp;
     }
