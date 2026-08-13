@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>v3 — 结构相关性作战图</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC',sans-serif; font-size:13px; }
+#layout { display:flex; height:100vh; }
+#panel { width:280px; min-width:260px; border-right:1px solid #1e293b; display:flex; flex-direction:column; }
+#statusCard { padding:12px 14px; border-bottom:1px solid #1e293b; background:#0f172a; }
+#statusCard .row { display:flex; justify-content:space-between; align-items:center; margin:4px 0; }
+#statusCard .zone { font-weight:700; font-size:16px; }
+.red { color:#f87171; } .green { color:#4ade80; }
+#statusCard .dim { color:#94a3b8; font-size:11px; }
+#progress { display:flex; gap:4px; margin:8px 0 4px; }
+#progress .step { flex:1; text-align:center; padding:4px 0; border-radius:4px; font-size:10px; background:#1e293b; color:#64748b; }
+#progress .step.done { background:rgba(220,38,38,.3); color:#fca5a5; }
+#summary { padding:8px 14px; font-size:11px; color:#cbd5e1; border-bottom:1px solid #1e293b; background:#0d1526; line-height:1.7; }
+#listHead { padding:8px 14px; font-size:12px; color:#94a3b8; border-bottom:1px solid #1e293b; }
+#list { flex:1; overflow-y:auto; }
+.item { padding:8px 14px; cursor:pointer; border-bottom:1px solid #0f172a; }
+.item:hover { background:#111c33; }
+.item.active { background:#16233f; border-left:3px solid #f87171; }
+.item .l1 { display:flex; justify-content:space-between; align-items:center; }
+.item .nm { font-weight:600; }
+.item .l2 { display:flex; gap:8px; margin-top:4px; font-size:11px; color:#94a3b8; align-items:center; }
+.badge { padding:1px 7px; border-radius:3px; font-size:10px; font-weight:600; white-space:nowrap; }
+.b-rev-confirm { background:#991b1b; color:#fecaca; }
+.b-rev-first { background:#c2410c; color:#fed7aa; }
+.b-strong { background:#7c3aed; color:#ddd6fe; }
+.b-follow { background:rgba(220,38,38,.35); color:#fca5a5; }
+.b-flat { background:#334155; color:#cbd5e1; }
+.b-down { background:rgba(22,163,74,.35); color:#86efac; }
+#charts { flex:1; display:flex; flex-direction:column; }
+#chartTop { height:44%; }
+#chartBottom { height:56%; }
+#legend { position:absolute; top:8px; right:24px; font-size:11px; color:#94a3b8; display:flex; gap:12px; z-index:5; background:rgba(11,18,32,.8); padding:4px 8px; border-radius:4px; }
+#legend span i { display:inline-block; width:12px; height:8px; margin-right:4px; border-radius:2px; }
+#loading { position:fixed; top:45%; width:100%; text-align:center; color:#64748b; z-index:99; }
+</style>
+</head>
+<body>
+<div id="loading">加载数据中…</div>
+<div id="layout">
+  <div id="panel">
+    <div id="statusCard"></div>
+    <div id="summary"></div>
+    <div id="listHead">板块状态榜 · 按资金进入顺序</div>
+    <div id="list"></div>
+  </div>
+  <div id="charts" style="position:relative">
+    <div id="legend">
+      <span><i style="background:rgba(220,38,38,.3)"></i>上涨段</span>
+      <span><i style="background:rgba(22,163,74,.3)"></i>下跌段</span>
+      <span>▲斜率转正</span>
+      <span style="color:#facc15">┆锚点</span>
+    </div>
+    <div id="chartTop"></div>
+    <div id="chartBottom"></div>
+  </div>
+</div>
+<script>
+let DATA = null, sel = null;
+fetch('v3-states.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(d => { DATA = d; init(); })
+  .catch(e => { document.getElementById('loading').textContent = '数据加载失败: ' + e.message; });
+
+function ema(arr, n) {
+  const k = 2/(n+1), out = new Array(arr.length).fill(null);
+  let start = arr.findIndex(v => v != null);
+  if (start < 0) return out;
+  let s = 0, cnt = 0;
+  for (let i = start; i < Math.min(start+n, arr.length); i++) { if (arr[i] != null) { s += arr[i]; cnt++; } }
+  if (cnt === 0) return out;
+  let idx = start + n - 1;
+  out[idx] = s / cnt;
+  for (let i = idx + 1; i < arr.length; i++) {
+    if (arr[i] != null) out[i] = arr[i]*k + out[i-1]*(1-k); else out[i] = out[i-1];
+  }
+  return out;
+}
+function whiteOf(closes) {
+  const e10 = ema(closes, 10);
+  const c = e10.map((v,i) => v != null ? v : closes[i]);
+  return ema(c, 10);
+}
+const UP = 'rgba(220,38,38,0.08)', DN = 'rgba(22,163,74,0.08)';
+function stateBands(segments, dates) {
+  const areas = [];
+  for (const [s,e,st] of segments) {
+    if (st === 1) areas.push([{xAxis: dates[s], itemStyle:{color:UP}}, {xAxis: dates[e]}]);
+    else if (st === -1) areas.push([{xAxis: dates[s], itemStyle:{color:DN}}, {xAxis: dates[e]}]);
+  }
+  return areas;
+}
+function turnArrows(segments, dates, kdata) {
+  const pts = [];
+  for (const [s,e,st] of segments) {
+    if (st === 1 && s > 0 && kdata[s]) {
+      pts.push({coord:[dates[s], kdata[s][2]*0.98], value:'▲',
+        symbol:'arrow', symbolSize:11, itemStyle:{color:'#f87171'}});
+    }
+  }
+  return pts;
+}
+function klineSeries(k, name) {
+  const data = k.map(v => v ? [v[0], v[3], v[2], v[1]] : null);
+  return { type:'candlestick', name, data, itemStyle:{color:'#dc2626', color0:'#16a34a', borderColor:'#dc2626', borderColor0:'#16a34a'} };
+}
+
+let cTop = null, cBottom = null, zoomState = {start:0, end:100}, syncGuard = false;
+
+function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, extraSeries, extraAreas) {
+  const closes = k.map(v => v ? v[3] : null);
+  const w = whiteOf(closes);
+  const series = [
+    klineSeries(k, name),
+    { type:'line', name:'白线', data:w, symbol:'none', lineStyle:{width:1.4, color:'#fbbf24'}, smooth:true },
+  ];
+  series[0].markArea = { silent:true, data:[...(stateBands(segments, dates)), ...(extraAreas||[])] };
+  series[0].markLine = {
+    silent:true, symbol:'none',
+    data: anchorDate ? [{xAxis:anchorDate, lineStyle:{color:'#facc15', type:'dashed', width:1}}] : [],
+    label:{formatter:'锚点', position:'start', color:'#facc15', fontSize:10}
+  };
+  const arrows = turnArrows(segments, dates, k);
+  let mp = {};
+  if (arrows.length) mp.data = arrows;
+  if (marks && marks.length) {
+    mp.data = (mp.data||[]).concat(marks.map(m => ({
+      coord:[dates[m.i], k[m.i]?k[m.i][2]:null], value:m.t,
+      symbol:'triangle', symbolSize:11, symbolRotate: m.t==='空'?180:0,
+      itemStyle:{color: m.t==='多' ? '#dc2626' : '#16a34a'},
+      label:{show:true, position:'bottom', distance:5, formatter:m.t, color: m.t==='多'?'#fca5a5':'#86efac', fontSize:11, fontWeight:'bold'}
+    })));
+  }
+  if (mp.data && mp.data.length) series[0].markPoint = { silent:true, data:mp.data };
+  for (const s of (extraSeries||[])) series.push(s);
+  return {
+    animation:false, backgroundColor:'transparent',
+    grid:[{left:60, right:20, top:14, bottom:'30%'}],
+    xAxis:[{ type:'category', data:dates, boundaryGap:true,
+      axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{color:'#64748b', fontSize:10} }],
+    yAxis:[{ scale:true, position:'left', axisLabel:{color:'#64748b', fontSize:10}, splitLine:{lineStyle:{color:'#1e293b'}} }],
+    dataZoom:[
+      { type:'inside', xAxisIndex:0, start:55, end:100 },
+      { type:'slider', xAxisIndex:0, start:55, end:100, height:16, bottom:2,
+        borderColor:'#1e293b', backgroundColor:'#0f172a', fillerColor:'rgba(220,38,38,.15)',
+        textStyle:{color:'#64748b', fontSize:10} }
+    ],
+    tooltip:{ trigger:'axis', axisPointer:{type:'cross'}, backgroundColor:'#0f172a', borderColor:'#334155', textStyle:{color:'#e2e8f0', fontSize:11} },
+    series
+  };
+}
+function attachSlopeSub(opt, slopeMain, slopeRef, dates) {
+  opt.grid.push({left:60, right:20, top:'74%', bottom:22});
+  opt.xAxis.push({ type:'category', data:dates, axisLabel:{show:false}, axisLine:{lineStyle:{color:'#334155'}} });
+  opt.yAxis.push({ scale:true, axisLabel:{color:'#64748b', fontSize:9}, splitLine:{lineStyle:{color:'#1e293b'}} });
+  opt.series.push({ type:'line', name:'斜率', data:slopeMain, symbol:'none', lineStyle:{width:1.2, color:'#f87171'} });
+  opt.series.push({ type:'line', name:'全A斜率', data:slopeRef, symbol:'none', lineStyle:{width:1.2, color:'#38bdf8'} });
+  opt.series.push({ type:'line', name:'零轴', data:dates.map(()=>0), symbol:'none', lineStyle:{width:1, color:'#475569', type:'dashed'} });
+  return opt;
+}
+
+function init() {
+  const D = DATA, dates = D.dates, A = D.allA, P = A.progress || {};
+  const stTxt = {1:'上涨段', '-1':'下跌段', 0:'横盘'}[A.curState];
+  const zoneTxt = A.anchorType === '多' ? '<span class="red">🟢 多头区间</span>' : '<span class="green">🔴 空头区间</span>';
+  document.getElementById('statusCard').innerHTML = `
+    <div class="row"><span>全A v2 0AMV</span>${zoneTxt}</div>
+    <div class="row"><span class="dim">锚点 ${A.anchorDate} · 第${dates.length - A.anchor}天</span>
+      <span class="dim">斜率 <b style="color:${A.curSlope>=0?'#f87171':'#4ade80'}">${A.curSlope>0?'+':''}${A.curSlope}%</b></span></div>
+    <div class="row"><span class="dim">距锚点</span><span class="${A.anchorPct>=0?'red':'green'}">${A.anchorPct>0?'+':''}${A.anchorPct}%</span></div>
+    <div id="progress">
+      <div class="step ${P.p1?'done':''}">① 价格转多</div>
+      <div class="step ${P.p2?'done':''}">② 斜率转正</div>
+      <div class="step ${P.p3?'done':''}">③ 收复下跌段</div>
+    </div>
+    <div class="dim">当前状态：<b>${stTxt}</b>（${A.curState===1?'反转已确认':(A.curState===-1?'反弹未确认':'震荡')}）</div>`;
+  const sectors = D.sectors;
+  const nRev = D.order.filter(n => sectors[n].s4==='领涨反转').length;
+  const nConf = D.order.filter(n => sectors[n].s4==='领涨反转' && sectors[n].tier==='确认').length;
+  const nStrong = D.order.filter(n => sectors[n].s4==='持续强势').length;
+  const nFollow = D.order.filter(n => sectors[n].s4==='跟涨').length;
+  const nDown = D.order.filter(n => sectors[n].s4==='同跌'||sectors[n].s4==='逆势').length;
+  document.getElementById('summary').innerHTML =
+    `领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 持续强势 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌中 <b class="green">${nDown}</b>`;
+  const listEl = document.getElementById('list');
+  const badgeCls = (s) => {
+    if (s.s4 === '领涨反转') return s.tier==='确认' ? 'b-rev-confirm' : 'b-rev-first';
+    if (s.s4 === '持续强势') return 'b-strong';
+    if (s.s4 === '跟涨') return 'b-follow';
+    if (s.s4 === '无关') return 'b-flat';
+    return 'b-down';
+  };
+  const label = (s) => s.s4 === '领涨反转' ? `领涨反转·${s.tier}` : s.s4;
+  for (const name of D.order) {
+    const s = sectors[name];
+    const el = document.createElement('div');
+    el.className = 'item';
+    const leadTxt = s.lead == null ? '—' : (s.lead <= 0 ? `领先${-s.lead}天` : `滞后${s.lead}天`);
+    el.innerHTML = `<div class="l1"><span class="nm">${name}</span><span class="badge ${badgeCls(s)}">${label(s)}</span></div>
+      <div class="l2"><span>斜率 ${s.curSlope>0?'+':''}${s.curSlope}%</span><span>${leadTxt}</span><span>锚点来 ${s.anchorPct>0?'+':''}${s.anchorPct}%</span>${s.newHigh?'<span class="red">新高</span>':''}</div>`;
+    el.onclick = () => select(name);
+    listEl.appendChild(el);
+  }
+  select(D.order[0]);
+}
+
+function select(name) {
+  sel = name;
+  document.querySelectorAll('.item').forEach(el => el.classList.remove('active'));
+  const items = document.querySelectorAll('.item');
+  const idx = DATA.order.indexOf(name);
+  if (items[idx]) items[idx].classList.add('active');
+  render();
+}
+
+function render() {
+  const D = DATA, dates = D.dates, A = D.allA;
+  const optA = buildOption(A.k, '全A v2', A.state, A.slope, A.segments, dates, A.marks, A.anchorDate);
+  attachSlopeSub(optA, A.slope, A.slope, dates);
+  if (!cTop) {
+    cTop = echarts.init(document.getElementById('chartTop'));
+    cTop.on('datazoom', ev => syncZoom(ev, cBottom));
+  }
+  cTop.setOption(optA, true);
+  const s = D.sectors[sel];
+  if (s) {
+    const optS = buildOption(s.k, sel, s.state, s.slope, s.segments, dates, null, A.anchorDate,
+      [{ type:'line', name:'全A斜率', data:A.slope, symbol:'none', lineStyle:{width:1, color:'#38bdf8', type:'dotted'} }]);
+    attachSlopeSub(optS, s.slope, A.slope, dates);
+    if (s.turn != null && s.k[s.turn]) {
+      const cs = optS.series[0];
+      const mp = cs.markPoint || {silent:true, data:[]};
+      mp.data = (mp.data||[]).concat([{
+        coord:[dates[s.turn], s.k[s.turn][2]*0.98], value:'掉头',
+        symbol:'arrow', symbolSize:13, symbolRotate:0, itemStyle:{color:'#facc15'},
+        label:{show:true, position:'bottom', distance:4, formatter:`掉头 ${s.turnDate}`, color:'#facc15', fontSize:10}
+      }]);
+      cs.markPoint = mp;
+    }
+    if (!cBottom) {
+      cBottom = echarts.init(document.getElementById('chartBottom'));
+      cBottom.on('datazoom', ev => syncZoom(ev, cTop));
+    }
+    cBottom.setOption(optS, true);
+  }
+  syncZoomFrom(zoomState);
+  document.getElementById('loading').style.display = 'none';
+}
+
+function syncZoom(ev, target) {
+  if (syncGuard) return;
+  syncGuard = true;
+  try {
+    const src = ev.start != null ? ev : (ev.batch && ev.batch[0]);
+    if (!src || src.start == null || src.end == null) return;
+    if (Math.abs(src.start - zoomState.start) < 0.01 && Math.abs(src.end - zoomState.end) < 0.01) return;
+    zoomState = {start: src.start, end: src.end};
+    target.dispatchAction({type:'dataZoom', start: zoomState.start, end: zoomState.end});
+  } finally { syncGuard = false; }
+}
+function syncZoomFrom(z) {
+  if (cTop) cTop.dispatchAction({type:'dataZoom', start: z.start, end: z.end});
+  if (cBottom) cBottom.dispatchAction({type:'dataZoom', start: z.start, end: z.end});
+}
+window.addEventListener('resize', () => { cTop && cTop.resize(); cBottom && cBottom.resize(); });
+</script>
+</body>
+</html>
