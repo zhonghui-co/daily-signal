@@ -103,9 +103,16 @@ function whiteOf(closes) {
 const UP = 'rgba(220,38,38,0.08)', DN = 'rgba(22,163,74,0.08)';
 function stateBands(segments, dates) {
   const areas = [];
-  for (const [s,e,st] of segments) {
-    if (st === 1) areas.push([{xAxis: dates[s], itemStyle:{color:UP}}, {xAxis: dates[e]}]);
-    else if (st === -1) areas.push([{xAxis: dates[s], itemStyle:{color:DN}}, {xAxis: dates[e]}]);
+  for (let i = 0; i < segments.length; i++) {
+    const [s, e, st] = segments[i];
+    let color = null;
+    if (st === 1) color = UP;
+    else if (st === -1) color = DN;
+    else if (i > 0 && i < segments.length - 1 && segments[i-1][2] !== 0 && segments[i-1][2] === segments[i+1][2]) {
+      // 横盘夹在同向两段之间 → 背景跟两侧（上涨间=红, 下跌间=绿）
+      color = segments[i-1][2] === 1 ? UP : DN;
+    }
+    if (color) areas.push([{xAxis: dates[s], itemStyle:{color}}, {xAxis: dates[e]}]);
   }
   return areas;
 }
