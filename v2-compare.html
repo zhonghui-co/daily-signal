@@ -361,9 +361,7 @@ function renderTop() {
     ]
   };
   chartTop.setOption(option, true);
-  chartTop.on('datazoom', ev => {
-    chartBottom.dispatchAction({type:'dataZoom', start: ev.start ?? ev.batch?.[0].start, end: ev.end ?? ev.batch?.[0].end});
-  });
+  chartTop.on('datazoom', ev => syncZoom(ev, chartBottom));
 }
 
 function renderBottom(it) {
@@ -439,12 +437,20 @@ function renderBottom(it) {
     ]
   };
   chartBottom.setOption(option, true);
-  chartBottom.on('datazoom', ev => {
-    chartTop.dispatchAction({type:'dataZoom', start: ev.start ?? ev.batch?.[0].start, end: ev.end ?? ev.batch?.[0].end});
-  });
+  chartBottom.on('datazoom', ev => syncZoom(ev, chartTop));
 }
 
 /* ───────── tab / 窗口切换 ───────── */
+let syncGuard = false;
+function syncZoom(from, to) {
+  if (syncGuard) return;
+  syncGuard = true;
+  try {
+    to.dispatchAction({type:'dataZoom', start: from.start ?? from.batch?.[0].start, end: from.end ?? from.batch?.[0].end});
+  } finally {
+    syncGuard = false;
+  }
+}
 document.getElementById('tabs').addEventListener('click', e => {
   const btn = e.target.closest('button[data-tab]');
   if (!btn) return;
