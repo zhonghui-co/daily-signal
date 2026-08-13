@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>v3 — 结构相关性作战图</title>
+<title>v3 — 结构相关性作战图 (L1/L2/L3)</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -18,7 +18,11 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
 #progress .step { flex:1; text-align:center; padding:4px 0; border-radius:4px; font-size:10px; background:#1e293b; color:#64748b; }
 #progress .step.done { background:rgba(220,38,38,.3); color:#fca5a5; }
 #summary { padding:8px 14px; font-size:11px; color:#cbd5e1; border-bottom:1px solid #1e293b; background:#0d1526; line-height:1.7; }
-#listHead { padding:8px 14px; font-size:12px; color:#94a3b8; border-bottom:1px solid #1e293b; }
+#tabs { display:flex; border-bottom:1px solid #1e293b; }
+#tabs button { flex:1; padding:7px 0; background:#0f172a; color:#94a3b8; border:none; cursor:pointer; font-size:12px; border-right:1px solid #1e293b; }
+#tabs button.active { background:#16233f; color:#f87171; font-weight:700; }
+#l3box { display:none; padding:8px 14px; border-bottom:1px solid #1e293b; background:#0d1526; }
+#l3box select { width:100%; margin:4px 0; background:#0f172a; color:#e2e8f0; border:1px solid #334155; border-radius:4px; padding:4px; font-size:12px; }
 #list { flex:1; overflow-y:auto; }
 .item { padding:8px 14px; cursor:pointer; border-bottom:1px solid #0f172a; }
 .item:hover { background:#111c33; }
@@ -33,7 +37,7 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
 .b-follow { background:rgba(220,38,38,.35); color:#fca5a5; }
 .b-flat { background:#334155; color:#cbd5e1; }
 .b-down { background:rgba(22,163,74,.35); color:#86efac; }
-#charts { flex:1; display:flex; flex-direction:column; }
+#charts { flex:1; display:flex; flex-direction:column; position:relative; }
 #chartTop { height:44%; }
 #chartBottom { height:56%; }
 #legend { position:absolute; top:8px; right:24px; font-size:11px; color:#94a3b8; display:flex; gap:12px; z-index:5; background:rgba(11,18,32,.8); padding:4px 8px; border-radius:4px; }
@@ -47,10 +51,18 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
   <div id="panel">
     <div id="statusCard"></div>
     <div id="summary"></div>
-    <div id="listHead">板块状态榜 · 锚点以来涨幅降序</div>
+    <div id="tabs">
+      <button data-level="L1" class="active">L1</button>
+      <button data-level="L2">L2</button>
+      <button data-level="L3">L3</button>
+    </div>
+    <div id="l3box">
+      <select id="l3sel1"></select>
+      <select id="l3sel2"></select>
+    </div>
     <div id="list"></div>
   </div>
-  <div id="charts" style="position:relative">
+  <div id="charts">
     <div id="legend">
       <span><i style="background:rgba(220,38,38,.3)"></i>上涨段</span>
       <span><i style="background:rgba(22,163,74,.3)"></i>下跌段</span>
@@ -62,7 +74,7 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
   </div>
 </div>
 <script>
-let DATA = null, sel = null;
+let DATA = null, sel = null, curLevel = 'L1';
 fetch('v3-states.json', {cache:'no-store'})
   .then(r => r.json())
   .then(d => { DATA = d; init(); })
@@ -83,9 +95,10 @@ function ema(arr, n) {
   return out;
 }
 function whiteOf(closes) {
-  const e10 = ema(closes, 10);
-  const c = e10.map((v,i) => v != null ? v : closes[i]);
-  return ema(c, 10);
+  const n = DATA.params.n;
+  const e1 = ema(closes, n);
+  const c = e1.map((v,i) => v != null ? v : closes[i]);
+  return ema(c, n);
 }
 const UP = 'rgba(220,38,38,0.08)', DN = 'rgba(22,163,74,0.08)';
 function stateBands(segments, dates) {
@@ -113,14 +126,14 @@ function klineSeries(k, name) {
 
 let cTop = null, cBottom = null, zoomState = {start:55, end:100}, syncGuard = false;
 
-function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, extraSeries, extraAreas) {
+function buildOption(k, name, state, slope, segments, dates, marks, anchorDate) {
   const closes = k.map(v => v ? v[3] : null);
   const w = whiteOf(closes);
   const series = [
     klineSeries(k, name),
     { type:'line', name:'白线', data:w, symbol:'none', lineStyle:{width:1.4, color:'#fbbf24'}, smooth:true },
   ];
-  series[0].markArea = { silent:true, data:[...(stateBands(segments, dates)), ...(extraAreas||[])] };
+  series[0].markArea = { silent:true, data:stateBands(segments, dates) };
   series[0].markLine = {
     silent:true, symbol:'none',
     data: anchorDate ? [{xAxis:anchorDate, lineStyle:{color:'#facc15', type:'dashed', width:1}}] : [],
@@ -142,7 +155,6 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, 
     }));
   }
   if (mp.data && mp.data.length) series[0].markPoint = { silent:true, data:mp.data };
-  for (const s of (extraSeries||[])) series.push(s);
   return {
     animation:false, backgroundColor:'transparent',
     grid:[{left:60, right:20, top:14, bottom:'30%'}],
@@ -169,6 +181,15 @@ function attachSlopeSub(opt, slopeMain, slopeRef, dates) {
   return opt;
 }
 
+const badgeCls = (s) => {
+  if (s.s4 === '领涨反转') return s.tier==='确认' ? 'b-rev-confirm' : 'b-rev-first';
+  if (s.s4 === '先行走强') return 'b-strong';
+  if (s.s4 === '跟涨') return 'b-follow';
+  if (s.s4 === '横盘') return 'b-flat';
+  return 'b-down';
+};
+const label = (s) => s.s4 === '领涨反转' ? `领涨反转·${s.tier}` : s.s4;
+
 function init() {
   const D = DATA, dates = D.dates, A = D.allA, P = A.progress || {};
   const stTxt = {1:'上涨段', '-1':'下跌段', 0:'横盘'}[A.curState];
@@ -183,43 +204,87 @@ function init() {
       <div class="step ${P.p2?'done':''}">② 斜率转正</div>
       <div class="step ${P.p3?'done':''}">③ 创新高</div>
     </div>
-    <div class="dim">当前状态：<b>${stTxt}</b>（${A.curState===1 ? (P.p3 ? '反转已确认' : '反转初现') : (A.curState===-1 ? '下跌未确认' : '震荡')}）</div>`;
-  const sectors = D.sectors;
-  const nRev = D.order.filter(n => sectors[n].s4==='领涨反转').length;
-  const nConf = D.order.filter(n => sectors[n].s4==='领涨反转' && sectors[n].tier==='确认').length;
-  const nStrong = D.order.filter(n => sectors[n].s4==='先行走强').length;
-  const nFollow = D.order.filter(n => sectors[n].s4==='跟涨').length;
-  const nDown = D.order.filter(n => sectors[n].s4==='同跌'||sectors[n].s4==='独立下跌').length;
-  const nFlat = D.order.filter(n => sectors[n].s4==='横盘').length;
+    <div class="dim">当前状态：<b>${stTxt}</b>（${A.curState===1 ? (P.p3 ? '反转已确认' : '反转初现') : (A.curState===-1 ? '下跌中' : '震荡')}）· 平滑n=${D.params.n}</div>`;
+  document.getElementById('tabs').addEventListener('click', e => {
+    const btn = e.target.closest('button[data-level]');
+    if (!btn) return;
+    curLevel = btn.dataset.level;
+    document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('active', b === btn));
+    renderL3Box();
+    renderSummary();
+    renderList();
+  });
+  document.getElementById('l3sel1').addEventListener('change', () => { fillL3Sel2(); renderSummary(); renderList(); });
+  document.getElementById('l3sel2').addEventListener('change', () => { renderSummary(); renderList(); });
+  renderL3Box();
+  renderSummary();
+  renderList();
+}
+
+function l3CodesFor(l2code) {
+  const out = [];
+  for (const l1 of DATA.tree) for (const l2 of l1.children) if (l2.code === l2code) for (const l3 of l2.children) out.push(l3.code);
+  return out;
+}
+function renderL3Box() {
+  const box = document.getElementById('l3box');
+  box.style.display = curLevel === 'L3' ? 'block' : 'none';
+  if (curLevel !== 'L3') return;
+  const sel1 = document.getElementById('l3sel1');
+  if (sel1.options.length === 0) {
+    for (const n of DATA.tree) sel1.add(new Option(n.name, n.code));
+  }
+  fillL3Sel2();
+}
+function fillL3Sel2() {
+  const sel1 = document.getElementById('l3sel1');
+  const sel2 = document.getElementById('l3sel2');
+  sel2.innerHTML = '';
+  const l1node = DATA.tree.find(n => n.code === sel1.value);
+  for (const c of (l1node ? l1node.children : [])) sel2.add(new Option(c.name, c.code));
+}
+function currentCodes() {
+  if (curLevel !== 'L3') return DATA.orders[curLevel] || [];
+  const l2code = document.getElementById('l3sel2').value;
+  const set = new Set(l3CodesFor(l2code));
+  return (DATA.orders.L3 || []).filter(c => set.has(c));
+}
+function renderSummary() {
+  const sectors = DATA.sectors;
+  const codes = currentCodes();
+  const nRev = codes.filter(c => sectors[c].s4==='领涨反转').length;
+  const nConf = codes.filter(c => sectors[c].s4==='领涨反转' && sectors[c].tier==='确认').length;
+  const nStrong = codes.filter(c => sectors[c].s4==='先行走强').length;
+  const nFollow = codes.filter(c => sectors[c].s4==='跟涨').length;
+  const nDown = codes.filter(c => sectors[c].s4==='同跌'||sectors[c].s4==='独立下跌').length;
+  const nFlat = codes.filter(c => sectors[c].s4==='横盘').length;
   document.getElementById('summary').innerHTML =
-    `领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌中 <b class="green">${nDown}</b> · 横盘 <b>${nFlat}</b>`;
+    `<b>${curLevel}</b> ${codes.length}个：领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌 <b class="green">${nDown}</b> · 横盘 <b>${nFlat}</b>`;
+}
+function renderList() {
   const listEl = document.getElementById('list');
-  const badgeCls = (s) => {
-    if (s.s4 === '领涨反转') return s.tier==='确认' ? 'b-rev-confirm' : 'b-rev-first';
-    if (s.s4 === '先行走强') return 'b-strong';
-    if (s.s4 === '跟涨') return 'b-follow';
-    if (s.s4 === '横盘') return 'b-flat';
-    return 'b-down';
-  };
-  const label = (s) => s.s4 === '领涨反转' ? `领涨反转·${s.tier}` : s.s4;
-  for (const name of D.order) {
-    const s = sectors[name];
+  listEl.innerHTML = '';
+  const sectors = DATA.sectors;
+  const codes = currentCodes();
+  for (const code of codes) {
+    const s = sectors[code];
+    if (!s) continue;
     const el = document.createElement('div');
     el.className = 'item';
     const leadTxt = s.lead == null ? '—' : (s.lead <= 0 ? `领先${-s.lead}天` : `滞后${s.lead}天`);
-    el.innerHTML = `<div class="l1"><span class="nm">${name}</span><span class="badge ${badgeCls(s)}">${label(s)}</span></div>
+    el.innerHTML = `<div class="l1"><span class="nm">${s.name}</span><span class="badge ${badgeCls(s)}">${label(s)}</span></div>
       <div class="l2"><span>斜率 ${s.curSlope>0?'+':''}${s.curSlope}%</span><span>${leadTxt}</span><span>锚点来 ${s.anchorPct>0?'+':''}${s.anchorPct}%</span>${s.newHigh?'<span class="red">新高</span>':''}</div>`;
-    el.onclick = () => select(name);
+    el.onclick = () => select(code);
     listEl.appendChild(el);
   }
-  select(D.order[0]);
+  if (codes.length) select(codes[0]);
 }
 
-function select(name) {
-  sel = name;
+function select(code) {
+  sel = code;
   document.querySelectorAll('.item').forEach(el => el.classList.remove('active'));
   const items = document.querySelectorAll('.item');
-  const idx = DATA.order.indexOf(name);
+  const idx = currentCodes().indexOf(code);
   if (items[idx]) items[idx].classList.add('active');
   render();
 }
@@ -235,7 +300,7 @@ function render() {
   cTop.setOption(optA, true);
   const s = D.sectors[sel];
   if (s) {
-    const optS = buildOption(s.k, sel, s.state, s.slope, s.segments, dates, null, A.anchorDate);
+    const optS = buildOption(s.k, `${s.name} (${s.level})`, s.state, s.slope, s.segments, dates, null, A.anchorDate);
     attachSlopeSub(optS, s.slope, A.slope, dates);
     if (s.turn != null && s.k[s.turn]) {
       const cs = optS.series[0];
