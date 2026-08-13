@@ -47,14 +47,14 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
   <div id="panel">
     <div id="statusCard"></div>
     <div id="summary"></div>
-    <div id="listHead">板块状态榜 · 按资金进入顺序</div>
+    <div id="listHead">板块状态榜 · 锚点以来涨幅降序</div>
     <div id="list"></div>
   </div>
   <div id="charts" style="position:relative">
     <div id="legend">
       <span><i style="background:rgba(220,38,38,.3)"></i>上涨段</span>
       <span><i style="background:rgba(22,163,74,.3)"></i>下跌段</span>
-      <span>▲斜率转正</span>
+      <span>▲上涨段起点</span>
       <span style="color:#facc15">┆锚点</span>
     </div>
     <div id="chartTop"></div>
@@ -111,7 +111,7 @@ function klineSeries(k, name) {
   return { type:'candlestick', name, data, itemStyle:{color:'#dc2626', color0:'#16a34a', borderColor:'#dc2626', borderColor0:'#16a34a'} };
 }
 
-let cTop = null, cBottom = null, zoomState = {start:0, end:100}, syncGuard = false;
+let cTop = null, cBottom = null, zoomState = {start:55, end:100}, syncGuard = false;
 
 function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, extraSeries, extraAreas) {
   const closes = k.map(v => v ? v[3] : null);
@@ -183,15 +183,16 @@ function init() {
       <div class="step ${P.p2?'done':''}">② 斜率转正</div>
       <div class="step ${P.p3?'done':''}">③ 创新高</div>
     </div>
-    <div class="dim">当前状态：<b>${stTxt}</b>（${A.curState===1?'反转已确认':(A.curState===-1?'反弹未确认':'震荡')}）</div>`;
+    <div class="dim">当前状态：<b>${stTxt}</b>（${A.curState===1 ? (P.p3 ? '反转已确认' : '反转初现') : (A.curState===-1 ? '下跌未确认' : '震荡')}）</div>`;
   const sectors = D.sectors;
   const nRev = D.order.filter(n => sectors[n].s4==='领涨反转').length;
   const nConf = D.order.filter(n => sectors[n].s4==='领涨反转' && sectors[n].tier==='确认').length;
   const nStrong = D.order.filter(n => sectors[n].s4==='先行走强').length;
   const nFollow = D.order.filter(n => sectors[n].s4==='跟涨').length;
   const nDown = D.order.filter(n => sectors[n].s4==='同跌'||sectors[n].s4==='独立下跌').length;
+  const nFlat = D.order.filter(n => sectors[n].s4==='横盘').length;
   document.getElementById('summary').innerHTML =
-    `领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌中 <b class="green">${nDown}</b>`;
+    `领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌中 <b class="green">${nDown}</b> · 横盘 <b>${nFlat}</b>`;
   const listEl = document.getElementById('list');
   const badgeCls = (s) => {
     if (s.s4 === '领涨反转') return s.tier==='确认' ? 'b-rev-confirm' : 'b-rev-first';
