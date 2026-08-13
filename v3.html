@@ -6,9 +6,15 @@
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC',sans-serif; font-size:13px; }
-#layout { display:flex; height:100vh; }
-#panel { width:280px; min-width:260px; border-right:1px solid #1e293b; display:flex; flex-direction:column; }
+body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+       height:100vh; display:flex; flex-direction:column; overflow:hidden; font-size:13px; }
+.header { padding:8px 16px; display:flex; align-items:center; justify-content:space-between;
+          border-bottom:1px solid #1e293b; gap:12px; flex-shrink:0; }
+.header h1 { font-size:16px; font-weight:700; display:flex; align-items:center; gap:8px; white-space:nowrap; }
+.hbadge { font-size:10px; background:#3b2f1e; color:#f59e0b; padding:2px 6px; border-radius:4px; }
+.header-right { display:flex; gap:12px; align-items:center; font-size:11px; color:#94a3b8; }
+#layout { display:flex; flex:1; min-height:0; }
+#panel { width:300px; min-width:280px; border-right:1px solid #1e293b; display:flex; flex-direction:column; min-height:0; }
 #statusCard { padding:12px 14px; border-bottom:1px solid #1e293b; background:#0f172a; }
 #statusCard .row { display:flex; justify-content:space-between; align-items:center; margin:4px 0; }
 #statusCard .zone { font-weight:700; font-size:16px; }
@@ -19,14 +25,14 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
 #progress .step.done { background:rgba(220,38,38,.3); color:#fca5a5; }
 #summary { padding:8px 14px; font-size:11px; color:#cbd5e1; border-bottom:1px solid #1e293b; background:#0d1526; line-height:1.7; }
 #tabs { display:flex; border-bottom:1px solid #1e293b; }
-#tabs button { flex:1; padding:7px 0; background:#0f172a; color:#94a3b8; border:none; cursor:pointer; font-size:12px; border-right:1px solid #1e293b; }
-#tabs button.active { background:#16233f; color:#f87171; font-weight:700; }
+#tabs button { flex:1; background:#000; color:#64748b; border:none; padding:8px 0; font-size:13px; cursor:pointer; border-bottom:2px solid transparent; }
+#tabs button.active { color:#38bdf8; border-bottom-color:#38bdf8; }
 #filterbox { display:none; padding:8px 14px; border-bottom:1px solid #1e293b; background:#0d1526; }
-#filterbox select { width:100%; margin:4px 0; background:#0f172a; color:#e2e8f0; border:1px solid #334155; border-radius:4px; padding:4px; font-size:12px; }
+#filterbox select { width:100%; margin:4px 0; background:#111827; color:#e2e8f0; border:1px solid #334155; border-radius:4px; padding:4px; font-size:12px; }
 #list { flex:1; overflow-y:auto; }
-.item { padding:8px 14px; cursor:pointer; border-bottom:1px solid #0f172a; }
-.item:hover { background:#111c33; }
-.item.active { background:#16233f; border-left:3px solid #f87171; }
+.item { padding:7px 14px; cursor:pointer; border-bottom:1px solid #0f172a; }
+.item:hover { background:#0f172a; }
+.item.active { background:#1e3a5f; color:#60a5fa; border-left:2px solid #38bdf8; }
 .item .l1 { display:flex; justify-content:space-between; align-items:center; }
 .item .nm { font-weight:600; }
 .item .l2 { display:flex; gap:8px; margin-top:4px; font-size:11px; color:#94a3b8; align-items:center; }
@@ -44,10 +50,18 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
 #chartBottom { height:56%; }
 #legend { position:absolute; top:8px; right:24px; font-size:11px; color:#94a3b8; display:flex; gap:12px; z-index:5; background:rgba(11,18,32,.8); padding:4px 8px; border-radius:4px; }
 #legend span i { display:inline-block; width:12px; height:8px; margin-right:4px; border-radius:2px; }
+.chart-label { position:absolute; left:70px; font-size:11px; color:#94a3b8; z-index:10; pointer-events:none; }
 #loading { position:fixed; top:45%; width:100%; text-align:center; color:#64748b; z-index:99; }
 </style>
 </head>
 <body>
+<div class="header">
+  <div style="display:flex;align-items:center;gap:8px">
+    <h1>🦉 v3 结构相关性作战图</h1>
+    <span class="hbadge">白线斜率三态</span>
+  </div>
+  <div class="header-right" id="hright"></div>
+</div>
 <div id="loading">加载数据中…</div>
 <div id="layout">
   <div id="panel">
@@ -65,6 +79,8 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
     <div id="list"></div>
   </div>
   <div id="charts">
+    <div class="chart-label" style="top:6px">🏦 全A 0AMV v2</div>
+    <div class="chart-label" style="top:50%">📊 板块</div>
     <div id="legend">
       <span><i style="background:rgba(220,38,38,.3)"></i>上涨段</span>
       <span><i style="background:rgba(22,163,74,.3)"></i>下跌段</span>
@@ -102,7 +118,7 @@ function whiteOf(closes) {
   const c = e1.map((v,i) => v != null ? v : closes[i]);
   return ema(c, n);
 }
-const UP = 'rgba(220,38,38,0.08)', DN = 'rgba(22,163,74,0.08)';
+const UP = 'rgba(220,38,38,0.07)', DN = 'rgba(22,163,74,0.07)';
 function stateBands(segments, dates) {
   const areas = [];
   for (let i = 0; i < segments.length; i++) {
@@ -137,6 +153,11 @@ let cTop = null, cBottom = null, zoomState = {start:55, end:100}, syncGuard = fa
 
 function buildOption(k, name, state, slope, segments, dates, marks, anchorDate) {
   const closes = k.map(v => v ? v[3] : null);
+  const pcts = [null];
+  for (let i = 1; i < closes.length; i++) {
+    if (closes[i-1] && closes[i]) pcts.push(+((closes[i]-closes[i-1])/closes[i-1]*100).toFixed(2));
+    else pcts.push(null);
+  }
   const w = whiteOf(closes);
   const series = [
     klineSeries(k, name),
@@ -176,7 +197,20 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate) 
         borderColor:'#1e293b', backgroundColor:'#0f172a', fillerColor:'rgba(220,38,38,.15)',
         textStyle:{color:'#64748b', fontSize:10} }
     ],
-    tooltip:{ trigger:'axis', axisPointer:{type:'cross', link:[{xAxisIndex:'all'}]}, backgroundColor:'#0f172a', borderColor:'#334155', textStyle:{color:'#e2e8f0', fontSize:11} },
+    tooltip:{ trigger:'axis', axisPointer:{type:'cross', link:[{xAxisIndex:'all'}]},
+      backgroundColor:'#000', borderColor:'#334155', textStyle:{color:'#e2e8f0', fontSize:11},
+      formatter: function(params) {
+        const i = params[0].dataIndex;
+        const krow = k[i];
+        let html = `<div style="font-weight:700">${name} ${dates[i]}</div>`;
+        if (krow) {
+          const chg = pcts[i];
+          const c = chg == null ? '#94a3b8' : (chg >= 0 ? '#ef4444' : '#22c55e');
+          html += `开 ${krow[0]} 高 ${krow[1]} 低 ${krow[2]} 收 ${krow[3]}<br/>`;
+          html += `上涨率 <b style="color:${c}">${chg==null?'—':(chg>0?'+':'')+chg.toFixed(2)+'%'}</b>`;
+        }
+        return html;
+      } },
     series
   };
 }
@@ -216,6 +250,8 @@ function init() {
       <div class="step ${P.p3?'done':''}">③ 创新高</div>
     </div>
     <div class="dim">当前状态：<b>${stTxt}</b>（${A.curState===1 ? (P.p3 ? '反转已确认' : '反转初现') : (A.curState===-1 ? '下跌中' : '震荡')}）· 平滑n=${D.params.n}</div>`;
+  document.getElementById('hright').innerHTML =
+    `锚点 <b style="color:#facc15">${A.anchorDate}</b> · 全A斜率 <b style="color:${A.curSlope>=0?'#ef4444':'#22c55e'}">${A.curSlope>0?'+':''}${A.curSlope}%</b> · ${stTxt} · n=${D.params.n} K=${D.params.K} M=${D.params.M} θ=${D.params.theta}`;
   document.getElementById('tabs').addEventListener('click', e => {
     const btn = e.target.closest('button[data-level]');
     if (!btn) return;
