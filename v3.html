@@ -181,23 +181,23 @@ function init() {
     <div id="progress">
       <div class="step ${P.p1?'done':''}">① 价格转多</div>
       <div class="step ${P.p2?'done':''}">② 斜率转正</div>
-      <div class="step ${P.p3?'done':''}">③ 收复下跌段</div>
+      <div class="step ${P.p3?'done':''}">③ 创新高</div>
     </div>
     <div class="dim">当前状态：<b>${stTxt}</b>（${A.curState===1?'反转已确认':(A.curState===-1?'反弹未确认':'震荡')}）</div>`;
   const sectors = D.sectors;
   const nRev = D.order.filter(n => sectors[n].s4==='领涨反转').length;
   const nConf = D.order.filter(n => sectors[n].s4==='领涨反转' && sectors[n].tier==='确认').length;
-  const nStrong = D.order.filter(n => sectors[n].s4==='持续强势').length;
+  const nStrong = D.order.filter(n => sectors[n].s4==='先行走强').length;
   const nFollow = D.order.filter(n => sectors[n].s4==='跟涨').length;
-  const nDown = D.order.filter(n => sectors[n].s4==='同跌'||sectors[n].s4==='逆势').length;
+  const nDown = D.order.filter(n => sectors[n].s4==='同跌'||sectors[n].s4==='独立下跌').length;
   document.getElementById('summary').innerHTML =
-    `领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 持续强势 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌中 <b class="green">${nDown}</b>`;
+    `领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌中 <b class="green">${nDown}</b>`;
   const listEl = document.getElementById('list');
   const badgeCls = (s) => {
     if (s.s4 === '领涨反转') return s.tier==='确认' ? 'b-rev-confirm' : 'b-rev-first';
-    if (s.s4 === '持续强势') return 'b-strong';
+    if (s.s4 === '先行走强') return 'b-strong';
     if (s.s4 === '跟涨') return 'b-follow';
-    if (s.s4 === '无关') return 'b-flat';
+    if (s.s4 === '横盘') return 'b-flat';
     return 'b-down';
   };
   const label = (s) => s.s4 === '领涨反转' ? `领涨反转·${s.tier}` : s.s4;
