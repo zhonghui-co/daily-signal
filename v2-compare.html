@@ -344,10 +344,10 @@ const ZOOM_DEFAULT = () => {
   const start = Math.max(0, ((n - HALF_YEAR) / n) * 100);
   return {start, end: 100};
 };
-// 滑条选中范围限制：最小 20 交易日，最大半年（HALF_YEAR）
+// 滑条：默认选中最近半年；可缩放到全历史（2024-09 至今），最小 20 交易日
 function zoomSpan() {
   const n = DATA ? DATA.dates.length : 500;
-  return {minSpan: Math.max(20 / n * 100, 1), maxSpan: HALF_YEAR / n * 100};
+  return {minSpan: Math.max(20 / n * 100, 1)};
 }
 
 function renderTop() {
@@ -379,8 +379,8 @@ function renderTop() {
       {scale:true, gridIndex:1, splitLine:{lineStyle:{color:'#111827'}}, axisLabel:{color:'#64748b', fontSize:10}}
     ],
     dataZoom: [
-      {type:'inside', xAxisIndex:[0,1], start:ZOOM_DEFAULT().start, end:100, minSpan:zoomSpan().minSpan, maxSpan:zoomSpan().maxSpan},
-      {type:'slider', xAxisIndex:[0,1], start:ZOOM_DEFAULT().start, end:100, bottom:8, height:18, minSpan:zoomSpan().minSpan, maxSpan:zoomSpan().maxSpan,
+      {type:'inside', xAxisIndex:[0,1], start:ZOOM_DEFAULT().start, end:100, minSpan:zoomSpan().minSpan},
+      {type:'slider', xAxisIndex:[0,1], start:ZOOM_DEFAULT().start, end:100, bottom:8, height:18, minSpan:zoomSpan().minSpan,
        borderColor:'#334155', backgroundColor:'#0f172a', fillerColor:'rgba(56,189,248,0.15)',
        handleStyle:{color:'#334155'}, textStyle:{color:'#64748b'}}
     ],
@@ -447,8 +447,8 @@ function renderBottom(it) {
        axisLine:{lineStyle:{color:'#334155'}}}
     ],
     dataZoom: [
-      {type:'inside', xAxisIndex:[0,1,2], start:ZOOM_DEFAULT().start, end:100, minSpan:zoomSpan().minSpan, maxSpan:zoomSpan().maxSpan},
-      {type:'slider', xAxisIndex:[0,1,2], start:ZOOM_DEFAULT().start, end:100, bottom:8, height:18, minSpan:zoomSpan().minSpan, maxSpan:zoomSpan().maxSpan,
+      {type:'inside', xAxisIndex:[0,1,2], start:ZOOM_DEFAULT().start, end:100, minSpan:zoomSpan().minSpan},
+      {type:'slider', xAxisIndex:[0,1,2], start:ZOOM_DEFAULT().start, end:100, bottom:8, height:18, minSpan:zoomSpan().minSpan,
        borderColor:'#334155', backgroundColor:'#0f172a', fillerColor:'rgba(56,189,248,0.15)',
        handleStyle:{color:'#334155'}, textStyle:{color:'#64748b'}}
     ],
