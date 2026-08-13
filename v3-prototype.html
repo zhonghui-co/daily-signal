@@ -8,7 +8,7 @@
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC',sans-serif; font-size:13px; }
-#layout { display:flex; height:100vh; }
+#layout { display:flex; height:100vh; height:100dvh; }
 #panel { width:230px; min-width:200px; border-right:1px solid #1e293b; display:flex; flex-direction:column; }
 #statusCard { padding:10px 12px; border-bottom:1px solid #1e293b; background:#0f172a; }
 #statusCard .row { display:flex; justify-content:space-between; align-items:center; margin:3px 0; }
@@ -16,18 +16,18 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
 #statusCard .red { color:#f87171; } #statusCard .green { color:#4ade80; }
 #statusCard .dim { color:#94a3b8; font-size:11px; }
 #progress { display:flex; gap:4px; margin:6px 0; }
-#progress .step { flex:1; text-align:center; padding:3px 0; border-radius:4px; font-size:10px; background:#1e293b; color:#64748b; }
+#progress .step { flex:1; text-align:center; padding:3px 0; border-radius:4px; font-size:11px; background:#1e293b; color:#64748b; }
 #progress .step.done { background:rgba(220,38,38,.25); color:#fca5a5; }
 #progress .step.wait { background:rgba(100,116,139,.15); color:#94a3b8; }
 #listHead { padding:8px 12px; font-size:12px; color:#94a3b8; border-bottom:1px solid #1e293b; }
 #list { flex:1; overflow-y:auto; }
-.item { padding:7px 12px; cursor:pointer; border-bottom:1px solid #0f172a; }
+.item { padding:9px 12px; cursor:pointer; border-bottom:1px solid #0f172a; }
 .item:hover { background:#111c33; }
 .item.active { background:#16233f; border-left:2px solid #f87171; }
 .item .l1 { display:flex; justify-content:space-between; align-items:center; }
 .item .nm { font-weight:600; }
 .item .l2 { display:flex; gap:6px; margin-top:3px; font-size:11px; color:#94a3b8; align-items:center; }
-.badge { padding:1px 6px; border-radius:3px; font-size:10px; font-weight:600; }
+.badge { padding:1px 6px; border-radius:3px; font-size:11px; font-weight:600; }
 .b-rev-confirm { background:#991b1b; color:#fecaca; }
 .b-rev-first { background:#c2410c; color:#fed7aa; }
 .b-strong { background:#7c3aed; color:#ddd6fe; }
@@ -64,7 +64,7 @@ body { background:#0b1220; color:#e2e8f0; font-family:-apple-system,'PingFang SC
 let DATA = null, sel = null;
 fetch('v3-states.json', {cache:'no-store'})
   .then(r => r.json())
-  .then(d => { DATA = d; init(); })
+  .then(d => { DATA = d; DATA.allA.k = d.allA.k.o.map((_, i) => [d.allA.k.o[i], d.allA.k.h[i], d.allA.k.l[i], d.allA.k.c[i]]); init(); })
   .catch(e => { document.getElementById('loading').textContent = '数据加载失败: ' + e.message; });
 
 /* ── 指标 ── */
@@ -87,7 +87,7 @@ function whiteOf(closes) {
   const c = e10.map((v,i) => v != null ? v : closes[i]);
   return ema(c, 10);
 }
-const UP = 'rgba(220,38,38,0.07)', DN = 'rgba(22,163,74,0.07)';
+const UP = 'rgba(220,38,38,0.09)', DN = 'rgba(22,163,74,0.09)';
 function stateBands(segments, dates) {
   const areas = [];
   for (const [s,e,st] of segments) {
@@ -111,7 +111,7 @@ function klineSeries(k, name) {
   return { type:'candlestick', name, data, itemStyle:{color:'#dc2626', color0:'#16a34a', borderColor:'#dc2626', borderColor0:'#16a34a'} };
 }
 
-let cTop = null, cBottom = null, zoomState = {start:0, end:100}, syncGuard = false;
+let cTop = null, cBottom = null, zoomState = {start:70, end:100}, syncGuard = false;
 function baseOption(k, name, state, slope, segments, dates, marks, anchorDate, extraSeries, extraAreas) {
   const closes = k.map(v => v ? v[3] : null);
   const w = whiteOf(closes);
@@ -147,8 +147,8 @@ function baseOption(k, name, state, slope, segments, dates, marks, anchorDate, e
     }],
     yAxis:[{ scale:true, position:'left', axisLabel:{color:'#64748b', fontSize:10}, splitLine:{lineStyle:{color:'#1e293b'}} }],
     dataZoom:[
-      { type:'inside', xAxisIndex:0, start:70, end:100 },
-      { type:'slider', xAxisIndex:0, start:70, end:100, height:14, bottom:2,
+      { type:'inside', xAxisIndex:[0,1], start:70, end:100 },
+      { type:'slider', xAxisIndex:[0,1], start:70, end:100, height:14, bottom:2,
         borderColor:'#1e293b', backgroundColor:'#0f172a', fillerColor:'rgba(220,38,38,.15)',
         textStyle:{color:'#64748b', fontSize:9} }
     ],
@@ -175,9 +175,15 @@ function init() {
   const D = DATA, dates = D.dates, A = D.allA;
   // 状态卡
   const stTxt = {1:'上涨段', '-1':'下跌段', 0:'横盘'}[A.curState];
-  const zoneTxt = A.anchorType === '多' ? '<span class="red">🟢 多头区间</span>' : '<span class="green">🟢 空头区间</span>';
+  const zoneTxt = A.anchorType === '多' ? '<span class="red">🔴 多头区间</span>' : '<span class="green">🟢 空头区间</span>';
   const p1 = '① 价格转多', p2 = '② 斜率转正', p3 = '③ 收复下跌段';
-  const d1 = A.anchorType === '多', d2 = A.curState === 1, d3 = A.curState === 1 && A.anchorPct > 0;
+  const d1 = A.anchorType === '多', d2 = A.curState === 1;
+  const aCl = A.k.map(v => v ? v[3] : null);
+  let d3 = d2;
+  if (d2) {
+    const lastDown = [...A.segments].reverse().find(sg => sg[2] === -1);
+    if (lastDown && aCl[aCl.length-1] != null && aCl[lastDown[0]] != null) d3 = aCl[aCl.length-1] > aCl[lastDown[0]];
+  }
   document.getElementById('statusCard').innerHTML = `
     <div class="row"><span>全A v2 0AMV</span>${zoneTxt}</div>
     <div class="row"><span class="dim">锚点 ${A.anchorDate} 起 · 第${dates.length - A.anchor}天</span><span class="dim">斜率 <b style="color:${A.curSlope>=0?'#f87171':'#4ade80'}">${A.curSlope>0?'+':''}${A.curSlope}%</b></span></div>
@@ -206,7 +212,7 @@ function init() {
     const s = D.sectors[name];
     const el = document.createElement('div');
     el.className = 'item';
-    const leadTxt = s.lead == null ? '—' : (s.lead <= 0 ? `领先${-s.lead}天` : `滞后${s.lead}天`);
+    const leadTxt = s.lead == null ? '—' : (s.lead < 0 ? `领先${-s.lead}天` : (s.lead === 0 ? '同步' : `滞后${s.lead}天`));
     el.innerHTML = `<div class="l1"><span class="nm">${name}</span><span class="badge ${badge(s)}">${label(s)}</span></div>
       <div class="l2"><span>斜率 ${s.curSlope>0?'+':''}${s.curSlope}%</span><span>${leadTxt}</span><span>锚点来 ${s.anchorPct>0?'+':''}${s.anchorPct}%</span></div>`;
     el.onclick = () => { select(name); };
@@ -225,6 +231,12 @@ function select(name) {
 }
 
 function render() {
+  try { renderInner(); } catch(e) {
+    document.getElementById('loading').style.display = 'block';
+    document.getElementById('loading').textContent = '渲染失败: ' + e.message;
+  }
+}
+function renderInner() {
   const D = DATA, dates = D.dates, A = D.allA;
   const aK = A.k;
   const optA = baseOption(aK, '全A v2', A.state, A.slope, A.segments, dates, A.marks, A.anchorDate);
