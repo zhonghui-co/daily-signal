@@ -17,9 +17,19 @@ th { background:#1e293b; }
 <div class="card" id="stats"></div>
 <script>
 fetch('v2raw-compare-data.json').then(r=>r.json()).then(D=>{
-  const mk=(k,name)=>echarts.init(document.getElementById(name)).setOption({
+  const mk=(k,name)=>{ const ch=echarts.init(document.getElementById(name)); ch.setOption({
     animation:false, backgroundColor:'transparent',
-    tooltip:{trigger:'axis'},
+    tooltip:{trigger:'axis', backgroundColor:'#000', borderColor:'#334155', textStyle:{color:'#e2e8f0', fontSize:11},
+      formatter:function(ps){
+        const p=ps[0]; const i=p.dataIndex;
+        const d=k[i]; const prev=i>0?k[i-1][1]:null;
+        const pct=prev?((d[1]/prev-1)*100):null;
+        const c=pct==null?'#94a3b8':(pct>=0?'#ef4444':'#22c55e');
+        const s=pct==null?'—':(pct>0?'+':'')+pct.toFixed(2)+'%';
+        return `<div style="font-weight:700">${name} ${D.dates[i]}</div>`+
+          `开 ${d[0].toFixed(1)}  高 ${d[2].toFixed(1)}  低 ${d[3].toFixed(1)}  收 ${d[1].toFixed(1)}<br/>`+
+          `涨幅 <b style="color:${c}">${s}</b>`;
+      }},
     grid:{left:70,right:20,top:20,bottom:40},
     xAxis:{type:'category',data:D.dates,axisLabel:{color:'#64748b',fontSize:9}},
     yAxis:{scale:true,axisLabel:{color:'#64748b',fontSize:9},splitLine:{lineStyle:{color:'#1e293b'}}},
