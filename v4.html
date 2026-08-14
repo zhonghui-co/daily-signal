@@ -45,6 +45,10 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 .b-flat-low { background:rgba(217,119,6,.45); color:#fde68a; }
 .b-flat-high { background:#475569; color:#e2e8f0; }
 .b-down { background:rgba(22,163,74,.35); color:#86efac; }
+.v4b { padding:1px 7px; border-radius:3px; font-size:10px; font-weight:600; white-space:nowrap; }
+.v4-up { background:rgba(220,38,38,.3); color:#fca5a5; }
+.v4-dn { background:rgba(22,163,74,.3); color:#86efac; }
+.v4-fl { background:rgba(217,119,6,.35); color:#fde68a; }
 #charts { flex:1; display:flex; flex-direction:column; position:relative; }
 #chartTop { height:44%; }
 #chartBottom { height:56%; }
@@ -330,8 +334,16 @@ function renderSummary() {
   const nDown = codes.filter(c => sectors[c].s4==='同跌'||sectors[c].s4==='独立下跌').length;
   const nFlat = codes.filter(c => ['横盘','高位横盘','低位横盘'].includes(sectors[c].s4)).length;
   const nFlatLow = codes.filter(c => sectors[c].s4==='低位横盘').length;
+  // v4 N型三态统计 (对比基准: 全A当前态)
+  const cur = c => sectors[c].state[sectors[c].state.length-1];
+  const nUp = codes.filter(c => cur(c) === 1).length;
+  const nDn = codes.filter(c => cur(c) === -1).length;
+  const nFl = codes.filter(c => cur(c) === 0).length;
+  const aCur = DATA.allA.state[DATA.allA.state.length-1];
+  const aTxt = aCur === 1 ? '<b class="red">N型上涨</b>' : aCur === -1 ? '<b class="green">N型下跌</b>' : '<b style="color:#f59e0b">横盘</b>';
   document.getElementById('summary').innerHTML =
-    `<b>${curLevel}</b> ${codes.length}个：领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌 <b class="green">${nDown}</b> · 横盘 <b>${nFlat}</b>（低位 <b style="color:#fde68a">${nFlatLow}</b>）`;
+    `<b>${curLevel}</b> ${codes.length}个：领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌 <b class="green">${nDown}</b> · 横盘 <b>${nFlat}</b>（低位 <b style="color:#fde68a">${nFlatLow}</b>）<br/>` +
+    `全A v4 ${aTxt} → 板块N型：上涨 <b class="red">${nUp}</b> · 下跌 <b class="green">${nDn}</b> · 横盘 <b style="color:#f59e0b">${nFl}</b>`;
 }
 function renderList() {
   const listEl = document.getElementById('list');
@@ -344,7 +356,9 @@ function renderList() {
     const el = document.createElement('div');
     el.className = 'item';
     const leadTxt = s.lead == null ? '—' : (s.lead <= 0 ? `领先${-s.lead}天` : `滞后${s.lead}天`);
-    el.innerHTML = `<div class="l1"><span class="nm">${s.name}</span><span class="badge ${badgeCls(s)}">${label(s)}</span></div>
+    const v4s = s.state[s.state.length-1];
+    const v4b = v4s === 1 ? '<span class="v4b v4-up">N涨</span>' : v4s === -1 ? '<span class="v4b v4-dn">N跌</span>' : '<span class="v4b v4-fl">N横</span>';
+    el.innerHTML = `<div class="l1"><span class="nm">${s.name}</span><span style="display:flex;gap:6px;align-items:center"><span class="badge ${badgeCls(s)}">${label(s)}</span>${v4b}</span></div>
       <div class="l2"><span>斜率 ${s.curSlope>0?'+':''}${s.curSlope}%</span><span>${leadTxt}</span><span>锚点来 ${s.anchorPct>0?'+':''}${s.anchorPct}%</span>${s.newHigh?'<span class="red">新高</span>':''}</div>`;
     el.onclick = () => select(code);
     listEl.appendChild(el);
