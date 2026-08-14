@@ -11,7 +11,7 @@ th { background:#1e293b; }
 .chart { width:100%; height:340px; }
 .red { color:#ef4444; } .green { color:#22c55e; } .amber { color:#f59e0b; }
 </style></head><body>
-<h1>🦉 0AMV v2raw — 换手率不平滑版 <span style="font-size:12px;color:#94a3b8">(Σ free_share×close×当日换手率 ≈ 自由流通口径成交额) vs v2(60日refresh加权)</span></h1>
+<h1>🦉 0AMV v2raw — 换手率不平滑版 <span style="font-size:12px;color:#94a3b8">(Σ free_share×close×当日换手率 ≈ 自由流通口径成交额) vs v2(60日refresh加权) <b style="color:#f59e0b">v3</b></span></h1>
 <div class="card"><div id="c1" class="chart"></div></div>
 <div class="card"><div id="c2" class="chart"></div></div>
 <div class="card" id="stats"></div>
@@ -36,18 +36,20 @@ fetch('v2raw-compare-data.json').then(r=>r.json()).then(D=>{
     series:[{type:'candlestick',data:k,itemStyle:{color:'#dc2626',color0:'#16a34a',borderColor:'#dc2626',borderColor0:'#16a34a'}}]
   }); };
   mk(D.k2,'c1'); mk(D.kraw,'c2');
-  // 上下主图联动: 十字准线同步 + 缩放平移同步
+  // 上下主图联动 (防循环冻结: 值相同不派发)
   const ch1=echarts.getInstanceByDom(document.getElementById('c1'));
   const ch2=echarts.getInstanceByDom(document.getElementById('c2'));
   echarts.connect([ch1,ch2]);
-  let syncing=false;
-  const bind=(a,b)=>{ a.on('datazoom', ev=>{
-    if(syncing) return;
-    syncing=true;
-    b.dispatchAction({type:'dataZoom', start:ev.start, end:ev.end});
-    syncing=false;
-  }); };
-  bind(ch1,ch2); bind(ch2,ch1);
+  const applyZoom=(src,dst)=>{
+    const o=src.getOption();
+    if(!o.dataZoom||!o.dataZoom[0]) return;
+    const s=o.dataZoom[0].start, e=o.dataZoom[0].end;
+    const od=dst.getOption();
+    if(od.dataZoom&&od.dataZoom[0]&&od.dataZoom[0].start===s&&od.dataZoom[0].end===e) return;
+    dst.dispatchAction({type:'dataZoom', start:s, end:e});
+  };
+  ch1.on('datazoom', ()=>applyZoom(ch1,ch2));
+  ch2.on('datazoom', ()=>applyZoom(ch2,ch1));
   const s=D.stats2, r=D.stats_raw;
   document.getElementById('stats').innerHTML = `
   <b>日涨幅分布对比</b> (${s.n}天, 相关系数 ${D.corr})
