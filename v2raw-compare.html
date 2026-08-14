@@ -17,8 +17,7 @@ th { background:#1e293b; }
 <div class="card" id="stats"></div>
 <script>
 fetch('v2raw-compare-data.json').then(r=>r.json()).then(D=>{
-  const mk=(k,name)=>{ const ch=echarts.init(document.getElementById(name)); ch.setOption({
-    animation:false, backgroundColor:'transparent',
+  const mk=(k,name)=>{ const ch=echarts.init(document.getElementById(name)); ch.setOption({    animation:false, backgroundColor:'transparent',
     tooltip:{trigger:'axis', backgroundColor:'#000', borderColor:'#334155', textStyle:{color:'#e2e8f0', fontSize:11},
       formatter:function(ps){
         const p=ps[0]; const i=p.dataIndex;
@@ -35,8 +34,20 @@ fetch('v2raw-compare-data.json').then(r=>r.json()).then(D=>{
     yAxis:{scale:true,axisLabel:{color:'#64748b',fontSize:9},splitLine:{lineStyle:{color:'#1e293b'}}},
     dataZoom:[{type:'inside',start:55,end:100},{type:'slider',start:55,end:100,height:14,bottom:2,textStyle:{color:'#64748b',fontSize:9}}],
     series:[{type:'candlestick',data:k,itemStyle:{color:'#dc2626',color0:'#16a34a',borderColor:'#dc2626',borderColor0:'#16a34a'}}]
-  });
+  }); };
   mk(D.k2,'c1'); mk(D.kraw,'c2');
+  // 上下主图联动: 十字准线同步 + 缩放平移同步
+  const ch1=echarts.getInstanceByDom(document.getElementById('c1'));
+  const ch2=echarts.getInstanceByDom(document.getElementById('c2'));
+  echarts.connect([ch1,ch2]);
+  let syncing=false;
+  const bind=(a,b)=>{ a.on('datazoom', ev=>{
+    if(syncing) return;
+    syncing=true;
+    b.dispatchAction({type:'dataZoom', start:ev.start, end:ev.end});
+    syncing=false;
+  }); };
+  bind(ch1,ch2); bind(ch2,ch1);
   const s=D.stats2, r=D.stats_raw;
   document.getElementById('stats').innerHTML = `
   <b>日涨幅分布对比</b> (${s.n}天, 相关系数 ${D.corr})
