@@ -58,7 +58,7 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 <div class="header">
   <div style="display:flex;align-items:center;gap:8px">
     <h1>🦉 v4 N型结构作战图</h1>
-    <span class="hbadge">N型归并 v0.1</span>
+    <span class="hbadge">N型三态 v0.2</span>
   </div>
   <div class="header-right" id="hright"></div>
 </div>
@@ -82,9 +82,9 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
     <div class="chart-label" style="top:6px">🏦 全A 0AMV v2</div>
     <div class="chart-label" style="top:50%">📊 板块</div>
     <div id="legend">
-      <span><i style="background:rgba(220,38,38,.3)"></i>上涨段</span>
-      <span><i style="background:rgba(22,163,74,.3)"></i>下跌段</span>
-      <span>▲上涨段起点</span>
+      <span><i style="background:rgba(220,38,38,.3)"></i>N型上涨</span>
+      <span><i style="background:rgba(22,163,74,.3)"></i>N型下跌</span>
+      <span><i style="background:rgba(217,119,6,.3)"></i>横盘</span>
       <span style="color:#f87171">◆高点</span><span style="color:#4ade80">◆低点</span><span style="color:#94a3b8">┄N型连线</span>
       <span style="color:#facc15">┆锚点</span>
     </div>
@@ -119,19 +119,13 @@ function whiteOf(closes) {
   const c = e1.map((v,i) => v != null ? v : closes[i]);
   return ema(c, n);
 }
-const UP = 'rgba(220,38,38,0.07)', DN = 'rgba(22,163,74,0.07)';
+const UP = 'rgba(220,38,38,0.07)', DN = 'rgba(22,163,74,0.07)', FL = 'rgba(217,119,6,0.14)';
 function stateBands(segments, dates) {
   const areas = [];
-  for (let i = 0; i < segments.length; i++) {
-    const [s, e, st] = segments[i];
-    let color = null;
-    if (st === 1) color = UP;
-    else if (st === -1) color = DN;
-    else if (i > 0 && i < segments.length - 1 && segments[i-1][2] !== 0 && segments[i-1][2] === segments[i+1][2]) {
-      // 横盘夹在同向两段之间 → 背景跟两侧（上涨间=红, 下跌间=绿）
-      color = segments[i-1][2] === 1 ? UP : DN;
-    }
-    if (color) areas.push([{xAxis: dates[s], itemStyle:{color}}, {xAxis: dates[e]}]);
+  for (const [s, e, st] of segments) {
+    // 三态: 上涨N红 / 下跌N绿 / 横盘橙
+    const color = st === 1 ? UP : st === -1 ? DN : FL;
+    areas.push([{xAxis: dates[s], itemStyle:{color}}, {xAxis: dates[e]}]);
   }
   return areas;
 }
@@ -245,7 +239,7 @@ const label = (s) => s.s4 === '领涨反转' ? `领涨反转·${s.tier}` : s.s4;
 function init() {
   const D = DATA, dates = D.dates, A = D.allA, P = A.progress || {};
   const stTxt = {1:'上涨段', '-1':'下跌段', 0:'横盘'}[A.curState];
-  const v4Txt = {1:'N型上涨', '-1':'N型下跌', 0:'N型转折'}[A.state[A.state.length-1]];
+  const v4Txt = {1:'N型上涨', '-1':'N型下跌', 0:'横盘'}[A.state[A.state.length-1]];
   const zoneTxt = A.anchorType === '多' ? '<span class="red">🟢 多头区间</span>' : '<span class="green">🔴 空头区间</span>';
   document.getElementById('statusCard').innerHTML = `
     <div class="row"><span>全A市场 · 0AMV v2</span>${zoneTxt}</div>
@@ -258,7 +252,7 @@ function init() {
       <div class="step ${P.p3?'done':''}">③ 创新高</div>
     </div>
     <div class="dim">当前状态：<b>${stTxt}</b>（${A.curState===1 ? (P.p3 ? '反转已确认' : '反转初现') : (A.curState===-1 ? '下跌中' : '震荡')}）· 平滑n=${D.params.n}</div>
-    <div class="dim">v4 N型趋势：<b style="color:${A.state[A.state.length-1]===1?'#ef4444':(A.state[A.state.length-1]===-1?'#22c55e':'#94a3b8')}">${v4Txt}</b></div>`;
+    <div class="dim">v4 N型趋势：<b style="color:${A.state[A.state.length-1]===1?'#ef4444':(A.state[A.state.length-1]===-1?'#22c55e':'#f59e0b')}">${v4Txt}</b></div>`;
   document.getElementById('hright').innerHTML =
     `锚点 <b style="color:#facc15">${A.anchorDate}</b> · 全A斜率 <b style="color:${A.curSlope>=0?'#ef4444':'#22c55e'}">${A.curSlope>0?'+':''}${A.curSlope}%</b> · ${stTxt} · n=${D.params.n} K=${D.params.K} M=${D.params.M} θ=${D.params.theta}`;
   document.getElementById('tabs').addEventListener('click', e => {
