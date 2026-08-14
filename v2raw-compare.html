@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"><title>0AMV v2raw — 换手率不平滑版对比</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+body { background:#000; color:#e2e8f0; font-family:-apple-system,'PingFang SC',sans-serif; margin:0; padding:14px; }
+h1 { font-size:18px; }
+.card { background:#0f172a; border:1px solid #1e293b; border-radius:8px; padding:12px; margin-bottom:12px; }
+table { border-collapse:collapse; font-size:12px; margin-top:8px; }
+th, td { border:1px solid #334155; padding:4px 10px; text-align:right; }
+th { background:#1e293b; }
+.chart { width:100%; height:340px; }
+.red { color:#ef4444; } .green { color:#22c55e; } .amber { color:#f59e0b; }
+</style></head><body>
+<h1>🦉 0AMV v2raw — 换手率不平滑版 <span style="font-size:12px;color:#94a3b8">(Σ free_share×close×当日换手率 ≈ 自由流通口径成交额) vs v2(60日refresh加权)</span></h1>
+<div class="card"><div id="c1" class="chart"></div></div>
+<div class="card"><div id="c2" class="chart"></div></div>
+<div class="card" id="stats"></div>
+<script>
+fetch('v2raw-compare-data.json').then(r=>r.json()).then(D=>{
+  const mk=(k,name)=>echarts.init(document.getElementById(name)).setOption({
+    animation:false, backgroundColor:'transparent',
+    tooltip:{trigger:'axis'},
+    grid:{left:70,right:20,top:20,bottom:40},
+    xAxis:{type:'category',data:D.dates,axisLabel:{color:'#64748b',fontSize:9}},
+    yAxis:{scale:true,axisLabel:{color:'#64748b',fontSize:9},splitLine:{lineStyle:{color:'#1e293b'}}},
+    dataZoom:[{type:'inside',start:55,end:100},{type:'slider',start:55,end:100,height:14,bottom:2,textStyle:{color:'#64748b',fontSize:9}}],
+    series:[{type:'candlestick',data:k,itemStyle:{color:'#dc2626',color0:'#16a34a',borderColor:'#dc2626',borderColor0:'#16a34a'}}]
+  });
+  mk(D.k2,'c1'); mk(D.kraw,'c2');
+  const s=D.stats2, r=D.stats_raw;
+  document.getElementById('stats').innerHTML = `
+  <b>日涨幅分布对比</b> (${s.n}天, 相关系数 ${D.corr})
+  <table><tr><th></th><th>v2(refresh)</th><th>v2raw(不平滑)</th></tr>
+  <tr><td>均值</td><td>${s.mean}%</td><td>${r.mean}%</td></tr>
+  <tr><td>σ</td><td>${s.std}%</td><td>${r.std}%</td></tr>
+  <tr><td>min / max</td><td>${s.min}% / ${s.max}%</td><td>${r.min}% / ${r.max}%</td></tr>
+  <tr><td>p5 / p50 / p95</td><td>${s.p5} / ${s.p50} / ${s.p95}</td><td>${r.p5} / ${r.p50} / ${r.p95}</td></tr>
+  <tr><td>&gt;+3.4% 天数</td><td>${s.gt_3_4}</td><td>${r.gt_3_4}</td></tr>
+  <tr><td>&gt;+5.6% 天数</td><td>${s.gt_5_6}</td><td>${r.gt_5_6}</td></tr>
+  <tr><td>&lt;-2.0% 天数</td><td>${s.lt_2}</td><td>${r.lt_2}</td></tr>
+  <tr><td>&lt;-3.0% 天数</td><td>${s.lt_3}</td><td>${r.lt_3}</td></tr>
+  </table>
+  <div style="margin-top:8px;font-size:12px;color:#94a3b8">最新值: v2=${(D.latest2/1e4).toFixed(1)}万亿 v2raw=${(D.latest_raw/1e4).toFixed(1)}万亿</div>`;
+});
+</script></body></html>
