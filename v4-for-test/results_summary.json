@@ -1,0 +1,83 @@
+{
+ "L1_allA_head2head": {
+  "window": "000985 20180102~20260813 (2090天), 单边成本0.1%",
+  "baseline_v1_3.4_2.0": {
+   "ret": 85.6,
+   "maxdd": -18.1,
+   "note": "MEMORY九年验证口径, 复现成功"
+  },
+  "baseline_56_3": {
+   "ret": 3.5,
+   "maxdd": -21.0,
+   "note": "评审指定口径, 多头仅254天, 与MEMORY记录不符"
+  },
+  "buy_hold": {
+   "ret": 20.5,
+   "maxdd": -39.3
+  },
+  "N型 W2": {
+   "ret": -14.0,
+   "maxdd": -35.2
+  },
+  "N型 W3": {
+   "ret": -25.9,
+   "maxdd": -42.4
+  },
+  "N型 W4": {
+   "ret": -26.2,
+   "maxdd": -39.5
+  },
+  "N型 W5": {
+   "ret": -42.0,
+   "maxdd": -52.1
+  },
+  "verdict": "0/4 W 通过 → N型被淘汰, 全A层保留状态机",
+  "whipsaw": {
+   "W2": 371,
+   "W3": 264,
+   "W4": 217,
+   "W5": 195,
+   "单位": "九年切换次数"
+  }
+ },
+ "L2_sector_events": {
+  "window": "申万L1 31板块 20180102~20260813",
+  "W2": {
+   "events": 5404,
+   "excess_5d": -0.19,
+   "excess_20d": -0.55,
+   "excess_60d": -1.06,
+   "random_20d": -0.42,
+   "sameday_20d": -0.11,
+   "whipsaw_py": 42.3
+  },
+  "W3": {
+   "events": 3916,
+   "excess_5d": -0.17,
+   "excess_20d": -0.59,
+   "excess_60d": -1.13,
+   "random_20d": -0.47,
+   "sameday_20d": -0.09,
+   "whipsaw_py": 30.7
+  },
+  "W4": {
+   "events": 3256,
+   "excess_5d": -0.19,
+   "excess_20d": -0.57,
+   "excess_60d": -1.24,
+   "random_20d": -0.58,
+   "sameday_20d": -0.09,
+   "whipsaw_py": 25.7
+  },
+  "W5": {
+   "events": 2857,
+   "excess_5d": -0.19,
+   "excess_20d": -0.56,
+   "excess_60d": -1.11,
+   "random_20d": -0.7,
+   "sameday_20d": -0.08,
+   "whipsaw_py": 21.5
+  },
+  "verdict": "0/4 W 通过 → 转涨事件无判别力(负超额, 劣于随机臂), whipsaw 21-46次/年远超10次上限"
+ }
+}

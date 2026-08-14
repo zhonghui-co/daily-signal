@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>v4-for-test — N型结构分层回测验证</title>
+<style>
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; max-width: 960px; margin: 0 auto; padding: 24px 16px; color: #1a1a1a; line-height: 1.65; }
+h1 { font-size: 22px; border-bottom: 2px solid #333; padding-bottom: 8px; }
+h2 { font-size: 17px; margin-top: 28px; border-left: 4px solid #d97706; padding-left: 8px; }
+table { border-collapse: collapse; margin: 10px 0; font-size: 13px; }
+th, td { border: 1px solid #ccc; padding: 5px 10px; text-align: right; }
+th { background: #f5f5f5; }
+td.l, th.l { text-align: left; }
+.ok { color: #15803d; font-weight: 600; }
+.bad { color: #b91c1c; font-weight: 600; }
+.note { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 6px; padding: 8px 12px; font-size: 13px; margin: 10px 0; }
+code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; font-size: 12px; }
+ul { padding-left: 22px; }
+.small { font-size: 12px; color: #666; }
+</style>
+</head>
+<body>
+<h1>v4-for-test — N型结构分层回测验证</h1>
+<p>依据外部评审意见改造：<b>每层只留一个信号，分层回测、不测整链，预注册判据</b>。2026-08-14 执行。</p>
+
+<h2>三层信号（减法后）</h2>
+<table>
+<tr><th class="l">层</th><th class="l">信号</th><th class="l">参数</th><th class="l">状态</th></tr>
+<tr><td class="l">全A</td><td class="l">价格法状态机</td><td class="l">v1: +3.4%/−2.0%（空头中两日合计&gt;+3.4%转多）</td><td class="l">九年已验证（基准臂）</td></tr>
+<tr><td class="l">板块</td><td class="l">N型结构三态</td><td class="l">W（分形窗口），主测 W=3</td><td class="l">待验证 → 本测试</td></tr>
+<tr><td class="l">个股</td><td class="l">B1（J&lt;13首日）</td><td class="l">已有</td><td class="l">第3层（待启动）</td></tr>
+</table>
+<p>执行口径（贯穿全部回测）：信号日收盘定夺 → <b>次日收盘成交</b>；单边成本 0.1%；因果状态（拐点需 W 日右确认 + 今日收盘当极值），无前视。</p>
+
+<h2>第 1 层：全A N型 vs 状态机 头对头（000985 九年同窗）</h2>
+<p>数据：000985 中证全指（0AMV 相关性 0.9963 代理），2018-2026。判据：①九年净收益 ≥ 状态机−3pp；②MaxDD ≤ 状态机+5pp；③熊年（2018/2022/2023）≤−10% 次数 ≤ 状态机；W∈{2,3,4,5} ≥3/4 稳健。</p>
+<table>
+<tr><th class="l">臂</th><th>九年净收益</th><th>MaxDD</th><th class="l">备注</th></tr>
+<tr><td class="l">状态机 v1 (3.4/−2.0)</td><td class="ok">+85.6%</td><td class="ok">−18.1%</td><td class="l">与 MEMORY 九年验证 +89.3%/−18.1% 复现 ✓（差异为扣费）</td></tr>
+<tr><td class="l">状态机 5.6/−3</td><td>+3.5%</td><td>−21.0%</td><td class="l">多头仅 254/2090 天；⚠️ 九年验证的是 v1 口径，非 5.6/−3</td></tr>
+<tr><td class="l">买入持有</td><td>+20.5%</td><td>−39.3%</td><td class="l"></td></tr>
+<tr><td class="l">N型 W=2</td><td class="bad">−14.0%</td><td class="bad">−35.2%</td><td class="l">❌</td></tr>
+<tr><td class="l">N型 W=3</td><td class="bad">−25.9%</td><td class="bad">−42.4%</td><td class="l">❌</td></tr>
+<tr><td class="l">N型 W=4</td><td class="bad">−26.2%</td><td class="bad">−39.5%</td><td class="l">❌ 熊年≤−10% 次数 3 &gt; 0</td></tr>
+<tr><td class="l">N型 W=5</td><td class="bad">−42.0%</td><td class="bad">−52.1%</td><td class="l">❌</td></tr>
+</table>
+<p><b class="bad">结论：N型 0/4 W 通过 → 全A层保留状态机（v1 口径）。</b></p>
+<p class="small">whipsaw 诊断（九年状态切换次数）：W2=371，W3=264，W4=217，W5=195。</p>
+
+<h2>第 2 层：板块 N型转涨 事件研究（申万 L1 31指数 九年）</h2>
+<p>事件=因果N型状态由非上涨N→上涨N首日。度量=事件后 5/20/60 日超额收益（板块−000985，剔 beta）。双对照臂：随机日期臂 + 全体板块同日臂。判据：20日超额中位 &gt; 0 且 &gt; 随机臂+1pp，5/60日同向，whipsaw ≤10次/年，W网格 ≥3/4。</p>
+<table>
+<tr><th class="l">W</th><th>事件数</th><th>5日超额</th><th>20日超额</th><th>60日超额</th><th>随机臂20日</th><th>同日臂20日</th><th>whipsaw/年</th><th class="l">判据</th></tr>
+<tr><td class="l">2</td><td>5404</td><td>−0.19%</td><td>−0.55%</td><td>−1.06%</td><td>−0.42%</td><td>−0.11%</td><td>42.3</td><td class="l bad">❌</td></tr>
+<tr><td class="l">3</td><td>3916</td><td>−0.17%</td><td>−0.59%</td><td>−1.13%</td><td>−0.47%</td><td>−0.09%</td><td>30.7</td><td class="l bad">❌</td></tr>
+<tr><td class="l">4</td><td>3256</td><td>−0.19%</td><td>−0.57%</td><td>−1.24%</td><td>−0.58%</td><td>−0.09%</td><td>25.7</td><td class="l bad">❌</td></tr>
+<tr><td class="l">5</td><td>2857</td><td>−0.19%</td><td>−0.56%</td><td>−1.11%</td><td>−0.70%</td><td>−0.08%</td><td>21.5</td><td class="l bad">❌</td></tr>
+</table>
+<p><b class="bad">结论：转涨事件前向超额为负，劣于随机日期臂 → 无判别力；whipsaw 21.5~42.3 次/年远超 10 次上限 → 0/4 W 通过。</b></p>
+<div class="note">解读：N型确认需 4 个拐点，转涨日出现时行情已走完一段（60日负超额=确认即接盘）；"任意违规即断开"带来高频翻转；同日臂也为负，说明事件聚集在大盘弱势期（熊市反弹后确认，接着补跌）。</div>
+
+<h2>总结论（按预注册判据）</h2>
+<ul>
+<li>第 1 层：N型作为全A择时引擎 <b class="bad">淘汰</b>（0/4 W），全A层保留状态机；<b>九年验证的是 v1 口径（3.4/−2.0），5.6/−3 九年表现仅 +3.5%</b></li>
+<li>第 2 层：板块"转涨日"事件 <b class="bad">无判别力</b>（负超额 + whipsaw 超标）</li>
+<li>第 3 层（N型上涨板块中的 B1 增量）：待启动；库内已有 2018 以来全市场 KDJ，可立即执行</li>
+</ul>
+
+<h2>执行记录与修复</h2>
+<ul>
+<li>数据：000985.CSI + 申万 L1 31指数九年日线（Tushare，<code>data/</code>）；⚠️ 库内 000985 原为 000985.SZ（大庆华科），已换用 000985.CSI</li>
+<li>Bug 修复：分形检测 <code>left+right</code> 对 numpy 数组为逐元素相加（非拼接）→ 曾致九年仅检出 1 拐点；已改 <code>list()</code> 包裹，两处</li>
+<li>因果重放 <code>last_state</code> 与完整 <code>process()</code> 逐日抽样对比 0 不一致</li>
+</ul>
+
+<h2>文件</h2>
+<ul>
+<li><code>README.md</code> — 预注册判据（跑之前写死）</li>
+<li><code>common.py</code> — 因果状态重放、状态机、执行模拟</li>
+<li><code>L1_allA_engines.py</code> — 第 1 层</li>
+<li><code>L2_sector_events.py</code> — 第 2 层</li>
+<li><code>results_summary.json</code> — 结果汇总</li>
+<li><code>pull_data.py</code> — 数据拉取（依赖本地 Tushare token）</li>
+<li><code>data/000985_csi.csv</code>、<code>data/sw_l1_daily.csv</code> — 九年数据</li>
+</ul>
+<p class="small">复现：<code>python3 L1_allA_engines.py</code> / <code>python3 L2_sector_events.py</code>（需 numpy/pandas）</p>
+</body>
+</html>
