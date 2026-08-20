@@ -1,0 +1,1072 @@
+<!DOCTYPE html><html lang=zh><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>B方案外部文档验证 — 完整报告</title>
+<style>
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;max-width:1080px;margin:20px auto;padding:0 16px;color:#222;background:#fafafa;line-height:1.5}
+h1{font-size:22px}h2{font-size:19px;border-bottom:2px solid #333;padding-bottom:6px;margin-top:30px}
+h3{font-size:15px;margin-top:18px}h4{font-size:13px;margin-bottom:4px;color:#555}
+table{border-collapse:collapse;width:100%;font-size:12.5px;margin:6px 0 14px}
+th,td{border:1px solid #ccc;padding:4px 8px;text-align:right}
+th{background:#e8e8e8;text-align:center}
+.pos{color:#c62828;font-weight:600}.neg{color:#2e7d32;font-weight:600}.neu{color:#666}
+.verdict{background:#ffebee;border:1px solid #e57373;padding:10px 14px;border-radius:6px;margin:10px 0}
+.ok{background:#e8f5e9;border:1px solid #81c784;padding:10px 14px;border-radius:6px;margin:10px 0}
+.dim{color:#999;text-align:center}
+.note{font-size:11.5px;color:#777}
+pre.code{background:#1e1e1e;color:#d4d4d4;padding:12px;border-radius:6px;overflow-x:auto;font-size:11.5px;line-height:1.4;white-space:pre}
+ol li{margin:4px 0}
+</style></head><body>
+
+<h1>N型动量 (NType V4 W=3 + RPS≥80) 外部回测验证 — 完整报告</h1>
+<p class=note>验证方: Mimo (OpenClaw) | 日期: 2026-08-20/21 | 本页自包含: 方法 + 全部结果 + 完整代码, 可独立复现</p>
+
+<div class=verdict>
+<b>结论: 文档宣称的收益在可实盘口径(因果态)下无法复现, 主要来自前视偏差(最终态)。</b><br>
+三重证据: ①作者SW1交割单14笔中10笔仅在最终态(用未来3天数据)下信号成立, 因果态仅1笔成立; ②信号数: 作者SW2 39/SW3 85 ≈ 我们最终态 43/89, 因果态为 149/362; ③收益: 作者 +10.44%/+16.55% ≈ 我们最终态 +11.86%/+11.53%, 因果态 -0.56%/-0.09%。<br>
+数据是真的(申万指数点位逐笔吻合), 算法是我们v4的(W=3, 已验证), 但回测用了最终态状态序列 = 偷看未来3天。
+</div>
+
+<h2>1. 我们怎么跑的 (方法)</h2>
+<ol>
+<li><b>数据源</b>: ①pages/v4-states.json (v2活筹口径板块0AMV, 476天×430板块) ②pool.db sw_sector_0amv系列表 (v1自由流通市值加权, 450天) ③Tushare申万指数原始点位 (新表 sw_index_daily, L1 31个, 2024-01-02~2026-08-20, 638天)。价格已与作者交割单逐笔精确吻合(2115.434 vs 2115.43 等)。</li>
+<li><b>两种状态口径</b> (关键区分):
+<ul>
+<li><b>最终态</b>: 全窗口一次性计算状态序列 (pages/v4-states.json 的口径)。拐点确认使用了未来 W=3 天数据 → 回测用此口径 = 前视偏差。</li>
+<li><b>因果态</b>: 每天只用当时已知信息重算 (t时只知 i≤t-W 的确认拐点 + 今日收盘当极值), 与实盘所见完全一致 → 可实盘口径。</li>
+</ul></li>
+<li><b>RPS</b>: 过去60个交易日涨幅在同级别所有板块中的百分位排名, 阈值≥80 (与文档定义一致)。</li>
+<li><b>N型动量回测规则</b> (与文档一致): v4状态从非+1转+1 且 当日RPS≥80 → T+1收盘买入 → 持有至状态离开+1 → 次日收盘卖出。不含交易费用。</li>
+<li><b>对照臂</b>: A=文档方法 / B=纯RPS升穿80 / C=纯NType转+1 / D=同数量随机(板块,日期)+固定20日。基准=全A同口径, 超额=区间收益−同期基准。</li>
+<li><b>窗口</b>: doc_2026 (2026-01-01~08-15, 文档口径) / oos (2024-09~2025-12 外样本) / full。</li>
+<li><b>逐笔核对</b>: 作者SW1全部14笔交割单, 用申万指数同源序列分别以最终态/因果态重算, 检查信号日是否为"转+1且RPS≥80"。</li>
+</ol>
+
+<h2>2. 四象限归因 (2026窗口, N型动量 armA)</h2>
+<table>
+<tr><th></th><th>v1市值 × 因果态<br>(可实盘)</th><th>v1市值 × 最终态<br>(有前视)</th><th>v2活筹 × 因果态<br>(可实盘)</th><th>v2活筹 × 最终态<br>(前视+换手率放大)</th></tr>
+<tr><td>L2 (文档SW2)</td><td class='neg'>149笔 / -0.56% / 胜率31.5%</td><td class='pos'>43笔 / 11.86% / 胜率86.0%</td><td class='neu'>109笔 / 1.17% / 胜率41.3%</td><td class='pos'>20笔 / 32.54% / 胜率100.0%</td></tr><tr><td>L3 (文档SW3)</td><td class='neg'>362笔 / -0.09% / 胜率42.0%</td><td class='pos'>89笔 / 11.53% / 胜率85.4%</td><td class='neu'>237笔 / 1.93% / 胜率35.0%</td><td class='pos'>61笔 / 38.49% / 胜率88.5%</td></tr>
+</table>
+<p class=note>左列→右列: 前视偏差贡献 ~12pp; v2活筹再放大 (换手率×市值, 强势板块收益被显著放大)。文档数字只有右列摸得到。</p>
+
+<h2>3. SW1 交割单逐笔核对 (决定性证据)</h2>
+<p>作者14笔 vs 我们重算。状态列格式: 当日状态/前一日状态, "1/-1"即转+1。RPS两列: 作者 vs 我们。</p>
+<table>
+<tr><th>板块</th><th>作者信号日</th><th>最终态状态</th><th>最终态转+1?</th><th>因果态状态</th><th>因果态转+1?</th><th>作者RPS</th><th>我们RPS</th></tr>
+<tr><td>国防军工</td><td>2026-02-02</td><td>1/-1</td><td>✅</td><td>-1/-1</td><td>❌</td><td>96.8</td><td>96.7</td></tr><tr><td>通信</td><td>2026-02-06</td><td>1/-1</td><td>✅</td><td>1/1</td><td>❌</td><td>90.3</td><td>90.0</td></tr><tr><td>基础化工</td><td>2026-03-23</td><td>1/-1</td><td>✅</td><td>-1/-1</td><td>❌</td><td>87.1</td><td>86.7</td></tr><tr><td>综合</td><td>2026-03-23</td><td>1/-1</td><td>✅</td><td>-1/-1</td><td>❌</td><td>93.5</td><td>93.3</td></tr><tr><td>建筑材料</td><td>2026-03-23</td><td>1/-1</td><td>✅</td><td>-1/-1</td><td>❌</td><td>80.6</td><td>80.0</td></tr><tr><td>石油石化</td><td>2026-04-02</td><td>1/-1</td><td>✅</td><td>-1/-1</td><td>❌</td><td>100.0</td><td>100.0</td></tr><tr><td>公用事业</td><td>2026-04-03</td><td>1/-1</td><td>✅</td><td>-1/-1</td><td>❌</td><td>83.9</td><td>83.3</td></tr><tr><td>煤炭</td><td>2026-04-21</td><td>1/-1</td><td>✅</td><td>-1/-1</td><td>❌</td><td>93.5</td><td>93.3</td></tr><tr><td>建筑材料</td><td>2026-06-09</td><td>-1/-1</td><td>❌</td><td>1/-1</td><td>✅</td><td>90.3</td><td>90.0</td></tr><tr><td>家用电器</td><td>2026-06-29</td><td>1/-1</td><td>✅</td><td>-1/-1</td><td>❌</td><td>80.6</td><td>80.0</td></tr><tr><td>家用电器</td><td>2026-07-27</td><td>1/-1</td><td>✅</td><td>-1/-1</td><td>❌</td><td>87.1</td><td>86.7</td></tr><tr><td>煤炭</td><td>2026-08-05</td><td>1/1</td><td>❌</td><td>-1/-1</td><td>❌</td><td>96.8</td><td>96.7</td></tr><tr><td>食品饮料</td><td>2026-08-07</td><td>-1/-1</td><td>❌</td><td>1/1</td><td>❌</td><td>83.9</td><td>83.3</td></tr><tr><td>煤炭</td><td>2026-08-17</td><td>1/1</td><td>❌</td><td>-1/-1</td><td>❌</td><td>96.8</td><td>96.7</td></tr>
+<tr><td colspan=8 class=neu>最终态吻合 10/14 &nbsp;&nbsp;|&nbsp;&nbsp; 因果态吻合 1/14 &nbsp;&nbsp;|&nbsp;&nbsp; RPS 两列几乎全部一致 (数据同源) — 差异只在状态口径</td></tr>
+</table>
+
+<h2>4. 申万指数 L1 重跑 (同源序列)</h2>
+<table>
+<tr><th>口径</th><th>笔数</th><th>均收</th><th>中位</th><th>胜率</th></tr>
+<tr><td>作者宣称 (SW1)</td><td>13</td><td class=pos>+6.51%</td><td>+1.62%</td><td>84.6%</td></tr>
+<tr><td>我们重跑 · 因果态 (可实盘)</td><td>51</td><td class=neg>-0.06%</td><td>-0.44%</td><td>43.1%</td></tr>
+</table>
+
+<h2>5. 三臂 × 三窗口 × 三层 全量数据</h2>
+<p class=note>臂A=文档N型动量 | B/C/D=拆解对照(文档未做) | 超额=区间收益−同期全A同口径。v1因果态是可实盘口径, v2最终态是前视口径。</p>
+<h3>2026窗口 (文档口径 01-01~08-15)</h3><h4>L1 — v1因果态 (whipsaw 13.9/年, 信号比纯N型减77.9%) | v2最终态 (whipsaw 5.5/年)</h4><table><tr><th>臂</th><th>口径</th><th>区间数</th><th>均收</th><th>中位</th><th>胜率</th><th>均超额</th><th>均持有</th><th>同期全A</th></tr><tr><td>A: N型动量 (转+1 且 RPS≥80)</td><td>v1因果</td><td>43</td><td class='neg'>-0.94%</td><td>-0.49%</td><td>37.2%</td><td>-1.65%</td><td>9.5天</td><td>0.71%</td></tr><tr><td></td><td>v2最终</td><td>6</td><td class='pos'>21.54%</td><td>21.96%</td><td>100.0%</td><td>9.58%</td><td>23.7天</td><td>11.95%</td></tr><tr><td>B: 纯RPS升穿80</td><td>v1因果</td><td>100</td><td class='neg'>-1.14%</td><td>-0.61%</td><td>40.0%</td><td>-1.22%</td><td>9.2天</td><td>0.08%</td></tr><tr><td></td><td>v2最终</td><td>52</td><td class='neg'>-2.11%</td><td>-0.72%</td><td>36.5%</td><td>-2.34%</td><td>14.7天</td><td>0.23%</td></tr><tr><td>C: 纯NType转+1</td><td>v1因果</td><td>195</td><td class='neg'>-0.58%</td><td>-0.59%</td><td>37.9%</td><td>-1.03%</td><td>8.3天</td><td>0.45%</td></tr><tr><td></td><td>v2最终</td><td>74</td><td class='pos'>27.05%</td><td>20.0%</td><td>94.6%</td><td>13.6%</td><td>19.1天</td><td>13.44%</td></tr><tr><td>D: 随机对照(持有20日)</td><td>v1因果</td><td>43</td><td class='neg'>-0.32%</td><td>-0.91%</td><td>48.8%</td><td>-1.45%</td><td>20.0天</td><td>1.14%</td></tr><tr><td></td><td>v2最终</td><td>6</td><td class='neg'>-4.57%</td><td>-13.24%</td><td>33.3%</td><td>-5.8%</td><td>20.0天</td><td>1.22%</td></tr></table><h4>L2 — v1因果态 (whipsaw 15.6/年, 信号比纯N型减83.3%) | v2最终态 (whipsaw 5.6/年)</h4><table><tr><th>臂</th><th>口径</th><th>区间数</th><th>均收</th><th>中位</th><th>胜率</th><th>均超额</th><th>均持有</th><th>同期全A</th></tr><tr><td>A: N型动量 (转+1 且 RPS≥80)</td><td>v1因果</td><td>149</td><td class='neg'>-0.56%</td><td>-1.47%</td><td>31.5%</td><td>-0.3%</td><td>8.2天</td><td>-0.26%</td></tr><tr><td></td><td>v2最终</td><td>20</td><td class='pos'>32.54%</td><td>10.77%</td><td>100.0%</td><td>22.83%</td><td>16.1天</td><td>9.71%</td></tr><tr><td>B: 纯RPS升穿80</td><td>v1因果</td><td>310</td><td class='neg'>-1.38%</td><td>-0.68%</td><td>40.6%</td><td>-1.38%</td><td>8.9天</td><td>-0.0%</td></tr><tr><td></td><td>v2最终</td><td>214</td><td class='neg'>-3.54%</td><td>-2.72%</td><td>31.8%</td><td>-4.38%</td><td>12.3天</td><td>0.84%</td></tr><tr><td>C: 纯NType转+1</td><td>v1因果</td><td>894</td><td class='neg'>-0.46%</td><td>-0.89%</td><td>36.2%</td><td>-0.77%</td><td>7.5天</td><td>0.31%</td></tr><tr><td></td><td>v2最终</td><td>286</td><td class='pos'>30.5%</td><td>16.44%</td><td>92.3%</td><td>20.92%</td><td>17.6天</td><td>9.58%</td></tr><tr><td>D: 随机对照(持有20日)</td><td>v1因果</td><td>149</td><td class='neg'>-0.85%</td><td>-2.01%</td><td>42.3%</td><td>-0.77%</td><td>20.0天</td><td>-0.09%</td></tr><tr><td></td><td>v2最终</td><td>20</td><td class='pos'>8.85%</td><td>3.9%</td><td>50.0%</td><td>4.02%</td><td>20.0天</td><td>4.83%</td></tr></table><h4>L3 — v1因果态 (whipsaw 15.1/年, 信号比纯N型减80.8%) | v2最终态 (whipsaw 5.4/年)</h4><table><tr><th>臂</th><th>口径</th><th>区间数</th><th>均收</th><th>中位</th><th>胜率</th><th>均超额</th><th>均持有</th><th>同期全A</th></tr><tr><td>A: N型动量 (转+1 且 RPS≥80)</td><td>v1因果</td><td>362</td><td class='neg'>-0.09%</td><td>-0.97%</td><td>42.0%</td><td>-0.19%</td><td>7.5天</td><td>0.1%</td></tr><tr><td></td><td>v2最终</td><td>61</td><td class='pos'>38.49%</td><td>12.21%</td><td>88.5%</td><td>29.36%</td><td>14.6天</td><td>9.13%</td></tr><tr><td>B: 纯RPS升穿80</td><td>v1因果</td><td>628</td><td class='neg'>-1.67%</td><td>-0.91%</td><td>39.2%</td><td>-1.72%</td><td>9.4天</td><td>0.05%</td></tr><tr><td></td><td>v2最终</td><td>378</td><td class='neg'>-3.33%</td><td>-3.26%</td><td>32.5%</td><td>-4.7%</td><td>15.2天</td><td>1.37%</td></tr><tr><td>C: 纯NType转+1</td><td>v1因果</td><td>1887</td><td class='neg'>-0.3%</td><td>-0.84%</td><td>38.7%</td><td>-0.64%</td><td>7.8天</td><td>0.34%</td></tr><tr><td></td><td>v2最终</td><td>609</td><td class='pos'>42.41%</td><td>19.45%</td><td>89.8%</td><td>32.03%</td><td>18.0天</td><td>10.38%</td></tr><tr><td>D: 随机对照(持有20日)</td><td>v1因果</td><td>362</td><td class='neg'>-0.24%</td><td>-1.25%</td><td>45.0%</td><td>0.07%</td><td>20.0天</td><td>-0.31%</td></tr><tr><td></td><td>v2最终</td><td>61</td><td class='pos'>3.28%</td><td>0.73%</td><td>50.8%</td><td>0.16%</td><td>20.0天</td><td>3.11%</td></tr></table><h3>外样本 2024-09~2025-12</h3><h4>L1 — v1因果态 (whipsaw 30.9/年, 信号比纯N型减88.2%) | v2最终态 (whipsaw 8.4/年)</h4><table><tr><th>臂</th><th>口径</th><th>区间数</th><th>均收</th><th>中位</th><th>胜率</th><th>均超额</th><th>均持有</th><th>同期全A</th></tr><tr><td>A: N型动量 (转+1 且 RPS≥80)</td><td>v1因果</td><td>61</td><td class='pos'>0.01%</td><td>-0.43%</td><td>37.7%</td><td>-0.99%</td><td>11.4天</td><td>0.99%</td></tr><tr><td></td><td>v2最终</td><td>13</td><td class='pos'>17.67%</td><td>9.24%</td><td>76.9%</td><td>7.76%</td><td>12.8天</td><td>9.91%</td></tr><tr><td>B: 纯RPS升穿80</td><td>v1因果</td><td>170</td><td class='pos'>0.5%</td><td>-0.16%</td><td>48.2%</td><td>-0.44%</td><td>8.5天</td><td>0.95%</td></tr><tr><td></td><td>v2最终</td><td>99</td><td class='neg'>-1.25%</td><td>-1.56%</td><td>40.4%</td><td>-3.28%</td><td>17.8天</td><td>2.03%</td></tr><tr><td>C: 纯NType转+1</td><td>v1因果</td><td>519</td><td class='pos'>0.06%</td><td>-0.25%</td><td>44.7%</td><td>-0.29%</td><td>8.5天</td><td>0.35%</td></tr><tr><td></td><td>v2最终</td><td>160</td><td class='pos'>90.5%</td><td>35.14%</td><td>91.9%</td><td>26.05%</td><td>29.3天</td><td>64.45%</td></tr><tr><td>D: 随机对照(持有20日)</td><td>v1因果</td><td>61</td><td class='pos'>0.07%</td><td>0.91%</td><td>57.4%</td><td>-0.27%</td><td>20.0天</td><td>0.34%</td></tr><tr><td></td><td>v2最终</td><td>13</td><td class='pos'>15.82%</td><td>1.77%</td><td>53.8%</td><td>5.9%</td><td>20.0天</td><td>9.91%</td></tr></table><h4>L2 — v1因果态 (whipsaw 29.6/年, 信号比纯N型减87.5%) | v2最终态 (whipsaw 8.8/年)</h4><table><tr><th>臂</th><th>口径</th><th>区间数</th><th>均收</th><th>中位</th><th>胜率</th><th>均超额</th><th>均持有</th><th>同期全A</th></tr><tr><td>A: N型动量 (转+1 且 RPS≥80)</td><td>v1因果</td><td>284</td><td class='pos'>0.7%</td><td>-0.4%</td><td>42.6%</td><td>-0.5%</td><td>10.0天</td><td>1.13%</td></tr><tr><td></td><td>v2最终</td><td>59</td><td class='pos'>40.57%</td><td>10.24%</td><td>84.7%</td><td>30.45%</td><td>17.1天</td><td>10.12%</td></tr><tr><td>B: 纯RPS升穿80</td><td>v1因果</td><td>582</td><td class='pos'>0.55%</td><td>-0.29%</td><td>45.4%</td><td>-0.4%</td><td>9.0天</td><td>0.97%</td></tr><tr><td></td><td>v2最终</td><td>355</td><td class='pos'>0.99%</td><td>-2.4%</td><td>36.9%</td><td>-1.14%</td><td>16.8天</td><td>2.13%</td></tr><tr><td>C: 纯NType转+1</td><td>v1因果</td><td>2265</td><td class='pos'>0.82%</td><td>-0.23%</td><td>46.0%</td><td>-0.0%</td><td>9.8天</td><td>0.72%</td></tr><tr><td></td><td>v2最终</td><td>673</td><td class='pos'>95.96%</td><td>40.26%</td><td>92.9%</td><td>40.91%</td><td>25.8天</td><td>55.06%</td></tr><tr><td>D: 随机对照(持有20日)</td><td>v1因果</td><td>284</td><td class='pos'>2.03%</td><td>0.72%</td><td>54.6%</td><td>0.36%</td><td>20.0天</td><td>1.4%</td></tr><tr><td></td><td>v2最终</td><td>59</td><td class='pos'>14.31%</td><td>2.42%</td><td>52.5%</td><td>9.93%</td><td>20.0天</td><td>4.38%</td></tr></table><h4>L3 — v1因果态 (whipsaw 29.7/年, 信号比纯N型减87.1%) | v2最终态 (whipsaw 8.8/年)</h4><table><tr><th>臂</th><th>口径</th><th>区间数</th><th>均收</th><th>中位</th><th>胜率</th><th>均超额</th><th>均持有</th><th>同期全A</th></tr><tr><td>A: N型动量 (转+1 且 RPS≥80)</td><td>v1因果</td><td>640</td><td class='neg'>-0.05%</td><td>-0.56%</td><td>42.8%</td><td>-0.92%</td><td>8.9天</td><td>0.83%</td></tr><tr><td></td><td>v2最终</td><td>114</td><td class='pos'>41.12%</td><td>15.81%</td><td>88.6%</td><td>32.3%</td><td>14.5天</td><td>8.83%</td></tr><tr><td>B: 纯RPS升穿80</td><td>v1因果</td><td>1392</td><td class='pos'>0.45%</td><td>-0.22%</td><td>46.0%</td><td>-0.49%</td><td>8.5天</td><td>0.88%</td></tr><tr><td></td><td>v2最终</td><td>801</td><td class='pos'>1.33%</td><td>-2.72%</td><td>36.1%</td><td>-0.76%</td><td>16.6天</td><td>2.08%</td></tr><tr><td>C: 纯NType转+1</td><td>v1因果</td><td>4974</td><td class='pos'>0.78%</td><td>-0.22%</td><td>46.2%</td><td>-0.02%</td><td>9.7天</td><td>0.73%</td></tr><tr><td></td><td>v2最终</td><td>1477</td><td class='pos'>104.29%</td><td>44.86%</td><td>94.0%</td><td>52.49%</td><td>25.4天</td><td>51.8%</td></tr><tr><td>D: 随机对照(持有20日)</td><td>v1因果</td><td>640</td><td class='pos'>1.88%</td><td>1.37%</td><td>58.9%</td><td>0.21%</td><td>20.0天</td><td>1.49%</td></tr><tr><td></td><td>v2最终</td><td>114</td><td class='pos'>15.84%</td><td>-2.5%</td><td>47.4%</td><td>8.31%</td><td>20.0天</td><td>7.53%</td></tr></table><h3>全窗口</h3><h4>L1 — v1因果态 (whipsaw 28.5/年, 信号比纯N型减85.3%) | v2最终态 (whipsaw 8.6/年)</h4><table><tr><th>臂</th><th>口径</th><th>区间数</th><th>均收</th><th>中位</th><th>胜率</th><th>均超额</th><th>均持有</th><th>同期全A</th></tr><tr><td>A: N型动量 (转+1 且 RPS≥80)</td><td>v1因果</td><td>108</td><td class='pos'>0.18%</td><td>-0.44%</td><td>38.9%</td><td>-0.96%</td><td>11.8天</td><td>1.15%</td></tr><tr><td></td><td>v2最终</td><td>20</td><td class='pos'>19.26%</td><td>17.9%</td><td>85.0%</td><td>7.72%</td><td>18.1天</td><td>11.54%</td></tr><tr><td>B: 纯RPS升穿80</td><td>v1因果</td><td>271</td><td class='pos'>0.44%</td><td>-0.32%</td><td>46.5%</td><td>-0.43%</td><td>9.8天</td><td>0.87%</td></tr><tr><td></td><td>v2最终</td><td>161</td><td class='neg'>-0.48%</td><td>-0.98%</td><td>41.6%</td><td>-3.41%</td><td>17.5天</td><td>2.93%</td></tr><tr><td>C: 纯NType转+1</td><td>v1因果</td><td>736</td><td class='pos'>0.15%</td><td>-0.26%</td><td>44.6%</td><td>-0.45%</td><td>9.1天</td><td>0.6%</td></tr><tr><td></td><td>v2最终</td><td>258</td><td class='pos'>71.27%</td><td>28.94%</td><td>93.4%</td><td>24.47%</td><td>27.2天</td><td>46.8%</td></tr><tr><td>D: 随机对照(持有20日)</td><td>v1因果</td><td>108</td><td class='pos'>0.02%</td><td>0.27%</td><td>52.8%</td><td>-1.56%</td><td>20.0天</td><td>1.58%</td></tr><tr><td></td><td>v2最终</td><td>20</td><td class='pos'>1.94%</td><td>-6.6%</td><td>40.0%</td><td>-4.59%</td><td>20.0天</td><td>6.53%</td></tr></table><h4>L2 — v1因果态 (whipsaw 28.6/年, 信号比纯N型减86.1%) | v2最终态 (whipsaw 9.0/年)</h4><table><tr><th>臂</th><th>口径</th><th>区间数</th><th>均收</th><th>中位</th><th>胜率</th><th>均超额</th><th>均持有</th><th>同期全A</th></tr><tr><td>A: N型动量 (转+1 且 RPS≥80)</td><td>v1因果</td><td>449</td><td class='pos'>0.75%</td><td>-0.55%</td><td>41.2%</td><td>-0.24%</td><td>10.3天</td><td>0.95%</td></tr><tr><td></td><td>v2最终</td><td>87</td><td class='pos'>39.09%</td><td>11.93%</td><td>89.7%</td><td>26.77%</td><td>17.6天</td><td>12.32%</td></tr><tr><td>B: 纯RPS升穿80</td><td>v1因果</td><td>917</td><td class='pos'>0.57%</td><td>-0.33%</td><td>45.4%</td><td>-0.32%</td><td>10.2天</td><td>0.87%</td></tr><tr><td></td><td>v2最终</td><td>602</td><td class='pos'>1.11%</td><td>-2.33%</td><td>37.2%</td><td>-1.57%</td><td>16.7天</td><td>2.69%</td></tr><tr><td>C: 纯NType转+1</td><td>v1因果</td><td>3239</td><td class='pos'>0.71%</td><td>-0.33%</td><td>44.6%</td><td>-0.15%</td><td>9.6天</td><td>0.79%</td></tr><tr><td></td><td>v2最终</td><td>1067</td><td class='pos'>78.16%</td><td>33.29%</td><td>93.4%</td><td>37.48%</td><td>24.4天</td><td>40.68%</td></tr><tr><td>D: 随机对照(持有20日)</td><td>v1因果</td><td>449</td><td class='pos'>1.19%</td><td>0.52%</td><td>52.3%</td><td>-0.32%</td><td>20.0天</td><td>1.33%</td></tr><tr><td></td><td>v2最终</td><td>87</td><td class='pos'>9.81%</td><td>-2.64%</td><td>44.8%</td><td>5.54%</td><td>20.0天</td><td>4.27%</td></tr></table><h4>L3 — v1因果态 (whipsaw 28.4/年, 信号比纯N型减85.3%) | v2最终态 (whipsaw 8.9/年)</h4><table><tr><th>臂</th><th>口径</th><th>区间数</th><th>均收</th><th>中位</th><th>胜率</th><th>均超额</th><th>均持有</th><th>同期全A</th></tr><tr><td>A: N型动量 (转+1 且 RPS≥80)</td><td>v1因果</td><td>1037</td><td class='pos'>0.38%</td><td>-0.51%</td><td>44.1%</td><td>-0.45%</td><td>9.1天</td><td>0.83%</td></tr><tr><td></td><td>v2最终</td><td>184</td><td class='pos'>40.3%</td><td>15.5%</td><td>88.0%</td><td>30.08%</td><td>15.1天</td><td>10.22%</td></tr><tr><td>B: 纯RPS升穿80</td><td>v1因果</td><td>2075</td><td class='pos'>0.45%</td><td>-0.31%</td><td>45.2%</td><td>-0.48%</td><td>9.8天</td><td>0.84%</td></tr><tr><td></td><td>v2最终</td><td>1255</td><td class='pos'>1.18%</td><td>-2.69%</td><td>36.9%</td><td>-1.67%</td><td>17.5天</td><td>2.85%</td></tr><tr><td>C: 纯NType转+1</td><td>v1因果</td><td>7037</td><td class='pos'>0.77%</td><td>-0.31%</td><td>45.4%</td><td>-0.08%</td><td>9.7天</td><td>0.8%</td></tr><tr><td></td><td>v2最终</td><td>2309</td><td class='pos'>88.44%</td><td>37.76%</td><td>93.3%</td><td>49.46%</td><td>24.6天</td><td>38.98%</td></tr><tr><td>D: 随机对照(持有20日)</td><td>v1因果</td><td>1037</td><td class='pos'>1.58%</td><td>0.82%</td><td>55.0%</td><td>0.16%</td><td>20.0天</td><td>1.18%</td></tr><tr><td></td><td>v2最终</td><td>184</td><td class='pos'>10.02%</td><td>-1.13%</td><td>47.8%</td><td>1.21%</td><td>20.0天</td><td>8.8%</td></tr></table>
+
+<h2>6. 验证要点</h2>
+<div class=ok>
+<b>确认可信:</b> ①算法实现(分形拐点W=3+状态机)与文档一致, 10,000随机序列oracle验证通过 ②T+1衰减披露诚实 ③分层定位(L1状态机/L2板块/L3个股)与我们体系同构 ④价格数据真实(逐笔吻合)<br>
+<b>无法复现:</b> ①收益数字(因果态归零: L2 -0.56%/胜率31.5%) ②RPS提升精度(实测B方案vs纯NType &lt;2pp, L3为负) ③90-96%胜率(因果态31-42%)<br>
+<b>文档未做但关键的对照:</b> ①beta拆解 ②因果态(前视偏差12-31pp) ③外样本(2024-25同样归零) ④纯RPS对照臂(全口径为负)
+</div>
+
+<h2>7. 完整代码 (可直接复现)</h2>
+<h3>代码 1/7 — v4 状态机实现 (W=3) <span class=note>(compute_v4_state.py)</span></h3><pre class=code>#!/usr/bin/env python3
+&quot;&quot;&quot;
+v4 N型结构三态 (v0.4, MOS 2026-08-14 11:49: 拐点源改用原始收盘分形拐点 W=2)
+核心定义 (MOS):
+  - 拐点序列: 原始收盘分形拐点(左右W日严格极值, 同型连续保留更极值者), 与v3解耦
+  - 相邻比较: 当前低点只与上一个低点比较, 当前高点只与上一个高点比较
+  - 上涨N: 低点抬高 且 高点抬高; 下跌N: 低点降低 且 高点降低
+  - 剩下都是横盘 (横盘交易不具有显著胜率, 页面橙色背景)
+  - 拐点极值无关紧要, 只需标注拐点K线
+分段规则:
+  任意相邻同型比较违规(含相等) → 在最近锚点处断开(共享拐点)
+    上涨结构锚点=H: 低点或高点回落 → 结束于最近H
+    下跌结构锚点=L: 低点或高点抬升 → 结束于最近L
+    锚点违规: 违规比较的两点都在新结构内 → 直接取方向
+    非锚点违规: 违规比较跨边界 → 方向待定(0), 等边界内两个比较同向再确立
+    确立方向需N单元不越当前结构起点
+验证: 结构内所有相邻同型比较与方向一致(≥4拐点)才是有效N, 否则横盘
+跨边界比较一律忽略
+已通过: MOS三例+边界例单元测试; 10000随机序列 vs 独立oracle 全部一致
+输出: pages/v4-states.json (透传 v3 字段 + v4 state/segments/swings/v4structs)
+&quot;&quot;&quot;
+import json, os, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from config import PIPELINE_DIR
+
+V3 = os.path.join(PIPELINE_DIR, &#x27;pages&#x27;, &#x27;v3-states.json&#x27;)
+OUT = os.path.join(PIPELINE_DIR, &#x27;pages&#x27;, &#x27;v4-states.json&#x27;)
+W = 3  # 分形窗口
+
+def fractal_pivots(closes, W=2):
+    &quot;&quot;&quot;原始收盘分形拐点: 左右W日严格极值; 同型连续保留更极值者&quot;&quot;&quot;
+    piv = []
+    for i in range(W, len(closes) - W):
+        c = closes[i]
+        if c is None:
+            continue
+        left = closes[i - W:i]
+        right = closes[i + 1:i + W + 1]
+        win = list(left) + list(right)
+        if all(x is not None and c &gt; x for x in win):
+            t = &#x27;H&#x27;
+        elif all(x is not None and c &lt; x for x in win):
+            t = &#x27;L&#x27;
+        else:
+            continue
+        if piv and piv[-1][&#x27;t&#x27;] == t:
+            if (t == &#x27;H&#x27; and c &gt; piv[-1][&#x27;v&#x27;]) or (t == &#x27;L&#x27; and c &lt; piv[-1][&#x27;v&#x27;]):
+                piv[-1] = {&#x27;i&#x27;: i, &#x27;t&#x27;: t, &#x27;v&#x27;: round(c, 2)}
+            continue
+        piv.append({&#x27;i&#x27;: i, &#x27;t&#x27;: t, &#x27;v&#x27;: round(c, 2)})
+    return piv
+
+def sign(x):
+    return 1 if x &gt; 0 else (-1 if x &lt; 0 else 0)
+
+def process(piv, n, dates, last_close=None):
+    &quot;&quot;&quot;拐点序列 → (v4state, v4segments, swings, v4structs)
+    last_close: 最新收盘 — 末段无分形极值可取时(MOS 12:22), 数列最后一项当作极值(类型交替)
+    v4structs: [[s_idx, e_idx, dir, valid, s_date, e_date], ...] dir: 1涨/-1跌/0横&quot;&quot;&quot;
+    if last_close is not None and len(piv) &gt;= 1 and piv[-1][&#x27;i&#x27;] &lt; n - 1:
+        t = &#x27;L&#x27; if piv[-1][&#x27;t&#x27;] == &#x27;H&#x27; else &#x27;H&#x27;
+        piv = piv + [{&#x27;i&#x27;: n - 1, &#x27;t&#x27;: t, &#x27;v&#x27;: round(last_close, 2)}]
+    m = len(piv)
+    if m &lt; 2:
+        return [0] * n, [[0, n - 1, 0]], piv, []
+    # 相邻同型比较 cmp[j] = sign(P[j].v - P[prev_same(j)].v)
+    prev_same = [-1] * m
+    lastL = lastH = -1
+    for j in range(m):
+        if piv[j][&#x27;t&#x27;] == &#x27;L&#x27;:
+            prev_same[j] = lastL
+            lastL = j
+        else:
+            prev_same[j] = lastH
+            lastH = j
+    cmpv = [0] * m
+    for j in range(2, m):
+        p = prev_same[j]
+        if p &gt;= 0:
+            cmpv[j] = sign(piv[j][&#x27;v&#x27;] - piv[p][&#x27;v&#x27;])
+    # 分段
+    structs = []  # [s_idx, e_idx, dir]
+    DIR = 0
+    s0 = 0
+    for j in range(2, m):
+        c = cmpv[j]
+        if DIR == 0:
+            if c != 0 and cmpv[j - 1] == c and j - 3 &gt;= s0:
+                if s0 &lt;= j - 4:
+                    structs.append([s0, j - 4, 0])
+                s0 = j - 3
+                DIR = c
+        elif DIR == 1:
+            if c &lt;= 0:
+                if piv[j][&#x27;t&#x27;] == &#x27;H&#x27;:
+                    b, nd = j - 2, (-1 if c &lt; 0 else 0)
+                else:
+                    b, nd = j - 1, 0
+                structs.append([s0, b, 1])
+                s0, DIR = b, nd
+        else:  # DIR == -1
+            if c &gt;= 0:
+                if piv[j][&#x27;t&#x27;] == &#x27;L&#x27;:
+                    b, nd = j - 2, (1 if c &gt; 0 else 0)
+                else:
+                    b, nd = j - 1, 0
+                structs.append([s0, b, -1])
+                s0, DIR = b, nd
+    structs.append([s0, m - 1, DIR])
+    # 验证 + 日级状态
+    valid = []
+    for s, e, d in structs:
+        ok = 0
+        if d != 0 and e - s &gt;= 3:
+            ok = 1 if all((prev_same[j] &lt; s) or (cmpv[j] == d) for j in range(s + 2, e + 1)) else 0
+        valid.append([s, e, d, ok])
+    v4state = [0] * n
+    for idx, (s, e, d, ok) in enumerate(valid):
+        if ok:
+            end = n if idx == len(valid) - 1 else piv[e][&#x27;i&#x27;] + 1
+            for day in range(piv[s][&#x27;i&#x27;], end):
+                v4state[day] = d
+    # 空隙填充(MOS 12:08): 未被有效N覆盖的天, 按所在拐点对直接比较定方向
+    #   数列只有[a,b]: a&lt;b→上涨, a&gt;b→下跌; 相等→横盘
+    #   末段已由末尾追加的&quot;最后一项当极值&quot;拐点覆盖(12:22), 无需单独末腿填充
+    for k in range(m - 1):
+        dg = sign(piv[k + 1][&#x27;v&#x27;] - piv[k][&#x27;v&#x27;])
+        if dg == 0:
+            continue
+        for day in range(piv[k][&#x27;i&#x27;] + 1, piv[k + 1][&#x27;i&#x27;] + 1):
+            if v4state[day] == 0:
+                v4state[day] = dg
+    v4segs = []
+    if n:
+        s, prev = 0, v4state[0]
+        for i in range(1, n):
+            if v4state[i] != prev:
+                v4segs.append([s, i - 1, prev])
+                s, prev = i, v4state[i]
+        v4segs.append([s, n - 1, prev])
+    v4structs = []
+    for s, e, d, ok in valid:
+        v4structs.append([s, e, d, ok,
+                          dates[piv[s][&#x27;i&#x27;]] if 0 &lt;= piv[s][&#x27;i&#x27;] &lt; len(dates) else &#x27;&#x27;,
+                          dates[piv[e][&#x27;i&#x27;]] if 0 &lt;= piv[e][&#x27;i&#x27;] &lt; len(dates) else &#x27;&#x27;])
+    return v4state, v4segs, piv, v4structs
+
+def main():
+    with open(V3) as f:
+        d = json.load(f)
+    n = len(d[&#x27;dates&#x27;])
+    d[&#x27;params&#x27;][&#x27;v4&#x27;] = f&#x27;N型三态 v0.4 (原始收盘分形拐点 W={W}, 相邻同型双条件, 任意违规锚点断开)&#x27;
+
+    def proc_all(series):
+        closes = [row[3] if row else None for row in series[&#x27;k&#x27;]]
+        piv = fractal_pivots(closes, W)
+        lc = closes[n - 1] if n &gt; 0 and closes[n - 1] is not None else None
+        v4s, v4g, sw, v4t = process(piv, n, d[&#x27;dates&#x27;], lc)
+        series[&#x27;v3state&#x27;] = series[&#x27;state&#x27;]
+        series[&#x27;v3segments&#x27;] = series[&#x27;segments&#x27;]
+        series[&#x27;state&#x27;] = v4s
+        series[&#x27;segments&#x27;] = v4g
+        series[&#x27;swings&#x27;] = sw
+        series[&#x27;v4structs&#x27;] = v4t
+        return series
+
+    d[&#x27;allA&#x27;] = proc_all(d[&#x27;allA&#x27;])
+    for code in d[&#x27;sectors&#x27;]:
+        proc_all(d[&#x27;sectors&#x27;][code])
+
+    with open(OUT, &#x27;w&#x27;) as f:
+        json.dump(d, f, ensure_ascii=False, separators=(&#x27;,&#x27;, &#x27;:&#x27;))
+
+    def cnt(state):
+        return {1: sum(1 for x in state if x == 1),
+                -1: sum(1 for x in state if x == -1),
+                0: sum(1 for x in state if x == 0)}
+    A = d[&#x27;allA&#x27;]
+    print(f&quot;🦉 v4-states.json: {n}天, 板块{len(d[&#x27;sectors&#x27;])}, 全A v4态={cnt(A[&#x27;state&#x27;])}, 段{len(A[&#x27;segments&#x27;])}, 拐点{len(A[&#x27;swings&#x27;])}&quot;)
+    print(&quot;  全A N型结构:&quot;)
+    for s, e, dr, ok, sd, ed in A[&#x27;v4structs&#x27;]:
+        tag = {1: &#x27;上涨N&#x27;, -1: &#x27;下跌N&#x27;, 0: &#x27;横盘&#x27;}[dr]
+        mark = &#x27;&#x27; if ok else &#x27; ✗无效&#x27;
+        print(f&quot;    {sd} ~ {ed}  {tag}{mark}  拐点[{s}..{e}]&quot;)
+    up = sum(1 for c in d[&#x27;sectors&#x27;] if d[&#x27;sectors&#x27;][c][&#x27;state&#x27;][-1] == 1)
+    dn = sum(1 for c in d[&#x27;sectors&#x27;] if d[&#x27;sectors&#x27;][c][&#x27;state&#x27;][-1] == -1)
+    fl = sum(1 for c in d[&#x27;sectors&#x27;] if d[&#x27;sectors&#x27;][c][&#x27;state&#x27;][-1] == 0)
+    print(f&quot;  当前 L1: 上涨N {up} / 下跌N {dn} / 横盘 {fl}&quot;)
+
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</pre>
+<h3>代码 2/7 — 回测引擎 v2活筹+最终态 <span class=note>(backtest_b_plan.py)</span></h3><pre class=code>#!/usr/bin/env python3
+&quot;&quot;&quot;
+B方案验证回测 — 复现外部文档「NType V4 (W=3) + RPS&gt;=80」宣称数字 + 对照臂拆解
+文档宣称 (2026-01-01~08-15, T+1口径):
+  SW1 ~40区间 +15~17%均 90-95%胜率
+  SW2 ~120区间 +16~18%均 92-95%胜率
+  SW3 ~220区间 +17~19%均 93-96%胜率
+  纯NType: +8~10%均 75-80%胜率; B方案信号数比纯NType少~60%
+
+本验证:
+  数据 = pages/v4-states.json (W=3 因果状态, v2口径板块0AMV K线, 476天 20240902~20260820)
+  臂A = B方案: v4状态转+1 且 当日RPS&gt;=80 → T+1收盘入场 → 持有至状态离开+1 (次日收盘卖)
+  臂B = 纯RPS: RPS升穿80 → T+1入场 → 持有至RPS&lt;80 (对照: 拆NType贡献)
+  臂C = 纯NType: v4状态转+1 → T+1入场 → 持有至离开+1 (对照: 拆RPS贡献)
+  臂D = 随机臂: 同数量随机(板块,日期) → T+1入场 → 固定持有20日 (对照: 市场基准)
+  每笔附超额 = 区间收益 - 同期全A(v2口径)收益 → beta拆解
+&quot;&quot;&quot;
+import json, os, random
+import numpy as np
+
+PIPE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+V4 = os.path.join(PIPE, &#x27;pages&#x27;, &#x27;v4-states.json&#x27;)
+OUTDIR = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(OUTDIR, &#x27;data&#x27;, &#x27;bplan-backtest.json&#x27;)
+
+RPS_WIN = 60   # RPS 窗口: 过去60个交易日涨跌幅
+RPS_TH = 80    # RPS 阈值: 前20%
+RAND_HOLD = 20
+RAND_SEED = 42
+
+W_DOC_T0, W_DOC_T1 = &#x27;20260101&#x27;, &#x27;20260815&#x27;   # 文档回测窗口
+W_OOS_T0, W_OOS_T1 = &#x27;20240902&#x27;, &#x27;20251231&#x27;   # 外样本窗口
+
+
+def load():
+    v4 = json.load(open(V4))
+    dates = v4[&#x27;dates&#x27;]
+    D = {d: i for i, d in enumerate(dates)}
+    levels = {&#x27;L1&#x27;: [], &#x27;L2&#x27;: [], &#x27;L3&#x27;: []}
+    closes, states, names = {}, {}, {}
+    for code, s in v4[&#x27;sectors&#x27;].items():
+        lv = s.get(&#x27;level&#x27;)
+        if lv not in levels:
+            continue
+        k = s.get(&#x27;k&#x27;) or []
+        closes[code] = [r[3] if r and r[3] is not None else None for r in k]
+        states[code] = list(s.get(&#x27;state&#x27;) or [])
+        names[code] = s.get(&#x27;name&#x27;, code)
+        levels[lv].append(code)
+    allA_close = [r[3] if r and r[3] is not None else None for r in v4[&#x27;allA&#x27;][&#x27;k&#x27;]]
+    return dates, D, levels, closes, states, names, allA_close
+
+
+def rps_series(closes, level_codes, n_days):
+    &quot;&quot;&quot;RPS[c][t] = close[t]/close[t-60]-1 在同级板块中的百分位 (0~100)&quot;&quot;&quot;
+    rps = {c: [None] * n_days for c in level_codes}
+    for t in range(RPS_WIN, n_days):
+        vals = []
+        for c in level_codes:
+            cl = closes[c]
+            base, cur = cl[t - RPS_WIN], cl[t]
+            if base is not None and cur is not None and base &gt; 0:
+                vals.append((c, cur / base - 1))
+        if len(vals) &lt; 5:
+            continue
+        for j, (c, chg) in enumerate(vals):
+            less = sum(1 for _, x in vals if x &lt; chg)
+            rps[c][t] = less / (len(vals) - 1) * 100
+    return rps
+
+
+def run_arm(dates, codes, closes, states, rps, allA_close, t0, t1, mode, names):
+    &quot;&quot;&quot;mode: A=B方案 / B=纯RPS / C=纯NType&quot;&quot;&quot;
+    trades, open_pos = [], {}
+    for t in range(t0, t1 + 1):
+        for c in codes:
+            st, st_prev = states[c][t], states[c][t - 1] if t &gt; 0 else None
+            r, r_prev = rps[c][t], rps[c][t - 1] if t &gt; 0 else None
+            if mode == &#x27;A&#x27;:
+                sig = (st == 1 and st_prev != 1) and (r is not None and r &gt;= RPS_TH)
+            elif mode == &#x27;B&#x27;:
+                sig = (r is not None and r &gt;= RPS_TH) and (r_prev is None or r_prev &lt; RPS_TH)
+            else:
+                sig = (st == 1 and st_prev != 1)
+            if sig and c not in open_pos:
+                open_pos[c] = t
+        for c in list(open_pos):
+            ts = open_pos[c]
+            entry_t = ts + 1
+            if entry_t &gt; t1:
+                del open_pos[c]
+                continue
+            if mode in (&#x27;A&#x27;, &#x27;C&#x27;):
+                exit_sig = t if states[c][t] != 1 else None
+            else:
+                exit_sig = t if (rps[c][t] is not None and rps[c][t] &lt; RPS_TH) else None
+            if exit_sig is not None and exit_sig &gt; ts:
+                exit_t = min(exit_sig + 1, t1)
+                entry_p, exit_p = closes[c][entry_t], closes[c][exit_t]
+                if entry_p and exit_p and entry_p &gt; 0:
+                    ret = exit_p / entry_p - 1
+                    b0, b1 = allA_close[entry_t], allA_close[exit_t]
+                    excess = ret - (b1 / b0 - 1) if (b0 and b1 and b0 &gt; 0) else None
+                    trades.append(dict(code=c, name=names.get(c, c), sig_t=ts,
+                                       entry_t=entry_t, exit_t=exit_t, ret=ret,
+                                       excess=excess, hold=exit_t - entry_t))
+                del open_pos[c]
+    return trades
+
+
+def run_random(dates, codes, closes, allA_close, t0, t1, n, names):
+    &quot;&quot;&quot;随机臂: n 个随机(板块, 信号日) → T+1入场 → 固定持有20日&quot;&quot;&quot;
+    random.seed(RAND_SEED)
+    trades = []
+    tries = 0
+    while len(trades) &lt; n and tries &lt; n * 20:
+        tries += 1
+        c = random.choice(codes)
+        ts = random.randint(t0, t1)
+        entry_t, exit_t = ts + 1, ts + 1 + RAND_HOLD
+        if entry_t &gt; t1 or exit_t &gt; t1:
+            continue
+        entry_p, exit_p = closes[c][entry_t], closes[c][exit_t]
+        if entry_p and exit_p and entry_p &gt; 0:
+            ret = exit_p / entry_p - 1
+            b0, b1 = allA_close[entry_t], allA_close[exit_t]
+            excess = ret - (b1 / b0 - 1) if (b0 and b1 and b0 &gt; 0) else None
+            trades.append(dict(code=c, name=names.get(c, c), sig_t=ts,
+                               entry_t=entry_t, exit_t=exit_t, ret=ret,
+                               excess=excess, hold=exit_t - entry_t))
+    return trades
+
+
+def stats(trades, label, allA_close):
+    if not trades:
+        return {&#x27;label&#x27;: label, &#x27;n&#x27;: 0}
+    rets = np.array([x[&#x27;ret&#x27;] for x in trades])
+    ex = np.array([x[&#x27;excess&#x27;] for x in trades if x[&#x27;excess&#x27;] is not None])
+    holds = np.array([x[&#x27;hold&#x27;] for x in trades])
+    return {
+        &#x27;label&#x27;: label,
+        &#x27;n&#x27;: len(trades),
+        &#x27;mean_ret&#x27;: round(float(rets.mean()) * 100, 2),
+        &#x27;median_ret&#x27;: round(float(np.median(rets)) * 100, 2),
+        &#x27;win_rate&#x27;: round(float((rets &gt; 0).mean()) * 100, 1),
+        &#x27;mean_excess&#x27;: round(float(ex.mean()) * 100, 2) if len(ex) else None,
+        &#x27;median_excess&#x27;: round(float(np.median(ex)) * 100, 2) if len(ex) else None,
+        &#x27;win_rate_excess&#x27;: round(float((ex &gt; 0).mean()) * 100, 1) if len(ex) else None,
+        &#x27;mean_hold&#x27;: round(float(holds.mean()), 1),
+        &#x27;mean_bench&#x27;: round(float((np.array([(allA_close[x[&#x27;exit_t&#x27;]] / allA_close[x[&#x27;entry_t&#x27;]] - 1)
+                                   for x in trades if allA_close[x[&#x27;exit_t&#x27;]] and allA_close[x[&#x27;entry_t&#x27;]]])).mean()) * 100, 2),
+    }
+
+
+def whipsaw(states, codes, t0, t1):
+    &quot;&quot;&quot;每板块每年状态切换次数&quot;&quot;&quot;
+    days_per_year = 244
+    tot = 0
+    n_years = max(1, (t1 - t0 + 1) / days_per_year)
+    for c in codes:
+        st = [states[c][t] for t in range(t0, t1 + 1)]
+        tot += sum(1 for i in range(1, len(st)) if st[i] != st[i - 1])
+    return round(tot / len(codes) / n_years, 1) if codes else None
+
+
+def tidx(D, dates, want, side=&#x27;gte&#x27;):
+    &quot;&quot;&quot;找 &gt;=want 或 &lt;=want 的最近交易日索引&quot;&quot;&quot;
+    if want in D:
+        return D[want]
+    for d in (dates if side == &#x27;gte&#x27; else dates[::-1]):
+        if (d &gt;= want) if side == &#x27;gte&#x27; else (d &lt;= want):
+            return D[d]
+    return None
+
+
+def main():
+    dates, D, levels, closes, states, names, allA_close = load()
+    n = len(dates)
+    t_doc0, t_doc1 = tidx(D, dates, W_DOC_T0), tidx(D, dates, W_DOC_T1, &#x27;lte&#x27;)
+    t_oos0, t_oos1 = tidx(D, dates, W_OOS_T0), tidx(D, dates, W_OOS_T1, &#x27;lte&#x27;)
+    report = {
+        &#x27;meta&#x27;: {
+            &#x27;data&#x27;: &#x27;pages/v4-states.json&#x27;,
+            &#x27;days&#x27;: n, &#x27;dates&#x27;: [dates[0], dates[-1]],
+            &#x27;sector_counts&#x27;: {k: len(v) for k, v in levels.items()},
+            &#x27;rps_window&#x27;: RPS_WIN, &#x27;rps_th&#x27;: RPS_TH,
+            &#x27;tplus1&#x27;: &#x27;信号日次日收盘入场; 离场信号日次日收盘卖出&#x27;,
+            &#x27;doc_window&#x27;: f&#x27;{dates[t_doc0]}~{dates[t_doc1]}&#x27;,
+            &#x27;oos_window&#x27;: f&#x27;{dates[t_oos0]}~{dates[t_oos1]}&#x27;,
+            &#x27;bench&#x27;: &#x27;全A v2口径0AMV (beta拆解基准)&#x27;,
+        },
+        &#x27;windows&#x27;: {},
+    }
+    for wname, (t0, t1) in [(&#x27;doc_2026&#x27;, (t_doc0, t_doc1)), (&#x27;oos_2024_25&#x27;, (t_oos0, t_oos1)),
+                            (&#x27;full&#x27;, (0, n - 1))]:
+        wrep = {}
+        for lv in [&#x27;L1&#x27;, &#x27;L2&#x27;, &#x27;L3&#x27;]:
+            codes = levels[lv]
+            rps = rps_series(closes, codes, n)
+            arms = {
+                &#x27;armA_B_plan&#x27;: run_arm(dates, codes, closes, states, rps, allA_close, t0, t1, &#x27;A&#x27;, names),
+                &#x27;armB_rps_only&#x27;: run_arm(dates, codes, closes, states, rps, allA_close, t0, t1, &#x27;B&#x27;, names),
+                &#x27;armC_ntype_only&#x27;: run_arm(dates, codes, closes, states, rps, allA_close, t0, t1, &#x27;C&#x27;, names),
+            }
+            nA = len(arms[&#x27;armA_B_plan&#x27;])
+            arms[&#x27;armD_random&#x27;] = run_random(dates, codes, closes, allA_close, t0, t1, nA, names)
+            wrep[lv] = {k: stats(v, k, allA_close) for k, v in arms.items()}
+            wrep[lv][&#x27;whipsaw_py&#x27;] = whipsaw(states, codes, t0, t1)
+            wrep[lv][&#x27;signal_reduction_B_vs_C&#x27;] = round((1 - nA / len(arms[&#x27;armC_ntype_only&#x27;])) * 100, 1) \
+                if arms[&#x27;armC_ntype_only&#x27;] else None
+        report[&#x27;windows&#x27;][wname] = wrep
+
+    # 同日聚集度 (doc窗口, L2, 臂A)
+    agg = {}
+    codes = levels[&#x27;L2&#x27;]
+    rps = rps_series(closes, codes, n)
+    for t in range(t_doc0, t_doc1 + 1):
+        cnt = sum(1 for c in codes
+                  if states[c][t] == 1 and states[c][t - 1] != 1
+                  and rps[c][t] is not None and rps[c][t] &gt;= RPS_TH)
+        agg[cnt] = agg.get(cnt, 0) + 1
+    report[&#x27;signal_clustering_L2_doc&#x27;] = {str(k): v for k, v in sorted(agg.items())}
+
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    with open(OUT, &#x27;w&#x27;) as f:
+        json.dump(report, f, ensure_ascii=False, indent=1)
+    print(&#x27;written:&#x27;, OUT)
+    # 文本摘要
+    for wname, wrep in report[&#x27;windows&#x27;].items():
+        print(f&quot;\n===== {wname} =====&quot;)
+        for lv in [&#x27;L1&#x27;, &#x27;L2&#x27;, &#x27;L3&#x27;]:
+            r = wrep[lv]
+            print(f&quot;--- {lv} (whipsaw {r[&#x27;whipsaw_py&#x27;]}/yr, B比C信号减 {r[&#x27;signal_reduction_B_vs_C&#x27;]}%)&quot;)
+            for k in [&#x27;armA_B_plan&#x27;, &#x27;armB_rps_only&#x27;, &#x27;armC_ntype_only&#x27;, &#x27;armD_random&#x27;]:
+                s = r[k]
+                if s[&#x27;n&#x27;]:
+                    print(f&quot;  {k}: n={s[&#x27;n&#x27;]} 均收{s[&#x27;mean_ret&#x27;]}% 中位{s[&#x27;median_ret&#x27;]}% &quot;
+                          f&quot;胜率{s[&#x27;win_rate&#x27;]}% 均超额{s[&#x27;mean_excess&#x27;]}% &quot;
+                          f&quot;均持有{s[&#x27;mean_hold&#x27;]}天 同期全A{s[&#x27;mean_bench&#x27;]}%&quot;)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</pre>
+<h3>代码 3/7 — 回测引擎 v1市值+因果态 <span class=note>(backtest_b_plan_v1.py)</span></h3><pre class=code>#!/usr/bin/env python3
+&quot;&quot;&quot;
+B方案验证 — v1口径版 (与外部文档同口径: 流通市值加权板块指数 + 因果状态)
+对比 backtest_b_plan.py (v2活筹口径, 最终态) 的数字差异
+数据: sw_sector_0amv / _l2 / _l3 (v1 市值加权) + active_mv_ohlc (v1全A基准)
+状态: 因果口径重算 (每日只用当时已知拐点, W=3, 与 backtest_v4_chain.py 相同)
+&quot;&quot;&quot;
+import json, os, sqlite3, sys, time
+import numpy as np
+
+PIPE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(PIPE, &#x27;processing&#x27;))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from compute_v4_state import process, W as V4W
+import backtest_b_plan as bp
+
+DB = os.path.join(PIPE, &#x27;pool.db&#x27;)
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#x27;data&#x27;, &#x27;bplan-backtest-v1.json&#x27;)
+
+TABLES = {&#x27;L1&#x27;: &#x27;sw_sector_0amv&#x27;, &#x27;L2&#x27;: &#x27;sw_sector_0amv_l2&#x27;, &#x27;L3&#x27;: &#x27;sw_sector_0amv_l3&#x27;}
+
+
+def load_v1():
+    &quot;&quot;&quot;DB → dates + closes + names + 全A基准 (v1口径)&quot;&quot;&quot;
+    c = sqlite3.connect(DB).cursor()
+    # 全A基准
+    rows = c.execute(&quot;SELECT trade_date, close FROM active_mv_ohlc ORDER BY trade_date&quot;).fetchall()
+    bench_dates = [r[0] for r in rows]
+    bench_close = [r[1] for r in rows]
+    levels = {&#x27;L1&#x27;: [], &#x27;L2&#x27;: [], &#x27;L3&#x27;: []}
+    closes, names = {}, {}
+    for lv, tbl in TABLES.items():
+        rows = c.execute(f&quot;SELECT index_code, industry_name, trade_date, close FROM {tbl} &quot;
+                         f&quot;WHERE close IS NOT NULL ORDER BY trade_date&quot;).fetchall()
+        by_code = {}
+        for code, name, d, cl in rows:
+            by_code.setdefault(code, []).append((d, cl))
+        # 用 L2 的日期轴做统一 (L2 最短 20240930~20260810)
+        pass
+    # 统一日期轴: L2 表日期
+    axis = c.execute(&quot;SELECT DISTINCT trade_date FROM sw_sector_0amv_l2 ORDER BY trade_date&quot;).fetchall()
+    axis = [r[0] for r in axis]
+    axD = {d: i for i, d in enumerate(axis)}
+    bench_map = dict(zip(bench_dates, bench_close))
+    for lv, tbl in TABLES.items():
+        rows = c.execute(f&quot;SELECT index_code, industry_name, trade_date, close FROM {tbl} &quot;
+                         f&quot;WHERE close IS NOT NULL ORDER BY trade_date&quot;).fetchall()
+        by_code = {}
+        for code, name, d, cl in rows:
+            by_code.setdefault(code, []).append((d, cl))
+        for code, series in by_code.items():
+            m = {d: cl for d, cl in series}
+            levels[lv].append(code)
+            closes[(lv, code)] = [m.get(d) for d in axis]
+            names[(lv, code)] = series[0][1] if False else None
+        # 名字单独取
+    c2 = sqlite3.connect(DB).cursor()
+    for lv, tbl in TABLES.items():
+        for code, name in c2.execute(f&quot;SELECT DISTINCT index_code, industry_name FROM {tbl}&quot;):
+            names[(lv, code)] = name
+    allA_close = [bench_map.get(d) for d in axis]
+    return axis, axD, levels, closes, names, allA_close
+
+
+def causal_states(closes, W):
+    &quot;&quot;&quot;因果状态: t时只知 i&lt;=t-W 的拐点 + 今日收盘当极值 (与 backtest_v4_chain.py 相同)&quot;&quot;&quot;
+    n = len(closes)
+    piv = []
+    states = [0] * n
+    for t in range(n):
+        i = t - W
+        if W &lt;= i &lt; n - W:
+            c = closes[i]
+            if c is not None:
+                left = closes[i - W:i]
+                right = closes[i + 1:i + W + 1]
+                if all(x is not None and c &gt; x for x in left + right):
+                    tt = &#x27;H&#x27;
+                elif all(x is not None and c &lt; x for x in left + right):
+                    tt = &#x27;L&#x27;
+                else:
+                    tt = None
+                if tt:
+                    if piv and piv[-1][&#x27;t&#x27;] == tt:
+                        if (tt == &#x27;H&#x27; and c &gt; piv[-1][&#x27;v&#x27;]) or (tt == &#x27;L&#x27; and c &lt; piv[-1][&#x27;v&#x27;]):
+                            piv[-1] = {&#x27;i&#x27;: i, &#x27;t&#x27;: tt, &#x27;v&#x27;: round(c, 2)}
+                    else:
+                        piv.append({&#x27;i&#x27;: i, &#x27;t&#x27;: tt, &#x27;v&#x27;: round(c, 2)})
+        lc = closes[t]
+        if lc is not None:
+            st, _, _, _ = process(list(piv), t + 1, [&#x27;d&#x27;] * (t + 1), lc)
+            states[t] = st[-1]
+    return states
+
+
+def main():
+    t0 = time.time()
+    axis, axD, levels, closes, names, allA_close = load_v1()
+    n = len(axis)
+    print(f&#x27;v1口径: {n}天 {axis[0]}~{axis[-1]}  L1={len(levels[&quot;L1&quot;])} L2={len(levels[&quot;L2&quot;])} L3={len(levels[&quot;L3&quot;])}&#x27;)
+
+    # 因果 v4 状态 (W=3)
+    states = {}
+    for lv in [&#x27;L1&#x27;, &#x27;L2&#x27;, &#x27;L3&#x27;]:
+        for code in levels[lv]:
+            states[(lv, code)] = causal_states(closes[(lv, code)], V4W)
+    print(f&#x27;因果状态完成 用时{time.time()-t0:.0f}s&#x27;)
+
+    t_doc0, t_doc1 = bp.tidx(axD, axis, bp.W_DOC_T0), bp.tidx(axD, axis, bp.W_DOC_T1, &#x27;lte&#x27;)
+    t_oos0, t_oos1 = bp.tidx(axD, axis, bp.W_OOS_T0), bp.tidx(axD, axis, bp.W_OOS_T1, &#x27;lte&#x27;)
+    report = {
+        &#x27;meta&#x27;: {
+            &#x27;data&#x27;: &#x27;sw_sector_0amv(_l2/_l3) v1口径(自由流通市值加权) + 因果v4状态W=3&#x27;,
+            &#x27;days&#x27;: n, &#x27;dates&#x27;: [axis[0], axis[-1]],
+            &#x27;sector_counts&#x27;: {k: len(v) for k, v in levels.items()},
+            &#x27;doc_window&#x27;: f&#x27;{axis[t_doc0]}~{axis[t_doc1]}&#x27;,
+            &#x27;oos_window&#x27;: f&#x27;{axis[t_oos0]}~{axis[t_oos1]}&#x27;,
+            &#x27;bench&#x27;: &#x27;active_mv_ohlc close (全A v1)&#x27;,
+            &#x27;note&#x27;: &#x27;与外部文档同口径(市值加权+T+1); 状态为因果口径&#x27;,
+        },
+        &#x27;windows&#x27;: {},
+    }
+    for wname, (t0i, t1i) in [(&#x27;doc_2026&#x27;, (t_doc0, t_doc1)), (&#x27;oos_2024_25&#x27;, (t_oos0, t_oos1)),
+                              (&#x27;full&#x27;, (0, n - 1))]:
+        wrep = {}
+        for lv in [&#x27;L1&#x27;, &#x27;L2&#x27;, &#x27;L3&#x27;]:
+            codes = levels[lv]
+            cl = {code: closes[(lv, code)] for code in codes}
+            st = {code: states[(lv, code)] for code in codes}
+            nm = {code: names.get((lv, code), code) for code in codes}
+            rps = bp.rps_series(cl, codes, n)
+            arms = {
+                &#x27;armA_B_plan&#x27;: bp.run_arm(axis, codes, cl, st, rps, allA_close, t0i, t1i, &#x27;A&#x27;, nm),
+                &#x27;armB_rps_only&#x27;: bp.run_arm(axis, codes, cl, st, rps, allA_close, t0i, t1i, &#x27;B&#x27;, nm),
+                &#x27;armC_ntype_only&#x27;: bp.run_arm(axis, codes, cl, st, rps, allA_close, t0i, t1i, &#x27;C&#x27;, nm),
+            }
+            nA = len(arms[&#x27;armA_B_plan&#x27;])
+            arms[&#x27;armD_random&#x27;] = bp.run_random(axis, codes, cl, allA_close, t0i, t1i, nA, nm)
+            wrep[lv] = {k: bp.stats(v, k, allA_close) for k, v in arms.items()}
+            wrep[lv][&#x27;whipsaw_py&#x27;] = bp.whipsaw(st, codes, t0i, t1i)
+            wrep[lv][&#x27;signal_reduction_B_vs_C&#x27;] = round((1 - nA / len(arms[&#x27;armC_ntype_only&#x27;])) * 100, 1) \
+                if arms[&#x27;armC_ntype_only&#x27;] else None
+        report[&#x27;windows&#x27;][wname] = wrep
+
+    with open(OUT, &#x27;w&#x27;) as f:
+        json.dump(report, f, ensure_ascii=False, indent=1)
+    print(&#x27;written:&#x27;, OUT, f&#x27;用时{time.time()-t0:.0f}s&#x27;)
+    for wname, wrep in report[&#x27;windows&#x27;].items():
+        print(f&quot;\n===== {wname} =====&quot;)
+        for lv in [&#x27;L1&#x27;, &#x27;L2&#x27;, &#x27;L3&#x27;]:
+            r = wrep[lv]
+            print(f&quot;--- {lv} (whipsaw {r[&#x27;whipsaw_py&#x27;]}/yr, B比C信号减 {r[&#x27;signal_reduction_B_vs_C&#x27;]}%)&quot;)
+            for k in [&#x27;armA_B_plan&#x27;, &#x27;armB_rps_only&#x27;, &#x27;armC_ntype_only&#x27;, &#x27;armD_random&#x27;]:
+                s = r[k]
+                if s[&#x27;n&#x27;]:
+                    print(f&quot;  {k}: n={s[&#x27;n&#x27;]} 均收{s[&#x27;mean_ret&#x27;]}% 中位{s[&#x27;median_ret&#x27;]}% &quot;
+                          f&quot;胜率{s[&#x27;win_rate&#x27;]}% 均超额{s[&#x27;mean_excess&#x27;]}% 均持有{s[&#x27;mean_hold&#x27;]}天 同期全A{s[&#x27;mean_bench&#x27;]}%&quot;)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</pre>
+<h3>代码 4/7 — 四象限归因 <span class=note>(backtest_b_plan_matrix.py)</span></h3><pre class=code>#!/usr/bin/env python3
+&quot;&quot;&quot;B方案四象限归因: {v1市值加权, v2活筹} × {最终态, 因果态}
+前两格已有: v2+最终态(backtest_b_plan.py), v1+因果态(backtest_b_plan_v1.py)
+本脚本补: v1+最终态, v2+因果态
+只跑 doc_2026 窗口 + L2/L3 (核心对比), 输出合并 JSON
+&quot;&quot;&quot;
+import json, os, sqlite3, sys, time
+import numpy as np
+
+PIPE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(PIPE, &#x27;processing&#x27;))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from compute_v4_state import process, fractal_pivots, W as V4W
+import backtest_b_plan as bp
+import backtest_b_plan_v1 as bpv
+
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#x27;data&#x27;, &#x27;bplan-matrix.json&#x27;)
+
+
+def final_states(closes, W):
+    &quot;&quot;&quot;最终态: 全窗口一次性算 (与 pages/v4-states.json 相同口径)&quot;&quot;&quot;
+    piv = fractal_pivots(closes, W)
+    st, _, _, _ = process(piv, len(closes), [&#x27;d&#x27;] * len(closes), closes[-1] if closes else None)
+    return st
+
+
+def main():
+    t0 = time.time()
+    # ---- 数据 ----
+    axis, axD, levels, v1closes, names, v1bench = bpv.load_v1()
+    n1 = len(axis)
+    dates2, D2, levels2, v2closes, states2, names2, v2bench = bp.load()
+    n2 = len(dates2)
+    t_doc0, t_doc1 = bp.tidx(axD, axis, bp.W_DOC_T0), bp.tidx(axD, axis, bp.W_DOC_T1, &#x27;lte&#x27;)
+    t_doc0b, t_doc1b = bp.tidx(D2, dates2, bp.W_DOC_T0), bp.tidx(D2, dates2, bp.W_DOC_T1, &#x27;lte&#x27;)
+
+    out = {&#x27;quadrants&#x27;: {}}
+
+    # ---- v1 + 最终态 ----
+    print(&#x27;v1+最终态 ...&#x27;)
+    for lv in [&#x27;L2&#x27;, &#x27;L3&#x27;]:
+        codes = levels[lv]
+        cl = {c: v1closes[(lv, c)] for c in codes}
+        st = {c: final_states(v1closes[(lv, c)], V4W) for c in codes}
+        nm = {c: names.get((lv, c), c) for c in codes}
+        rps = bp.rps_series(cl, codes, n1)
+        arms = {
+            &#x27;armA_B_plan&#x27;: bp.run_arm(axis, codes, cl, st, rps, v1bench, t_doc0, t_doc1, &#x27;A&#x27;, nm),
+            &#x27;armC_ntype_only&#x27;: bp.run_arm(axis, codes, cl, st, rps, v1bench, t_doc0, t_doc1, &#x27;C&#x27;, nm),
+        }
+        out[&#x27;quadrants&#x27;][f&#x27;v1_final_{lv}&#x27;] = {k: bp.stats(v, k, v1bench) for k, v in arms.items()}
+        out[&#x27;quadrants&#x27;][f&#x27;v1_final_{lv}&#x27;][&#x27;signal_reduction_B_vs_C&#x27;] = round(
+            (1 - len(arms[&#x27;armA_B_plan&#x27;]) / len(arms[&#x27;armC_ntype_only&#x27;])) * 100, 1)
+        sA = out[&#x27;quadrants&#x27;][f&#x27;v1_final_{lv}&#x27;][&#x27;armA_B_plan&#x27;]
+        print(f&quot;  {lv}: armA n={sA[&#x27;n&#x27;]} 均收{sA[&#x27;mean_ret&#x27;]}% 胜率{sA[&#x27;win_rate&#x27;]}% 均超额{sA[&#x27;mean_excess&#x27;]}%&quot;)
+
+    # ---- v2 + 因果态 ----
+    print(&#x27;v2+因果态 ...&#x27;)
+    for lv in [&#x27;L2&#x27;, &#x27;L3&#x27;]:
+        codes = levels2[lv]
+        cl = {c: v2closes[c] for c in codes}
+        st = {}
+        for c in codes:
+            st[c] = bpv.causal_states(v2closes[c], V4W)
+        nm = {c: names2.get(c, c) for c in codes}
+        rps = bp.rps_series(cl, codes, n2)
+        arms = {
+            &#x27;armA_B_plan&#x27;: bp.run_arm(dates2, codes, cl, st, rps, v2bench, t_doc0b, t_doc1b, &#x27;A&#x27;, nm),
+            &#x27;armC_ntype_only&#x27;: bp.run_arm(dates2, codes, cl, st, rps, v2bench, t_doc0b, t_doc1b, &#x27;C&#x27;, nm),
+        }
+        out[&#x27;quadrants&#x27;][f&#x27;v2_causal_{lv}&#x27;] = {k: bp.stats(v, k, v2bench) for k, v in arms.items()}
+        out[&#x27;quadrants&#x27;][f&#x27;v2_causal_{lv}&#x27;][&#x27;signal_reduction_B_vs_C&#x27;] = round(
+            (1 - len(arms[&#x27;armA_B_plan&#x27;]) / len(arms[&#x27;armC_ntype_only&#x27;])) * 100, 1)
+        sA = out[&#x27;quadrants&#x27;][f&#x27;v2_causal_{lv}&#x27;][&#x27;armA_B_plan&#x27;]
+        print(f&quot;  {lv}: armA n={sA[&#x27;n&#x27;]} 均收{sA[&#x27;mean_ret&#x27;]}% 胜率{sA[&#x27;win_rate&#x27;]}% 均超额{sA[&#x27;mean_excess&#x27;]}%&quot;)
+
+    # ---- 合并前两格 (读已有结果) ----
+    f2 = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), &#x27;data&#x27;, &#x27;bplan-backtest.json&#x27;)))
+    f1 = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), &#x27;data&#x27;, &#x27;bplan-backtest-v1.json&#x27;)))
+    for lv in [&#x27;L2&#x27;, &#x27;L3&#x27;]:
+        out[&#x27;quadrants&#x27;][f&#x27;v2_final_{lv}&#x27;] = f2[&#x27;windows&#x27;][&#x27;doc_2026&#x27;][lv]
+        out[&#x27;quadrants&#x27;][f&#x27;v1_causal_{lv}&#x27;] = f1[&#x27;windows&#x27;][&#x27;doc_2026&#x27;][lv]
+
+    out[&#x27;meta&#x27;] = {
+        &#x27;window&#x27;: f&quot;{axis[t_doc0]}~{axis[t_doc1]} (v1轴) / {dates2[t_doc0b]}~{dates2[t_doc1b]} (v2轴)&quot;,
+        &#x27;doc_claim&#x27;: &#x27;文档宣称: SW2 ~120区间 +16~18%均 92-95%胜率; SW3 ~220区间 +17~19%均 93-96%胜率; 纯NType +8~10% 75-80%胜率&#x27;,
+    }
+    with open(OUT, &#x27;w&#x27;) as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    print(&#x27;written:&#x27;, OUT, f&#x27;用时{time.time()-t0:.0f}s&#x27;)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</pre>
+<h3>代码 5/7 — 申万指数口径重跑 <span class=note>(backtest_b_plan_swindex.py)</span></h3><pre class=code>#!/usr/bin/env python3
+&quot;&quot;&quot;用作者的方法(申万指数序列 + N型动量)基于我们自己的 Tushare 数据重跑
+方法: v4状态(W=3,因果口径) 转+1 且 RPS&gt;=80 → T+1收盘入场 → 持有至离开+1 → T+1收盘卖
+数据: pool.db sw_index_daily (Tushare申万指数原始点位, 20250601~20260820)
+输出: data/bplan-swindex.json (统计 + 交割单, 可与作者152笔逐笔对照)
+&quot;&quot;&quot;
+import json, os, sqlite3, sys, time
+import numpy as np
+
+PIPE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(PIPE, &#x27;processing&#x27;))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from compute_v4_state import process, W as V4W
+import backtest_b_plan as bp
+import backtest_b_plan_v1 as bpv
+
+DB = os.path.join(PIPE, &#x27;pool.db&#x27;)
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#x27;data&#x27;, &#x27;bplan-swindex.json&#x27;)
+RPS_WIN, RPS_TH = 60, 80
+T0, T1 = &#x27;20260101&#x27;, &#x27;20260819&#x27;   # 作者回测窗口 (新文档: 至08-19)
+
+
+def load_sw():
+    &quot;&quot;&quot;sw_index_daily → dates + closes (按层级) + 全A基准(000985中证全指或等权)&quot;&quot;&quot;
+    c = sqlite3.connect(DB)
+    lvmap = dict(c.execute(&quot;SELECT index_code, level FROM sw_classify&quot;).fetchall())
+    nmap = dict(c.execute(&quot;SELECT index_code, industry_name FROM sw_classify&quot;).fetchall())
+    rows = c.execute(&quot;SELECT index_code, trade_date, close FROM sw_index_daily ORDER BY trade_date&quot;).fetchall()
+    dates = sorted({r[1] for r in rows})
+    D = {d: i for i, d in enumerate(dates)}
+    levels = {&#x27;L1&#x27;: [], &#x27;L2&#x27;: [], &#x27;L3&#x27;: []}
+    closes = {}
+    by = {}
+    for code, d, cl in rows:
+        by.setdefault(code, {})[d] = cl
+    for code in by:
+        lv = lvmap.get(code)
+        if lv not in levels:
+            continue
+        levels[lv].append(code)
+        closes[code] = [by[code].get(d) for d in dates]
+    # 基准: 等权全板块均值(每天有数据的板块均值涨跌累积) 近似&quot;市场&quot;
+    bench = []
+    acc = 1.0
+    for t in range(len(dates)):
+        vals = [closes[c][t] / closes[c][t - 1] for c in closes
+                if closes[c][t] and closes[c][t - 1] and closes[c][t - 1] &gt; 0]
+        if vals and t &gt; 0:
+            acc *= float(np.mean(vals))
+        bench.append(acc)
+    return dates, D, levels, closes, nmap, bench
+
+
+def main():
+    t0 = time.time()
+    dates, D, levels, closes, nmap, bench = load_sw()
+    n = len(dates)
+    print(f&#x27;申万指数: {n}天 {dates[0]}~{dates[-1]}  L1={len(levels[&quot;L1&quot;])} L2={len(levels[&quot;L2&quot;])} L3={len(levels[&quot;L3&quot;])}&#x27;)
+
+    tA0, tA1 = bp.tidx(D, dates, T0), bp.tidx(D, dates, T1, &#x27;lte&#x27;)
+    report = {&#x27;meta&#x27;: {&#x27;data&#x27;: &#x27;sw_index_daily (Tushare申万指数原始点位)&#x27;,
+                       &#x27;dates&#x27;: [dates[tA0], dates[tA1]],
+                       &#x27;sectors&#x27;: {k: len(v) for k, v in levels.items()},
+                       &#x27;method&#x27;: &#x27;v4状态W=3因果口径 转+1且RPS&gt;=80 → T+1收盘入场 → 离开+1次日收盘卖&#x27;},
+              &#x27;by_level&#x27;: {}}
+
+    all_trades = {}
+    for lv in [&#x27;L1&#x27;, &#x27;L2&#x27;, &#x27;L3&#x27;]:
+        codes = levels[lv]
+        st = {}
+        for code in codes:
+            st[code] = bpv.causal_states(closes[code], V4W)
+        rps = {}
+        for t in range(RPS_WIN, n):
+            vals = []
+            for code in codes:
+                b, cur = closes[code][t - RPS_WIN], closes[code][t]
+                if b and cur and b &gt; 0:
+                    vals.append((code, cur / b - 1))
+            if len(vals) &lt; 5:
+                continue
+            for code, chg in vals:
+                less = sum(1 for _, x in vals if x &lt; chg)
+                rps.setdefault(code, {})[t] = less / (len(vals) - 1) * 100
+
+        trades, open_pos = [], {}
+        for t in range(tA0, tA1 + 1):
+            for code in codes:
+                s, s_prev = st[code][t], st[code][t - 1] if t &gt; 0 else None
+                r = rps.get(code, {}).get(t)
+                if (s == 1 and s_prev != 1) and (r is not None and r &gt;= RPS_TH) and code not in open_pos:
+                    open_pos[code] = t
+            for code in list(open_pos):
+                ts = open_pos[code]
+                entry_t = ts + 1
+                if entry_t &gt; tA1:
+                    del open_pos[code]
+                    continue
+                if st[code][t] != 1:
+                    exit_t = min(t + 1, tA1)
+                    ep, xp = closes[code][entry_t], closes[code][exit_t]
+                    if ep and xp and ep &gt; 0:
+                        ret = xp / ep - 1
+                        trades.append(dict(code=code, name=nmap.get(code, code),
+                                           sig_t=ts, entry_t=entry_t, exit_t=exit_t,
+                                           entry_p=round(ep, 2), exit_p=round(xp, 2),
+                                           ret=round(ret * 100, 2), hold=exit_t - entry_t,
+                                           rps=round(rps.get(code, {}).get(ts, -1), 1)))
+                    del open_pos[code]
+        all_trades[lv] = trades
+        rets = np.array([x[&#x27;ret&#x27;] for x in trades])
+        report[&#x27;by_level&#x27;][lv] = {
+            &#x27;n&#x27;: len(trades),
+            &#x27;mean_ret&#x27;: round(float(rets.mean()), 2) if len(rets) else None,
+            &#x27;median_ret&#x27;: round(float(np.median(rets)), 2) if len(rets) else None,
+            &#x27;win_rate&#x27;: round(float((rets &gt; 0).mean()) * 100, 1) if len(rets) else None,
+            &#x27;open&#x27;: len(open_pos),
+        }
+        s = report[&#x27;by_level&#x27;][lv]
+        print(f&quot;{lv}: n={s[&#x27;n&#x27;]} 均收{s[&#x27;mean_ret&#x27;]}% 中位{s[&#x27;median_ret&#x27;]}% 胜率{s[&#x27;win_rate&#x27;]}% 未平仓{s[&#x27;open&#x27;]}&quot;)
+
+    report[&#x27;trades&#x27;] = {k: sorted(v, key=lambda x: x[&#x27;sig_t&#x27;]) for k, v in all_trades.items()}
+    report[&#x27;by_level&#x27;][&#x27;L2&#x27;][&#x27;trades&#x27;] = report[&#x27;trades&#x27;][&#x27;L2&#x27;]
+    report[&#x27;by_level&#x27;][&#x27;L1&#x27;][&#x27;trades&#x27;] = report[&#x27;trades&#x27;][&#x27;L1&#x27;]
+    report[&#x27;by_level&#x27;][&#x27;L3&#x27;][&#x27;trades&#x27;] = report[&#x27;trades&#x27;][&#x27;L3&#x27;]
+    with open(OUT, &#x27;w&#x27;) as f:
+        json.dump(report, f, ensure_ascii=False, indent=1)
+    print(&#x27;written:&#x27;, OUT, f&#x27;用时{time.time()-t0:.0f}s&#x27;)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</pre>
+<h3>代码 6/7 — SW1交割单逐笔核对 <span class=note>(compare_sw1_trades.py)</span></h3><pre class=code>#!/usr/bin/env python3
+&quot;&quot;&quot;逐笔核对作者 SW1 交割单 vs 我们的重算 (申万指数序列 + 因果v4 + RPS)&quot;&quot;&quot;
+import json, os, sqlite3, sys
+import numpy as np
+
+PIPE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(PIPE, &#x27;processing&#x27;))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from compute_v4_state import process, W as V4W
+import backtest_b_plan_v1 as bpv
+
+DB = os.path.join(PIPE, &#x27;pool.db&#x27;)
+NAME2CODE = {&#x27;国防军工&#x27;: &#x27;801740.SI&#x27;, &#x27;通信&#x27;: &#x27;801770.SI&#x27;, &#x27;基础化工&#x27;: &#x27;801030.SI&#x27;,
+             &#x27;综合&#x27;: &#x27;801230.SI&#x27;, &#x27;建筑材料&#x27;: &#x27;801710.SI&#x27;, &#x27;石油石化&#x27;: &#x27;801960.SI&#x27;,
+             &#x27;公用事业&#x27;: &#x27;801160.SI&#x27;, &#x27;煤炭&#x27;: &#x27;801950.SI&#x27;, &#x27;家用电器&#x27;: &#x27;801110.SI&#x27;,
+             &#x27;食品饮料&#x27;: &#x27;801120.SI&#x27;}
+# 作者 SW1 交割单: (板块, 信号日, 买入日, 买入价, 卖出日, 卖出价, 收益, RPS)
+AUTHOR = [
+    (&#x27;国防军工&#x27;, &#x27;2026-02-02&#x27;, &#x27;2026-02-03&#x27;, 2115.43, &#x27;2026-03-03&#x27;, 2113.28, -0.10, 96.8),
+    (&#x27;通信&#x27;, &#x27;2026-02-06&#x27;, &#x27;2026-02-09&#x27;, 5750.75, &#x27;2026-03-03&#x27;, 5833.31, 1.44, 90.3),
+    (&#x27;基础化工&#x27;, &#x27;2026-03-23&#x27;, &#x27;2026-03-24&#x27;, 4596.33, &#x27;2026-05-08&#x27;, 4978.21, 8.31, 87.1),
+    (&#x27;综合&#x27;, &#x27;2026-03-23&#x27;, &#x27;2026-03-24&#x27;, 4322.54, &#x27;2026-05-11&#x27;, 5170.59, 19.62, 93.5),
+    (&#x27;建筑材料&#x27;, &#x27;2026-03-23&#x27;, &#x27;2026-03-24&#x27;, 5701.61, &#x27;2026-06-01&#x27;, 6607.43, 15.89, 80.6),
+    (&#x27;石油石化&#x27;, &#x27;2026-04-02&#x27;, &#x27;2026-04-03&#x27;, 2993.55, &#x27;2026-04-09&#x27;, 3024.21, 1.02, 100.0),
+    (&#x27;公用事业&#x27;, &#x27;2026-04-03&#x27;, &#x27;2026-04-07&#x27;, 2546.70, &#x27;2026-06-02&#x27;, 2873.21, 12.82, 83.9),
+    (&#x27;煤炭&#x27;, &#x27;2026-04-21&#x27;, &#x27;2026-04-22&#x27;, 3206.36, &#x27;2026-05-07&#x27;, 3239.57, 1.04, 93.5),
+    (&#x27;建筑材料&#x27;, &#x27;2026-06-09&#x27;, &#x27;2026-06-10&#x27;, 6410.88, &#x27;2026-06-29&#x27;, 7786.97, 21.46, 90.3),
+    (&#x27;家用电器&#x27;, &#x27;2026-06-29&#x27;, &#x27;2026-06-30&#x27;, 8361.53, &#x27;2026-07-07&#x27;, 8497.19, 1.62, 80.6),
+    (&#x27;家用电器&#x27;, &#x27;2026-07-27&#x27;, &#x27;2026-07-28&#x27;, 8512.22, &#x27;2026-08-03&#x27;, 8677.09, 1.94, 87.1),
+    (&#x27;煤炭&#x27;, &#x27;2026-08-05&#x27;, &#x27;2026-08-06&#x27;, 3238.20, &#x27;2026-08-12&#x27;, 3248.20, 0.31, 96.8),
+    (&#x27;食品饮料&#x27;, &#x27;2026-08-07&#x27;, &#x27;2026-08-10&#x27;, 14487.07, &#x27;2026-08-11&#x27;, 14379.49, -0.74, 83.9),
+    (&#x27;煤炭&#x27;, &#x27;2026-08-17&#x27;, &#x27;2026-08-18&#x27;, 3302.01, None, None, 0.00, 96.8),
+]
+
+
+def main():
+    c = sqlite3.connect(DB)
+    rows = c.execute(&quot;SELECT index_code, trade_date, close FROM sw_index_daily ORDER BY trade_date&quot;).fetchall()
+    dates = sorted({r[1] for r in rows})
+    D = {d: i for i, d in enumerate(dates)}
+    codes_all = sorted({r[0] for r in rows})
+    by = {}
+    for code, d, cl in rows:
+        by.setdefault(code, {})[d] = cl
+    closes = {code: [by[code].get(d) for d in dates] for code in codes_all}
+
+    # 因果状态 + RPS
+    states = {code: bpv.causal_states(closes[code], V4W) for code in codes_all}
+    n = len(dates)
+    rps = {code: {} for code in codes_all}
+    for t in range(60, n):
+        vals = []
+        for code in codes_all:
+            b, cur = closes[code][t - 60], closes[code][t]
+            if b and cur and b &gt; 0:
+                vals.append((code, cur / b - 1))
+        if len(vals) &lt; 5:
+            continue
+        for code, chg in vals:
+            less = sum(1 for _, x in vals if x &lt; chg)
+            rps[code][t] = less / (len(vals) - 1) * 100
+
+    print(f&quot;{&#x27;板块&#x27;:&lt;6}{&#x27;作者信号日&#x27;:&lt;12}{&#x27;我们:该日状态&#x27;:&lt;14}{&#x27;我们:该日RPS&#x27;:&lt;12}{&#x27;作者RPS&#x27;:&lt;8}{&#x27;吻合&#x27;:&lt;6}{&#x27;最近符合日&#x27;:&lt;12}&quot;)
+    match = 0
+    for name, sig_d, buy_d, buy_p, sell_d, sell_p, ret, arps in AUTHOR:
+        code = NAME2CODE[name]
+        t = D.get(sig_d.replace(&#x27;-&#x27;, &#x27;&#x27;))
+        if t is None:
+            print(f&quot;{name:&lt;6}{sig_d:&lt;12}⚠️ 日期不在数据轴 (轴: {dates[0]}~{dates[-1]})&quot;)
+            continue
+        st, st_prev = states[code][t], states[code][t - 1]
+        r = rps[code].get(t)
+        trans = (st == 1 and st_prev != 1)
+        rp = r is not None and r &gt;= 80
+        ok = trans and rp
+        if ok:
+            match += 1
+        # 找最近符合条件的日期
+        near = &#x27;&#x27;
+        for dt in range(max(0, t - 20), min(n, t + 20)):
+            if states[code][dt] == 1 and states[code][dt - 1] != 1 and rps[code].get(dt, 0) &gt;= 80:
+                near = dates[dt]
+                break
+        print(f&quot;{name:&lt;6}{sig_d:&lt;12}{st}/{st_prev}{&#x27;转&#x27; if trans else &#x27;  &#x27;:&lt;12}&quot;
+              f&quot;{round(r, 1) if r is not None else &#x27;-&#x27;:&lt;12}{arps:&lt;8}{&#x27;✅&#x27; if ok else &#x27;❌&#x27;:&lt;6}{near}&quot;)
+    print(f&#x27;\n吻合 {match}/{len(AUTHOR)}&#x27;)
+    # 我们的51笔信号日分布
+    ours = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), &#x27;data&#x27;, &#x27;bplan-swindex.json&#x27;)))
+    t1 = ours[&#x27;trades&#x27;][&#x27;L1&#x27;]
+    print(f&quot;\n我们的 L1 信号 {len(t1)} 笔:&quot;)
+    for x in t1[:60]:
+        print(f&quot;  {x[&#x27;name&#x27;]:&lt;6} {dates[x[&#x27;sig_t&#x27;]]} → {dates[x[&#x27;entry_t&#x27;]]}~{dates[x[&#x27;exit_t&#x27;]]}  {x[&#x27;ret&#x27;]}%  rps={x[&#x27;rps&#x27;]}&quot;)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</pre>
+<h3>代码 7/7 — 申万指数拉取 <span class=note>(fetch_sw_index_daily.py)</span></h3><pre class=code>#!/usr/bin/env python3
+&quot;&quot;&quot;拉取申万指数日线 (Tushare index_daily) → pool.db 表 sw_index_daily
+范围: 20250601~20260820 (覆盖 RPS 60日窗口 + 2026回测窗)
+来源: sw_classify 表全量 511 个指数 (31 L1 + 134 L2 + 346 L3)
+&quot;&quot;&quot;
+import sqlite3, os, sys, time
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), &#x27;processing&#x27;))
+from config import TUSHARE_TOKEN
+
+DB = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), &#x27;pool.db&#x27;)
+START, END = &#x27;20250601&#x27;, &#x27;20260820&#x27;
+
+import tushare as ts
+pro = ts.pro_api(TUSHARE_TOKEN)
+
+
+def main():
+    c = sqlite3.connect(DB)
+    c.execute(&quot;&quot;&quot;CREATE TABLE IF NOT EXISTS sw_index_daily (
+        index_code TEXT, trade_date TEXT, open REAL, high REAL, low REAL, close REAL,
+        PRIMARY KEY (index_code, trade_date))&quot;&quot;&quot;)
+    done = set(r[0] for r in c.execute(&quot;SELECT DISTINCT index_code FROM sw_index_daily&quot;).fetchall())
+    codes = [r[0] for r in c.execute(
+        &quot;SELECT index_code FROM sw_classify ORDER BY level, industry_code&quot;).fetchall()]
+    codes = [x for x in codes if x not in done]
+    print(f&#x27;待拉 {len(codes)} 个指数 (已跳过 {len(done)}), {START}~{END}&#x27;, flush=True)
+    ok = fail = 0
+    nodata = []
+    for i, code in enumerate(codes):
+        df = None
+        for attempt in range(3):
+            try:
+                df = pro.index_daily(ts_code=code, start_date=START, end_date=END)
+                break
+            except Exception as e:
+                err = str(e)[:80]
+                if &#x27;limit&#x27; in err.lower() or &#x27;频率&#x27; in err or &#x27;超限&#x27; in err:
+                    print(f&#x27;  限频, 等65s ... ({code}, attempt {attempt+1})&#x27;, flush=True)
+                    time.sleep(65)
+                else:
+                    print(f&#x27;  {code} FAIL: {err}&#x27;, flush=True)
+                    time.sleep(1)
+                    break
+        if df is None or df.empty:
+            nodata.append(code)
+            fail += 1
+        else:
+            rows = [(code, r.trade_date, float(r.open), float(r.high), float(r.low), float(r.close))
+                    for r in df.itertuples()]
+            c.executemany(&quot;INSERT OR REPLACE INTO sw_index_daily VALUES (?,?,?,?,?,?)&quot;, rows)
+            c.commit()
+            ok += 1
+        time.sleep(0.55)  # ~110次/分钟, 低于 200 上限
+        if (i + 1) % 40 == 0:
+            print(f&#x27;  {i+1}/{len(codes)} ok={ok} fail={fail}&#x27;, flush=True)
+    n = c.execute(&quot;SELECT COUNT(*) FROM sw_index_daily&quot;).fetchone()[0]
+    nc = c.execute(&quot;SELECT COUNT(DISTINCT index_code) FROM sw_index_daily&quot;).fetchone()[0]
+    print(f&#x27;完成: ok={ok} fail={fail}, 总行 {n}, 指数 {nc}&#x27;, flush=True)
+    print(&#x27;无数据清单:&#x27;, nodata, flush=True)
+    import json
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), &#x27;data&#x27;, &#x27;sw_index_nodata.json&#x27;), &#x27;w&#x27;) as f:
+        json.dump(nodata, f, ensure_ascii=False)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</pre>
+
+<p class=note>结果数据文件: data/bplan-backtest.json (v2最终) / bplan-backtest-v1.json (v1因果) / bplan-matrix.json (四象限) / bplan-swindex.json (申万指数L1)。数据库: pool.db (表 sw_index_daily)。</p>
+</body></html>
