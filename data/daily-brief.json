@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-19T16:00:01.234425+08:00",
-  "date": "2026-08-19",
+  "generated_at": "2026-08-20T16:00:01.008643+08:00",
+  "date": "2026-08-20",
   "sections": {
     "signals": {
       "available": false,
@@ -71,6 +71,14 @@
           "name": "行云科技",
           "pct_chg": 20.01,
           "vol_ratio": 9.67,
+          "attribution": "涨停封板"
+        },
+        {
+          "date": "20260819",
+          "ts_code": "300069.SZ",
+          "name": "金利华电",
+          "pct_chg": 20.01,
+          "vol_ratio": 4.97,
           "attribution": "涨停封板"
         },
         {
@@ -159,14 +167,6 @@
           "name": "航天环宇",
           "pct_chg": 20.01,
           "vol_ratio": 2.92,
-          "attribution": "涨停封板"
-        },
-        {
-          "date": "20260609",
-          "ts_code": "688126.SH",
-          "name": "沪硅产业",
-          "pct_chg": 20.01,
-          "vol_ratio": 7.62,
           "attribution": "涨停封板"
         }
       ]
