@@ -13,12 +13,6 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 .header h1 { font-size:16px; font-weight:700; display:flex; align-items:center; gap:8px; white-space:nowrap; }
 .hbadge { font-size:10px; background:#3b2f1e; color:#f59e0b; padding:2px 6px; border-radius:4px; }
 .header-right { display:flex; gap:12px; align-items:center; font-size:11px; color:#94a3b8; }
-#yearbar { display:flex; align-items:center; gap:6px; padding:6px 16px; border-bottom:1px solid #1e293b; flex-shrink:0; flex-wrap:wrap; }
-#yearbar .ylab { font-size:11px; color:#64748b; }
-#yearbar button { background:#0f172a; color:#94a3b8; border:1px solid #1e293b; padding:3px 9px; border-radius:4px;
-  font-size:11px; cursor:pointer; }
-#yearbar button:hover { border-color:#38bdf8; color:#7dd3fc; }
-#yearbar button.active { background:#1e3a5f; color:#60a5fa; border-color:#38bdf8; font-weight:700; }
 #layout { display:flex; flex:1; min-height:0; }
 #panel { width:300px; min-width:280px; border-right:1px solid #1e293b; display:flex; flex-direction:column; min-height:0; }
 #statusCard { padding:12px 14px; border-bottom:1px solid #1e293b; background:#0f172a; }
@@ -68,11 +62,10 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 <div class="header">
   <div style="display:flex;align-items:center;gap:8px">
     <h1>🦉 v4 N型结构作战图</h1>
-    <span class="hbadge">长历史 2010- · 按年动态加载</span>
+    <span class="hbadge">长历史 2010- · 全量加载</span>
   </div>
   <div class="header-right" id="hright"></div>
 </div>
-<div id="yearbar"><span class="ylab">年份</span><span id="yearTabs"></span></div>
 <div id="loading">加载元数据…</div>
 <div id="layout">
   <div id="panel">
@@ -90,8 +83,8 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
     <div id="list"></div>
   </div>
   <div id="charts">
-    <div class="chart-label" style="top:6px" id="topLabel">🏦 全A 0AMV v2</div>
-    <div class="chart-label" style="top:50%" id="bottomLabel">📊 板块</div>
+    <div class="chart-label" style="top:6px">🏦 全A 0AMV v2</div>
+    <div class="chart-label" style="top:50%">📊 板块</div>
     <div id="legend">
       <span><i style="background:rgba(220,38,38,.3)"></i>N型上涨</span>
       <span><i style="background:rgba(22,163,74,.3)"></i>N型下跌</span>
@@ -104,49 +97,78 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
   </div>
 </div>
 <script>
-let INDEX = null;      // v4-data/index.json（元信息+当前快照）
-let YEAR = null;       // 当前展示年份的数据
-let cache = {};        // 年份数据缓存
-let curYear = null;    // 当前选中年份
+let INDEX = null;   // v4-data/index.json（元信息 + 当前快照）
+let DATA = null;    // 合并后的全历史连续序列
 let sel = null, curLevel = 'L1';
 let cTop = null, cBottom = null;
+let zoomState = null;   // null = 默认最近100条
+let syncGuard = false;
 
 fetch('v4-data/index.json', {cache:'no-store'})
   .then(r => r.json())
-  .then(d => {
-    INDEX = d;
-    curYear = d.years[d.years.length - 1];
-    buildYearTabs();
-    loadYear(curYear);
-  })
+  .then(d => { INDEX = d; loadAllYears(); })
   .catch(e => { document.getElementById('loading').textContent = '元数据加载失败: ' + e.message; });
 
-function buildYearTabs() {
-  const el = document.getElementById('yearTabs');
-  el.innerHTML = '';
-  for (const y of INDEX.years) {
-    const b = document.createElement('button');
-    b.textContent = y;
-    b.dataset.year = y;
-    if (y === curYear) b.classList.add('active');
-    b.onclick = () => { curYear = y; loadYear(y); };
-    el.appendChild(b);
-  }
-}
-
-function loadYear(y) {
-  document.querySelectorAll('#yearTabs button').forEach(b => b.classList.toggle('active', b.dataset.year === y));
-  if (cache[y]) { YEAR = cache[y]; init(); return; }
+function loadAllYears() {
+  const years = INDEX.years;
   const l = document.getElementById('loading');
-  l.textContent = `加载 ${y} 年数据…`;
-  l.style.display = 'block';
-  fetch(`v4-data/${y}.json`, {cache:'no-store'})
-    .then(r => r.json())
-    .then(d => { cache[y] = d; if (curYear === y) { YEAR = d; init(); } })
-    .catch(e => { l.textContent = `${y} 数据加载失败: ` + e.message; });
+  let done = 0;
+  l.textContent = `加载年份数据 0/${years.length}…`;
+  Promise.all(years.map(y =>
+    fetch(`v4-data/${y}.json`, {cache:'no-store'})
+      .then(r => r.json())
+      .then(d => { done++; l.textContent = `加载年份数据 ${done}/${years.length}…`; return d; })
+  )).then(parts => {
+    DATA = mergeYears(parts);
+    init();
+  }).catch(e => { l.textContent = '数据加载失败: ' + e.message; });
 }
 
-// ═══ 渲染（与旧版一致，数据来自 INDEX/YEAR）═══
+function mergeYears(parts) {
+  // 按年份顺序拼接成全局连续序列；segments/swings/marks/turnLocal 索引重映射
+  const dates = [];
+  const A = { k:[], state:[], slope:[], white:[], segments:[], swings:[], marks:[] };
+  const sectors = {};
+  let off = 0;
+  for (const p of parts) {
+    for (const dt of p.dates) dates.push(dt);
+    A.k.push(...p.allA.k);
+    A.state.push(...p.allA.state);
+    A.slope.push(...p.allA.slope);
+    A.white.push(...p.allA.white);
+    for (const [s, e, st] of p.allA.segments) A.segments.push([s + off, e + off, st]);
+    for (const sw of p.allA.swings) A.swings.push({ i: sw.i + off, t: sw.t, v: sw.v });
+    for (const m of p.allA.marks) A.marks.push({ i: m.i + off, t: m.t });
+    for (const [code, s] of Object.entries(p.sectors)) {
+      if (!sectors[code]) {
+        sectors[code] = { k:[], state:[], slope:[], white:[], segments:[], swings:[], turnLocal:null, turnDate:null };
+      }
+      const so = sectors[code];
+      so.k.push(...s.k);
+      so.state.push(...s.state);
+      so.slope.push(...s.slope);
+      so.white.push(...s.white);
+      for (const [s2, e2, st] of s.segments) so.segments.push([s2 + off, e2 + off, st]);
+      for (const sw of s.swings) so.swings.push({ i: sw.i + off, t: sw.t, v: sw.v });
+      if (s.turnLocal != null) { so.turnLocal = s.turnLocal + off; so.turnDate = s.turnDate; }
+    }
+    off += p.dates.length;
+  }
+  // 年边界被拆开的同向段合并（后段起点=前段终点+1 且状态相同）
+  function glue(segs) {
+    for (let i = segs.length - 1; i > 0; i--) {
+      if (segs[i][2] === segs[i-1][2] && segs[i][0] === segs[i-1][1] + 1) {
+        segs[i-1][1] = segs[i][1];
+        segs.splice(i, 1);
+      }
+    }
+  }
+  glue(A.segments);
+  for (const code of Object.keys(sectors)) glue(sectors[code].segments);
+  return { dates, allA: A, sectors };
+}
+
+// ═══ 渲染（数据来自合并后的 DATA）═══
 function stateBands(segments, dates) {
   const UP = 'rgba(220,38,38,0.07)', DN = 'rgba(22,163,74,0.07)', FL = 'rgba(217,119,6,0.14)';
   const areas = [];
@@ -212,6 +234,9 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, 
     series.push({ type:'line', name:'N型', data:zig, connectNulls:true, symbol:'none', lineStyle:{width:1.2, color:'#94a3b8', type:'dashed'} });
     series.push({ type:'scatter', name:'拐点', data: swings.filter(sw=>sw.i<dates.length).map(sw => ({value:[dates[sw.i], sw.v], symbol:'diamond', symbolSize:8, itemStyle:{color: sw.t==='H' ? '#ef4444' : '#22c55e'}})) });
   }
+  const n = dates.length;
+  // 默认最近 100 条 K 线
+  const dStart = n > 100 ? +((n - 100) / n * 100).toFixed(2) : 0;
   return {
     animation:false, backgroundColor:'transparent',
     grid:[{left:60, right:20, top:14, bottom:'30%'}],
@@ -219,8 +244,8 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, 
       axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{color:'#64748b', fontSize:10} }],
     yAxis:[{ scale:true, position:'left', axisLabel:{color:'#64748b', fontSize:10}, splitLine:{lineStyle:{color:'#1e293b'}} }],
     dataZoom:[
-      { type:'inside', xAxisIndex:0, start:0, end:100 },
-      { type:'slider', xAxisIndex:0, start:0, end:100, height:16, bottom:2,
+      { type:'inside', xAxisIndex:0, start:dStart, end:100 },
+      { type:'slider', xAxisIndex:0, start:dStart, end:100, height:16, bottom:2,
         borderColor:'#1e293b', backgroundColor:'#0f172a', fillerColor:'rgba(220,38,38,.15)',
         textStyle:{color:'#64748b', fontSize:10} }
     ],
@@ -278,7 +303,7 @@ function init() {
       <div class="step ${A.progress && A.progress.p3?'done':''}">③ 创新高</div>
     </div>
     <div class="dim">当前状态：<b>${stTxt}</b> · v4 N型趋势：<b style="color:${A.v4cur===1?'#ef4444':(A.v4cur===-1?'#22c55e':'#f59e0b')}">${v4Txt}</b></div>
-    <div class="dim">数据 ${D.generated} · 展示 ${YEAR.year} 年 · n=${D.params.n} K=${D.params.K} M=${D.params.M} θ=${D.params.theta}</div>`;
+    <div class="dim">数据 ${D.generated} · ${DATA.dates.length} 交易日 · n=${D.params.n} K=${D.params.K} M=${D.params.M} θ=${D.params.theta}</div>`;
   document.getElementById('hright').innerHTML =
     `锚点 <b style="color:#facc15">${A.anchorDate || '—'}</b> · 全A斜率 <b style="color:${A.curSlope>=0?'#ef4444':'#22c55e'}">${A.curSlope>0?'+':''}${A.curSlope}%</b> · ${stTxt}`;
   document.getElementById('tabs').addEventListener('click', e => {
@@ -397,18 +422,19 @@ function select(code) {
 }
 
 function render() {
-  const Y = YEAR, dates = Y.dates, A = Y.allA;
-  document.getElementById('topLabel').textContent = `🏦 全A 0AMV v2 (${Y.year})`;
-  document.getElementById('bottomLabel').textContent = `📊 板块 (${Y.year})`;
-  const anchorInYear = INDEX.allA.anchorDate && dates.includes(INDEX.allA.anchorDate) ? INDEX.allA.anchorDate : null;
-  const optA = buildOption(A.k, `全A v2 ${Y.year}`, A.state, A.slope, A.segments, dates, A.marks, anchorInYear, A.swings, A.white);
+  const dates = DATA.dates, A = DATA.allA;
+  const anchorDate = INDEX.allA.anchorDate;
+  const optA = buildOption(A.k, '全A v2', A.state, A.slope, A.segments, dates, A.marks, anchorDate, A.swings, A.white);
   attachSlopeSub(optA, A.slope, A.slope, dates);
-  if (!cTop) cTop = echarts.init(document.getElementById('chartTop'));
+  if (!cTop) {
+    cTop = echarts.init(document.getElementById('chartTop'));
+    cTop.on('datazoom', ev => syncZoom(ev, cBottom));
+  }
   cTop.setOption(optA, true);
-  const s = Y.sectors[sel];
+  const s = DATA.sectors[sel];
   if (s) {
     const nm = INDEX.sectors[sel] ? INDEX.sectors[sel].name : sel;
-    const optS = buildOption(s.k, `${nm} ${Y.year}`, s.state, s.slope, s.segments, dates, null, anchorInYear, s.swings, s.white);
+    const optS = buildOption(s.k, nm, s.state, s.slope, s.segments, dates, null, anchorDate, s.swings, s.white);
     attachSlopeSub(optS, s.slope, A.slope, dates);
     if (s.turnLocal != null && s.k[s.turnLocal]) {
       const cs = optS.series[0];
@@ -420,10 +446,32 @@ function render() {
       }]);
       cs.markPoint = mp;
     }
-    if (!cBottom) cBottom = echarts.init(document.getElementById('chartBottom'));
+    if (!cBottom) {
+      cBottom = echarts.init(document.getElementById('chartBottom'));
+      cBottom.on('datazoom', ev => syncZoom(ev, cTop));
+    }
+    echarts.connect([cTop, cBottom]);  // 跨图同步十字准线/tooltip
     cBottom.setOption(optS, true);
   }
+  if (zoomState) syncZoomFrom(zoomState);
   document.getElementById('loading').style.display = 'none';
+}
+
+// ── 主图/附图 dataZoom 双向同步 ──
+function syncZoom(ev, target) {
+  if (syncGuard) return;
+  syncGuard = true;
+  try {
+    const src = ev.start != null ? ev : (ev.batch && ev.batch[0]);
+    if (!src || src.start == null || src.end == null) return;
+    if (zoomState && Math.abs(src.start - zoomState.start) < 0.01 && Math.abs(src.end - zoomState.end) < 0.01) return;
+    zoomState = {start: src.start, end: src.end};
+    if (target) target.dispatchAction({type:'dataZoom', start: zoomState.start, end: zoomState.end});
+  } finally { syncGuard = false; }
+}
+function syncZoomFrom(z) {
+  if (cTop) cTop.dispatchAction({type:'dataZoom', start: z.start, end: z.end});
+  if (cBottom) cBottom.dispatchAction({type:'dataZoom', start: z.start, end: z.end});
 }
 
 window.addEventListener('resize', () => { cTop && cTop.resize(); cBottom && cBottom.resize(); });
