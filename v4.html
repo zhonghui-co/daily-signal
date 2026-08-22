@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>v4 — N型结构趋势作战图</title>
+<title>v4 — N型结构趋势作战图（长历史 2010-）</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -13,6 +13,12 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 .header h1 { font-size:16px; font-weight:700; display:flex; align-items:center; gap:8px; white-space:nowrap; }
 .hbadge { font-size:10px; background:#3b2f1e; color:#f59e0b; padding:2px 6px; border-radius:4px; }
 .header-right { display:flex; gap:12px; align-items:center; font-size:11px; color:#94a3b8; }
+#yearbar { display:flex; align-items:center; gap:6px; padding:6px 16px; border-bottom:1px solid #1e293b; flex-shrink:0; flex-wrap:wrap; }
+#yearbar .ylab { font-size:11px; color:#64748b; }
+#yearbar button { background:#0f172a; color:#94a3b8; border:1px solid #1e293b; padding:3px 9px; border-radius:4px;
+  font-size:11px; cursor:pointer; }
+#yearbar button:hover { border-color:#38bdf8; color:#7dd3fc; }
+#yearbar button.active { background:#1e3a5f; color:#60a5fa; border-color:#38bdf8; font-weight:700; }
 #layout { display:flex; flex:1; min-height:0; }
 #panel { width:300px; min-width:280px; border-right:1px solid #1e293b; display:flex; flex-direction:column; min-height:0; }
 #statusCard { padding:12px 14px; border-bottom:1px solid #1e293b; background:#0f172a; }
@@ -62,11 +68,12 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 <div class="header">
   <div style="display:flex;align-items:center;gap:8px">
     <h1>🦉 v4 N型结构作战图</h1>
-    <span class="hbadge">N型三态 v0.2</span>
+    <span class="hbadge">长历史 2010- · 按年动态加载</span>
   </div>
   <div class="header-right" id="hright"></div>
 </div>
-<div id="loading">加载数据中…</div>
+<div id="yearbar"><span class="ylab">年份</span><span id="yearTabs"></span></div>
+<div id="loading">加载元数据…</div>
 <div id="layout">
   <div id="panel">
     <div id="statusCard"></div>
@@ -83,8 +90,8 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
     <div id="list"></div>
   </div>
   <div id="charts">
-    <div class="chart-label" style="top:6px">🏦 全A 0AMV v2</div>
-    <div class="chart-label" style="top:50%">📊 板块</div>
+    <div class="chart-label" style="top:6px" id="topLabel">🏦 全A 0AMV v2</div>
+    <div class="chart-label" style="top:50%" id="bottomLabel">📊 板块</div>
     <div id="legend">
       <span><i style="background:rgba(220,38,38,.3)"></i>N型上涨</span>
       <span><i style="background:rgba(22,163,74,.3)"></i>N型下跌</span>
@@ -97,37 +104,54 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
   </div>
 </div>
 <script>
-let DATA = null, sel = null, curLevel = 'L1';
-fetch('v4-states.json', {cache:'no-store'})
-  .then(r => r.json())
-  .then(d => { DATA = d; init(); })
-  .catch(e => { document.getElementById('loading').textContent = '数据加载失败: ' + e.message; });
+let INDEX = null;      // v4-data/index.json（元信息+当前快照）
+let YEAR = null;       // 当前展示年份的数据
+let cache = {};        // 年份数据缓存
+let curYear = null;    // 当前选中年份
+let sel = null, curLevel = 'L1';
+let cTop = null, cBottom = null;
 
-function ema(arr, n) {
-  const k = 2/(n+1), out = new Array(arr.length).fill(null);
-  let start = arr.findIndex(v => v != null);
-  if (start < 0) return out;
-  let s = 0, cnt = 0;
-  for (let i = start; i < Math.min(start+n, arr.length); i++) { if (arr[i] != null) { s += arr[i]; cnt++; } }
-  if (cnt === 0) return out;
-  let idx = start + n - 1;
-  out[idx] = s / cnt;
-  for (let i = idx + 1; i < arr.length; i++) {
-    if (arr[i] != null) out[i] = arr[i]*k + out[i-1]*(1-k); else out[i] = out[i-1];
+fetch('v4-data/index.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(d => {
+    INDEX = d;
+    curYear = d.years[d.years.length - 1];
+    buildYearTabs();
+    loadYear(curYear);
+  })
+  .catch(e => { document.getElementById('loading').textContent = '元数据加载失败: ' + e.message; });
+
+function buildYearTabs() {
+  const el = document.getElementById('yearTabs');
+  el.innerHTML = '';
+  for (const y of INDEX.years) {
+    const b = document.createElement('button');
+    b.textContent = y;
+    b.dataset.year = y;
+    if (y === curYear) b.classList.add('active');
+    b.onclick = () => { curYear = y; loadYear(y); };
+    el.appendChild(b);
   }
-  return out;
 }
-function whiteOf(closes) {
-  const n = DATA.params.n;
-  const e1 = ema(closes, n);
-  const c = e1.map((v,i) => v != null ? v : closes[i]);
-  return ema(c, n);
+
+function loadYear(y) {
+  document.querySelectorAll('#yearTabs button').forEach(b => b.classList.toggle('active', b.dataset.year === y));
+  if (cache[y]) { YEAR = cache[y]; init(); return; }
+  const l = document.getElementById('loading');
+  l.textContent = `加载 ${y} 年数据…`;
+  l.style.display = 'block';
+  fetch(`v4-data/${y}.json`, {cache:'no-store'})
+    .then(r => r.json())
+    .then(d => { cache[y] = d; if (curYear === y) { YEAR = d; init(); } })
+    .catch(e => { l.textContent = `${y} 数据加载失败: ` + e.message; });
 }
-const UP = 'rgba(220,38,38,0.07)', DN = 'rgba(22,163,74,0.07)', FL = 'rgba(217,119,6,0.14)';
+
+// ═══ 渲染（与旧版一致，数据来自 INDEX/YEAR）═══
 function stateBands(segments, dates) {
+  const UP = 'rgba(220,38,38,0.07)', DN = 'rgba(22,163,74,0.07)', FL = 'rgba(217,119,6,0.14)';
   const areas = [];
   for (const [s, e, st] of segments) {
-    // 三态: 上涨N红 / 下跌N绿 / 横盘橙
+    if (s >= dates.length || e >= dates.length) continue;
     const color = st === 1 ? UP : st === -1 ? DN : FL;
     areas.push([{xAxis: dates[s], itemStyle:{color}}, {xAxis: dates[e]}]);
   }
@@ -143,29 +167,27 @@ function turnArrows(segments, dates, kdata) {
   }
   return pts;
 }
-function klineSeries(k, name) {
+function klineSeries(k) {
   const data = k.map(v => v ? [v[0], v[3], v[2], v[1]] : null);
-  return { type:'candlestick', name, data, itemStyle:{color:'#dc2626', color0:'#16a34a', borderColor:'#dc2626', borderColor0:'#16a34a'} };
+  return { type:'candlestick', name:'K', data, itemStyle:{color:'#dc2626', color0:'#16a34a', borderColor:'#dc2626', borderColor0:'#16a34a'} };
 }
 
-let cTop = null, cBottom = null, zoomState = {start:55, end:100}, syncGuard = false;
-
-function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, swings) {
+function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, swings, white) {
   const closes = k.map(v => v ? v[3] : null);
   const pcts = [null];
   for (let i = 1; i < closes.length; i++) {
     if (closes[i-1] && closes[i]) pcts.push(+((closes[i]-closes[i-1])/closes[i-1]*100).toFixed(2));
     else pcts.push(null);
   }
-  const w = whiteOf(closes);
+  const w = white || closes.map(() => null);
   const series = [
-    klineSeries(k, name),
+    klineSeries(k),
     { type:'line', name:'白线', data:w, symbol:'none', lineStyle:{width:1.4, color:'#fbbf24'}, smooth:true },
   ];
   series[0].markArea = { silent:true, data:stateBands(segments, dates) };
   series[0].markLine = {
     silent:true, symbol:'none',
-    data: anchorDate ? [{xAxis:anchorDate, lineStyle:{color:'#facc15', type:'dashed', width:1}}] : [],
+    data: anchorDate && dates.includes(anchorDate) ? [{xAxis:anchorDate, lineStyle:{color:'#facc15', type:'dashed', width:1}}] : [],
     label:{formatter:'锚点', position:'start', color:'#facc15', fontSize:10}
   };
   const arrows = turnArrows(segments, dates, k);
@@ -186,9 +208,9 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, 
   if (mp.data && mp.data.length) series[0].markPoint = { silent:true, data:mp.data };
   if (swings && swings.length) {
     const zig = new Array(dates.length).fill(null);
-    for (const sw of swings) zig[sw.i] = sw.v;
+    for (const sw of swings) if (sw.i < dates.length) zig[sw.i] = sw.v;
     series.push({ type:'line', name:'N型', data:zig, connectNulls:true, symbol:'none', lineStyle:{width:1.2, color:'#94a3b8', type:'dashed'} });
-    series.push({ type:'scatter', name:'拐点', data: swings.map(sw => ({value:[dates[sw.i], sw.v], symbol:'diamond', symbolSize:8, itemStyle:{color: sw.t==='H' ? '#ef4444' : '#22c55e'}})) });
+    series.push({ type:'scatter', name:'拐点', data: swings.filter(sw=>sw.i<dates.length).map(sw => ({value:[dates[sw.i], sw.v], symbol:'diamond', symbolSize:8, itemStyle:{color: sw.t==='H' ? '#ef4444' : '#22c55e'}})) });
   }
   return {
     animation:false, backgroundColor:'transparent',
@@ -197,8 +219,8 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, 
       axisLine:{lineStyle:{color:'#334155'}}, axisLabel:{color:'#64748b', fontSize:10} }],
     yAxis:[{ scale:true, position:'left', axisLabel:{color:'#64748b', fontSize:10}, splitLine:{lineStyle:{color:'#1e293b'}} }],
     dataZoom:[
-      { type:'inside', xAxisIndex:0, start:55, end:100 },
-      { type:'slider', xAxisIndex:0, start:55, end:100, height:16, bottom:2,
+      { type:'inside', xAxisIndex:0, start:0, end:100 },
+      { type:'slider', xAxisIndex:0, start:0, end:100, height:16, bottom:2,
         borderColor:'#1e293b', backgroundColor:'#0f172a', fillerColor:'rgba(220,38,38,.15)',
         textStyle:{color:'#64748b', fontSize:10} }
     ],
@@ -241,24 +263,24 @@ const badgeCls = (s) => {
 const label = (s) => s.s4 === '领涨反转' ? `领涨反转·${s.tier}` : s.s4;
 
 function init() {
-  const D = DATA, dates = D.dates, A = D.allA, P = A.progress || {};
+  const D = INDEX, A = D.allA;
   const stTxt = {1:'上涨段', '-1':'下跌段', 0:'横盘'}[A.curState];
-  const v4Txt = {1:'N型上涨', '-1':'N型下跌', 0:'横盘'}[A.state[A.state.length-1]];
+  const v4Txt = {1:'N型上涨', '-1':'N型下跌', 0:'横盘'}[A.v4cur];
   const zoneTxt = A.anchorType === '多' ? '<span class="red">🟢 多头区间</span>' : '<span class="green">🔴 空头区间</span>';
   document.getElementById('statusCard').innerHTML = `
     <div class="row"><span>全A市场 · 0AMV v2</span>${zoneTxt}</div>
-    <div class="row"><span class="dim">锚点 ${A.anchorDate} · 第${dates.length - A.anchor}天</span>
+    <div class="row"><span class="dim">锚点 ${A.anchorDate || '—'}</span>
       <span class="dim">斜率 <b style="color:${A.curSlope>=0?'#f87171':'#4ade80'}">${A.curSlope>0?'+':''}${A.curSlope}%</b></span></div>
     <div class="row"><span class="dim">距锚点</span><span class="${A.anchorPct>=0?'red':'green'}">${A.anchorPct>0?'+':''}${A.anchorPct}%</span></div>
     <div id="progress">
-      <div class="step ${P.p1?'done':''}">① 价格转多</div>
-      <div class="step ${P.p2?'done':''}">② 斜率转正</div>
-      <div class="step ${P.p3?'done':''}">③ 创新高</div>
+      <div class="step ${A.progress && A.progress.p1?'done':''}">① 价格转多</div>
+      <div class="step ${A.progress && A.progress.p2?'done':''}">② 斜率转正</div>
+      <div class="step ${A.progress && A.progress.p3?'done':''}">③ 创新高</div>
     </div>
-    <div class="dim">当前状态：<b>${stTxt}</b>（${A.curState===1 ? (P.p3 ? '反转已确认' : '反转初现') : (A.curState===-1 ? '下跌中' : '震荡')}）· 平滑n=${D.params.n}</div>
-    <div class="dim">v4 N型趋势：<b style="color:${A.state[A.state.length-1]===1?'#ef4444':(A.state[A.state.length-1]===-1?'#22c55e':'#f59e0b')}">${v4Txt}</b></div>`;
+    <div class="dim">当前状态：<b>${stTxt}</b> · v4 N型趋势：<b style="color:${A.v4cur===1?'#ef4444':(A.v4cur===-1?'#22c55e':'#f59e0b')}">${v4Txt}</b></div>
+    <div class="dim">数据 ${D.generated} · 展示 ${YEAR.year} 年 · n=${D.params.n} K=${D.params.K} M=${D.params.M} θ=${D.params.theta}</div>`;
   document.getElementById('hright').innerHTML =
-    `锚点 <b style="color:#facc15">${A.anchorDate}</b> · 全A斜率 <b style="color:${A.curSlope>=0?'#ef4444':'#22c55e'}">${A.curSlope>0?'+':''}${A.curSlope}%</b> · ${stTxt} · n=${D.params.n} K=${D.params.K} M=${D.params.M} θ=${D.params.theta}`;
+    `锚点 <b style="color:#facc15">${A.anchorDate || '—'}</b> · 全A斜率 <b style="color:${A.curSlope>=0?'#ef4444':'#22c55e'}">${A.curSlope>0?'+':''}${A.curSlope}%</b> · ${stTxt}`;
   document.getElementById('tabs').addEventListener('click', e => {
     const btn = e.target.closest('button[data-level]');
     if (!btn) return;
@@ -268,8 +290,9 @@ function init() {
     renderSummary();
     renderList();
   });
-  document.getElementById('fsel1').addEventListener('change', () => { if (curLevel === 'L3') fillL3Sel2(); renderSummary(); renderList(); });
-  document.getElementById('fsel2').addEventListener('change', () => { renderSummary(); renderList(); });
+  const s1 = document.getElementById('fsel1'), s2 = document.getElementById('fsel2');
+  s1.onchange = () => { if (curLevel === 'L3') fillL3Sel2(); renderSummary(); renderList(); };
+  s2.onchange = () => { renderSummary(); renderList(); };
   renderFilterBox();
   renderSummary();
   renderList();
@@ -277,7 +300,7 @@ function init() {
 
 function l3CodesFor(l2code) {
   const out = [];
-  for (const l1 of DATA.tree) for (const l2 of l1.children) if (l2.code === l2code) for (const l3 of l2.children) out.push(l3.code);
+  for (const l1 of INDEX.tree) for (const l2 of l1.children) if (l2.code === l2code) for (const l3 of l2.children) out.push(l3.code);
   return out;
 }
 function renderFilterBox() {
@@ -292,7 +315,7 @@ function renderFilterBox() {
       sel1.dataset.mode = 'L2';
       sel1.innerHTML = '';
       sel1.add(new Option('全部 L1（默认）', ''));
-      for (const n of DATA.tree) sel1.add(new Option(n.name, n.code));
+      for (const n of INDEX.tree) sel1.add(new Option(n.name, n.code));
     }
     return;
   }
@@ -300,7 +323,7 @@ function renderFilterBox() {
   if (sel1.dataset.mode !== 'L3') {
     sel1.dataset.mode = 'L3';
     sel1.innerHTML = '';
-    for (const n of DATA.tree) sel1.add(new Option(n.name, n.code));
+    for (const n of INDEX.tree) sel1.add(new Option(n.name, n.code));
   }
   fillL3Sel2();
 }
@@ -308,24 +331,24 @@ function fillL3Sel2() {
   const sel1 = document.getElementById('fsel1');
   const sel2 = document.getElementById('fsel2');
   sel2.innerHTML = '';
-  const l1node = DATA.tree.find(n => n.code === sel1.value);
+  const l1node = INDEX.tree.find(n => n.code === sel1.value);
   for (const c of (l1node ? l1node.children : [])) sel2.add(new Option(c.name, c.code));
 }
 function currentCodes() {
-  if (curLevel === 'L1') return DATA.orders.L1 || [];
+  if (curLevel === 'L1') return INDEX.orders.L1 || [];
   if (curLevel === 'L2') {
     const l1code = document.getElementById('fsel1').value;
-    if (!l1code) return DATA.orders.L2 || [];  // 默认全部
-    const l1node = DATA.tree.find(n => n.code === l1code);
+    if (!l1code) return INDEX.orders.L2 || [];
+    const l1node = INDEX.tree.find(n => n.code === l1code);
     const set = new Set((l1node ? l1node.children : []).map(c => c.code));
-    return (DATA.orders.L2 || []).filter(c => set.has(c));
+    return (INDEX.orders.L2 || []).filter(c => set.has(c));
   }
   const l2code = document.getElementById('fsel2').value;
   const set = new Set(l3CodesFor(l2code));
-  return (DATA.orders.L3 || []).filter(c => set.has(c));
+  return (INDEX.orders.L3 || []).filter(c => set.has(c));
 }
 function renderSummary() {
-  const sectors = DATA.sectors;
+  const sectors = INDEX.sectors;
   const codes = currentCodes();
   const nRev = codes.filter(c => sectors[c].s4==='领涨反转').length;
   const nConf = codes.filter(c => sectors[c].s4==='领涨反转' && sectors[c].tier==='确认').length;
@@ -334,12 +357,11 @@ function renderSummary() {
   const nDown = codes.filter(c => sectors[c].s4==='同跌'||sectors[c].s4==='独立下跌').length;
   const nFlat = codes.filter(c => ['横盘','高位横盘','低位横盘'].includes(sectors[c].s4)).length;
   const nFlatLow = codes.filter(c => sectors[c].s4==='低位横盘').length;
-  // v4 N型三态统计 (对比基准: 全A当前态)
-  const cur = c => sectors[c].state[sectors[c].state.length-1];
+  const cur = c => sectors[c].v4cur;
   const nUp = codes.filter(c => cur(c) === 1).length;
   const nDn = codes.filter(c => cur(c) === -1).length;
   const nFl = codes.filter(c => cur(c) === 0).length;
-  const aCur = DATA.allA.state[DATA.allA.state.length-1];
+  const aCur = INDEX.allA.v4cur;
   const aTxt = aCur === 1 ? '<b class="red">N型上涨</b>' : aCur === -1 ? '<b class="green">N型下跌</b>' : '<b style="color:#f59e0b">横盘</b>';
   document.getElementById('summary').innerHTML =
     `<b>${curLevel}</b> ${codes.length}个：领涨反转 <b class="red">${nRev}</b>（确认 ${nConf}）· 先行走强 <b style="color:#c4b5fd">${nStrong}</b> · 跟涨 <b class="red">${nFollow}</b> · 下跌 <b class="green">${nDown}</b> · 横盘 <b>${nFlat}</b>（低位 <b style="color:#fde68a">${nFlatLow}</b>）<br/>` +
@@ -348,7 +370,7 @@ function renderSummary() {
 function renderList() {
   const listEl = document.getElementById('list');
   listEl.innerHTML = '';
-  const sectors = DATA.sectors;
+  const sectors = INDEX.sectors;
   const codes = currentCodes();
   for (const code of codes) {
     const s = sectors[code];
@@ -356,8 +378,7 @@ function renderList() {
     const el = document.createElement('div');
     el.className = 'item';
     const leadTxt = s.lead == null ? '—' : (s.lead <= 0 ? `领先${-s.lead}天` : `滞后${s.lead}天`);
-    const v4s = s.state[s.state.length-1];
-    const v4b = v4s === 1 ? '<span class="v4b v4-up">N涨</span>' : v4s === -1 ? '<span class="v4b v4-dn">N跌</span>' : '<span class="v4b v4-fl">N横</span>';
+    const v4b = s.v4cur === 1 ? '<span class="v4b v4-up">N涨</span>' : s.v4cur === -1 ? '<span class="v4b v4-dn">N跌</span>' : '<span class="v4b v4-fl">N横</span>';
     el.innerHTML = `<div class="l1"><span class="nm">${s.name}</span><span style="display:flex;gap:6px;align-items:center"><span class="badge ${badgeCls(s)}">${label(s)}</span>${v4b}</span></div>
       <div class="l2"><span>斜率 ${s.curSlope>0?'+':''}${s.curSlope}%</span><span>${leadTxt}</span><span>锚点来 ${s.anchorPct>0?'+':''}${s.anchorPct}%</span>${s.newHigh?'<span class="red">新高</span>':''}</div>`;
     el.onclick = () => select(code);
@@ -376,54 +397,35 @@ function select(code) {
 }
 
 function render() {
-  const D = DATA, dates = D.dates, A = D.allA;
-  const optA = buildOption(A.k, '全A v2', A.state, A.slope, A.segments, dates, A.marks, A.anchorDate, A.swings);
+  const Y = YEAR, dates = Y.dates, A = Y.allA;
+  document.getElementById('topLabel').textContent = `🏦 全A 0AMV v2 (${Y.year})`;
+  document.getElementById('bottomLabel').textContent = `📊 板块 (${Y.year})`;
+  const anchorInYear = INDEX.allA.anchorDate && dates.includes(INDEX.allA.anchorDate) ? INDEX.allA.anchorDate : null;
+  const optA = buildOption(A.k, `全A v2 ${Y.year}`, A.state, A.slope, A.segments, dates, A.marks, anchorInYear, A.swings, A.white);
   attachSlopeSub(optA, A.slope, A.slope, dates);
-  if (!cTop) {
-    cTop = echarts.init(document.getElementById('chartTop'));
-    cTop.on('datazoom', ev => syncZoom(ev, cBottom));
-  }
+  if (!cTop) cTop = echarts.init(document.getElementById('chartTop'));
   cTop.setOption(optA, true);
-  const s = D.sectors[sel];
+  const s = Y.sectors[sel];
   if (s) {
-    const optS = buildOption(s.k, `${s.name} (${s.level})`, s.state, s.slope, s.segments, dates, null, A.anchorDate, s.swings);
+    const nm = INDEX.sectors[sel] ? INDEX.sectors[sel].name : sel;
+    const optS = buildOption(s.k, `${nm} ${Y.year}`, s.state, s.slope, s.segments, dates, null, anchorInYear, s.swings, s.white);
     attachSlopeSub(optS, s.slope, A.slope, dates);
-    if (s.turn != null && s.k[s.turn]) {
+    if (s.turnLocal != null && s.k[s.turnLocal]) {
       const cs = optS.series[0];
       const mp = cs.markPoint || {silent:true, data:[]};
       mp.data = (mp.data||[]).concat([{
-        coord:[dates[s.turn], s.k[s.turn][2]*0.98], value:'掉头',
+        coord:[dates[s.turnLocal], s.k[s.turnLocal][2]*0.98], value:'掉头',
         symbol:'arrow', symbolSize:13, symbolRotate:0, itemStyle:{color:'#facc15'},
         label:{show:true, position:'top', distance:4, formatter:`掉头 ${s.turnDate}`, color:'#facc15', fontSize:10}
       }]);
       cs.markPoint = mp;
     }
-    if (!cBottom) {
-      cBottom = echarts.init(document.getElementById('chartBottom'));
-      cBottom.on('datazoom', ev => syncZoom(ev, cTop));
-    }
-    echarts.connect([cTop, cBottom]);  // 跨图同步十字准线/tooltip
+    if (!cBottom) cBottom = echarts.init(document.getElementById('chartBottom'));
     cBottom.setOption(optS, true);
   }
-  syncZoomFrom(zoomState);
   document.getElementById('loading').style.display = 'none';
 }
 
-function syncZoom(ev, target) {
-  if (syncGuard) return;
-  syncGuard = true;
-  try {
-    const src = ev.start != null ? ev : (ev.batch && ev.batch[0]);
-    if (!src || src.start == null || src.end == null) return;
-    if (Math.abs(src.start - zoomState.start) < 0.01 && Math.abs(src.end - zoomState.end) < 0.01) return;
-    zoomState = {start: src.start, end: src.end};
-    target.dispatchAction({type:'dataZoom', start: zoomState.start, end: zoomState.end});
-  } finally { syncGuard = false; }
-}
-function syncZoomFrom(z) {
-  if (cTop) cTop.dispatchAction({type:'dataZoom', start: z.start, end: z.end});
-  if (cBottom) cBottom.dispatchAction({type:'dataZoom', start: z.start, end: z.end});
-}
 window.addEventListener('resize', () => { cTop && cTop.resize(); cBottom && cBottom.resize(); });
 </script>
 </body>
