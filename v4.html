@@ -69,7 +69,7 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
   </div>
   <div class="header-right">
     <span id="hstatus" style="color:#f59e0b"></span>
-    <button id="loadMoreBtn" style="display:none" title="加载更早的5年数据">加载更早5年</button>
+    <button id="loadMoreBtn" style="display:none" title="加载更早的3年数据">加载更早3年</button>
     <span id="hright"></span>
   </div>
 </div>
@@ -111,8 +111,8 @@ let cTop = null, cBottom = null;
 let zoomState = null;   // null = 默认最近100条
 let syncGuard = false;
 
-// ═══ 渐进加载：初始最近5年 → 按钮往前按批加载 → 失败自动重试 ═══
-const BATCH_SIZE = 5, MAX_RETRY = 3;
+// ═══ 渐进加载：初始最近3年 → 按钮往前按批加载 → 失败自动重试 ═══
+const BATCH_SIZE = 3, MAX_RETRY = 3;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const yearCache = {};      // year -> 已解析 JSON
 let loading = false;
