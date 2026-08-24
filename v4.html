@@ -13,6 +13,9 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 .header h1 { font-size:16px; font-weight:700; display:flex; align-items:center; gap:8px; white-space:nowrap; }
 .hbadge { font-size:10px; background:#3b2f1e; color:#f59e0b; padding:2px 6px; border-radius:4px; }
 .header-right { display:flex; gap:12px; align-items:center; font-size:11px; color:#94a3b8; }
+#loadMoreBtn { background:#0f172a; color:#38bdf8; border:1px solid #334155; border-radius:4px; padding:4px 10px; font-size:12px; cursor:pointer; }
+#loadMoreBtn:hover { background:#1e293b; }
+#loadMoreBtn:disabled { color:#475569; cursor:default; }
 #layout { display:flex; flex:1; min-height:0; }
 #panel { width:300px; min-width:280px; border-right:1px solid #1e293b; display:flex; flex-direction:column; min-height:0; }
 #statusCard { padding:12px 14px; border-bottom:1px solid #1e293b; background:#0f172a; }
@@ -62,9 +65,13 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 <div class="header">
   <div style="display:flex;align-items:center;gap:8px">
     <h1>🦉 v4 N型结构作战图</h1>
-    <span class="hbadge">长历史 2010- · 全量加载</span>
+    <span class="hbadge" id="hbadge">长历史 2010-</span>
   </div>
-  <div class="header-right" id="hright"></div>
+  <div class="header-right">
+    <span id="hstatus" style="color:#f59e0b"></span>
+    <button id="loadMoreBtn" style="display:none" title="加载更早的5年数据">加载更早5年</button>
+    <span id="hright"></span>
+  </div>
 </div>
 <div id="loading">加载元数据…</div>
 <div id="layout">
@@ -104,25 +111,94 @@ let cTop = null, cBottom = null;
 let zoomState = null;   // null = 默认最近100条
 let syncGuard = false;
 
-fetch('v4-data/index.json', {cache:'no-store'})
-  .then(r => r.json())
-  .then(d => { INDEX = d; loadAllYears(); })
-  .catch(e => { document.getElementById('loading').textContent = '元数据加载失败: ' + e.message; });
+// ═══ 渐进加载：初始最近5年 → 按钮往前按批加载 → 失败自动重试 ═══
+const BATCH_SIZE = 5, MAX_RETRY = 3;
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const yearCache = {};      // year -> 已解析 JSON
+let loading = false;
 
-function loadAllYears() {
-  const years = INDEX.years;
-  const l = document.getElementById('loading');
-  let done = 0;
-  l.textContent = `加载年份数据 0/${years.length}…`;
-  Promise.all(years.map(y =>
-    fetch(`v4-data/${y}.json`, {cache:'no-store'})
-      .then(r => r.json())
-      .then(d => { done++; l.textContent = `加载年份数据 ${done}/${years.length}…`; return d; })
-  )).then(parts => {
-    DATA = mergeYears(parts);
-    init();
-  }).catch(e => { l.textContent = '数据加载失败: ' + e.message; });
+async function fetchJSON(url, retries) {
+  let lastErr;
+  for (let a = 1; a <= retries; a++) {
+    try {
+      const r = await fetch(url, {cache:'no-store'});
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return await r.json();
+    } catch (e) { lastErr = e; if (a < retries) await sleep(600 * a); }
+  }
+  throw lastErr;
 }
+
+function mergeLoaded() {
+  const ordered = INDEX.years.filter(y => yearCache[y]);
+  DATA = mergeYears(ordered.map(y => yearCache[y]));
+}
+function loadedCount() { return Object.keys(yearCache).length; }
+
+function updateLoadUI() {
+  const btn = document.getElementById('loadMoreBtn');
+  const badge = document.getElementById('hbadge');
+  const total = INDEX.years.length, n = loadedCount();
+  badge.textContent = n >= total ? `全量 ${total} 年` : `已加载 ${n}/${total} 年`;
+  if (n >= total) { btn.style.display = 'none'; return; }
+  btn.style.display = 'inline-block';
+  btn.disabled = loading;
+  btn.textContent = loading ? '加载中…' : `加载更早 ${Math.min(BATCH_SIZE, total - n)} 年`;
+}
+function setStatus(msg) { document.getElementById('hstatus').textContent = msg; }
+
+async function loadYears(years, isInitial) {
+  const l = document.getElementById('loading');
+  loading = true;
+  if (isInitial) l.textContent = `加载年份数据 ${years[0]}–${years[years.length-1]}…`;
+  updateLoadUI();
+  const results = await Promise.allSettled(years.map(y => fetchJSON(`v4-data/${y}.json`, MAX_RETRY)));
+  const failed = [];
+  years.forEach((y, i) => {
+    if (results[i].status === 'fulfilled') yearCache[y] = results[i].value;
+    else failed.push(y);
+  });
+  loading = false;
+  if (!loadedCount()) {
+    l.innerHTML = '数据加载失败（网络错误）<br/><button onclick="boot()">重试</button>';
+    updateLoadUI();
+    return;
+  }
+  if (isInitial) {
+    mergeLoaded();
+    init();
+  } else {
+    const win = captureWindow();
+    zoomState = null;   // 重建期间用默认视图，随后恢复可见窗口
+    mergeLoaded();
+    render();
+    if (win) applyWindow(win);
+    updateDataInfo();
+  }
+  setStatus(failed.length ? `⚠️ 加载失败: ${failed.join(', ')}，点按钮重试` : '');
+  updateLoadUI();
+}
+
+async function boot() {
+  const l = document.getElementById('loading');
+  l.textContent = '加载元数据…';
+  try {
+    INDEX = await fetchJSON('v4-data/index.json', MAX_RETRY);
+  } catch (e) {
+    l.innerHTML = `元数据加载失败: ${e.message}<br/><button onclick="boot()">重试</button>`;
+    return;
+  }
+  await loadYears(INDEX.years.slice(-BATCH_SIZE), true);
+}
+
+document.getElementById('loadMoreBtn').onclick = async () => {
+  if (loading) return;
+  const unloaded = INDEX.years.filter(y => !yearCache[y]);
+  if (!unloaded.length) return;
+  await loadYears(unloaded.slice(-BATCH_SIZE), false);
+};
+
+boot();
 
 function mergeYears(parts) {
   // 按年份顺序拼接成全局连续序列；segments/swings/marks/turnLocal 索引重映射
@@ -154,10 +230,15 @@ function mergeYears(parts) {
     }
     off += p.dates.length;
   }
-  // 年边界被拆开的同向段合并（后段起点=前段终点+1 且状态相同）
+  // 年边界被拆开的同向段合并（后段起点=前段终点+1 且状态相同，且日历间隔≤10天避免跨缺口误合并）
   function glue(segs) {
+    const gapOk = (a, b) => {
+      const t0 = new Date(String(dates[a]).replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')).getTime();
+      const t1 = new Date(String(dates[b]).replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')).getTime();
+      return (t1 - t0) / 86400000 <= 10;
+    };
     for (let i = segs.length - 1; i > 0; i--) {
-      if (segs[i][2] === segs[i-1][2] && segs[i][0] === segs[i-1][1] + 1) {
+      if (segs[i][2] === segs[i-1][2] && segs[i][0] === segs[i-1][1] + 1 && gapOk(segs[i-1][1], segs[i][0])) {
         segs[i-1][1] = segs[i][1];
         segs.splice(i, 1);
       }
@@ -303,7 +384,8 @@ function init() {
       <div class="step ${A.progress && A.progress.p3?'done':''}">③ 创新高</div>
     </div>
     <div class="dim">当前状态：<b>${stTxt}</b> · v4 N型趋势：<b style="color:${A.v4cur===1?'#ef4444':(A.v4cur===-1?'#22c55e':'#f59e0b')}">${v4Txt}</b></div>
-    <div class="dim">数据 ${D.generated} · ${DATA.dates.length} 交易日 · n=${D.params.n} K=${D.params.K} M=${D.params.M} θ=${D.params.theta}</div>`;
+    <div class="dim" id="dataInfo"></div>`;
+  updateDataInfo();
   document.getElementById('hright').innerHTML =
     `锚点 <b style="color:#facc15">${A.anchorDate || '—'}</b> · 全A斜率 <b style="color:${A.curSlope>=0?'#ef4444':'#22c55e'}">${A.curSlope>0?'+':''}${A.curSlope}%</b> · ${stTxt}`;
   document.getElementById('tabs').addEventListener('click', e => {
@@ -455,6 +537,30 @@ function render() {
   }
   if (zoomState) syncZoomFrom(zoomState);
   document.getElementById('loading').style.display = 'none';
+}
+
+function updateDataInfo() {
+  const el = document.getElementById('dataInfo');
+  if (el && INDEX) {
+    el.innerHTML = `数据 ${INDEX.generated} · <b>${DATA.dates.length}</b> 交易日 · n=${INDEX.params.n} K=${INDEX.params.K} M=${INDEX.params.M} θ=${INDEX.params.theta}`;
+  }
+}
+
+// 重建前记录可见窗口日期，重建后按日期恢复（加载更早数据后视图不跳动）
+function captureWindow() {
+  if (!zoomState || !DATA || !DATA.dates.length) return null;
+  const n = DATA.dates.length;
+  const i0 = Math.max(0, Math.floor(zoomState.start / 100 * (n - 1)));
+  const i1 = Math.min(n - 1, Math.floor(zoomState.end / 100 * (n - 1)));
+  return [DATA.dates[i0], DATA.dates[i1]];
+}
+function applyWindow(win) {
+  const dates = DATA.dates, n = dates.length;
+  let i0 = dates.indexOf(win[0]), i1 = dates.indexOf(win[1]);
+  if (i0 < 0) i0 = 0;
+  if (i1 < 0) i1 = n - 1;
+  zoomState = { start: +((i0 / (n - 1)) * 100).toFixed(3), end: +((i1 / (n - 1)) * 100).toFixed(3) };
+  syncZoomFrom(zoomState);
 }
 
 // ── 主图/附图 dataZoom 双向同步 ──
