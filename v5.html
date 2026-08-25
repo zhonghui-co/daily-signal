@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>v5 — 成交额口径 0AMV（2010-）</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:14px}
+h1{font-size:20px;color:#f0f6fc;margin-bottom:2px}
+.sub{color:#8b949e;font-size:12px;margin-bottom:12px}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+select{background:#161b22;color:#e6edf3;border:1px solid #30363d;border-radius:6px;padding:6px 10px;font-size:13px}
+button{background:#21262d;color:#e6edf3;border:1px solid #30363d;border-radius:6px;padding:6px 12px;font-size:12px;cursor:pointer}
+button:hover{background:#30363d}
+button.on{background:#1f6feb;border-color:#1f6feb}
+#chartWrap{position:relative;border:1px solid #21262d;border-radius:8px;background:#0d1117;overflow:hidden}
+canvas{display:block;cursor:crosshair}
+#tip{position:absolute;display:none;background:#161b22;border:1px solid #30363d;border-radius:6px;padding:8px 10px;font-size:12px;pointer-events:none;white-space:pre;line-height:1.6;z-index:10}
+#status{color:#8b949e;font-size:11px;margin-top:8px}
+.legend{display:flex;gap:16px;font-size:12px;color:#8b949e;margin-top:6px}
+.legend .dot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+</style>
+</head>
+<body>
+<h1>v5 — 成交额口径 0AMV <span style="font-size:12px;color:#8b949e">(Σ vol×OHLC, 亿元, 2010-)</span></h1>
+<div class="sub">红涨绿跌 · K线=v5成交额口径 · <span style="color:#58a6ff">蓝线</span>=v2活筹口径close（右轴）· 滚轮缩放 · 拖动平移</div>
+<div class="bar">
+  <select id="sectorSel"><option value="__ALL__">🏦 全A</option></select>
+  <button id="btn1y">1年</button>
+  <button id="btn3y">3年</button>
+  <button id="btn5y">5年</button>
+  <button id="btnAll" class="on">全部</button>
+  <button id="btnMark">多空标记: 关</button>
+</div>
+<div id="chartWrap"><canvas id="cv"></canvas><div id="tip"></div></div>
+<div class="legend">
+  <span><span class="dot" style="background:#ef4444"></span>上涨K</span>
+  <span><span class="dot" style="background:#22c55e"></span>下跌K</span>
+  <span><span class="dot" style="background:#58a6ff"></span>v2活筹 close</span>
+</div>
+<div id="status">加载中…</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const A = { red:'#ef4444', green:'#22c55e', blue:'#58a6ff', grid:'#1c2128', text:'#8b949e', up:'#f85149', down:'#3fb950' };
+let DATA = null, sel = '__ALL__';
+let winStart = null, winEnd = null;   // 窗口 [startIdx, endIdx)
+let markOn = false;
+let zoomed = false;   // 是否用户已手动缩放
+
+async function boot() {
+  try {
+    const r = await fetch('v5-data.json', {cache:'no-store'});
+    DATA = await r.json();
+  } catch (e) {
+    $('status').textContent = '数据加载失败: ' + e.message;
+    return;
+  }
+  const selEl = $('sectorSel');
+  for (const s of DATA.sectors) {
+    const o = document.createElement('option');
+    o.value = s.code; o.textContent = s.name;
+    selEl.appendChild(o);
+  }
+  selEl.onchange = () => { sel = selEl.value; resetWin(); draw(); };
+  resetWin();
+  updateMarkBtn();
+  draw();
+  $('status').textContent = `v5数据 ${DATA.dates.length} 天 (${DATA.dates[0]}~${DATA.dates[DATA.dates.length-1]}) · ${DATA.sectors.length} 个L1板块 · 全A v5最新 ${fmt(lastOf(allA().v5.c))}亿`;
+}
+
+function allA() { return DATA.allA; }
+function cur() { return sel === '__ALL__' ? allA() : DATA.sectors.find(s => s.code === sel); }
+
+function series() {
+  const c = cur();
+  const n = DATA.dates.length;
+  const v5 = { o:c.v5.o, h:c.v5.h, l:c.v5.l, cl:c.v5.c, n:c.v5.n };
+  const v2c = c.v2.c;
+  return { n, v5, v2c };
+}
+
+function lastOf(arr) { for (let i = arr.length - 1; i >= 0; i--) if (arr[i] != null) return arr[i]; return null; }
+function fmt(x) { return x == null ? '—' : (x >= 1e8 ? (x/1e8).toFixed(1)+'万亿' : x >= 1e4 ? (x/1e4).toFixed(0)+'亿' : x.toFixed(0)); }
+
+function resetWin() { winStart = null; winEnd = null; zoomed = false; }
+function setWinRange(days) {
+  const n = DATA.dates.length;
+  winEnd = n; winStart = Math.max(0, n - days); zoomed = true;
+}
+function updateMarkBtn() { $('btnMark').textContent = '多空标记: ' + (markOn ? '开' : '关'); $('btnMark').classList.toggle('on', markOn); }
+
+$('btn1y').onclick = () => { setWinRange(250); draw(); };
+$('btn3y').onclick = () => { setWinRange(750); draw(); };
+$('btn5y').onclick = () => { setWinRange(1250); draw(); };
+$('btnAll').onclick = () => { resetWin(); draw(); };
+$('btnMark').onclick = () => { markOn = !markOn; updateMarkBtn(); draw(); };
+
+// ═══ 多空标记（v1 口径 ±2.0%/+3.4% 演示用）═══
+function computeMarks() {
+  const c = cur();
+  const p = sel === '__ALL__' ? null : c.v5.p;
+  if (!p) return [];
+  const marks = [];
+  let zone = null;
+  for (let i = 1; i < p.length; i++) {
+    const v = p[i];
+    if (v == null) continue;
+    if (v < -2.0) {
+      if (zone !== '空') { zone = '空'; marks.push({i, t:'空'}); }
+    } else if (v > 3.4) {
+      if (zone !== '多') { zone = '多'; marks.push({i, t:'多'}); }
+    }
+  }
+  return marks;
+}
+
+// ═══ 绘制 ═══
+const cv = $('cv'), ctx = cv.getContext('2d');
+const tip = $('tip');
+let hoverI = null, dragFrom = null, dragWinStart = null, W = 0, H = 0;
+
+function layout() {
+  const wrap = $('chartWrap');
+  const dpr = window.devicePixelRatio || 1;
+  W = wrap.clientWidth;
+  H = Math.max(400, Math.min(720, Math.round(window.innerHeight * 0.62)));
+  cv.width = W * dpr; cv.height = H * dpr;
+  cv.style.width = W + 'px'; cv.style.height = H + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+
+function visRange() {
+  const n = DATA.dates.length;
+  let s = winStart ?? Math.max(0, n - 500);
+  let e = winEnd ?? n;
+  return [s, e];
+}
+
+function draw() {
+  layout();
+  const n = DATA.dates.length;
+  let [s, e] = visRange();
+  if (e - s > n) e = n;
+  const padL = 62, padR = 62, padT = 16, padB = 30;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+  const N = e - s;
+  ctx.clearRect(0, 0, W, H);
+  if (N <= 0) return;
+
+  const { v5, v2c } = series();
+  // y 范围：v5 K线 左轴
+  let v5min = Infinity, v5max = -Infinity, v2min = Infinity, v2max = -Infinity;
+  for (let i = s; i < e; i++) {
+    if (v5.l[i] != null) { if (v5.l[i] < v5min) v5min = v5.l[i]; if (v5.h[i] > v5max) v5max = v5.h[i]; }
+    if (v2c[i] != null) { if (v2c[i] < v2min) v2min = v2c[i]; if (v2c[i] > v2max) v2max = v2c[i]; }
+  }
+  if (!isFinite(v5min)) { $('status').textContent = '无数据'; return; }
+  const pad = (v5max - v5min) * 0.05 || 1;
+  v5min -= pad; v5max += pad;
+  const pad2 = (v2max - v2min) * 0.05 || 1;
+  v2min -= pad2; v2max += pad2;
+  const y5 = v => padT + (v5max - v) / (v5max - v5min) * plotH;
+  const y2 = v => padT + (v2max - v) / (v2max - v2min) * plotH;
+  const x = i => padL + (i - s + 0.5) / N * plotW;
+  const bw = Math.max(1, Math.min(9, plotW / N * 0.6));
+
+  // 网格 + y 轴
+  ctx.strokeStyle = A.grid; ctx.fillStyle = A.text; ctx.font = '11px sans-serif'; ctx.lineWidth = 1;
+  const gsteps = 5;
+  ctx.textAlign = 'right';
+  for (let g = 0; g <= gsteps; g++) {
+    const v = v5min + (v5max - v5min) * g / gsteps;
+    const yy = Math.round(y5(v)) + 0.5;
+    ctx.beginPath(); ctx.moveTo(padL, yy); ctx.lineTo(W - padR, yy); ctx.stroke();
+    ctx.fillText(fmt(v), padL - 6, yy + 4);
+  }
+  // x 轴日期
+  ctx.textAlign = 'center';
+  const xticks = Math.max(2, Math.floor(plotW / 110));
+  for (let t = 0; t < xticks; t++) {
+    const i = Math.round(s + (e - s) * t / (xticks - 1 || 1));
+    if (i >= n) continue;
+    const xx = x(i);
+    ctx.fillText(DATA.dates[i], xx, H - padB + 16);
+  }
+
+  // v2 活筹 close 线（蓝）
+  ctx.strokeStyle = A.blue; ctx.lineWidth = 1.4; ctx.beginPath();
+  let started = false;
+  for (let i = s; i < e; i++) {
+    const v = v2c[i];
+    if (v == null) { started = false; continue; }
+    const yy = y2(v);
+    if (!started) { ctx.moveTo(x(i), yy); started = true; } else ctx.lineTo(x(i), yy);
+  }
+  ctx.stroke();
+
+  // v5 K线
+  for (let i = s; i < e; i++) {
+    const o = v5.o[i], h = v5.h[i], l = v5.l[i], cl = v5.cl[i];
+    if (o == null || cl == null) continue;
+    const up = cl >= o;
+    ctx.strokeStyle = up ? A.up : A.down;
+    ctx.fillStyle = up ? A.up : A.down;
+    ctx.lineWidth = 1;
+    const xx = x(i);
+    ctx.beginPath(); ctx.moveTo(xx, y5(h)); ctx.lineTo(xx, y5(l)); ctx.stroke();
+    const yo = y5(o), yc = y5(cl);
+    const top = Math.min(yo, yc), hh = Math.max(1, Math.abs(yc - yo));
+    ctx.fillRect(xx - bw / 2, top, bw, hh);
+  }
+
+  // 多空标记
+  if (markOn && sel !== '__ALL__') {
+    for (const m of computeMarks()) {
+      if (m.i < s || m.i >= e) continue;
+      const xx = x(m.i), yy = padT;
+      const isB = m.t === '空';
+      ctx.fillStyle = isB ? 'rgba(34,197,94,0.85)' : 'rgba(239,68,68,0.85)';
+      ctx.beginPath();
+      ctx.moveTo(xx, yy); ctx.lineTo(xx - 5, yy + 9); ctx.lineTo(xx + 5, yy + 9);
+      ctx.closePath(); ctx.fill();
+      ctx.fillStyle = '#fff'; ctx.font = '10px sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText(m.t, xx, yy + 18);
+    }
+  }
+
+  // hover 十字 + tooltip
+  if (hoverI != null && hoverI >= s && hoverI < e) {
+    const xx = x(hoverI);
+    ctx.strokeStyle = 'rgba(139,148,158,0.4)';
+    ctx.beginPath(); ctx.moveTo(xx, padT); ctx.lineTo(xx, H - padB); ctx.stroke();
+    const o = v5.o[hoverI], h = v5.h[hoverI], l = v5.l[hoverI], cl = v5.cl[hoverI], pct = sel === '__ALL__' ? null : cur().v5.p[hoverI];
+    if (o != null) {
+      const lines = [
+        DATA.dates[hoverI] + (sel === '__ALL__' ? '' : '  ' + cur().name),
+        'v5 开/高/低/收: ' + fmt(o) + ' / ' + fmt(h) + ' / ' + fmt(l) + ' / ' + fmt(cl),
+        'v5 涨跌: ' + (pct == null ? '—' : (pct > 0 ? '+' : '') + pct.toFixed(2) + '%'),
+        'v2 活筹 close: ' + fmt(v2c[hoverI]),
+      ];
+      tip.style.display = 'block';
+      tip.textContent = lines.join('\n');
+      const tw = tip.offsetWidth, th = tip.offsetHeight;
+      let tx = xx + 14, ty = padT + 8;
+      if (tx + tw > W - 6) tx = xx - tw - 14;
+      if (ty + th > H - 6) ty = H - th - 6;
+      tip.style.left = tx + 'px'; tip.style.top = ty + 'px';
+    }
+  } else tip.style.display = 'none';
+
+  $('status').textContent = `窗口 ${DATA.dates[s]} ~ ${DATA.dates[e-1]} (${N}天) · ${sel === '__ALL__' ? '全A' : cur().name} · v5最新 ${fmt(lastOf(v5.cl))}亿 · v2最新 ${fmt(lastOf(v2c))}亿`;
+}
+
+// ═══ 交互 ═══
+cv.addEventListener('mousemove', ev => {
+  const rect = cv.getBoundingClientRect();
+  const mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
+  const padL = 62, padR = 62, padT = 16, padB = 30;
+  const plotW = W - padL - padR;
+  const n = DATA.dates.length;
+  let [s, e] = visRange();
+  const N = e - s;
+  if (mx >= padL && mx <= W - padR && my >= padT && my <= H - padB && N > 0) {
+    hoverI = Math.min(e - 1, s + Math.floor((mx - padL) / plotW * N));
+  } else hoverI = null;
+  if (dragFrom != null) {
+    const dx = (ev.clientX - dragFrom.x);
+    const di = Math.round(-dx / Math.max(1, plotW / N));
+    let ns = dragWinStart + di, ne = ns + N;
+    if (ns < 0) { ns = 0; ne = N; }
+    if (ne > n) { ne = n; ns = n - N; }
+    winStart = ns; winEnd = ne;
+  }
+  draw();
+});
+cv.addEventListener('mouseleave', () => { hoverI = null; tip.style.display = 'none'; draw(); });
+cv.addEventListener('mousedown', ev => {
+  dragFrom = { x: ev.clientX, y: ev.clientY };
+  dragWinStart = winStart ?? Math.max(0, DATA.dates.length - 500);
+  zoomed = true;
+});
+window.addEventListener('mouseup', () => { dragFrom = null; });
+cv.addEventListener('wheel', ev => {
+  ev.preventDefault();
+  const n = DATA.dates.length;
+  let [s, e] = visRange();
+  const N = e - s;
+  const rect = cv.getBoundingClientRect();
+  const padL = 62, padR = 62, padT = 16, padB = 30;
+  const plotW = W - padL - padR;
+  const fx = (ev.clientX - rect.left - padL) / plotW;
+  const factor = ev.deltaY > 0 ? 1.25 : 0.8;
+  const newN = Math.max(20, Math.min(N * factor, n));
+  const center = s + fx * N;
+  let ns = Math.round(center - fx * newN);
+  let ne = Math.round(ns + newN);
+  if (ns < 0) { ns = 0; ne = Math.round(newN); }
+  if (ne > n) { ne = n; ns = Math.round(n - newN); }
+  winStart = ns; winEnd = ne; zoomed = true;
+  draw();
+}, {passive:false});
+
+window.addEventListener('resize', draw);
+boot();
+</script>
+</body>
+</html>
