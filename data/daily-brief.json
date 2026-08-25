@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:00:01.686368+08:00",
+  "generated_at": "2026-08-25T17:10:04.293081+08:00",
   "date": "2026-08-25",
   "sections": {
     "signals": {
@@ -23,6 +23,14 @@
           "name": "安诺其",
           "pct_chg": 20.09,
           "vol_ratio": 3.96,
+          "attribution": "涨停封板"
+        },
+        {
+          "date": "20260825",
+          "ts_code": "300097.SZ",
+          "name": "智云股份",
+          "pct_chg": 20.05,
+          "vol_ratio": 4.27,
           "attribution": "涨停封板"
         },
         {
@@ -160,14 +168,6 @@
           "pct_chg": -20.01,
           "vol_ratio": 2.29,
           "attribution": "跌停封板"
-        },
-        {
-          "date": "20260711",
-          "ts_code": "688523.SH",
-          "name": "航天环宇",
-          "pct_chg": 20.01,
-          "vol_ratio": 2.92,
-          "attribution": "涨停封板"
         }
       ]
     },
