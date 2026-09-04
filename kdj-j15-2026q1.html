@@ -38,7 +38,7 @@
 <body>
 <div class="wrap">
   <h1>KDJ J&lt;15 且 白线&gt;黄线 · 每日清单</h1>
-  <div class="sub">区间 2026-03-01 ~ 2026-04-01（23 个交易日）｜条件：日线 KDJ(9,3,3) 的 J &lt; 15 且 白线 EMA(EMA(C,10),10) &gt; 黄线 BBI(14,28,57,114)｜数据源：daily_qfq_all + kdj_daily</div>
+  <div class="sub">区间 2026-03-01 ~ 2026-04-01（23 个交易日）｜条件：日线 KDJ(9,3,3) 的 J &lt; 15 且 过去 10 个交易日（含当日）每日白线 &gt; 黄线｜白线=EMA(EMA(C,10),10)，黄线=BBI(14,28,57,114)｜数据源：daily_qfq_all + kdj_daily</div>
   <div class="stats" id="stats"></div>
   <div class="card">
     <h2>📅 按日期查看</h2>
@@ -46,7 +46,7 @@
     <div class="toolbar"><input id="q" type="text" placeholder="搜索代码或名称…"><span id="cnt"></span></div>
     <div style="overflow:auto; max-height:640px;">
       <table id="tbl">
-        <thead><tr><th>代码</th><th>名称</th><th>行业</th><th>收盘</th><th>涨跌%</th><th>J</th><th>白线</th><th>黄线</th><th>白-黄</th></tr></thead>
+        <thead><tr><th>代码</th><th>名称</th><th>行业</th><th>收盘</th><th>涨跌%</th><th>J</th><th>白线</th><th>黄线</th><th>白-黄</th><th>连续白>黄(日)</th></tr></thead>
         <tbody></tbody>
       </table>
     </div>
@@ -106,9 +106,9 @@ function render(day) {
     return `<tr>
       <td class="code">${s.code}</td><td>${s.name||''}</td><td>${s.industry||''}</td>
       <td>${s.close}</td><td class="${cls}">${s.pct_chg>0?'+':''}${s.pct_chg}</td>
-      <td class="jneg">${s.J}</td><td>${s.white}</td><td>${s.yellow}</td><td>${diff}</td>
+      <td class="jneg">${s.J}</td><td>${s.white}</td><td>${s.yellow}</td><td>${diff}</td><td>${s.wy_streak??'-'}</td>
     </tr>`;
-  }).join('') || '<tr><td colspan="9">无匹配</td></tr>';
+  }).join('') || '<tr><td colspan="10">无匹配</td></tr>';
 }
 document.getElementById('q').addEventListener('input', () => {
   if (cur) {
