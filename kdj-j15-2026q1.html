@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDJ J&lt;15 且 白线&gt;黄线 扫描 · 2026-03-01 ~ 2026-04-01</title>
+<style>
+  :root { --up:#ef4444; --down:#22c55e; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:#f5f6f8; color:#1f2937; padding: 16px; }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+  h1 { font-size: 22px; margin-bottom: 6px; }
+  .sub { color:#6b7280; font-size: 13px; margin-bottom: 12px; }
+  .stats { display:flex; gap:12px; flex-wrap:wrap; margin-bottom: 14px; }
+  .stat { background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:10px 16px; }
+  .stat b { font-size: 20px; display:block; }
+  .stat span { font-size: 12px; color:#6b7280; }
+  .dates { display:flex; flex-wrap:wrap; gap:6px; margin-bottom: 12px; }
+  .dates button { border:1px solid #d1d5db; background:#fff; border-radius:6px; padding:5px 10px; cursor:pointer; font-size:13px; }
+  .dates button.active { background:#1d4ed8; color:#fff; border-color:#1d4ed8; }
+  .toolbar { display:flex; gap:10px; align-items:center; margin-bottom:10px; }
+  #q { flex:1; max-width:320px; padding:6px 10px; border:1px solid #d1d5db; border-radius:6px; font-size:14px; }
+  .card { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:14px; margin-bottom:14px; }
+  .card h2 { font-size:15px; margin-bottom:10px; }
+  table { width:100%; border-collapse: collapse; font-size:13px; }
+  th, td { padding:5px 8px; text-align:right; border-bottom:1px solid #f3f4f6; }
+  th { background:#f9fafb; color:#4b5563; font-weight:600; position:sticky; top:0; }
+  td:first-child, th:first-child, td:nth-child(2), th:nth-child(2), td:nth-child(3), th:nth-child(3) { text-align:left; }
+  tr:hover { background:#f9fafb; }
+  .up { color: var(--up); }
+  .down { color: var(--down); }
+  .jneg { color:#dc2626; font-weight:600; }
+  .code { font-family: ui-monospace, monospace; }
+  .note { font-size:12px; color:#9ca3af; margin-top:14px; }
+  #cnt { font-size:13px; color:#4b5563; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>KDJ J&lt;15 且 白线&gt;黄线 · 每日清单</h1>
+  <div class="sub">区间 2026-03-01 ~ 2026-04-01（23 个交易日）｜条件：日线 KDJ(9,3,3) 的 J &lt; 15 且 白线 EMA(EMA(C,10),10) &gt; 黄线 BBI(14,28,57,114)｜数据源：daily_qfq_all + kdj_daily</div>
+  <div class="stats" id="stats"></div>
+  <div class="card">
+    <h2>📅 按日期查看</h2>
+    <div class="dates" id="dates"></div>
+    <div class="toolbar"><input id="q" type="text" placeholder="搜索代码或名称…"><span id="cnt"></span></div>
+    <div style="overflow:auto; max-height:640px;">
+      <table id="tbl">
+        <thead><tr><th>代码</th><th>名称</th><th>行业</th><th>收盘</th><th>涨跌%</th><th>J</th><th>白线</th><th>黄线</th><th>白-黄</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🏆 出现天数排行 Top 30</h2>
+    <div style="overflow:auto; max-height:420px;">
+      <table id="top">
+        <thead><tr><th>代码</th><th>名称</th><th>行业</th><th>出现天数</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="note">生成时间：2026-09-04 ｜ 口径与管线 compute_kdj.py 一致（已抽样对账）｜ A股配色：红涨绿跌</div>
+</div>
+<script>
+let DATA = null, cur = null;
+fetch('data/kdj-j15-2026q1.json').then(r => r.json()).then(d => {
+  DATA = d;
+  // stats
+  const total = d.days.reduce((a, x) => a + x.count, 0);
+  const uniq = new Set(d.days.flatMap(x => x.stocks.map(s => s.code))).size;
+  document.getElementById('stats').innerHTML =
+    `<div class="stat"><b>${d.days.length}</b><span>交易日</span></div>
+     <div class="stat"><b>${total.toLocaleString()}</b><span>总命中条数</span></div>
+     <div class="stat"><b>${uniq.toLocaleString()}</b><span>去重股票数</span></div>`;
+  // date buttons
+  const dd = document.getElementById('dates');
+  d.days.forEach((x, i) => {
+    const b = document.createElement('button');
+    b.textContent = x.date.slice(0,4)+'-'+x.date.slice(4,6)+'-'+x.date.slice(6)+' ('+x.count+')';
+    b.onclick = () => show(i, b);
+    dd.appendChild(b);
+  });
+  show(0, dd.children[0]);
+  // top recurring
+  const freq = {};
+  d.days.forEach(x => x.stocks.forEach(s => { if (!freq[s.code]) freq[s.code] = {name:s.name, ind:s.industry, n:0}; freq[s.code].n++; }));
+  const top = Object.entries(freq).map(([k,v]) => ({code:k, ...v})).sort((a,b) => b.n - a.n).slice(0, 30);
+  document.querySelector('#top tbody').innerHTML = top.map(s =>
+    `<tr><td class="code">${s.code}</td><td>${s.name}</td><td>${s.ind||''}</td><td><b>${s.n}</b></td></tr>`).join('');
+});
+function show(i, btn) {
+  if (cur) cur.classList.remove('active');
+  btn.classList.add('active'); cur = btn;
+  const day = DATA.days[i];
+  render(day);
+}
+function render(day) {
+  document.getElementById('cnt').textContent = day.date + ' 共 ' + day.count + ' 只';
+  const tb = document.querySelector('#tbl tbody');
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const rows = day.stocks.filter(s => !q || s.code.toLowerCase().includes(q) || (s.name||'').includes(q));
+  tb.innerHTML = rows.map(s => {
+    const cls = s.pct_chg > 0 ? 'up' : (s.pct_chg < 0 ? 'down' : '');
+    const diff = (s.white - s.yellow).toFixed(2);
+    return `<tr>
+      <td class="code">${s.code}</td><td>${s.name||''}</td><td>${s.industry||''}</td>
+      <td>${s.close}</td><td class="${cls}">${s.pct_chg>0?'+':''}${s.pct_chg}</td>
+      <td class="jneg">${s.J}</td><td>${s.white}</td><td>${s.yellow}</td><td>${diff}</td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="9">无匹配</td></tr>';
+}
+document.getElementById('q').addEventListener('input', () => {
+  if (cur) {
+    const i = Array.from(cur.parentElement.children).indexOf(cur);
+    render(DATA.days[i]);
+  }
+});
+</script>
+</body>
+</html>
