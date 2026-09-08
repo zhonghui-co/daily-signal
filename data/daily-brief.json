@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-07T17:10:03.917748+08:00",
-  "date": "2026-09-07",
+  "generated_at": "2026-09-08T15:49:14.255156+08:00",
+  "date": "2026-09-08",
   "sections": {
     "signals": {
       "available": false,
@@ -178,8 +178,11 @@
       "available": false
     },
     "alerts": {
-      "available": false,
-      "error": "'str' object has no attribute 'get'"
+      "available": true,
+      "total_active": 199,
+      "recent_count": 3,
+      "fire": [],
+      "high": []
     },
     "thesis": {
       "available": true,
