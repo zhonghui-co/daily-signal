@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>v5-test · Σ(成交量×OHLC) 真实活跃市值作战图</title>
+<style>
+:root { --up:#ef4444; --down:#22c55e; --bg:#0f1115; --card:#171a21; --line:#2a2f3a; --tx:#e5e7eb; --dim:#9ca3af; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--tx); padding:12px 16px; }
+header { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
+h1 { font-size:19px; }
+.hbadge { font-size:12px; color:var(--dim); border:1px solid var(--line); border-radius:6px; padding:2px 8px; }
+#hstatus { font-size:12px; color:#f59e0b; }
+#hright { margin-left:auto; font-size:12px; color:var(--dim); }
+button { background:#1d4ed8; color:#fff; border:0; border-radius:6px; padding:5px 12px; cursor:pointer; font-size:13px; }
+#loading { color:var(--dim); font-size:14px; padding:20px; }
+#layout { display:grid; grid-template-columns: 380px 1fr; gap:10px; }
+@media (max-width:900px){ #layout { grid-template-columns:1fr; } }
+#panel { display:flex; flex-direction:column; gap:8px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+.card h2 { font-size:13px; color:var(--dim); margin-bottom:6px; }
+.kv { display:flex; gap:12px; flex-wrap:wrap; font-size:12px; }
+.kv b { font-size:15px; }
+.up { color:var(--up); } .down { color:var(--down); }
+#tabs { display:flex; gap:6px; }
+#tabs button { background:var(--card); border:1px solid var(--line); color:var(--tx); padding:4px 10px; }
+#tabs button.active { background:#1d4ed8; border-color:#1d4ed8; }
+#filterbox input { width:100%; background:var(--card); border:1px solid var(--line); border-radius:6px; color:var(--tx); padding:6px 8px; font-size:13px; }
+#list { max-height:480px; overflow:auto; font-size:12.5px; }
+.row { display:grid; grid-template-columns: 78px 1fr 62px 70px 60px; padding:4px 6px; border-bottom:1px solid #1e232e; cursor:pointer; align-items:center; }
+.row:hover { background:#1e232e; }
+.row .code { color:var(--dim); font-family:ui-monospace,monospace; font-size:11.5px; }
+.row.sel { background:#1e3a8a55; }
+#charts { display:flex; flex-direction:column; gap:8px; }
+#legend { font-size:11.5px; color:var(--dim); display:flex; gap:14px; flex-wrap:wrap; }
+canvas { width:100%; background:#0d0f13; border-radius:8px; }
+.note { font-size:11px; color:var(--dim); margin-top:6px; line-height:1.5; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🦉 v5-test · Σ(成交量×OHLC) 真实活跃市值</h1>
+  <span class="hbadge" id="hbadge">长历史 2010-</span>
+  <span id="hstatus"></span>
+  <button id="loadMoreBtn" style="display:none">加载更早3年</button>
+  <span id="hright"></span>
+</header>
+<div id="loading">加载元数据…</div>
+<div id="layout" style="display:none">
+  <div id="panel">
+    <div class="card" id="statusCard"><h2>📊 全市场 真实活跃市值</h2><div class="kv" id="statusKv"></div></div>
+    <div class="card"><h2>🗂 板块</h2>
+      <div id="tabs"><button class="active" data-l="L1">L1</button><button data-l="L2">L2</button><button data-l="L3">L3</button></div>
+      <div id="filterbox" style="margin-top:6px"><input id="q" placeholder="搜索代码/名称…"></div>
+      <div id="list" style="margin-top:6px"></div>
+    </div>
+  </div>
+  <div id="charts">
+    <div id="legend"></div>
+    <div class="card"><h2 id="topTitle">全市场 · 最近120个交易日</h2><canvas id="cvTop" height="260"></canvas></div>
+    <div class="card"><h2 id="botTitle">点击左侧板块查看K线</h2><canvas id="cvBot" height="260"></canvas></div>
+  </div>
+</div>
+<div class="note" id="footerNote"></div>
+<script>
+const BATCH = 3;
+let INDEX = null, yearCache = {}, curLevel = 'L1', selSector = null;
+const $ = id => document.getElementById(id);
+function setStatus(m){ $('hstatus').textContent = m; }
+async function fetchJSON(url){
+  for(let i=0;i<3;i++){
+    try { const r = await fetch(url); if(r.ok) return await r.json(); } catch(e){}
+    await new Promise(x=>setTimeout(x,1500));
+  }
+  throw new Error('加载失败 '+url);
+}
+function loadedYears(){ return Object.keys(yearCache).length; }
+function updateLoadUI(){
+  const total = INDEX.years.length, n = loadedYears();
+  $('hbadge').textContent = n>=total ? `全量 ${total} 年` : `已加载 ${n}/${total} 年`;
+  const btn = $('loadMoreBtn');
+  if(n < total){ btn.style.display=''; btn.textContent = `加载更早 ${Math.min(BATCH, total-n)} 年`; }
+  else btn.style.display='none';
+}
+async function loadYears(years){
+  setStatus('加载年份数据 ' + years[0] + '~' + years[years.length-1] + '…');
+  try{
+    for(const y of years){ if(!yearCache[y]) yearCache[y] = await fetchJSON('v5test-data/'+y+'.json'); }
+    setStatus('');
+    render();
+  }catch(e){ setStatus('加载失败: '+e.message+' 点按钮重试'); }
+  updateLoadUI();
+}
+async function boot(){
+  try{
+    INDEX = await fetchJSON('v5test-data/index.json');
+    $('loading').style.display='none'; $('layout').style.display='grid';
+    $('hright').textContent = INDEX.metric + ' | ' + INDEX.range;
+    $('footerNote').innerHTML = INDEX.note || '';
+    $('#legend').innerHTML = '<span class="up">■ 红=涨</span><span class="down">■ 绿=跌</span><span>单位: 亿元/日</span>' + (INDEX.thresholds ? `<span>多空阈值: &gt;+${INDEX.thresholds.up}% 转多 / &lt;${INDEX.thresholds.down}% 转空</span>` : '');
+    await loadYears(INDEX.years.slice(-BATCH));
+    $('loadMoreBtn').onclick = async () => {
+      const unloaded = INDEX.years.filter(y => !yearCache[y]);
+      await loadYears(unloaded.slice(-BATCH));
+    };
+  }catch(e){ $('loading').textContent = '元数据加载失败: '+e.message; }
+}
+// 合并最新序列: 返回 {dates, o, h, l, c, s} 按日期升序
+function mergedSeries(objKey){
+  const years = INDEX.years.filter(y => yearCache[y]).sort();
+  const d=[], o=[], h=[], l=[], c=[], s=[];
+  for(const y of years){
+    const Y = yearCache[y];
+    const src = objKey==='ALL' ? Y.allA : (Y.sectors && Y.sectors[objKey]);
+    if(!src) continue;
+    for(let i=0;i<src.d.length;i++){ d.push(src.d[i]); o.push(src.o[i]); h.push(src.h[i]); l.push(src.l[i]); c.push(src.c[i]); if(src.s) s.push(src.s[i]); }
+  }
+  return {d,o,h,l,c,s};
+}
+function drawCanvas(cv, series, title){
+  const N = Math.min(120, series.d.length);
+  if(N < 2){ const ctx=cv.getContext('2d'); ctx.clearRect(0,0,cv.width,cv.height); return; }
+  const d=series.d.slice(-N), o=series.o.slice(-N), h=series.h.slice(-N), l=series.l.slice(-N), c=series.c.slice(-N);
+  cv.width = cv.clientWidth * 2; cv.height = 520;
+  const ctx = cv.getContext('2d');
+  const W = cv.width, H = cv.height, pad = {l:56, r:10, t:14, b:22};
+  let mn=Infinity, mx=-Infinity;
+  for(let i=0;i<N;i++){ mn=Math.min(mn,l[i]); mx=Math.max(mx,h[i]); }
+  const span = mx-mn || 1;
+  const x0 = pad.l, x1 = W-pad.r, y0 = pad.t, y1 = H-pad.b;
+  const Y = v => y1 - (v-mn)/span*(y1-y0);
+  ctx.clearRect(0,0,W,H);
+  ctx.strokeStyle='#2a2f3a'; ctx.fillStyle='#9ca3af'; ctx.font='20px sans-serif'; ctx.textAlign='right';
+  for(let i=0;i<=4;i++){
+    const v = mn + span*i/4, yy = Y(v);
+    ctx.beginPath(); ctx.moveTo(x0,yy); ctx.lineTo(x1,yy); ctx.stroke();
+    ctx.fillText((v/1).toFixed(0), x0-8, yy+7);
+  }
+  const bw = Math.max(2, (x1-x0)/N*0.6);
+  ctx.textAlign='center';
+  for(let i=0;i<N;i++){
+    const x = x0 + (i+0.5)*(x1-x0)/N;
+    const up = c[i] >= o[i];
+    ctx.strokeStyle = ctx.fillStyle = up ? '#ef4444' : '#22c55e';
+    ctx.beginPath(); ctx.moveTo(x, Y(h[i])); ctx.lineTo(x, Y(l[i])); ctx.stroke();
+    const yo = Y(o[i]), yc = Y(c[i]);
+    ctx.fillRect(x-bw/2, Math.min(yo,yc), bw, Math.max(1,Math.abs(yc-yo)));
+  }
+  // 日期刻度
+  ctx.fillStyle='#6b7280'; ctx.font='18px sans-serif';
+  for(let k=0;k<N;k+=Math.ceil(N/6)){ ctx.fillText(d[k].slice(4,6)+'/'+d[k].slice(6), x0+(k+0.5)*(x1-x0)/N, H-6); }
+}
+function render(){
+  // 状态卡
+  const A = mergedSeries('ALL');
+  const i = A.d.length-1;
+  const chg = i>0 ? (A.c[i]/A.c[i-1]-1)*100 : 0;
+  const state = (A.s && A.s[i]===1);
+  $('statusKv').innerHTML = `
+    <span><b>${A.d[i]}</b></span>
+    <span>O <b>${A.o[i].toLocaleString()}</b></span>
+    <span>H <b>${A.h[i].toLocaleString()}</b></span>
+    <span>L <b>${A.l[i].toLocaleString()}</b></span>
+    <span>C <b>${A.c[i].toLocaleString()}</b></span>
+    <span>日涨幅 <b class="${chg>=0?'up':'down'}">${chg>=0?'+':''}${chg.toFixed(2)}%</b></span>
+    <span>区间 <b style="color:${state?'#ef4444':'#22c55e'}">${state?'多头':'空头'}</b></span>`;
+  $('topTitle').textContent = `全市场 · 最近120个交易日 (最新 ${A.d[i]})`;
+  drawCanvas($('cvTop'), A);
+  // 板块列表
+  const rows = [];
+  for(const code of (INDEX.orders[curLevel] || Object.keys(INDEX.sectors))){
+    const meta = INDEX.sectors[code];
+    if(!meta || meta.level !== curLevel) continue;
+    const S = mergedSeries(code);
+    if(!S || S.d.length===0) continue;
+    const j = S.d.length-1;
+    const c2 = j>0 ? (S.c[j]/S.c[j-1]-1)*100 : 0;
+    const share = A.c[A.d.length-1] > 0 ? (S.c[j]/A.c[A.d.length-1]*100) : 0;
+    rows.push({code, name:meta.name, chg:c2, c:S.c[j], share});
+  }
+  rows.sort((a,b)=>b.chg-a.chg);
+  const q = $('q').value.trim().toLowerCase();
+  const filt = rows.filter(r => !q || r.code.toLowerCase().includes(q) || r.name.toLowerCase().includes(q));
+  $('list').innerHTML = filt.map(r => `
+    <div class="row ${selSector===r.code?'sel':''}" data-code="${r.code}">
+      <span class="code">${r.code}</span><span>${r.name}</span>
+      <span class="${r.chg>=0?'up':'down'}">${r.chg>=0?'+':''}${r.chg.toFixed(2)}%</span>
+      <span>${r.c.toFixed(0)}亿</span><span>${r.share.toFixed(1)}%</span>
+    </div>`).join('') || '<div style="padding:10px;color:#6b7280">无匹配</div>';
+  document.querySelectorAll('#list .row').forEach(el => el.onclick = () => {
+    selSector = el.dataset.code;
+    const meta = INDEX.sectors[selSector];
+    $('botTitle').textContent = `${meta.name} (${selSector}) · 最近120个交易日`;
+    drawCanvas($('cvBot'), mergedSeries(selSector));
+    document.querySelectorAll('#list .row').forEach(x=>x.classList.remove('sel'));
+    el.classList.add('sel');
+  });
+  // 默认选中第一个
+  if(filt.length && !selSector){ document.querySelector('#list .row')?.click(); }
+}
+document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('#tabs button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); curLevel = b.dataset.l; selSector=null; render();
+});
+$('q').addEventListener('input', render);
+boot();
+</script>
+</body>
+</html>
