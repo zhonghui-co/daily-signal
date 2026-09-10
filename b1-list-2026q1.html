@@ -38,8 +38,8 @@
 <body>
 <div class="wrap">
   <h1>B1 清单 · 2026-03-01 ~ 2026-04-01</h1>
-  <div class="sub">条件（逐日）：日线 KDJ(9,3,3) 的 J &lt; 15 且 白线 &gt; 黄线 且 过去 10 个交易日（含当日）每日白线 &gt; 黄线 且 当日收盘 &gt; 黄线<br>
-  白线=EMA(EMA(C,10),10)，黄线=BBI(14,28,57,114)｜数据：daily_qfq_all（2026-09-09 减法前复权重建）+ kdj_daily｜分类：申万当前成分 L1/L2</div>
+  <div class="sub">条件（逐日）：日线 KDJ(9,3,3) 的 J &lt; 15 且 白线 &gt; 黄线 且 过去 10 个交易日（含当日）每日白线 &gt; 黄线 且 当日收盘 &gt; 黄线 且 总市值 &gt; 100 亿<br>
+  白线=EMA(EMA(C,10),10)，黄线=BBI(14,28,57,114)｜数据：daily_qfq_all（2026-09-09 减法前复权重建）+ kdj_daily｜分类：申万当前成分 L1/L2｜市值：当日总市值（收盘×总股本）</div>
   <div class="stats" id="stats"></div>
   <div class="card">
     <h2>📅 按日期查看</h2>
@@ -51,7 +51,7 @@
     </div>
     <div style="overflow:auto; max-height:640px;">
       <table id="tbl">
-        <thead><tr><th>代码</th><th>名称</th><th>L1</th><th>L2</th><th>收盘</th><th>涨跌%</th><th>J</th><th>白线</th><th>黄线</th><th>连续白&gt;黄(日)</th></tr></thead>
+        <thead><tr><th>代码</th><th>名称</th><th>L1</th><th>L2</th><th>收盘</th><th>涨跌%</th><th>市值(亿)</th><th>J</th><th>白线</th><th>黄线</th><th>连续白&gt;黄(日)</th></tr></thead>
         <tbody></tbody>
       </table>
     </div>
@@ -117,10 +117,10 @@ function render(day) {
     const cls = s.pct_chg > 0 ? 'up' : (s.pct_chg < 0 ? 'down' : '');
     return `<tr>
       <td class="code">${s.code}</td><td>${s.name||''}</td><td>${s.L1||''}</td><td>${s.L2||''}</td>
-      <td>${s.close}</td><td class="${cls}">${s.pct_chg>0?'+':''}${s.pct_chg}</td>
+      <td>${s.close}</td><td class="${cls}">${s.pct_chg>0?'+':''}${s.pct_chg}</td><td>${s.mv_yi??'-'}</td>
       <td class="jneg">${s.J}</td><td>${s.white}</td><td>${s.yellow}</td><td>${s.wy_streak??'-'}</td>
     </tr>`;
-  }).join('') || '<tr><td colspan="10">无匹配</td></tr>';
+  }).join('') || '<tr><td colspan="11">无匹配</td></tr>';
 }
 document.getElementById('q').addEventListener('input', () => { if (cur) render(DATA.days[Array.from(cur.parentElement.children).indexOf(cur)]); });
 document.getElementById('fL1').addEventListener('change', () => { if (cur) render(DATA.days[Array.from(cur.parentElement.children).indexOf(cur)]); });
