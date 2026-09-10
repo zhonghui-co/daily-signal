@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-09T17:10:05.011545+08:00",
-  "date": "2026-09-09",
+  "generated_at": "2026-09-10T16:00:02.208315+08:00",
+  "date": "2026-09-10",
   "sections": {
     "signals": {
       "available": false,
@@ -180,106 +180,15 @@
     "alerts": {
       "available": true,
       "total_active": 205,
-      "recent_count": 3,
+      "recent_count": 2,
       "fire": [],
       "high": []
     },
     "thesis": {
       "available": true,
-      "last_updated": "2026-07-22T16:30:48.895316+08:00",
-      "active_count": 10,
-      "positions": [
-        {
-          "code": "600584.SH",
-          "name": "长电科技",
-          "return_pct": 123.85,
-          "ret_5d": 3.09,
-          "warnings": [
-            "⚠️ 从thesis以来高点回撤-19.56%"
-          ],
-          "last_check": "2026-07-22"
-        },
-        {
-          "code": "002156.SZ",
-          "name": "通富微电",
-          "return_pct": 89.62,
-          "ret_5d": -1.38,
-          "warnings": [],
-          "last_check": "2026-07-22"
-        },
-        {
-          "code": "688012.SH",
-          "name": "中微公司",
-          "return_pct": 88.23,
-          "ret_5d": 8.73,
-          "warnings": [
-            "⚠️ 从thesis以来高点回撤-16.67%"
-          ],
-          "last_check": "2026-07-22"
-        },
-        {
-          "code": "002371.SZ",
-          "name": "北方华创",
-          "return_pct": 61.15,
-          "ret_5d": 8.71,
-          "warnings": [
-            "⚠️ 从thesis以来高点回撤-18.25%"
-          ],
-          "last_check": "2026-07-22"
-        },
-        {
-          "code": "688041.SH",
-          "name": "海光信息",
-          "return_pct": 46.84,
-          "ret_5d": 3.5,
-          "warnings": [],
-          "last_check": "2026-07-22"
-        },
-        {
-          "code": "688256.SH",
-          "name": "寒武纪",
-          "return_pct": 40.54,
-          "ret_5d": 2.41,
-          "warnings": [
-            "⚠️ 从thesis以来高点回撤-17.9%"
-          ],
-          "last_check": "2026-07-22"
-        },
-        {
-          "code": "688981.SH",
-          "name": "中芯国际",
-          "return_pct": 19.73,
-          "ret_5d": 2.5,
-          "warnings": [],
-          "last_check": "2026-07-22"
-        },
-        {
-          "code": "688126.SH",
-          "name": "沪硅产业",
-          "return_pct": 19.02,
-          "ret_5d": -7.96,
-          "warnings": [
-            "⚠️ 从thesis以来高点回撤-35.22%"
-          ],
-          "last_check": "2026-07-22"
-        },
-        {
-          "code": "603650.SH",
-          "name": "彤程新材",
-          "return_pct": null,
-          "ret_5d": null,
-          "warnings": [],
-          "last_check": "2026-07-22"
-        },
-        {
-          "code": "688082.SH",
-          "name": "盛美上海",
-          "return_pct": null,
-          "ret_5d": null,
-          "warnings": [],
-          "last_check": "2026-07-22"
-        }
-      ]
+      "last_updated": "2026-09-09",
+      "active_count": 0,
+      "positions": []
     }
   }
 }
