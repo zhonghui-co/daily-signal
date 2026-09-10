@@ -58,7 +58,7 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 <body>
 <div class="header">
   <div style="display:flex;align-items:center;gap:8px">
-    <h1>🦉 v5-test Σ(5日EMA成交量×OHLC) 作战图</h1>
+    <h1>🦉 v5-test Σ(10日EMA成交量×OHLC) 作战图</h1>
     <span class="hbadge" id="hbadge">长历史 2010-</span>
   </div>
   <div class="header-right">
@@ -84,7 +84,7 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
     <div id="list"></div>
   </div>
   <div id="charts">
-    <div class="chart-label" style="top:6px">🏦 全市场 Σ(EMA5成交量×OHLC) 亿元</div>
+    <div class="chart-label" style="top:6px">🏦 全市场 Σ(EMA10成交量×OHLC) 亿元</div>
     <div class="chart-label" style="top:50%">📊 板块</div>
     <div id="legend">
       <span><i style="background:rgba(220,38,38,.3)"></i>N型上涨</span>
@@ -353,7 +353,7 @@ function init() {
   const zoneTxt = A.anchorType === '多' ? '<span class="red">🟢 多头区间</span>' : '<span class="green">🔴 空头区间</span>';
   const lk = A.lastK || [null,null,null,null];
   document.getElementById('statusCard').innerHTML = `
-    <div class="row"><span>全市场 · Σ(5日EMA成交量×OHLC)</span>${zoneTxt}</div>
+    <div class="row"><span>全市场 · Σ(10日EMA成交量×OHLC)</span>${zoneTxt}</div>
     <div class="row"><span class="dim">最近标记 ${A.anchorDate || '—'}</span>
       <span class="dim">日涨幅 <b style="color:${A.anchorPct>=0?'#f87171':'#4ade80'}">${A.anchorPct>0?'+':''}${A.anchorPct}%</b></span></div>
     <div class="row"><span class="dim">当日四档(亿)</span>
