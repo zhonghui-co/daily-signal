@@ -69,7 +69,7 @@
 </div>
 <script>
 let DATA = null, cur = null;
-fetch('data/b1-list-2026q1.json').then(r => r.json()).then(d => {
+fetch('data/b1-list-2026q1.json', {cache:'no-store'}).then(r => r.json()).then(d => {
   DATA = d;
   const total = d.days.reduce((a, x) => a + x.count, 0);
   const uniq = new Set(d.days.flatMap(x => x.stocks.map(s => s.code))).size;
@@ -113,14 +113,21 @@ function render(day) {
   const rows = day.stocks.filter(s =>
     (!q || s.code.toLowerCase().includes(q) || (s.name||'').includes(q)) &&
     (!l1 || s.L1 === l1));
-  tb.innerHTML = rows.map(s => {
+  let html = '';
+  let prevL1 = null;
+  for (const s of rows) {
+    if (s.L1 !== prevL1) {
+      prevL1 = s.L1;
+      html += `<tr style="background:#eef2ff"><td colspan="11" style="font-weight:600;color:#3730a3">📁 ${s.L1 || '未分类'}</td></tr>`;
+    }
     const cls = s.pct_chg > 0 ? 'up' : (s.pct_chg < 0 ? 'down' : '');
-    return `<tr>
+    html += `<tr>
       <td class="code">${s.code}</td><td>${s.name||''}</td><td>${s.L1||''}</td><td>${s.L2||''}</td>
       <td>${s.close}</td><td class="${cls}">${s.pct_chg>0?'+':''}${s.pct_chg}</td><td>${s.mv_yi??'-'}</td>
       <td class="jneg">${s.J}</td><td>${s.white}</td><td>${s.yellow}</td><td>${s.wy_streak??'-'}</td>
     </tr>`;
-  }).join('') || '<tr><td colspan="11">无匹配</td></tr>';
+  }
+  tb.innerHTML = html || '<tr><td colspan="11">无匹配</td></tr>';
 }
 document.getElementById('q').addEventListener('input', () => { if (cur) render(DATA.days[Array.from(cur.parentElement.children).indexOf(cur)]); });
 document.getElementById('fL1').addEventListener('change', () => { if (cur) render(DATA.days[Array.from(cur.parentElement.children).indexOf(cur)]); });
