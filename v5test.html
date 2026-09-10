@@ -16,6 +16,8 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 #loadMoreBtn { background:#0f172a; color:#38bdf8; border:1px solid #334155; border-radius:4px; padding:4px 10px; font-size:12px; cursor:pointer; }
 #loadMoreBtn:hover { background:#1e293b; }
 #loadMoreBtn:disabled { color:#475569; cursor:default; }
+.sbtn { background:#0f172a; color:#94a3b8; border:1px solid #334155; border-radius:4px; padding:4px 10px; font-size:12px; cursor:pointer; }
+.sbtn.active { background:#1d4ed8; color:#fff; border-color:#1d4ed8; }
 #layout { display:flex; flex:1; min-height:0; }
 #panel { width:300px; min-width:280px; border-right:1px solid #1e293b; display:flex; flex-direction:column; min-height:0; }
 #statusCard { padding:12px 14px; border-bottom:1px solid #1e293b; background:#0f172a; }
@@ -62,6 +64,11 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
   <div class="header-right">
     <span id="hstatus" style="color:#f59e0b"></span>
     <button id="loadMoreBtn" style="display:none" title="加载更早的3年数据">加载更早3年</button>
+    <span id="smoothBtns" style="display:flex;gap:4px">
+      <button data-sm="raw" class="sbtn active">原K线</button>
+      <button data-sm="s5" class="sbtn">5日平滑</button>
+      <button data-sm="s10" class="sbtn">10日平滑</button>
+    </span>
     <span id="hright"></span>
   </div>
 </div>
@@ -99,6 +106,16 @@ body { background:#000; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemF
 let INDEX = null, DATA = null, sel = null, curLevel = 'L1';
 let cTop = null, cBottom = null;
 let zoomState = null, syncGuard = false;
+let smoothMode = 'raw';
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelectorAll('#smoothBtns button').forEach(b => b.onclick = () => {
+      smoothMode = b.dataset.sm;
+      document.querySelectorAll('#smoothBtns button').forEach(x => x.classList.toggle('active', x === b));
+      if (cTop) render();
+    });
+  }, 300);
+});
 
 const BATCH_SIZE = 3, MAX_RETRY = 3;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -186,7 +203,7 @@ boot();
 
 function mergeYears(parts) {
   const dates = [];
-  const A = { k:[], state:[], slope:[], white:[], segments:[], swings:[], marks:[] };
+  const A = { k:[], state:[], slope:[], white:[], smooth:[], segments:[], swings:[], marks:[] };
   const sectors = {};
   let off = 0;
   for (const p of parts) {
@@ -195,18 +212,20 @@ function mergeYears(parts) {
     A.state.push(...p.allA.state);
     A.slope.push(...p.allA.slope);
     A.white.push(...p.allA.white);
+    A.smooth.push(...(p.allA.smooth || p.allA.white.map(() => null)));
     for (const [s, e, st] of p.allA.segments) A.segments.push([s + off, e + off, st]);
     for (const sw of p.allA.swings) A.swings.push({ i: sw.i + off, t: sw.t, v: sw.v });
     for (const m of p.allA.marks) A.marks.push({ i: m.i + off, t: m.t });
     for (const [code, s] of Object.entries(p.sectors)) {
       if (!sectors[code]) {
-        sectors[code] = { k:[], state:[], slope:[], white:[], segments:[], swings:[] };
+        sectors[code] = { k:[], state:[], slope:[], white:[], smooth:[], segments:[], swings:[] };
       }
       const so = sectors[code];
       so.k.push(...s.k);
       so.state.push(...s.state);
       so.slope.push(...s.slope);
       so.white.push(...s.white);
+      so.smooth.push(...(s.smooth || s.white.map(() => null)));
       for (const [s2, e2, st] of s.segments) so.segments.push([s2 + off, e2 + off, st]);
       for (const sw of s.swings) so.swings.push({ i: sw.i + off, t: sw.t, v: sw.v });
     }
@@ -244,8 +263,25 @@ function klineSeries(k) {
   const data = k.map(v => v ? [v[0], v[3], v[2], v[1]] : null);
   return { type:'candlestick', name:'K', data, itemStyle:{color:'#dc2626', color0:'#16a34a', borderColor:'#dc2626', borderColor0:'#16a34a'} };
 }
+function emaN(arr, n) {
+  const out = new Array(arr.length).fill(null);
+  let v = null;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == null) continue;
+    v = v == null ? arr[i] : v + (arr[i] - v) * 2 / (n + 1);
+    out[i] = +v.toFixed(2);
+  }
+  return out;
+}
+function displaySeries(k, smooth) {
+  if (smoothMode === 'raw') return klineSeries(k);
+  const closes = k.map(v => v ? v[3] : null);
+  const arr = smoothMode === 's5' ? (smooth && smooth.length === k.length ? smooth : emaN(closes, 5)) : emaN(closes, 10);
+  return { type:'line', name: smoothMode === 's5' ? '5日平滑' : '10日平滑', data:arr, symbol:'none',
+           lineStyle:{width:1.8, color:'#f97316'}, areaStyle:{color:'rgba(249,115,22,0.06)'}, smooth:true };
+}
 
-function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, swings, white) {
+function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, swings, white, smooth) {
   const closes = k.map(v => v ? v[3] : null);
   const pcts = [null];
   for (let i = 1; i < closes.length; i++) {
@@ -254,7 +290,7 @@ function buildOption(k, name, state, slope, segments, dates, marks, anchorDate, 
   }
   const w = white || closes.map(() => null);
   const series = [
-    klineSeries(k),
+    displaySeries(k, smooth),
     { type:'line', name:'白线', data:w, symbol:'none', lineStyle:{width:1.4, color:'#fbbf24'}, smooth:true },
   ];
   series[0].markArea = { silent:true, data:stateBands(segments, dates) };
@@ -472,7 +508,7 @@ function select(code) {
 function render() {
   const dates = DATA.dates, A = DATA.allA;
   const anchorDate = INDEX.allA.anchorDate;
-  const optA = buildOption(A.k, '全市场', A.state, A.slope, A.segments, dates, A.marks, anchorDate, A.swings, A.white);
+  const optA = buildOption(A.k, '全市场', A.state, A.slope, A.segments, dates, A.marks, anchorDate, A.swings, A.white, A.smooth);
   attachSlopeSub(optA, A.slope, A.slope, dates);
   if (!cTop) {
     cTop = echarts.init(document.getElementById('chartTop'));
@@ -482,7 +518,7 @@ function render() {
   const s = DATA.sectors[sel];
   if (s) {
     const nm = INDEX.sectors[sel] ? INDEX.sectors[sel].name : sel;
-    const optS = buildOption(s.k, nm, s.state, s.slope, s.segments, dates, null, anchorDate, s.swings, s.white);
+    const optS = buildOption(s.k, nm, s.state, s.slope, s.segments, dates, null, anchorDate, s.swings, s.white, s.smooth);
     attachSlopeSub(optS, s.slope, A.slope, dates);
     if (!cBottom) {
       cBottom = echarts.init(document.getElementById('chartBottom'));
