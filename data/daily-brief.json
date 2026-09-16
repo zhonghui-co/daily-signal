@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T16:00:01.931498+08:00",
+  "generated_at": "2026-09-16T17:10:04.498271+08:00",
   "date": "2026-09-16",
   "sections": {
     "signals": {
@@ -90,6 +90,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20260916",
+          "ts_code": "300243.SZ",
+          "name": "瑞丰高材",
+          "pct_chg": 20.01,
+          "vol_ratio": 8.08,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20260522",
           "ts_code": "300243.SZ",
           "name": "瑞丰高材",
@@ -160,14 +168,6 @@
           "pct_chg": 20.01,
           "vol_ratio": 5.67,
           "attribution": "涨停封板"
-        },
-        {
-          "date": "20260719",
-          "ts_code": "688218.SH",
-          "name": "江苏北人",
-          "pct_chg": -20.01,
-          "vol_ratio": 2.29,
-          "attribution": "跌停封板"
         }
       ]
     },
@@ -179,8 +179,8 @@
     },
     "alerts": {
       "available": true,
-      "total_active": 230,
-      "recent_count": 3,
+      "total_active": 236,
+      "recent_count": 4,
       "fire": [],
       "high": []
     },
