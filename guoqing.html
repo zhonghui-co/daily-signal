@@ -186,6 +186,16 @@
     .g6{grid-template-columns:1fr;}
     .dayblock-head{flex-wrap:wrap;gap:6px;}
   }
+
+  /* FAB: 一键定位今日行程 */
+  #todayFab{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(24px,calc(env(safe-area-inset-bottom) + 16px));
+    width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;z-index:999;
+    background:linear-gradient(135deg,var(--lake),var(--lake-deep));color:#fff;
+    box-shadow:0 8px 24px rgba(29,91,102,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;
+    line-height:1.15;-webkit-tap-highlight-color:transparent;transition:transform .15s;}
+  #todayFab:active{transform:scale(.92);}
+  #todayFab .fab-ico{font-size:19px;}
+  #todayFab .fab-label{font-size:11px;font-weight:700;letter-spacing:.5px;}
 </style>
 </head>
 <body>
@@ -479,5 +489,30 @@
   <div class="foot">环太湖自驾小册子 · 行程与住宿已确认，餐饮为推荐方案 · 2026.09</div>
 </div>
 
+
+<button id="todayFab" aria-label="跳到今日行程"><span class="fab-ico">📍</span><span class="fab-label">今日</span></button>
+<script>
+(function(){
+  var fab = document.getElementById('todayFab');
+  var blocks = document.querySelectorAll('.dayblock');
+  if(!fab || !blocks.length) return;
+  function tripDay(now){
+    var start = new Date(2026, 9, 1), end = new Date(2026, 9, 6); // 10/1~10/6
+    if(now < start) return 1;
+    if(now > end) return 6;
+    return Math.floor((now - start) / 86400000) + 1;
+  }
+  var idx = tripDay(new Date());
+  fab.querySelector('.fab-label').textContent = '今日 D' + idx;
+  fab.addEventListener('click', function(){
+    var t = blocks[idx - 1];
+    if(!t) return;
+    t.scrollIntoView({behavior:'smooth', block:'start'});
+    t.style.transition = 'box-shadow .4s';
+    t.style.boxShadow = '0 0 0 4px var(--lake)';
+    setTimeout(function(){ t.style.boxShadow = ''; }, 1800);
+  });
+})();
+</script>
 </body>
 </html>
