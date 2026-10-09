@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T16:00:02.919480+08:00",
+  "generated_at": "2026-10-09T17:10:05.207839+08:00",
   "date": "2026-10-09",
   "sections": {
     "signals": {
@@ -82,6 +82,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20261009",
+          "ts_code": "300821.SZ",
+          "name": "东岳硅材",
+          "pct_chg": 20.01,
+          "vol_ratio": 5.56,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20260819",
           "ts_code": "300069.SZ",
           "name": "金利华电",
@@ -160,14 +168,6 @@
           "pct_chg": 20.01,
           "vol_ratio": 1.65,
           "attribution": "涨停封板"
-        },
-        {
-          "date": "20260803",
-          "ts_code": "300720.SZ",
-          "name": "海川智能",
-          "pct_chg": 20.01,
-          "vol_ratio": 1.65,
-          "attribution": "涨停封板"
         }
       ]
     },
@@ -179,8 +179,8 @@
     },
     "alerts": {
       "available": true,
-      "total_active": 305,
-      "recent_count": 3,
+      "total_active": 308,
+      "recent_count": 4,
       "fire": [],
       "high": []
     },
