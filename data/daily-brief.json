@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T16:00:02.807838+08:00",
+  "generated_at": "2026-10-15T17:10:21.714984+08:00",
   "date": "2026-10-15",
   "sections": {
     "signals": {
@@ -114,6 +114,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20261015",
+          "ts_code": "301053.SZ",
+          "name": "远信工业",
+          "pct_chg": -20.01,
+          "vol_ratio": 4.95,
+          "attribution": "跌停封板"
+        },
+        {
           "date": "20260916",
           "ts_code": "300243.SZ",
           "name": "瑞丰高材",
@@ -160,14 +168,6 @@
           "pct_chg": 20.01,
           "vol_ratio": 2.92,
           "attribution": "涨停封板"
-        },
-        {
-          "date": "20260731",
-          "ts_code": "300720.SZ",
-          "name": "海川智能",
-          "pct_chg": 20.01,
-          "vol_ratio": 1.6,
-          "attribution": "涨停封板"
         }
       ]
     },
@@ -179,8 +179,8 @@
     },
     "alerts": {
       "available": true,
-      "total_active": 327,
-      "recent_count": 3,
+      "total_active": 330,
+      "recent_count": 4,
       "fire": [],
       "high": []
     },
