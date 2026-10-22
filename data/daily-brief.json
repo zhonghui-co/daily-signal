@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-21T17:10:04.855556+08:00",
-  "date": "2026-10-21",
+  "generated_at": "2026-10-22T16:00:03.714938+08:00",
+  "date": "2026-10-22",
   "sections": {
     "signals": {
       "available": false,
@@ -9,14 +9,6 @@
     "anomalies": {
       "count": 20,
       "top": [
-        {
-          "date": "20260627",
-          "ts_code": "002898.SZ",
-          "name": "赛隆药业",
-          "pct_chg": -95.78,
-          "vol_ratio": 6.2,
-          "attribution": "跌停封板"
-        },
         {
           "date": "20260728",
           "ts_code": "300067.SZ",
@@ -168,6 +160,14 @@
           "pct_chg": 20.01,
           "vol_ratio": 2.92,
           "attribution": "涨停封板"
+        },
+        {
+          "date": "20260731",
+          "ts_code": "300720.SZ",
+          "name": "海川智能",
+          "pct_chg": 20.01,
+          "vol_ratio": 1.6,
+          "attribution": "涨停封板"
         }
       ]
     },
@@ -179,7 +179,7 @@
     },
     "alerts": {
       "available": true,
-      "total_active": 357,
+      "total_active": 358,
       "recent_count": 4,
       "fire": [],
       "high": []
