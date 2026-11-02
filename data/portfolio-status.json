@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-02T16:00:02",
-  "updated_display": "2026-11-02 16:00",
+  "updated": "2026-11-02T16:37:18",
+  "updated_display": "2026-11-02 16:37",
   "summary": {
     "positions_count": 6,
     "active_count": 6,
@@ -96,19 +96,18 @@
       "notes": "",
       "current_price": 1.16,
       "white": 1.23,
-      "yellow": 1.24,
-      "bbi": 1.24,
-      "j": 8.9,
-      "trade_date": "20261030",
+      "yellow": 1.23,
+      "bbi": 1.23,
+      "j": 11.3,
+      "trade_date": "20261102",
       "stop_loss": null,
-      "stop_price": 1.24,
-      "stop_distance_pct": -6.45,
+      "stop_price": 1.23,
+      "stop_distance_pct": -5.69,
       "pnl_pct": 14.93,
       "status": "near_stop",
       "action": "减仓",
       "alerts": [
-        "🔶 距黄线仅-6.5%，关注",
-        "⚠️ 白线(1.23)已死叉黄线(1.24)，最后离场时机"
+        "🔶 距黄线仅-5.7%，关注"
       ]
     },
     {
@@ -123,8 +122,8 @@
       "white": 0.81,
       "yellow": 0.82,
       "bbi": 0.82,
-      "j": 16.7,
-      "trade_date": "20261030",
+      "j": 30.9,
+      "trade_date": "20261102",
       "stop_loss": null,
       "stop_price": 0.82,
       "stop_distance_pct": -3.66,
