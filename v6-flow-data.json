@@ -1,7 +1,7 @@
 {
  "date": "20261104",
  "prev": "20261103",
- "generated": "2026-11-04 20:54",
+ "generated": "2026-11-04 21:08",
  "metric_a": "活跃市值增量 = Σ(10日EMA成交量×OHLC) 今日C-昨日C (亿元)",
  "metric_b": "主力净流入 = (大单买+特大单买)-(大单卖+特大单卖), Tushare moneyflow, 万元→亿元",
  "metric_contrib": "贡献比例 = 板块主力净流入 ÷ 全市场活跃市值增量",
@@ -5334,18 +5334,6 @@
    "rank": 58
   },
   {
-   "code": "801143.SI",
-   "name": "造纸",
-   "l1": "轻工制造",
-   "mf": 0.01,
-   "mf_5d": -3.36,
-   "mf_share": 0.0,
-   "active": 1.44,
-   "active_share": 0.09,
-   "contrib": 0.0,
-   "rank": 59
-  },
-  {
    "code": "801743.SI",
    "name": "地面兵装Ⅱ",
    "l1": "国防军工",
@@ -5354,6 +5342,18 @@
    "mf_share": 0.0,
    "active": 0.51,
    "active_share": 0.03,
+   "contrib": 0.0,
+   "rank": 59
+  },
+  {
+   "code": "801143.SI",
+   "name": "造纸",
+   "l1": "轻工制造",
+   "mf": 0.01,
+   "mf_5d": -3.36,
+   "mf_share": 0.0,
+   "active": 1.44,
+   "active_share": 0.09,
    "contrib": 0.0,
    "rank": 60
   },
@@ -5382,18 +5382,6 @@
    "rank": 62
   },
   {
-   "code": "801218.SI",
-   "name": "专业服务",
-   "l1": "社会服务",
-   "mf": -0.12,
-   "mf_5d": -3.36,
-   "mf_share": -0.02,
-   "active": 1.87,
-   "active_share": 0.12,
-   "contrib": -0.01,
-   "rank": 63
-  },
-  {
    "code": "801203.SI",
    "name": "一般零售",
    "l1": "商贸零售",
@@ -5402,6 +5390,18 @@
    "mf_share": -0.02,
    "active": 2.86,
    "active_share": 0.18,
+   "contrib": -0.01,
+   "rank": 63
+  },
+  {
+   "code": "801218.SI",
+   "name": "专业服务",
+   "l1": "社会服务",
+   "mf": -0.12,
+   "mf_5d": -3.36,
+   "mf_share": -0.02,
+   "active": 1.87,
+   "active_share": 0.12,
    "contrib": -0.01,
    "rank": 64
   },
@@ -5430,6 +5430,18 @@
    "rank": 66
   },
   {
+   "code": "801045.SI",
+   "name": "特钢Ⅱ",
+   "l1": "钢铁",
+   "mf": -0.18,
+   "mf_5d": -1.19,
+   "mf_share": -0.04,
+   "active": 0.52,
+   "active_share": 0.03,
+   "contrib": -0.01,
+   "rank": 67
+  },
+  {
    "code": "801206.SI",
    "name": "互联网电商",
    "l1": "商贸零售",
@@ -5439,7 +5451,7 @@
    "active": 0.61,
    "active_share": 0.04,
    "contrib": -0.01,
-   "rank": 67
+   "rank": 68
   },
   {
    "code": "801128.SI",
@@ -5450,18 +5462,6 @@
    "mf_share": -0.04,
    "active": 2.39,
    "active_share": 0.15,
-   "contrib": -0.01,
-   "rank": 68
-  },
-  {
-   "code": "801045.SI",
-   "name": "特钢Ⅱ",
-   "l1": "钢铁",
-   "mf": -0.18,
-   "mf_5d": -1.19,
-   "mf_share": -0.04,
-   "active": 0.52,
-   "active_share": 0.03,
    "contrib": -0.01,
    "rank": 69
   },
@@ -5574,18 +5574,6 @@
    "rank": 78
   },
   {
-   "code": "801711.SI",
-   "name": "水泥",
-   "l1": "建筑材料",
-   "mf": -0.78,
-   "mf_5d": -2.66,
-   "mf_share": -0.16,
-   "active": 0.82,
-   "active_share": 0.05,
-   "contrib": -0.05,
-   "rank": 79
-  },
-  {
    "code": "801994.SI",
    "name": "教育",
    "l1": "社会服务",
@@ -5594,6 +5582,18 @@
    "mf_share": -0.16,
    "active": 1.62,
    "active_share": 0.1,
+   "contrib": -0.05,
+   "rank": 79
+  },
+  {
+   "code": "801711.SI",
+   "name": "水泥",
+   "l1": "建筑材料",
+   "mf": -0.78,
+   "mf_5d": -2.66,
+   "mf_share": -0.16,
+   "active": 0.82,
+   "active_share": 0.05,
    "contrib": -0.05,
    "rank": 80
   },
@@ -5814,18 +5814,6 @@
    "rank": 98
   },
   {
-   "code": "801076.SI",
-   "name": "轨交设备Ⅱ",
-   "l1": "机械设备",
-   "mf": -2.05,
-   "mf_5d": -1.74,
-   "mf_share": -0.41,
-   "active": 0.92,
-   "active_share": 0.06,
-   "contrib": -0.13,
-   "rank": 99
-  },
-  {
    "code": "801766.SI",
    "name": "影视院线",
    "l1": "传媒",
@@ -5834,6 +5822,18 @@
    "mf_share": -0.41,
    "active": 7.24,
    "active_share": 0.45,
+   "contrib": -0.13,
+   "rank": 99
+  },
+  {
+   "code": "801076.SI",
+   "name": "轨交设备Ⅱ",
+   "l1": "机械设备",
+   "mf": -2.05,
+   "mf_5d": -1.74,
+   "mf_share": -0.41,
+   "active": 0.92,
+   "active_share": 0.06,
    "contrib": -0.13,
    "rank": 100
   },
@@ -5910,18 +5910,6 @@
    "rank": 106
   },
   {
-   "code": "801152.SI",
-   "name": "生物制品",
-   "l1": "医药生物",
-   "mf": -2.64,
-   "mf_5d": -3.08,
-   "mf_share": -0.53,
-   "active": 14.07,
-   "active_share": 0.87,
-   "contrib": -0.16,
-   "rank": 107
-  },
-  {
    "code": "801151.SI",
    "name": "化学制药",
    "l1": "医药生物",
@@ -5930,6 +5918,18 @@
    "mf_share": -0.53,
    "active": 22.87,
    "active_share": 1.42,
+   "contrib": -0.16,
+   "rank": 107
+  },
+  {
+   "code": "801152.SI",
+   "name": "生物制品",
+   "l1": "医药生物",
+   "mf": -2.64,
+   "mf_5d": -3.08,
+   "mf_share": -0.53,
+   "active": 14.07,
+   "active_share": 0.87,
    "contrib": -0.16,
    "rank": 108
   },
