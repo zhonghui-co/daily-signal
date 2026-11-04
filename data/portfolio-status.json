@@ -1,16 +1,16 @@
 {
-  "updated": "2026-11-03T16:37:18",
-  "updated_display": "2026-11-03 16:37",
+  "updated": "2026-11-04T16:00:03",
+  "updated_display": "2026-11-04 16:00",
   "summary": {
     "positions_count": 6,
     "active_count": 6,
-    "avg_pnl_pct": 1.72,
+    "avg_pnl_pct": 0.11,
     "triggered_count": 3,
     "near_stop_count": 3,
     "top_alerts": [
-      "⚠️ 触发止损！当前价31.94 ≤ 止损位40.78",
-      "🔶 距止损位仅0.7%，密切关注",
-      "⚠️ 触发止损！当前价138.65 ≤ 止损位147.26"
+      "⚠️ 触发止损！当前价31.35 ≤ 止损位40.40",
+      "🔶 距止损位仅0.2%，密切关注",
+      "⚠️ 触发止损！当前价135.28 ≤ 止损位146.77"
     ]
   },
   "positions": [
@@ -22,20 +22,20 @@
       "direction": "有色",
       "entry_date": "2026-09",
       "notes": "",
-      "current_price": 31.94,
-      "white": 37.85,
-      "yellow": 40.78,
-      "bbi": 40.78,
-      "j": 6.5,
-      "trade_date": "20261102",
+      "current_price": 31.35,
+      "white": 37.26,
+      "yellow": 40.4,
+      "bbi": 40.4,
+      "j": 2.8,
+      "trade_date": "20261103",
       "stop_loss": "BBI",
-      "stop_price": 40.78,
-      "stop_distance_pct": -21.68,
-      "pnl_pct": -33.66,
+      "stop_price": 40.4,
+      "stop_distance_pct": -22.4,
+      "pnl_pct": -34.89,
       "status": "stop_triggered",
       "action": "清仓",
       "alerts": [
-        "⚠️ 触发止损！当前价31.94 ≤ 止损位40.78"
+        "⚠️ 触发止损！当前价31.35 ≤ 止损位40.40"
       ]
     },
     {
@@ -46,20 +46,20 @@
       "direction": "创新药",
       "entry_date": "2026-08",
       "notes": "",
-      "current_price": 69.44,
-      "white": 69.93,
-      "yellow": 68.99,
-      "bbi": 68.99,
-      "j": 47.0,
-      "trade_date": "20261102",
+      "current_price": 69.15,
+      "white": 69.79,
+      "yellow": 69.03,
+      "bbi": 69.03,
+      "j": 51.3,
+      "trade_date": "20261103",
       "stop_loss": "BBI",
-      "stop_price": 68.99,
-      "stop_distance_pct": 0.65,
-      "pnl_pct": 20.36,
+      "stop_price": 69.03,
+      "stop_distance_pct": 0.17,
+      "pnl_pct": 19.86,
       "status": "near_stop",
       "action": "减仓",
       "alerts": [
-        "🔶 距止损位仅0.7%，密切关注"
+        "🔶 距止损位仅0.2%，密切关注"
       ]
     },
     {
@@ -70,20 +70,20 @@
       "direction": "创新药",
       "entry_date": "2026-08",
       "notes": "",
-      "current_price": 138.65,
-      "white": 148.19,
-      "yellow": 147.26,
-      "bbi": 147.26,
-      "j": 27.5,
-      "trade_date": "20261102",
+      "current_price": 135.28,
+      "white": 147.12,
+      "yellow": 146.77,
+      "bbi": 146.77,
+      "j": 20.1,
+      "trade_date": "20261103",
       "stop_loss": "BBI",
-      "stop_price": 147.26,
-      "stop_distance_pct": -5.85,
-      "pnl_pct": 20.69,
+      "stop_price": 146.77,
+      "stop_distance_pct": -7.83,
+      "pnl_pct": 17.76,
       "status": "stop_triggered",
       "action": "清仓",
       "alerts": [
-        "⚠️ 触发止损！当前价138.65 ≤ 止损位147.26"
+        "⚠️ 触发止损！当前价135.28 ≤ 止损位146.77"
       ]
     },
     {
@@ -144,20 +144,20 @@
       "direction": "创新药",
       "entry_date": "2026-09",
       "notes": "",
-      "current_price": 31.91,
-      "white": 42.06,
-      "yellow": 41.31,
-      "bbi": 41.31,
-      "j": -9.8,
-      "trade_date": "20261102",
+      "current_price": 29.73,
+      "white": 41.09,
+      "yellow": 40.91,
+      "bbi": 40.91,
+      "j": -9.0,
+      "trade_date": "20261103",
       "stop_loss": "BBI",
-      "stop_price": 41.31,
-      "stop_distance_pct": -22.75,
-      "pnl_pct": -27.49,
+      "stop_price": 40.91,
+      "stop_distance_pct": -27.33,
+      "pnl_pct": -32.44,
       "status": "stop_triggered",
       "action": "清仓",
       "alerts": [
-        "⚠️ 触发止损！当前价31.91 ≤ 止损位41.31"
+        "⚠️ 触发止损！当前价29.73 ≤ 止损位40.91"
       ]
     }
   ]
