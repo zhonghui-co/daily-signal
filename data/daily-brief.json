@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-11T17:10:08.575882+08:00",
-  "date": "2026-11-11",
+  "generated_at": "2026-11-12T17:10:07.462823+08:00",
+  "date": "2026-11-12",
   "sections": {
     "signals": {
       "available": false,
@@ -106,6 +106,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20261112",
+          "ts_code": "688135.SH",
+          "name": "利扬芯片",
+          "pct_chg": 20.01,
+          "vol_ratio": 5.21,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20261015",
           "ts_code": "301053.SZ",
           "name": "远信工业",
@@ -160,14 +168,6 @@
           "pct_chg": 20.01,
           "vol_ratio": 2.92,
           "attribution": "涨停封板"
-        },
-        {
-          "date": "20261106",
-          "ts_code": "688316.SH",
-          "name": "青云科技",
-          "pct_chg": 20.01,
-          "vol_ratio": 3.03,
-          "attribution": "涨停封板"
         }
       ]
     },
@@ -179,7 +179,7 @@
     },
     "alerts": {
       "available": true,
-      "total_active": 429,
+      "total_active": 434,
       "recent_count": 4,
       "fire": [],
       "high": []
