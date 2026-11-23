@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-23T16:00:03",
-  "updated_display": "2026-11-23 16:00",
+  "updated": "2026-11-23T16:37:14",
+  "updated_display": "2026-11-23 16:37",
   "summary": {
     "positions_count": 6,
     "active_count": 6,
-    "avg_pnl_pct": -3.76,
+    "avg_pnl_pct": -2.34,
     "triggered_count": 4,
     "near_stop_count": 2,
     "top_alerts": [
@@ -94,21 +94,21 @@
       "direction": "创新药",
       "entry_date": "2026-08",
       "notes": "",
-      "current_price": 1.08,
-      "white": 1.21,
-      "yellow": 1.22,
-      "bbi": 1.22,
-      "j": -20.0,
-      "trade_date": "20261120",
+      "current_price": 1.12,
+      "white": 1.2,
+      "yellow": 1.21,
+      "bbi": 1.21,
+      "j": -0.0,
+      "trade_date": "20261123",
       "stop_loss": null,
-      "stop_price": 1.22,
-      "stop_distance_pct": -11.48,
-      "pnl_pct": 7.0,
+      "stop_price": 1.21,
+      "stop_distance_pct": -7.44,
+      "pnl_pct": 10.97,
       "status": "near_stop",
       "action": "减仓",
       "alerts": [
-        "🔶 距黄线仅-11.5%，关注",
-        "⚠️ 白线(1.21)已死叉黄线(1.22)，最后离场时机"
+        "🔶 距黄线仅-7.4%，关注",
+        "⚠️ 白线(1.20)已死叉黄线(1.21)，最后离场时机"
       ]
     },
     {
@@ -119,21 +119,21 @@
       "direction": "创新药",
       "entry_date": "2026-08",
       "notes": "",
-      "current_price": 0.75,
-      "white": 0.81,
+      "current_price": 0.78,
+      "white": 0.8,
       "yellow": 0.82,
       "bbi": 0.82,
-      "j": -12.2,
-      "trade_date": "20261120",
+      "j": 15.2,
+      "trade_date": "20261123",
       "stop_loss": null,
       "stop_price": 0.82,
-      "stop_distance_pct": -8.54,
-      "pnl_pct": 14.31,
+      "stop_distance_pct": -4.88,
+      "pnl_pct": 18.88,
       "status": "near_stop",
       "action": "减仓",
       "alerts": [
-        "🔶 距黄线仅-8.5%，关注",
-        "⚠️ 白线(0.81)已死叉黄线(0.82)，最后离场时机"
+        "🔶 距黄线仅-4.9%，关注",
+        "⚠️ 白线(0.80)已死叉黄线(0.82)，最后离场时机"
       ]
     },
     {
