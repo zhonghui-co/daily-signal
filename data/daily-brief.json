@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T16:00:04.108870+08:00",
+  "generated_at": "2026-11-24T17:10:23.740841+08:00",
   "date": "2026-11-24",
   "sections": {
     "signals": {
@@ -114,6 +114,14 @@
           "attribution": "涨停封板"
         },
         {
+          "date": "20261124",
+          "ts_code": "300007.SZ",
+          "name": "汉威科技",
+          "pct_chg": 20.01,
+          "vol_ratio": 2.13,
+          "attribution": "涨停封板"
+        },
+        {
           "date": "20261015",
           "ts_code": "301053.SZ",
           "name": "远信工业",
@@ -160,14 +168,6 @@
           "pct_chg": 20.01,
           "vol_ratio": 6.04,
           "attribution": "✅AI算力,✅国产替代,化工/材料板块联动(47/65只)"
-        },
-        {
-          "date": "20260806",
-          "ts_code": "688549.SH",
-          "name": "中巨芯",
-          "pct_chg": 20.01,
-          "vol_ratio": 2.92,
-          "attribution": "涨停封板"
         }
       ]
     },
@@ -179,8 +179,8 @@
     },
     "alerts": {
       "available": true,
-      "total_active": 463,
-      "recent_count": 0,
+      "total_active": 469,
+      "recent_count": 1,
       "fire": [],
       "high": []
     },
