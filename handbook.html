@@ -1,0 +1,346 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>从零看懂 Mimo 交易体系</title><style>
+body{background:#0f172a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8;margin:0;}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 80px;}
+h1{font-size:28px;border-bottom:2px solid #334155;padding-bottom:12px;margin-bottom:24px;color:#f8fafc;}
+h2{font-size:22px;margin-top:40px;color:#f8fafc;border-left:4px solid #60a5fa;padding-left:12px;}
+h3{font-size:17px;margin-top:28px;color:#cbd5e1;}
+p{margin:12px 0;}
+strong{color:#fbbf24;}
+blockquote{border-left:4px solid #f59e0b;background:#1e293b;margin:16px 0;padding:10px 16px;color:#cbd5e1;border-radius:0 6px 6px 0;}
+blockquote strong{color:#fbbf24;}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14px;}
+th,td{border:1px solid #334155;padding:8px 12px;text-align:left;}
+th{background:#1e293b;color:#fbbf24;}
+td{background:#0f172a;}
+li{margin:6px 0;}
+hr{border:none;border-top:1px solid #334155;margin:32px 0;}
+pre{background:#0b1120;border:1px solid #334155;border-radius:6px;padding:16px;overflow-x:auto;font-size:13px;}
+code{font-family:"SF Mono",Menlo,monospace;color:#93c5fd;}
+a{color:#60a5fa;}
+</style></head><body><div class="wrap"><h1>从零看懂 Mimo 交易体系</h1>
+
+<blockquote>一份给小白从零看懂的完整指南 · 2026-11-28</blockquote>
+<blockquote>来源：师父 108 课 · MOS 笔记博客 · Mimo 工具链 · 三者融会</blockquote>
+<blockquote>原则：从「道」到「术」再到「器」，逐层递进；量化参数都带注解（可随风险偏好微调）</blockquote>
+
+<hr>
+
+<h2>卷零 · 为什么你要读这个</h2>
+
+<p>先回答一个问题：<strong>为什么你炒股老是亏，而有人能稳定赚？</strong></p>
+
+<p>因为市场是<strong>筹码游戏</strong>——你赚的每一分钱，都是别人亏的。而散户和主力之间，存在三个你永远追不平的差距：</p>
+
+<li>**信息差**：主力永远比你先知道消息。</li>
+<li>**资金差**：主力不缺钱，散户的钱是有限的。</li>
+<li>**定价权差**：价格是主力说了算，散户只能跟随。</li>
+
+<p>所以散户想在市场活下来、甚至赚钱，<strong>只有一条路：不要和主力对着干，而是站在主力那一边</strong>——师父管这叫「找大哥」。</p>
+
+<p>这套体系，就是教你怎么「找到大哥、跟住大哥、在正确的时候上桌、在危险的时候下桌」。</p>
+
+<blockquote>通识（书里教的"价值投资""长期持有"）在博弈里是**被拿捏的料**。这套体系不是通识，是**非对称优势**。</blockquote>
+
+<hr>
+
+<h2>卷一 · 世界观：先懂市场是什么（道）</h2>
+
+<h3>1. 市场是筹码游戏，不是"投资"</h3>
+
+<p>你买入股票，本质上是用钱换筹码；卖出，是用筹码换钱。<strong>活跃市值</strong>这个指标（后面会讲）衡量的就是"钱和筹码在怎么换"。</p>
+
+<p>师父的话：<strong>"市场没有为什么，只有应对。"</strong> 别问"为什么跌了"，只需要应对——给了就拿，没给就走，跌了止损，起来了拿着。</p>
+
+<h3>2. 大哥才是定价的人</h3>
+
+<p><strong>大哥 = 主力 / 庄 / 麒麟会 / 国家队</strong>（不同语境指不同的主导大资金）。</p>
+
+<li>大哥入场，行情才有持续性；</li>
+<li>大哥没上桌，所有上涨都是噪音；</li>
+<li>大哥走了，你也得走。</li>
+
+<p>师父铁律：<strong>"只要大哥没上桌，局部所有都是噪音；大哥走你就走。"</strong></p>
+
+<h3>3. 先保命，再谈赚钱</h3>
+
+<p>这是整套体系的<strong>第一公理</strong>，比任何技术都重要：</p>
+
+<li>**只用输得起的钱**：不加杠杆、不借钱、不用急钱、不卖房炒股。</li>
+<li>**止损无情**：亏损的第一课就是"不要被套住"。</li>
+<li>**永不套牢，只输一根**：亏损控制在买入那根 K 线的范围内。</li>
+
+<p>师父原话：<strong>"先保命，永远记住先保命。"</strong> 你能赚多少是市场给的，你能亏多少是自己决定的。</p>
+
+<h3>4. 垃圾时间休息，耐心等待</h3>
+
+<p>市场大约 <strong>66% 的时间是垃圾时间</strong>——主力轮休，行情无意义。这时候最聪明的操作是<strong>不操作</strong>。</p>
+
+<p>师父八字总纲：<strong>"耐心等待，伺机而动。"</strong></p>
+
+<blockquote>小结（卷一）：市场是筹码博弈 → 跟大哥 → 先保命 → 垃圾时间休息。这四条，是后面所有技术的前提。世界观不对，技术再好也是送钱。</blockquote>
+
+<hr>
+
+<h2>卷二 · 大势判断：什么时候能做、什么时候该歇（看天）</h2>
+
+<h3>1. 核心指标：活跃市值（0AMV）</h3>
+
+<p><strong>活跃市值</strong>是判断"大盘真实增量资金"的最有效指标（指南针软件发明，杨新宇+陈昊）。</p>
+
+<li>**红柱** = 钱换成筹码（资金进场，涨）</li>
+<li>**绿柱** = 筹码换成钱（资金离场，跌）</li>
+
+<p><strong>多空判定</strong>（量化阈值，可微调）：</p>
+
+<table>
+<tr><th>状态</th><th>触发条件</th></tr>
+<tr><td>🟢 转多头</td><td>单日（或 2~3 日累计）涨幅 **&gt; +4%**</td></tr>
+<tr><td>🔴 转空头</td><td>单日跌幅 **&gt; -2.3%**</td></tr>
+</table>
+
+<blockquote>📌 注解：+4% / -2.3% 是师父体系的标准口径。我们工具里（v6 双口径）用的是更严格的 +6.5% / -4.5%，因为加了成交量平滑（EMA10），阈值相应上调。**核心逻辑不变：涨幅超阈值=钱进场=多头，跌幅超阈值=钱离场=空头。** 你可以按自己风险偏好微调，但别调太松。</blockquote>
+
+<h3>2. 师父四步链：每次判断前必走</h3>
+
+<p>这是<strong>强制前置流程</strong>，任何行情/个股/大势判断，下结论前必须先走完这四步：</p>
+
+<p><strong>① 大哥在不在</strong>：主力资金有没有真金白银进场（绝对值 + 连续性），有没有明确主线。大哥没上桌，一切判断降级为「观察」。</p>
+
+<p><strong>② 周期定位</strong>：先答「现在在哪个周期、哪个位置」——<strong>政策底 → 资金底 → 市场底</strong>，到哪一步了。单日涨跌放进周期里看。</p>
+
+<p><strong>③ 噪声三问</strong>：①基础概率多大？②证据能不能交叉验证（价格/资金/方向是否一致）？③谁受益、谁在割谁？用这三问给新信息定权重。</p>
+
+<p><strong>④ 纪律锁</strong>：不追高、等 B1、控频率、留预备队、先保命。判断的终点是「该不该动、动多少、错了怎么止损」。</p>
+
+<blockquote>小结（卷二）：活跃市值看多空 → 四步链定判断。空头区间=垃圾时间，休息；多头区间才考虑动手。</blockquote>
+
+<hr>
+
+<h2>卷三 · 选股逻辑：涨了买什么（看地）</h2>
+
+<h3>1. 核心框架：从 Beta 里找 Alpha（三层递进）</h3>
+
+<p>这是选股的<strong>灵魂</strong>，三层递进：</p>
+
+<p><strong>第一层：Beta 是大盘普涨？</strong></p>
+<p>先确认这是不是大盘整体上涨（beta）。如果是，光吃大盘 beta 不够。</p>
+
+<p><strong>第二层：从行业里找 alpha</strong></p>
+<p>普涨中，跑赢大盘的行业 = 行业 alpha（主力资金明显净流入、超额收益）。</p>
+
+<p><strong>第三层：行业 beta 里再找 alpha</strong></p>
+<p>当一个行业被 ETF 化、买 ETF 就等于买行业 beta 时，钻进行业内部，找真正有超额的具体个股。</p>
+
+<blockquote>一句话：**大盘涨是 beta，行业跑赢是 alpha；行业被 ETF 化后买 ETF 又退回 beta，得下沉到个股再找 alpha。选标的永远往「超额收益」的方向钻。**</blockquote>
+
+<h3>2. 主线 vs 主题：两种不同的"涨"</h3>
+
+<table>
+<tr><th></th><th>主线</th><th>主题</th></tr>
+<tr><td>性质</td><td>能容纳中长线/机构资金、对全市场有号召力</td><td>概念票、快进快出、一波流</td></tr>
+<tr><td>轮动</td><td>有轮动容错</td><td>无轮动</td></tr>
+<tr><td>例子</td><td>新能源车、科技、白酒顺周期</td><td>可控核聚变、创新药、低空飞行</td></tr>
+<tr><td>做法</td><td>等周线 B1、潜伏 3-4 天</td><td>右侧 B1 一波流</td></tr>
+</table>
+
+<p>师父："主线做增强，主题做超额。"</p>
+
+<blockquote>小结（卷三）：先看大盘 beta → 找跑赢的行业 alpha → 下沉到个股 alpha。主线可长做，主题快进快出。</blockquote>
+
+<hr>
+
+<h2>卷四 · 买点：什么时候买（术）</h2>
+
+<p>这是整套体系里<strong>最精细、也最容易出错</strong>的部分。前面三卷告诉你"该不该做、买什么方向"，这一卷告诉你"具体在哪个价位、哪根 K 线上出手"。</p>
+
+<h3>1. 两根线：白线和黄线</h3>
+
+<p>这是师父体系的<strong>地基</strong>，几乎所有买点、卖点、纪律都围绕这两根线展开。</p>
+
+<table>
+<tr><th>线</th><th>全称</th><th>公式</th><th>含义</th></tr>
+<tr><td>**白线**</td><td>知行趋势线（牵牛绳）</td><td>**EMA(EMA(收盘价,10),10)**</td><td>短期资金趋势线，主升浪不破白线</td></tr>
+<tr><td>**黄线**</td><td>知行多空线（大哥线）</td><td>**(MA14+MA28+MA57+MA114)/4**（即 BBI）</td><td>主力成本线 / 多空分界线</td></tr>
+</table>
+
+<blockquote>📌 注解：</blockquote>
+<blockquote>- **白线 = EMA 的 EMA**：对 10 日指数均线再平滑一次，是"短期趋势的趋势"，更灵敏地跟随主力。</blockquote>
+<blockquote>- **黄线 = BBI**：4 条均线（14/28/57/114 日）的平均，代表"市场中长期平均成本"，近似主力的控盘成本。</blockquote>
+<blockquote>- 师父课程里黄线有过"60 日线"的旧说法，但**体系定稿口径是 BBI(14,28,57,114)**。周期参数可以微调，白线的 10 日建议别动，它是灵敏度核心。</blockquote>
+
+<p><strong>两根线的核心关系（必背）</strong>：</p>
+
+<li>**白线 &gt; 黄线** = 趋势上行（多头结构），可以做多；</li>
+<li>**白线 &lt; 黄线** = 趋势走坏（空头结构），不做或离场；</li>
+<li>**白线上穿黄线（金叉）** = 转强信号；</li>
+<li>**白线下穿黄线（死叉）** = 转弱信号。</li>
+
+<h3>2. KDJ 的"勾"：判断超买超卖</h3>
+
+<p>KDJ 里的 <strong>J 值</strong>，师父叫它"勾"。</p>
+
+<li>**勾到极小值（大复值）** = 超卖 = 阶段性低点，买入时机窗口；</li>
+<li>**勾到极大值** = 超买 = 阶段性高点，警惕回落。</li>
+
+<p><strong>B1 的阈值</strong>（量化，可微调）：</p>
+
+<blockquote>📌 注解：师父体系里 B1 的 J 值阈值有多个历史口径（13 / 12 / 10 / 20 都有提过）。**体系定稿标准是 J &lt; 13**，但师父多次强调"每个票有自己的性格，有些票到 20 以下就是底部"。所以：</blockquote>
+<blockquote>- **保守者**：用 J &lt; 10（等更深的超卖）；</blockquote>
+<blockquote>- **标准**：J &lt; 13；</blockquote>
+<blockquote>- **激进者**：J &lt; 20（但容易接飞刀）。</blockquote>
+<blockquote>关键是"J 在低位 + 缩量 + 趋势没破"三者同时满足，而非死磕一个数字。</blockquote>
+
+<h3>3. B1 / B2 / B3：三个买点</h3>
+
+<p>这是师父体系的<strong>核心买入节奏</strong>，三个买点依次递进，确定性递增、盈亏比递减。</p>
+
+<table>
+<tr><th>买点</th><th>定义</th><th>特点</th></tr>
+<tr><td>**B1**</td><td>勾（J）勾到低位（&lt;13）的阶段性低点</td><td>盈亏比最大，确定性最低，潜伏 3-4 天</td></tr>
+<tr><td>**B2**</td><td>确认 B1 低点的那根阳线（涨幅 ≥4%、放量、勾拐头）</td><td>确定性提升，止损幅度稍大</td></tr>
+<tr><td>**B3**</td><td>B2 之后的中继小阳（缩量）</td><td>确定性最高，但盈亏比最小</td></tr>
+</table>
+
+<blockquote>📌 注解：B3 在师父课程里**没有系统讲过、没给图**，定义略有缺口。实操上 B1 是核心，B2 是确认，B3 可作参考。三重排名：**盈亏比 B1&gt;B2&gt;B3，确定性 B3&gt;B2&gt;B1，止损幅度 B2&gt;B3&gt;B1**。</blockquote>
+
+<h3>4. B1 的真正语义：切 alpha 的时机（重点）</h3>
+
+<p>这是<strong>本体系最精髓的一句话</strong>，很多人误以为 B1 就是"抄底"，其实不是：</p>
+
+<p><strong>B1 = 在趋势上行的回调中（J 值跌到极小值），完成一次「切 alpha」的动作。</strong></p>
+
+<p>拆开理解：</p>
+
+<li>**大前提**：趋势上行（白线 &gt; 黄线，多头结构没破）——B1 不是空头里抄底，是**多头趋势里的回调**。</li>
+<li>**时机**：回调把 J 值打到极小（超卖）——回调到位了。</li>
+<li>**动作**：两种——</li>
+<li>**从 beta 切到 alpha**：已持有大盘/行业 beta（ETF 或跟随大盘的票），在回调时把仓位从 beta 换成真正有超额的具体标的；</li>
+<li>**从空仓直接买 alpha**：本来空仓，在回调低点直接切入 alpha，而不是先买 beta。</li>
+
+<blockquote>关键：**B1 不是"抄底大盘"，也不是"买入 beta"，而是在回调的时机窗口里，把资金从 beta 换到 alpha（或空仓切入 alpha）。**</blockquote>
+
+<h3>5. 止损：只输一根</h3>
+
+<p>买入后，止损位怎么设？</p>
+
+<li>**买入当根 K 线的最低点，往下 3~5 个价位**（或 1%~3%）；</li>
+<li>或 **N 型结构的前低**。</li>
+
+<p>核心心法：<strong>"永不套牢，只输一根。"</strong> 亏就亏这一根 K 线的钱，不扛、不补、不幻想。</p>
+
+<blockquote>📌 注解：止损幅度有多种口径（前低下 3-5 价位 / 3% / 3~5% / 无前低时 1%~1.5%）。**核心是"只输一根"——把亏损限制在买入那根 K 线内**，具体下探多少点位按风险承受微调。越保守止损越紧。</blockquote>
+
+<blockquote>小结（卷四）：白线黄线判趋势 → KDJ 勾值判超卖 → B1（趋势上行回调中切 alpha）→ 只输一根止损。买点的精髓不是"跌了就买"，是"多头趋势 + 回调到超卖 + 切 alpha"。</blockquote>
+
+<hr>
+
+<h2>卷五 · 卖点与纪律：什么时候卖、怎么守住（法）</h2>
+
+<h3>1. 卖出信号（S1 / 放飞 / 滴滴）</h3>
+
+<table>
+<tr><th>信号</th><th>含义</th><th>动作</th></tr>
+<tr><td>**放飞**</td><td>大阳线起来先卖一部分（10%~50%）</td><td>减仓落袋，不贪</td></tr>
+<tr><td>**S1**</td><td>加速后放天量大阴线（天量天价）</td><td>最确定的大顶信号，走错也要走，至少减一半</td></tr>
+<tr><td>**滴滴（DD）**</td><td>高位两根阴线，第二根收破第一根最低价</td><td>离场</td></tr>
+</table>
+
+<p>师父："<strong>卖是为了买，买是为了卖</strong>（先分手才能找更好的）。"</p>
+
+<h3>2. 纪律：反人性的锁</h3>
+
+<p>这是整套体系的"操作系统"，技术是招式，纪律是内功：</p>
+
+<li>**不追高**：追高是坏习惯，概率上亏 &gt; 赚。等 B1、等回调。</li>
+<li>**控频率**：一周最多 1-2 个新仓。频繁交易是亏损最大来源之一。</li>
+<li>**留预备队**：满仓 = 总资金八成，永远留 20% 给当天选出的完美标的。</li>
+<li>**交易只分正确/错误，不分成功/失败**：按纪律止盈止损（哪怕亏钱）就是正确交易；不按纪律（追高、不止损），哪怕涨停也是错误交易。</li>
+
+<p>师父："<strong>纪律是反人性的锁。大师靠纪律而非天赋，散户和大师之间差的就是「到点执行」这四个字。</strong>"</p>
+
+<h3>3. 完整闭环</h3>
+
+<p>① 大势判断（师父四步链）→ ② Alpha 挖掘（beta→行业alpha→个股alpha）→ ③ 等 B1（回调 J 极小）→ ④ 执行「切 alpha」+ 纪律锁</p>
+
+<blockquote>小结（卷五）：放飞/S1/滴滴是卖点；不追高、控频率、留预备队是纪律。判断的终点是「该不该动、动多少、错了怎么止损」。</blockquote>
+
+<hr>
+
+<h2>卷六 · 工具落地（器）</h2>
+
+<p>前面五卷是"道法术"，这一卷告诉你：<strong>Mimo 已把这套逻辑做成了每天自动跑的工具</strong>，你不用手动算。</p>
+
+<h3>工具全景（对应逻辑每一环）</h3>
+
+<table>
+<tr><th>逻辑层</th><th>工具</th><th>看什么</th></tr>
+<tr><td>① 大势（beta）</td><td>v6 活跃市值作战图</td><td>大盘多空区间、转多转空</td></tr>
+<tr><td>① 最上层大哥</td><td>国家队 ETF 净申购（晨报里）</td><td>国家队在买还是在卖</td></tr>
+<tr><td>② 行业 alpha</td><td>申万二级资金流向榜（v6-flow）</td><td>哪个行业主力在超额流入</td></tr>
+<tr><td>② 行业 alpha 动态</td><td>板块日检（每日推送）</td><td>行业资金 + 广度信号变化</td></tr>
+<tr><td>③ B1 时机</td><td>白黄线 + KDJ（后台数据）</td><td>个股白&gt;黄、J 值、B1 触发</td></tr>
+<tr><td>每日全景</td><td>晨报（每日推送）</td><td>大势 + 资金 + 国家队 + 公告</td></tr>
+</table>
+
+<h3>页面链接</h3>
+
+<li>**v6 活跃市值作战图**：https://zhonghui-co.github.io/daily-signal/v6.html</li>
+<li>**v6 申万二级资金流向榜**：https://zhonghui-co.github.io/daily-signal/v6-flow.html</li>
+
+<blockquote>小结（卷六）：不用手动算，Mimo 工具链每天自动更新，把「大势→行业→个股→B1」这条链量化成了可看的页面和推送。</blockquote>
+
+<hr>
+
+<h2>附录 A · 参数口径对照表（诚实版）</h2>
+
+<p>师父说过：<strong>"参数是可变的（剑招在意不在形）"</strong>。下面参数，<strong>标准口径是"锚"，不是"铁律"</strong>——可按风险偏好微调，但别偏离太远。</p>
+
+<h3>定死的（体系核心，别动）</h3>
+
+<table>
+<tr><th>参数</th><th>值</th><th>说明</th></tr>
+<tr><td>白线</td><td>EMA(EMA(C,10),10)</td><td>牵牛绳，灵敏度核心</td></tr>
+<tr><td>黄线</td><td>BBI(14,28,57,114)</td><td>主力成本线</td></tr>
+<tr><td>KDJ 参数</td><td>(9,3,3)</td><td>标准参数</td></tr>
+</table>
+
+<h3>可微调（随风险偏好，有多个历史口径）</h3>
+
+<table>
+<tr><th>参数</th><th>标准口径</th><th>其他历史口径</th><th>微调方向</th></tr>
+<tr><td>B1 的 J 阈值</td><td>J &lt; 13</td><td>10 / 12 / 20</td><td>保守者更低，激进者更高</td></tr>
+<tr><td>活跃市值转多</td><td>+4%</td><td>工具用 +6.5%（含量平滑）</td><td>越严格越不易假信号</td></tr>
+<tr><td>活跃市值转空</td><td>-2.3%</td><td>工具用 -4.5%</td><td>同上</td></tr>
+<tr><td>止损幅度</td><td>前低下 3-5 价位 / 只输一根</td><td>3% / 3~5% / 1%~1.5%</td><td>越保守止损越紧</td></tr>
+<tr><td>B1 胜率</td><td>约 40% 多（单笔）</td><td>55-60%（历史平均）</td><td>参考，别迷信</td></tr>
+</table>
+
+<blockquote>⚠️ 诚实说明：师父课程里这几处参数有历史漂移。上表"标准口径"是体系最终采用的定稿值。**核心永远不是死磕数字，而是"趋势没破 + 超卖 + 缩量 + 切 alpha"这个逻辑本身。**</blockquote>
+
+<hr>
+
+<h2>附录 B · 黑话词典（速查）</h2>
+
+<table>
+<tr><th>黑话</th><th>意思</th></tr>
+<tr><td>大哥</td><td>主力 / 庄 / 麒麟会 / 国家队</td></tr>
+<tr><td>白线</td><td>短期趋势线，EMA(EMA(C,10),10)</td></tr>
+<tr><td>黄线</td><td>多空线/主力成本线，BBI</td></tr>
+<tr><td>勾 / 大复值</td><td>KDJ 的 J 值勾到低位</td></tr>
+<tr><td>B1/B2/B3</td><td>三个买点（低位/确认/中继）</td></tr>
+<tr><td>放飞</td><td>减仓落袋</td></tr>
+<tr><td>S1</td><td>见顶出货信号（放天量大阴线）</td></tr>
+<tr><td>只输一根</td><td>止损控制在买入那根 K 线</td></tr>
+<tr><td>垃圾时间</td><td>主力休息、行情无意义的时段</td></tr>
+<tr><td>活跃市值/0AMV</td><td>判断大盘增量资金的指标</td></tr>
+<tr><td>主线 vs 主题</td><td>可长做的板块 vs 快进快出的题材</td></tr>
+<tr><td>击穿对手盘</td><td>主力缩量跌破公众止损位洗盘</td></tr>
+<tr><td>四分之三阴量线</td><td>突破后缩量阴线（假突破信号）</td></tr>
+<tr><td>长阴短柱</td><td>长阴线配缩量柱=洗盘非出货</td></tr>
+<tr><td>倍量柱</td><td>成交量≥前日2倍=大哥进场</td></tr>
+</table>
+
+<hr>
+
+<p>*完 · 本文档从「道」（世界观）到「术」（买卖点）到「器」（工具），逐层递进。核心一句话：<strong>先看大势定多空 → 多头里从 beta 往 alpha 钻 → 在回调的 B1 时点，把仓位切到 alpha。</strong>*</p>
+</div></body></html>
